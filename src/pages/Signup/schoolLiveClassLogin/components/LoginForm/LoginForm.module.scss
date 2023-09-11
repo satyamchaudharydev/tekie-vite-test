@@ -1,0 +1,633 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/spacing.scss";
+@import "src/scss/theme/colors.scss";
+@import "../../../../TeacherApp/variables/_variables.scss";
+@import '../../../../TeacherApp/mixins/_mixins.scss';
+
+@mixin font-style($font-family,
+  $font-style,
+  $font-weight,
+  $line-height,
+  $color) {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+.formContainer {
+  background: #ffffff;
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  backdrop-filter: blur(44.5967px);
+  padding-inline: 5%;
+  position: relative;
+  @include resD((width: 50% !important,
+      transform: translateY(0%),
+      border-radius: 17.5px,
+      border-top-left-radius: 0px,
+      border-bottom-left-radius: 0px,
+      padding-top: 5.25vh,
+      height: auto !important,
+      box-shadow: 0px 3.56773px 3.56773px rgba(172, 172, 172, 0.25),
+    ));
+  @include resMs((width: 100% !important,
+      flex: 1,
+      transform: translateY(-12%),
+      border-radius: 24px 24px 0px 0px,
+      box-shadow: 0px 4px 10px rgba(0, 87, 115, 0.15),
+      padding-top: 4vh,
+    ));
+}
+
+.otpRollnoInputContainer {
+  display: flex;
+  flex-direction: column;
+  @include resD((min-height: 210px,
+    ));
+
+  >div {
+    justify-content: space-between;
+    @include resD((width: 100% !important,
+      ));
+    @include resM((width: fit-content,
+      ));
+
+    >div {
+      >input:first-child {
+        @include resD((margin-right: 34px !important,
+          ));
+        margin-right: 16px !important;
+      }
+    }
+  }
+}
+
+.parentInputField {
+  @include resM((width: 100% !important,
+    ));
+
+  >div {
+    display: none;
+  }
+}
+
+.inputField {
+  letter-spacing: 0.05em;
+  color: $deep-sky-blue-24  !important;
+  @include resM((width: 350px !important,
+    ));
+  width: 100% !important;
+  // @include resD((margin-bottom: 20px));
+}
+
+.mobileRollNumberField {
+  width: 95% !important;
+}
+
+.termsConditionText {
+  @include font-style(Nunito, normal, 600, 120%, $emperor-61);
+  letter-spacing: 0.03em;
+  margin: 0;
+  @include resD((font-size: 17.6179px !important,
+      margin-top: 0.75vw !important,
+      margin-bottom: 8px !important,
+      font-weight: 600 !important,
+      width:84%
+    ));
+  @include resMs((font-size: 21px !important,
+      margin-top: 1vmax !important,
+      margin-bottom: 8px !important,
+      font-weight: normal !important,
+    ));
+
+  span {
+    @include font-style(Nunito, normal, 700, 120%, $deep-sky-blue);
+    cursor: pointer;
+  }
+}
+
+.otpField {
+  @include resD((margin-top: 1.25vw !important,
+      margin-bottom: 8px !important,
+    ));
+  @include resMs((margin-top: 4vh !important,
+      margin-bottom: 8px !important,
+    ));
+}
+
+.errorText {
+  @include resD((font-size: 17.6179px !important,
+      // margin-top: 0.75vw !important,,,,
+    ));
+}
+
+.continueBtn {
+  display: flex;
+  align-items: center;
+  padding: calc(#{$s-xs} + 2px) calc(#{$s-xs} - 4px);
+  background: conic-gradient(from -3.29deg at 100% -13%,
+      $cyan 0deg,
+      $deep-sky-blue 360deg);
+
+  &:disabled {
+    cursor: not-allowed;
+    background: conic-gradient(from -3.29deg at 100% -13%,
+        #dbdbdb 0deg,
+        #a6a6a6 360deg);
+  }
+
+  @include font-style(Nunito, normal, 600, 120%, $emperor-61);
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  @include resD((font-size: 20px,
+      margin-top: hs(26px),
+      border-radius: 40px,
+      width: 100%,
+      height: hs(47px),
+      justify-content: center,
+    ));
+  @include resMs((border-radius: 4px,
+      width: 150px,
+      margin-top: hs(26px),
+      font-size: 22px,
+      height: 56px,
+      justify-content: space-around,
+    ));
+}
+
+.photonOtpContainer {
+  .photonOtpInput {
+    @include resD((width: 70px !important,
+        margin-right: 39px,
+        font-size: 32px !important,
+      ));
+    @include resMs((width: 56px !important,
+        margin-right: 35px,
+        font-size: 30px !important,
+      ));
+  }
+
+  &:last-child .photonOtpInput {
+    @include resD((margin-right: 0px !important,
+      ));
+  }
+}
+
+.photonInput {
+  width: 100% !important;
+  background: #ffffff !important;
+  font-family: Nunito !important;
+  box-sizing: border-box !important;
+  font-weight: bold !important;
+  transition: 0.3s all ease-in-out;
+  @include resD((border: 1.25px solid #e1e1e1 !important,
+      border-radius: 6px !important,
+      height: 64px !important,
+      padding: 12px !important,
+      font-size: 40px !important,
+      color: #005773 !important,
+      width: 110% !important,
+    ));
+  @include resMs((border: 1px solid #c4c4c4 !important,
+      border-radius: 6px !important,
+      height: 56px !important,
+      padding: 16px !important,
+      font-size: 20px !important,
+      color: $emperor-61  !important,
+      width: 100% !important,
+    ));
+
+  &.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px $theme;
+    border: 1px solid transparent !important;
+    outline: none !important;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 1px $theme;
+    border: 1px solid transparent !important;
+    outline: none !important;
+  }
+
+  &::placeholder {
+    color: rgba(17, 17, 17, 0.48) !important;
+    opacity: 0.7 !important;
+  }
+
+  &.error {
+    &:focus {
+      box-shadow: 0 0 0 1px $tomato  !important;
+      border: 1px solid transparent !important;
+      outline: none !important;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 1px $tomato  !important;
+      border: 1px solid transparent !important;
+      outline: none !important;
+    }
+
+    @include resD((border: 1px solid $tomato  !important,
+      ));
+    @include resMs((border: 1px solid $tomato  !important,
+      ));
+  }
+}
+.backButton{
+  color: #a8a7a7;
+  font-weight:700;
+  z-index: -1;
+  position: relative;
+  top: -18px;
+  gap: 10px;
+  cursor: pointer;
+  @include resD((font-size:18px,
+    ));
+  @include flex(flex-start,center);
+}
+.loginWithEmailText {
+  @include font-style(Nunito, normal, 700, 19.2px, $deep-sky-blue);
+  letter-spacing: -0.02em;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #A8A7A7;
+  cursor: pointer;
+  max-width: 95% !important;
+  @include resD((margin-top:20px,
+      font-size: 18px !important,
+      padding-left: 5%,
+    ));
+  @include resMs((font-size: 19px !important,
+      padding-left: 0%,
+    ));
+
+  svg {
+    transition: all 0.3s linear;
+    @include resD((width: 20px,
+        margin-left: 8px,
+        padding-bottom: 2px,
+      ));
+    @include resMs((width: 25px,
+        margin-left: 8px,
+        padding-bottom: 2px,
+      ));
+  }
+
+  &:hover>svg {
+    transition: all 0.3s linear;
+    transform: translateX(4px);
+  }
+
+  >span {
+    margin-left: $s-xxxs;
+  }
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+}
+
+.joinClassText {
+  @include font-style(Gilroy, normal, bolder, 120%, $deep-sky-blue);
+  letter-spacing: -0.02em;
+  margin: 0;
+  @include resD((font-size: 28px,
+      margin-bottom: 36px,
+    ));
+  @include resMs((font-size: 28px,
+      margin-bottom: $s-m,
+    ));
+}
+
+.error {
+  @include resD((border: 1px solid $tomato  !important,
+    ));
+  @include resMs((border: 1px solid $tomato  !important,
+    ));
+}
+
+.inputAndMessageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.termsConditionText {
+  @include resD((max-width: 8 7%,
+    ));
+  @include resMs((max-width: 85%,
+    ));
+
+  >a {
+    text-decoration: none;
+  }
+}
+
+.loaderContainer {
+  @include resD((width: 30px,
+      height: 26px,
+    ));
+  @include resMs((width: 30px,
+      height: 30px,
+    ));
+}
+
+.studentsContainer {
+  overflow-y: scroll;
+  width: 100% !important;
+  @include resD((padding-right: $s-s,
+      max-height: 15vh,
+    ));
+  @include resMs((padding-right: $s-s,
+      max-height: 17vh,
+    ));
+
+  &::-webkit-scrollbar {
+    max-width: 0.35vw;
+    height: 1.20773vw;
+    display: flex;
+    min-width: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $emperor-66;
+    border-radius: 0.52083vw;
+  }
+}
+
+.headerText {
+  @include font-style(Gilroy, normal, 800, 120%, $deep-sky-blue-24);
+  @include resD((
+    display:block,
+    font-size: 28px,
+  ));
+  @include resM((
+    display: none,
+  ))
+}
+
+@media screen and (min-width: 395px) and (max-width: 500px) {
+  .termsConditionText {
+    font-size: 14px !important;
+  }
+
+  .continueBtn {
+    padding: 4px !important;
+    width: 28% !important;
+    height: 40px;
+    font-size: 16px !important;
+  }
+
+  .loginWithEmailText {
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (min-width: 835px) and (max-width: 899px) {
+  .termsConditionText {
+    font-size: 1.75vw !important;
+  }
+
+  .continueBtn {
+    padding: 4px !important;
+    width: 14vw !important;
+    height: 40px;
+    font-size: 2vw !important;
+  }
+
+  .loginWithEmailText {
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 600px) {
+  .termsConditionText {
+    font-size: 14px !important;
+  }
+
+  .continueBtn {
+    padding: 4px !important;
+    width: 23% !important;
+    height: 40px;
+    font-size: 16px !important;
+  }
+
+  .loginWithEmailText {
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 800px) {
+  .termsConditionText {
+    font-size: 15px !important;
+  }
+
+  .continueBtn {
+    padding: 4px !important;
+    width: 23% mportant;
+    height: 40px;
+    font-size: 16px !important;
+  }
+
+  .loginWithEmailText {
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 700px) {
+  .termsConditionText {
+    font-size: 14px !important;
+  }
+
+  .continueBtn {
+    padding: 4px !important;
+    width: 20% !important;
+    height: 40px;
+    font-size: 16px !important;
+  }
+
+  .loginWithEmailText {
+    font-size: 13px !important;
+  }
+}
+
+.inputAndStudentListContainer {
+  position: relative;
+  @include resD((
+    margin-bottom:22px
+  ))
+}
+
+.studentListContainer {
+  position: absolute;
+  left: 0;
+  @include resD((top:60px // decided by height of input field
+    ))
+}
+
+.rollNosFormContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputAndStudentListContainer {
+  flex: 2
+}
+
+.selectedStudentContainer {
+  @include flex(flex-start, center);
+  @include resD((padding:16px 22px,
+      border-radius:10px,
+      margin-bottom:16px,
+      background-color:#00ADE61A,
+      color:#00ADE6))
+}
+
+.avatarAndNameContainer {
+  @include flex(flex-start, center);
+  gap: 20px;
+  flex: 2;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.rollNoAndNameContainer {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include resD((
+    font-size:20px,
+    font-weight:700
+  ))
+}
+.studentName{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.avatar {
+  border-radius: 50%;
+  @include resD((height:40px,
+      min-width:40px,
+    ));
+}
+.buddyLimit{
+  font-weight: 700;
+  color: $tekie-grey-45;
+  text-align: center;
+  @include resD((
+    font-size:18px,
+    margin-top:16px
+  ))
+}
+.reEnterCode{
+  cursor: pointer;
+  position:absolute;
+  color: #a8a7a7;
+  font-weight:700;
+  @include flex(flex-start,center);
+  @include resD((
+    font-size:20px,
+    gap:10px,
+    bottom:36px
+  ))
+} 
+.inputField::placeholder{
+  font-weight: 700;
+}
+.separatorText,.buddyLimitText{
+  @include resD((
+    font-family: 'Nunito',
+    font-weight: 700,
+    font-size: 20px,
+    color:$tekie-grey-45,
+    text-align:center,
+    margin: 16px 0
+  ))
+}
+.buddyLimitText{
+  @include resD((
+    font-size:18px
+  ))
+}
+.errorText{
+color: #FF5744;
+text-align: right;
+@include resD((
+  margin-top: 8px,
+  font-size:17px,
+  font-weight:700
+))
+
+}
+.wrapper {
+@include flex(center,center)
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+  stroke: white;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+}
+
+.checkmark {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 3;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 9% auto;
+  box-shadow: inset 0px 0px 0px #65DA7A;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0
+  }
+}
+
+@keyframes scale {
+
+  0%,
+  100% {
+    transform: none
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1)
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #65DA7A
+  }
+}

@@ -1,0 +1,97 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+
+.mobile_banners {
+
+    background-image: url("../../../../assets/eventPage/Screenshot\ \(100\).png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    @include resD((
+       
+    ));
+    @include resSm((
+       display:flex,
+       align-items:flex-start,
+       justify-content:end,
+       flex-direction:column,
+       color:white,
+       padding-bottom:50px,
+        height:500px,
+        padding-left:40px,
+        width:100%
+    ))
+}
+.mobile_banners span{
+
+   img{
+       @include resD((
+           height: 30px,
+           width: 30px,
+       ));
+       @include resM((
+           height: 30px,
+           width: 30px,
+       ));
+   }
+
+    @include resD((
+       
+    ));
+    @include resSm((
+       display:flex,
+       align-items:center,
+       justify-content:center,
+       margin-top:10px,
+       font-size:16px
+    ))
+}
+.mobile_banners p{
+
+   
+
+    @include resD((
+       
+    ));
+    @include resSm((
+        font-family: Nunito,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 160%,
+        /* or 29px */
+        
+        text-transform: capitalize,
+        
+        color: rgba(255, 255, 255, 0.75),
+    ))
+}
+
+
+.register_button{
+    @include resSm((
+        display: flex,
+        flex-direction: row,
+        justify-content: center,
+        align-items: center,
+        padding: 8px 12px 8px 16px,
+        font-size: 16px,
+        font-weight:500,
+        background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%),
+        border-radius: 18px,
+        border: none,
+        width: 200px,
+        margin-top:30px,
+        color:white
+    ));
+}
+
+.mobile_banner_container{
+    @include resD((
+       display:none
+    ));
+    @include resSm((
+       display:block,
+       margin-top:0
+    ));
+}

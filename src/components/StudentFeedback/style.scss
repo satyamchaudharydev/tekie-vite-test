@@ -1,0 +1,451 @@
+@import "src/scss/size.scss";
+
+$grey: #E1E1E1;
+$neutral-dark: #282828;
+$neutral-light: #504F4F;
+$neutral-veryLight: #A8A7A7;
+$blue: #00ADE6;
+
+
+.sf-feedback-modal-container{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  z-index: 9999999;
+  background-color: #1e1f1e3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & h2,& p{
+    margin: 0;
+  }
+  button{
+    border: none;
+    // font-family: 'initial';
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+.sf-feedback-modal{
+    position: relative;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    @include resD((
+        width: 617px,
+        padding: 32px,
+        border-radius: 12px,
+        height: fit-content,
+    ));
+    .sf-default-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .sf-feedback-modal--close-btn{
+        cursor: pointer;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        background: #fff;
+        right: -16px;
+        top: -16px;
+        padding: 10px;
+        box-sizing: border-box;
+        @include resD((
+            width: 52px,
+            height: 52px,
+      
+
+        ));
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    // default modal
+    .sf-conji{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        @include resD((
+            width: 220px,
+            height: 137px,
+        ));
+        .sf-conji-stars{
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            // @include resD((
+            //     width: 165px,
+            //     height: 135px,
+            // ))
+        }
+        
+        & img{
+            object-fit: contain;
+            margin-inline: auto;
+            @include resD((
+                width: 165px,
+                height: 135px,
+            ))
+        }
+        // .sf-conji-stars{
+        //     position: absolute;
+        //     inset: 0;
+         
+        // }
+        & img{
+           max-width: 100%;
+           max-height: 100% ;
+        }
+    }
+    .sf-default-rating-container--body{
+        text-align: center;
+        @include resD((
+            margin-top: 32px,
+        ));
+        & button{
+            @include resD((
+                margin-top: 24px,
+            ));
+        }
+    }
+    .sf-default-rating-container--body h2{
+        font-weight: 700;
+        color: $neutral-dark;
+        @include resD((
+            font-size: 32px,
+        ));
+    }
+    .sf-default-rating-container--body p{
+        font-weight: 500;
+        color: $neutral-light;
+        @include resD((
+            font-size: 20px,
+            margin-top: 8px,
+
+        ));
+    }
+}
+.sf-default-rating-container--ratings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+
+    @include resD((
+        gap: 17px,
+        margin-top: 32px,
+    ));
+    .sf-default-rating-container--ratings--item{
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        @include resD((
+            width: 40px,
+            padding: 6px,
+            height: 40px,
+        ));
+        & svg{
+            fill: none;
+            stroke-width: 3.76735px;
+            stroke: #FFC107;
+
+            transition: all 0.3s ease;
+        }
+        &.selected-rating{
+            transform: scale(0.9);
+            // transition: none;
+            svg{
+            fill: #FFC107;
+            }
+        }
+    }
+}
+.sf-default-rating-container--ratings-reviews{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // color: $neutral-veryLight;
+    @include resD((
+        gap: 20px,
+    ))
+}
+.sf-default-rating-container--ratings-label{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $neutral-veryLight;
+    text-align: center;
+    @include resD((
+        font-size: 20px,
+    ))
+}
+// form
+.sf-default-form-container{
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    & .sf-default-form-container--question{
+        width: 100%; 
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        color: $neutral-dark;
+        opacity: 0.6;
+        font-weight: 700;
+        text-align: center;
+        @include resD((
+            font-size: 18px,
+            margin-top: 36px,
+            margin-bottom: 20px,
+        ));
+        & .sf-default--question-line{
+            flex-grow: 1;
+            height: 1px;
+            background: #D4D4D4;
+        }
+        .sf-default--question-text{
+            padding-inline: 10px;
+        }
+     
+    
+    
+    }
+}
+.sf-bottom-form-container{
+    width: 100%;
+}
+.sf-default-form-container-tag-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include resD((
+        gap: 24px,
+    ));
+    flex-wrap: wrap;
+    .sf-default-form-container--tag{
+        background: #FFFFFF;
+        cursor: pointer;
+        box-sizing: border-box;
+        flex-grow: 1;
+        border: 1px solid #DBDBDB;
+        border-radius: 32px;
+        color: #403F3F;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include resD((
+            padding-left: 7px,
+            padding-right: 7px,
+            height: 52px,
+            max-width: 260px,
+
+        ));
+        &:hover{
+            border: 1px solid #80D6F3;
+        }
+        &.selected{
+            background: rgba(0, 173, 230, 0.2);
+            border: 1px solid #00ADE6;
+            color: #00ADE6;
+        }
+    }
+}
+.sf-default-form-container--input{
+    box-sizing: border-box;
+    font-family: inherit;
+    width: 100%;
+    @include resD((
+        padding: 16px,
+        height: 100px,
+        border: 0.755158px solid rgba(64, 63, 63, 0.25),
+        border-radius: 7.55158px,
+    ))
+}
+.sf-default-form-submit-btn{
+    width: 100%;
+    @include resD((
+        margin-top: 32px,
+    ))
+}
+.sf-submitted-view-container{
+    text-align: center;
+    .sf-submiited-view-container--conji{
+        @include resD((
+            width: 173.49px,
+            // object-fit: cover,
+        ));
+       
+    }
+    & button{
+        @include resD((
+            margin-top: 24px,
+        ))
+    }
+    .sf-submitted-view-container--heading{
+        margin: 0;
+        // line-height: 0;
+        color: $neutral-dark;
+         @include resD((
+            margin-top: 24px,
+            padding-left: 80px,
+            padding-right: 80px,
+            font-size: 28px,
+        ))
+    }
+    .sf-submitted-view-container--subheading{
+        margin: 0;
+        // line-height: 0;
+        color: $neutral-light;
+        font-weight: 500;
+        @include resD((
+            padding-left: 80px,
+            margin-top:8px,
+            line-height: 27px,
+            padding-right: 80px,
+            font-size: 20px,
+        ))
+    }
+}
+.sf-form-footer{
+    width: 100%;
+    @include resD((
+        margin-top: 32px,
+    ));
+    &.mini{
+        display: flex;
+        justify-content: space-between;
+        @include resD((
+            margin-top: 32px,
+        ));
+    }
+}
+.sf-homework-questions-form{
+    display: flex;
+    flex-direction: column;
+    @include resD((
+        gap: 20px,
+    ));
+}
+.sf-form-footer--tell-more-btn{
+    color: $blue;
+    font-weight: 700;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    @include resD((
+        font-size: 20px,
+
+        gap: 12px,
+    ));
+    .tell-more-btn-icon{
+        @include resD((
+            width: 24px,   
+            height: 24px,
+        ))
+    }
+}
+.sf-homework-questions-form--item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+    & .sf-homework-questions-form--item-question{
+        color: #403F3F;
+        font-weight: 600;
+        @include resD((
+            font-size: 18px,
+        ))
+    }
+    & .sf-homework-questions-form--item-like-container{
+        display: flex;
+        @include resD((
+            gap: 20px,
+        ));
+        & .sf-feedback-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #FFFFFF;
+            border: 1px solid #DBDBDB;
+            border-radius: 50%;
+            color: $neutral-veryLight;
+            cursor: pointer;
+            & svg {
+                transform-origin: 32% 20%;
+                
+                @include resD((
+                    width: 24px,
+                    height: 24px,
+                
+                ));
+            }
+            @include resD((
+                width: 44px,
+                height: 44px,
+            ));
+            &.selected{
+                border: 1px solid transparent;
+                background: rgba(0, 173, 230, 0.15);
+                color: $blue;
+              
+                // animation: up 0.3s ease-in-out;
+            }
+            &.selected:not(.dislike){
+
+                & svg{
+                    animation: up 1s ease, down 0.4s ease-out 1s;
+                }
+            }
+            &:hover:not(.selected){
+                border: 1px solid #80D6F3;
+
+                // border: 1px solid #DBDBDB;
+                color: $neutral-light
+                
+            }
+        }
+    }
+}
+.sf-form-submit-button{
+    @include resD((
+        margin-top: 32px,
+    ))
+}
+@keyframes down{
+    0%{
+        transform: rotate(-47deg);
+    }
+    30%{
+        transform: rotate(0deg);
+    }
+    59.99%,60%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes up{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-47deg);
+    }
+
+}

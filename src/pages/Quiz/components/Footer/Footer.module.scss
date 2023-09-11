@@ -1,0 +1,87 @@
+@import 'src/scss/size.scss';
+
+.footerContainer{
+  // height: hs(92px);
+  // box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.16);
+  // background-color: #ffffff;
+  // position: fixed;
+  // bottom: 0;
+  // width: 100%;
+  // left: 0;
+  // margin-bottom: 0;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  height: hs(92px);
+  box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: calc(100% - #{hs(352px)});
+  left: hs(352px);
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonArea{
+  width: hs(744px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftButton{
+  width: hs(22.7px);
+  cursor: pointer;
+  height: hs(38.9px);
+  object-fit: contain;
+  background-size: contain;
+  background-image: url('../../../../assets/quizLeftArrow.svg');
+  &:hover {
+    cursor: default;
+    color: #aaacae;
+    opacity: 0.7;
+  }
+}
+
+.rightButton{
+  width: hs(22.7px);
+  cursor: pointer;
+  height: hs(38.9px);
+  object-fit: contain;
+  background-size: contain;
+  background-image: url('../../../../assets/quizRightArrow.svg');
+  &:hover {
+    cursor: default;
+    color: #aaacae;
+    opacity: 0.7;
+  }
+}
+.submitButton{
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-family: Nunito;
+  font-size: hs(28px);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #34e4ea;
+  width: hs(173.9px);
+  height: hs(50px);
+  object-fit: contain;
+  border-radius: hs(32px);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #34e4ea;
+  &:hover {
+    cursor: default;
+    color: #aaacae;
+    opacity: 0.6;
+  }
+}

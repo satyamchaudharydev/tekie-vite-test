@@ -1,0 +1,30 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.recording_parent_container {
+    box-sizing: border-box;
+    @include resD(
+        (
+            width: 100%,
+            background: #ffffff,
+            border-radius: 24px,
+            height:fit-content,
+            margin-left:0,
+           
+            
+            padding:30px 20px 30px 20px,
+
+            
+        )
+    );
+    @include resSm((
+        width: 100%,
+            background: #ffffff,
+            border-radius: 24px,
+            height:fit-content,
+            margin-left:0,
+            
+            
+            padding:30px 50px 30px 20px,
+    ));
+}

@@ -1,0 +1,83 @@
+@import "src/scss/size.scss";
+@import "src/scss/Inter.scss";
+@import "src/scss/theme/colors.scss";
+@import "../../../../variables/_variables.scss";
+@import "../../../../mixins/_mixins.scss";
+
+.headerContainer {
+    @include flex(space-between, flex-start);
+    @include resD1280((padding-right:24px,
+            margin-bottom:16px));
+    font-family: 'Inter';
+}
+
+.heading {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    color: $tekie-black-90;
+    @include resD1280((font-size:18px))
+}
+
+.filterContainer {
+    p {
+        color: #333333;
+        font-weight: 400;
+        @include resD1280((
+            font-size: 12px,
+            line-height: 20px,
+            margin-right: 7px,
+        ))
+    }
+    @include flex(center, center);
+    @include resD1280((gap:8px))
+}
+
+label {
+    color: $tekie-black-60;
+    @include resD1280((font-size:12px))
+}
+
+.dropDownContainer {
+  
+    @include resD1280((height: 36px,
+            width: 146px,
+        ));
+    @include resM((height: 38px,
+            width: 180px,
+        ));
+        @media screen and (min-width:1601px) {
+            width: 12.5rem,
+        }
+        @media screen and (min-width:1900px) {
+            width: 13.5rem,
+        }
+}
+.optionContainer{
+    @include flex(flex-start,center);
+    label{
+        color: #333333;
+        @include resD1280((
+            font-size:14px
+        ))
+    }
+}
+.checkbox{
+    @include resD1280((
+        margin-right: 8px,
+        height:16px,
+        width:16px
+    ));
+    accent-color: $primary-color
+}
+
+.classroomHeaderTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        @include resD1280((
+            margin-right: 8px,
+        ));
+    }
+}

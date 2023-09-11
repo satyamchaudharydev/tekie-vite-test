@@ -1,0 +1,1408 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.eventHeading {
+    font-family: Gilroy;
+    margin-bottom: 0px;
+    @include resM(
+        (
+            font-size: 20px,
+            padding-bottom: 20px,
+            padding-left: 20px,
+            padding-top: 12px,
+        )
+    );
+    @include resD(
+        (
+            // padding-bottom: 45px,
+            font-family: Gilroy,
+            font-style: normal,
+            font-weight: bolder,
+            font-size: 40px,
+            line-height: 140%,
+            letter-spacing: -0.03em,
+            // padding: 40px 0px,
+            padding-top: 50px,
+            padding-bottom: 30px,
+            padding-left: 15px,
+        )
+    );
+}
+
+// .event-library-box-upper{
+//     @include resD((
+        
+//         padding-left: 20px,
+//     ));
+// }
+
+.event-library-box {
+    @include resM(
+        (
+            padding-left: 0px,
+            padding-right: 0px,
+        )
+    );
+    @include resD(
+        (
+            padding-left: 0px,
+            padding-right: 0px,
+            margin-left:0px,
+            margin-right:0px,
+        )
+    );
+}
+.categories-padding {
+    @include resM(
+        (
+            padding-right: 21px,
+        )
+    );
+    @include resD(
+        (
+            padding-right: 48px,
+        )
+    );
+}
+.event-categories {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    width: max-content;
+    overflow-x: scroll;
+    margin-top: 0px;
+    @include resM(
+        (
+            padding-bottom: 24px,
+            margin-left:5px,
+            padding-left:17px,
+        )
+    );
+    @include resD(
+        (
+            padding-bottom: 0,
+            margin-left:0px,
+            padding-left: 15px,
+        )
+    );
+}
+.eventsPages-container{
+    @include resD((
+        left:15px,
+        position:relative,
+    ));
+}
+.event-categorie {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    color: #403f3f;
+    opacity: 0.45;
+    @include resM(
+        (
+            font-size: 16px,
+        )
+    );
+    @include resD(
+        (
+            font-size: 26px,
+        )
+    );
+    cursor: pointer;
+}
+.event-categorie-active {
+    color: #00ade6;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    @include resM(
+        (
+            font-size: 16px,
+        )
+    );
+    @include resD(
+        (
+            font-size: 26px,
+        )
+    );
+    cursor: pointer;
+}
+.category-underline {
+    background: #00ade6;
+    width: 100%;
+    @include resM(
+        (
+            border-radius: 24px,
+            height: 4px,
+            margin-top: 5px,
+        )
+    );
+    @include resD(
+        (
+            border-radius: 24px,
+            height: 4px,
+            margin-top: 5px,
+        )
+    );
+}
+.scroll-container {
+    width: 100hw;
+    overflow: scroll;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+.anti-scroll-container {
+    width: 100hw;
+    overflow: hidden;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+    scroll-behavior: smooth;
+    @include resM(
+        (
+            
+        )
+    );
+    @include resD(
+        (
+            // background: #FAFAFA,
+        )
+    );
+}
+.event-tags {
+    display: flex;
+    flex-direction: row;
+    @include resM(
+        (
+        padding-left: 20px,
+        padding-bottom: 5px,
+        )
+    );
+    @include resD(
+        (
+          padding-left: 20px,
+          padding-bottom: 5px,
+        )
+    );
+    width: max-content;
+    overflow: scroll;
+}
+.tag-button {
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+    border-color: #00ade6;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: max-content;
+    height: fit-content;
+    font-family: Nunito;
+    @include resM((
+        padding: 10px 16px,
+        border-width: 1px,
+        border-radius: 24px,
+        // background-color: white;
+        margin-right: 15px,
+    ));
+    @include resD((
+        padding: 8px 22px,
+        border-width: 1.26855px,
+        font-style: normal,
+        font-weight: 600,
+        font-size: 18px,
+        line-height: 25px,
+        margin-right: 15px,
+    ));
+    &.tag-card-button{
+        margin-right: 0px !important;
+        @include resM((
+            margin-left: 20px,
+            padding: 12px 20px,
+        ));
+        @include resD((
+            margin-left: 30px,
+            padding: 8px 16px,
+        ));
+    }
+}
+.tag-name {
+    font-family: Nunito;
+    font-style: normal;
+    color: #00ade6;
+    @include resM(
+        (
+            font-size: 14px,
+        )
+    );
+    @include resD(
+        (
+            font-size: 18px,
+            font-weight: 700,
+        )
+    );
+}
+.tag-name-active {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    @include resM(
+        (
+            font-size: 14px,
+        )
+    );
+    @include resD(
+        (
+            font-size: 18px,
+            font-weight: 700,
+        )
+    );
+    color: white;
+}
+.tag-button-active {
+    background-color: #00ade6;
+    @include resM((
+    padding: 10px 16px,
+    ));
+    @include resD((
+        padding: 8px 16px,
+    // border-radius:50px,
+    // font-style: normal,
+    // font-weight: 600,
+    // font-size: 18px,
+    // line-height: 25px,
+    ));
+}
+.tag-image {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+.event-image {
+    // cursor: pointer;
+    @include resM(
+        (
+            width: 328px,
+            // height: 450px,
+            height: 390px,
+            border-radius: 16px,
+        )
+    );
+    @include resD(
+        (
+            width: 409px,
+            height: 460px,
+            border-radius: 16px,
+        )
+    );
+}
+.test-container {
+    // position: relative;
+    background: #ffffff;
+    border-top: none;
+    @include resM(
+        (
+            width: 328px,
+            // bottom: 190px,
+            height: 190px,
+            padding-bottom: 10px,
+            border-radius: 0 0 16px 16px,
+            border: 1px solid #ECECEC,
+        )
+    );
+    @include resD(
+        (
+            width: 409px,
+            // bottom: 180px,
+            height: 220px,
+            padding-bottom: 20px,
+            border-radius: 0 0 16px 16px,
+            border: 1px solid #ECECEC,
+        )
+    );
+}
+
+.test-container-shadow {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include resM(
+        (
+            width: 328px,
+            height: 400px,
+        )
+    );
+    @include resD(
+        (
+            width: 394px,
+            height: 460px,
+        )
+    );
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+.register-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+        @include resM(
+        (
+            padding-top: 10px,
+        )
+    );
+    @include resD(
+        (
+            padding-top: 25px,
+            justify-content: space-between,
+        )
+    );
+}
+.event-resgistered {
+    background: rgba(1, 170, 147, 0.1);
+    border: 1px solid #01aa93;
+    @include resM(
+        (
+            font-size: 13px,
+            padding: 12px 20px,
+            margin-left: 20px,
+            margin-top: 0px,
+            border-radius: 24px,
+            font-family: Nunito,
+            font-style: normal,
+            font-weight: bold,
+            color: #01aa93,
+            display: flex,
+            flex-direction: row,
+            align-items: center,
+            justify-content: center,
+        )
+    );
+    @include resD(
+        (
+            font-size: 21.35px,
+            width: 115px,
+            padding: 6px 12px,
+            margin-left: 30px,
+            margin-top: 0px,
+            border-radius: 24px,
+            font-family: Nunito,
+            font-style: normal,
+            font-weight: bold,
+            color: #01aa93,
+            display: flex,
+            flex-direction: row,
+            align-items: center,
+            justify-content: center,
+        )
+    );
+}
+.event-trending {
+    border: 1px solid #01aa93;
+    border-radius: 24px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    color: #01aa93;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 40px;
+    margin-top: 10px;
+    padding-right: 12px;
+    padding-left: 12px;
+    @include resM(
+        (
+            font-size: 13px,
+        )
+    );
+    @include resD(
+        (
+            font-size: 18px,
+        )
+    );
+}
+.register-rectangle {
+    height: 36px;
+}
+.aman-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @include resM(
+        (
+            padding-left: 0%,
+            left:20px,
+        )
+    );
+    @include resD(
+        (
+            padding-left: 0%,
+            left:-20px,
+        )
+    );
+}
+
+
+.aman-container > div {
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.event-registered-upper {
+    position: relative;
+    background-color: #0a2d2b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1;
+    @include resD(
+        (
+            width: 34px,
+            height: 34px,
+            left: 40px,
+            font-size: 12px,
+        )
+    );
+    @include resM(
+        (
+            width: 30px,
+            height: 30px,
+            left: 30px,
+            font-size: 12px,
+        )
+    );
+}
+.event-participation {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 19px;
+    color: #000000;
+    @include resM(
+        (
+            font-size: 14px,
+            margin-left: 13px,
+        )
+    );
+    @include resD(
+        (
+            font-size: 16px,
+            margin-left: 13px,
+        )
+    );
+}
+.event-registered-lower {
+    @include resD(
+        (
+            width: 34px,
+            height: 34px,
+            position:relative,
+            left:10px
+        )
+    );
+     @include resM(
+        (
+            width: 35px,
+            height: 35px,
+        )
+    );
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.event-name {
+    font-family: Gilroy;
+    font-style: normal;
+    color: #282828;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include resM(
+        (
+            font-size: 18px,
+            margin-left: 30px,
+            font-weight: 600,
+            padding-top: 20px,
+            line-height: 20px,
+        )
+    );
+    @include resD(
+        (
+            font-size: 24px,
+            line-height: 29px,
+            font-weight: 800,
+            margin-left: 30px,
+            padding-top: 20px,
+        )
+    );
+}
+.event-card-calendar, .event-clock {
+    @include resM(
+        (
+            height: 16px,
+            width: 16px,
+            margin-right: 5px,
+        )
+    );
+    @include resD(
+        (
+            height: 24px,
+            width: 24px,
+            margin-right: 5px,
+        )
+    );
+}
+.event-card-calendar{
+     @include resM(
+        (
+            margin-right: 5px,
+        )
+    );
+    @include resD(
+        (
+            margin-right: 8px,
+        )
+    );
+}
+.event-date {
+    font-family: 'Nunito';
+    font-style: normal;
+    color: #282828;
+    @include resM(
+        (
+            font-size: 16px,
+            line-height: 22px,
+            width: 80px,
+            font-weight: 600,
+        )
+    );
+    @include resD(
+        (
+            font-size: 20px,
+            line-height: 20px,
+            width: 100px,
+            font-weight: 600,
+        )
+    );
+}
+.event-time {
+    font-style: normal;
+    // color: #504f4f;
+    font-family: 'Nunito';
+    // font-weight: 600;
+    // font-size: 16px;
+    // line-height: 22px;
+    color: #282828;
+
+    @include resM(
+        (
+            font-size: 16px,
+            line-height: 22px,
+            font-weight: 600,
+        )
+    );
+    @include resD(
+        (
+            font-size: 20px,
+            line-height: 20px,
+            font-weight: 600,
+        )
+    );
+}
+ .event-registerButton-for-card{
+    display: flex; 
+    flex-direction: row;
+    background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: Nunito;
+    transition: 0.3s all ease-in-out;
+    width: 80%;
+    &.disabled{
+      background: gray;
+      cursor: not-allowed;
+    }
+    svg {
+      transition: 0.3s all ease-in-out;
+      transform: translateX(0px);
+    }
+    &:hover .viewDetails{
+      transition: .3s all ease;
+      margin-top: 5px;
+    }
+    &:hover .actionButtonSVG {
+      transform: translateX(5px);
+    }
+    font-weight: 700;
+    @include resD((
+      font-size: 19px,
+      border-radius: 28.9122px,
+    //   width: 180px,
+      padding: 8px 20px,
+      height: 40px,
+      margin: 20px auto,
+      border: 1.5px solid transparent
+    ));
+    @include resM((
+      border-radius: 21.6842px,
+    //   width: 140px,
+      padding:10px 12px,
+      font-size: 14px,
+      margin: 20px auto,
+      border: 1.5px solid transparent
+    ));
+  }
+
+  .completed_event_btn{
+        background: white !important;
+        color: #00ADE6;
+        @include resD((
+        border: 1.5px solid #00ADE6,
+        ));
+        @include resM((
+        border: 1.5px solid #00ADE6,
+        ));
+        & svg{
+            fill: #00ADE6;
+        }
+        & path{
+            fill: #00ADE6;
+        }
+    }
+.event-details {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    @include resM(
+        (
+            margin-left: 30px,
+            justify-content: unset,
+            padding-right: 10px,
+            padding-top: 15px,
+            padding-bottom: 15px,
+        )
+    );
+    @include resD(
+        (
+            margin-left: 30px,
+            padding-right: unset,
+            justify-content: unset,
+            padding-top: 15px,
+            padding-bottom: 15px,
+        )
+    );
+}
+.event-tag-box {
+    @include resM(
+        (
+            font-size: 11px,
+            padding: 5.64706px 11.2941px,
+            border: 1.41176px solid #dcdcdc,
+            border-radius: 5.64706px,
+            font-family: Nunito,
+            font-style: normal,
+            font-weight: bold,
+            color: #282828,
+            margin-right: 10px,
+            width: max-content,
+        )
+    );
+    @include resD(
+        (
+            font-size: 13px,
+            line-height: 16px,
+            padding: 5.64706px 11.2941px,
+            border: 2.8px solid #dcdcdc,
+            border-radius: 7px,
+            font-family: Nunito,
+            font-style: normal,
+            font-weight: bold,
+            color: #282828,
+            margin-right: 10px,
+            width: max-content,
+        )
+    );
+}
+
+.event-wrap {
+    @include resD(
+        (
+            display: flex,
+            flex-direction: row,
+            width: max-content,
+            overflow-x: scroll,
+            height: max-content,
+            align-items: center,
+            justify-content: center,
+            margin-bottom: 0px,
+            margin-top: 50px,
+        )
+    );
+    @include resM(
+        (
+            display: flex,
+            flex-direction: row,
+            width: max-content,
+            overflow-x: scroll,
+            height: max-content,
+            align-items: center,
+            justify-content: center,
+            margin-bottom: 80px,
+            margin-top: 50px,
+        )
+    );
+}
+.event-wrap::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+@media (min-width: 900px) and (max-width: 1100px){
+    .event-card {
+        height: 35vw !important;
+    }
+}
+.completed_event_tag{
+display: flex;
+align-items: center;
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 800;
+color: #01AA93;
+position: absolute;
+@include resM(
+        (
+            border-radius: 5.36041px,
+            padding: 6px 11px,
+            font-size: 14px,
+            right: 25px,
+            top: 6px
+        )
+    );
+    @include resD(
+        (
+            border-radius: 5.36041px,
+            padding: 6px 11px,
+            font-size: 16px,
+            right: 25px,
+            top: 6px
+        )
+    );
+    background: rgba(12, 223, 50, 0.1);
+& svg{
+    @include resM(
+        (
+            margin-right: 6px,
+            height: 20px,
+            width: 20px,
+        )
+    );
+    @include resD(
+        (
+            margin-right: 6px,
+            height: 24px,
+            width: 24px,
+        )
+    );
+}
+}
+.event-card {
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    // overflow: hidden;
+    @include resD(
+        (
+            // height: 530px,
+            // min-height: 560px,
+            // width: 409px,
+            width: 409px,
+            height: 530px,
+            // width: 312px,
+            // height: 407px,
+            margin-right: 40px,
+            position:relative,
+            margin-top:50px,
+            margin-bottom: 40px,
+            border-radius: 16px,
+            filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.25)),
+        )
+    );
+    @include resM(
+        (
+            // height: 460px,
+            height: 416px,
+            width: 312px,
+            margin-right: 40px,
+            margin-bottom: 0px,
+            border-radius: 16px,
+            filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.25)),
+        )
+    );
+}
+
+
+
+.banner_carousel_next_btn {
+    @include resD((
+        width: 60px,
+        height: 60px,
+        background: #504F4F,
+        border-radius: 34.0195px,
+        // transform: rotate(180deg),
+        border: none,
+        display:flex,
+        align-items:center,
+        justify-content:center,
+        cursor: pointer,
+        position: relative,
+        top: -300px,
+        left: 660px,
+    ));
+    @include resSm((
+        width: 22px,
+        height: 22px,
+        background: #00ADE6,
+        border-radius: 34.0195px,
+        // transform: rotate(180deg),
+        border: none,
+        display: none
+    ));
+}
+
+.carousel_next_btn-library {
+    background-color: unset;
+    @include resD((
+        // transform: rotate(180deg),
+        border: none,
+        position: relative,
+        cursor: pointer,
+        display:flex,
+        align-items:center,
+        justify-content:center
+    ));
+    @include resSm((
+       display:none
+    ));
+    img{
+       vertical-align: middle;
+    }
+    & svg{
+        @include resD((
+            height: 32px,
+            width: 32px,
+        ));
+        @include resSm((
+            height: 32px,
+            width: 32px,
+        ));
+    }
+}
+.carousel_prev_btn {
+    @include resD((
+        width: 70px,
+        height: 70px,
+        border-radius: 34.0195px,
+        transform: rotate(180deg),
+        border: none,
+        position: absolute,
+        left: 50px,
+        top: 0px,
+        cursor: pointer,
+        
+        display:flex,
+        align-items:center,
+        justify-content:center
+    ));
+    @include resSm((
+       display:none
+    ));
+}
+
+.events_caraousel_class {
+    @include resD(
+        (
+            display: flex,
+            margin-top: 70px,
+            height:fit-content,
+            transition:1s all ease,
+            width: fit-content,
+            justify-content:flex-start
+        )
+    );
+    @include resM(
+        (
+            display: none,
+        )
+    );
+}
+
+.events_caraousel_class_mobile {
+    .event-card:nth-child(1){
+        padding-left: 15px;
+    }
+    &.width{
+        width: unset;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+      }
+    @include resD(
+        (
+            display: none,
+            width: unset,
+        )
+    );
+    @include resM(
+        (
+            display: inline-flex,
+            flex-direction: row,
+            overflow: scroll,
+            margin-top: 0px,
+            margin-bottom: 0px,
+            height: 430px,
+            width: 100vw,
+        )
+    );
+}
+
+.event-testimonial {
+    display: inline-flex;
+    overflow-x: hidden;
+    @include resD(
+        (
+            margin-left: 180px,
+        )
+    );
+    @include resM(
+        (
+            margin-left: 20px,
+        )
+    );
+}
+.quotes-content {
+    font-family: Gilroy;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: black;
+    @include resD(
+        (
+            font-size: 45px,
+            font-weight: bolder,
+        )
+    );
+    @include resM(
+        (
+            font-size: 20px,
+            font-weight: bolder,
+        )
+    );
+}
+
+.content-green {
+    color: #31a87f;
+    margin-top: 10px;
+}
+.quotes-up {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    @include resD(
+        (
+            height: 70px,
+            align-items: flex-end,
+        )
+    );
+    @include resM(
+        (
+            height: 40px,
+        )
+    );
+}
+.quotes-down {
+    display: flex;
+    flex-direction: row;
+    padding-left: 130px;
+    width: max-content;
+    @include resD(
+        (
+            height: 70px,
+        )
+    );
+    @include resM(
+        (
+            height: 40px,
+        )
+    );
+}
+.quotes1 {
+    @include resD(
+        (
+            height: 60px,
+            margin-right: 20px,
+            margin-bottom: 10px,
+        )
+    );
+    @include resM(
+        (
+            margin-bottom: 10px,
+            padding-right: 00px,
+        )
+    );
+}
+.quotes2 {
+    @include resD(
+        (
+            margin-top: 0px,
+            height: 60px,
+            margin-left: 20px,
+        )
+    );
+    @include resM(
+        (
+            margin-top: 10px,
+            padding-left: 0px,
+        )
+    );
+}
+.quotes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include resD((
+        padding-bottom: 30px,
+        margin:auto,
+        margin-bottom: 15px,
+        margin-top: 60px,
+    ));
+    @include resM((
+        margin:auto,
+        margin-top: 30px,
+        padding-bottom: 30px,
+        margin-bottom: 10px,
+    ))
+}
+
+.language-tag-container {
+    @include resD(
+        (
+            display: flex,
+            flex-direction: row,
+            padding-left:30px,
+        )
+    );
+    @include resM(
+        (
+            padding-left:30px,
+            margin-right: 20%,
+            display: flex,
+            flex-direction: row,
+            width:fit-content,
+        )
+    );
+}
+
+
+.test-container-shaow{
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    opacity: 0;
+    z-index: 9998;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.event-card:hover  .test-container-shaow {
+    top: 5%;
+    left: 55%;
+    opacity: 1;
+}
+.event-card:hover{
+    @include resD(
+    (
+          filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25)),
+    )
+  );
+  @include resM(
+    (
+          filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25)),
+    )
+  );
+}
+
+@media (max-width: 720px){
+     .test-container-shaow {
+        opacity: 1 !important;
+    }
+}
+
+
+  
+//   .content .content-overlay {
+//     background: rgba(0, 0, 0, 0.7);
+//     position: absolute;
+//     height: 99%;
+//     width: 100%;
+//     left: 0;
+//     top: 0;
+//     bottom: 0;
+//     right: 0;
+//     opacity: 0;
+//     -webkit-transition: all 0.4s ease-in-out 0s;
+//     -moz-transition: all 0.4s ease-in-out 0s;
+//     transition: all 0.4s ease-in-out 0s;
+//   }
+
+  .shadow-div {
+    width: 100%;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include resD(
+    (
+          border: 1px solid transparent,
+          width: 409px,
+        height: 530px,
+        border-radius: 20px 20px 0 0,
+    )
+  );
+  @include resM(
+    (
+          border: 1px solid transparent,
+          height: 416px,
+        width: 328px,
+        border-radius: 20px 20px 0 0,
+    )
+  );
+  }
+  
+  .content:hover .content-overlay {
+    opacity: 1;
+  }
+  
+  .content-image {
+    width: 100%;
+  }
+  
+  .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .content:hover .content-details {
+    display: block;
+  }
+  
+  .content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+  
+  .content-details p {
+    color: #fff;
+    font-size: 0.8em;
+  }
+  
+  .fadeIn-bottom {
+    top: 30%;
+  }
+  
+  .fadeIn-top {
+    top: 20%;
+  }
+  
+  .fadeIn-left {
+    left: 20%;
+  }
+  
+  .fadeIn-right {
+    left: 80%;
+  }
+  
+
+
+
+  .lp-testimonials-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lp-testimonial-head-quote {
+  font-family: Gilroy;
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+  position: relative;
+  line-height: 140%;
+  align-items: center;
+  letter-spacing: -0.03em;
+   @include resD(
+    (
+      font-size: 50px,
+    )
+  );
+  @include resSm(
+    (
+      font-size: 22px,
+    )
+  );
+}
+
+.lp-testimonial-up-quote {
+  position: absolute;
+  @include resD(
+    (
+      width: 80px,
+      height: 80px,
+      top: -25px,
+      left: -110px,
+    )
+  );
+  @include resSm(
+    (
+      width: 35px,
+      height: 35px,
+      top: -20px,
+      left: -36px,
+    )
+  );
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  background-image: url("../../../../assets/quotes1.svg");
+}
+.lp-testimonial-down-quote {
+  position: absolute;
+  @include resD(
+    (
+      width: 80px,
+      height: 80px,
+      bottom: -40px,
+      right: -100px,
+    )
+  );
+  @include resSm(
+    (
+      width: 35px,
+      height: 35px,
+      bottom: -28px,
+      right: -30px,
+    )
+  );
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  background-image: url("../../../../assets/quotes2.svg");
+}
+
+.carousel-mainHolder{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: all 0.1s ease-in-out;
+    padding: 0;
+    @include resD(
+        (
+            display: block,
+        )
+    );
+    @include resM(
+        (
+            display: block,
+        )
+    );
+    @include resSm(
+        (
+            display: block,
+        )
+    );
+}
+.carousel-holders-upper, .carousel-holders-lower{
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    transition: all 0.1s ease-in-out;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    display: -webkit-inline-box;
+    overflow-x: scroll;
+    overflow-y: hidden;
+     @include resD((
+        padding-top: 5px,
+        padding-bottom: 10px,
+    ));
+    @include resM((
+        padding-top: 24px,
+    ));
+}
+.event_Library_loggedIn_container .event-card{
+    position: relative;
+    @include resD((
+        left: 90px,
+    ));
+    @include resM((
+        left: 15px,
+    ))
+}
+.loader_skeleton_events{
+    
+    @include resD((
+        margin-left:20px,
+        display:flex
+    ));
+    @include resM((
+        margin-left:50px,
+        display:flex
+    ))
+}

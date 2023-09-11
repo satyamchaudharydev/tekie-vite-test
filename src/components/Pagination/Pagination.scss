@@ -1,0 +1,121 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme.scss';
+
+.current-page {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.pagination-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  overflow-x: scroll;
+
+  @include resD((
+    padding: $s-xm 0
+  ));
+  @include resM((
+    padding: $s-xm $s-s
+  ));
+}
+
+ul.pagination {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+ul.pagination li {
+  list-style-type: none;
+}
+
+ul.pagination li a.page-item {
+  width: 42px;
+  min-width: 42px;
+  height: 42px;
+  border: none;
+  text-decoration: none;
+  border-radius: 100px;
+  font-size: 15px;
+  transition: all .3s;
+  display: flex;
+  align-items: center;
+  color: black;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #CBF7FC;
+  font-weight: 600;
+  margin-right: 11px;
+  line-height: 30px;
+
+  &:hover {
+    color: $white !important;
+    background: $primary-gradient !important;
+  }
+}
+
+ul.pagination li a.page-item-skip-btn {
+  font-size: 22px;
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+  color: $deep-sky-blue;
+}
+
+ul.pagination li a.page-item.active {
+  color: $white !important;
+  text-decoration: none;
+  background: $primary-gradient !important;
+}
+
+.pagination-arrow {
+  background-repeat: no-repeat;
+  cursor: pointer;
+  object-fit: contain;
+  background-size: contain;
+  background-position: center;
+  background-image: url('../../assets/quizLeftArrow.svg');
+  display: block;
+
+  @include resD((
+    width: hs(20px),
+    height: hs(38.9px),
+  ));
+  @include resM((
+    width: 40px,
+    height: 30px
+  ));
+
+  &:hover {
+    color: #aaacae;
+    opacity: 0.7;
+  }
+}
+
+.pagination-leftArrow {
+  background-image: url('../../assets/quizLeftArrow.svg');
+
+  @include resD((
+    margin-right: $s-m,
+  ));
+  @include resM((
+    margin-right: $s-xs,
+  ));
+}
+
+.pagination-rightArrow {
+  background-image: url('../../assets/quizRightArrow.svg');
+  @include resD((
+    margin-left: $s-xs,
+  ));
+  @include resM((
+    margin-left: $s-xxs,
+  ))
+}

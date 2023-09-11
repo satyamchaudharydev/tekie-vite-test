@@ -1,0 +1,359 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+@mixin font-style(
+  $font-family,
+  $font-style,
+  $font-weight,
+  $line-height,
+  $color
+) {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+.codeViewContainer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  @include resD(
+    (
+      min-height: 250px,
+      height: fit-content,
+      max-height: 625px,
+      margin-top: 0,
+    )
+  );
+  @include resM(
+    (
+      min-height: 250px,
+      height: fit-content,
+      max-height: 380px,
+      margin-top: 0,
+    )
+  );
+  > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: all 0s linear;
+    pointer-events: none;
+    @include resD(
+      (
+        padding-bottom: 86px,
+      )
+    );
+    @include resM(
+      (
+        padding-bottom: 50px,
+      )
+    );
+  }
+  overflow: hidden;
+}
+.terminalResizer {
+  position: absolute;
+  bottom: 0%;
+  height: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.4%;
+  z-index: 4;
+  background-color: #00171f;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.codeViewContentWrapper {
+  max-height: 86%;
+  overflow-y: scroll;
+  position: relative;
+  pre {
+    margin: 0% !important;
+  }
+}
+.codeViewContent-row{
+  height: 100%;
+}
+.headerContentWrapper {
+  display: flex;
+  align-items: center;
+  @include resD(
+    (
+      margin-left: 32px,
+    )
+  );
+  @include resM(
+    (
+      margin-left: 24px,
+    )
+  );
+  > svg {
+    @include resD(
+      (
+        margin-right: 8px,
+        width: 28px,
+        height: 28px,
+      )
+    );
+    @include resM(
+      (
+        margin-right: 8px,
+        width: 16px,
+        height: 16px,
+      )
+    );
+  }
+}
+.terminalHeader {
+  background-color: #00171f;
+  display: flex;
+  align-items: center;
+  padding-right: 2%;
+  width: 98%;
+  z-index: 3;
+  @include resD(
+    (
+      padding-block: 4px,
+      height: 66px,
+    )
+  );
+  @include resM(
+    (
+      padding-block: 4px,
+      height: 40px,
+    )
+  );
+  h3 {
+    @include font-style(Nunito, normal, 700, 120%, #fff);
+    margin: 0%;
+    @include resD(
+      (
+        font-size: 20px,
+      )
+    );
+    @include resM(
+      (
+        font-size: 12px,
+      )
+    );
+  }
+}
+.mainContainer {
+  width: 100%;
+  height: fit-content !important;
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid #002f3e;
+  margin-bottom: 0% !important;
+  border-top: none;
+  .codeViewContainer {
+    border-radius: 12px;
+  }
+}
+
+.codeViewLeftWrapper {
+  background-color: #002f3e;
+}
+.codeViewContentWrapper::-webkit-scrollbar-thumb, 
+.previewIframe::-webkit-scrollbar-thumb {
+  background-color: #136f8d;
+}
+.codeViewRightWrapper .terminalHeader {
+  background-color: #002f3e;
+}
+.codeViewRightWrapper.pythonOutputContainer{
+  background-color: #001E27;
+  & .terminalHeader{
+    background-color: #001E27;
+    @include resD((
+      box-shadow: 8px 8px 10px #131313,
+    ));
+    @include resM((
+      box-shadow: 8px 8px 10px #131313,
+    ))
+  }
+  color: white;
+}
+.dummyPlayBtn {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%) scale(1.5);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  pointer-events: all;
+  background-size: 100%;
+  background-position: center;
+  background-image: url("../../../../../assets/playButton.png");
+  transition: 0.3s opacity ease-in-out;
+  &:hover {
+    opacity: 0.6;
+  }
+  @include resD(
+    (
+      width: 72px,
+      height: 72px,
+    )
+  );
+  @include resM(
+    (
+      width: 50px,
+      height: 50px,
+    )
+  );
+}
+.dummyPlayBtnColumn {
+  position: absolute;
+  bottom: 0%;
+  right: 2%;
+  border-radius: 50%;
+  transform: scale(1.5) translateY(45%);
+  cursor: pointer;
+  z-index: 5;
+  pointer-events: all;
+  background-size: 100%;
+  background-position: center;
+  background-image: url("../../../../../assets/playButton.png");
+  transition: 0.3s opacity ease-in-out;
+  &:hover {
+    opacity: 0.6;
+  }
+  @include resD(
+    (
+      width: 68px,
+      height: 68px,
+    )
+  );
+  @include resM(
+    (
+      width: 50px,
+      height: 50px,
+    )
+  );
+}
+.resizeDot {
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.65;
+  position: relative;
+  @include resD(
+    (
+      width: 6px,
+      height: 6px,
+    )
+  );
+  @include resM(
+    (
+      width: 6px,
+      height: 6px,
+    )
+  );
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: inherit;
+    background-color: inherit;
+    transform: translateX(300%);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: inherit;
+    background-color: inherit;
+    transform: translateX(-300%);
+  }
+}
+.colMainContainer {
+  .codeViewContainer {
+    @include resD(
+      (
+        height: fit-content,
+        margin-top: 0,
+      )
+    );
+    @include resM(
+      (
+        height: fit-content,
+        margin-top: 0,
+      )
+    );
+    >div{
+      padding-bottom: 0%;
+    }
+    .codeViewLeftWrapper{
+      @include resD(
+    (
+      min-height: 200px,
+      height: fit-content,
+      max-height: 625px,
+      margin-top: 0,
+    )
+  );
+  @include resM(
+    (
+      min-height: 200px,
+      height: fit-content,
+      max-height: 380px,
+      margin-top: 0,
+    )
+  );
+    }
+    .codeViewRightWrapper{
+      height: fit-content !important;
+    }
+  }
+  .headerEditorLabel{
+    @include resD((
+      margin-top: 14px,
+    ));
+    @include resM((
+      margin-top: 10px,
+    ))
+  }
+}
+  //   @include resD(
+  //     (
+  //       height: 250px !important,
+  //       margin-top: 0,
+  //     )
+  //   );
+  //   @include resM(
+  //     (
+  //       height: fit-content,
+  //       margin-top: 0,
+  //     )
+  //   );
+
+  .marginBottom{
+  @include resD(
+    (
+      margin-bottom: 30px !important,
+    )
+  );
+  @include resM(
+    (
+      margin-bottom: 15px !important,
+    )
+  );
+  }
+
+  .previewIframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }

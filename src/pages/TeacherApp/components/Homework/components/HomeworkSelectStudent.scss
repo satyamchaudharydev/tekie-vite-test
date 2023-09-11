@@ -1,0 +1,780 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.select_student_container {
+    box-sizing: border-box;
+    @include resD(
+        (
+            width: 100%,
+            height: 160px,
+            background-color: #ffffff,
+            display: flex,
+            align-items: flex-start,
+            justify-content: space-between,
+            margin-left: 0,
+            margin-top: 10px,
+            margin-bottom: 27px,
+            padding: 15px 25px,
+            border-radius: 24px,
+            
+        )
+    );
+    @include resSm((
+        width: 100%,
+        height: 180px,
+        background-color: #ffffff,
+        display: flex,
+        align-items: flex-start,
+        justify-content: space-between,
+        margin-left: 0,
+        margin-top: 50px,
+        margin-bottom: 50px,
+        padding: 15px 25px,
+        border-radius: 16px,
+    ));
+}
+.checkbox_container {
+    @include resD(
+        (
+            display: flex,
+            align-items: center,
+            justify-content: center,
+            margin-left: 35px,
+            margin-top: 29px,
+            height: 25px,
+        )
+    );
+    @include resSm((
+        display: flex,
+        align-items: center,
+        justify-content: center,
+        margin-left: 50px,
+        margin-top: 29px,
+        height: 25px,
+    ));
+}
+.checkbox_color {
+    
+    @include resD(
+        (
+            height: 22px,
+            width: 22px,
+            background-color: white,
+            border-radius: 4px,
+            margin-right: 20px,
+            cursor: pointer,
+            border: 1.3px solid #aaaaaa,
+            display:flex,
+            align-items:center,
+            justify-content:center  
+        )
+    );
+    @include resSm((
+        height: 30px,
+        width: 30px,
+        background-color: white,
+        border-radius: 4px,
+        margin-right: 10px,
+        cursor: pointer,
+        border: 1.3px solid #aaaaaa,
+        display:flex,
+        align-items:center,
+        justify-content:center 
+       
+    ));
+
+
+
+}
+.image_checkbox {
+    @include resD(
+        (
+            height: 24.75px,
+            width: 24.75px,
+            margin-right: 10px,
+            border-radius: 1.3px,
+            cursor: pointer,
+        )
+    );
+    @include resSm((
+        height: 30px,
+            width: 30px,
+            margin-right: 10px,
+            border-radius: 1.3px,
+            cursor: pointer,
+    ));
+
+}
+
+.checkbox_container span {
+    font-family: Inter;
+    font-style: normall;
+    font-weight: normal;
+    @include resD(
+        (
+            font-size: 20px,
+            line-height: 12px,
+            color: #000000,
+        )
+    );
+    @include resSm((
+        font-size: 20px,
+            line-height: 12px,
+            color: #000000,
+    ));
+}
+.familiar_button {
+    @include resD(
+        (
+            display: flex,
+            flex-direction: row,
+            align-items: flex-start,
+            padding: 8px 41px,
+            position: static,
+            width: 148px,
+            border: none,
+            background: conic-gradient(from 269.94deg at 50% 50%, #f6be7c 0deg, #f7941d 185.6deg, #f6be7c 360deg),
+            border-radius: 24.6667px,
+            font-family: Nunito,
+            font-style: normal,
+            font-weight: 900,
+            font-size: 12.95px,
+            line-height: 18px,
+            letter-spacing: 0.03em,
+            text-transform: uppercase,
+            color: #ffffff,
+        )
+    );
+    @include resSm((
+        display: flex,
+            flex-direction: row,
+            align-items: flex-start,
+            padding: 8px 41px,
+            position: static,
+            width: 148px,
+            border: none,
+            background: conic-gradient(from 269.94deg at 50% 50%, #f6be7c 0deg, #f7941d 185.6deg, #f6be7c 360deg),
+            border-radius: 24.6667px,
+            font-family: Nunito,
+            font-style: normal,
+            font-weight: 900,
+            font-size: 12.95px,
+            line-height: 18px,
+            letter-spacing: 0.03em,
+            text-transform: uppercase,
+            color: #ffffff,
+    ));
+}
+.select_student_left_container {
+    @include resD(
+        (
+            margin-top: 25px,
+        )
+    );
+    @include resSm((
+        margin-top: 20px,
+
+    ));
+}
+.students_proficiency_container {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 10px,
+            line-height: 12px,
+            color: #757575,
+            margin-bottom: 10px,
+            margin-top: 15px,
+        )
+    );
+    @include resSm((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 10px,
+        line-height: 12px,
+        color: #757575,
+        margin-bottom: 10px,
+        margin-top: 15px,
+    ));
+}
+
+.homework_graph_container {
+    box-sizing: border-box;
+    @include resD(
+        (
+            width: 100%,
+            height: fit-content,
+            background-color: #ffffff,
+            display: flex,
+            align-items: center,
+            
+            margin-left: 0,
+            margin-bottom: 27px,
+            padding: 20px 25px 20px 25px,
+            border-radius: 24px,
+        )
+    );
+    @include resSm((
+        width: 100%,
+            height: fit-content,
+            background-color: #ffffff,
+            display: flex,
+            align-items: center,
+            
+            margin-left: 0,
+            margin-bottom: 50px,
+            padding: 30px 25px 60px 25px,
+            border-radius: 16px,
+    ));
+}
+.homework_graph_text_section {
+    @include resD(
+        (
+            width: 350px,
+            height: 140px,
+            background-color: #ffffff,
+            display: flex,
+            align-items: flex-start,
+            flex-direction: column,
+            margin-right:600px
+        )
+    );
+    @include resSm((
+        width: 350px,
+        height: 140px,
+        background-color: #ffffff,
+        display: flex,
+        align-items: flex-start,
+        flex-direction: column,
+    ));
+}
+.homework_quiz_code {
+    @include resD(
+        (
+            width: 200px,
+            height: 140px,
+            background-color: #ffffff,
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            position: relative,
+            z-index: 0,
+            opacity: 1,
+            margin-top: -110px,
+        )
+    );
+    @include resSm((
+        width: 200px,
+            height: 140px,
+            background-color: #ffffff,
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            position: relative,
+            z-index: 0,
+            opacity: 1,
+            margin-top: -20px,
+    ));
+}
+.quiz {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 10px,
+            line-height: 12px,
+            display: flex,
+            align-items: center,
+            color: #757575,
+        )
+    );
+    @include resSm((
+        font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 10px,
+            line-height: 12px,
+            display: flex,
+            align-items: center,
+            color: #757575,
+    ));
+}
+.code {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 10px,
+            line-height: 12px,
+            display: flex,
+            align-items: center,
+            color: #757575,
+        )
+    );
+    @include resSm((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 10px,
+        line-height: 12px,
+        display: flex,
+        align-items: center,
+        color: #757575,
+    ));
+}
+.homework_title {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 16px,
+            line-height: 12px,
+            text-transform: uppercase,
+            color: #9e9e9e,
+            margin-bottom: 12px,
+        )
+    );
+    @include resSm((
+        font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 16px,
+            line-height: 12px,
+            text-transform: uppercase,
+            color: #9e9e9e,
+            margin-bottom: 12px,
+    ));
+}
+.homework_chapters {
+    @include resD(
+        (
+            display: flex,
+            flex-direction: row,
+            justify-content: space-between,
+            align-items: center,
+            padding: 4px 8px 4px 12px,
+            width: 261px,
+            height: 42px,
+            background-color: #ffffff,
+            border: 1px solid #aaaaaa,
+            box-sizing: border-box,
+            border-radius: 8px,
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 14px,
+            line-height: 20px,
+            color: #333333,
+        )
+    );
+    @include resSm((
+        display: flex,
+        flex-direction: row,
+        justify-content: space-between,
+        align-items: center,
+        padding: 4px 8px 4px 12px,
+        width: 261px,
+        height: 42px,
+        background-color: #ffffff,
+        border: 1px solid #aaaaaa,
+        box-sizing: border-box,
+        border-radius: 8px,
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 14px,
+        line-height: 20px,
+        color: #333333,
+    ));
+}
+.homework_chapters:focus {
+    @include resD(
+        (
+            outline: none,
+        )
+    );
+    @include resSm((
+        outline: none,
+
+    ));
+}
+.select_student_Right_container {
+    @include resD(
+        (
+            margin-top: 40px,
+        )
+    );
+    @include resSm((
+        margin-top: 40px,
+
+    ));
+}
+
+.chapters_dropdown_menu {
+    @include resD(
+        (
+            display: flex,
+            flex-direction: column,
+            padding: 4px 8px 4px 12px,
+            width: 261px,
+            background-color: #ffffff,
+            border: 1px solid #aaaaaa,
+            box-sizing: border-box,
+            border-radius: 8px,
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 14px,
+            line-height: 20px,
+            color: #333333,
+            margin-top: 15px,
+        )
+    );
+    @include resSm((
+        display: flex,
+            flex-direction: column,
+            padding: 4px 8px 4px 12px,
+            width: 261px,
+            background-color: #ffffff,
+            border: 1px solid #aaaaaa,
+            box-sizing: border-box,
+            border-radius: 8px,
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 14px,
+            line-height: 20px,
+            color: #333333,
+            margin-top: 15px,
+    ));
+}
+
+// .dropdown_items {
+//     @include resD(
+//         (
+//             padding: 10px 0px,
+//         )
+//     );
+//     @include resSm(());
+// }
+
+.select-box1 {
+    @include resD(
+        (
+            display: flex,
+            width: 360px,
+            flex-direction: column,
+            font-size: 20px,
+            position:relative,
+            z-index: 2
+        )
+    );
+    @include resSm((
+        display: flex,
+            width: 360px,
+            flex-direction: column,
+            font-size: 20px,
+    ));
+}
+
+.select-box1 .options-container1 {
+    @include resD(
+        (
+            background-color: #ffffff,
+            max-height: 0,
+            width: 100%,
+            opacity: 0,
+            transition: all 0.4s,
+            border-radius: 8px,
+            overflow: hidden,
+            order: 1,
+            font-size: 20px,
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            line-height: 20px,
+            color: #333333,
+        )
+    );
+    @include resSm((
+        background-color: #ffffff,
+        max-height: 0,
+        width: 100%,
+        opacity: 0,
+        transition: all 0.4s,
+        border-radius: 8px,
+        overflow: hidden,
+        order: 1,
+        font-size: 20px,
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        line-height: 20px,
+        color: #333333,
+    ));
+}
+
+.options-container1 {
+    margin-top: 15px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.selected1 {
+    @include resD(
+        (
+            padding: 4px 8px 4px 0px,
+            width: 360px,
+            background-color: #ffffff,
+            border: 2px solid #aaaaaa,
+            box-sizing: border-box,
+            border-radius: 10px,
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 20px,
+            line-height: 20px,
+            color: #333333,
+            margin-top: 15px,
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            position: relative,
+            order: 0,
+        )
+    );
+    @include resSm((
+        padding: 4px 8px 4px 0px,
+        width: 360px,
+        background-color: #ffffff,
+        border: 2px solid #aaaaaa,
+        box-sizing: border-box,
+        border-radius: 10px,
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 20px,
+        line-height: 20px,
+        color: #333333,
+        margin-top: 15px,
+        display: flex,
+        align-items: center,
+        justify-content: space-between,
+        position: relative,
+        order: 0,
+    ));
+}
+
+.selected1::after {
+    @include resD(
+        (
+            content: "",
+            background: url("../../../../../assets/teacherApp/classroom/down-arrow22.svg"),
+            background-size: contain,
+            background-repeat: no-repeat,
+            position: absolute,
+            height: 100%,
+            width: 32px,
+            top: 10px,
+            right: 10px,
+            transition: all 0.1s,
+        )
+    );
+    @include resSm((
+        content: "",
+        background: url("../../../../../assets/teacherApp/classroom/down-arrow22.svg"),
+        background-size: contain,
+        background-repeat: no-repeat,
+        position: absolute,
+        height: 100%,
+        width: 32px,
+        top: 10px,
+        right: 10px,
+        transition: all 0.1s,
+    ));
+}
+.empty_state {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 20px,
+            line-height: 17px,
+            letter-spacing: -0.02em,
+            color: #a8a7a7,
+            margin-top: 25px,
+        )
+    );
+    @include resSm((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 20px,
+        line-height: 17px,
+        letter-spacing: -0.02em,
+        color: #a8a7a7,
+        margin-top: 25px,
+    ));
+}
+.empty_state_1 {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 20px,
+            line-height: 17px,
+            letter-spacing: -0.02em,
+            color: #a8a7a7,
+            margin-top: 40px,
+        )
+    );
+    @include resSm((
+        font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 20px,
+            line-height: 17px,
+            letter-spacing: -0.02em,
+            color: #a8a7a7,
+            margin-top: 40px,
+    ));
+}
+
+.select-box1 .options-container1.active3::-webkit-scrollbar {
+    display: block;
+    
+}
+.select-box1 .options-container1.active3::-webkit-scrollbar-thumb {
+    display: block;
+    background: lightgray;
+}
+
+.select-box1 .options-container1.active3 {
+    @include resD(
+        (
+            max-height: 120px,
+            opacity: 1,
+            overflow-y: scroll,
+            display: flex,
+            flex-direction: column,
+        )
+    );
+    @include resSm((
+        max-height: 120px,
+            opacity: 1,
+            overflow-y: scroll,
+            display: flex,
+            flex-direction: column,
+    ));
+}
+
+.select-box1 .options-container1.active3 + .selected1::after {
+    @include resD(
+        (
+            transform: rotateX(180deg),
+            top: -7px,
+        )
+    );
+    @include resSm((
+        transform: rotateX(180deg),
+        top: -7px,
+    ));
+}
+
+.select-box1 .options-container1::-webkit-scrollbar {
+    display: none;
+}
+
+.select-box1 .options-container1::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+.selected1 {
+    @include resD(
+        (
+            padding: 14px 12px,
+            cursor: pointer,
+            font-size: 16px,
+        )
+    );
+    @include resSm((
+        padding: 14px 12px,
+        cursor: pointer,
+        font-size: 16px,
+    ));
+}
+
+.select-box1 .option1 {
+    @include resD(
+        (
+            padding: 14px 12px,
+            cursor: pointer,
+            font-size: 16px,
+            margin: 0px 5px,
+        )
+    );
+    @include resSm((
+        padding: 14px 12px,
+        cursor: pointer,
+        font-size: 16px,
+        margin: 0px 5px,
+    ));
+}
+.select-box1 {
+    @include resD(
+        (
+            cursor: pointer,
+            font-size: 16px,
+        )
+    );
+    @include resSm((
+        cursor: pointer,
+            font-size: 16px,
+    ));
+}
+
+.select-box1 .option1:hover {
+    background: rgba(140, 97, 203, 0.1);
+}
+
+.select-box1 label {
+    cursor: pointer;
+}
+
+.select-box1 .option1 .radio {
+    display: none;
+}
+
+.select_student_heading {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 600,
+            font-size: 16px,
+            line-height: 18px,
+            display: flex,
+            align-items: center,
+            text-transform: capitalize,
+            color: #333333,
+        )
+    );
+    @include resSm((
+        font-family: Inter,
+            font-style: normal,
+            font-weight: 600,
+            font-size: 16px,
+            line-height: 18px,
+            display: flex,
+            align-items: center,
+            text-transform: capitalize,
+            color: #333333,
+    ));
+}

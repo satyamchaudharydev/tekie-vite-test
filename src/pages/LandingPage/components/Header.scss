@@ -1,0 +1,497 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.landing-page-header-container {
+  @include resM((
+    padding-bottom: 17px,
+    padding-top: 17px,
+  ));
+  @include resD((
+    padding-bottom: 24px,
+    padding-top: 24px,
+  ));
+  left: 0;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  // background: #000d11;
+}
+
+.landing-page-header-noPaddingContainer {
+  @include resM((
+    padding-top: 0px,
+  ));
+  @include resD((
+    padding-top: 0px,
+  ))
+}
+
+.landing-page-header-bannerSpecialContainer {
+  background-image: url('../../../assets/usBanner.webp');
+  background-size: cover;
+  position: relative;
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+    width: 100%,
+    height: 50px !important,
+    margin-bottom: 24px,
+    background-size: cover,
+  ));
+  @include resM((
+    width: 100%,
+    height: 50px,
+    background-size: cover,
+    margin-bottom: 10px,
+  ));
+  // @media (max-width: 1200px) and (min-width: landing-page-header-950px) {
+  //   background-size: hsm(1000px) !important;
+  //   height: hsm(25px) !important;
+  // }
+}
+
+.landing-page-header-limitedText {
+  position: absolute;
+  font-family: Lato;
+  color: white;
+  @include resD((
+    font-size: 17px,
+    right: 37px,
+    top: 25px,
+    opacity: 1
+  ));
+  @include resM((
+    font-size: 12px,
+    right: 20px,
+    top: 30px,
+    opacity: 0.7
+  ));
+}
+
+.landing-page-header-bannerText {
+  font-family: Lato;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  @include resD((
+    font-size: 29px,
+    top: unset,
+    font-weight: 300,
+  ));
+  @include resM((
+    font-size: 16px,
+    font-weight: 400,
+    top: -5px
+  ));
+}
+
+.landing-page-header-gradientText {
+  background-image: linear-gradient(180deg, #C6F8FF, #03BEE7);
+  background-size: 100%;
+  font-weight: 900;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.landing-page-header-lottieAbsoluteContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include resD((
+    width: 100%,
+    height: 40px,
+  ));
+  @include resM((
+    width: 100%,
+    height: 15px,
+  ));
+}
+.landing-page-header-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include resM((
+    padding: 0px 20px,
+  ));
+  @include resD((
+    padding: 0px 45px
+  ));
+
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.landing-page-header-tekieLogo {
+  @include resM((
+    width: 98px,
+    height: 54px,
+    position: relative,
+    left: 30px
+  ));
+  @include resD((
+    width: 125px,
+    height: 44px,
+    left: 0px
+  ));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.landing-page-header-login {
+  @extend .lato-light;
+  display: flex;
+  @include resM((
+    display: none,
+    padding: 10px,
+    border-radius: 2px,
+    letter-spacing: 0.75px,
+    font-size: 16px,
+  ));
+  @include resD((
+    display: flex,
+    padding: 12px 28px,
+    border-radius: 5px,
+    font-size: 24px,
+    letter-spacing: 0.5px,
+    font-weight: 800,
+  ));
+  background-color: transparent;
+  justify-content: center;
+  text-transform: unset;
+  align-items: center;
+  text-align: left;
+  font-weight: 800;
+  border: 2px solid #1290a8;
+  color: #1290a8;
+  opacity: 0.8;
+  cursor: pointer;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  &:hover {
+    opacity: 1;
+    box-shadow: 2px 10px 15px 0 rgba(0, 0, 0, 0.16);
+  }
+}
+
+.landing-page-header-hamburgerContainer {
+  @include resM((
+    width: 26.6px,
+    height: 17.8px,
+    display: flex,
+    flex-direction: column,
+    justify-content: space-between
+  ));
+  & > div {
+    width: 100%;
+    background-color: #1290a7;
+    @include resM((
+      min-height: 2.8px,
+    ));
+  }
+  @include resD((
+    display: none,
+    // position: absolute,
+  ));
+}
+
+.landing-page-header-navLinkDesktop {
+  @extend .lato-light;
+  font-weight: 400;
+  opacity: 0.8;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+  @include resD((
+    display: block,
+    font-size: 24px,
+    letter-spacing: 0.5px,
+    margin-right: 34px,
+    padding: 13px 0px,
+  ));
+  @include resM((
+    display: none,
+  ));
+}
+
+.landing-page-header-bookFreeSession {
+  @extend .lato-light;
+  font-weight: 600;
+  opacity: 0.9;
+  @include resM((
+    padding: 10px 12px,
+    border-radius: 2px,
+    letter-spacing: 0.0px,
+    font-size: 16px,
+    margin-right: 0px,
+  ));
+  @include resD((
+    padding: 13px 18px,
+    border-radius: 5px,
+    font-size: 24px,
+    letter-spacing: 0.5px,
+    margin-right: 68px,
+    position: relative,
+    padding-top: 15px
+  ));
+  background-color: #022f3f;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: #2abac1;
+  cursor: pointer;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  &:hover {
+    opacity: 1;
+    box-shadow: 2px 10px 15px 0 rgba(0, 0, 0, 0.16);
+  }
+  &::before {
+     @include resM((
+      content: 'Get in Touch'
+    ));
+    @include resD((
+      content: 'Get in Touch'
+    ))
+  }
+}
+
+
+.landing-page-header-buyNowButton {
+  @include resM((
+    margin-left: 0,
+  ));
+  @include resD((
+    margin-left: 68px,
+  ));
+}
+
+.landing-page-header-headerButton {
+  transition: all .2s;
+  @extend .lato-light;
+  font-weight: 600;
+  opacity: 0.8;
+  @include resM((
+    display: none,
+    padding: 10px,
+    border-radius: 2px,
+    letter-spacing: 0.0px,
+    font-size: 16px,
+    margin-right: 14px,
+  ));
+  @include resD((
+    padding: 13px 18px,
+    border-radius: 5px,
+    font-size: 25px,
+    letter-spacing: 0.5px,
+    margin-right: 68px,
+    display: flex,
+    margin-top: 5px,
+  ));
+  font-weight: 500;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  &:hover {
+    opacity: 1;
+    box-shadow: 2px 10px 15px 0 rgba(0, 0, 0, 0.16);
+    color: #1290a8;
+  }
+}
+
+.landing-page-header-overlayNavItem {
+  @extend .lato-light;
+  @include resM((
+    padding: 28px 20px,
+    flex: 1,
+    cursor: pointer,
+    min-width: 100%,
+    box-sizing: border-box,
+    border-bottom: solid 1px #2abac1,
+    color: #ffffff,
+    letter-spacing: 0.75px,
+    font-size: 18px,
+  ));
+}
+
+.landing-page-header-bookFreeSessionMobile {
+  @include resM((
+    font-size: 18px,
+    margin-right: 20px,
+    margin-left: 20px,
+    font-weight: 600,
+    letter-spacing: 0.7px,
+    margin-bottom: 0,
+    margin-top: 16px
+  ));
+}
+
+.landing-page-header-contentNone {
+  @include resM((
+    padding: 10px 20px,
+    height: 30px
+  ));
+  &:before {
+    content: '' !important
+  }
+}
+.landing-page-header-overlayNavbar {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: row;
+  @include resD((
+    display: none,
+  ));
+}
+
+.landing-page-header-overlayNavbarHide {
+  left: -100vw;
+  background-color: transparent;
+}
+
+.landing-page-header-overlayNavbarWrapper {
+  height: 100%;
+  transform: translate3d(0,0,0);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(179deg, #00171f 55%, #002835 100%);
+  @include resM((
+    width: 232px,
+    padding-top: 20px
+  ));
+}
+
+.landing-page-header-overlayNavbarWrapperHide {
+  transform: translate3d(-100%,0,0);
+}
+
+.landing-page-header-overlayNavbarClose {
+  height: 100%;
+  flex: 1;
+}
+
+.landing-page-header-profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0px 0px;
+
+  & .landing-page-header-profile-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-color: #fff;
+    border: 3px solid #47A9B0; 
+  }
+
+  & .landing-page-header-profile-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #fff;
+    padding-top: 8px;
+  }
+}
+
+
+/* dropdown menu */
+
+.landing-page-header-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.landing-page-header-drop {
+  transform-origin: 0 0;
+  position: absolute;
+  box-sizing: border-box;
+  @include resD((
+    top: 85px,
+    width: 252px,
+    right: -14px,
+  ));
+  opacity: 0;
+  visibility: hidden;
+  transform: rotateX(90deg);
+  transition: all 0.5s ease-in-out;
+  background: #00171F;
+  border-radius: 4px 4px 0px 0px;
+}
+.landing-page-header-drop a{
+  transition: 0.2s all ease-in-out;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  color: inherit;
+}
+.landing-page-header-drop::before {
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border: 20px solid transparent;
+  border-bottom: 32px solid #00171F;
+  left: 25px;
+  top: -45px;
+  z-index: -1;
+}
+.landing-page-header-drop span {
+  @include resM((
+    display: none,
+    font-size: 16px,
+  ));
+  @include resD((
+    font-size: 22px,
+    padding: 15px,
+    line-height: 28px,
+  ));
+  display: block;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  opacity: 0.8;
+  color: #FFFFFF;
+  &:hover{
+    background-color:  #012A38;
+    color: #1290a8;
+    &  > a{
+      transform: translateX(hs(10px));
+    }
+  }
+}
+.landing-page-header-droShow {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(0);
+  pointer-events: visible;
+}

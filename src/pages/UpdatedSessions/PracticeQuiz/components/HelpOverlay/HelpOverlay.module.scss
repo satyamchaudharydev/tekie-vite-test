@@ -1,0 +1,454 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/constants.scss';
+
+.helpOverlayContainer{
+//   height: hs(381px);
+    height: fit-content;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  background-image: url('../../../../../assets/hintBackgound.png');
+  position: fixed;
+  width: calc(100% - #{hs($sideNavWidth)});
+  left: hs($sideNavWidth);
+  bottom: 0;
+  right: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+  transform: translateY(200%);
+  -webkit-transform: translateY(200%);
+  opacity: 0;
+  visibility: hidden;
+  padding: hs(24px) 0px;
+  
+}
+
+.footerBtnSeparator{
+  margin: hs(18px);
+}
+
+.slideIn {
+    animation: slideIn 0.5s forwards;
+    -webkit-animation: slideIn 0.5s forwards;
+}
+
+.slideOut {
+    animation: slideOut 0.5s forwards;
+    -webkit-animation: slideOut 0.5s forwards;
+}
+
+@keyframes slideIn {
+    100% { transform: translateY(0%); opacity: 1; visibility: visible; }
+}
+
+@-webkit-keyframes slideIn {
+    100% { -webkit-transform: translateY(0%); opacity: 1; visibility: visible; }
+}
+    
+@keyframes slideOut {
+    0% { transform: translateY(0%); opacity: 1; visibility: visible; }
+    100% { transform: translateY(200%); opacity: 0; visibility: hidden; }
+}
+
+@-webkit-keyframes slideOut {
+    0% { -webkit-transform: translateY(0%); opacity: 1; visibility: visible; }
+    100% { -webkit-transform: translateY(200%); opacity: 0; visibility: hidden; }
+}
+
+.mainArea{
+    width: hs(743px);
+}
+
+.headingArea {
+    margin-top: hs(29px);
+    display: flex;
+    justify-content: space-around;
+}
+
+.hintHeading {
+    font-family: Nunito;
+    font-size: hs(28px);
+    cursor: pointer;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: left;
+    color: #aaacae;
+}
+
+.answerHeading{
+    font-family: Nunito;
+    font-size: hs(28px);
+    font-weight: 600;
+    cursor: pointer;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: center;
+    color: #aaacae;
+}
+
+.underline{
+    width: hs(144px);
+    height: hs(2px);
+    background-color:#00ade6;
+}
+
+.textArea{
+  width: hs(743px);
+  height: hs(138px);
+  font-family: Nunito;
+  margin-top: hs(26.3px);
+  font-size: hs(24px);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #707070;
+  overflow-y: auto;
+}
+
+.buttonArea{
+    margin-top: hs(40px);
+    display: flex;
+    justify-content: center;
+}
+
+.closeBtn{
+    width: hs(174.1px);
+    height: hs(51.9px);
+    object-fit: contain;
+    border-radius: hs(32px);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-image: linear-gradient(to top, #00ade6 174%, #34e4ea);
+    font-family: Nunito;
+    font-size: hs(28px);
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkBtn{
+    width: hs(174.1px);
+    height: hs(51.9px);
+    object-fit: contain;
+    border-radius: hs(32px);
+    background-color: #e9e9ea;
+    color:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Nunito;
+    font-size: hs(28px);
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.slideDownBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    bottom: hs(356px);
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.downArrow{
+    width: 21.6px;
+    height: 12.6px;
+    object-fit: contain;
+    background-image: linear-gradient(to left, #00ade6 110%, #34e4ea);
+}
+
+.recommendationText{
+    margin-top: hs(30px);
+    display: inline-flex;
+    font-family: Nunito;
+    font-size: hs(24px);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.videoRecommendationText{
+    text-decoration: underline;
+    color: #00ade6;
+    cursor: pointer;
+}
+.mbHelpOverlayContainer{
+    height: fit-content;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    margin: 0px 15px 20px 15px;
+    box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+    transform: translateY(200%);
+    -webkit-transform: translateY(200%);
+    opacity: 0;
+    visibility: hidden;
+}
+.mbMainArea {
+    width: 100%;
+    p{
+        font-size: 14px;
+    }
+}
+.mbHintHeading {
+    font-family: Nunito;
+    cursor: pointer;
+    font-size: 13px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 16px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #aaacae;
+    width: 50%;
+}
+.mbAnswerHeading {
+    font-family: Nunito;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #aaacae;
+    width: 50%;
+}
+.mbHeadingArea {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    & > div {
+        width: 50%;
+    }
+}
+.mbTextArea {
+    width: 90%;
+    font-family: Nunito;
+    margin-top: hs(26.3px);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: #707070;
+    // overflow-y: auto;
+    @include resD((
+        font-size: hs(24px),
+    ));
+    @include resM((
+        font-size: 13px,
+    ));
+    margin: auto;
+    p {
+        margin: auto;
+    }
+    span, div {
+        font-size: 14px;
+    }
+}
+.mbButtonArea {
+    margin-top: hs(61px);
+    display: flex;
+    justify-content: center;
+}
+.mbCloseBtn {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 5px 6px 6px 5px;
+    width: 96px;
+    height: 34px;
+    background: linear-gradient(180deg, #35E4E9 0%, #00ADE6 100%);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    object-fit: contain;
+    font-family: Nunito;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;   
+    svg {
+        margin-top: 2px;
+        margin-left: 8px;
+    }
+}
+.mbRecommendationText{
+    margin-top: hs(30px);
+    display: inline-flex;
+    font-family: Nunito;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.mbHintUnderline {
+    width: 100% !important;
+    height: 4px;
+    align-self: flex-start;
+    margin-top: 14px;
+    background: linear-gradient(270deg, #35E4E9 -8.62%, #00ADE6 109.2%);
+}
+.mbAnswerUnderline {
+    width: 100% !important;
+    height: 4px;
+    align-self: flex-end;
+    margin-top: 14px;
+    background: linear-gradient(270deg, #35E4E9 -8.62%, #00ADE6 109.2%);
+}
+.hintAndExplanationContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    @include resD((
+        border-radius: 8px,
+        // margin-top: 20px,
+    ));
+    @include resM((
+        border-radius: 8px,
+        // margin-top: 20px,
+    ));
+    & .hintText{
+        background-color: #fafafa;
+        color: #A8A7A7;
+        cursor: pointer;
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        @include resD((
+            padding: 10px 16px,
+            font-size: 22px,
+            line-height: 24px,
+        ));
+        @include resM((
+            padding: 10px 16px,
+            font-size: 22px,
+            line-height: 24px,
+        ));
+    }
+    & .activeHint{
+        background: rgba(0, 173, 230, 0.08) !important;
+        color: #00ADE6;
+    }
+}
+.hintAnsActualText{
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+text-align: center;
+@include resD((
+    font-size: 22px,
+    line-height: 24px,
+    margin-top:20px,
+));
+@include resM((
+    font-size: 22px,
+    line-height: 24px,
+    margin-top:20px,
+));
+color: #504F4F;
+}
+.textAreaUpdated{
+width: hs(743px);
+height: fit-content;
+font-family: Nunito;
+margin-top: hs(26.3px);
+font-size: hs(24px);
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.33;
+letter-spacing: normal;
+text-align: center;
+color: #707070;
+overflow-y: auto;
+}
+
+.recommendationTextUpdated{
+    display: inline-flex;
+    font-family: Nunito;
+    font-size: hs(24px);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.helpOverlayContainerForTeacherApp{
+  position: absolute;
+  bottom: 0;
+  left: unset;
+  width: calc(100% - #{hs($sideNavWidth)} - #{hs(5px)});
+  right: unset;
+  transform: unset;
+  -webkit-transform: unset;
+  display: none;
+  &.slideIn{
+    display: flex;
+  }
+}

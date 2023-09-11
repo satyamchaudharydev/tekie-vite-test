@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="178.308" height="118.872" viewBox="0 0 178.308 118.872">
+  <g id="Group_14405" data-name="Group 14405" transform="translate(-1069 -463.781)" opacity="0.65">
+    <g id="laptop" transform="translate(1134.664 432.558)">
+      <g id="Group_14010" data-name="Group 14010" transform="translate(-65.664 31.224)">
+        <path id="Path_21716" data-name="Path 21716" d="M174.594,181.917H163.449V100.192A14.874,14.874,0,0,0,148.59,85.333H29.718a14.874,14.874,0,0,0-14.859,14.859v81.725H3.715A3.712,3.712,0,0,0,0,185.631v3.715a14.874,14.874,0,0,0,14.859,14.859H163.45a14.874,14.874,0,0,0,14.859-14.859v-3.715A3.712,3.712,0,0,0,174.594,181.917Zm-152.3-81.725a7.439,7.439,0,0,1,7.429-7.429H148.59a7.439,7.439,0,0,1,7.429,7.429v81.725H22.289Zm141.161,96.584H14.859a7.439,7.439,0,0,1-7.429-7.429H69.042l2.627,2.627a3.712,3.712,0,0,0,2.627,1.088h29.718a3.713,3.713,0,0,0,2.627-1.088l2.626-2.627h61.613A7.439,7.439,0,0,1,163.449,196.776Z" transform="translate(0 -85.333)" fill="#0ab5e3"/>
+      </g>
+    </g>
+    <g id="Group_14966" data-name="Group 14966" transform="translate(-4 2)" opacity="0.8">
+      <text id="_" data-name="&lt;" transform="translate(1141 510.781)" fill="#0ab5e3" font-size="30" font-family="Nunito-Bold, Nunito" font-weight="700"><tspan x="-9" y="0">&lt;</tspan></text>
+      <text id="_2" data-name="&gt;" transform="translate(1184 510.781)" fill="#0ab5e3" font-size="30" font-family="Nunito-Bold, Nunito" font-weight="700"><tspan x="-9" y="0">&gt;</tspan></text>
+      <path id="Path_21859" data-name="Path 21859" d="M1141,538.638h27.221" transform="matrix(0.966, -0.259, 0.259, 0.966, -92.741, 307.189)" fill="none" stroke="#92c5eb" stroke-linecap="round" stroke-width="4"/>
+    </g>
+  </g>
+</svg>

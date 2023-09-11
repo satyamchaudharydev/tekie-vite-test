@@ -1,0 +1,86 @@
+@import "src/scss/size.scss";
+
+.ace_gutter-cell {
+  padding: 0;
+}
+
+.ace_gutter-layer {
+  text-align: left;
+}
+
+.studentAnswer .ace_scroller {
+  left: 32px !important;
+}
+
+.correctAnswer .ace_scroller {
+  left: 15px !important;
+}
+
+.correctAnswerOutput .ace_scroller {
+  left: 15px !important;
+}
+
+.ace-clouds .ace_gutter {
+  background: none;
+  color: #000;
+  opacity: 0.2;
+}
+
+.splitScreen ::-webkit-scrollbar {
+  background: none !important;
+}
+
+.ace-dracula .ace_gutter {
+  background: none;
+  color: #FFFFFF;
+  opacity: 0.2;
+  padding-left: 13px;
+  pointer-events: none;
+}
+
+.correctAnswerOutput .ace_gutter {
+  background: none;
+  color: #000;
+  opacity: 0.2;
+}
+
+.ace_text-layer > .ace_line, .ace_text-layer > .ace_line_group {
+  font-family: monaco;
+}
+
+.ace_scrollbar-v::-webkit-scrollbar-thumb {
+  background-color: #8C61CB;
+  border-radius: 4px;
+}
+
+.noselection .ace_marker-layer .ace_selection {
+  background: transparent !important;
+}
+
+.noselection .ace_cursor {
+  color: transparent !important;
+}
+
+#externalDescriptionForPractice {
+  overflow: hidden !important;
+}
+
+#externalDescriptionForPractice::-webkit-scrollbar {
+  display: none !important;
+}
+
+.studentAnswer, .correctAnswer {
+  font-weight: 400;
+  @include resD((
+    font-size: 16px,
+    line-height: 24px,
+  ));
+  @include resM((
+    font-size: 16px,
+    line-height: 24px,
+  ));
+}
+
+.ace-tm .ace_gutter {
+  background: none;
+}

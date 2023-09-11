@@ -1,0 +1,202 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.select-boxSort {
+    @include resD(
+        (
+            display: flex,
+            width: 200px,
+            flex-direction: column,
+        )
+    );
+    @include resSm((
+        display: flex,
+            width: 200px,
+            flex-direction: column,
+    ));
+    @include resSm(());
+}
+
+.select-boxSort .options-containerSort {
+    @include resD(
+        (
+            background-color: #ffffff,
+            max-height: 0,
+            width: 100%,
+            opacity: 0,
+            transition: all 0.4s,
+            border-radius: 8px,
+            overflow: hidden,
+            order: 1,
+            font-size: 14px,
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            line-height: 20px,
+            color: #333333,
+        )
+    );
+    @include resSm((
+        background-color: #ffffff,
+            max-height: 0,
+            width: 100%,
+            opacity: 0,
+            transition: all 0.4s,
+            border-radius: 8px,
+            overflow: hidden,
+            order: 1,
+            font-size: 14px,
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            line-height: 20px,
+            color: #333333,
+    ));
+}
+
+.options-containerSort {
+    margin-top: 15px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.selectedSort {
+    border: 1px solid #eeeeee;
+
+    @include resD(
+        (
+            padding: 4px 8px 4px 0px,
+            width: 200px,
+            background-color: #ffffff,
+            box-sizing: border-box,
+            border-radius: 8px,
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 14px,
+            line-height: 20px,
+            color: #9e9e9e,
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            position: relative,
+            order: 0,
+        )
+    );
+    @include resSm((
+        padding: 4px 8px 4px 0px,
+        width: 200px,
+        background-color: #ffffff,
+        box-sizing: border-box,
+        border-radius: 8px,
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 14px,
+        line-height: 20px,
+        color: #9e9e9e,
+        display: flex,
+        align-items: center,
+        justify-content: space-between,
+        position: relative,
+        order: 0,
+    ));
+}
+
+.selectedSort::after {
+    @include resD(
+        (
+            content: "",
+            background: url("../../../../../assets/teacherApp/classroom/Chevron Down.svg"),
+            background-size: contain,
+            background-repeat: no-repeat,
+            position: absolute,
+            height: 100%,
+            width: 20px,
+            right: 10px,
+            top: 10px,
+            transition: all 0.3s,
+        )
+    );
+    @include resSm((
+        content: "",
+            background: url("../../../../../assets/teacherApp/classroom/Chevron Down.svg"),
+            background-size: contain,
+            background-repeat: no-repeat,
+            position: absolute,
+            height: 100%,
+            width: 20px,
+            right: 10px,
+            top: 10px,
+            transition: all 0.3s,
+    ));
+}
+
+.select-boxSort .options-containerSort.activeSort {
+    @include resD(
+        (
+            max-height: 120px,
+            opacity: 1,
+            overflow-y: scroll,
+            display: flex,
+            flex-direction: column,
+            color: #9e9e9e,
+        )
+    );
+    @include resSm((
+        max-height: 120px,
+        opacity: 1,
+        overflow-y: scroll,
+        display: flex,
+        flex-direction: column,
+        color: #9e9e9e,
+    ));
+}
+
+.select-boxSort .options-containerSort.activeSort + .selectedSort::after {
+    @include resD(
+        (
+            transform: rotateX(180deg),
+            top: -8px,
+        )
+    );
+}
+
+.select-boxSort .options-containerSort::-webkit-scrollbar {
+    display: none;
+}
+
+.select-boxSort .options-containerSort::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+.select-boxSort .optionSort,
+.selectedSort {
+    @include resD(
+        (
+            padding: 9px 12px,
+            cursor: pointer,
+        )
+    );
+    @include resSm(
+        (
+            padding: 9px 12px,
+            cursor: pointer,
+        )
+    );
+}
+
+.select-boxSort .optionSort:hover {
+    background: rgba(140, 97, 203, 0.1);
+}
+
+.select-boxSort label {
+    cursor: pointer;
+}
+
+.select-boxSort.optionSort .radioSort {
+    display: none;
+}
+
+.radioSort {
+    display: none;
+}

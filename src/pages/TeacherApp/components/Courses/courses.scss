@@ -1,0 +1,116 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import '../../variables/_variables.scss';
+
+.display_grid {
+    @include resD(
+        (
+           display:flex,
+           width: 100%,
+           
+
+        )
+    );
+    @include resSm(());
+    &::-webkit-scrollbar-track   {
+      border-radius: 16px;
+    }
+    
+}
+
+.session_container_main{
+  overflow: hidden;
+    @include resD(
+        (
+           
+           width: 100%,
+           background: #FFFFFF,
+           border-radius: 16px,
+           margin-left:0,
+           padding:20px 0px,
+           
+
+        )
+    );
+    @include resSm(());
+}
+.video_container_scroll{
+  &::-webkit-scrollbar-track   {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+    &::-webkit-scrollbar  {
+        max-width: hs(8px);
+        background-color: #eeeeee;
+        border-radius: 16px;
+      }
+      @include resD((
+        display: block,
+      ));
+      @include resSm((
+        display: none,
+      ));
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background:  $primary-color;
+    }
+    @include resD(
+        (
+           
+        width:77%,
+        max-width: 600px,
+        padding:0px 10px,
+        height:630px,
+        overflow-y:scroll,
+        
+
+        )
+    );
+    @include resSm(());
+}
+.video_container_scroll1::-webkit-scrollbar {
+  background-color: #EEEEEE;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+.video_container_scroll::-webkit-scrollbar-track  {
+  border-radius: 16px;
+}
+.video_container_scroll1::-webkit-scrollbar-track  {
+  border-radius: 16px;
+}
+.video_container_scroll1{
+  &::-webkit-scrollbar-track   {
+    border-radius: 16px;
+  }
+    &::-webkit-scrollbar  {
+        max-width: hs(8px);
+        background-color: #EEEEEE;
+        border-radius: 16px;
+      }
+      @include resD((
+        display: block,
+      ));
+      @include resSm((
+        display: none,
+      ));
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background:  $primary-color;
+    }
+    @include resD(
+        (
+           
+        width:80%,
+        height:640px,
+        overflow-y:scroll,
+        margin-left:3%,
+        
+
+        )
+    );
+    @include resSm(());
+}

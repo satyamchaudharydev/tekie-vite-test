@@ -1,0 +1,786 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+@import 'src/scss/theme/constants.scss';
+
+.container {
+  @include resD((
+    width: $sideNavWidth,
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.08),
+  ));
+  position: relative;
+  z-index: 999999;
+  box-sizing: border-box;
+  height: 100vh;
+  background: $white;
+}
+
+.outSideNav {
+  @include resD((
+    width: $outSideNavWidth,
+    height: calc(100vh - #{hs($topNavBarHeight)}),
+  )); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.outSideNavForTeacherApp{
+  @include resD1280((
+    height: calc(100vh - #{hs($teacherAppSessionHeight)}),
+  )); 
+}
+.outSideNavForTrainingApp{
+  @include resD1280((
+    height: 100vh,
+  )); 
+}
+
+
+.sideBarTopPart {
+  position: sticky;
+  top:0;
+  background-color: #FFFFFF;
+  z-index: 9999999;
+  @include resD((
+    margin-bottom: 32px,
+    padding: 0 16px,
+  ));
+  box-sizing: border-box;
+  .flex {
+    display: flex;
+  }
+}
+
+.backButton {
+  @include resD((
+    width: 28px,
+    height: 28px,
+  ));
+  border-radius: 50%;
+  background: $white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  svg {
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    & > svg {
+      transform: translateX(-2px);
+    }
+  }
+}
+
+.topicThumbnail {
+  @include resD((
+    width: 114px,
+    height: 136px,
+    margin-left: 69px,
+  ));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.topicTitle {
+  @include resD((
+    font-size: 28px,
+    line-height: 120%,
+    margin-top: 8px,
+  ));
+  text-align: center;
+  font-weight: 700;
+  color: $deep-sky-blue-24;
+}
+
+.sideBarNavContainer {
+  overflow-y: scroll;
+  // @include resD((
+  //   max-height: 30vh,
+  // ));
+  @include resD1280((
+    max-height: calc(100vh - #{hs($studentActivityHeight)}),
+  ));
+  --accent-color: #808080;
+  --accent-color-110: #808080;
+  
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, #808080, #808080);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #808080, #808080);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #808080, #808080);
+  }
+  
+  /* Define the styles for the scroll bar when it is in a focused state */
+  ::-webkit-scrollbar-thumb:focus {
+    background: linear-gradient(to bottom, #808080, #808080);
+  }
+}
+
+.sideBarNavContainerUpdated{
+  overflow-y: scroll;
+  // @include resD((
+  //   max-height: 30vh,
+  // ));
+  @include resD1280((
+    max-height: calc(100vh - #{hs(580px)}),
+  ));
+  --accent-color: #808080;
+  --accent-color-110: #808080;
+  
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, #808080, #808080);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #808080, #808080);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #808080, #808080);
+  }
+  
+  /* Define the styles for the scroll bar when it is in a focused state */
+  ::-webkit-scrollbar-thumb:focus {
+    background: linear-gradient(to bottom, #808080, #808080);
+  }
+}
+
+.textContainer{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include resD((
+    width: 180px,
+  ));
+}
+
+
+.sideBarNavItem {
+  color: $emperor-25;
+  background: $white;
+  display: flex;
+  flex-direction: row;
+  transition: 0.3s all ease-in-out;
+  align-items: center;
+  &.dirRow{
+    flex-direction: column;
+    flex-direction: flex-start;
+    align-items: flex-start;
+    justify-content: center;
+    @include resD((
+      height: 137px !important,
+      margin-bottom: 15px !important,
+    ));
+  }
+  &.assignment{
+    flex-direction: column;
+    flex-direction: flex-start;
+    align-items: flex-start;
+    justify-content: center;
+    @include resD((
+      height: 158px !important,
+    ));
+  }
+  .icon {
+    @include resD((
+      min-width: 28px,
+      min-height: 28px,
+      max-width: 28px,
+      max-height: 28px,
+      margin-right: 20px,
+      display: flex,
+      justify-content: center,
+      align-items: center,
+    ));
+    svg {
+      display: block;
+      @include resD((
+        height: 28px,
+      ));
+    }
+    path {
+      fill: #111;
+      transition: 0.3s all ease-in-out;
+    }
+  }
+  .visitedIcon{
+    path {
+      fill: #01AA93 !important;
+      transition: 0.3s all ease-in-out;
+    }
+  }
+  @include resD((
+    font-weight: 700,
+    height: 64px,
+    font-size: 20px,
+    padding: 0 15px 0 45px,
+  ));
+  .sideBarNavText {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include resD((
+      min-width: 180px
+    ));
+  }
+  &:hover, &.active {
+    color: $theme;
+    path{
+      fill: $theme;
+    }
+  }
+  &.active {
+    background: $theme-l;
+  }
+  cursor: pointer;
+}
+
+
+
+
+.sideBarNavItemParent {
+  @extend .sideBarNavItem;
+  .arrow {
+    @include resD((
+      min-width: 14px,
+      min-height: 8px,
+      max-width: 14px,
+      max-height: 8px,
+      margin-left: 26px,
+    ))
+  }
+  .arrowSVG {
+    display: block;
+    path {
+      fill: $emperor-25;
+    }
+  }
+  &.active, &:hover {
+    path {
+      fill: $theme;
+    }
+  }
+}
+
+.borderOnSidebar{
+  @include resD((
+    border-width: 1px 0px,
+    border-style: solid,
+    border-color: #E2E2E2,
+  ));
+}
+
+.sideBarNavItemChild {
+  @extend .sideBarNavItem;
+  @include resD((
+    height: 52px,
+    font-size: 18px,
+    margin-top: 4px,
+    padding: 0 10px 0 76px,
+  ));
+  .icon {
+    @include resD((
+      min-width: 24px,
+      min-height: 24px,
+      margin-right: 18px,
+    ));
+    svg {
+      @include resD((
+        height: 24px,
+      ));
+    }
+  }
+}
+
+.sideBarNavWrapper {
+  @include resD((
+    margin-bottom: 8px,
+  ));
+}
+
+.flexColumn {
+  height: 100vh;
+  @include resD((
+    padding-top: 32px,
+    gap: 40px,
+  ));
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.flexColumnForTeacherApp{
+  height: inherit;
+}
+
+.profileContainer {
+  @include resD((
+    height: 88px,
+    margin-bottom: 4px,
+    gap: 10px,
+  ));
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImage {
+  @include resD((
+    width: 48px,
+    height: 48px,
+  ));
+  background: url('./profilePicture.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.studentDetailsContainer {
+  @include resD((
+    margin-left: 8px,
+  ));
+  @include resM((
+    font-size: 20px,
+    margin-left: 8px,
+  ));
+  display: flex;
+  flex-direction: column;
+}
+
+.userNameAndRollno {
+  @include resD((
+    font-size: 20px,
+    line-height: 27px,
+  ));
+  @include resM((
+    font-size: 20px,
+    line-height: 27px,
+  ));
+  font-weight: 700;
+  color: $emperor-61;
+}
+
+.gradeText {
+  @include resD((
+    font-size: 14px,
+    line-height: 19px,
+  ));
+  color: $emperor-66;
+  font-weight: 700;
+}
+
+.profileAndSettingsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  align-items: center;
+  background-size: cover;
+  background-image: url('../../assets/profileContainerBG.png');
+  @include resD((
+    padding: 0 24px 0 24px,
+  ));
+}
+
+.profileRightArrow { 
+  @include resD((
+    min-width: 15px,
+    min-height: 15px,
+    max-width: 15px,
+    max-height: 15px,
+  ));
+  transform: rotate(-90deg);
+  svg {
+    display: block;
+  }
+  path {
+    fill: #000;
+    transition: 0.3s all ease-in-out;
+  }
+}
+
+
+.tekieLogoDrop {
+  @include resD((
+    width: 51px,
+    height: 57px,
+  ));
+  background: url('../../assets/tekieLogoDrop.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.outSidenavItem {
+  @include resD((
+    width: $outSideNavWidth,
+    height: 76px,
+    margin-bottom: 40px,
+  ));
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  .icon {
+    @include resD((
+      width: 32px,
+      height: 32px
+    ));
+    circle {
+      transition: 0.3s all ease-in-out;
+      stroke: $grey;
+    };
+    &.fill path {
+      transition: 0.3s all ease-in-out;
+      fill: $grey;
+    }
+    &.stroke path {
+      transition: 0.3s all ease-in-out;
+      stroke: $grey;
+    }
+  }
+  
+  &.active, &:hover {
+    .titleOutSideNavBar {
+      color: $theme;
+    }
+    circle {
+      stroke: $theme;
+    };
+    .fill path {
+      fill: $theme;
+    }
+    .stroke path {
+      stroke: $theme;
+    }
+    path.replaceFill {
+      fill: $theme;
+    }
+  }
+}
+
+.titleOutSideNavBar {
+  font-weight: 700;
+  font-family: Nunito;
+  text-align: center;
+  @include resD((
+    font-size: 16px,
+    line-height: 110%,
+    margin-top: 9px
+  ));
+  transition: 0.3s all ease-in-out;
+  color: $grey;
+}
+
+.profileContainerOutSideNav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include resD((
+    margin-bottom: 37px
+  ));
+  .profileName {
+    font-weight: 700;
+    line-height: 110%;
+    color: $grey4;
+    @include resD((
+      font-size: 16px,
+      margin-top: 12px
+    ))
+  }
+  .rollNo {
+    @include resD((
+      font-size: 14px,
+      line-height: 19px,
+      margin-top: 4px,
+    ));
+    font-weight: 700;
+    color: $grey3;
+  }
+}
+
+.activeLineIndicator {
+  position: absolute;
+  right: 0;
+  @include resD((
+    height: 100%,
+    width: 7px,
+    border-radius: 4px,
+  ));
+  z-index: 9;
+  background-color: $theme;
+}
+
+.profileAndSettingsDropdown {
+  @include resD((
+    top: unset !important,
+    bottom: 0 !important,
+  ));
+  left: hs($sideNavWidth) + hs(5px) !important,
+}
+
+.learningDropdown{
+  @include resD((
+    top: unset !important,
+    bottom: 0 !important,
+  ));
+  left: hs($sideNavWidth) - hs(15px) !important,
+}
+
+.learningContainer{
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 100px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  box-sizing: border-box;
+  @include resD((
+    width: 300px,
+    margin-bottom: 24px,
+    padding: 0px 20px,
+    height: 58px,
+  ));
+  .title{
+    font-weight: 600;
+    color: #005773;
+    margin: 0;
+    @include resD((
+      font-size: 20px,
+      line-height: 27px,
+      padding: 0,
+      margin: 0 0 0 20px,
+    ));
+  }
+}
+
+.dropDownContainer{
+  @include resD((
+    width: 314px,
+  ))
+}
+
+.profileAndResourcesContainer{
+  display: flex;
+  flex-direction: column;
+}
+.profilePictureContainer{
+  display: flex;
+  align-items: center;
+}
+.main_navbar_profilePicture{
+  opacity: 0;
+  position: relative;
+  left: 5px;
+}
+.additionalProfile{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(133.17deg, #007299 -13.54%, #0E7092 110.48%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #fff;
+  font-weight: bold;
+  margin-left: -20px;
+
+  @include resD((
+    
+   font-size: 14px,
+   width: 35px,
+    height: 29px,
+  ));
+}
+
+.activityContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @include resD((
+    height: 70,
+    padding: 18px 53px 0 53px,
+    gap: 10px,
+    border-radius: 34px 34px 0px 0px,
+  ));
+  background: linear-gradient(256.65deg, rgba(255, 255, 255, 0) 3.84%, #E3E3E3 99.11%);
+  border: 1px solid #CCCCCC;
+}
+
+.studentActivityText{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include resD((
+    box-sizing: border-box,
+  ));
+  p{
+    font-weight: 700;
+    @include resD((
+      font-size: 18px,
+      line-height: 20px,
+      margin: 0px,
+      margin-left: 8px,
+    ));
+    color: #403F3F;
+  }
+}
+
+.activityToggle{
+  align-self: center;
+  justify-self: center;
+  p{
+    color: #504F4F;
+    @include resD((
+      font-weight: 500 !important,
+      font-size: 16px !important,
+    ));
+  }
+}
+
+.visitedCount{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  span{
+    color: #01AA93;
+    font-weight: 600;
+    @include resD((
+      font-size: 14px,
+      margin-top: 2px,
+    ))
+  }
+  p{
+    color: #403F3F;
+    font-weight: 500;
+    @include resD((
+      font-size: 14px,
+    ))
+  }
+}
+
+.submitted{
+  div{
+    align-items: center;
+    p{
+      font-weight: 700;
+      display: flex;
+      color: #666666;
+      @include resD((
+        font-size: 12px,
+        line-height: 15px,
+        margin-right: 6px,
+      ));
+      span{
+        @include resD((
+          margin-left: 6px,
+        ));
+      };
+    };
+  };
+  span{
+    font-weight: 600;
+    @include resD((
+      font-size: 18px,
+      line-height: 22px,
+    ));
+    color: #A8A7A7;
+  }
+}
+.score{
+  @include resD((
+    margin-left: 24px,
+  ));
+  p{
+    font-weight: 700;
+    color: #666666;
+    @include resD((
+      font-size: 12px,
+      line-height: 15px,
+      margin: 0px,
+      margin-bottom: 8px,
+    ));
+  };
+  span{
+    background-color: rgba(250, 173, 20, 0.2);
+    font-weight: 600;
+    color: #A87000;
+    @include resD((
+      font-size: 16px,
+      padding: 6px 8px,
+      line-height: 12px,
+    ))
+  }
+}
+
+.infoContainer{
+  @include resD((
+    border-top: 1px solid #000000,
+    width: 207px
+  ));
+}
+
+.detailsContainer{
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  align-self: flex-start;
+  justify-self: center;
+  @include resD((
+    padding: 15px 15px 15px 0,
+    margin-top: 15px,
+  ))
+}
+.informationIcon {
+  path{
+
+    fill: #403F3F !important;
+  }
+}
+.gradient{
+  height: 16px;
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, 0) 48.96%, #D9D9D9 87.5%);
+}
+
+.updatedText{
+  align-self: center;
+  p{
+    margin: 0;
+    font-weight: 500;
+    @include resD((
+      font-size: 15px,
+      color: grey,
+    ));
+  }
+}
+.sidebar{
+  height: 100%;
+  display: grid;
+  @include resD((
+    padding-top: 32px,
+  ));
+  box-sizing: border-box;
+  grid-template-rows: auto 1fr auto;
+}
+
+.content{
+  overflow: auto;
+}
+

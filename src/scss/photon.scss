@@ -1,0 +1,259 @@
+@import './theme.scss';
+@import './size.scss';
+
+/** Padding */
+.p-hxxs {
+  box-sizing: border-box;
+  padding-left: $s-xxs;
+  padding-right: $s-xxs;
+}
+.p-vxxs {
+  box-sizing: border-box;
+  padding-top: $s-xxs;
+  padding-bottom: $s-xxs;
+}
+
+.p-hxs {
+  box-sizing: border-box;
+  @include resD((
+    padding-left: $s-xs,
+    padding-right: $s-xs,
+  ));
+}
+.p-vxs {
+  box-sizing: border-box;
+  @include resD((
+    padding-top: $s-xs,
+    padding-bottom: $s-xs,
+  ));
+}
+
+.p-hs {
+  box-sizing: border-box;
+  @include resD((
+    padding-left: $s-s,
+    padding-right: $s-s,
+  ));
+}
+.p-vs {
+  box-sizing: border-box;
+  @include resD((
+    padding-top: $s-s,
+    padding-bottom: $s-s,
+  ));
+}
+
+.p-hm {
+  box-sizing: border-box;
+  @include resD((
+    padding-left: $s-m,
+    padding-right: $s-m,
+  ));
+}
+.p-vm {
+  box-sizing: border-box;
+  @include resD((
+    padding-top: $s-m,
+    padding-bottom: $s-m,
+  ));
+}
+
+.p-hxm {
+  box-sizing: border-box;
+  @include resD((
+    padding-left: $s-xm,
+    padding-right: $s-xm,
+  ));
+}
+.p-vxm {
+  box-sizing: border-box;
+  @include resD((
+    padding-top: $s-xm,
+    padding-bottom: $s-xm,
+  ));
+}
+
+.p-hxxm {
+  box-sizing: border-box;
+  @include resD((
+    padding-left: $s-xxm,
+    padding-right: $s-xxm,
+  ));
+}
+.p-vxxm {
+  box-sizing: border-box;
+  @include resD((
+    padding-top: $s-xxm,
+    padding-bottom: $s-xxm,
+  ));
+}
+
+.p-hl {
+  box-sizing: border-box;
+  @include resD((
+    padding-left: $s-l,
+    padding-right: $s-l,
+  ));
+}
+.p-vl {
+  box-sizing: border-box;
+  @include resD((
+    padding-top: $s-l,
+    padding-bottom: $s-l,
+  ));
+}
+
+.p-hxl {
+  box-sizing: border-box;
+  @include resD((
+    padding-left: $s-xl,
+    padding-right: $s-xl,
+  ));
+}
+.p-vxl {
+  box-sizing: border-box;
+  @include resD((
+    padding-top: $s-xl,
+    padding-bottom: $s-xl,
+  ));
+}
+
+.p-hxxl {
+  box-sizing: border-box;
+  @include resD((
+    padding-left: $s-xxl,
+    padding-right: $s-xxl,
+  ));
+}
+.p-vxxl {
+  box-sizing: border-box;
+  @include resD((
+    padding-top: $s-xxl,
+    padding-bottom: $s-xxl,
+  ));
+}
+.p-hxxm {
+  @include resD((
+    padding-left: $s-xxm,
+    padding-right: $s-xxm,
+  ));
+}
+.p-vxm {
+  @include resD((
+    padding-top: $s-xxm,
+    padding-bottom: $s-xxm,
+  ));
+}
+
+.p-hxxxl {
+  box-sizing: border-box;
+  @include resD((
+    padding-left: $s-xxxl,
+    padding-right: $s-xxxl,
+  ));
+}
+.p-vxxxl {
+  box-sizing: border-box;
+  @include resD((
+    padding-top: $s-xxxl,
+    padding-bottom: $s-xxxl,
+  ));
+}
+
+
+.m-rxl {
+  @include resD((
+    margin-right: $s-xl,
+  ));
+}
+.m-rxxm {
+  @include resD((
+    margin-right: $s-xxm,
+  ));
+}
+
+.m-tm {
+  @include resD((
+    margin-top: $s-xm,
+  ));
+}
+.m-txxs {
+  @include resD((
+    margin-top: $s-xxs,
+  ));
+}
+
+.m-rs {
+  @include resD((
+    margin-right: $s-s,
+  ));
+}
+
+.row {
+  display: flex;
+}
+
+.shadow {
+  box-shadow: $box-shadow;
+}
+
+.bg-white {
+  background: $white;
+}
+
+.ph-card {
+  @extend .shadow; 
+  @extend .bg-white; 
+}
+
+.t-bdy-strong {
+  font-family: Nunito;
+  font-weight: 700;
+  @include resD((
+    font-size: 20px,
+  ));
+}
+
+.t-bdy-regular {
+  font-family: Nunito;
+  @include resD((
+    font-size: 20px,
+  ));
+}
+
+.t-bdy-regular {
+  font-family: Nunito;
+  @include resD((
+    font-size: 20px,
+  ));
+}
+
+.t-head-semi-medium {
+  font-family: Nunito;
+  font-weight: 600;
+  @include resD((
+    font-size: 26px,
+  ));
+}
+
+.t-head-regular {
+  font-family: Nunito;
+  @include resD((
+    font-size: 26px,
+  ));
+}
+
+.t-small-regular {
+  color: $emperor;
+}
+.cl-deep-sky-blue {
+  color: $deep-sky-blue;
+}
+
+.op-50 {
+  opacity: 0.5;
+}
+
+.align-start {
+  align-items: flex-start !important;
+}

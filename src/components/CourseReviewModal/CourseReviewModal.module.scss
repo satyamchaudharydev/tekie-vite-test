@@ -1,0 +1,220 @@
+@import 'src/scss/size.scss';
+
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: hs(20px);
+  background-color: #ffffff;
+  position: relative;
+  height: fit-content;
+  @include resM((
+    width: 80vw,
+    top: 100px,
+    padding: 24px 14px,
+  ));
+  @include resD((
+    top: 150px,
+    width: 480px,
+    padding: 38px 60px,
+  ));
+}
+
+.courseReviewContainer{
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ade6;
+  @include resM((
+    height: 51px,
+    font-size: 20px,
+    line-height: 32px
+  ));
+  @include resD((
+    height: 51px,
+    font-size: 28px,
+    line-height: 40px
+  ));
+}
+
+.courseReviewSubHeader {
+  font-family: Nunito;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #00ade6;
+  text-align: center;
+  @include resM((
+    margin-bottom: 20px,
+    font-size: 16px,
+  ));
+  @include resD((
+    margin-bottom: 32px,
+    font-size: 20px,
+  ));
+}
+
+.courseReviewCourseContainer {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.03;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ade6;
+  @include resM((
+      height: 40px,
+      margin-bottom: 0,
+      font-size: 20px,
+  ));
+  @include resD((
+      height: 51px,
+      margin-bottom: 45px,
+      font-size: 38px,
+  ));
+}
+
+.buttonText {
+  font-weight: 600;
+  @include resM((
+      font-size: 16px,
+  ));
+  @include resD((
+      font-size: 18px,
+  ));
+}
+
+.courseReviewActionContainer {
+  display: flex;
+  @include resM((
+      margin: 12px 0px 0px
+  ));
+  @include resD((
+      margin: 12px 0px 0px
+  ));
+}
+
+.courseReviewActionText {
+  font-family: Nunito;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.08;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ade6;
+  @include resM((
+      height: 32px,
+      font-size: 18px,
+  ));
+  @include resD((
+      height: 32px,
+      font-size: 24px,
+      margin-right: 10px,
+  ));
+}
+
+.courseReviewClose {
+  position: absolute;
+  background: #00ADE6;
+  filter: drop-shadow(-2px 2px 4px #026282);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  @include resD((
+    width: 50px,
+    height: 50px,
+    top: -40px / 2,
+    right: -40px / 2,
+  ));
+  @include resM((
+    width: 35px,
+    height: 35px,
+    top: -30px / 2,
+    right: -20px / 2,
+  ));
+  &:hover {
+    box-shadow: 0px 6px 6px rgba(51, 51, 51, 0.2), 0px 5px 20px rgba(51, 51, 51, 0.08);
+  }
+}
+
+.courseReviewCloseIcon {
+  position: relative;
+  @include resD((
+    width: 20px,
+    height: 20px,
+    top: -1px,
+  ));
+  @include resM((
+    width: 12px,
+    height: 12px,
+    top: -6px,
+  ));
+  path {
+    fill: #FFF;
+    opacity: 1;
+  }
+}
+
+.courseReviewCommentInput {
+  border: 1.5px solid #000000;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 12px;
+  outline: none;
+  font-family: Nunito;
+  font-style: italic;
+  font-weight: normal;
+  width: 100%;
+
+  @include resD((
+    min-height: 150px,
+    min-width: 400px,
+  ));
+  @include resM((
+    min-height: 50px,
+    min-width: 100%,
+  ));
+  
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  &::placeholder { 
+    opacity: 0.5;
+    color: #504F4F;
+  }
+}
+
+.courseReviewRatingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0px 8px 12px;
+
+  & .spCompletedRateIcon {
+    cursor: pointer;
+    & > svg {
+      @include resD((
+        width: 38px,
+        height: 38px,
+        margin: 0px 4px
+      ));
+      @include resM((
+        width: 24px,
+        height: 24px,
+        margin: 0px 2px
+      )); 
+    }
+  }
+}

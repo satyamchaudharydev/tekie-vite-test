@@ -1,0 +1,25 @@
+@import "src/scss/size.scss";
+
+.cardLayout {
+	height: 100%;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	svg {
+		background: none;
+	}
+}
+.cardLayoutMobile {
+	margin-bottom: hs(18px);
+	width: 100%;
+	height: 90vh;
+}
+
+.card {
+	border-radius: 4px;
+}
+
+.footer {
+	width: hs(1600px);
+	height: hs(60px);
+	display: flex;
+}

@@ -1,0 +1,49 @@
+@import "src/scss/size.scss";
+
+.alert {
+	position: fixed;
+	background: #403f3f;
+	border-radius: 12px;
+	color: "white";
+	z-index: 1000;
+	width: max-content;
+	height: fit-content;
+
+	& svg {
+		display: block;
+	}
+
+	@include resD(
+		(
+			padding: 12px 16px,
+		)
+	);
+	&.bottom{
+		bottom: 48px
+	}
+	&.center{
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&.top{
+		top: 48px;
+	}
+	&.left{
+		left: 0;
+	}
+	&.right{
+		right: 48px;
+	}
+}
+
+.alertContent {
+	font-weight: 600;
+	color: #ffffff;
+
+	@include resD(
+		(
+			font-size: 18px,
+			line-height: 22px,
+		)
+	);
+}

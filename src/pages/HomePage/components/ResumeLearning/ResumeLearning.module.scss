@@ -1,0 +1,114 @@
+@import 'src/scss/size.scss';
+
+.container {
+  width: hs(1596px);
+  height: hs(340px);
+  background-color: white;
+  margin-top: hs(100px);
+  display: flex;
+  border-radius: 5px;
+  flex-direction: row;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.thumbnailContainer {
+  width: hs(754px); 
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0 1px 10px 0 #1AC9E8;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playButtonContainer {
+  width: hs(90px);
+  height: hs(90px);
+  background-image: url('../../../../assets/playButton.png');
+  background-size: cover;
+  cursor: pointer;
+  scale: 1;
+}
+
+.infoContainer {
+  margin-left: hs(48px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.title {
+  font-size: hs(30px);
+  font-weight: bold;
+  margin-top: hs(20px);
+}
+
+.description {
+  font-size: hs(22px);
+  font-weight: 300;
+  color: #504f4f;
+  margin-top: hs(23px);
+  margin-right: hs(84px);
+}
+
+.progressContainer {
+  position: relative;
+  width: hs(143.4px);
+  height: hs(18px);
+  border-radius: hs(10px);
+  overflow: hidden;
+}
+.progressOuter {
+  width: hs(141.4px);
+  height: hs(16px);
+  border-radius: hs(10px);
+  border: solid 1px #00ade6;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.progressInner {
+  position: relative;
+  width: hs(141.4px);
+  height: hs(18px);
+  border-radius: hs(10px);
+  background-image: linear-gradient(92deg, #34e4ea 0%, #00ade6 100%);
+}
+
+.progressWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.progressText {
+  margin-left: hs(18px);
+  font-size: hs(22px);
+  font-weight: bold;
+  color: #aaacae;
+}
+
+.topicTitle {
+  font-size: hs(22px);
+  color: #aaacae;
+  font-weight: bold;
+}
+
+.footer { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: hs(24px);
+  align-items: flex-end;
+  align-self: flex-end;
+  width: 100%;
+  margin-bottom: hs(24px);
+}
+
+.footerWrapper {
+  flex: 1;
+  display: flex;
+}

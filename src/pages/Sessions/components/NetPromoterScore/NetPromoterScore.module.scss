@@ -1,0 +1,697 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+.option {
+  font-family: Nunito;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #282828;
+  font-style: normal;
+  background: linear-gradient(rgb(255, 158, 138), rgb(255, 163, 133));
+  &:hover {
+    background-image: linear-gradient(to bottom, rgba(#00ade6, 0.4) -90%, rgba(#34e4ea, 0.4) 50%);
+    // transform: scale(1.2);
+    transition: 0.1s all ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.30) -0.05px 2.95px 2.6px;
+  }
+  @include resD((
+    font-size: 23.5593px,
+    line-height: 46px,
+    width: 28px,
+    height: 38px,
+    font-weight: 600,
+    border-radius: 50%,
+    padding: 6.01px 10.69px,
+  ))
+}
+.options {
+  @include resD((
+    margin-top: 36px,
+    margin-bottom: 28.4531px,
+    margin-left: 42px,
+    margin-right: 42px,
+  ));
+}
+
+.optionActive {
+  opacity: 1;
+  color: rgb(40, 40, 40) !important;
+  box-shadow: rgba(0, 0, 0, 0.30) -0.05px 2.95px 2.6px !important;
+}
+
+.npsContainer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999999;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column-reverse;
+  color: #00ade6;
+}
+
+.npsBody {
+  background-color: white;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  z-index: 200;
+  justify-content: space-evenly;
+}
+.mbNpsBody {
+  background-color: white;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 200;
+  justify-content: space-between;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  pointer-events: auto !important;
+}
+.firstNpsBody{
+  height: fit-content;
+}
+.mbThankYouNpsBody {
+  background-color: white;
+  width: 100%;
+  // height: 65%;
+  padding: 18px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 200;
+  justify-content: space-evenly;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+}
+
+.text {
+  font-weight: 700;
+  font-size: 17px;
+  color: #202223;
+  font-weight: bold;
+  opacity: 0.45;
+  width: 80%;
+  text-align: center;
+}
+.ratingBold{
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  color: #282828;
+  padding-bottom: 4%;
+}
+
+.slidecontainer {
+  margin-top: 30px;
+  padding-bottom: 5%;
+}
+.ratingContainer{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.sliderText {
+  font-weight: bold;
+  font-size: 13px;
+  svg {
+    display: none;
+  }
+}
+
+.emoji{
+  padding-top: 7%;
+  padding-bottom: 7%;
+}
+
+.buttonContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  box-sizing: border-box;
+}
+.cancelButton{
+  border: 2px solid #00ADE6;
+  color: #00ADE6;
+  border-radius: 40px;
+  padding: 12px 22px 11px;
+  margin-right: 9%;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: -5px;
+}
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 99.4%;
+  height: 5px; /* Specified height */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  background: linear-gradient(0.38deg, #0BF8FF -49.99%, #00C0FF 62.86%);
+  border-radius: 9.60211px;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50%;
+  background: #00ADE6; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border: 5px solid #ffffff;
+  outline-style: solid;
+  outline-color: #80D6F3;
+  outline-width:  0.240053px;
+box-sizing: border-box;
+transform: rotate(-89.9deg);
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50%;
+  background: #00ADE6; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border: 5px solid #ffffff;
+  outline-style: solid;
+  outline-color: #80D6F3;
+  outline-width:  0.240053px;
+box-sizing: border-box;
+transform: rotate(-89.9deg);
+}
+.popup {
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%) !important;
+  // height: auto !important;
+  padding: 0px !important;
+  pointer-events: auto !important;
+  transition: all 0.1s;
+  @include resD((
+    width: 608px,
+    height: fit-content,
+    border-radius: 10px,
+  ))
+}
+.btnContainer{
+  background: #F2F7FA;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-top: auto;
+  padding: 0;
+  width: 100%;
+  border-radius: 0px 0px 6.42912px 6.42912px;
+  @include resD((
+    height: 95.86px
+  ));
+  & > div:first-of-type {
+    display: flex;
+  } 
+}
+.textArea {
+  box-sizing: border-box;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  // text-transform: capitalize;
+  color: #403F3F;
+  outline: none;
+  box-shadow: inset 0 0 0 0.5px #DBDBDB;
+  border: none;
+  outline: none;
+  @include resD((
+    font-size: 20px,
+    border-radius: 6.30295px,
+    padding-top: 7px,
+    padding-left: 23px,
+    padding-right: 23px,
+    margin-bottom: 14px,
+    margin-right: 48.5px,
+    margin-left: 48.5px,
+  ));
+  &::placeholder{
+    color: #403F3F;
+    opacity: 0.2;
+    font-style: italic;
+  }
+}
+
+.textArea:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 0.5px #DBDBDB;
+  border:none;
+}
+.controlButton {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: bold;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #403F3F;
+  background: #F2F7FA;
+  background-color: none;
+  cursor: pointer;
+  opacity: 0.6;
+  @include resD((
+    padding-left: 48.5px,
+    padding-right: 25.22px,
+    padding-top: 4.22px,
+    padding-bottom: 4.22px,
+    font-size: 16px,
+    letter-spacing: 0.03em,
+  ));
+}
+.submitButton {
+  align-items: center;
+  width: fit-content;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  background: conic-gradient(from -3.29deg at 100% -13%, #35E4E9 0deg, #00ADE6 360deg);
+  box-shadow: none;
+  color: white;
+  cursor: pointer;
+  @include resD((
+    font-size: 17px,
+    line-height: 100%,
+    letter-spacing: 0.02em,
+    margin-right: 38.5px,
+    margin-top: 20px,
+    margin-bottom: 20px,
+    border-radius: 27.8261px,
+    padding: 16px 15px 15px,
+    width: 190px,
+  ));
+}
+.thankYouContainersubmitButton {
+  align-items: center;
+  width: fit-content;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  background: conic-gradient(from -3.29deg at 100% -13%, #35E4E9 0deg, #00ADE6 360deg);
+  box-shadow: none;
+  color: white;
+  cursor: pointer;
+  @include resD((
+    font-size: 20px,
+    line-height: 100%,
+    letter-spacing: 0.02em,
+    margin-right: 20px,
+    margin-top: 20px,
+    margin-bottom: 20px,
+    border-radius: 27.8261px,
+    padding: 16px 15px 15px,
+    width: 130px,
+  ));
+}
+.numberRatingsContainer {
+  display: flex;
+  color: #000;
+  justify-content: space-around;
+  margin-bottom: 8px;
+  div {
+      font-family: 'Nunito';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 21.0183px;
+      line-height: 29px;
+      text-align: center;
+      color: #403F3F;
+      opacity: 0.4;
+      margin-left: 15px;
+  }
+}
+.emojiRatingsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.thankYouContainer{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  svg {
+    width: 75px;
+    height: 75px;
+  }
+  p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    width: 85%;
+    text-align: center;
+    color: #00ADE6;
+    margin: auto;
+    padding-top: 15px;
+    @include resD((
+      font-size: 26px
+    ));
+  }
+}
+.mbNumberRatingsContainer {
+  display: flex;
+  color: #000;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  margin-left: 5px;
+}
+.primaryQuestion {
+  font-family: Nunito;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  display: flex;
+  color: rgb(0, 173, 230);
+  @include resD((
+    padding-top: 42px,
+    margin-left: 45px,
+    margin-right: 45px,
+    line-height: 130%,
+    font-size: 25px,
+  ));
+  p {
+    margin: 0;
+    @include resD((
+      padding-left: 8px,
+      font-size: 24px
+    ));
+    span {
+      @include resD((
+        padding-right: 10px,
+      ));
+    }
+  }
+}
+
+.mbPrimaryQuestion {
+  font-family: Nunito;
+  font-weight: 800;
+  font-size: 17px;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #00ADE6;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  @include resD((
+    padding-left: unset,
+  ));
+  @include resM((
+    padding-left: 40px,
+    padding-right: 40.8261px,
+  ));
+  padding-right: 40.8261px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.mbThankYouTextContainer {
+  font-family: Nunito;
+  font-weight: 800;
+  font-size: 18.2118px;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #00ADE6;
+  text-align: center;
+  display: flex;
+  padding-left: 18px;
+  padding-right: 18px;
+  margin-top: 12px;
+}
+.mbSecondryQuestion {
+  font-family: Nunito;
+  font-weight: 800;
+  font-size: 18.2118px;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #00ADE6;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  @include resD((
+    padding-left: unset,
+  ));
+  @include resM((
+    padding-left: 40px,
+    padding-right: 40.8261px,
+  ));
+  padding-right: 40.8261px;
+}
+.mbFirstStepPrimaryTitle {
+  font-family: Nunito;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-left: 18.6px;
+  padding-right: 18.6px;
+  color: #012A38;
+  opacity: 0.8;
+  font-size: 18px;
+  margin-top: 33px;
+  svg {
+    padding-left: 6px;
+    height: 25px;
+  }
+}
+.mbFirstStepSecondryTitle {
+  font-family: Nunito;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  display: flex;
+  padding-left: 18.6px;
+  padding-right: 18.6px;
+  color: #012A38;
+  opacity: 0.8;
+  font-size: 18px;
+}
+.mobileOption {
+  width: 18px !important;
+  height: 18px !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.mbFirstStepButtonsContainer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding: 0;
+  padding-bottom: 20px;
+  width: 100%;
+  margin-bottom: 4%;
+  & > div:first-of-type {
+    display: flex;
+    margin-right: 20px;
+  }
+}
+.mbButtonsContainer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: -15px;
+  padding: 0;
+  width: 100%;
+  margin-bottom: -2%;
+  align-self: flex-end;
+  background: #F2F7FA;
+  z-index: -1;
+  & > div:first-of-type {
+    display: flex;
+    // margin-right: 20px;
+  }
+}
+.mbSubmitBtnContainer{
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: auto;
+  margin-right: auto !important;
+  & > div {
+    & > div:first-of-type {
+        font-size: 14px;
+        line-height: 120%
+    }
+  }
+}
+.mbBackButton {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12.8245px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background-color: transparent;
+  color: #403F3F;
+  cursor: pointer;
+  padding-left: 22.5px;
+  padding-right: 34.22px;
+  opacity: 0.6;
+}
+.mbFirstStepCancelButton{
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    color: #A8A7A7;
+    margin: auto;
+}
+.mbControlButton {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: bold;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #403F3F;
+  background-color: transparent;
+  // background-color: none;
+  cursor: pointer;
+  padding-left: 22.5px;
+  opacity: 0.6;
+  font-size: 12.8245px;
+  padding-right: 10.22px;
+}
+.mbTextArea {
+    width: 90%;
+    margin: 12px auto;
+    padding-left: 22px;
+    padding-right: 22px;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
+    border-radius: 4.30295px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    // text-transform: capitalize;
+    color: #403F3F;
+    padding-top: 7px;
+    &::placeholder{
+    color: #403F3F;
+    opacity: 0.2;
+    font-style: italic;
+  }
+}
+.mbTextArea:focus {
+  outline: none;
+  border: 1px solid #DBDBDB,
+}
+.thankYouPrimaryTitle {
+  justify-content: center;
+  font-weight: 800;
+  width: 65%;
+  margin: auto;
+  padding-right: 18.56px !important;
+}
+.emojiContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p{
+    color: #403F3F;
+    opacity: 0.4;
+  }
+}
+.npsContainerWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.50);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+  opacity: 1;
+  pointer-events: auto !important;
+}
+
+.closeIconContainer{
+  position: absolute;
+  @include resD((
+    width: 40px,
+    height: 40px,
+    border: 2.62366px solid #00ADE6,
+    right: -22px,
+    position: absolute,
+    top: -22px,
+    border-radius: 99px,
+  ));
+background: #FFFFFF;
+/* Primary/DeepSkyBlue */
+box-sizing: border-box;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    transition: all .3s ease-in-out;
+    & path {
+    fill: #00ADE5;
+    opacity: 1;
+  }
+}
+.closeIcon{
+@include resD((
+    width: 30px,
+    height: 30px,
+    border-radius: 99px,
+    font-size: 25px,
+line-height: 130%,
+  ));
+font-family: Nunito;
+font-style: normal;
+font-weight: bold;
+text-align: center;
+color: #00ADE6;
+}
+.satisfiedTextContainer {
+  display: flex;
+  justify-content: space-between;
+  p{  
+    font-family: Nunito;
+    font-style: normal;
+    color: #D5D5D5;
+    @include resD((
+      font-weight: 800,
+      width: fit-content,
+      font-size: 14px,
+    ));
+  }
+}

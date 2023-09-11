@@ -1,0 +1,191 @@
+@import "../../../../mixins/modalBackdrop.scss";
+@import "../../../../variables/_variables.scss";
+@import "src/scss/Inter.scss";
+@import "src/scss/theme/spacing.scss";
+@import "src/scss/theme/colors.scss";
+
+.filterModalContainer {
+  @include modalBackDrop;
+  font-family: "Inter";
+  font-weight: 400;
+}
+.filterModal {
+  width: 500px;
+}
+.header {
+  padding: 12px 16px;
+  background-color: $tekie-amethyst-70;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  font-size: 18px;
+  font-weight: 500;
+}
+.header_headingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body {
+  height: 250px;
+  background-color: white;
+  display: flex;
+  padding-right: $s-xxs;
+}
+.body_filterByListWrapper {
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+.filterValue {
+  padding: 0.5rem 1.5rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: normal;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  &:hover {
+    background-color: $tekie-amethyst-30;
+  }
+}
+.isActive {
+  @extend .filterValue;
+  background-color: white;
+  &:hover {
+    background-color: white;
+  }
+}
+.body_filterBy {
+  background-color: $dark-grey;
+  width: 43%;
+}
+.body_filterByOptions {
+  background-color: white;
+  padding: 8px 21px;
+  width: 57%;
+  overflow-y: scroll;
+}
+.filterOptionWrapper {
+  display: flex !important;
+  align-items: center;
+  padding: 9px 18px;
+  font-weight: normal;
+  font-family: "Inter";
+  font-style: normal;
+  cursor: pointer;
+  font-size: 14px;
+  &:hover {
+    background-color: $tekie-amethyst-30;
+  }
+}
+.filterByOptionCheckbox {
+  accent-color: $primary-color;
+  margin-right: 1rem;
+}
+.filterIcon {
+  margin-right: 16px;
+  padding: 12px;
+  background-color: $white;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  padding: 12px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-top: 1px solid $dark-grey;
+  background-color: white;
+}
+.priBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 16px;
+  width: fit-content;
+  height: 36px;
+  background: $primary-color;
+  border-radius: 8px;
+  border: none;
+  margin: 0px 20px;
+  color: #fff;
+  border-width: inherit;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  font-family: "Inter";
+  font-weight: 500;
+  &:hover {
+    cursor: pointer;
+    background: $primary-color-110
+;
+    transition: 0.4s ease-in-out;
+  }
+}
+.secBtn {
+  width: fit-content;
+  height: 36px;
+  padding: 5px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: $tekie-amethyst-30;
+  border: none;
+  border-radius: 8px;
+  color: $primary-color;
+  font-size: 12px;
+  font-family: "Inter";
+  font-weight: 500;
+  margin-left: 14px;
+  letter-spacing: 0.4px;
+  transition: 0.4s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background: #e2ceff;
+    transition: 0.2s ease-in-out;
+  }
+}
+.closeModalIcon {
+  font-size: 16px;
+  fill: #666666;
+  margin-top: 12px;
+  margin-right: 14px;
+  position: relative;
+  bottom: 6px;
+  left: 6px;
+  padding: 0px 5px 2px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background: $primary-color;
+    color: white;
+
+    & svg > path {
+      fill: white !important;
+    }
+  }
+}
+.statusTag {
+  width: 8px;
+  height: 8px;
+  margin-left: $s-xs;
+  border-radius: 50%;
+}
+.sessionStatusOptionTag {
+  width: 8px;
+  height: 8px;
+  background-color: $emperor-61;
+  border-radius: 50%;
+  margin-left: $s-xs;
+}

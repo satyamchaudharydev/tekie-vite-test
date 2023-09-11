@@ -1,0 +1,109 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+.cheatsheet-footer{
+    margin: 28px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.cheatsheet-iconContainer{
+    position: relative;
+    width: 0.74479vw;
+    height: 0.8125vw;
+}
+
+.cheatsheet-iconContainer svg{
+    transform: scaleX(-1);
+}
+.cheatsheet-leftButton, .cheatsheet-rightButton{
+    @include resD((
+        width: 200px,
+        height: 56px,
+    ));
+    @include resM((
+        width: 147px,
+        height: 51px,
+    ));
+}
+.cheatsheet-buttonContainer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    align-items: center;
+    flex-direction: row;
+    pointer-events:auto;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    margin: 0 30px;
+    background-image: linear-gradient(to top, #00ade6, #34e4ea);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    box-sizing: border-box;
+    font-family: Nunito;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.59;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    border-radius: 8px;
+    @include resD((
+       font-size: 21px,
+        width: 200px,
+        height: 56px,
+    ));
+    @include resM((
+        font-size: 15px,
+        width: 147px,
+        height: 51px,
+    ));
+}
+.cheatsheet-prevButton{
+    background-image: unset;
+    border:1.5px solid #00ade6;
+    color: #00ade6;
+    & .iconCircle{
+        box-shadow: unset;
+    }
+}
+.cheatsheet-iconCircle {
+  box-shadow: 0 0px 3px 0 #34e4ea;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  position: relative;
+  @include resD((
+       height: 27px,
+       width: 27px,
+    ));
+    @include resM((
+        width: 20px,
+        height: 20px,
+    ));
+  &:hover{
+      transform: scale(1.15);
+  }
+  & svg{
+        height: 100%;
+        width: 100%;
+  }
+}
+.cheatsheet-reveseIcon{
+    box-shadow: unset;
+    & svg{
+        height: 100%;
+        width: 100%;
+        & path{
+            stroke: white !important;
+        }
+  }
+}
+@media (max-width: 698px) {
+    .cheatsheet-buttonContainer{
+        margin: 0 12px;
+    }
+}

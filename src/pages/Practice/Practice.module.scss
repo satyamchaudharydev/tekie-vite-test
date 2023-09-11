@@ -1,0 +1,13 @@
+@import 'src/scss/size.scss';
+
+.container{
+  width: hs(1569.8px);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(../../assets/questionBackground.svg);
+  background-attachment: fixed;
+  padding-bottom: hs(150px);
+  overflow-y: scroll;
+}

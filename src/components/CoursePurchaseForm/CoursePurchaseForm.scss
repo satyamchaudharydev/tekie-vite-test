@@ -1,0 +1,1392 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.purchaseForm-popUpBackgroundColor {
+  @include resM((
+    background-color: #ffffff,
+    ));
+  @include resD((
+    background-color: rgba(3, 3, 3, .6),
+  ));
+}
+
+.purchaseForm-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include resM((
+    display: flex,
+    flex-direction: column,
+    justify-content: flex-start,
+    align-items: center,
+    box-sizing: border-box,
+    padding-top: 60px
+  ));
+  @include resD((
+    display: flex,
+    flex-direction: column,
+    justify-content: flex-start,
+    align-items: center,
+    padding-top: 60px
+  ));
+}
+
+.purchaseForm-mainContainer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include resM((
+    flex-direction: column,
+    justify-content: flex-start,
+    align-items: flex-start,
+    border-radius: 10px,
+    box-sizing: border-box,
+    margin-top: 0px,
+  ));
+  @include resD((
+    flex-direction: row,
+    justify-content: flex-start,
+    align-items: flex-start,
+    border-radius: 10px,
+    margin-top: 20px,
+  ));
+}
+
+.purchaseForm-inputContainer {
+  width: 100% !important;
+  @include resD((
+    padding: 16px 0px 0px,
+  ));
+  @include resM((
+    padding: 2px 0px,
+  ));
+}
+
+.purchaseForm-header {
+  width: 100%;
+  background: #00171F;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  @include resD((
+    padding: 12px 20px
+  ));
+  @include resM((
+    padding: 6px 10px 
+  ));
+}
+
+.purchaseForm-tekieLogo {
+  @include resM((
+    width: 98px,
+    height: 54px,
+  ));
+  @include resD((
+    width: 90px,
+    height: 50px,
+  ));
+  display: block;
+  background-image: url('../../assets/tekieLogo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.purchaseForm-completePurchaseText {
+  font-family: Nunito;
+  font-weight: bold;
+  color: #403F3F;
+  text-align: left;
+  width: 100%;
+  @include resD((
+    font-size: 32px,
+  ));
+  @include resM((
+    font-size: 20px,
+  ));
+}
+
+.purchaseForm-loaderContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: hs(10px);
+  position: relative;
+  top: hs(-90px);
+  @include resM((
+    width: 100vw,
+    height: 100vw,
+    ));
+  @include resD((
+    width: 1608px,
+    height: 869px,
+  ));
+}
+
+.purchaseForm-leftContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  @include resD((
+    flex: 0 1 50%,
+    margin-right: 48px,
+  ));
+  @include resM((
+    flex: 1 1 100%,
+    margin: 0px,
+  ));
+
+  & .purchaseForm-subHeader {
+    font-weight: bold;
+    color: #504F4F;
+    @include resD((
+      font-size: 22px
+    ));
+    @include resM((
+      font-size: 16px
+    ));
+  }
+}
+
+.purchaseForm-formContainer {
+  width: 100%;
+  box-sizing: border-box;
+  @include resD((
+    padding: 12px 32px 28px 0px,
+  ));
+  @include resM((
+    padding: 16px 0px,
+  ));
+}
+
+.purchaseForm-middleContainer {
+  @include resM((
+    ));
+  @include resD((
+    width: 15px,
+    height: 869px,
+    display: flex,
+    flex-direction: column,
+    justify-content: center,
+    align-items: center,
+    opacity: 0,
+  ));
+}
+
+.purchaseForm-graduationDrop {
+  @include resM((
+    width: 85px,
+    height: 100px,
+    margin-bottom: 14px,
+    margin-top: -65px
+  ));
+  @include resD((
+    width: 105px,
+    height: 120px,
+    margin-bottom: 25px,
+    margin-top: unset,
+  ));
+}
+
+.purchaseForm-leftTitleText {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: center;
+  color: #00ade6;
+  @include resM((
+    height: 35px,
+    font-size: 25px,
+    margin-bottom: 5px,
+    font-weight: normal,
+  ));
+  @include resD((
+    height: 35px,
+    font-size: 26px,
+    margin-bottom: 15px,
+    font-weight: bold,
+  ));
+}
+
+.purchaseForm-leftHeaderText {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: center;
+  color: #aaacae;
+  @include resM((
+    height: 30px,
+    width: 100%,
+    font-size: 17px,
+    margin-bottom: -2px,
+    ));
+  @include resD((
+    height: 30px,
+    font-size: 22px,
+    margin-bottom: 5px,
+  ));
+}
+
+.purchaseForm-leftSubHeaderText {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: center;
+  color: #aaacae;
+  @include resM((
+    height: 23px,
+    font-size: 14px,
+    ));
+  @include resD((
+    height: 23px,
+    font-size: 17px,
+  ));
+}
+
+.purchaseForm-highlightText {
+  color: #00ade6;
+  text-decoration: underline;
+}
+
+.purchaseForm-rightContainer {
+  flex: 1 1 40%;
+  position: relative;
+  @include resD((
+    padding: 12px 18px,
+    margin-left: 72px
+  ));
+  @include resM((
+    padding: 16px 0px,
+    margin-left: 0px
+  ));
+}
+
+.purchaseForm-billingDetailContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: solid 0.5px #31e1e9;
+  @include resM((
+    width: 98%,
+    height: unset,
+    margin-top: 25px,
+    border-radius: 15px,
+    padding: 15px,
+    box-sizing: border-box
+  ));
+  @include resD((
+    width: 1084px,
+    height: 273px,
+    margin-top: 15px,
+    border-radius: 15px,
+    padding: unset
+  ));
+}
+
+.purchaseForm-billingDetailRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @include resM((
+    height: 25px,
+    padding-left: unset,
+    padding-top: 14px,
+  ));
+  @include resD((
+    height: 30px,
+    padding-left: 30px,
+    padding-top: 30px,
+  ));
+}
+
+.purchaseForm-billingDetailRowLeft {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.76;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+  @include resM((
+    width: 140px,
+    height: 100%,
+    font-size: 17px,
+  ));
+  @include resD((
+    width: 238px,
+    height: 100%,
+    font-size: 22px,
+  ));
+}
+
+.purchaseForm-billingDetailRowRight {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.76;
+  letter-spacing: normal;
+  text-align: center;
+  color: #aaacae;
+  @include resM((
+    height: 100%,
+    font-size: 17px,
+  ));
+  @include resD((
+    height: 100%,
+    font-size: 22px,
+  ));
+}
+
+.purchaseForm-billingDetailTitle {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: center;
+  color: #00ade6;
+  @include resM((
+    height: 27px,
+    font-size: 20px,
+    padding-left: unset,
+    padding-top: unset,
+  ));
+  @include resD((
+    height: 35px,
+    font-size: 26px,
+    padding-left: 30px,
+    padding-top: 30px,
+  ));
+}
+
+.purchaseForm-pricingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: solid 0.5px #31e1e9;
+  @include resM((
+    width: 98%,
+    height: unset,
+    border-radius: 15px,
+    margin-top: 20px,
+    padding: 15px,
+    box-sizing: border-box,
+    margin-bottom: 10px,
+  ));
+  @include resD((
+    width: 1084px,
+    height: 345px,
+    border-radius: 15px,
+    padding: unset,
+    margin-bottom: 0,
+    margin-top: 20px,
+    padding-top: 10px,
+  ));
+}
+
+.purchaseForm-discountRow {
+  display: flex;
+  @include resM((
+    width: 100%,
+    height: unset,
+    padding-top: 15px,
+    padding-left: unset,
+    flex-direction: column,
+    justify-content: center,
+    align-items: center,
+  ));
+  @include resD((
+    flex-direction: row,
+    justify-content: flex-start,
+    align-items: flex-start,
+    height: 77px,
+    padding-left: 30px,
+    padding-top: unset,
+  ));
+}
+
+.purchaseForm-discountDetailRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include resM((
+    width: 100%,
+  ));
+  @include resD((
+    width: 427px,
+    height: 20px,
+    padding-top: 20px,
+  ));
+}
+
+.purchaseForm-discountOrContainer {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  @include resM((
+    height: 30px,
+    width: 40px,
+  ));
+  @include resD((
+    height: 60px,
+    width: 60px,
+    margin-left: 60px,
+    margin-right: 60px,
+    margin-top: 4px,
+  ));
+}
+
+.purchaseForm-discountOrText {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #aaacae;
+  @include resM((
+    font-size: 17px,
+    text-align: center,
+  ));
+  @include resD((
+    font-size: 22px,
+    text-align: left,
+    line-height: 2.55,
+  ));
+}
+
+.purchaseForm-applyDiscountParentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.purchaseForm-applyDiscountContainer {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px rgba(48, 224, 233, 0.5);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @include resM((
+    width: 100%,
+    height: 45px,
+    border-radius: 39px,
+  ));
+  @include resD((
+    width: 389px,
+    height: 55px,
+    border-radius: 39px,
+    margin-bottom: 10px,
+  ));
+}
+
+.purchaseForm-applyDiscountRightontainer {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ade6;
+  text-align: left;
+  pointer-events: auto;
+  cursor: pointer;
+  @include resM((
+    width: 63px,
+    font-size: 16px
+  ));
+  @include resD((
+    width: 63px,
+    font-size: 16px
+  ));
+}
+
+.purchaseForm-pricingDetailRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include resM((
+    width: 100%,
+    padding-left: unset,
+    padding-top: 15px,
+    align-items: center,
+  ));
+  @include resD((
+    width: 427px,
+    padding-left: 30px,
+    padding-top: 30px,
+    align-items: flex-start,
+  ));
+}
+
+.purchaseForm-totalChargeRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include resM((
+    width: 100%,
+    height: 30px,
+    padding-left: unset,
+    padding-top: 14px,
+  ));
+  @include resD((
+    width: 427px,
+    height: 30px,
+    padding-left: 30px,
+    padding-top: 20px,
+  ));
+}
+
+.purchaseForm-pricingDetailRowLeft {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+  @include resM((
+    height: 100%,
+    min-width: 180px,
+    max-width: 280px,
+    font-size: 17px,
+  ));
+  @include resD((
+    height: 100%,
+    min-width: 290px,
+    max-width: 340px,
+    font-size: 22px,
+  ));
+}
+
+.purchaseForm-discountDetailRowLeftContainer{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.purchaseForm-discountDetailRowLeft{
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.84;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ade6;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @include resM((
+    height: 100%,
+    font-size: 17px,
+    padding-top: 4px,
+    padding-right: 5px,
+  ));
+  @include resD((
+    height: 100%,
+    font-size: 20px,
+    padding-top: 4px,
+    padding-right: 0,
+  ));
+}
+
+.purchaseForm-pricingDetailRowRight {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.76;
+  letter-spacing: normal;
+  text-align: center;
+  color: #aaacae;
+  @include resM((
+    height: unset,
+    font-size: 17px,
+  ));
+  @include resD((
+    height: 100%,
+    font-size: 22px,
+  ));
+}
+
+.purchaseForm-pricingActionText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include resM((
+    width: 99%,
+    position: fixed,
+    bottom: 0,
+    background-color: #ffffff,
+    box-shadow: 0 -0.5px 10px 0 rgba(47, 223, 233, 0.39),
+    padding-bottom: 10px,
+    border: 1px solid #00c0ff,
+    border-radius: 15px,
+  ));
+  @include resD((
+    width: 1084px,
+    height: 170px,
+    position: relative,
+    border: unset,
+    border-radius: inset,
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16),
+  ));
+}
+
+.purchaseForm-emptypricingActionText {
+  @include resM((
+    width: 94%,
+    height: 170px,
+  ));
+  @include resD((
+    width: 0,
+    height: 0
+  ));
+}
+
+.purchaseForm-totalPriceContainer {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include resM((
+    width: 100%,
+    height: 57px,
+    border-radius: 37px,
+    margin-bottom: 0,
+  ));
+  @include resD((
+    width: 224px,
+    height: 57px,
+    border-radius: 37px,
+    margin-bottom: 20px,
+    border: solid 1px #5be1e8,
+  ));
+}
+
+.purchaseForm-totalPriceText {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.58;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ade6;
+  @include resM((
+    font-size: 16px,
+  ));
+  @include resD((
+    font-size: 19px,
+  ));
+}
+
+.purchaseForm-discountIcon {
+  @include resM((
+    width: 20px,
+    height: 20px,
+    padding-left: 5px,
+    padding-bottom: unset,
+  ));
+  @include resD((
+    width: 24px,
+    height: 24px,
+    padding-left: 15px,
+    padding-bottom: 10px,
+  ));
+}
+
+.purchaseForm-inputDiscount {
+  font-family: Nunito;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #aaacae;
+  display: flex;
+  flex: 1;
+  border:none;
+  outline: none;
+  object-fit: contain;
+  font-weight: normal;
+  opacity: 1;
+  @include resM((
+    font-size: 16px,
+    margin-left: 15px,
+    width: 250px,
+  ));
+  @include resD((
+    font-size: 16px,
+    margin-left: 15px,
+    width: 250px,
+  ));
+}
+
+.purchaseForm-input::placeholder {
+  opacity: 0.4;
+}
+
+.purchaseForm-errorDiscountContainer {
+  font-family: Nunito;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: red;
+  @include resM((
+    font-size: 16px,
+    margin-left: 15px,
+  ));
+  @include resD((
+    font-size: 16px,
+    margin-left: 15px,
+  ));
+}
+
+.purchaseForm-successDiscountContainer {
+  font-family: Nunito;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: green;
+  @include resM((
+    font-size: 16px,
+    margin-left: 15px,
+  ));
+  @include resD((
+    font-size: 16px,
+    margin-left: 15px,
+  ));
+}
+
+.purchaseForm-referralDetailParentRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include resM((
+    width: 100%,
+    padding-left: 30px,
+  ));
+  @include resD((
+    width: 427px,
+    padding-left: 30px,
+    margin-top: -10px,
+  ));
+}
+
+.purchaseForm-referralDetailRow {
+  @include resM((
+    width: 100%,
+    display: flex,
+    flex-direction: row,
+    justify-content: flex-start,
+    align-items: center
+  ));
+  @include resD((
+    width: 100%,
+    height: 100%,
+    margin-bottom: 18px,
+    display: flex,
+    flex-direction: row,
+    justify-content: space-between,
+  ));
+}
+
+.purchaseForm-referralDetailParentLine {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include resM((
+    min-height: 1px,
+    width: 100%,
+    padding-left: unsetpx,
+    margin-top: 14px,
+  ));
+  @include resD((
+    min-height: 1px,
+    width: 427px,
+    padding-left: 30px,
+    margin-top: 20px,
+  ));
+}
+
+.purchaseForm-line {
+  background-color: #b7f6f8;
+  @include resM((
+    height: 1px,
+    width: 100%,
+  ));
+  @include resD((
+    height: 1px,
+    width: 427px,
+  ));
+}
+
+.purchaseForm-creditIconContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include resM((
+    height: 26px,
+    width: 26px,
+  ));
+  @include resD((
+    height: 26px,
+    width: 26px,
+  ));
+}
+
+.purchaseForm-checkBoxContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include resM((
+    height: 24px,
+    width: 26px,
+  ));
+  @include resD((
+    height: 26px,
+    width: 26px,
+  ));
+}
+
+.purchaseForm-opacity {
+  opacity: 0.4;
+}
+
+.purchaseForm-row {
+  display: flex;
+  width: 100%;
+  @include resM((
+    flex-direction: column,
+    align-items: center,
+  ));
+  @include resD((
+    flex-direction: row,
+    justify-content: space-between,
+  ));
+}
+
+.purchaseForm-inputColumn {
+  width: 100%;
+}
+
+.purchaseForm-input {
+  border: none;
+  text-decoration: none;
+  color: red;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-bottom: solid 0.3px rgba(#5ee0f1, 1);
+  @extend .lato-light;
+  color: rgba(black, 0.8);
+  outline: none;
+  line-height: 1.76;
+  &:focus {
+    border-bottom: solid 0.3px rgba(52, 228, 234, 1);
+  }
+  @include resM((
+    width: 100%,
+    min-height: 36px,
+    padding: 0px 7.5px,
+    font-size: 15px,
+    margin-bottom: 18px,
+    letter-spacing: 1.79px,
+  ));
+  @include resD((
+    width: 476px,
+    min-height: 42px,
+    margin-bottom: 22px,
+    padding: 12px 10px,
+    font-size: 20px,
+    letter-spacing: 1.53px,
+  ));
+  
+  &::placeholder {
+    @extend .lato-light;
+    color: rgba(#8f8f8f, 1);
+    line-height: 1.76;
+    @include resM((
+      font-size: 15px,
+      letter-spacing: 1.79px,
+    ));
+    @include resD((
+      font-size: 20px,
+      letter-spacing: 1.53px,
+    )); 
+  }
+}
+
+.purchaseForm-error {
+  @extend .lato-light;
+  position: relative;
+  width: 100%;
+  color: red;
+  @include resM((
+    height: 10px,
+    top: -18px,
+    left: 4px,
+    font-size: 15px,
+  ));
+  @include resD((
+    height: 7px,
+    top: -14px,
+    left: 6px,
+    font-size: 18px,
+  ));
+}
+
+
+.purchaseForm-label {
+  width: 100%;
+  @extend .lato-light;
+  color: rgba(#8f8f8f, 1);
+  line-height: 1.76; 
+  @include resM((
+    margin-bottom: 5px,
+    font-size: 15px,
+    letter-spacing: 1.79px,
+    margin-left: 10px,
+  ));
+  @include resD((
+    font-size: 20px,
+    letter-spacing: 1.53px,
+    margin-left: 20px,
+    margin-bottom: 17px,
+  ));
+}
+
+.purchaseForm-gradesContainer {
+  display: flex;
+  border: solid 0.5px #31e1e9;
+  @include resM((
+    width: 100%,
+    align-items: center,
+    height: 50px,
+    border-radius: 7px,
+  ));
+  @include resD((
+    width: 468px,
+    height: 70.2px,
+    border-radius: 4px,
+    align-self: flex-start,
+  ));
+}
+
+.purchaseForm-grade {
+  @extend .lato-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: rgba(#8f8f8f, 0.8);
+  height: 100%;
+  cursor: pointer;
+  @include resM((
+    font-size: 18px,
+    letter-spacing: -0.18px,
+  ));
+  @include resD((
+    font-size: 24px,
+    letter-spacing: -0.24px,
+  ));
+
+}
+
+.purchaseForm-gradeSep {
+  background-color: #229296;
+  opacity: 0.4;
+  @include resM((
+    height: 25.5px,
+    width: 0.6px,
+  ));
+  @include resD((
+    height: 35.8px,
+    width: 0.5px
+  ));
+}
+
+.purchaseForm-gradeActive {
+  color: #24a5be;
+  font-weight: bold;
+  border-style: inset;
+  @include resM((
+    border-radius: 4px,
+    border: solid 1px #24a5be,
+  ));
+  @include resD((
+    border-radius: 4px,
+    border: solid 1px #24a5be,
+  ));
+}
+
+.purchaseForm-signUpBodyCheckout {
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  @include resM((
+    padding: 15px,
+    border: 1px solid#31e1e9,
+    border-radius: 15px,
+    margin-top: 14px
+  ));
+  @include resD((
+    width: 1084px,
+    height: 345px,
+    display: flex,
+    border-radius: 15px,
+    border: solid 0.5px #31e1e9,
+    margin-bottom: 15px,
+    margin-top: unset,
+    padding: .04831vw 2.41546vw,
+    padding-bottom: 20px,
+    padding-top: 10px
+  ));
+}
+
+.purchaseForm-mobilePadding {
+  @include resM((
+    height: 0px
+  ));
+  @include resD((
+    height: 0
+  ));
+}
+
+.purchaseForm-totalChargeRowPadding {
+  @include resM((
+    height: 15px
+  ));
+  @include resD((
+    height: 0
+  ));
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.flex-alignItems-center {
+  align-items: center;
+}
+
+.purchaseForm-productContainer {
+  background: #FFFFFF;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 18px;
+  position: -webkit-sticky !important; // for safari
+  position: sticky !important;
+  align-self: flex-start;
+  height: auto;
+  z-index: 100;
+  top: 100px;
+  display: block;
+  @include resD((
+    max-width: 550px,
+  ));
+  @include resM((
+    max-width: 100%,
+  ));
+
+  & .purchaseForm-productHeading {
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    color: #504F4F;
+    @include resD((
+      font-size: 26px,
+      padding: 24px 28px,
+    ));
+    @include resM((
+      font-size: 16px,
+      padding: 12px 14px,
+    ));
+  }
+
+  & .purchaseForm-productRow {
+    @include resD((
+      padding: 14px 28px,
+    ));
+    @include resM((
+      padding: 8px 14px,
+    ));
+  }
+
+  & .purchaseForm-productSubHeading {
+    font-family: Lato;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #35E4E9;
+    @include resD((
+      font-size: 22px
+    ));
+    @include resM((
+      font-size: 14px
+    ));
+  }
+}
+
+.purchaseForm-productDetailsContainer {
+  @extend .flex-container;
+  @include resD((
+    padding-top: 8px
+  ));
+  @include resM((
+    padding-top: 4px
+  ));
+  .purchaseForm-productDetails {
+    display: block;
+    font-family: Nunito;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+  text-transform: capitalize;
+
+    & > span {
+      letter-spacing: 0.03em;
+      color: #504F4F;
+      @include resD((
+        font-size: 16px,
+      ));
+      @include resM((
+        font-size: 14px,
+      ));
+    }
+    & > div {
+      font-weight: bold;
+      color: #403F3F;
+      @include resD((
+        font-size: 20px,
+        margin: 4px 0px 6px
+      ));
+      @include resM((
+        font-size: 14px,
+        margin: 2px 0px 4px
+      ));
+    }
+    & > p {
+      padding: 0;
+      margin: 0;
+      font-weight: bold;
+      color: #A8A7A7;
+      @include resD((
+        font-size: 14px,
+      ));
+      @include resM((
+        font-size: 12px,
+      ));
+    }
+  }  
+  .purchaseForm-productImage {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    @include resD((
+      width: 80px,
+      height: 80px
+    ));
+    @include resM((
+      width: 32px,
+      height: 32px
+    ));
+  } 
+}    
+.purchaseForm-divider {
+  display: block;
+  box-sizing: border-box;
+  border-bottom: 1px  solid #DCDCDC;
+  @include resD((
+    margin: 0px 28px 14px
+  )); 
+
+  @include resM((
+    margin: 0px 14px 12px
+  ));
+}
+
+.purchaseForm-productPlan {
+  @extend .flex-container;
+  box-sizing: border-box;
+  border: 1.5px solid #DCDCDC;
+  border-radius: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin: 4px 0px;
+  transition: all .3s;
+  
+  &:hover {
+    transition: all .3s;
+    background: #e6f7fd;
+  }
+  &-active, &-active:hover {
+    background: #00ADE6;
+    .purchaseForm-productPlan-checkmark {
+      background-size: contain;
+      background-position: center;
+      background-image: url('../../assets/checkmark-outline.png');
+      background-repeat: no-repeat;
+      border-color: transparent !important;
+      transform: scale(1.5);
+      transition: 0.3s all ease-in-out;
+    }
+    .purchaseForm-productPlan-description,.purchaseForm-productPlan-pricing {
+      color: #FFFFFF !important;
+    }
+  }
+  & > span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .purchaseForm-productPlan-checkmark {
+    border: 2.5px solid #A8A7A7;
+    border-radius: 100%;
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+  }
+  .purchaseForm-productPlan-description {
+    font-family: Nunito;
+    font-weight: bold;
+    color: #504F4F;
+    @include resD((      
+      font-size: 20px,
+    ));
+    @include resM((
+      font-size: 18px,
+    ));
+  }
+  .purchaseForm-productPlan-pricing {
+    font-family: Nunito;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+    color: #504F4F;
+    @include resD((      
+      font-size: 18px,
+    ));
+    @include resM((
+      font-size: 16px,
+    ));
+    .purchaseForm-productPlan:hover {
+      color: #FFFFFF;
+    }
+  }
+}
+
+.purchaseForm-couponContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+
+  .purchaseForm-inputDiscount {
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 100%;
+    flex: 1 1 100%;
+    padding: 12px 16px;
+    margin: 0 6px 0px 0px;
+  }
+}
+
+.purchaseForm-productPriceContainer {
+  @extend .flex-container;
+  font-family: Nunito;
+  font-weight: normal;
+  color: #504F4F;
+  @include resD((
+    font-size: 20px,
+    padding: 16px 0px 0px,
+  ));
+  @include resM((
+    font-size: 18px,
+    padding: 8px 0px,
+  ));
+}
+
+.purchaseForm-footer {
+  @extend .flex-container;
+  background: #EFEFF4;
+  width: 100%;
+  font-family: Nunito;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  color: #504F4F;
+  border-radius: 0px 0px 4px 4px;
+  @include resD((
+    font-size: 28px,
+    padding: 16px 28px,
+    margin-top: 12px
+  ));
+  @include resM((
+    font-size: 22px,
+    padding: 12px 14px,
+    margin-top: 8px
+  ));
+}

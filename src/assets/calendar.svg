@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__icons8-calendar" width="46" height="47" viewBox="0 0 46 47">
+    <path id="prefix__Path_21640" d="M5 42.923V14h46v28.923a4.846 4.846 0 0 1-4.842 4.821H9.842A4.846 4.846 0 0 1 5 42.923z" data-name="Path 21640" transform="translate(-5 -.744)" style="fill:#b9f6ff"/>
+    <path id="prefix__Path_21641" d="M51 10.821v7.231H5v-7.231A4.846 4.846 0 0 1 9.842 6h36.316A4.846 4.846 0 0 1 51 10.821z" data-name="Path 21641" transform="translate(-5 -2.385)" style="fill:#ff5744"/>
+    <path id="prefix__Path_21642" d="M37.421 7a3.615 3.615 0 1 0 3.632 3.615A3.624 3.624 0 0 0 37.421 7zM15.632 7a3.615 3.615 0 1 0 3.632 3.615A3.624 3.624 0 0 0 15.632 7z" data-name="Path 21642" transform="translate(-3.526 -2.179)" style="fill:#b71c1c"/>
+    <path id="prefix__Path_21643" d="M37.211 3a2.423 2.423 0 0 0-2.421 2.41v6.026a2.421 2.421 0 0 0 4.842 0V5.41A2.423 2.423 0 0 0 37.211 3zm-21.79 0A2.423 2.423 0 0 0 13 5.41v6.026a2.421 2.421 0 0 0 4.842 0V5.41A2.423 2.423 0 0 0 15.421 3z" data-name="Path 21643" transform="translate(-3.316 -3)" style="fill:#aaabaf"/>
+    <g id="prefix__Group_13739" data-name="Group 13739" transform="translate(9.684 20.487)">
+        <path id="prefix__Path_21644" d="M13 20h4.842v4.821H13zm7.263 0h4.842v4.821h-4.842zm7.263 0h4.842v4.821h-4.842zm7.263 0h4.842v4.821h-4.842zM13 27.231h4.842v4.821H13zm7.263 0h4.842v4.821h-4.842zm7.263 0h4.842v4.821h-4.842zm7.263 0h4.842v4.821h-4.842zM13 34.462h4.842v4.821H13zm7.263 0h4.842v4.821h-4.842zm7.263 0h4.842v4.821h-4.842zm7.263 0h4.842v4.821h-4.842z" data-name="Path 21644" transform="translate(-13 -20)" style="fill:#00ade6"/>
+    </g>
+</svg>

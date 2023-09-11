@@ -1,0 +1,99 @@
+@import 'src/scss/size.scss';
+
+.wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: pink;
+    width: hs(352px);
+    background-image: linear-gradient(to bottom, #c9fcfd, #34e4ea);
+    overflow: hidden;
+}
+
+.tab{
+    padding : hs(60px) hs(10px);
+    display: flex;
+}
+
+.tabButton{
+    width: 50%;
+    font-family: Nunito-Bold;
+    color: #0b535f;
+    font-size: hs(24px);
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.activeTab{
+    opacity: 1;
+    border-bottom: hs(2px) solid black;
+}
+
+.sidebarBG{
+    position: absolute;
+    bottom: hs(-50px);
+    left : hs(-60px);
+    width: hs(352px);
+    height: hs(237.1px);
+    object-fit: contain;
+}
+
+.navText{
+    font-family: Nunito-Bold;
+    font-size: hs(20px);
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #504f4f;
+    text-decoration-line: none;
+    padding-left: hs(20px);
+}
+
+.navItem{
+    vertical-align: middle;
+    border-bottom: hs(1px) solid white;
+    padding : hs(10px) hs(0px) hs(10px) hs(0px);
+    margin-left: hs(1px);
+    cursor:pointer
+}
+
+.activeItem{
+    background-color: #fff;
+}
+
+.navBarIcon{
+  display: inline-flex;
+  margin-left: hs(43px);
+  background-color: #1ac9e8;
+  width: hs(29px);
+  height: hs(29px);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.historyWrapper{
+  position: relative;
+  width: hs(22.707px);
+  height: hs(19.868px);
+}
+
+.historyWrapper svg{
+  position: absolute;
+}
+
+.cloudSideBar{
+  width: hs(582.551px);
+  height: hs(244.095px);
+  position: absolute;
+  bottom: 0px;
+  left: hs(-175px);
+}

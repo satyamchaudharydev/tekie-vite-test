@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__logout" width="100%" height="100%" style="position:absolute" viewBox="0 0 22.163 22.163">
+    <defs>
+    </defs>
+    <g id="prefix__Group_14283" data-name="Group 14283">
+        <g id="prefix__Group_14282" data-name="Group 14282">
+            <path id="prefix__Path_21815" d="M14.314 16.622h-.924a.462.462 0 0 0-.462.462v3.232H1.847V1.847h11.081v3.232a.462.462 0 0 0 .462.462h.923a.462.462 0 0 0 .462-.462V1.847A1.847 1.847 0 0 0 12.928 0H1.847A1.847 1.847 0 0 0 0 1.847v18.469a1.847 1.847 0 0 0 1.847 1.847h11.081a1.847 1.847 0 0 0 1.847-1.847v-3.232a.462.462 0 0 0-.461-.462z" class="logoutIconColor" data-name="Path 21815" fill='#1ac9e8' />
+            <path id="prefix__Path_21816" d="M144.473 133.194l-5.541-5.079a.462.462 0 0 0-.774.34v.924a.461.461 0 0 0 .153.343l3.21 2.889h-13.059a.461.461 0 0 0-.462.462V134a.461.461 0 0 0 .462.462h13.059l-3.21 2.889a.461.461 0 0 0-.153.343v.923a.461.461 0 0 0 .276.422.455.455 0 0 0 .186.039.463.463 0 0 0 .312-.121l5.541-5.079a.462.462 0 0 0 0-.681z" class="logoutIconColor" data-name="Path 21816" transform="translate(-122.459 -122.453)" fill='#1ac9e8' />
+        </g>
+    </g>
+</svg>

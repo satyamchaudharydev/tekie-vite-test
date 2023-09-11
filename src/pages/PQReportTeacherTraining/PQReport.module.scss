@@ -1,0 +1,531 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  background: url('../../assets/triangleBG.svg');
+  background-size: cover;
+  z-index: 20;
+  @include resD((
+    height: $height-without-navbar,
+  ));
+  @include resM((
+    height: calc(100vh - 60px),
+    padding-bottom: 50px,
+  ));
+  & > div {
+    flex-shrink: 0;
+  }
+  &::-webkit-scrollbar  {
+    max-width: hs(8px);
+    display: flex;
+  }
+}
+
+.congratsContainer {
+  margin-top: hs(67px);
+  background-image: url("./../../assets/congrats.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include flex-center;
+  align-items: flex-end;
+  color: #00ADE6;
+  font-weight: 600;
+  @include resD((
+    height: hs(138px),
+    width: hs(562px),
+    font-size: unset
+  ));
+  @include resSm((
+    height: hs(400px),
+    width: 80%,
+    font-size: 12px,
+  ));
+}
+
+.triangleBGContainer {
+  @include absolute-container;
+  position: fixed;
+  height: 105% !important;
+}
+
+.tubesContainer {
+  margin-top: hs(60.6px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include resD((
+    width: hs(375.8px),
+    height: hs(383.7px),
+  ));
+  @include resSm((
+    width: hs(900px),
+    height: hs(900px),
+  ));
+}
+
+.labelsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: hs(23.6px);
+  @include resD((
+    height: hs(43px),
+    width: hs(384px),
+    margin-bottom: hs(29px),
+  ));
+  @include resSm((
+    height: hs(90px),
+    width: hs(950px),
+    margin-bottom: hs(120px),
+  ));
+}
+
+.label {
+  @include flex-center;
+  
+  @include resD((
+    width: hs(96px),
+    height: hs(43px),
+    font-size: hs(22px),
+    border-radius: hs(3px),
+  ));
+  @include resSm((
+    width: hs(265px),
+    height: hs(130px),
+    font-size: hs(60px),
+    border-radius: 3px,
+  ));
+  color: white;
+  
+  font-weight: bold;
+}
+
+.labelFirst {
+  @extend .label;
+  background-color: #fc9a38;
+}
+
+.labelSecond {
+  @extend .label;
+  background-color: #976bd6;
+}
+
+.labelThird {
+  @extend .label;
+  background-color: #25bfa1;
+}
+
+.infoLabel {
+  background-color: white;
+  border-radius: hs(19px);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include resD((
+    width: hs(383px),
+    height: hs(42px),
+    font-size: hs(22px),
+    margin-top: hs(18px),
+    padding: 0 40px,
+    font-weight: bold,
+    color: #504f4f,
+  ));
+  @include resSm((
+    width: hs(990px),
+    height: hs(150px),
+    font-size: hs(68px),
+    margin-top: hs(30px),
+    padding: 0 15px,
+    font-weight: 600,
+    color: #282828,
+  ));
+}
+
+.buttonContainer {
+  display: flex;
+  right: hs(28px);
+  width: 100%;
+  @include resD((
+    position: fixed,
+    align-items: flex-end,
+    justify-content: flex-end,
+    bottom: hs(6px),
+    ));
+  @include resSm((
+    position: unset,
+    align-items: unset,
+    justify-content: center,
+    bottom: unset,
+  ));
+}
+
+.arrowButtonContainer{
+  width: fit-content;
+  @include resD((
+    position:fixed,
+  ));
+  @include resM((
+    position:relative,
+    margin-left:  0,
+    margin-right:  0,
+  ))
+}
+
+.buttonContainerChatBot {
+  display: flex;
+  position: fixed;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: hs(50px);
+  width: 100%;
+  @include resD((
+    background-color: unset,
+    bottom: hs(15px),
+    right: hs(60px),
+    box-shadow: none,
+    padding: unset
+  ));
+  @include resM((
+    background-color: #FFF,
+    z-index: 99,
+    height: fit-content,
+    bottom: 0,
+    right: 0,
+    padding: 4px 10px,
+    box-shadow: inset 0px 2px 0px rgba(137, 137, 137, 0.23),
+  ));
+}
+
+.questionContainer {
+  @include resD((
+    width: 1292px,
+    margin-bottom: 20px,
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15),
+    padding: unset,
+  ));
+  user-select: none;
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-sizing: border-box;
+  @include resSm((
+    mix-blend-mode: normal,
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1),
+    max-width: 550px,
+    width: 90%,
+    margin:auto,
+    margin-bottom: 30px,
+    padding: 10px 20px,
+  ));
+}
+
+.questionContainerClose {
+  @extend .questionContainer;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    background: #f5f5f5;
+  }
+}
+
+.titleContainer {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  @include resD((
+    padding: 25px 60px,
+  ));
+}
+
+.questionbodyContainer {
+  @include resD((
+    padding: 0 60px 60px 60px,
+  ));
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+}
+.titleContainerOpen {
+  @extend .titleContainer;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  &:hover {
+    background: #f5f5f5;
+  }
+  @include resD((
+    margin-bottom: unset,
+  ));
+  @include resSm((
+    margin-bottom: 20px,
+  ));
+}
+.questionNumberText {
+  @include resD((
+    font-size: 26px * 0.9,
+    display: flex,
+    flex-direction: row,
+    width: max-content,
+  ));
+  font-weight: bold;
+  color: #00ADE6;
+  @include resSm((
+    font-size: 16px,
+    display: unset,
+    flex-direction: unset,
+    width: unset,
+  ));
+}
+
+.questionStatement {
+  @extend .questionNumberText;
+  color: #504F4F;
+  font-weight: 600;
+  @include resD((
+    margin-bottom: unset,
+  ));
+  @include resSm((
+    margin-bottom: 20px,
+  ));
+
+  h3, h2, h1, p {
+    margin: .5em 0em;
+  }
+}
+
+.questionStatementFull {
+  @extend .questionStatement;
+  width: 100% !important;
+  flex-wrap: wrap;
+  display: block;
+  @include resD((
+    margin-top: 10px
+  ));
+}
+
+.answerTag {
+  @include resD((
+    width: 138px * 0.9,
+    height: 53px * 0.9,
+    font-size: 24px * 0.9,
+    border-radius: 10px * 0.9,
+    padding: unset,
+    margin-right: unset,
+  ));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #FF9500;
+  font-weight: bold;
+  @include resSm((
+    width: fit-content,
+    padding: 3px 10px,
+    padding-top: 5px,
+    margin-right: 15px,
+    border-radius: 5.28299px,
+    font-size: 14px,
+    max-width: 80px,
+    align-self: center,
+  ))
+}
+
+.firstTryTag {
+  @extend .answerTag;
+}
+.secondTryTag {
+  @extend .answerTag;
+  background: #976BD6;
+}
+.threeOrMoreTryTag {
+  @extend .answerTag;
+  background: #25BFA1;
+}
+.downArrow {
+  @include resD((
+    margin-left: 50px,
+    margin-right: 0px,
+    width: 19px,
+    height: 11px,
+  ));
+  @include resSm((
+    margin-left: 10px,
+    margin-right: 0px,
+    width: 15px,
+    height: 13px,
+  ));
+}
+
+.detailedReportHeading {
+  font-weight: bold;
+  @include resD((
+    font-size: 24px,
+    color: #504F4F,
+    margin-top: 40px,
+    margin-bottom: 25px,
+  ));
+  @include resSm((
+    font-size: 16px,
+    color: #504F4F,
+    margin-top: unset,
+    margin-bottom: 0px,
+  ))
+}
+
+.explainationContainer {
+  width: 100%;
+  box-sizing: border-box;
+  @include resD((
+    padding: 40px,
+    border-radius: 32px,
+    margin-top: 30px,
+    border: 1px solid rgba(0, 0, 0, 0.18),
+    box-shadow: inset 0px -3px 0px rgba(142, 142, 142, 0.51),
+  ));
+  @include resSm(( 
+    padding: 15px,
+    margin-top: 30px,
+    box-shadow: inset 0px -0.836062px 0px rgba(142, 142, 142, 0.51),
+    border-radius: 8.918px,
+    border: 0.278687px solid rgba(0, 0, 0, 0.18),
+  ));
+  background: white;
+  
+}
+
+.explainationIcon {
+  @include resD((
+    width: 23px,
+    height: 23px,
+    margin-right: unset,
+  ));
+
+  @include resSm((
+    width: 15px,
+    height: 15px,
+    margin-right: 10px,
+  ))
+}
+
+.explainationHeading {
+  color: #00ADE6;
+  font-weight: 600;
+  @include resD((
+    font-size: 22px,
+    margin-left: 10px,
+  ));
+  @include resSm((
+    font-size: 14px,
+  ))
+}
+
+.explainationText {
+  @include resD((
+    font-size: 20px,
+    margin-top: 10px,
+    margin-left: 33px
+  ));
+  @include resSm((
+    font-size: 14px,
+    margin-left: 25px,
+  ))
+}
+
+.questionContainerHead{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include resD((
+    margin-bottom: unset,
+  ));
+  @include resSm((
+    margin-bottom: 10px,
+  ))
+}
+
+.questionData{
+  align-self: center;
+  @include resD((
+    width: 75%,
+  ));
+  @include resSm((
+    width: 100%,
+  ))
+}
+
+.loTitle {
+  font-family: Nunito;
+  color: #333;
+  font-weight: bold;
+  span {
+    color: #00C187;
+  }
+  @include resD((
+    font-size: 25px,
+    width: 1292px,
+    margin-bottom: 24px,
+    margin-top: 46px,
+  ));
+  @include resM((
+    max-width: 550px,
+    width: 90%,
+  ));
+}
+
+.schoolLogo {
+  @include resD((
+    width: 140px,
+    margin-top: 24px,
+  ))
+}
+
+.schoolName {
+  color: #000;
+  font-weight: bold;
+  text-transform: capitalize;
+  @include resD((
+    font-size: 24px,
+    margin-top: 12px,
+    margin-bottom: 24px,
+  ));
+  @include resM((
+    font-size: 18px,
+    margin-top: 12px,
+    margin-bottom: 24px,
+  ));
+}
+
+.schoolRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include resD((
+    width: 1292px,
+  ));
+}
+
+.infoText {
+  @include resD((
+    font-size: 24px,
+    margin-top: 12px,
+    margin-bottom: 24px,
+  ));
+  span {
+    font-weight: 600;
+  }
+  span.sessionProficiencyText {
+    color: #00C187;
+    font-weight: bold;
+  }
+}
+

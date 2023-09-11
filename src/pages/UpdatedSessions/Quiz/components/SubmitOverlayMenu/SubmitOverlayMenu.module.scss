@@ -1,0 +1,715 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/constants.scss';
+
+.container{
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+}
+
+.modalContainer{
+  position: relative;
+  display: flex;
+  background: #FFFFFF;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 9999999;
+  box-sizing: border-box;
+  max-width: 70%;
+  @include resD((
+  border-radius: 20px,
+
+    max-height: 90%
+  ));
+  @include resM((
+    max-height: auto,
+  ));
+}
+
+.containerPadding {
+  @include resD((
+    padding-left: hs(21.5px),
+    padding-right: hs(21.5px),
+  ));
+  @include resM((
+    padding-left: 20px,
+    padding-right: 20px,
+  ));
+}
+
+.modalContainerWidth {
+  @include resD((
+    min-width: hs(1000px),
+    width: auto
+  ));
+  @include resM((
+    min-width: 90%,
+    width: 90%,
+  ));
+}
+
+.modalContainerBgImage {
+  background-image: url('../../../../../assets/modalStarsBg.png');
+}
+
+.overlayCloseIcon {
+  position: relative;
+  @include resD((
+    width: 20px,
+    height: 20px,
+    top: -1px,
+  ));
+  @include resM((
+    width: 12px,
+    height: 12px,
+    top: -8px,
+  ));
+  path {
+    fill: #FFF;
+    opacity: 1;
+  }
+}
+
+.overlayClose {
+  position: absolute;
+  background: #00ADE6;
+  filter: drop-shadow(-2px 2px 4px #026282);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  @include resD((
+    width: 50px,
+    height: 50px,
+    top: -35px / 2,
+    right: -35px / 2,
+  ));
+  @include resM((
+    width: 40px,
+    height: 40px,
+    top: -25px / 2,
+    right: -15px / 2,
+  ));
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    box-shadow: 0px 6px 6px rgba(51, 51, 51, 0.2), 0px 5px 20px rgba(51, 51, 51, 0.08);
+  }
+}
+.modalTitle {
+  width: fit-content;
+  background: rgba(0, 173, 230, 0.1);
+  border-radius: 0px 0px 20px 20px;
+  font-family: Nunito;
+  align-self: center;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #00ADE6;
+  @include resD((
+    font-size: 18px,
+    padding: 8px 68px,
+  ));
+  @include resM((
+    font-size: 18px,
+    padding: 6px 58px,
+  ));
+}
+
+.modalIconContainer {
+  background: linear-gradient(44.71deg, #7CFFED -8.43%, #01AA93 114.08%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 100%; 
+  @include resD((
+    margin-top: 28px,
+  ));
+  @include resM((
+    margin-top: 20px,
+  ));
+
+  & > .saveIcon {
+    width: 32px;
+    height: 32px;
+    background-image: url('../../../../../assets/save-outline.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.modalContainer:focus{
+  outline: none;
+}
+
+.submit {
+  width: hs(400px);
+  height: hs(29.5px);
+  object-fit: contain;
+  font-family: Nunito;
+  font-size: hs(26px);
+  float: left;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #1ac9e8;
+  margin-top: hs(82px);
+}
+
+.confirmText{
+  font-family: Nunito;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #504F4F;
+  text-align: center;
+  @include resD((
+    font-size: 30px,
+    margin-top: hs(25px),
+  ));
+  @include resM((
+    font-size: 20px,
+    margin-top: 20px,
+  ));
+  
+  & > span {
+    display: block;
+    text-align: center;
+    font-weight: normal;
+    color: #504F4F;
+    opacity: 0.7;
+    margin-top: 12px;
+    @include resD((
+      font-size: 22px,
+    ));
+    @include resM((
+      font-size: 18px,
+    ));
+  }
+}
+
+.buttonArea{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @include resD((
+    margin-top: hs(45px),
+  ));
+  @include resM((
+    margin-top: 22px,
+  ));
+}
+
+.cancelBtn{
+  cursor: pointer;
+  object-fit: contain;
+  border: solid 2px #1ac9e8;
+  font-family: Nunito;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #1ac9e8;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  align-items: center;
+  @include resD((
+    font-size: 18px,
+    padding: 10px 18px,
+    border-radius: hs(30px),
+  ));
+  @include resM((
+    font-size: 16px,
+    padding: 8px 16px,
+    border-radius: 40px,
+  ));
+}
+
+.submitBtn{
+  cursor: pointer;
+  background: conic-gradient(from -3.29deg at 100% -13%, #35E4E9 0deg, #00ADE6 360deg);
+  border-radius: 40px;
+  font-family: Nunito;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-transform: uppercase;
+  @include resD((
+    font-size: 18px,
+    padding: 12px 18px,
+    margin-left: 12px,
+  ));
+  @include resM((
+    font-size: 16px,
+    padding: 10px 16px,
+    border-radius: 40px,
+    margin-left: 20px,
+  ));
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.disabled {
+  background-color: #d1d1d1 !important;
+  background-image: none !important;
+  &:hover {
+    opacity: 1 !important;
+  }
+}
+
+
+.confirmSubmissionLabel {
+  background: rgba(0, 173, 230, 0.1);
+  border: 2px solid #DCDCDC;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: hs(18.5px) 0px;
+  font-family: Nunito;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #00ADE6;
+  @include resD((
+    font-size: 26px,
+    border-radius: 0,
+    margin: hs(28px) 0px hs(20px),
+  ));
+  @include resM((
+    font-size: 18px,
+    border-radius: 24px 24px 0px 0px,
+    margin: 0px 0px 16px,
+  ));
+}
+
+.summaryContainer {
+  box-sizing: border-box;
+  border-radius: 15px;
+  width: 95%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: hs(700px);
+  
+  @include resD((
+    padding: 22px 50px 22px 30px,
+    margin: 0px 18px,
+  ));
+  @include resM((
+    padding: 12px,
+    margin: 0px 4px,
+  ));
+
+  &::-webkit-scrollbar {
+    // background: #D7FAFB;
+    border-radius: 10px;
+  }
+}
+
+.summaryTitle {
+  font-family: Nunito;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #00ADE6;
+  display: block;
+  margin-bottom: 8px;
+  @include resD((
+    font-size: 26px,
+  ));
+  @include resM((
+    font-size: 18px,
+  ));
+}
+
+.questionContainer {
+  width: 100%;
+  font-family: Nunito;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #403F3F;
+  padding: 12px 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  &:last-child {
+    border-bottom: none;
+  }
+  & > span:nth-child(1) {
+    flex: 1 1 70%;
+  }
+  & > span:nth-child(2) {
+    flex: 1 1 20%;
+    position: relative;
+  }
+
+  @include resD((
+    font-size: 22px,
+  ));
+  @include resM((
+    font-size: 18px,
+  ));
+}
+
+.questionText {
+
+  box-sizing: border-box;
+  align-items: center;
+  text-overflow: ellipsis;
+  display: flex;
+  white-space: nowrap;
+  width: 100%;
+ 
+  color: #858585;
+  & pre:nth-child(1){
+     background: #FAFAFA;
+    padding: 8px;
+    height: fit-content;
+    
+    margin-right: 7px;
+    border-radius: 50%;
+    font-family: Nunito;
+    color: #858585;
+  }
+  & p , & img, & li{
+    @include resD((
+      max-width: 700px,
+      ));
+      box-sizing: border-box;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      position: relative;
+      counter-set: li;
+    }
+  ul,ol{
+        counter-reset: my-awesome-counter;
+  
+  }
+  li{
+      padding-inline-start: 11px;
+      counter-increment: my-awesome-counter;
+
+  }
+  li::before{
+    content: counter(my-awesome-counter);
+    font-weight: bold;
+   
+    // content: "●";
+    position: absolute;
+    left: -2px; 
+
+  }
+  & > code, & > img, & > ol, & pre:not(:nth-child(1)){
+    display: none;
+  }
+}
+
+
+.tagContainer {
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  @include resD((
+    justify-content: center,
+  ));
+  @include resM((
+    justify-content: right,
+  ));
+  svg{
+    @include resD((
+      width: 32px,
+      height: 32px,
+    )) 
+  }
+}
+
+.answeredTag {
+  border-radius: 18px;
+  font-weight: bold;
+  letter-spacing: .03em;
+  color: #FFFFFF;
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 6px 12px;
+  @include resD((
+    font-size: 16px,
+  ));
+  @include resM((
+    font-size: 14px,
+  ));
+}
+
+.unAnsweredTag {
+  margin-left: auto;
+
+  background-color: transparent !important;
+  border: 2px solid #00ADE6;
+  color: #00ADE6;
+}
+
+.headerText {
+  font-family: Nunito;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #A8A7A7;
+  @include resD((
+    font-size: 17px,
+  ));
+  @include resM((
+    font-size: 14px,
+  ));
+
+  &:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.editIcon {
+  width: 20px;
+  height: 20px;
+  background-image: url('../../../../../assets/confirmEditIcon.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  box-sizing: border-box;
+  position: absolute;
+  right: -10px;
+  cursor: pointer;
+}
+
+.qrLoaderCard {
+  width: 100%;
+  height: 100%;
+  .qrLoader1 {
+    @include resD((
+      y: 10px,
+      x: 50px,
+      height: 60px,
+      width: 90%,
+      rx: 6px,
+    ));
+    @include resSm((
+      y: 40px,
+      x: 154px,
+      height: 70px,
+      width: 450px,
+      rx: 10px,
+    ))
+  }
+  .qrLoader1Mobile {
+    @include resSm((
+      y: 12px,
+      x: 12px,
+      height: 70px,
+      width: 300px,
+      rx: 10px,
+    ))
+  }
+  .qrLoader2 {
+    @include resD((
+      y: 80px,
+      x: 50px,
+      height: 60px,
+      width: 90%,
+      rx: 6px,
+    ));
+    @include resSm((
+      y: 40px,
+      x: 154px,
+      height: 70px,
+      width: 450px,
+      rx: 10px,
+    ))
+  }
+  .qrLoader3 {
+    @include resD((
+      y: 150px,
+      x: 50px,
+      height: 60px,
+      width: 90%,
+      rx: 6px,
+    ));
+    @include resSm((
+      y: 40px,
+      x: 154px,
+      height: 70px,
+      width: 450px,
+      rx: 10px,
+    ))
+  }
+}
+.overlayCloseIconForEmbed{
+  display: flex;
+  top: unset;
+}
+// 
+.footer{
+  margin-top: auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  background: #F9F9F9;
+  @include resD((
+    border-radius: 0px 0px 20px 20px,
+    box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.1),
+    padding: 18px 48px 18px 10px,
+  ))
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #FAFAFA;
+  @include resD((
+    border-radius: 20px 20px 0px 0px,
+    gap: 16px,
+    padding: 28px 220px,
+  ))
+}
+.headerTitle{
+  
+  font-weight: 700;
+  @include resD((
+  font-size: 28px,
+  ))
+}
+.componentName{
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: #504F4F;
+  @include resD((
+    font-size: 26px,
+    gap: 15px,
+  ))
+}
+.componentIcon{
+  @include resD((
+      min-width: 28px,
+      min-height: 28px,
+      max-width: 28px,
+      max-height: 28px,
+      display: flex,
+      justify-content: center,
+      align-items: center,
+    ));
+   & svg {
+      display: block;
+      fill: #504F4F !important;
+
+      @include resD((
+        height: 28px,
+      ));
+    }
+  
+}
+.componentHeader{
+  position: sticky;
+  top: -10px;
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  background: #FAFAFA;
+
+  @include resD((
+    padding: 20px 24px,
+    height: 67px,
+    border-radius: 12px,
+
+  ))
+}
+.noBottom{
+  border: none;
+}
+.componentStatus{
+  span{
+    font-weight: 700;
+    color: #282828;
+    @include resD((
+      font-size: 20px,  
+    ));
+    
+  }
+  
+  @include resD((
+    font-size: 16px,  
+  ));
+  color: #504F4F;
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+}
+.previewQuestion{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  
+    @include resD((
+      max-width: 700px,
+    ));
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+ 
+  & > ol{
+    margin: 10px;
+    margin-inline: 0;
+    padding-inline-start: 20px;
+    
+  }
+  &  img{
+    display: none !important;
+  }
+  & > p{
+    margin: 0px;
+  }
+
+}

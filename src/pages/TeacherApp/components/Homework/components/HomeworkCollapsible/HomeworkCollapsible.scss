@@ -1,0 +1,176 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.quiz_heading {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 600,
+            font-size: 18px,
+            line-height: 24px,
+            color: #212121,
+            margin-bottom: 20px,
+        )
+    );
+    @include resSm(());
+}
+.quiz_section_container {
+    @include resD(
+        (
+            margin-left: 0,
+            margin-top: 30px,
+            margin-bottom: 20px,
+            display: flex,
+            flex-direction: column,
+            align-items: flex-start,
+            padding: 24px,
+            width: 100%,
+            height: fit-content,
+            background: #ffffff,
+            border-radius: 16px,
+        )
+    );
+    @include resSm(());
+}
+.question_number {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 14px,
+            line-height: 18px,
+            display: flex,
+            align-items: center,
+            color: #8c61cb,
+        )
+    );
+    @include resSm(());
+}
+.quiz_container {
+    @include resD(
+        (
+            width: 100%,
+            height: 76px,
+            background: #ffffff,
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25),
+            border-radius: 16px,
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            margin-bottom: 15px,
+        )
+    );
+    @include resSm(());
+}
+.quiz_container_answer {
+    @include resD(
+        (
+            width: 100%,
+            height: 76px,
+            background: #ffffff,
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25),
+            border-radius: 16px,
+            display: flex,
+            align-items: center,
+            justify-content: center, 
+            margin-bottom: 15px,
+        )
+    );
+    @include resSm(());
+}
+.question {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 14px,
+            line-height: 18px,
+            display: flex,
+            align-items: center,
+            margin-left: 20px,
+        )
+    );
+    @include resSm(());
+}
+.answer {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 14px,
+            line-height: 18px,
+            display: flex,
+            align-items: center,
+            margin-left: 20px,
+        )
+    );
+    @include resSm(());
+}
+.first_try_container {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 14px,
+            line-height: 18px,
+            display: flex,
+            align-items: center,
+            margin-right: 15px,
+            width: fit-content,
+            height: fit-content,
+        )
+    );
+    @include resSm(());
+}
+.first_try {
+    @include resD(
+        (
+            display: flex,
+            flex-direction: row,
+            justify-content: center,
+            align-items: center,
+            padding: 4px 8px,
+            width: fit-content,
+            height: fit-content,
+            background: #01aa93,
+            border-radius: 4px,
+            
+            margin-right: 15px,
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 10px,
+            line-height: 12px,
+            color: #ffffff,
+        )
+    );
+    @include resSm(());
+}
+
+.quiz_report_container {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    padding: 12px 18px;
+    background-color: #f4f9fc;
+    margin: 12px 0px;
+    border-radius: 8px;
+    border: 1px solid rgba(238, 238, 238, 0.5);
+}
+.quiz_answer_container, .quiz_empty_heading {
+    display: flex;
+    justify-content: center;
+}
+.quiz_empty_heading {
+    width: 100%;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 18px;
+}

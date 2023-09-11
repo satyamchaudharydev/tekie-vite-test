@@ -1,0 +1,253 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme.scss';
+
+.container{
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba($color: $black, $alpha: 0.3);
+}
+
+.closeBtn {
+  cursor: pointer;
+  position: absolute;
+  font-weight: bolder;
+  top: 0;
+  right:0;
+  margin: 15px;
+}
+
+.modalContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: $white;
+    left: hs(789px);
+    position: absolute;
+    object-fit: contain;
+    background-size: contain;
+    transform: scale(1);
+    
+    @include resD((
+      top: 22%,
+      width: hs(360px),
+      border-radius:18px,
+      padding: $s-m $s-s $s-s
+    ));
+    @include resM((
+      top: 35%,
+      width: hs(400px),
+      border-radius:4px,
+      padding: $s-xs $s-xxs $s-xxs    
+    ));
+}
+
+.ShareOverlayClose {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  @include resD((
+    width: 50px,
+    height: 50px,
+    top: -50px / 2,
+    right: -50px / 2,
+  ));
+  @include resM((
+    width: 20px,
+    height: 20px,
+    top: -15px / 2,
+    right: -10px / 2,
+  ));
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    background: #ccf2ff;
+    box-shadow: 0px 6px 6px rgba(51, 51, 51, 0.2), 0px 5px 20px rgba(51, 51, 51, 0.08);
+  }
+}
+.shareOverlayCloseIcon {
+  position: relative;
+  @include resD((
+    width: 20px,
+    height: 20px,
+    top: -1px,
+  ));
+  @include resM((
+    width: 8px,
+    height: 8px,
+    top: -8px,
+  ));
+  path {
+    fill: #00ADE5;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .modalContainer {
+    transform: scale(1.5)
+  }
+
+  .closeBtn {
+    font-size: 8px;
+    margin: 5px 8px;
+  }
+
+  .shareButtonContainer {
+    height: 100% !important
+  }
+
+  .ShareOverlayClose {
+    width: 20px;
+    height: 20px;
+    top: -6px !important;
+    right: -6px !important;
+  }
+
+  .shareOverlayCloseIcon {
+    width: 7px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .modalContainer {
+    transform: scale(3)
+  }
+  
+  .closeBtn {
+    font-size: 8px;
+    margin: 3px 5px;
+  }
+
+  .shareButtonContainer {
+    height: 14px !important
+  }
+
+  .ShareOverlayClose {
+    width: 14px;
+    height: 14px;
+    top: -4px !important;
+    right: -4px !important;
+  }
+
+  .shareOverlayCloseIcon {
+    width: 5px;
+    top: -9px !important;
+    right: 0px !important;
+  }
+}
+
+.modalContainer:focus{
+    outline: none;
+}
+
+.pqStory{
+  font-family: Nunito;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: $deep-sky-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  text-align: justify;
+  
+  @include resD((
+    font-size: hs(24px),
+    margin-bottom: $s-xs,
+  ));
+  @include resM((
+    margin-bottom: $s-xxs,
+    font-size: 8px
+  ));
+}
+
+.shareButtonContainer{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items:center;
+  border-radius: 100px;
+  color: $deep-sky-blue;
+  
+  @include resD((
+    width: hs(320px),
+    height: hs(65px),
+    border: solid 2px $deep-sky-blue,
+  ));
+  @include resM((
+    width: 100%,
+    height: 15px,
+    border: .2px solid $deep-sky-blue
+  ));
+  &:hover {
+    color: $white !important;
+    background: $deep-sky-blue;
+  }
+}
+
+.shareButtonIcon{
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: hs(20px);
+
+  & > svg {
+
+    @include resD((
+      width: hs(40px),
+      height: hs(40px),
+    ));
+    @include resM((
+      width: 10px,
+      height: 10px,
+    ));
+  }
+}
+
+.shareButtonName{
+  object-fit: contain;
+  font-family: Nunito;
+  font-size: hs(22px);
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: hs(20px);
+}
+
+.react_share_shareButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items:center;
+
+  @include resD((
+    width: hs(320px) !important,
+    height: hs(65px) !important,
+    margin: $s-xs 0
+  ));
+  @include resM((
+    width: 90% !important,
+    height: hs(65px) !important,
+    margin: $s-xxs 0
+  ));
+}

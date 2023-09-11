@@ -1,0 +1,53 @@
+@import "src/scss/size.scss";
+
+.card {
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	@include resD(
+		(
+			padding: 0px,
+			width: 396px,
+			height: 289px,
+		)
+	);
+
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)),
+		#ffffff;
+	border: 2px solid rgba(0, 0, 0, 0.06);
+	border-radius: 16px;
+	cursor: pointer;
+}
+
+.addIcon {
+	@include resD(
+		(
+			width: 48px,
+			height: 48px,
+		)
+	);
+}
+
+.cardTitle {
+	color: #504f4f;
+	font-family: "Nunito", sans-serif;
+	font-weight: bold;
+	@include resD(
+		(
+			font-size: 24px,
+			margin: 24px 0px,
+		)
+	);
+}
+
+.icons {
+	display: flex;
+	align-items: center;
+	@include resD(
+		(
+			gap: 16px,
+		)
+	);
+}

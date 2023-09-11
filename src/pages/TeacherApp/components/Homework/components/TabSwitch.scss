@@ -1,0 +1,115 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import '../../../variables/_variables.scss';
+
+.tab_switch {
+    @include resD(
+        (
+            display: flex,
+            align-items: center,
+            justify-content: start,
+            margin-left: 10px,
+            position:relative,
+            width:fit-content
+        )
+    );
+    @include resSm((
+        display: flex,
+            align-items: center,
+            justify-content: start,
+            margin-left: 30px,
+            position:relative,
+            width:fit-content
+    ));
+}
+.tab_switch .animation{
+    width:32%;
+    
+    @include resD(
+        (
+            position:absolute,
+            height:8px,
+            bottom:0px,
+            z-index:0,
+            background:$primary-color,
+            transition:all .5s ease,
+            border-radius: 24px 24px 0px 0px,
+            
+        )
+    );
+    @include resSm((
+        position:absolute,
+            height:8px,
+            bottom:0px,
+            z-index:0,
+            background:$primary-color,
+            transition:all .5s ease,
+            border-radius: 24px 24px 0px 0px,
+    ));
+}
+
+
+
+
+
+.tab_switch_individual_container {
+    @include resD(
+        (
+            margin-right: 50px,
+            cursor: pointer,
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 22px,
+            line-height: 24px,
+            display: flex,
+            align-items: center,
+            color: #212121,
+            opacity: 0.4,
+            margin-bottom:30px,
+            margin-top:30px
+        )
+    );
+    @include resSm((
+        margin-right: 50px,
+        cursor: pointer,
+        font-family: Inter,
+        font-style: normal,
+        font-weight: 500,
+        font-size: 22px,
+        line-height: 24px,
+        display: flex,
+        align-items: center,
+        color: #212121,
+        opacity: 0.4,
+        margin-bottom:30px,
+        margin-top:30px
+    ));
+}
+
+.active {
+    @include resD(
+        (
+           color: $primary-color,
+           opacity: 1
+        )
+    );
+    @include resSm((
+        color: $primary-color,
+           opacity: 1
+    ));
+}
+.purple_line {
+    @include resD(
+        (
+            background: $primary-color,
+            border-radius: 24px 24px 0px 0px,
+            width: 128px
+        )
+    );
+    @include resSm((
+        background: $primary-color,
+        border-radius: 24px 24px 0px 0px,
+        width: 128px
+    ));
+}

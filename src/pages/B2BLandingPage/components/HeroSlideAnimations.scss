@@ -1,0 +1,494 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/Inter.scss';
+
+.b2b-landing-page-hero-textBasedAnimation {
+  width: 100%;
+  height: 100%; 
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 6px 21px rgba(0, 0, 0, 0.11);
+}
+
+.b2b-landing-page-hero-codeAnim-container {
+  color: white;
+  // background-color: #1d1e22;
+  background-color: #002F3E;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.b2b-landing-page-hero-code-container {
+  flex: 1 1 70%;
+  font-size: 16px;
+  @include resD((
+    padding-left: 16px,
+    padding-top: 8px,
+  ));
+  @include resM((
+      padding-left: 10px,
+      padding-top: 0px,
+  ));
+}
+code {
+  width: fit-content;
+  user-select: none;
+  line-height: 1.3;
+  font-family: Monaco, monospace;
+}
+
+.b2b-landing-page-code-output-visible {
+  &:after {
+    visibility: visible !important;
+  }
+}
+
+#b2b-landing-page-code-output-container {
+  user-select: none;
+  max-width: 200px;
+  height: 100%;
+  background-color: #015f7c;
+  position: relative;
+  display: grid;
+  place-content: flex-start;
+  box-sizing: border-box;
+  @include resD((
+    padding: 18px,
+    width: 180px,
+  ));
+  @include resM((
+    padding: 12px,
+    width: 90px,
+  ));
+
+  &:after {
+    content : "***********\A       *\A       *\A       *\A       *\A       *\A       *\A       *\A       *";
+    white-space: pre-wrap;
+    animation: deplayedVisibility 0s 5.5s forwards;
+    visibility: hidden;
+    @include resD((
+      font-size: 20px,
+    ));
+    @include resM((
+      font-size: 10px,
+    ));
+  }
+}
+
+.b2b-landing-page-code-executeBtn {
+  background-image: url('../../../assets/playButton.png');
+  background-size: 120%;
+  background-position-x: 43%;
+  background-position-y: 44%;
+  cursor: pointer;
+  position: absolute;
+  border: none;
+  transform: scale(1);
+  background-color: transparent;
+  animation: btnBounceAnimation 0.4s 5s normal;
+  transition: 0.2s all ease-in-out !important;
+  @include resD((
+    width: 70px,
+    height: 70px,
+    left: -36px,
+    bottom: 62px,
+  ));
+  @include resM((
+    width: 44px,
+    height: 44px,
+    left: -24px,
+    bottom: 52px,
+  ));;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    transform: scale(.9) !important;
+  }
+}
+
+@keyframes btnBounceAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes deplayedVisibility {
+  to   { visibility: visible; }
+}
+
+.b2b-landing-page-hero-codeAnim-lineNumber {
+  color: #677980;
+}
+
+.b2b-landing-page-hero-cy-keyword {
+  color: #ff79c6;
+}
+.b2b-landing-page-hero-cy-function {
+  color: #8be9fd;
+}
+.b2b-landing-page-hero-cy-numeric {
+  color: #bd93f9;
+}
+.b2b-landing-page-hero-cy-string {
+  color: #f1fa8c;
+}
+
+.b2b-landing-page-hero-codeAnim-line1,
+.b2b-landing-page-hero-codeAnim_line2,
+.b2b-landing-page-hero-codeAnim_line3,
+.b2b-landing-page-hero-codeAnim_line4,
+.b2b-landing-page-hero-codeAnim_line5{
+  width: 0;
+  margin: 24px 0 -1rem;
+  height: 1.2em;
+  border-right: 0.15em solid transparent;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.b2b-landing-page-hero-codeAnim-line1 {
+  margin-top: 0;
+  animation: B2bLandingPageHeroTyping-1 0.5s steps(10) .5s forwards,
+    B2bLandingPageHeroTyping_cursor 0.5s linear .5s 2;
+}
+
+.b2b-landing-page-hero-codeAnim_line2 {
+  animation: B2bLandingPageHeroTyping-2 0.5s steps(10) 1.5s forwards,
+    B2bLandingPageHeroTyping_cursor 0.5s linear 1.5s 2;
+}
+
+.b2b-landing-page-hero-codeAnim_line3 {
+  animation: B2bLandingPageHeroTyping-3 0.5s steps(10) 2.5s forwards,
+    B2bLandingPageHeroTyping_cursor 0.5s linear 2.5s 2;
+}
+
+.b2b-landing-page-hero-codeAnim_line4 {
+  animation: B2bLandingPageHeroTyping-4 0.5s steps(10) 3.5s forwards,
+    B2bLandingPageHeroTyping_cursor 0.5s linear 3.5s 2;
+}
+
+.b2b-landing-page-hero-codeAnim_line5 {
+  animation: B2bLandingPageHeroTyping-5 0.5s steps(10) 4.5s forwards,
+    B2bLandingPageHeroTyping_cursor 0.5s linear 4.5s 2,
+    B2bLandingPageHeroTyping_cursor_persist .9s linear 5s infinite;
+}
+
+
+.b2b-landing-page-hero-codeAnim_line2-marginLeft,
+.b2b-landing-page-hero-codeAnim_line4-marginLeft {
+  margin-left: 2rem;
+}
+
+.b2b-landing-page-hero-codeAnim_line3-marginLeft,
+.b2b-landing-page-hero-codeAnim_line5-marginLeft {
+  margin-left: 3rem;
+}
+
+@keyframes B2bLandingPageHeroTyping-1 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 200px;
+  }
+}
+
+@keyframes B2bLandingPageHeroTyping-2 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 150px;
+  }
+}
+
+@keyframes B2bLandingPageHeroTyping-3 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 220px;
+  }
+}
+
+@keyframes B2bLandingPageHeroTyping-4 {
+
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 150px;
+  }
+}
+
+@keyframes B2bLandingPageHeroTyping-5 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 310px,
+  }
+}
+
+@keyframes B2bLandingPageHeroTyping_cursor {
+  0%,
+  20%,
+  80%,
+  to {
+    border-color: transparent;
+  }
+
+  25%,
+  75% {
+    border-color: #fff;
+  }
+}
+
+@keyframes B2bLandingPageHeroTyping_cursor_persist {
+  0%,
+  45% {
+    border-color: transparent;
+  }
+
+  50%,
+  to {
+    border-color: #fff;
+  }
+}
+
+.b2b-landing-page-hero-lms-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.b2b-landing-page-ImageBackground {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.b2b-landing-page-hero-lms-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.b2b-landing-page-hero-lms-featureIcon {
+  @extend .b2b-landing-page-ImageBackground;
+  width: 100px;
+  height: 90px;
+  flex: 1 1 50%;
+  opacity: 0;
+  z-index: 1;
+  position: relative;
+  animation: LmsHeroIconsScaleInAnimation 1s 0.3s forwards;
+  // LmsHeroIconsScaleOutAnimation 1s 6.5s forwards;
+
+  &:nth-child(1) {
+    top: 10px;
+    left: 10px;
+  }
+  &:nth-child(2) {
+    animation-delay: 1s, 6s;
+    top: -10px;
+    right: 20px;
+  }
+  &:nth-child(3) {
+    animation-delay: 1.6s, 6s;
+    left: 30px;
+    bottom: -15px;
+  }
+  &:nth-child(4) {
+    animation-delay: 2.2s, 6s;
+    right: 40px;
+    bottom: 8px;
+  }
+}
+
+.b2b-landing-page-hero-lms-overlayAnimation {
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  position: absolute;
+  top: 36px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: LmsHeroOverlaySlideAnimation 5s .5s ease-in-out forwards;
+}
+
+@keyframes LmsHeroIconsScaleInAnimation {
+  0%{
+    opacity: 0;
+    transform: scale(0.3) translate3d(0,0,0);
+  }
+  50%{
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80%{
+    opacity: 1;
+    transform: scale(0.91);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
+}
+@keyframes LmsHeroIconsScaleOutAnimation {
+  0%{
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
+  50%{
+    opacity: 1;
+    transform: scale(0.91);
+  }
+  80%{
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  100%{
+    opacity: 0;
+    transform: scale(0.3) translate3d(0,0,0);
+  }
+}
+@keyframes LmsHeroOverlaySlideAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .b2b-landing-page-hero-cy-padding {
+    padding: 0px 8px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .b2b-landing-page-hero-lms-featureIcon {
+    height: 45px;
+
+    &:nth-child(1) {
+      top: 0px;
+    }
+    &:nth-child(2) {
+      top: -10px;
+      right: 20px;
+    }
+    &:nth-child(4) {
+      right: 30px;
+      bottom: 5px;
+    }
+  }
+  .b2b-landing-page-hero-codeAnim_line2-marginLeft,
+  .b2b-landing-page-hero-codeAnim_line4-marginLeft {
+    margin-left: 1rem;
+  }
+
+  .b2b-landing-page-hero-codeAnim_line3-marginLeft,
+  .b2b-landing-page-hero-codeAnim_line5-marginLeft {
+    margin-left: 2rem;
+  }
+  .b2b-landing-page-hero-code-container {
+    font-size: 12px;
+  }
+  @keyframes B2bLandingPageHeroTyping-1 {
+    0% {
+      width: 0;
+    }
+
+    to {
+      width: 150px;
+    }
+  }
+
+  @keyframes B2bLandingPageHeroTyping-2 {
+    0% {
+      width: 0;
+    }
+
+    to {
+      width: 100px;
+    }
+  }
+
+  @keyframes B2bLandingPageHeroTyping-3 {
+    0% {
+      width: 0;
+    }
+
+    to {
+      width: 150px;
+    }
+  }
+
+  @keyframes B2bLandingPageHeroTyping-4 {
+
+    0% {
+      width: 0;
+    }
+
+    to {
+      width: 80px;
+    }
+  }
+
+  @keyframes B2bLandingPageHeroTyping-5 {
+    0% {
+      width: 0;
+    }
+
+    to {
+      width: 200px,
+    }
+  }
+
+  @keyframes B2bLandingPageHeroTyping_cursor {
+    0%,
+    20%,
+    80%,
+    to {
+      border-color: transparent;
+    }
+
+    25%,
+    75% {
+      border-color: #fff;
+    }
+  }
+
+  @keyframes B2bLandingPageHeroTyping_cursor_persist {
+    0%,
+    45% {
+      border-color: transparent;
+    }
+
+    50%,
+    to {
+      border-color: #fff;
+    }
+  }
+}

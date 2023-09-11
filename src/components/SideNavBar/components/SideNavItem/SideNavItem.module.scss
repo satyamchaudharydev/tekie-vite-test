@@ -1,0 +1,105 @@
+@import 'src/scss/size.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: hs(68px);
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0s border ease-in-out 0.3s,
+    0.3s all ease-in-out;
+  border-bottom: 1px solid #ffffff;
+  user-select: none;
+}
+
+.childHover {
+  &:hover {
+    background: #abffff;
+    padding-left: hs(3px);
+  }
+}
+
+.noClick {
+  cursor: not-allowed;
+}
+
+.parentHover {
+  &:hover {
+    background: rgba(255, 255, 255, 0.4);
+    padding-left: hs(3px);
+  }
+}
+
+.active {
+  background-color: white;
+}
+
+.childContainer {
+  @extend .container;
+  border-bottom: none;
+  transition:
+    0.3s color ease-in-out,
+    0.3s height ease-in-out,
+    0.3s background ease-in-out,
+    0.3s padding ease-in-out;
+  background-color: #dcfafa;
+  overflow: hidden;
+}
+
+.active {
+  background-color: white;
+}
+
+.noPointer {
+  cursor: auto;
+}
+
+.space {
+  justify-content: space-around;
+}
+
+.statusContainer {
+  width: hs(25px);
+  height: hs(25px);
+  margin-left: hs(48px);
+  margin-right: hs(20px);
+}
+
+.statusContainerChild {
+  margin-left: hs(88px);
+}
+
+.title {
+  font-size: hs(20px);
+  font-weight: bold;
+  color: #504f4f;
+  flex: 1;
+}
+
+.dropdownContainer {
+  width: hs(9.6px);
+  height: hs(16.4px);
+  margin-right: hs(18px);
+  transition: 0.3s all ease-in-out;
+  transform: rotate(-180deg);
+}
+
+.dropdownContainerOpen {
+  transform: rotate(-90deg);
+}
+.dropdownArrow {
+  position: relative;
+  top: hs(-5px);
+}
+
+.noBorder {
+  border: none;
+  border-bottom: none;
+}
+
+.settingsLeftPadding{
+  padding-left: hs(45px);
+}

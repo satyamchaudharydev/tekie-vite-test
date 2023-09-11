@@ -1,0 +1,31 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.student_table_section {
+    @include resD(
+        (
+           background-color:#FFFFFF,
+           border-radius:24px,
+           padding:30px 30px,
+           margin-top:50px,
+           margin-bottom:50px,
+           margin-left:20px,
+           width:95%
+        )
+    );
+    @include resSm(());
+}
+.heading_table_live {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 600,
+            font-size: 26px,
+            line-height: 24px,
+            color: #000000,
+            margin-bottom:16px
+        )
+    );
+    @include resSm(());
+}

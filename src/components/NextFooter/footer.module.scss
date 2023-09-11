@@ -1,0 +1,32 @@
+@import 'src/scss/size.scss';
+
+
+
+.footerContainer{
+    position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  box-sizing: border-box;
+  background: #F9F9F9;;
+  // box-shadow: inset 0px 2px 0px rgba(137, 137, 137, 0.23);
+  z-index: 98;
+  
+  @include resD((
+    padding: 16px 36px,
+  ));
+  @include resM((
+    padding: 0px 14px,
+  ));
+
+  &.footerContainerForTeacherApp{
+    position: absolute;
+  }
+  &.footerContainerForTrainingApp{
+    position: fixed;
+  }
+}

@@ -1,0 +1,56 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.course_heading_container {
+    @include resD(
+        (
+            width: 967px,
+            height: fit-content,
+            padding: 20px,
+            border-radius: 16px,
+            display: flex,
+            align-items: center,
+            margin-left:10px
+        )
+    );
+    @include resSm(());
+}
+.heading_name {
+    @include resD(
+        (
+            width: 69px,
+            height: 24px,
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 24px,
+            line-height: 24px,
+            display: flex,
+            align-items: center,
+            color: #212121,
+        )
+    );
+    @include resSm(());
+}
+.total_sessions_number {
+    @include resD(
+        (
+            display: flex,
+            flex-direction: row,
+            justify-content: center,
+            align-items: center,
+            padding: 4px 8px,
+            width: fit-content,
+            height: fit-content,
+            background: #f2f2f2,
+            border-radius: 4px,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 18px,
+            line-height: 16px,
+            color: #757575,
+            margin-left:60px
+        )
+    );
+    @include resSm(());
+}

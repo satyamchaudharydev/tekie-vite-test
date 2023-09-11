@@ -1,0 +1,97 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+.codeEditor__homework__review {
+  @include resD(
+    (
+      width: 1070px,
+    )
+  );
+  @include resM(
+    (
+      width: 600px,
+    )
+  );
+}
+
+.skyBlue {
+  @include resD(
+    (
+      background-color: #5fc5e5,
+    )
+  );
+  @include resM(
+    (
+      background-color: #00ade6,
+    )
+  );
+}
+
+.detailed__report__number {
+  @include resD(
+    (
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 600,
+      font-size: 22px,
+      line-height: 100%,
+      display: flex,
+      align-items: center,
+      color: #757575,
+      margin-bottom: 10px,
+    )
+  );
+  @include resM(
+    (
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 600,
+      font-size: 18px,
+      line-height: 100%,
+      display: flex,
+      align-items: center,
+      color: #757575,
+    )
+  );
+}
+
+.detailed__report__text {
+  @include resD(
+    (
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 500,
+      font-size: 15px,
+      line-height: 16px,
+      display: flex,
+      align-items: center,
+      color: #aba1b9,
+    )
+  );
+  @include resM(
+    (
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 500,
+      font-size: 12px,
+      line-height: 16px,
+      display: flex,
+      align-items: center,
+      color: #aba1b9,
+    )
+  );
+}
+
+.review__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detailed__report__container__number {
+  @include resD1280(
+    (
+      margin-bottom: 16px,
+    )
+  );
+}

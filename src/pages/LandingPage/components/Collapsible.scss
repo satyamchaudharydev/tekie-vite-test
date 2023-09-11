@@ -1,0 +1,83 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.landing-page-collapsible-container {
+  width: 100%;
+  box-sizing: border-box;
+  user-select: none;
+  @include resM((
+    padding: 0px 20px,
+  ));
+  @include resD((
+    padding: 0px 136px,
+    width: 86%,
+  ));
+}
+
+.landing-page-collapsible-wrapper {
+  border-bottom: 1px solid #003446;
+  @include resM((
+    padding: 28px 0px,
+  ));
+  @include resD((
+    padding: 30px 0px,
+  ));
+}
+
+.landing-page-collapsible-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.landing-page-collapsible-title {
+  @extend .lato-regular;
+  opacity: 0.8;
+  color: #57e1ed;
+  // text-transform: uppercase;
+  @include resM((
+    font-size: 20px,
+    letter-spacing: 0.8px,
+    margin-left: 20px,
+    line-height: 35px,
+  ));
+  @include resD((
+    line-height: 35px,
+    margin-left: 17px,
+    font-size: 25px,
+    letter-spacing: 1.02px,
+  ));
+}
+
+.landing-page-collapsible-arrow {
+  flex: 0;
+  @include resM((
+    min-height: 20px,
+    min-width: 11px,
+    margin-left: 13px,
+  ));
+  @include resD((
+    margin-left: 0px,
+    min-height: 21.5px,
+    min-width: 11px,
+  ));
+}
+.landing-page-collapsible-arrowSVG {
+  position: relative;
+  left: hsm(11px);
+  path {
+    fill: #46b8c4;
+  }
+  transform: rotate(180deg) translateX(hsm(11px));
+}
+
+.landing-page-collapsible-body {
+  overflow: hidden;
+  @include resM((
+    padding-left: 48px,
+  ));
+  @include resD((
+    padding-left: 28px,
+  ));
+}

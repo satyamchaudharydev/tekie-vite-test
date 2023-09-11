@@ -1,0 +1,164 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+
+.lp-mobile-navbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  background-color: #000000 ;
+
+}
+.lp-close-mobile-navbar {
+    cursor: pointer;
+    img {
+      position: absolute;
+      @include resM((
+        top: 20.01px,
+        left: 23px,
+      ));
+    }
+}
+.lp-mobile-navbar-navlinks {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-around;
+    @include resM((
+      margin-bottom: 55px,
+    ));
+   }
+  .lp-mobile-navbar-button {
+    background: none;
+    border: none;
+    margin: 5px 0;
+   }
+  .lp-mobile-navbar-dropdown-menu {
+    display: inline-block;
+    
+  }
+  .lp-mobile-navbar-menu-btn {
+    display: flex;
+    align-items: center;
+    background: #000000;
+    color: #ffffff;
+    border:none;
+    cursor: pointer;
+    height: 60px;
+  }
+  .lp-mobile-navbar-menu-content {
+    display: none;
+    @include resM((
+      padding-left: 28px,
+    ));
+  }
+  
+  .lp-mobile-navbar-menu-resources-content {
+    display: none;
+    @include resM((
+      padding-left: 28px,
+    ));
+    // position: absolute;
+    // background-color: #017575;
+    // min-width: 160px;
+    // z-index: 1;
+  }
+  .lp-mobile-navbar-menu-resources-btn {
+    display: flex;
+    align-items: center;
+    background: #000000;
+    color: #ffffff;
+    border:none;
+    cursor: pointer;
+    height: 60px;
+
+  }
+  
+  .lp-mobile-navbar-link {
+    @include resM((
+      padding: 12px 0px,
+      font-size: 21px,
+      line-height: 26px,
+    ));
+    font-family: Gilroy;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+    font-feature-settings: 'salt' on, 'liga' off;
+    &.courseName {
+      @include resM((
+        padding: 12px 0px,
+        font-size: 18px,
+        line-height: 26px,
+      ));
+    }
+  }
+
+  /* buttons */
+  .lp-mobile-navbar-buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+.lp-mobile-navbar-buttons .btn-sd-blue-container {    
+  @include resSm((
+    height: 46px,
+    border-radius: 24px,
+    padding: 20px 20px,
+    margin-left: 0px,
+  ));
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%);
+  }
+  .lp-mobile-navbar-login {
+    font-family: Gilroy;
+    cursor:pointer;
+    font-weight: bold;
+    line-height: 140%;
+    border: none;
+    font-weight: 900;
+    background: #FFFFFF;
+    color: #00ADE6;
+    @include resSm((
+      width: 100px,
+      font-size: 16px,
+      border-radius: 29.6569px,
+      padding: 20px 20px,
+      height: 46px,
+    ));
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+.lp-mb-arrow {
+  position: relative;
+  @include resSm((
+    width: 12.57px * 1.4,
+    height: 5.54px * 1.5,
+    margin-left: 10px,
+    top: 2px
+  ));
+}
+
+.lp-mobile-navbar-bottom-container {
+  @include resSm((
+    padding-left: 24px,
+    padding-bottom: 37px
+  ));
+}
+
+.lp-mobile-navbar-buttons .lp-mobile-navbar-login{
+  margin-right: 10px;
+}

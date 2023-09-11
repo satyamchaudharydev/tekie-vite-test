@@ -1,0 +1,378 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+.eventCompletionBanner-container{
+    background-color: #00171f;
+}
+
+.event-completion-banner-heading{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    text-align: left;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    @include resD((
+      font-size: 32px,
+      line-height: 140%,
+      margin: 20px auto,
+      margin-bottom: 25px,
+    ));
+    @include resM((
+      font-size: 18px,
+      line-height: 140%,
+      margin: 20px auto,
+    ));
+    .event-completion-color-blue{
+      color: #00ade7;
+    }
+}
+
+.event-completion-banner-desc{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    // text-align: center;
+    color: #FFFFFF;
+    opacity: 0.9;
+    @include resD((
+      font-size: 20px,
+      line-height: 140%,
+      max-width: 1000px,
+      margin: 25px auto 25px auto,
+    ));
+    @include resM((
+      font-size: 16px,
+      line-height: 140%,
+      // margin: 25px auto 60px auto,
+      margin: 25px auto 60px 25px,
+      max-width: 300px,
+    ));
+}
+
+.btn-watch-now{
+    @include resM((
+      margin-bottom: 15px,
+    ));
+    @include resD((
+      margin-bottom: 0,
+    ));
+  .btn-sd-blue-container{
+    margin:auto;
+    @include resD((
+      padding: 16px 28px 16px 32px,
+      border-radius: 30px,
+      margin-left: 20px,
+    ));
+    @include resSm((
+      padding: 11px 46px 11px 50px,
+      border-radius: 60px,
+      margin-left: 20px,
+    ));
+  }
+
+  .btn-arrow {
+    flex: 0;
+    transition: 0.3s all ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.hide {
+      display: none;
+    }
+  }
+
+  span{
+    @include resD((
+      font-weight: 800,
+    ));
+    @include resM((
+      font-weight: 500,
+    ))
+  }
+
+  .btn-arrow svg {
+    @include resD((
+      width: 15px,
+      height: 15px,
+      margin-left: 12px
+    ));
+    @include resSm((
+      width: 14px,
+      height: 14px,
+      margin-left: 10px
+    ));
+  }
+
+}
+
+.only-moment-link{
+  .btn-sd-blue-container{
+    @include resD((
+      margin-left: 0px !important,
+    ));
+    @include resM((
+      margin-left: 20px !important,
+    ));
+  }
+}
+
+.eventCompletionBanner-hero-column-wrapper{
+    @include resM((
+      margin-bottom: 30px,
+    ));
+    .event-registerButton{
+      @include resD((
+        margin-left 20px,
+      ));
+      @include resSm((
+        margin-left 20px,
+      ));
+    }
+}
+
+.event-completion-certificate{
+  cursor: pointer;
+  width: fit-content;
+    @include resD((
+      display: block,
+      font-family: Nunito,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 20px,
+      line-height: 140%,
+      color: #FFFFFF,
+      text-align: center,
+      margin-left: 0,
+    ));
+    @include resM((
+      display: block,
+      font-family: Nunito,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 18px,
+      line-height: 140%,
+      color: #FFFFFF,
+      text-align: center,
+      margin-left: 25px,
+    ))
+}
+
+
+.eventCompletionBanner-posterBanner {
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  display: block;
+  background-size: 90% 100% !important;
+  background-size: cover !important;
+  background-position: left !important;
+  background-repeat: no-repeat !important;
+  position: relative;
+
+  .event-registerButton{
+    @include resD((
+      margin-top: 30px,
+    ));
+    @include resSm((
+      margin-top: 30px,
+    ));
+  }
+
+  .background-mask{
+    background-color: #00171E;
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    left:0;
+  }
+  .background-mask-2{
+    background: linear-gradient(-90deg, rgba(40, 40, 40, 0) 0%, #00171E 100%) 50%;
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    left:40%;
+  }
+  .background-mask-3{
+    height: 100%;
+    width: 42%;
+    position: absolute;
+    left:0%;
+    background-size: contain;
+    transform: rotate(180deg);
+    background-position: right;
+  }
+
+  .info-container{
+    z-index: 3;    
+    // margin-bottom: 40px;
+    width: fit-content;
+    // margin: 20px auto;
+    // height: 100%;
+    position: absolute;
+    @include resD((
+      bottom: 30px,
+    ));
+    @include resM((
+      bottom: 20px,
+    ));
+  }
+
+  .event-completion-banner-head{
+    // background-image: url('../../../../assets/SpySquadCamp.svg');
+    background-size: contain;
+    display:block;
+    background-repeat: no-repeat;
+    @include resD((
+      width: 407px,
+      height: 113px,
+      margin: auto,
+      margin-bottom: 45px,
+      margin-top: 0px,
+    ));
+    z-index: 3;
+  }
+  .school-icon{
+    // background-image: url('../../../../assets/radioStreetLabel.png');
+    background-size: contain;
+    display:block;
+    background-repeat: no-repeat;
+    z-index: 3;
+    width:150px;
+    background-position: right;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    @include resD((
+      height: 80px,
+    ));
+  }
+  @include resD((
+    display: flex,
+    min-height: 560px,
+    height: fit-content,
+    padding: 0 80px,
+    padding-bottom: 10px,
+  ));
+  @include resM((
+    display: none,
+    height: 300px,
+  ));
+  
+  .row:last-child {
+    @include resD((
+      margin-top: 20px,
+    ));
+  }
+}
+
+.eventCompletionBanner-posterBannerMb {
+  @include resM((
+    height: calc(100vh - 220px),
+    width: 100vw,
+    display: block
+  ));
+  @include resD((
+    display: none
+  )); 
+  box-sizing: border-box;
+  background-size: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  background-size: cover;
+}
+
+.eventCompletionBanner-container-carousel{
+  @include resD((
+    border-radius: 24px,
+    overflow: hidden,
+    margin: 0 auto,
+    width: 1547px,
+    height: 523px,
+  ));
+  & .eventCompletionBanner-posterBanner{
+    padding: 0px;
+    @include resD((
+      padding: 50px 80px,
+    ))
+  }
+}
+
+.post-event-info-container{
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  @include resD((
+    padding-bottom: 40px,
+  ));
+  .post-event-download-container{
+    display: flex;
+  }
+  .event-registerButton.watch{
+    font-family: Nunito;
+    margin: 0;
+    font-weight: 700;
+  }
+  .post-event-special-message{
+    font-family: Gilroy;
+    font-style: normal;
+    @include resD((
+      font-weight: 800,
+      font-size: 32px,
+      line-height: 45px,
+    ));
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .post-event-summary{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    @include resD((
+      font-size: 20px,
+      line-height: 28px,
+    ));
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .post-event-download-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include resD((
+      margin-top: 20px,
+    ));
+    & span{
+      @include resD((
+        margin: 0 20px,
+      ));
+    }
+  }
+  .watch-now-button{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    @include resD((
+      font-size: 18px,
+    ));
+    color: #FFFFFF;
+  }
+  .post-event-download-btn{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    cursor: pointer;
+    @include resD((
+      font-size: 18px,
+      line-height: 25px,
+    ));
+    color: #FFFFFF;
+  }
+}

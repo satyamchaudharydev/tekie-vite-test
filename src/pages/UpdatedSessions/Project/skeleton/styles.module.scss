@@ -1,0 +1,15 @@
+@import 'src/scss/size.scss';
+
+.cardLayout{
+  margin-bottom: hs(18px);
+  width: hs(897px);
+  height: 70vh;
+}
+
+.card{
+  width: 100%;
+  height: hs(400px);
+  border-radius: 4px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+}

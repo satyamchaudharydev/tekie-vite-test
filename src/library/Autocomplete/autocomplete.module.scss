@@ -1,0 +1,16 @@
+@import "src/scss/size.scss";
+
+.label {
+	font-family: "Nunito";
+	font-style: normal;
+	font-weight: 600;
+
+	@include resD(
+		(
+			font-size: 16px,
+			line-height: 18px,
+		)
+	);
+
+	color: #504f4f;
+}

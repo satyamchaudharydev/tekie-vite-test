@@ -1,0 +1,377 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+@font-face {
+  font-family: Monaco;
+  src: url(../../../../assets/monaco.ttf);
+}
+
+.cheatsheet-contentArea{
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 25px 20px 0 20px;
+  box-sizing: border-box;
+}
+.cheatsheet-text {
+  font-weight: 500;
+  background-color: white;
+  padding-left: 0;
+  align-self: flex-start;
+  max-width: 100%;
+  color: #222222;
+  line-height: 1.4;
+  font-family: Nunito;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  @include resD((
+    font-size: 20px,
+    margin: 16px 0,
+  ));
+  @include resM((
+    margin: 12px 0,
+    font-size: 16px,
+  ));
+}
+.cheatsheet-message {
+  @include resD((
+    margin-bottom:40px,
+  ));
+  @include resM((
+    margin-bottom: 16px,
+  ));
+  align-self: flex-start;
+  width: 100%;
+}
+.cheatsheet-imageContainer {
+  display: inline-block;
+  background-color: white;
+  margin-bottom: hs(10px);
+  padding: hs(12px);
+  border-radius: hs(5px) hs(5px) hs(5px) hs(0px);
+}
+.cheatsheet-image {
+  display: block;
+  @include resD((
+    width: 350px,
+    height: 350px,
+  ));
+  @include resM((
+    width: 226px,
+    height: 158px,
+  ));
+}
+.cheatsheet-animationContainer{
+  height: 180px;
+  margin-bottom: 20px;
+}
+.cheatsheet-terminalInputContainer{
+  padding: hs(32px) hs(40px);
+  background-color: #eae9ee;
+  width: 100%;
+  color: #000000;
+  box-sizing: border-box;
+  height: fit-content;
+  @include resD((
+    margin: 17px 0 0,
+    padding: 21px 25px,
+  ));
+  @include resM((
+    margin: 16px 4px 0 0,
+    padding: 8px 12px,
+  ));
+  background-color: #eae9ee;
+  & code{
+    @include resD((
+      font-size: 18px,
+      letter-spacing: 0.54px,
+    ));
+    @include resM((
+      letter-spacing: 0.36px,
+      font-size: 12px,
+    ));
+    color: black !important;
+    opacity: 0.7;
+    font-family: Monaco;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    text-align: left;
+  }
+}
+.cheatsheet-terminalInputContainerLeft{
+   background-color: #002f3e;
+  //  color: white;
+   opacity: 1;
+    flex-grow: 0;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    // color: #ffffff;
+   @include resD((
+      padding: 22px 25px,
+    ));
+    @include resM((
+        padding: 10px 9px,
+    ));
+   & code{
+     font-family: Monaco !important;
+     @include resD((
+      font-size: 20px,
+    ));
+    @include resM((
+       font-size: 12px,
+    ));
+  }
+}
+.cheatsheet-terminalOutputContainer {
+  width: 100%;
+  background-color: #015f7c;
+  color: white;
+  font-family: Monaco;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: relative;
+  @include resD((
+    padding: 22px 25px,
+  ));
+  @include resM((
+    padding: 10px 9px,
+  ));
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+    @include resD((
+    font-size: 20px,
+  ));
+  @include resM((
+    font-size: 12px,
+  ));
+  color: white !important;
+}
+.cheatsheet-terminalPlayButton {
+  background-image: url('../../../../assets/playButton.png');
+  background-size: 120%;
+  background-position-x: 43%;
+  background-position-y: 44%;
+  cursor: pointer;
+  position: absolute;
+  @include resD((
+    width: 70px,
+    height: 70px,
+    right: 24.1px,
+    top: -32px,
+  ));
+  @include resM((
+    width: 44px,
+    height: 44px,
+    top: -20px,
+    right: 29px,
+  ));
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.cheatsheet-starIcons{
+  @include resD((
+    height: 20px,
+    width: 20px,
+    margin-left: 8px,
+    padding: 8px,
+  ));
+  @include resM((
+    height: 20px,
+    width: 20px,
+    margin-left: 6px,
+    padding: 6px,
+  ));
+  cursor: pointer;
+  display: flex;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover{
+    opacity: 0.6;
+    background-color: whitesmoke;
+  }
+}
+.cheatsheet-contentTitle{
+    color: #00ade6;
+    display: flex;
+    font-family: Lato;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    text-align: left;
+    color: #00ade6;
+    @include resD((
+      margin: 0 8px 16px 0,
+      font-size: 25px,
+      letter-spacing: 0.75px,
+      align-items: flex-start,
+    ));
+    @include resM((
+      margin: 0 9px 0 0,
+      font-size: 18px,
+      letter-spacing: 0.54px,
+      align-items: center,
+    ));
+}
+.cheatsheet-contentContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    & > div{
+      width: 45%;
+    }
+}
+.cheatsheet-loadingText{
+    width: 230px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+}
+.cheatsheet-terminalInputContainerLoader{
+    padding: 0 !important;
+    height: 166.4px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+}
+.cheatsheet-emptyText{
+  width: 100%;
+  text-align: center;
+  height: 40vh;
+  & h1{
+    color: black;
+    opacity: 0.5;
+    @include resD((
+      font-size: 30px,
+    ));
+    @include resM((
+      font-size: 20px,
+    ));
+  }
+  & h4{
+    color: black;
+    opacity: 0.3;
+    @include resD((
+      font-size: 28px,
+      margin: 10px 0,
+    ));
+    @include resM((
+      font-size: 18px,
+      margin: 10px 0,
+    ));
+  }
+}
+@media (max-width: 579px) {
+.cheatsheet-text {
+  & > img{
+    width: 20px !important;
+    height: 20px !important;
+    object-fit: contain;
+  }
+}
+.cheatsheet-syntax{
+  margin-top: 15px;
+  overflow: hidden;
+}
+.cheatsheet-contentContainer{
+  flex-direction: column;
+  & > div{
+    width: 100%;
+  }
+  & > div:first-of-type{
+    margin-bottom: 20px;
+  }
+}
+.cheatsheet-loadingText{
+  width: 100%;
+}
+}
+@media (max-width: 698px) and (min-width: 580px) {
+.cheatsheet-text {
+  & > img{
+    width: 20px !important;
+    height: 20px !important;
+    object-fit: contain;
+  }
+}
+.cheatsheet-contentContainer{
+  flex-direction: column;
+  & > div{
+    width: 100%;
+  }
+  & > div:first-of-type{
+    margin-bottom: 30px;
+  }
+}
+.cheatsheet-loadingText{
+    width: 100%;
+}
+}
+@media (max-width: 799px) and (min-width: 699px){
+.cheatsheet-text {
+  & > img{
+    width: 20px !important;
+    height: 20px !important;
+    object-fit: contain;
+  }
+}
+.cheatsheet-contentContainer{
+  flex-direction: column;
+  & > div{
+    width: 100%;
+  }
+  & > div:first-of-type{
+    margin-bottom: 30px;
+  }
+}
+.cheatsheet-loadingText{
+    width: 100%;
+}
+}
+@media (max-width: 899px) and (min-width: 800px){
+.cheatsheet-contentArea{
+  padding: 20px 20px 0 20px;
+}
+.cheatsheet-text {
+  & > img{
+    width: 20px !important;
+    height: 20px !important;
+    object-fit: contain;
+  }
+}
+.cheatsheet-contentContainer{
+  flex-direction: column;
+  & > div{
+    width: 100%;
+  }
+  & > div:first-of-type{
+    margin-bottom: 30px;
+  }
+}
+.cheatsheet-loadingText{
+    width: 100%;
+}
+}
+
+

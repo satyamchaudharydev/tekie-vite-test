@@ -1,0 +1,468 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+// .Footer_base {
+//     @include resD((
+//         width: 100%,
+//         height: 500px,
+//         background: #1E1E1E,
+//         border-radius: 0 0 0 0
+//     ));
+//     @include resSm((
+//         width: 100%,
+//         height: 400px,
+//         background: #1E1E1E,
+//         border-radius: 20px 20px 0 0
+//     ))
+// }
+
+// .Footer_logo {
+//     @include resD((
+//         width: 7%,
+//         position: relative,
+//         left: 85px,
+//         top: 60px
+//     ));
+//     @include resSm((
+//         width: 20%,
+//         position: relative,
+//         left: 25px,
+//         top: 45px
+//     ))
+// }
+
+// .Footer_desc {
+//     @include resD((
+//         font-style: normal,
+//         font-weight: normal,
+//         font-size: 22px,
+//         line-height: 140%,
+//         color: #FFFFFF,
+//         opacity: 0.7,
+//         flex: none,
+//         order: 0,
+//         flex-grow: 0,
+//         width: 25%,
+//     ));
+//     @include resSm((
+//         font-style: normal,
+//         font-weight: normal,
+//         font-size: 13px,
+//         line-height: 140%,
+//         color: #FFFFFF,
+//         opacity: 0.7,
+//         flex: none,
+//         order: 0,
+//         flex-grow: 0,
+//         width: 50%,
+//     ));
+// }
+
+// .Footer_para {
+//     @include resD((
+//         position: relative,
+//         left: 85px,
+//         top: 80px,
+//         width: 90%
+//     ));
+//     @include resSm((
+//         position: relative,
+//         left: 25px,
+//         top: 50px,
+//         width: 70%
+//     ));
+// }
+
+// .Footer_legal_head {
+//     @include resD((
+//         font-style: normal,
+//         font-weight: 800,
+//         font-size: 30.0469px,
+//         line-height: 45px,
+//         color: #FFFFFF,
+//         flex: none,
+//         order: 0,
+//         flex-grow: 0,
+//     ));
+//     @include resSm((
+//         font-style: normal,
+//         font-weight: 800,
+//         font-size: 17px,
+//         line-height: 45px,
+//         color: #FFFFFF,
+//         flex: none,
+//         order: 0,
+//         flex-grow: 0,
+//     ));
+// }
+
+// .Footer_legal_txt {
+//     @include resD((
+//         font-style: normal,
+//         font-weight: 300,
+//         font-size: 21.0329px,
+//         line-height: 36px,
+//         color: #D9DBE1,
+//         flex: none,
+//         order: 0,
+//         flex-grow: 0,
+//     ));
+//     @include resSm((
+//         font-style: normal,
+//         font-weight: 300,
+//         font-size: 13px,
+//         line-height: 140%,
+//         color: #D9DBE1,
+//         flex: none,
+//         order: 0,
+//         flex-grow: 0,
+//     ));
+// }
+
+// .Footer_legal_box {
+//     @include resD((
+//         width: 10%,
+//         position: relative,
+//         left: 1500px,
+//         top: -230px
+//     ));
+//     @include resSm((
+//         width: 30%,
+//         position: relative,
+//         left: 250px,
+//         top: -175px
+//     ));
+// }
+
+// .Footer_icons {
+//     @include resD((
+//         position: relative,
+//         top: -150px,
+//         left: 85px
+//     ));
+//     @include resSm((
+//         position: relative,
+//         top: -70px,
+//         left: 25px,
+//         width: 60%
+//     ));
+// }
+
+// .Footer_fb{
+//     @include resD((
+//         margin-right: 10px,
+//         width: 50px,
+//         cursor:pointer
+//     ));
+//     @include resSm((
+//         margin-right: 15px,
+//         width: 37px,
+//         cursor:pointer
+//     ));
+// }
+
+// .Footer_insta{
+//     @include resD((
+//         margin-right: 10px,
+//         width: 50px,
+//         cursor:pointer
+
+//     ));
+//     @include resSm((
+//         margin-right: 15px,
+//         width: 37px,
+//         cursor:pointer
+
+//     ));
+// }
+
+// .Footer_link{
+//     @include resD((
+//         margin-right: 10px,
+//         width: 50px,
+//         cursor:pointer
+
+//     ));
+//     @include resSm((
+//         margin-right: 15px,
+//         width: 37px,
+//         cursor:pointer
+
+//     ));
+// }
+
+// .Footer_yt{
+//     @include resD((
+//         margin-right: 10px,
+//         width: 50px,
+//         cursor:pointer
+
+//     ));
+//     @include resSm((
+//         margin-right: 15px,
+//         width: 37px,
+//         cursor:pointer
+
+//     ));
+// }
+
+// .Footer_icon_heading {
+//     @include resD((
+//         display: none,
+//     ));
+//     @include resSm((
+//         display: block,
+//         position: relative,
+//         font-style: normal,
+//         font-weight: normal,
+//         font-size: 13px,
+//         line-height: 140%,
+//         color: #FFFFFF,
+//         left: 28px,
+//         top: -80px,
+//         width: 50%
+//     ))
+// }
+
+// .Footer_office {
+//     @include resSm((
+//         display: inline
+//     ));
+//     @include resD((
+//         display: none
+//     ))
+// }
+
+.lp-footer-container.description-page {
+    @include resD((
+        width: 100%,
+        margin: auto,
+        padding: 90px 180px 60px 120px,
+        border-radius: unset,
+    ));
+    @include resSm((
+        width: 100vw,
+        margin: auto,
+        padding: 40px 30px,
+        border-radius:17px 17px 0 0,
+    ));
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    background: rgba(30, 30, 30, 1);
+
+}
+.lp-footer-address-and-socials-container {
+    @include resD((
+        width: 51%,
+    ));
+ 
+}
+.lp-footer-tekie-logo {
+    img {
+        @include resSm((
+            width: 65px,
+            margin-top: unset,
+            margin-bottom: 21px,
+        ));
+        @include resD((
+            width: 128px,
+            margin-top: 15px,
+            margin-bottom: 60px,
+        ));
+    }
+}
+.lp-footer-address {
+    p {
+        @include resD((
+            font-size: 22px,
+            width: 55%,
+        ));
+        @include resSm((
+            font-size: 13px,
+            width: unset,
+        ));
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 140%;
+        font-feature-settings: 'salt' on, 'liga' off;
+        color: #FFFFFF;
+        opacity: 0.7;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 0;
+    }
+    p:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        @include resSm((
+            margin-top: 20px,
+        ));
+        @include resD((
+            margin-top: 24px,
+        ))
+    }
+}
+.lp-footer-social-container {
+    p {
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 140%;
+        font-feature-settings: 'salt' on, 'liga' off;
+        color: #FFFFFF;
+        opacity: 0.7;
+        @include resD((
+            display: none,
+          ));
+        @include resSm((
+            font-size: 13px,
+            margin-top: 55px
+          ));
+    }
+}
+.lp-footer-socials {
+    @include resD((
+        margin-top: 50px,
+        padding: 0px,
+        width: fit-content,
+    ));
+    @include resSm((
+        width: 70%,
+        padding: 0px,
+        margin-top: 10px,
+    ));
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    & li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        @include resD((
+            min-width: 70px,
+            min-height: 70px,
+            border-radius: 50%,
+            margin-right: 20px,
+            
+          ));
+        @include resSm((
+            min-width: 37px,
+            min-height: 37px,
+            border: unset,
+            border-radius: 50%,
+            margin-right: 17px,
+          ));
+          & img{
+              width: 100%;
+              height: 100%;
+              @include resD((
+                    // width: 28px,
+                    // height: 100%,
+                    margin-top:3px
+                ));
+                @include resSm((
+                    // width: 16px,
+                    // height: 16px,
+                    margin-top:3px
+                ));
+                & img.youtube {
+                @include resD((
+                    // width: 25px,
+                    // height: 20px,
+                    margin-top:2px,
+                ));
+                @include resSm((
+                    // width: 18px,
+                    // height: 15px,
+                    margin-top: 3px,
+                ))
+            }
+          }
+        & a{
+            display: block;
+        }
+    }
+    list-style: none;
+}
+.lp-footer-tekie-info-container {
+    display: flex;
+    justify-content: space-evenly;
+    div:nth-child(2) {
+        .lp-footer-links-list {
+            @include resD((
+                padding: unset,
+                // margin-right: unset,
+              ));
+            @include resSm((
+                padding: 0px,
+                // margin-right: 70px,
+              ));
+        }
+    }
+}
+.lp-footer-links-list {
+    @include resD((
+        padding: 0px,
+        margin-top: 36px
+    ));
+    @include resSm((
+        padding: 0px,
+        margin-top: 24px
+    ));
+    list-style: none;
+    li {
+        a {
+            text-decoration: none;
+        }
+    }
+}
+.lp-footer-listHeading {
+    @include resD((
+        font-size: 30px,
+        line-height: 45px
+      ));
+    font-family: Gilroy;
+    font-weight: bold;
+    font-feature-settings: 'salt' on, 'liga' off;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.lp-footer-listItem {
+    @include resD((
+        font-size: 22px,
+        line-height: 36px,
+        margin-bottom: unset,
+        margin-top: 18px
+    ));
+    @include resSm((
+        font-size: 13px,
+        line-height: unset,
+        margin-bottom: 22px 
+    ));
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 300;
+    font-feature-settings: 'salt' on, 'liga' off;
+    color: #D9DBE1;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    a{
+        &:hover {
+            text-decoration: underline,
+        }
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+

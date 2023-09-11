@@ -1,0 +1,162 @@
+@import 'src/scss/size.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/triangleBG.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bodyContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+.text {
+  font-family: Nunito;
+  font-size: hs(28px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.37;
+  color: #92c5eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: hs(31px);
+}
+
+.potatoIcon {
+  position: relative;
+}
+
+.potatoContainer {
+  width: hs(280px);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+
+// form css
+
+.row{
+  padding: hs(16px) hs(36px);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 50%;
+  align-items: flex-start;
+  border-bottom: 1px solid #EBFDFD; 
+  box-sizing: border-box;
+}
+
+
+.bGcolor{
+  background-color: rgba(224, 252, 253, 0.3);
+}
+
+.formSection {
+  width: hs(955px);
+  margin-top: hs(65px);
+  margin-bottom: hs(60px);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -1px 1px 13px -2px rgba(161,154,154,0.72);
+}
+
+.formHeader{
+  width: 100%;
+  height: hs(70px);
+  background-color: rgba(191, 247, 249, 0.3);
+  display: flex;
+  align-items: center;
+  border-top-left-radius: hs(10px);
+  border-top-right-radius: hs(10px);
+  position: relative;
+
+  & > .headerText{
+    font-family: Nunito;
+    font-size: hs(28px);
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: left;
+    color: #333333;
+    padding-left: hs(36px);
+  }
+}
+
+.infoTypeText{
+  font-family: Nunito;
+  font-size: hs(25px);
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  color: #504f4f;
+}
+
+.inputFieldWrapper{
+  display: flex;
+  align-items: center;
+  width: hs(290px);
+  height: hs(41px);
+  margin-bottom: hs(10px);
+}
+
+.inputField{
+  width: 100%;
+  height: 100%;
+  padding-left: hs(12px);
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #707070;
+  opacity: 0.5;
+  font-family: Nunito;
+  font-size: hs(23px);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+}
+
+.disabledInput{
+  cursor: not-allowed;
+  background-color: lightgray;
+}
+
+
+.textAreaFieldWraper{
+  display: flex;
+  align-items: center;
+  width: hs(500px);
+  height: hs(300px);
+  margin-bottom: hs(10px);
+}
+
+.fileUploader{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: hs(500px);
+  height: auto;
+}

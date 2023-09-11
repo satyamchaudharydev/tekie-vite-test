@@ -1,0 +1,81 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+@import 'src/scss/theme/constants.scss';
+
+.nProgressContainer {
+  pointer-events: none;
+}
+
+.nProgressWrapper {
+  background: #29d;
+  height: 2;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1031;
+}
+
+.nProgressItem {
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  display: block;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  transform: rotate(3deg) translate(0px, -4px);
+  width: 100px;
+}
+
+.loaderContainer{
+  position: relative;
+  @include resD((
+    height: calc(100vh - #{hs($topNavBarHeight)}),
+  ))
+}
+
+.loaderContentContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin: auto;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loaderGifContainer{
+  @include resD((
+    height:148px,
+    width:148px,
+  ))
+}
+
+.loadingText{
+  color: #403F3FB2;
+  @include resD((
+    font-size:24px,
+    font-weight:800,
+    margin-bottom:34px
+  ))
+}
+
+.animatedLoadingTextContainer{
+  position: relative;
+  width: 100vw;
+}
+.animatedLoadingText{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: 0.2s all ease-in-out;
+  color: $emperor-66;
+  @include resD((
+    font-size:24px,
+    font-weight:600,
+  ));
+}

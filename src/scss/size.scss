@@ -1,0 +1,331 @@
+@use "sass:meta";
+@use "sass:list";
+@use "sass:map";
+@use 'lib.scss';
+
+@function hsfb($baseWidth, $width, $factor) {
+  @return ($width / $baseWidth) * 100vw;
+}
+
+// Horizontal Scale Factor
+@function hsf($width, $factor, $screenWidth: 1920px) {
+  @return (($width / $screenWidth) * 100vw) / $factor;
+}
+
+@function vsf($width, $factor) {
+  @return (($width / 1080px) * 100vh) / $factor;
+}
+
+// Horizontal Scale
+@function hs($width, $factor: 1, $screenWidth: 1920px) {
+  @return hsf($width, $factor, $screenWidth);
+}
+
+@function vs($width, $factor: 1) {
+  @return vsf($width, $factor);
+}
+
+@function hsms($width) {
+  @return hsfb(360px, $width, 1);
+} 
+@function hsm($width) {
+  @return hsfb(414px, $width, 1);
+} 
+
+@function hsml($width) {
+  @return hsfb(540px, $width, 1);
+} 
+
+
+$stylesToExtend: 
+  width, height, padding, margin,gap,
+  padding-top, padding-bottom, padding-right, padding-left,
+  margin-top, margin-bottom, margin-right, margin-left,gap,
+  top, left, bottom, right,
+  font-size, letter-spacing, border-radius, box-shadow, line-height,
+  min-width, max-width, min-height, max-height, border, x, y;
+
+@function contains($value, $list) {
+  @return (false != list.index($list, $value));
+}
+
+@mixin resM($styles: (), $scale: hsm) {
+  $dimensionsStyles: ();
+  $nonDimensionsStyles: ();
+  @each $prop, $val in $styles {
+    @each $eProp in $stylesToExtend {
+      @if $eProp == $prop {
+        @if (map.has-key($dimensionsStyles, $prop) == false ) and
+            (map.has-key($nonDimensionsStyles, $prop) == false) {
+         $dimensionsStyles: map.merge($dimensionsStyles, ($prop: $val));
+        }
+      }
+    }
+  }
+  @each $prop, $val in $styles {
+    @if (map.has-key($dimensionsStyles, $prop) == false) {
+      $nonDimensionsStyles: map.merge($nonDimensionsStyles, ($prop: $val));
+    }
+  }
+  @each $prop, $val in $dimensionsStyles {
+    @if meta.type-of($val) == 'list' {
+      $new-list: [];
+      @each $v in $val {
+        @if lib.is-relative-length($v) {
+          $new-list: list.append($new-list, meta.call(meta.get-function($scale), $v));
+        } @else {
+          $new-list: list.append($new-list, $v);
+        }
+      }
+      #{$prop}: lib.to-string($new-list, ' ');
+    } @else {
+      @if lib.is-relative-length($val) {
+        #{$prop}: meta.call(meta.get-function($scale), $val);
+      } @else {
+        #{$prop}: $val;
+      }
+    }
+  }
+
+  $breakPoints: (
+    ("min-width": 450px, "max-width": 500px, "factor": 1.2),
+    ("min-width": 500px, "max-width": 600px, "factor": 1.5),
+    ("min-width": 600px, "max-width": 700px, "factor": 1.7),
+    ("min-width": 700px, "max-width": 800px, "factor": 1.9),
+    ("min-width": 800px, "max-width": 899px, "factor": 2.1),
+  );
+
+  @each $breakPoint in $breakPoints {
+    @media (min-width: map.get($breakPoint, "min-width" )) and (max-width: map.get($breakPoint, "max-width" )) {
+      @each $prop, $val in $dimensionsStyles {
+        $factor: map.get($breakPoint, "factor" );
+        @if meta.type-of($val) == 'list' {
+          $new-list: [];
+          @each $v in $val {
+            @if lib.is-relative-length($v) {
+              $new-list: list.append($new-list, meta.call(meta.get-function($scale), $v / $factor));
+            } @else {
+              $new-list: list.append($new-list, $v);
+            }
+          }
+          #{$prop}: lib.to-string($new-list, ' ');
+        } @else {
+            @if lib.is-relative-length($val) {
+              #{$prop}: meta.call(meta.get-function($scale), $val / $factor);
+            } else {
+              #{$prop}: $val;
+            }
+        }
+      }
+    }
+  }
+
+  @each $prop, $val in $nonDimensionsStyles {
+    #{$prop}: $val;
+  }
+}
+
+@mixin resD($styles: (), $shouldFactor: false, $screenWidth: 1920px) {
+  $dimensionsStyles: ();
+  $nonDimensionsStyles: ();
+  @each $prop, $val in $styles {
+    @each $eProp in $stylesToExtend {
+      @if $eProp == $prop {
+        @if (map.has-key($dimensionsStyles, $prop) == false ) and
+            (map.has-key($nonDimensionsStyles, $prop) == false) {
+         $dimensionsStyles: map.merge($dimensionsStyles, ($prop: $val));
+        }
+      }
+    }
+  }
+  @each $prop, $val in $styles {
+    @if (map.has-key($dimensionsStyles, $prop) == false) {
+      $nonDimensionsStyles: map.merge($nonDimensionsStyles, ($prop: $val));
+    }
+  }
+
+  $breakPoints: (
+    ("min-width": 900px, "max-width": 1000px, "factor": 0.9),
+    ("min-width": 1000px, "max-width": 1300px, "factor": 1),
+  );
+  @media (min-width: 1300px) {
+    @each $prop, $val in $dimensionsStyles {
+      @if meta.type-of($val) == 'list' {
+        $new-list: [];
+        @each $v in $val {
+          @if lib.is-relative-length($v) {
+            $new-list: list.append($new-list, hs($v, 1, $screenWidth));
+          } @else {
+            $new-list: list.append($new-list, $v);
+          }
+        }
+          #{$prop}: lib.to-string($new-list, ' ');
+      } @else {
+        @if lib.is-relative-length($val) {
+          #{$prop}: hs($val, 1, $screenWidth);
+        } @else {
+          #{$prop}: $val;
+        }
+      }
+    }
+    
+    @each $prop, $val in $nonDimensionsStyles {
+      #{$prop}: $val;
+    }
+  }
+
+  @each $breakPoint in $breakPoints {
+    @media (min-width: map.get($breakPoint, "min-width" )) and (max-width: map.get($breakPoint, "max-width" )) {
+      @each $prop, $val in $dimensionsStyles {
+        $factor: map.get($breakPoint, "factor");
+
+        @if $shouldFactor == true {
+          $factor: 1;
+        }
+
+        @if meta.type-of($val) == 'list' {
+          $new-list: [];
+          @each $v in $val {
+            @if lib.is-relative-length($v) {
+              $new-list: list.append($new-list, hs($v, 1, $screenWidth) / $factor);
+            } @else {
+              $new-list: list.append($new-list, $v);
+            }
+          }
+            #{$prop}: lib.to-string($new-list, ' ');
+        } @else {
+          @if lib.is-relative-length($val) {
+            #{$prop}: hs($val, 1, $screenWidth) / $factor;
+          } @else {
+            #{$prop}: $val;
+          }
+        }
+
+      }
+      @each $prop, $val in $nonDimensionsStyles {
+        #{$prop}: $val;
+      }
+    }
+  }
+    
+}
+@mixin resD1280($styles: (),$shouldFactor: false) {
+  $dimensionsStyles: ();
+  $nonDimensionsStyles: ();
+  @each $prop, $val in $styles {
+    @each $eProp in $stylesToExtend {
+      @if $eProp == $prop {
+        @if (map.has-key($dimensionsStyles, $prop) == false ) and
+            (map.has-key($nonDimensionsStyles, $prop) == false) {
+         $dimensionsStyles: map.merge($dimensionsStyles, ($prop: $val));
+        }
+      }
+    }
+  }
+  @each $prop, $val in $styles {
+    @if (map.has-key($dimensionsStyles, $prop) == false) {
+      $nonDimensionsStyles: map.merge($nonDimensionsStyles, ($prop: $val));
+    }
+  }
+
+  $breakPoints: (
+    ("min-width": 900px, "max-width": 1000px, "factor": 0.9),
+    ("min-width": 1001px, "max-width": 1600px, "factor": 1),
+    ("min-width": 1601px, "max-width": 2000px, "factor": 1.25),
+  );
+  @media (min-width: 1000px) {
+    @each $prop, $val in $dimensionsStyles {
+      @if meta.type-of($val) == 'list' {
+        $new-list: [];
+        @each $v in $val {
+          @if lib.is-relative-length($v) {
+            $new-list: list.append($new-list, hs($v, 1, 1280px));
+          } @else {
+            $new-list: list.append($new-list, $v);
+          }
+        }
+          #{$prop}: lib.to-string($new-list, ' ');
+      } @else {
+        @if lib.is-relative-length($val) {
+          #{$prop}: hs($val, 1, 1280px);
+        } @else {
+          #{$prop}: $val;
+        }
+      }
+    }
+    
+    @each $prop, $val in $nonDimensionsStyles {
+      #{$prop}: $val;
+    }
+  }
+
+  @each $breakPoint in $breakPoints {
+    @media (min-width: map.get($breakPoint, "min-width" )) and (max-width: map.get($breakPoint, "max-width" )) {
+      @each $prop, $val in $dimensionsStyles {
+        $factor: map.get($breakPoint, "factor");
+
+        @if $shouldFactor == true {
+          $factor: 1;
+        }
+
+        @if meta.type-of($val) == 'list' {
+          $new-list: [];
+          @each $v in $val {
+            @if lib.is-relative-length($v) {
+              $new-list: list.append($new-list, hs($v, 1, 1280px) / $factor);
+            } @else {
+              $new-list: list.append($new-list, $v);
+            }
+          }
+            #{$prop}: lib.to-string($new-list, ' ');
+        } @else {
+          @if lib.is-relative-length($val) {
+            #{$prop}: hs($val, 1, 1280px) / $factor;
+          } @else {
+            #{$prop}: $val;
+          }
+        }
+
+      }
+      @each $prop, $val in $nonDimensionsStyles {
+        #{$prop}: $val;
+      }
+    }
+  }
+    
+}
+
+@mixin resSm($styles: ()) {
+  @include resM($styles, hsms)
+}
+
+@mixin resMs($styles: ()) {
+  @include resM($styles, hsml)
+}
+
+@mixin resDn($styles: ()) {
+  @include resD($styles, true)
+}
+@mixin resDB($styles: ()) {
+  @include resD($styles, false, 1920px)
+}
+@mixin hide-element($device-breakPoint) {
+  @media screen  and (max-width: $device-breakPoint) {
+    display: none;
+  }
+}
+
+@mixin media-query($breakpoint, $type: 'min') {
+  $query: null;
+
+  @if $type == 'min' {
+    $query: "(min-width: #{$breakpoint})";
+  } @else if $type == 'max' {
+    $query: "(max-width: #{$breakpoint})";
+  }
+
+  @media screen and #{$query} {
+    @content;
+  }
+}
+  

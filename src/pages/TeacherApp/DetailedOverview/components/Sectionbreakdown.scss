@@ -1,0 +1,640 @@
+@import "src/scss/size.scss";
+@import 'src/scss/Inter.scss';
+
+
+.section-breakdown {
+    display: flex;
+}
+.section-card {
+        background-color: #FFFFFF;
+    @include resD((
+        border-radius: 20px,
+        min-width: 89%,
+        max-width: 89%,
+        min-height:605px,
+      ));
+      @include resM((
+        border-radius: 20px,
+        min-width: 89%,
+        max-width: 89%,
+        min-height:605px,
+      ));
+
+}
+.section-inner-card {
+    @include resD((
+        border-radius: 20px,
+        margin: 29px 0px 35px 30px
+      ));
+      @include resM((
+        border-radius: 20px,
+        margin: 29px 0px 35px 30px
+      ));
+}
+.section-card-heading {
+}
+.section-card-info {
+    display: flex;
+    flex-direction: row;
+    @include resD((
+          width: 100%,
+      ));
+      @include resM((
+          width: 100%,
+      ));
+}
+.section-card-title {
+    font-style: normal;
+    font-weight: 600;
+    font-family:Inter;
+    @include resD((
+              margin-bottom: 4%,
+              font-size: 23px,
+          ));
+    @include resM((
+        margin-bottom: 4%,
+        font-size: 21px,
+    ));
+}
+.section-card-title-heading {
+    font-style: normal;
+    font-weight: 600;
+    font-family:Inter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+@include resD((
+            font-size: 18px,
+            margin: 3px 34px,
+        ));
+@include resM((
+    font-size: 16px,
+    margin: 3px 34px,
+));
+}
+.quiz-title-heading {
+    font-style: normal;
+    font-weight: 600;
+    font-family:Inter;
+@include resD((
+        padding: 3px 0px 3px,
+        font-size: 18px,
+));
+@include resM((
+        padding: 3px 0px 3px,
+        font-size: 16px,
+));  
+}
+.assignment-title-heading {
+    font-style: normal;
+    font-weight: 600;
+    font-family:Inter;
+@include resD((
+        padding: 3px 0px 3px,
+        font-size: 18px,
+));
+@include resM((
+        padding: 3px 0px 3px,
+        font-size: 16px,
+));  
+}
+.section-headingdiv {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @include resD((
+        width:100%,
+      ));
+      @include resM((
+        width:100%,
+      ));  
+
+}
+.watchtime-descriptiondiv {
+    display: flex;
+    flex-direction: column;
+    @include resD((
+        margin-bottom: auto,
+        margin-top: auto
+      ));
+      @include resM((
+        margin-bottom: auto,
+        margin-top: auto,
+      )); 
+}
+.watchtime-description {
+    font-family:Inter;
+    font-style: normal;
+    font-weight: 600;
+    @include resD((
+        margin: auto,
+        margin-bottom: 5px,
+        font-size: 48px,
+      ));
+    @include resM((
+        margin: auto,
+        margin-bottom: 5px,
+        font-size: 48px,
+      ));  
+}
+.watchtime-duration {
+    color:#757575;
+    font-family:Inter;
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+@include resD((
+        font-size: 13px,   
+));
+@include resM(( 
+        font-size: 13px,
+));
+}
+.info-card-detail{
+    @include resD((
+            font-style: normal,
+            font-weight: 600,
+            font-size: 14px,
+            font-family:Inter,
+            cursor: pointer,
+         background-color: white,
+         border: none,
+         border-bottom: 1px solid #8C61CB,
+         color: #8C61CB
+      ));
+}
+.section-card-videoimg { 
+    @include resD((
+        width: 100%,
+        height: 100%,
+        border-radius: 12px
+  ));
+    @include resM((
+        width: 100%,
+        height: 100%,
+        border-radius: 12px
+    ));
+}
+.section-card-button {
+    background: conic-gradient(from 269.94deg at 50% 50%, #F6BE7C 0deg, #F7941D 185.6deg, #F6BE7C 360deg);
+    box-shadow: 0px 2.08451px 10.4225px rgba(144, 101, 207, 0.4);
+    border-radius: 24.6667px;
+    border: none;
+    @include resD((
+        width: 80%,
+        height: 18%,
+    ))   
+}
+.section-card-buttonholder {
+    @include resD((
+        width: 30%,
+        margin-top: 11%,
+        margin-right: 20px,
+  ));
+}
+.section-card-buttontext {
+    font-style: normal;
+    font-weight: 900;
+    color:white;
+    font-family:Nunito;
+    @include resD((
+        font-size: 16px,
+    ));
+    @include resM((
+        font-size: 16px,
+    ))    
+}
+.Quizinfo-parent {
+    position: relative;
+}
+.quiz-seperator {
+    @include resD((
+        top: 110px,
+       right: -55px,
+        position: absolute,
+        width: 180px,
+        height: 0px,
+        opacity: 0.1,
+border: 1px solid #000000,
+transform: rotate(90deg),
+color:#000000
+    ))   
+}
+.Quizinfo-table {
+    display: flex;
+    flex-direction: column;
+    @include resD((
+        border: 1px solid #C4C4C4,
+        border-radius: 12px,
+        min-width: 290px,
+        min-height: 210px,
+        margin-left: 3%,
+    ));
+    @include resM((
+        border: 1px solid #C4C4C4,
+        border-radius: 12px,
+        min-width: 270px,
+        max-width: 270px,
+        min-height: 210px,
+        margin-left: 3%,
+    )) 
+}
+.Quizinfo-Heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @include resD((
+        padding: 10px,
+    ));
+    @include resM((
+        padding: 10px,
+    ))  
+}
+.Quizinfo-text {
+    font-style: normal;
+    font-weight: 600;
+    font-family:Inter;
+    @include resD((
+        margin-top: auto,
+        margin-bottom: auto,
+        padding: 6px,
+        line-height: 17.92px,
+        font-size: 17px,
+    ));
+    @include resM((
+        margin-top: auto,
+        margin-bottom: auto,
+        padding: 6px,
+        line-height: 17.92px,
+        font-size: 17px,
+    ))   
+}
+.proficiency-leveldiv {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+.proficiency-level {
+    color:#757575;
+    font-style: normal;
+    font-weight: normal;
+    font-family:Inter;
+    @include resD((
+        font-size: 13px,
+        margin-top: 3%,
+        margin-right:4px
+    ));
+    @include resM((
+        font-size: 11px,
+        margin-top: 3%,
+        margin-right:4px
+    ))    
+}
+.topstudent-info {
+    height: 19%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.NumnName {
+    @include resD((
+        font-style: normal,
+        font-weight: 400,
+        font-size: 14px,
+        font-family:Inter,
+        color:#757575
+    ))   
+}
+.role {
+    @include resD((
+        font-style: normal,
+        font-weight: 700,
+        font-size: 14px,
+        font-family:Inter,
+        color:#8E63CE
+    ))   
+}
+.studentinfo-holder {
+    @include resD((
+        height: 100%, 
+        padding: 5px 25px,
+        margin-top: 5%,
+    ));
+    @include resM((
+        height: 100%, 
+        padding: 5px 25px,
+        margin-top: 5%,
+    ))
+}
+.videoimg-container {
+@include resD((
+    margin: 4px,
+    width: 190px,
+    height: 100px,
+    padding: 0px 16px 0px 0px,
+    ));
+@include resM((
+    margin: 4px,
+    width: 190px,
+    height: 100px,
+    padding: 0px 16px 0px 0px,
+))
+}
+.sectioninfo-card-detail-button {
+    @include resD((
+        padding: 4px 0px 0px,
+        width:fit-content,
+        border: none,
+        background: white,
+        border-bottom: 1px solid #8C61CB,
+        margin-right:75%,
+        margin-top:2%
+      ));
+      @include resD((
+        padding: 4px 0px 0px,
+        width:fit-content,
+        border: none,
+        background: white,
+        border-bottom: 1px solid #8C61CB,
+        margin-right:75%,
+        margin-top:2%
+      ));
+}
+.sectioninfo-card-view-detail-button {
+    @include resD((
+        padding: 4px 0px 0px,
+        width:fit-content,
+        border: none,
+        background: white,
+        border-bottom: 1px solid #8C61CB,
+        margin-right:66%,
+      ));
+      @include resD((
+        padding: 4px 0px 0px,
+        width:fit-content,
+        border: none,
+        background: white,
+        border-bottom: 1px solid #8C61CB,
+        margin-right:66%,
+      ));
+}
+.sectioninfo-card-detail-text {
+    cursor: pointer;
+    @include resD((
+    font-size: 15px,
+    border: none,
+    font-style: normal,
+    font-weight: 500,
+    font-family: Inter,
+    color: #8C61CB,
+      ));
+}
+.video-info-container {
+    display:flex;
+@include resD((
+        width: 100%,
+    ));
+@include resM((
+    width: 100%,
+));
+
+}
+.video-thumbnail-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+@include resD((
+    border-radius: 10px,
+    width: 90%,
+    margin-left: 3.5%,
+    margin-bottom: 6%,
+    margin-top: 1.5%,
+    ));
+@include resM((
+    border-radius: 10px,
+    width: 90%,
+    margin-left: 2%,
+    margin-bottom: 6%,
+    margin-top: 1.5%,
+))
+}
+.separator-div {
+    background: #00ADE6;
+    opacity: 0.2;
+    @include resD((
+     border-radius: 10px,
+        width:5px,
+        margin: 0px 12px 0px 15px
+      ));
+      @include resM((
+     border-radius: 10px,
+        width:3px,
+        margin: 0px 12px 0px 13px
+      ))
+}
+.quiz-info-holder {
+    display: flex;
+    flex-direction: column;
+    @include resD((
+        width: 90%,
+        margin-bottom: 3%,
+        margin-left: 4.5%,
+        margin-right: 3%,
+    ));
+    @include resM((
+        width: 90%,
+        margin-bottom: 3%,
+        margin-left: 4.5%,
+        margin-right: 3%,
+    ))
+}
+.quiz-info-container {
+    display: flex;
+    @include resD((
+            width: 100%,
+    ));
+    @include resM((
+        width: 100%,
+    ))
+}
+.quiz-heading-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include resD((
+            margin-left: 4%,
+    ));
+    @include resM((
+            margin-left: 4%,
+    ))
+}
+.assignment-heading-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include resD((
+        margin-left: 4%,
+    ));
+    @include resM((
+        margin-left: 4%,
+    ))
+}
+.Button-holder {
+    display: flex;
+    flex-direction: column;
+    @include resD((
+        margin-top: auto,
+        margin-bottom: auto,
+        width: 20%,
+        margin-right: 2%,
+    ));
+    @include resM((
+        margin-top: auto,
+        margin-bottom: auto,
+        width: 20%,
+        margin-right: 2%,
+    ))
+}
+.Button-style {
+    background: conic-gradient(from 269.94deg at 50% 50%, #F6BE7C 0deg, #F7941D 185.6deg, #F6BE7C 360deg);
+    @include resD((
+        box-shadow: 0px 2.08451px 10.4225px rgba(144, 101, 207, 0.4),
+        border-radius: 24.6667px,
+        border: none,
+        padding: 16px 0px 16px 0px,
+    ));
+    @include resM((
+        box-shadow: 0px 2.08451px 10.4225px rgba(144, 101, 207, 0.4),
+        border-radius: 24.6667px,
+        border: none,
+        padding: 16px 0px 10px 0px,
+    ))
+}
+.quiz-seperator-div {
+    opacity: 0.1;
+    @include resD((
+        height: 84%,
+        margin-top: 2%,
+        border: 1px solid #000000,
+    ));
+    @include resM((
+        height: 84%,
+        margin-top: 2%,
+        border: 1px solid #000000,
+    ))
+}
+.header-text-div {
+    display: flex;
+}
+.proficiency-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include resD((
+        width: 100%,
+        margin-top: 3%,
+    ));
+    @include resM((
+        width:100%,
+        margin-top: 3%,
+    ))
+}
+.icon-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include resD((
+        margin-top: 2%,
+    ));
+    @include resM((
+        margin-top: 2%,
+    ));
+    svg {
+        @include resD((
+            width: 18px,
+            height: 18px,
+        ));
+        @include resM((
+            width: 16px,
+            height: 16px,
+        ));
+    }
+}
+.Codeimg-holder {
+    @include resD((
+        width: 35px,
+        height: 35px,
+        margin-top: 1%,
+    ));
+    @include resM((
+        width: 30px,
+        height: 30px,
+        margin-top: 1%,
+    ))
+}
+.Videocam-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        @include resD((
+            width: 35px,
+            height: 35px,
+        ));
+        @include resM((
+            width: 30px,
+            height: 30px,
+        ));
+    }
+}
+.BarOutline-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        @include resD((
+            width: 35px,
+            height: 35px,
+        ));
+        @include resM((
+            width: 30px,
+            height: 30px,
+        ));
+    }
+}
+.PersonOutline-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        @include resD((
+            width: 22px,
+            height: 22px,
+        ));
+        @include resM((
+            width: 20px,
+            height: 20px,
+        ));
+    }
+}
+.video-detail-holder {
+    display: flex;
+    flex-direction: column;
+
+}
+.quiz-detail-holder {
+    display: flex;
+    flex-direction: column;
+
+}
+.quiz-info-div {
+    display: flex;
+    flex-direction: row;
+}

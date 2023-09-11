@@ -1,0 +1,407 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+.individualStudentReport {
+  display: flex;
+  flex-direction: column;
+  * {
+    box-sizing: border-box;
+    font-family: "Inter";
+  }
+  p {
+    margin: 0;
+  }
+  @include resD1280(
+    (
+      padding: 20px 20px 20px 0px,
+    )
+  );
+  @include resM(
+    (
+      padding: 20px 20px 20px 0px,
+    )
+  );
+}
+
+.studentDetailsSection {
+  display: flex;
+  @include resD1280(
+    (
+      border-radius: 16px 16px 0px 0px,
+      margin-top: 24px,
+    )
+  );
+  .nextArrowIcon {
+    transform: rotate(180deg);
+    color: #8c61cb;
+    & path {
+      fill: #8c61cb;
+    }
+    @include resD1280(
+      (
+        height: 16px,
+        width: 16px,
+        margin-right: 14px,
+      )
+    );
+  }
+}
+
+.backActionContainer {
+  display: flex;
+  align-items: center;
+  color: #8c61cb;
+  cursor: pointer;
+  width: fit-content;
+  background: #f3effa;
+  white-space: nowrap;
+  font-weight: 500;
+  @include resD1280(
+    (
+      font-size: 14px,
+      line-height: 22px,
+      border-radius: 8px,
+      padding: 7px 16px 7px 12px,
+      margin-right: 12px,
+    )
+  );
+  @include resM(
+    (
+      font-size: 24px,
+      line-height: 22px,
+      border-radius: 8px,
+      padding: 7px 16px 7px 12px,
+      margin-right: 12px,
+    )
+  );
+}
+
+.studentSelector {
+  display: flex;
+}
+
+.studentDetailsFlex {
+  display: flex;
+  width: 100%;
+}
+
+.studentProfilePic {
+  border-radius: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include resD1280(
+    (
+      border: 1px solid #e7e7e7,
+      margin-right: 16px,
+      height: 32px,
+      width: 32px,
+    )
+  );
+  @include resM(
+    (
+      border: 1px solid #e7e7e7,
+      margin-right: 16px,
+      height: 40px,
+      width: 40px,
+    )
+  );
+}
+.studentSelection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nextPrevArrowAction {
+  display: flex;
+  align-items: center;
+  & > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #d2d2d2;
+    cursor: pointer;
+    font-weight: 500;
+    color: #000000;
+    @include resD1280(
+      (
+        border-radius: 8px,
+        padding: 8px 12px 8px 8px,
+        gap: 8px,
+        margin-left: 8px,
+        font-size: 12px,
+        line-height: 16px,
+      )
+    );
+  }
+  & > div:first-of-type svg {
+    transform: rotate(180deg);
+  }
+  .disableButton {
+    svg,
+    path {
+      fill-opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  svg {
+    margin: 0;
+    cursor: pointer;
+    @include resD1280(
+      (
+        height: 18px !important,
+        width: 18px !important,
+      )
+    );
+    &:first-of-type {
+      @include resD1280(
+        (
+          // margin: 0 10px,
+            // gap: 8px,
+        )
+      );
+    }
+  }
+  svg,
+  path {
+    color: #504f4f !important;
+    fill: #504f4f !important;
+    fill-opacity: 1;
+  }
+}
+.studentClassAndHomeworkSection {
+  background-color: #ffffff;
+  @include resD1280(
+    (
+      border-radius: 0px 0px 16px 16px,
+      padding: 25px 20px,
+      margin-top: 30px,
+    )
+  );
+  @include resM(
+    (
+      border-radius: 0px 0px 16px 16px,
+      padding: 16px,
+    )
+  );
+}
+
+.studentSubmissionSection {
+  background: #ffffff;
+  @include resD1280(
+    (
+      border-radius: 0px 0px 16px 16px,
+      padding: 16px,
+      margin-top: 16px,
+    )
+  );
+}
+
+.classWorkTitle {
+  position: sticky;
+  top: -1px;
+  z-index: 99;
+  transition: all 0.3 ease-in-out;
+  @include resD1280(
+    (
+      display: flex,
+      flex-direction: row,
+      align-items: center,
+      justify-content: space-between,
+      padding: 12px 18px,
+      background: linear-gradient(90deg, #eff8ff 42.64%, rgba(255, 255, 255, 1) 71.29%),
+      border-radius: 4px,
+      margin-bottom: 16px,
+    )
+  );
+
+  span {
+    @include resD1280(
+      (
+        font-family: "Inter",
+        font-style: normal,
+        font-weight: 700,
+        font-size: 18px,
+        line-height: 24px,
+        color: #005773,
+      )
+    );
+  }
+  &.homeworkTitle {
+    transition: all 0.3 ease-in-out;
+    background: linear-gradient(90deg, rgb(243, 247, 247) 42.64%, rgba(255, 255, 255, 1) 71.29%);
+    position: sticky;
+    top: -1px;
+    z-index: 99;
+    span {
+      color: #10695d;
+    }
+  }
+}
+.hiddenHeader {
+  visibility: hidden;
+}
+
+.questionsLabel {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  @include resD1280(
+    (
+      margin-top: 25px,
+    )
+  );
+  & > div {
+    display: flex;
+    flex-direction: column;
+    @include resD1280(
+      (
+        margin-right: 40px,
+      )
+    );
+  }
+  .numCount {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    @include resD1280(
+      (
+        font-size: 18px,
+        line-height: 18px,
+      )
+    );
+    color: #757575;
+  }
+  span {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    @include resD1280(
+      (
+        font-size: 12px,
+        line-height: 16px,
+        margin: 6px 0px,
+      )
+    );
+    color: #aba1b9;
+  }
+}
+
+.quizSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loFilterSection {
+  display: flex;
+  align-items: center;
+  & > div:first-of-type {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    text-align: right;
+    @include resD1280(
+      (
+        font-size: 12px,
+        line-height: 20px,
+        margin-right: 16px,
+      )
+    );
+    color: #333333;
+  }
+}
+
+.singleLoHeader {
+  @include resD1280(
+    (
+      margin-top: 16px,
+    )
+  );
+}
+
+.studentLevelLoaderBackdrop {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  // background: rgba($color: #000000, $alpha: 0.1);
+  background-color: #fff;
+  & span {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 100%;
+    font-family: "Inter";
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.backToTop {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(90deg);
+  z-index: 999;
+  @include resD1280(
+    (
+      bottom: 20px,
+      right: 30px,
+    )
+  );
+  & button {
+    @include resD1280(
+      (
+        padding: 10px,
+      )
+    );
+  }
+  & svg,
+  & path {
+    fill: gray;
+  }
+  &.visibleButton {
+    visibility: visible;
+    opacity: 1;
+  }
+  & span {
+    display: flex;
+  }
+}
+
+.emptyDataDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6d6d6d;
+  @include resD1280(
+    (
+      padding: 25px 0 40px 0,
+      font-size: 16px,
+    )
+  );
+  svg {
+    @include resD1280(
+      (
+        margin-right: 8px,
+        height: 18px,
+        width: 18px,
+      )
+    );
+  }
+  &.emptyDivForHw {
+    @include resD1280(
+      (
+        padding: 25px 0 30px 0,
+      )
+    );
+  }
+}

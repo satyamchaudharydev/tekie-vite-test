@@ -1,0 +1,43 @@
+@import 'src/scss/size.scss';
+
+.footerContainer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  box-shadow: inset 0px 2px 0px rgba(137, 137, 137, 0.23);
+  z-index: 98;
+
+  @include resD((
+    padding: 16px 38px,
+  ));
+  @include resM((
+    padding: 12px 10px,
+  ));
+}
+
+.submitButton{
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-family: Nunito;
+  font-size: hs(28px);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  object-fit: contain;
+}
+
+
+.footerContainerForTeacherApp{
+  position: absolute;
+}

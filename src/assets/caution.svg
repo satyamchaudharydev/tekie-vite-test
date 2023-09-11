@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.878" height="29.087" viewBox="0 0 32.878 29.087">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:#34e4ea}
+        </style>
+    </defs>
+    <g id="prefix__shipping-and-delivery" transform="translate(0 -29.519)" style="opacity:.6">
+        <g id="prefix__Group_12057" data-name="Group 12057" transform="translate(0 29.519)">
+            <g id="prefix__Group_12056" data-name="Group 12056">
+                <path id="prefix__Path_20749" d="M32.564 55.134L18.443 30.676a2.315 2.315 0 0 0-4.009 0L.314 55.134a2.315 2.315 0 0 0 2 3.472H30.56a2.315 2.315 0 0 0 2-3.472zm-1.67 1.35a.373.373 0 0 1-.334.193H2.318a.386.386 0 0 1-.334-.579L16.1 31.641a.386.386 0 0 1 .668 0L30.894 56.1a.373.373 0 0 1 0 .384z" class="prefix__cls-2" data-name="Path 20749" transform="translate(0 -29.519)"/>
+                <path id="prefix__Rectangle_1241" d="M0 0H1.929V10.287H0z" class="prefix__cls-2" data-name="Rectangle 1241" transform="translate(15.475 8.77)"/>
+                <circle id="prefix__Ellipse_38" cx="1.286" cy="1.286" r="1.286" class="prefix__cls-2" data-name="Ellipse 38" transform="translate(15.153 20.986)"/>
+            </g>
+        </g>
+    </g>
+</svg>

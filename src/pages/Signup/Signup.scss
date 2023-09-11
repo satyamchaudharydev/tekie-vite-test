@@ -1,0 +1,1616 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.signup-page-container {
+  @include resD((
+    width: 100vw,
+    height: 100vh,
+  ));
+  @include resM((
+    width: 100vw,
+    height: 100vh,
+  ));
+}
+
+.signup-page-triangleBG {
+  position: fixed;
+  z-index: -1;
+  background: url(../../assets/triangleBG.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include resD((
+    width: 100vw,
+    height: 100vh,
+  ));
+  @include resM((
+    width: 100vw,
+    height: 100vh,
+  )); 
+}
+
+.signup-page-thumbsupEmoji {
+  display: inline-block;
+  position: relative;
+  @include resD((
+    width: 30px,
+    height: 30px,
+    top: 3px
+  ));
+  @include resM((
+    width: 25px,
+    height: 25px,
+    top: 3px
+  ));
+  background: url(../../assets/emojis/thumbsUp.png);
+  background-size: contain;
+}
+
+.signup-page-laptopText {
+  font-family: Nunito;
+  font-weight: 400;
+  font-style: italic;
+  text-decoration: underline;
+  color: #504F4F;
+  opacity: 0.75;
+  @include resD((
+    font-size: 18px,
+    margin-top: 12px
+  ));
+  @include resM((
+    font-size: 15px,
+    margin-top: 12px
+  ));
+}
+
+.signup-page-parentImageContainer {
+  position: relative;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD((
+    width: 101px,
+    height: 101px,
+    top: 0px,
+    left: 0px
+  ));
+  @include resM((
+    width: 56px,
+    height: 56px,
+    top: 0px,
+    left: 0px
+  ));
+  background: #fff;
+}
+
+.signup-page-parentImage {
+  position: relative;
+  @include resD((
+    min-width: 98px,
+    min-height: 98px,
+    border: 3px solid #33E3EA,
+    top: unset
+  ));
+  @include resM((
+    min-width: 54px,
+    min-height: 54px,
+    border: 2px solid #33E3EA,
+    top: 2px
+  ));
+  background: url('../../assets/testimonials/sudipto.jpg');
+  background-size: contain;
+  border-radius: 50%;
+}
+.signup-page-error {
+  font-family: Nunito;
+  font-weight: 500;
+  position: relative;
+  width: 100%;
+  color: #DB524E;
+  @include resM((
+    height: 10px,
+    top: 4px,
+    left: 4px,
+    font-size: 12px,
+  ));
+  @include resD((
+    height: 7px,
+    top: 5px,
+    left: 0px,
+    font-size: 17px,
+  ));
+}
+
+.signup-page-headerRow {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 99;
+  align-items: center;
+  @include resD((
+    justify-content: space-between,
+    padding: 30px 60px 0 30px,
+  ));
+  @include resM((
+    padding: 20px 0px 0 0px,  
+    justify-content: center,
+  ));
+}
+
+.signup-page-banner-row {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 99;
+  background: #E6F7FD;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include resD((
+    padding: 12px 0px,
+  ));
+  @include resM((
+    padding: 8px 0px,
+  ));
+}
+
+.signup-page-desktopOnly {
+  @include resD((
+    display: block,
+  ));
+  @include resM((
+    display: none,
+  ));
+}
+
+.signup-page-mobileOnly {
+  @include resD((
+    display: none,
+  ));
+  @include resM((
+    display: block,
+  ));
+}
+
+.signup-page-GSVLogo {
+  @include resM((
+    width: 44px * 1.2,
+    height: 30px * 1.2,
+    position: relative,
+    left: 0px
+  ));
+  @include resD((
+    width: 80px,
+    height: 52px,
+    left: 0px
+  ));
+  background-image: url('../../assets/GSVLogo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.signup-page-GSV-link {
+  font-family: Nunito;
+  font-weight: bold;
+  color: #504F4F;
+  background: -webkit-linear-gradient(125deg, #35E4E9, #00ADE6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration-line: underline;
+  border-bottom: 1.6px solid #35E4E9;
+  margin-right: 8px;
+  transition: all .5;
+  @include resD((
+    font-size: 20px
+  ));
+  @include resM((
+    font-size: 16px
+  ));
+
+  &:hover {
+    opacity: 0.8;
+    transition: all .5;
+  }
+}
+.signup-page-headerText {
+  font-family: Nunito;
+  font-weight: bold;
+  color: #504F4F;
+  @include resD((
+    font-size: 20px,
+    padding: 0,
+  ));
+  @include resM((
+    font-size: 14px,
+    padding: 6px 0px 0px,
+  ));
+}
+.signup-page-tekieLogo {
+  @include resM((
+    width: 54px * 1.2,
+    height: 20px * 1.2,
+    position: relative,
+    left: 0px
+  ));
+  @include resD((
+    width: 125px,
+    height: 44px,
+    left: 0px
+  ));
+  background-image: url('../../assets/tekieLogo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.signup-page-alreadyAccount {
+  font-family: Nunito;
+  font-weight: 600;
+  color: #504F4F;
+  @include resD((
+    font-size: 20px,
+    opacity: 1,
+    margin-top: unset
+  ));
+  @include resM((
+    font-size: 16px,
+    margin-top: 15px,
+    opacity: 0.8
+  ));
+}
+
+.signup-page-body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-page-headingBookSession {
+  color: #00ADE5;
+  font-family: Lato;
+  font-weight: bold;
+  opacity: 0.8;
+  text-transform: capitalize;
+  text-align: center;
+  @include resD((
+    font-size: 35px,
+    margin-top: -44px,
+    line-height: 42px,
+  ));
+  @include resM((
+    font-size: 22px,
+    margin-top: 18px,
+    line-height: 26.5px,
+  ));
+}
+
+.signup-page-signupBody {
+  align-self: center;
+  display: flex;
+  @include resD((
+    background: #fff,
+    flex-direction: row,
+    min-width: 1250px,
+    border-radius: 25px,
+    box-shadow: 0px 20px 30px rgba(0, 23, 31, 0.15),
+    margin-top: 30px,
+    margin-bottom: 30px,
+    padding: unset
+  ));
+  @include resM((
+    background: transparent,
+    flex-direction: column-reverse,
+    padding: 0 10px,
+  ))
+}
+
+.signup-page-signupBodySchool {
+  @extend .signup-page-signupBody;
+  @include resD((
+    margin-top: 32px,
+  ));
+  @include resM((
+    margin-top: 35px,
+  ));
+}
+
+.signup-page-showcaseContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include resD((
+    width: 671px,
+    height: 100%,
+    padding-top: 30px,
+    padding-left: unset,
+    background: unset,
+    box-shadow: unset,
+    margin-top: unset,
+    border-radius: unset
+  ));
+  @include resM((
+    background: #fff,
+    box-shadow: 0px 20px 30px rgba(0, 23, 31, 0.15),
+    margin-top: 35px,
+    border-radius: 12px,
+    padding-top: 13px,
+    padding-left: 20px
+  ))
+}
+
+.signup-page-indicatorRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.signup-page-indicator {
+  border-radius: 50%;
+  @include resD((
+    margin-top: 30px,
+    width: 18px,
+    height: 18px,
+    margin-left: 15px,
+    margin-bottom: 0px
+  ));
+  @include resM((
+    margin-top: 0px,
+    width: 14px,
+    height: 14px,
+    margin-left: 12px,
+    margin-bottom: 20px
+  ));
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  box-shadow: 0 0 0 0px #70F0FF;
+  &:hover {
+    box-shadow: 0 0 0 2px #70F0FF;
+  }
+  &:active, &:focus {
+    box-shadow: 0 0 0 0px #70F0FF;
+  }
+}
+
+.signup-page-slideTitle {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  color: #00ADE5;
+  opacity: 0.8;
+  @include resD((
+    font-size: 25px,
+    line-height: 34px,
+  ));
+  @include resM((
+    font-size: 18px,
+    line-height: 25px,
+  ));
+}
+
+.signup-page-dropTestimonial {
+  position: relative;
+  @include resD((
+    width: 101px,
+    height: 151px,
+    margin-top: 75px
+  ));
+  @include resM((
+    width: 56px,
+    height: 92px,
+    margin-top: 15px
+  ));
+}
+
+.signup-page-testimonialText {
+  font-family: Nunito;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 159.4%;
+  color: #504F4F;
+  opacity: 0.75;
+  @include resD((
+    font-size: 17px,
+    margin-top: 15px,
+    margin-right: unset
+  ));
+  @include resM((
+    font-size: 14px,
+    margin-top: 12px,
+    margin-right: 20px
+  ));
+}
+
+.signup-page-testimonialAuthor {
+  font-family: Nunito;
+  font-weight: 700;
+  color: #504F4F;
+  opacity: 0.75;
+  line-height: 159.4%;
+  @include resD((
+    font-size: 17px,
+    margin-top: 10px
+  ));
+  @include resM((
+    font-size: 14px,
+    margin-top: 14px
+  ));
+}
+
+.signup-page-testimonialAuthorLocation {
+  font-family: Nunito;
+  font-weight: 600;
+  color: #504F4F;
+  opacity: 0.75;
+  line-height: 159.4%;
+  @include resD((
+    font-size: 17px
+  ));
+  @include resM((
+    font-size: 14px
+  ));
+}
+
+.signup-page-slideContainer {
+  position: relative;
+  pointer-events: none;
+  @include resD((
+    width: 544px,
+    height: 566px,
+  ));
+  @include resM((
+    width: 100%,
+    height: 351px,
+  ));
+}
+
+.signup-page-slideWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-page-teamBanner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include resD((
+    min-height: 145px,
+    background: white,
+    margin-top: auto,
+  ));
+  @include resM((
+    min-height: 170px,
+    background: white,
+    margin-top: 30px
+  ));
+}
+
+.signup-page-teamRowWrapper {
+  display: flex;
+  @include resD((
+    flex-direction: row,
+  ));
+  @include resM((
+    flex-direction: column,
+  ));
+  justify-content: center;
+  align-items: center
+}
+
+.signup-page-icon {
+  @include resD((
+    margin-right: 134px
+  ));
+  @include resM((
+    margin-right: 36px
+  ));
+}
+
+.signup-page-textIcon {
+  @extend .signup-page-icon;
+  font-family: Lato;
+  font-weight: bold;
+  color: #737373;
+  opacity: 0.8;
+  @include resD((
+    font-size: 25px,
+    line-height: 30px,
+  ));
+  @include resM((
+    font-size: 15px,
+    line-height: 18px,
+  ));
+}
+
+.signup-page-googleIcon {
+  @extend .signup-page-icon;
+  @include resD((
+    width: 30px,
+    height: 30px
+  ));
+  @include resM((
+    width: 21px,
+    height: 21px
+  ));
+}
+
+.signup-page-intelIcon {
+  @extend .signup-page-icon;
+  @include resD((
+    width: 64px,
+    height: 30px
+  ));
+  @include resM((
+    width: 43px,
+    height: 20px
+  ));
+}
+
+
+.signup-page-microsoftIcon {
+  @extend .signup-page-icon;
+  @include resD((
+    width: 117px,
+    height: 25px
+  ));
+  @include resM((
+    width: 80px,
+    height: 17px
+  ));
+}
+
+.signup-page-amazonIcon {
+  @extend .signup-page-icon;
+  @include resD((
+    width: 83px,
+    height: 25px
+  ));
+  @include resM((
+    width: 57px,
+    height: 17px
+  ));
+}
+
+.signup-page-teamTitle {
+  font-family: Lato;
+  text-transform: uppercase;
+  color: #504F4F;
+  opacity: 0.5;
+  @include resD((
+    line-height: 24px,
+    font-size: 20px,
+    margin-top: 30px,
+    letter-spacing: 1.1px
+  ));
+  @include resM((
+    line-height: 17px,
+    font-size: 14px,
+    margin-top: 15px,
+    letter-spacing: 1.1px
+  ));
+}
+
+.signup-page-teamRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  @include resD((
+    margin-top: 30px
+  ));
+  @include resM((
+    margin-top: 27px
+  ));
+}
+
+.signup-page-noMarginRightMobile {
+  @include resD((
+    margin-right: 134px
+  ));
+  @include resM((
+    margin-right: 0
+  ))
+}
+
+.signup-page-signupLine {
+  opacity: 0.5;
+  background-color: #6AD1F0;
+  @include resD((
+    width: 1.2px,
+    height: 624px,
+    margin-top: 30px,
+    margin-right: 60px,
+    display: block
+  ));
+  @include resM((
+    display: none
+  ));
+}
+
+.signup-page-signupFormBody {
+  box-sizing: border-box;
+  @include resD((
+    margin-top: 30px,
+    padding: unset,
+    background: transparent,
+    border-radius: 0px,
+    box-shadow: unset
+  ));
+  @include resM((
+    margin-top: -16px,
+    background: #fff,
+    border-radius: 12px,
+    padding: 14px 20px,
+    box-shadow: 0px 20px 30px rgba(0, 23, 31, 0.15)
+  ));
+}
+
+.signup-page-input {
+  background-color: #fff !important;
+  color: rgb(17, 17, 17) !important;
+  border: none !important;
+  outline: none !important;
+  font-family: Nunito !important;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  &.signup-page-inputError {
+    background-color: #F9E3E3 !important;
+  }
+  @include resD((
+    font-size: 17px !important,
+    width: 460px !important,
+    height: 56px !important,
+    border-radius: 4px !important,
+    margin-top: 30px,
+    padding-left: 16px !important,
+  ));
+  @include resM((
+    font-size: 14px !important,
+    width: 325px !important,
+    height: 42px !important,
+    border-radius: 4px !important,
+    margin-top: 17px,
+    padding-left: 11px !important,
+  ));
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(#00ADE5, 0.6), 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  }
+  &::placeholder {
+    color: rgba(17, 17, 17, 0.48) !important;
+    opacity: 0.7 !important;
+  }
+}
+
+.signup-page-inputSelectable {
+  @extend .signup-page-input;
+  @include resD((
+    padding-left: 0px !important,
+    width: 480px !important,
+  ));
+  @include resM((
+    padding-left: 0px !important,
+    width: 338px !important,
+  ));
+  & > div {
+    border-width: 0px;
+    @include resD((
+      min-height: 55px !important,
+    ));
+    @include resM((
+      min-height: 42px !important,
+    ));
+  }
+}
+.signup-page-dropdownButtonClass {
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  background-color: transparent !important;
+  transition: 0.3s all ease-in-out;
+  @include resD((
+    border: unset !important,
+    width: 70px,
+    font-size: 18px
+  ));
+  @include resM((
+    border: unset !important,
+    width: 45px,
+    font-size: 14px
+  ));
+  &:hover {
+    background-color: rgba(#00ADE5, 0.2) !important;
+  }
+}
+
+.signup-page-signupBodyWrapper {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  @include resD((
+    flex-direction: row
+  ));
+  @include resM((
+    flex-direction: column-reverse,
+  ));
+}
+
+.signup-page-inputColumn {
+  @include resD((
+    align-self: unset
+  ));
+  @include resM((
+    align-self: center
+  ));
+}
+
+.signup-page-instructionsContainer {
+  display: flex;
+  @include resD((
+    flex-direction: column,
+    margin-top: 113px,
+    align-self: flex-start
+  ));
+  @include resM((
+    flex-direction: row,
+    margin-top: 20px,
+    align-self: center
+  ));
+}
+
+.signup-page-instructionContainer {
+  display: flex;
+  flex-direction: row;
+  @include resD((
+    margin-left: -27px,
+    align-items: unset
+  ));
+  @include resM((
+    align-items: center
+  ));
+}
+
+.signup-page-instructionNumber {
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(52, 228, 234, 0.6) 0%, rgba(0, 173, 230, 0.6) 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  color: #FFFFFF;
+  @include resD((
+    margin-right: 15px,
+    font-size: 20px,
+    min-width: 54px,
+    height: 54px,
+    margin-left: unset,
+  ));
+  @include resM((
+    min-width: 33px,
+    height: 33px,
+    font-size: 12px,
+    margin-right: unset,
+    margin-left: 30px,
+  ));
+}
+
+.signup-page-instructionTitle {
+  font-family: Nunito;
+  font-weight: 600;
+  color: #504F4F;
+  line-height: 159.4%;
+  @include resD((
+    margin-top: 5px,
+    font-size: 20px,
+    margin-left: unset,
+  ));
+  @include resM((
+    margin-left: 12px,
+    font-size: 14px,
+  ));
+}
+
+.signup-page-instructionContainerSecond {
+  @include resD((
+    margin-top: 90px
+  ));
+}
+
+.signup-page-greyInstructionNumber {
+  background: rgba(#E2E2E2, 0.6);
+}
+
+
+.signup-page-instructionDescription {
+  @extend .signup-page-instructionTitle;
+  font-weight: 400;
+  @include resD((
+    width: 234px,
+    display: block,
+  ));
+  @include resM((
+    display: none,
+  ));
+}
+
+.signup-page-phoneInput {
+  @extend .signup-page-input;
+  @include resD((
+    width: 393px !important,
+    margin-left: 85px !important
+  ));
+  @include resM((
+    width: 286px !important,
+    margin-left: 52px !important
+  ));
+}
+
+.signup-page-phoneInputContainer {
+  @include resD((
+    margin-top: 30px !important,
+  ));
+  @include resM((
+    margin-top: 17px !important
+  ));
+}
+
+.signup-page-gradesContainer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include resM((
+    align-items: center,
+    width: 336px,
+    border-radius: 5px,
+  ));
+  @include resD((
+    width: 475px,
+    border-radius: 4px,
+    align-self: flex-start,
+  ));
+}
+
+.signup-page-privacytext {
+  font-family: Nunito;
+  font-weight: 400;
+  color: #504F4F;
+  @include resD((
+    width: 480px,
+    margin-top: 30px,
+    font-size: 20px,
+    line-height: 33px
+  ));
+  @include resM((
+    width: 340px,
+    margin-top: 15px,
+    font-size: 14px,
+    line-height: 21px
+  ));
+}
+.signup-page-hasLaptopOrDesktop {
+  font-family: Nunito;
+  font-weight: 400;
+  color: #504F4F;
+  @include resD((   
+    margin-top: 10px,
+    font-size: 20px,
+    line-height: 33px
+  ));
+  @include resM((
+    margin-top: 8px,
+    font-size: 14px,
+    line-height: 21px
+  ));
+  div:nth-child(2) {
+    @include resD((   
+      margin-left: 10px,
+    ));
+    @include resM((   
+      margin-left: 10px,
+    ));
+  }
+}
+
+.signup-page-grade {
+  font-family: Nunito;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: rgba(#ADADAD, 0.8);
+  height: 100%;
+  cursor: pointer;
+  @include resM((
+    font-size: 16px,
+    letter-spacing: -0.18px,
+    border-radius: 4px,
+    min-width: 105px * 0.9,
+    min-height: 57px * 0.9,
+    // max-width: 105px * 0.9,
+    max-height: 57px * 0.9,
+    margin-right: 10px,
+    margin-top: 10px,
+  ));
+  @include resD((
+    border-radius: 4px,
+    font-size: 19px,
+    min-width: 105px,
+    min-height: 57px,
+    // max-width: 105px,
+    max-height: 57px,
+    margin-right: 10px,
+    margin-top: 10px,
+    letter-spacing: -0.24px,
+  ));
+  transition: 0.3s all ease-in-out;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  border: 1px solid rgba(92, 92, 92, 0.18);
+  &:hover {
+    border: 1px solid #06B3E6;
+    color: rgba(#06B3E6, 0.9);
+  }
+}
+
+.signup-page-gradeRadioStreet {
+  font-family: Nunito;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: rgba(#ADADAD, 0.8);
+  height: 100%;
+  cursor: pointer;
+  @include resM((
+    font-size: 16px,
+    letter-spacing: -0.18px,
+    border-radius: 4px,
+    min-width: 90px,
+    min-height: 57px * 0.9,
+    // max-width: 105px * 0.9,
+    max-height: 57px * 0.9,
+    margin-right: 10px,
+    margin-top: 10px,
+  ));
+  @include resD((
+    border-radius: 4px,
+    font-size: 19px,
+    min-width: 140px,
+    min-height: 57px,
+    // max-width: 105px,
+    max-height: 57px,
+    margin-right: 10px,
+    margin-top: 10px,
+    letter-spacing: -0.24px,
+  ));
+  transition: 0.3s all ease-in-out;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  border: 1px solid rgba(92, 92, 92, 0.18);
+  &:hover {
+    border: 1px solid #06B3E6;
+    color: rgba(#06B3E6, 0.9);
+  }
+}
+
+.signup-page-gradesWrapperSignupForm {
+  font-family: Nunito;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: rgba(#ADADAD, 0.8);
+  height: 100%;
+  cursor: pointer;
+  @include resM((
+    font-size: 16px,
+    letter-spacing: -0.18px,
+    border-radius: 4px,
+    min-width: 105px * 0.9,
+    min-height: 57px * 0.9,
+    // max-width: 105px * 0.9,
+    max-height: 57px * 0.9,
+    margin-right: 10px,
+    margin-top: 10px,
+  ));
+  @include resD((
+    border-radius: 4px,
+    font-size: 19px,
+    min-width: 140px,
+    min-height: 57px,
+    // max-width: 105px,
+    max-height: 57px,
+    margin-right: 10px,
+    margin-top: 10px,
+    letter-spacing: -0.24px,
+  ));
+  transition: 0.3s all ease-in-out;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  border: 1px solid rgba(92, 92, 92, 0.18);
+  &:hover {
+    border: 1px solid #06B3E6;
+    color: rgba(#06B3E6, 0.9);
+  }
+}
+.signup-page-gradeSep {
+  background-color: #229296;
+  opacity: 0.4;
+  @include resM((
+    height: 25.5px,
+    width: 0px,
+  ));
+  @include resD((
+    height: 35.8px,
+    width: 1px
+  ));
+}
+.signup-page-gradeActive {
+  color: white;
+  background: rgba(#06B3E6, 0.2);
+  border: 1px solid #06B3E6;
+  color: rgba(#06B3E6, 0.9);
+  font-weight: bold;
+}
+
+.signup-page-label {
+  width: 100%;
+  color: rgba(17, 17, 17, 0.48);
+  opacity: 0.7;
+  @include resM((
+    margin-bottom: 8px,
+    font-size: 14px,
+    line-height: 24px,
+    margin-top: 8px
+  ));
+  @include resD((
+    font-size: 21px,
+    line-height: 24px,
+    margin-bottom: 15px,
+    margin-top: 30px,
+  ));
+}
+
+.signup-page-signupButton {
+  align-self: center;
+  color: white;
+  font-family: Nunito;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  align-items: center;
+  @include resD((
+    padding-left: 30px,
+    padding-top: 15px,
+    padding-bottom: 15px,
+    padding-right: 20px,
+    background: linear-gradient(180deg, #34E4EA 0%, #00ADE6 100%),
+    border-radius: 14px,
+    margin-top: 30px,
+    margin-bottom: 30px,
+    font-size: 25px
+  ));
+  @include resM((
+    padding-left: 18px,
+    padding-top: 10px,
+    padding-bottom: 10px,
+    padding-right: 18px,
+    background: linear-gradient(180deg, #34E4EA 0%, #00ADE6 100%),
+    border-radius: 6px,
+    margin-top: 11px,
+    margin-bottom: 20px,
+    font-size: 14px
+  ));
+  &.disabled{
+    cursor: context-menu;
+    opacity: 0.7;
+  }
+}
+
+.signup-page-calendarIcon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD((
+    width: 30px,
+    height: 30px,
+    margin-right: 16px,
+    top: -1px
+  ));
+  @include resM((
+    width: 27px,
+    height: 27px,
+    margin-right: 10px,
+    top: -1px
+  ))
+}
+
+.signup-page-loadingIcon {
+  position: relative;
+  @include resD((
+    width: 22px,
+    height: 22px,
+    left: 5px
+  ));
+  @include resM((
+    width: 14px,
+    height: 14px,
+    left: 5px
+  ));
+}
+.signup-page-tekieFeatureContainer {
+  width: 100%;
+  @include resD((
+    margin-top: 73px,
+  ));
+  @include resM((
+    margin-top: 30px,
+  ))
+}
+
+.signup-page-TFrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.signup-page-inc42Icon {
+  background-image: url('../../assets/inc42.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    opacity: 0.8;
+    transform: scale(0.95);
+  };
+  @include resD((
+    min-width: 110px,
+    min-height: 31px,
+    margin-top: 8px,
+    margin-right: 15px
+  ));
+  @include resM((
+    min-width: 74px,
+    min-height: 34px,
+    margin-top: 0px,
+    margin-right: 0px
+  ));
+}
+
+.signup-page-yourStoryIcon {
+  background-image: url('../../assets/MediumGSVLogo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    opacity: 0.8;
+    transform: scale(0.95);
+  };
+  @include resD((
+    min-width: 110px,
+    min-height: 90px,
+    margin-top: 38px,
+    margin-left: 12px,
+    margin-right: unset
+  ));
+  @include resM((
+    min-width: 71px,
+    min-height: 65px,
+    margin-top: unset,
+    margin-left: 20px,
+    margin-right: 20px
+  ));
+}
+
+.signup-page-yourStoryContainer {
+  @include resD((
+    margin-top: 101px
+  ));
+  @include resM((
+    margin-top: 50px
+  ));
+}
+
+.signup-page-featureText {
+  font-family: Nunito;
+  // font-style: italic;
+  font-weight: normal;
+  line-height: 159.4%;
+  color: #504F4F;
+  opacity: 0.75;
+  @include resD((
+    font-size: 16px,
+    margin-right: unset,
+    margin-left: unset
+  ));
+  @include resM((
+    font-size: 12px,
+    margin-right: 20px,
+    margin-left: 20px
+  ));
+
+  &  > span {
+    font-weight: bold;
+  }
+}
+
+.signup-page-gciText {
+  font-family: Nunito;
+  font-weight: normal;
+  line-height: 159.4%;
+  color: #504F4F;
+  opacity: 0.75;
+  font-style: italic;
+  @include resD((
+    font-size: 16px,
+    margin-top: 70px,
+    margin-right: unset,
+    margin-left: unset,
+  ));
+  @include resM((
+    font-size: 12px,
+    margin-top: 20px,
+    margin-right: 20px,
+    margin-left: 0px,
+  ));
+}
+
+.signup-page-gciThumb {
+  background-image: url('../../assets/sanatanCodeInThumbLight.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-self: center;
+  pointer-events: auto;
+  cursor: pointer;
+  @include resD((
+    min-width: 442px,
+    min-height: 240px,
+    margin-top: 80px
+  ));
+  @include resM((
+    min-width: 246px,
+    min-height: 144px,
+    margin-top: 40px
+  ));
+}
+
+.signup-page-footer {
+  // background: #E7FAFD;
+  display: flex;
+  width: 100%;;
+  flex-direction: column;
+  align-items: center;
+  @include resD((
+    padding-top: 30px,
+  ));
+  @include resM((
+    padding-top: 30px,
+  ));
+}
+
+.signup-page-socialMediaIcon {
+  @include resD((
+    width: 55px,
+    height: 55px,
+    margin-right: 20px
+  ));
+  @include resM((
+    width: 40px,
+    height: 40px,
+    margin-right: 10px
+  ));
+}
+
+.signup-page-socialMediaRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.signup-page-footerText {
+  font-family: Nunito;
+  color: #504F4F;
+  text-align: center;
+  @include resD((
+    font-size: 20px,
+    margin-top: 30px,
+    margin-bottom: 48px
+  ));
+  @include resM((
+    font-size: 14px,
+    margin-top: 20px,
+    margin-bottom: 30px
+  ))
+}
+
+.signup-page-displayOnlySmall {
+  display: block;
+  @include resD((
+    display: none,
+  ));
+  @include resM((
+    display: block,
+  ))
+}
+.signup-page-displayOnlyBig {
+  display: none;
+  @include resD((
+    display: block,
+  ));
+  @include resM((
+    display: none,
+  ));
+}
+
+.signup-page-hasSubmitted {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+}
+
+.signup-page-hasSubmittedContainer {
+  background: #FFFFFF;
+  background: url(../../assets/triangleBG.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include resD((
+    box-shadow: 0px 2px 20px rgba(54, 54, 54, 0.15),
+    width: 729px,
+    border-radius: 12px,
+    margin-top: 150px,
+    height: 185px,
+  ));
+  @include resM((
+    box-shadow: 0px 2px 20px rgba(54, 54, 54, 0.15),
+    width: 90%,
+    border-radius: 12px,
+    height: 140px,
+    margin-top: 70px,
+  ));
+}
+
+.signup-page-coolDrop {
+  @include resD((
+    width: 91px,
+    height: 104px,
+    margin-top: -52px
+  ));
+  @include resM((
+    width: 91px / 1.6,
+    height: 104px / 1.6,
+    margin-top: -52px / 1.6
+  ));
+}
+
+.signup-page-dropTitle {
+  font-family: Nunito;
+  font-weight: bold;
+  color: #00ADE5;
+  @include resD((
+    font-size: 26px,
+    margin-top: 19px,
+  ));
+  @include resM((
+    font-size: 22px,
+    margin-top: 8px
+  ));
+}
+
+.signup-page-dropText {
+  font-family: Nunito;
+  font-weight: 600;
+  color: #504F4F;
+  @include resD((
+    font-size: 20px,
+    margin-top: 12px,
+    margin-bottom: 40px,
+  ));
+  @include resM((
+    font-size: 16px,
+    margin-top: 8px,
+    margin-bottom: 25px,
+  ));
+}
+
+.signup-page-modal-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.85);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+  pointer-events: none;
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.signup-page-modal-wrapper {
+  @include resD((
+    width: 653px,
+    height: 396px,
+    border-radius: 24px,
+  ));
+  @include resM((
+    width: 95%,
+    height: 310px,
+    border-radius: 24px,
+  ));
+  background-color: #FFFFFF;
+  background-image: url('./signupBG.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-page-close-btn {
+  @include resD((
+    width: 52px,
+    height: 52px,
+    right: -20px,
+    top: -20px,
+    font-size: 40px,
+    line-height: 48px,
+    letter-spacing: -2%,
+  ));
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(-2px 2px 4px #02628262);
+  background: #00ADE6;
+  border-radius: 50%;
+  position: absolute;
+  font-family: Nunito;
+  font-weight: bold;
+}
+
+.signup-page-radiostreet-checkmark {
+  @include resD((
+    width: 80px,
+    height: 80px,
+    margin-top: 56px
+  ));
+  @include resM((
+    width: 80px,
+    height: 80px,
+    margin-top: 28px
+  ));
+}
+
+.signup-page-congrats {
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #504F4F;
+  font-weight: bold;
+  @include resD((
+    font-size: 30px,
+    margin-top: 40px
+  ));
+  @include resM((
+    font-size: 24px,
+    margin-top: 20px
+  ));
+}
+
+.signup-page-spy-text {
+  color: #504F4F;
+  opacity: 0.7;
+  line-height: 140%;
+  text-align: center;
+  @include resD((
+    font-size: 20px,
+    margin-top: 12px,
+    margin-bottom: 20px
+  ));
+  @include resM((
+    font-size: 16px,
+    margin-top: 10px,
+    margin-bottom: 20px
+  ));
+}
+
+
+.signup-page-checkbox-container {
+  @include resD((
+    padding: 4px,
+    border-radius: 4px !important,
+    margin-right: 8px,
+    // border: 2px solid #00ADE6 !important
+  ));
+  @include resM((
+    padding: 2px,
+    border-radius: 4px !important,
+    margin-right: 8px
+  ));
+  overflow: hidden;
+  span {
+    border: 2px solid #00ADE6 !important;
+    transition: 0.3s all ease-in-out !important;
+  }
+  div {
+    transition: 0.3s all ease-in-out !important;
+    @include resM((
+      transform: scale(0.7),
+    ));
+    @include resD((
+      transform: scale(1),
+    ));
+  }
+  input:checked ~ span {
+    background-color: #00ADE6 !important;
+    @include resD((
+      border-radius: 4px !important,
+    ));
+  }
+  input:checked ~ div {
+    background-color: #00ADE6 !important;
+  }
+}
+
+.signup-page-checkbox-row {
+  display: flex;
+  align-items: center;
+  @include resD((
+    margin-top: 10px
+  ));
+  @include resM((
+    margin-top: 15px
+  ));
+  span {
+    display: block;
+    opacity: 0.75;
+    color: #504F4F;
+    @include resD((
+      font-size: 16px,
+    ));
+    @include resM((
+      font-size: 16px,
+    ));
+  }
+  .signup-page-checkbox-container-last {
+    @extend .signup-page-checkbox-container;
+    @include resD((
+      margin-left: 30px
+    ));
+    @include resM((
+      margin-left: 15px
+    ));
+  }
+}

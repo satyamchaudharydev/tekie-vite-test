@@ -1,0 +1,204 @@
+@import '../../../pages/TeacherApp/mixins/modalBackdrop.scss';
+@import '../../../pages/TeacherApp/mixins/_mixins.scss';
+@import '../../../pages/TeacherApp/variables/variables';
+@import 'src/scss/Inter.scss';
+
+
+.sessionModalContainer{
+    @include modalBackDrop;
+    font-family: 'Inter';
+}
+.sessionModal{
+    width: 500px;
+}
+.header{
+    padding:18px 20px;
+    padding-bottom: 24px;
+    background-color: $tekie-amethyst-10;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    font-size: 18px;
+}
+.header_headingContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body{
+    // height: 250px;
+    background-color: $white;
+    padding: 24px 22px 12px 22px;
+    color: #424242;
+    font-weight: 500;
+}
+.sessionIcon{
+    margin-right: 16px;
+    padding: 16px;
+    background-color: $white;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top: 1px solid $dark-grey;
+    background-color: $white;
+}
+
+.closeModalIcon{
+    cursor: pointer;
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+    padding: 0px 5px 2px 5px;
+    border-radius: 4px;
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+      & svg > path {
+        fill: white !important;
+      }
+    }
+}
+
+
+// Disclaimer
+.completed{
+    background-color: $completed-30;
+    color: $completed;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    @include flex(flex-start,center);
+    img{
+        margin-right: 10px
+    }
+}
+.yetToBegin{
+    @extend .completed;
+    background-color: $yetToBegin-30;
+    color: $yetToBegin-100;
+}
+.unAttended{
+    @extend .completed;
+    background-color: $unattended-30;
+    color: $unattended;
+}
+.inProgress{
+    @extend .completed;
+    background-color: $inProgress-30;
+    color: $inProgress;
+}
+
+// Session Heading
+
+.headingContainer{
+    margin:16px auto;
+   @include flex(flex-start,center);
+    column-gap: 10px;
+}
+.sessionDetails{
+    display: flex;
+    flex-direction: column;
+ gap: 10px;
+}
+.title{
+    color: $tekie-black-90;
+    font-weight: 600;
+}
+.timeAndDay{
+    color: $tekie-grey-70;
+    font-size: 12px;
+}
+.timeAndOtpContainer{
+    @include flex(flex-start,center);
+    font-size: 12px;
+}
+.gradeAndSection{
+    background-color: $tekie-grey-10;
+    color: $tekie-black-80;
+    padding:4px 8px;
+    font-weight: 500;
+    margin-right: 16px;
+    border-radius: 4px;
+    @include flex(center,center);
+    gap:5px;
+}
+.otp{
+    @extend .gradeAndSection;
+    display: inline-block;
+    color:$tekie-grey-70 ;
+}
+.topicThumbnail{
+    border: 1px solid $tekie-grey-10;
+    border-radius: 16px;
+    height: 110px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reminderBtns{
+    @include flex(flex-start,center);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.moreDetailsHeading{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 16px
+}
+.moreDetailsContainer{
+    @include flex(flex-start,center);
+    row-gap: 24px;
+    flex-wrap: wrap;
+}
+.itemContainer{
+    @include flex(flex-start,flex-start);
+    min-width:33.33%
+}
+.sessionTypePill{
+    background-color: $tekie-grey-10;
+    color: $tekie-black-80;
+    font-size: 10px;
+    border-radius: 16px;
+    padding: 2px 8px;
+    margin-right: 8px;
+}
+.itemLabelAndTextContainer{
+    @include flex(flex-start,flex-start);
+    flex-direction:column;
+    gap: 5px;
+}
+.itemIcon{
+    color:$tekie-grey-60;
+    margin-right: 4px;
+}
+.itemLabel{
+    color: $tekie-grey-70;
+    font-size: 10px;
+}
+.link{
+    color: $tekie-amethyst;
+    cursor: pointer;
+    font-size: 12px;
+}
+.timeDaySeparator{
+    display: inline-block;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: $tekie-grey-70;
+    color: $tekie-grey-70;
+    margin: auto 10px;
+    margin-bottom: 4px;
+}

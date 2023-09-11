@@ -1,0 +1,33 @@
+@import 'src/scss/size.scss';
+
+.buttonContainer{
+  position: relative;
+  width: hs(146.3px);
+  height: hs(54.9px);
+  border-radius: 59px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-image: linear-gradient(to bottom, #34e4ea, #00ade6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: hs(60px);
+}
+
+.imageBG{
+  width: 100%;
+  position: absolute;
+}
+
+.btnText{
+  font-family: Nunito;
+  font-size: hs(18px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  // text-align: left;
+  color: #ffffff;
+  z-index: 1;
+}

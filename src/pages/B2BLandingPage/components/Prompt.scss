@@ -1,0 +1,65 @@
+@import 'src/scss/size.scss';
+
+.landing-page-prompt-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.landing-page-prompt-prompt {
+  font-family: Lato;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.76;
+  text-align: left;
+  color: rgba(#34e4ea, 0.8);
+  background-color: #021d27;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  @include resM((
+    letter-spacing: 1.53px,
+    box-shadow: 20px 20px 10px 0 rgba(0, 0, 0, 0.4),
+    align-items: center,
+    font-size: 20px,
+    height: max-content,
+    padding: 10px,
+    width: 350px,
+    max-width: 70%,
+    border-radius: 0px 0px 10px 10px,
+  ));
+  @include resD((
+    height: max-content,
+    padding: 10px,
+    max-width: 50%,
+    width: 612px,
+    font-size: 25.5px,
+    letter-spacing: 1.53px,
+    box-shadow: 20px 20px 10px 0 rgba(0, 0, 0, 0.4),
+  ));
+}
+.landing-page-prompt-caution {
+  opacity: 0.6;
+  background-image: url('../../../assets/caution.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+  @include resM((
+    width: 32.9px,
+    height: 29.1px,
+    margin-right: 21.6px,
+  ));
+  @include resD((
+    margin-right: 21.6px,
+    width: 32.9px,
+    height: 29.1px,
+  ));
+}

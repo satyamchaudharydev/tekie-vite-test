@@ -1,0 +1,29 @@
+@import 'src/scss/size.scss';
+.showSubmitModalContainer{
+    width: 100vw;
+    z-index: 9999999;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    background-color: rgba(17, 17, 17, 0.501);
+    & > *{
+        box-sizing: border-box;
+    }
+}
+.showSubmitModal{
+    max-height: 90vh;
+    background-color: #fff;
+    border-radius: 20px;
+    @include resD(
+    (
+        width: 1095px,
+    )
+    )
+    
+}
+.homeWorkDetails{
+    height: 250px;
+}

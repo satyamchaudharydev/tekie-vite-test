@@ -1,0 +1,113 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.bulk_students_button {
+  @include resD(
+    (
+      display: flex,
+      flex-direction: row,
+      justify-content: center,
+      align-items: center,
+      padding: 10px 16px 10px 12px,
+      background: rgba(220, 220, 220, 0.25),
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.35),
+      border-radius: 8px,
+      border: none,
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 18px,
+      margin-left: 20px,
+      color: #333333,
+      margin-right: 20px,
+    )
+  );
+  @include resSm(
+    (
+      display: flex,
+      flex-direction: row,
+      justify-content: center,
+      align-items: center,
+      padding: 10px 16px 10px 12px,
+      background: rgba(220, 220, 220, 0.25),
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.35),
+      border-radius: 8px,
+      border: none,
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 14px,
+      margin-left: 20px,
+      color: #333333,
+      margin-right: 20px,
+    )
+  );
+}
+.individual_student_button {
+  @include resD(
+    (
+      display: flex,
+      flex-direction: row,
+      justify-content: center,
+      align-items: center,
+      padding: 10px 16px 10px 12px,
+      background: #00ade6,
+      border-radius: 8px,
+      border: none,
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 14px,
+      color: #ffffff,
+      margin-left: 20px,
+      cursor:pointer
+    )
+  );
+  @include resSm(
+    (
+      display: flex,
+      flex-direction: row,
+      justify-content: center,
+      align-items: center,
+      padding: 10px 16px 10px 12px,
+      background: #00ade6,
+      border-radius: 8px,
+      border: none,
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 10px,
+      color: #ffffff,
+      margin-left: 20px,
+      cursor:pointer
+    )
+  );
+}
+.addIcon_image_container {
+  @include resD(
+    (
+      height: 16px,
+      width: 16px,
+    )
+  );
+  @include resSm(
+    (
+      height: 16px,
+      width: 16px,
+    )
+  );
+  svg{
+    @include resD(
+    (
+      height: 14px,
+      width: 16px,
+    )
+  );
+    @include resD(
+    (
+      height: 16px,
+      width: 16px,
+    )
+  );
+  }
+}

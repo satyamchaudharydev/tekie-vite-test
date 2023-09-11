@@ -1,0 +1,50 @@
+@import 'src/scss/size.scss';
+
+.container {
+  width: hs(1644px);
+  margin-top: hs(7px);
+  margin-left: hs(48px);
+}
+
+.firstContainer {
+  margin-top: hs(55px);
+}
+
+.chapterTitle {
+  font-size: hs(30px);
+  font-weight: bold;
+}
+
+.card {
+  position: relative;
+  background-color: #0B3146;
+  width: hs(378px);
+  height: hs(215px);
+  margin-right: hs(33px);
+  border-radius: 5px;
+  margin-bottom: hs(48px);
+  overflow: hidden;
+  cursor: pointer;
+  background-size: cover;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: hs(36px);
+}
+
+.topicTitle {
+  font-size: hs(18px);
+  font-weight: bold;
+  color: white;
+  margin: hs(18px) 0 0 hs(18px);
+}
+
+.statusIcon {
+  width: hs(33px);
+  height: hs(40px);
+  margin-top: hs(114px);
+  margin-left: hs(18px);
+}

@@ -1,0 +1,301 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/Inter.scss';
+@import './Tooltip.scss';
+@import 'src/scss/theme.scss';
+
+#school-dashboard-calender-container {
+	height: 100%;
+	width: 100%;
+	letter-spacing: 0.4px;
+    position: relative;
+    box-sizing: border-box;
+     
+    @include resD((
+      padding: 20px,
+    ));
+    @include resM((
+      padding: 16px,
+    ));
+	& a:hover {
+		color: #605959;
+	}
+}
+
+.loading-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: white;
+  &.show {
+    opacity: 0.6;
+    pointer-events: initial;
+  }
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.2s all ease-in-out;
+}
+
+.loading-bar-container {
+  width: 100%;
+  background: $theme;
+  height: 4px;
+  position: sticky;
+  top: 0;
+  
+  div {
+    height: 100%;
+    width: 0%;
+    position: relative;
+    left: 0;
+    background: white;
+    animation:indeterminate-scale-animation 1.5s linear infinite;
+  }
+}
+
+@keyframes indeterminate-scale-animation {
+
+  0% {
+    left: 0%;
+    width: 0%;
+  }
+  20% {
+    left: 0%;
+    width: 30%;
+    animation-timing-function: cubic-bezier(.152313,.196432,.648374,1.004315);
+  }
+  60% {
+    left: 70%;
+    animation-timing-function: cubic-bezier(.257759,.003163,.211762,1.381790);
+    width: 30%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+.school-dashboard-heading-text { 
+    @extend .Inter-regular;
+    font-weight: 600;
+    font-size: 18px;
+    color: #212121;
+}
+
+.school-dashboard-dropdown {
+    @extend .Inter-regular;
+    background: #FFFFFF;
+    text-transform: capitalize;
+    border: 2px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #424242;
+    cursor: pointer;
+    padding-left: 0px !important;
+    z-index: 99;
+    @include resD((
+      margin: 0px 8px,
+      width: 150px !important,
+    ));
+    @include resM((
+      margin: 0px 4px,
+      width: 150px !important,
+    ));
+    & > div {
+      z-index: 999;
+      text-align: left;
+      background: #FFFFFF;
+      border-width: 0px;
+      cursor: pointer;
+      @include resD((
+        min-height: 48px !important,
+      ));
+      @include resM((
+        min-height: 38px !important,
+      ));
+    }
+}
+
+.school-dashboard-primary-btn {
+  border: none;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+  color: #FFF;
+  background: #00ADE6;
+  border-radius: 8px;
+  cursor: pointer;
+  @include resD((
+      padding: 12px 18px,
+  ));
+  @include resM((
+      padding: 10px 14px,
+  ));
+}
+
+.school-dashboard-secondary-btn {
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: Inter;
+  font-weight: 500;
+  position: relative;
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+  background-color: #FFF;
+  color: #00ADE6;
+  cursor: pointer;
+  @include resD((
+    padding: 12px 18px,
+  ));
+  @include resM((
+    padding: 10px 14px,
+  ));
+}
+
+.school-dashboard-back-btn {
+  @extend .Inter-regular;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 14px;
+  color: #00ADE6;
+  text-decoration: none;
+  
+  @include resD((
+    font-size: 20px,
+    padding-bottom: 16px,
+  ));
+  @include resM((
+    font-size: 14px,
+    padding-bottom: 10px,
+  ));
+
+  &:hover {
+    color: #00ADE6 !important;
+  }
+      
+  &:hover > .school-dashboard-back-btn-icon {
+    transition: all .5s;
+    transform: translateX(-4px);
+  }
+}
+
+.school-dashboard-back-btn-icon {
+  transition: all .5s;
+  @include resD((
+    width: 14px,
+    height: 14px,
+  ));
+  @include resM((
+    width: 12px,
+    height: 12px,
+  ));
+
+  & > path {
+    fill: #00ADE6 !important;
+  }
+}
+
+.school-dashboard-action-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  & .school-dashboard-actionBtn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    background: transparent;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    padding: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background: #FFF;
+    }
+  
+    & > svg {
+      width: 100%;
+      height: 100%;
+      fill: #00ADE6;;
+    } 
+  }
+}
+
+.school-dashboard-pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 0px;
+  
+  .school-dashboard-pagination-details {
+    @extend .Inter-regular;
+    font-weight: normal;
+    color: #757575;
+    @include resD((
+      font-size: 16px,
+      margin-left: 12px
+    ));
+    @include resM((
+      font-size: 12px,
+      margin-left: 10px
+    ));
+
+    & .school-dashboard-pagination-highlight {
+      font-weight: 550;
+      color: #403F3F;
+    }
+  }
+}
+
+.school-dashboard-marginLeft-mobileOnly {
+  @include resM((
+    margin-left: 32px
+  ));
+  @include resD((
+    margin-left: 0
+  ));
+}
+
+.school-dashboard-batch-progress-status {
+  @extend .Inter-regular;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 4px;
+} 
+.school-dashboard-batch-yetToStart {
+  background: #F2F2F2;
+  color: #212121;
+}
+.school-dashboard-batch-inProgress {
+  background: #FEF6E6;
+  color: #FAAD14;
+}
+.school-dashboard-batch-completed {
+  background: #E6FFFB;
+  color: #01AA93;
+}
+
+.school-dashboard-comms-clickableText {
+  transition: 0.2s all ease-in-out;
+  &:hover {
+    transition: 0.2s all ease-in-out;
+    color: #00ADE6;
+    cursor: pointer;
+  }
+}

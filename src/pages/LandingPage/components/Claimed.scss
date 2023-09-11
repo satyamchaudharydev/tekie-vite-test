@@ -1,0 +1,72 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: rgba(0,0,0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;
+  justify-content: center;
+}
+
+.body {
+  width: hsm(374px);
+  height: hsm(210.3px);
+  box-shadow: 10px 10px 20px 0 #000c10;
+  background-color: #00171f;
+  display: flex;
+  flex-direction: column;
+}
+
+.closeButton {
+  width: hsm(21px);
+  height: hsm(21px);
+  background-image: url('../../../assets/close.svg');
+  background-size: contain;
+  align-self: flex-end;
+  margin-right: hsm(27px);
+  margin-bottom: hsm(8px);
+}
+
+.hero {
+  @extend .lato-light;
+  background-image: linear-gradient(to bottom, #000d11, rgba(2, 15, 19, 0.9));
+  color: #34e4ea;
+  width: 100%;
+  height: hsm(82px);
+  opacity: 0.7;
+  font-size: hsm(17px);
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.47;
+  letter-spacing: hsm(1.19px);
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subInfo {
+  @extend .lato-light;
+  flex: 1;
+  opacity: 0.6;
+  font-size: hsm(18px);
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: hsm(0.88px);
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 hsm(12px);
+  box-sizing: border-box;
+}

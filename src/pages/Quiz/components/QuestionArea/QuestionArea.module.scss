@@ -1,0 +1,151 @@
+@import 'src/scss/size.scss';
+
+.questionAreaContainer{
+  width: hs(744px);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.questionNumberContainer{
+  height: hs(42px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top:5.37%;
+}
+
+.storyIcon{
+  width: hs(35.7px);
+  cursor: pointer;
+  height: hs(53.5px);
+  position: absolute;
+  top: hs(110px);
+  background-size: contain;
+  right: hs(49px);
+  background-image: url('../../../../assets/storyIcon.svg');
+}
+
+.circle{
+  width: hs(42px);
+  min-width: hs(42px);
+  height: hs(42px);
+  border-radius: 50%;
+  object-fit: contain;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-Right:16px;
+  background-color: #cbf7fc;
+  color: #000;
+  font-family: Nunito;
+  font-size: hs(18px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.93;
+  letter-spacing: normal;
+  text-align: left;
+  cursor: pointer;
+}
+
+.activeCircle{
+  color: #fff;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.04);
+  background-image: linear-gradient(to bottom, #00ade6 -90%, #34e4ea 50%);
+}
+
+.unAttemptedCircle{
+  color: #fff;
+  background-color: #aaacae;
+}
+
+.correctCircle {
+  color: #fff;
+  background-color: #16d977;
+}
+
+.incorrectCircle {
+  color: #fff;
+  background-color: #ee5441 !important;
+}
+
+.question{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: hs(52.2px);
+}
+
+
+// Styles used for see answers page.
+
+.mainContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.questionContainer {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: hs(52.2px);
+  width: hs(744px);
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonWrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  right: 2.5%;
+  bottom: hs(30px);
+}
+
+.answerTypeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: hs(20px);
+  font-weight: bold;
+  color: #aaacae;
+  margin-top: hs(74px);
+  cursor: default;
+  position: fixed;
+  bottom: hs(120px);
+}
+
+.selectedType {
+  color: #16d977 !important;
+  text-decoration: underline;
+}
+
+.notAnswered {
+  text-decoration: underline;
+}
+
+.wrong {
+  color: #ee5441 !important;
+  text-decoration: underline;
+}
+
+.type {
+  min-width: hs(20px);
+  font-size: hs(20px);
+  font-weight: bold;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  color: #aaacae;
+}

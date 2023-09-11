@@ -1,0 +1,42 @@
+.CodeMirror-gutter.cm-gutter-lint {
+    background-color: #002f3e !important;
+    border-right: 0;
+    color: #7f8490;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  .CodeMirror-gutter.cm-gutter-lint .cm-gutter-lint-marker {
+    display: inline-block;
+    margin-right: 4px;
+  }
+  
+  .CodeMirror-gutter.cm-gutter-lint .cm-gutter-lint-marker.custom-lint-marker-error {
+    color: #ff5555;
+  }
+  
+  .CodeMirror-gutter.cm-gutter-lint .cm-gutter-lint-marker.custom-lint-marker-warning {
+    color: #ffd700;
+  }
+  
+  .CodeMirror-gutter.cm-gutter-lint .cm-gutter-lint-marker.custom-lint-marker-info {
+    color: #66c2ff;
+  }
+.cm-lint-marker{
+    width: 0.7em !important;
+    height: 0.7em !important;
+}
+.cm-gutterElement {
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cm-lint-marker-error{
+    background: #D34B57;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6M6 6l12 12' /%3E%3C/svg%3E%0A") !important;
+}
+.cm-scroller{
+    font-family: "Nunito" !important;
+}

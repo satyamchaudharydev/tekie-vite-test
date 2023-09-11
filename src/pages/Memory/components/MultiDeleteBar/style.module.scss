@@ -1,0 +1,77 @@
+@import 'src/scss/size.scss';
+// Disable selection
+@mixin disable-selection {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Safari */
+  -khtml-user-select: none;    /* Konqueror HTML */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+// No selectable element
+.noSelectable {
+  @include disable-selection;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  width: hs(670px);
+  margin-top: hs(20px);
+}
+
+.buttonWrapper{
+  width: hs(83px);
+  height: hs(48.4px);
+  object-fit: contain;
+  border-radius: 24px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #00ade6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.selectTypeText{
+  font-family: Nunito;
+  font-size: hs(19px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.37;
+  letter-spacing: normal;
+  text-align: center;
+  color: #00ade6;
+}
+
+.selectBtn{
+  width: hs(128.3px);
+}
+
+.arrowWrapper{
+  width: hs(12.2px);
+  height: hs(20.8px);
+  object-fit: contain;
+  position: relative;
+  top : hs(-3px);
+}
+
+.arrowBtn{
+  margin-right: hs(29px);
+}
+
+.row{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.deleteIconWrapper{
+  width: hs(24.3px);
+  height: hs(35.6px);
+  margin-bottom: hs(18.4px);
+  margin-right: hs(7px);
+  cursor: pointer;
+  // object-fit: contain;
+}

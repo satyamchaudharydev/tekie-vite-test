@@ -1,0 +1,167 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+.commonEventPopup, .completePop{
+    position: relative;
+@include resD((
+    width: 680px,
+    // height: 490px,
+    border-radius: 24px,
+));
+@include resM((
+    width: 344px,
+    // height: 211px,
+    height:auto
+));
+background: #FFFFFF;
+}
+
+.popupBg{
+    background-size: cover;
+    position: relative;
+    @include resD((
+        background-image: url('./assets/starBackground.svg'),
+    ));
+    @include resM((
+        background-image: url('./assets/back.png'),
+    ));
+}
+
+.commonEventPopup-navbarPopup{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    @include resD((
+        width: 260px,
+        height: 34px,
+        border-radius: 0 0 25px 25px,
+    ));
+    @include resM((
+        width: fit-content,
+        height: 34px,
+        border-radius: 0 0 25px 25px,
+    ));
+    background: #FFF6F5;
+}
+.commonEventPopup-navbarTitle{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FF5744;
+    padding-bottom: 10px;
+    @include resD((
+        width: 260px,
+        font-size: 17px,
+        line-height: 120%,
+        height: 34px,
+        padding:0,
+        padding-bottom: 5px,
+        padding-top: 2px,
+    ));
+    @include resM((
+        width: fit-content,
+        font-size: 14px,
+        height: 34px,
+        padding: 2px 30px 3px 30px,
+        border-radius: 0 0 24px 24px,
+    ));
+}
+
+.commonEventPopup-crossBtn {
+    background: none;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    @include resD((
+        margin-top: -2%,
+        left: 91%,
+        padding: 0 10px,
+    ));
+    @include resM((
+        margin-top: -2%,
+        left: 88%,
+        padding:0,
+    ));
+}
+
+.commonEventPopup-detailsText{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    @include resD((
+        font-size: 30px,
+        line-height: 36px,
+        letter-spacing: -0.02em,
+        padding: 70px 80px,
+        padding-bottom: 0px,
+    ));
+    @include resM((
+        margin-top: -2%,
+        left: 88%,
+        padding: 40px 30px,
+        padding-bottom: 20px,
+        font-size: 16px,
+        line-height: 120%,
+    ));
+    color: #504F4F;
+    & .eventName{
+        font-weight: bolder;
+    }
+}
+
+.commonEventPopup-details{
+    @include resD((
+        margin-bottom: 50px,
+    ));
+    @include resM((
+        margin-bottom: 30px,
+    ))
+}
+
+.commonEventPopup-detailsReturn{
+    font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+@include resD((
+    font-size: 30px,
+    line-height:36px,
+    letter-spacing: -0.02em,
+    padding: 24px 42px,
+    padding-top: 0px,
+));
+@include resM((
+    margin-top: -2%,
+    left: 88%,
+));
+color: #504F4F;
+& .tekie-name{
+    color: #00ADE6;
+    font-weight: 700;
+}
+}
+
+.commonEventPopup-actionButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    @include resD((
+        padding: 12px 16px 11px,
+        width: 206px,
+        height: 40px,
+        background: conic-gradient(from -3.29deg at 100% -13%, #35E4E9 0deg, #00ADE6 360deg),
+        border-radius: 40px,
+    ));
+    @include resM((
+        margin-top: -2%,
+        left: 88%,
+    ));
+}

@@ -1,0 +1,124 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+.Homework_description_individual_container{
+    @include resD((
+        width:100%,
+        height:40px,
+        background-color: #FFFFFF,
+        margin-top:10px,
+        display:flex,
+        align-items:center,
+        justify-content:space-between
+    ));
+    @include resSm((    
+    ))
+}
+
+.serial_no_Homework_desc{
+    @include resD((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 14px,
+        line-height: 18px,
+        color: #212121,
+        width:70px,
+        text-align:left,
+        padding-left:30px
+    ));
+    @include resSm((
+       
+    ))
+}
+.session_name_Homework_desc{
+    @include resD((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 14px,
+        line-height: 18px,
+        color: #212121,
+        width:200px,
+        text-align:left
+    ));
+    @include resSm((
+       
+    ))
+}
+.session_type_Homework_desc{
+    @include resD((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 14px,
+        line-height: 18px,
+        color: #212121,
+        width:150px,
+        text-align:left,
+        position:relative,
+      
+        
+    ));
+    @include resSm((
+       
+    ))
+}
+.Homework_description_main_container{
+    @include resD((
+     width:100% 
+        
+    ));
+    @include resSm((
+       
+    ))
+}
+.session_time_Homework_desc{
+    @include resD((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 14px,
+        line-height: 18px,
+        color: #212121,
+        width:60px,
+        text-align:left,
+        position:relative,
+        left:-40px
+    ));
+    @include resSm((
+       
+    ))
+}
+.session_date_Homework_desc{
+    @include resD((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 14px,
+        line-height: 18px,
+        color: #212121,
+        width:60px,
+        text-align:left,
+        position:relative,
+        left:-40px
+    ));
+    @include resSm((
+       
+    ))
+}
+.share_Homework_desc{
+    @include resD((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 14px,
+        line-height: 18px,
+        color: #212121,
+        width:109px,
+        text-align:left
+    ));
+    @include resSm((
+       
+    ))
+}

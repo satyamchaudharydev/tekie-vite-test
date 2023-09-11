@@ -1,0 +1,16 @@
+@import 'src/scss/size.scss';
+
+.cardLayout{
+  margin-bottom: hs(18px);
+  margin-left: hs(10px);
+  height: hs(400px);
+  // background-color: aliceblue;
+}
+
+.card{
+  width: hs(417px);
+  height: hs(500px);
+  border-radius: 4px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+}

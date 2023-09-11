@@ -1,0 +1,38 @@
+@import "src/scss/size.scss";
+@import "src/scss/Inter.scss";
+
+.classWorkSectionHeading {
+    display: flex;
+    align-items: center;
+    background-color: #EFF8FF;
+    @include resD1280((
+        padding: 12px 18px,
+        border-radius: 8px,
+        margin-bottom: 16px,
+    ));
+}
+
+.classWorkSectionHeadingTitleContainer {
+    display: flex;
+    flex-direction: column;
+    color: #005773;
+    @include resD1280((
+        margin-left: 12px,
+    ));
+    h2 {
+        font-weight: 600;
+        @include resD1280((
+            margin: 0,
+            font-size: 18px,
+            line-height: 24px,
+        ));
+    }
+    p {
+        font-weight: 500;
+        @include resD1280((
+            font-size: 12px,
+            line-height: 16px,
+            margin-top: 4px,
+        ));
+    }
+}

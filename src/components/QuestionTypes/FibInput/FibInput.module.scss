@@ -1,0 +1,195 @@
+@import 'src/scss/size.scss';
+
+.fibInputContainer{
+  display: block;
+  @include resD((
+    width: hs(884px),
+  ));
+  @include resSm((
+    width: 100%,
+  ))
+}
+
+.terminalContainer{
+  min-width: hs(740px);
+  width: 100%;
+  // height: hs(389px);
+  height: fit-content;
+  object-fit: contain;
+  margin-top: hs(18.8px);
+  @include resD((
+    font-size: hs(20px),
+  ));
+  @include resSm((
+    font-size: hs(35px),
+  ))
+}
+
+.terminalAuto {
+  height: auto;
+}
+
+.questionStatement{
+  width: hs(784px);
+  min-height: hs(78px);
+  object-fit: contain;
+  font-family: Nunito;
+  font-size: hs(24px);
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+}
+
+.updatedAnswersContainer {
+  background: #005773;
+  mix-blend-mode: normal;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 32px;
+  background-position: top;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../../assets/quizWrapperBg.svg');
+  
+  @include resD((
+    border-radius: 35px,
+    flex-direction: row,
+  ));
+  @include resM((
+    border-radius: 0px,
+    flex-direction: column,
+  ));
+
+  & .yourAnswerContainer {
+    @include resD((
+      background-image: '',
+      background-color: '',
+    ));
+    @include resM((
+      background-image: url('https://dsd4auyo4ifts.cloudfront.net/python/correctAnsB.svg'),
+      background-position: top,
+      background-repeat: no-repeat,
+      background-color: #013d50 !important, 
+    ));
+  }  
+  & .actualAnswerContainer {
+    @include resD((
+      background-image: '',
+      background-color: '',
+    ));
+    @include resM((
+      background-image: url('https://dsd4auyo4ifts.cloudfront.net/python/yourAnsB.svg'),
+      background-position: top,
+      background-repeat: no-repeat,
+      background-color: #005772 !important,
+    ));  
+  }
+
+  & .yourAnswerContainer, .actualAnswerContainer {
+    padding: 32px 28px;
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-weight: 600;
+    color: #FFFFFF;
+    @include resD((
+      font-size: 18px,
+    ));
+    @include resM((
+      font-size: 18px,
+    ));
+
+    & > span {
+      margin-bottom: 16px !important;
+    }
+  }
+
+  .actualAnswerContainer {
+    background-color: rgba(0, 137, 157, 0.3);
+    @include resD((
+      border-left: 2px solid #DDD,
+    ));
+    @include resM((
+      border-left: none,
+    ));
+  }
+
+  & .tagsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 8px;
+  } 
+
+  & .answerTags {
+    background: #65DA7A;
+    border-radius: 14px;
+    padding: 12px 18px;
+    font-weight: bold;
+    @include resD((
+      font-size: 16px,
+      margin-top: 6px,
+      margin-right: 6px,
+    ));
+    @include resM((
+      font-size: 16px,
+    ));
+  }
+
+  .incorrectTagColor {
+    background: #FF5744 !important;
+  }
+}
+
+/*mobile*/
+.mbFibInputContainer{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.mbQuestionStatement{
+  width: 100%;
+  min-height: hs(78px);
+  object-fit: contain;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+}
+.mbTerminalContainer{
+  min-width: hs(740px);
+  width: 100%;
+  object-fit: contain;
+  margin-top: hs(18.8px);
+  font-size: 14px;
+  pre {
+    code {
+      input {
+        font-size: 14px;
+        width: fit-content;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.fromReportsPageStyle{
+  margin-top: 0;
+  & pre{
+    margin-top: 0 !important;
+  }
+}

@@ -1,0 +1,30 @@
+@import 'src/scss/size.scss';
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: hs(95px);
+}
+
+.buttonWrapper {
+  margin-right: hs(48px);
+}
+
+.buttonContainer {
+  width: hs(292px);
+  height: hs(80px);
+  border-radius: hs(100px);
+}
+
+.buttonText {
+  font-size: hs(26px);
+  margin-left: hs(44px);
+  margin-right: hs(21px);
+}
+
+.iconCircle {
+  width: hs(60px);
+  height: hs(60px);
+  margin-right: hs(10px);
+}

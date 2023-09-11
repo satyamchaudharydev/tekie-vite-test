@@ -1,0 +1,382 @@
+
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/constants.scss';
+@import 'src/scss/utils.scss';
+$header-height: hs(66px);
+
+  .blockly-top-header{
+      font-weight: bold;
+      height: $header-height;
+    
+  }
+  .practice-create-container-workspace{
+    position: relative;
+    width: 100%;
+    color: #fff;
+    background-color: #012A38;
+    border-right: 1px solid #9FAAAD;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .workspace-output-area{
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+
+  .center-for-blockly-header{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center
+  }
+
+  .practice-create-container-output{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 30%;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+   .toggle{
+    margin-left: auto;
+    .toggle-label{
+      @include resD((
+        font-size: 18px,
+      ));
+    }
+   }
+    @include resD((
+      background-color: #012A38,
+      padding: 0,
+    ));
+    @include resM((
+      background-color: #005773,
+      padding: 4px 0,
+    ));
+  }
+  
+  .project-slideopen-code-btn{
+    background-color: transparent;
+    // margin-right: 13px;
+    background-color: #012A38;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+   
+    border: 0;
+    outline: 0;
+    position: absolute; 
+    right: 0;
+    top: 50px;
+    cursor: pointer;
+    z-index: 40;
+    transition: all 0.3s ease;
+    border-top-left-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+    @include resD((
+    height: 76px,
+    width: 30px,
+    ));
+    svg{
+      @include resD((
+        width: 20px,
+    ));
+    }
+  &.project-slideclose-code-btn{
+    svg{
+      transform: rotate(180deg);
+        
+    }
+  }
+  }
+  
+  .practice-output-tab-code{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .practice-output-tab-code-mob{
+    box-sizing: border-box;
+    background-color: #fff;
+    max-height: 500px;
+    width: 100%;
+    overflow-y: scroll;
+  }
+  
+  .practice-output-tab-code-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 0;
+  }
+
+  .practice-mobileOnly-divider {
+    width: auto;
+    display: block;
+    height: 1px;
+    margin: 16px 18px 0px 18px;
+    border-bottom: 1.2px solid #dcdcdc;
+  }
+
+  .blocklyScrollbarHandle{
+    @include resD((
+      fill-opacity: 1 !important
+    ));
+    @include resM((
+      fill-opacity: 0 !important
+    ));
+  }
+      
+  
+  .blocklyToolboxContents {
+    flex-wrap: nowrap !important;
+  }
+
+  .practice-legacy-text-padding {
+    box-sizing: border-box;
+    @include resD((
+      padding: 2px,
+    ));
+    @include resM((
+      padding: 18px 12px,
+    ));
+  }
+  
+  .practice-output-conatiner{
+    position: absolute;
+    display: flex;
+    bottom: 37px;
+    right: 90px;
+    z-index: 5;
+  }
+
+  .practice-output-conatiner-mob{
+    padding: 10px 0px;
+    background-color: #D7FAFB;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  
+  .language-selector{
+    border: none;
+    width: 120px;
+    // height: 30px;
+    cursor: pointer;
+    // height: 20px;
+    margin-right: 4px;
+  }
+
+  .code-display-blockly{
+    flex: 1;
+    @include resD((
+      min-height: auto,
+    ));
+    @include resM((
+      min-height: 100px,
+    ));
+  }
+  
+  .blockly-run-button {
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin-right: 20px;
+    background-image: url("../../assets/playButton.png");
+    background-size: 160%;
+    background-position: 47% 42%;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    @include resD((
+      margin-right: 20px,
+      width: 60px,
+      height: 60px,
+      bottom: 0px,
+      right: 30px,
+    ));
+    @include resM((
+      margin-right: 10px,
+      width: 40px,
+      height: 40px,
+      bottom: 0px,
+      right: 10px,
+    ));
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  
+  .blockly-save-button {
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    top: 0;
+    background-image: url("../../assets/saveButton.svg");
+    background-size: 160%;
+    background-position: 47% 42%;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    @include resD((
+      width: 60px,
+      height: 60px,
+      bottom: 30px,
+      left: 4rem,
+    ));
+    @include resM((
+      margin-right: 10px,
+      width: 40px,
+      height: 40px,
+      bottom: 30px,
+      left: 10px,
+    ));
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .splitPaneContainer {
+    height: 500px;
+    @include resD((
+      width: 30%
+    ));
+    @include resM((
+      width: 100%
+    ))
+  }
+
+  .splitPane {
+    height: calc(100%) !important;
+    overflow: hidden;
+  }
+
+  .pane1 {
+
+    height: 100%;
+    background-color: #00171F;
+    overflow: scroll;
+  }
+
+  .pane2 {
+    height: 100%;
+    background-color: #00171F;
+    overflow: auto;
+  }
+
+  .splitPaneContainer div[data-type="Resizer"] {
+    background-color: #0B4053 !important;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2225%22%20height%3D%229%22%20viewBox%3D%220%200%2032%209%22%20fill%3D%22none%22%3E%0A%3Ccircle%20cx%3D%224%22%20cy%3D%224.53369%22%20r%3D%224%22%20fill%3D%22%23C4C4C4%22%20fill-opacity%3D%220.4%22%2F%3E%0A%3Ccircle%20cx%3D%2216%22%20cy%3D%224.53369%22%20r%3D%224%22%20fill%3D%22%23C4C4C4%22%20fill-opacity%3D%220.4%22%2F%3E%0A%3Ccircle%20cx%3D%2228%22%20cy%3D%224.53369%22%20r%3D%224%22%20fill%3D%22%23C4C4C4%22%20fill-opacity%3D%220.4%22%2F%3E%0A%3C%2Fsvg%3E");
+    opacity: 1;
+    z-index: 1;
+    height: 19px;
+    box-sizing: border-box;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+    width: 100%;
+    cursor: row-resize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    span {
+      width: 8px;
+      height: 8px;
+      background: #C4C4C4;
+      opacity: 0.4;
+      margin: 0 5px;
+      border-radius: 50%;
+    }
+  }
+    
+  .Resizer:hover {
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+
+  .Resizer.horizontal {
+    width: 100%;
+  }
+
+  .Resizer.disabled {
+    cursor: not-allowed;
+  }
+  .Resizer.disabled:hover {
+    border-color: transparent;
+  }
+  // .xterm-viewport {
+  //   width: fit-content !important;
+  // }
+  // .xterm .xterm-viewport {
+  //   overflow-y: none !important;
+  // }
+  // .terminal {
+  //   height: 100%;
+  //   width: 100%;
+  // }
+  .practice-create-container-item{
+    box-sizing: border-box;
+    display: flex;
+  @include resD((
+    font-size: 20px,
+    padding: 13px,
+    gap: 12px, 
+  ));
+  @include resM((
+    font-size: 15px,
+    padding: 10px,
+    gap: 10px, 
+  ));
+  & svg{   
+    @include resD(
+      (
+        width: 25px,
+        height: 25px,
+      )
+      
+    );
+    @include resM(
+        (
+          width: 18px,
+        height: 18px,
+        )
+      )
+  }
+}
+.blockly-ouputsection{
+  background: #00171F;
+  & div[data-type='Resizer']{
+    height: 10px;
+    animation: slide-up 0.1s linear;
+  }
+}
+@keyframes slide-up{
+  0%{
+    transform: translateY(200%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+.codeplayground-fullHeight{
+  height: calc(100vh - #{hs($topNavBarHeight) + $header-height})!important;
+}
+
+.blocklyFlyoutScrollbar ~ svg[display="none"]{
+  display: none;
+}

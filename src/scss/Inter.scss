@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+.Inter {
+//   font-family: 'Inter', 'Lato', 'Nunito', sans-serif;
+  font-family: 'Inter', 'Nunito', sans-serif;
+}
+
+.Inter-regular {
+  @extend .Inter;
+  font-weight: 400;
+}
+
+.Inter-SemiBold {
+  @extend .Inter;
+  font-weight: 600;
+}
+
+.Inter-Bold {
+  @extend .Inter;
+  font-weight: 800;
+}

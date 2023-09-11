@@ -1,0 +1,537 @@
+@import 'src/scss/size.scss';
+
+.project-mainContainer{
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  @include resD((
+    padding: 20px 60px 150px,
+    padding-left: 0px,
+  ));
+  @include resM((
+    padding: 20px 20px 80px,
+  ));
+}
+
+.next-button-container {
+  bottom: 0;
+  right: 0;
+  padding: 32px;
+  
+  @include resD((
+    position: absolute
+  ));
+  @include resM((
+    position: relative
+  ));
+}
+
+.project-details-container {
+  background: #FFFFFF;
+  border-radius: 24px 24px;
+  overflow: hidden;
+  justify-self: center;
+  // box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: Nunito;
+  box-sizing: border-box;
+  padding-left: 20px;
+  @include resD((
+    min-width: 1500px,
+    max-width: 95%,
+  ));
+  @include resM((
+    min-width: fit-content,
+    // min-width: 1100px,
+    max-width: 90%,
+  ));
+  
+  .project-top-container {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Nunito;
+    background: rgba(230, 247, 253,  .8);
+    // background-image: url(../../../assets/loginBG.png);
+    backdrop-filter: blur(150px);
+    border-radius: 24px 24px 0px 0px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    & .project-top-flex-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      & .project-top-image-container {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 180px;
+        min-width: 180px;
+        height: 190px;
+        border-radius: 24px 0px 0px 24px;
+      }
+
+      & .project-top-details-container {
+        width: 100%;
+        margin: 0px 22px 0px 18px;
+        .project-top-details-heading {
+          font-weight: bold;
+          letter-spacing: -0.02em;
+          color: #005773;
+
+          @include resD((
+            font-size: 32px,
+          ));
+          @include resM((
+            font-size: 24px,
+          ));
+        }
+        .project-top-details-difficulty-levels {
+          padding: 8px 0px 12px;
+          display: flex;
+          .project-top-details-difficulty-icon-filled {
+            width: 30px;
+            height: 30px;
+            background-image: url(../../../assets/difficultyFilled.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            align-self: flex-start;
+          }
+          .project-top-details-difficulty-icon-outline {
+            width: 30px;
+            height: 30px;
+            background-image: url(../../../assets/difficultyOutline.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            align-self: flex-start;
+          }
+        }
+        .project-top-details-description {
+          font-weight: normal;
+          width: 100%;
+          color: #504F4F;
+          @include resD((
+            font-size: 22px,
+            margin-top: 28px,
+          ));
+          @include resM((
+            font-size: 16px,
+            margin-top: 14px,
+          ));
+        }
+      }
+    }
+
+    & .project-top-logo-container {
+      width: 100px;
+      height: 60px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      align-self: flex-start;
+      position: absolute;
+      top: 20px;
+      right: 0px;
+    }
+  }
+
+  .project-create-container {
+    width: 100%;
+    height: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+
+    & .project-create-description {
+      font-weight: bold;
+      color: #504F4F;
+      padding: 12px 0px;
+      
+      @include resD((
+        width: 80%,
+        font-size: 20px,
+      ));
+      @include resM((
+        width: 100%,
+        font-size: 16px,
+      ));
+    }
+    & .project-create-description-list {
+      color: #504F4F;
+      font-weight: normal;
+      
+      @include resD((
+        margin-top: 12px,
+        font-size: 20px,
+      ));
+      @include resM((
+        margin-top: 8px,
+        font-size: 16px,
+      ));
+    }
+  }
+}
+
+.project-heading-text {
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #005773;
+
+  @include resD((
+    font-size: 28px,
+  ));
+  @include resM((
+    font-size: 20px,
+  ));
+}
+
+.project-primary-btn {
+  width: fit-content;
+  font-family: Nunito;
+  font-weight: 900;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: conic-gradient(from -3.29deg at 100% -13%, #35E4E9 0deg, #00ADE6 360deg);
+  box-shadow: 0px 0px 30px rgba(53, 201, 233, 0.5), inset 0px 0px 8px rgba(0, 255, 240, 0.8);
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+  transition: all .3s;
+  transform: scale(1);
+  
+  @include resD((
+    font-size: 18px,
+    padding: 12px 48px,
+  ));
+  @include resM((
+      font-size: 14px,
+      padding: 8px 28px,
+  ));
+
+  &:active {
+    transition: all .3s;
+    transform: scale(.93);
+  }
+}
+
+.project-secondary-btn {
+  width: fit-content;
+  font-family: Nunito;
+  font-weight: 600;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  background: transparent;
+  letter-spacing: 0.03em;
+  text-decoration: underline;
+  color: #00ADE6;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+  transition: all .3s;
+  transform: scale(1);
+  
+  @include resD((
+    font-size: 20px,
+    padding: 12px 48px,
+  ));
+  @include resM((
+      font-size: 16px,
+      padding: 8px 28px,
+  ));
+
+  &:active {
+    transition: all .3s;
+    transform: scale(.93);
+  }
+}
+
+.project-divider {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+   width: 100%;
+   box-sizing: border-box;
+   padding: 12px 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .project-top-container {
+    & .project-top-flex-container {
+      flex-wrap: wrap;
+
+      & .project-top-image-container {
+        width: 100% !important;
+        border-radius: 24px !important;
+      }
+
+      & .project-top-details-container {
+        margin-top: 10px !important;
+        .project-top-details-difficulty-levels {
+          padding: 8px 0px !important;
+        }
+        .project-top-details-description {
+          width: 100% !important;
+        }
+      }
+    }
+
+    & .project-top-logo-container {
+      display: none;
+    }
+  }
+}
+
+.project-submit-container {
+  width: 200px;
+  height: 250px;
+  position: relative;
+  border: 9px solid #61CCEB;
+  border-radius: 30px;
+  background-color: #EDEDED;
+  margin: auto;
+  display: block;
+  overflow: hidden;
+
+  @include resD((
+    margin: 12px auto,
+  ));
+  @include resM((
+    margin: 8px auto,
+  ));
+}
+
+.project-submitted-state {
+  background-image: url(../../../assets/memory-sidebar-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-color: #def1f3;
+}
+
+
+.project-submit-circle-skeleton {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #FFF;
+  margin: 16px 12px;
+  box-sizing: border-box;
+}
+.project-submit-line-skeleton {
+  height: 12px;
+  background-color: #FFF;
+  margin: 12px 12px;
+  box-sizing: border-box;
+}
+
+.project-submit-input-container {
+  position: relative;
+  width: 90%;
+  margin: 4px 12px;
+  height: 40px;
+
+  .project-submit-input {
+    font-family: Nunito;
+    font-style: italic;
+    width: 100%;
+    height: 100%;
+    padding: 12px 8px;
+    border: none;
+    background: #FAFAFA;
+    border-radius: 40px;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .project-submit-icon {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    padding: 8px;
+    border: none;
+    background: #00ADE6;
+    border-radius: 100%;
+    box-sizing: border-box;
+    outline: none;
+    fill: transparent
+  }
+}
+
+.projectLink-edit-btn {
+  font-family : Nunito;
+  font-weight : bold;
+  display: flex;
+  white-space: nowrap;
+  place-items: center;
+  border: none;
+  background: transparent;
+  font-size : 16px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-decoration: underline;
+  color : #FFFFFF;
+}
+
+.projectLink-edit-Icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+  background: url(../../../assets/editIconOutline.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.project-embed-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+  background-color: rgba(0, 23, 31, 0.7);;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.modal-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: all .5s;
+}
+
+.playIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  cursor: pointer;
+  height: 90px;
+  background: url(../../../assets/play-icon.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.embed-box {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(87.56% 128.85% at 50% 50%, #02B6E7 41.98%, #0093DB 100%);
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.75);
+  border: 9px solid #61CCEB;
+  border-radius: 30px;
+  color: white;
+  margin: 12px 0px;
+  
+  .embed-box-student-project-name {
+    padding: 8px 20px 0px;
+    font-weight: 700;
+    font-size: 18px;
+    display: block;
+    text-transform: capitalize;
+  }
+  .embed-box-student-profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 8px 20px;
+  }
+  .embed-box-student-profile-avatar {
+    width: 35px;
+    height: 35px;
+    margin: 2px 0px;
+    background-color: #FFF;
+    border-radius: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .embed-box-student-profile-name {
+    padding: 0px 12px;
+    font-weight: 700;
+    display: block;
+    font-size: 16px;
+  }
+
+  .embed-box-student-profile-grade {
+    padding: 0px 12px 12px;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+  }
+
+  iframe {
+    border: none;
+  }
+}
+
+.embed-modal-tekie-logo {
+  width: 100px;
+  height: 50px;
+  padding: 8px 0px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.project-embed-modal-backIcon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  padding: 20px; 
+  color: #00ADE6;
+  cursor: pointer;
+  font-weight: 600;
+
+  > svg path {
+    fill: #00ADE6 !important;
+  }
+}
+
+
+.project-error-text {
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #005773;
+  display: grid;
+  place-items: center;
+
+  @include resD((
+    font-size: 28px,
+  ));
+  @include resM((
+    font-size: 20px,
+  ));
+}

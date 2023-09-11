@@ -1,0 +1,80 @@
+@import 'src/scss/size.scss';
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  @include resD((
+    width: 855px,
+    padding-left: 25px,
+    margin-bottom: 29px,
+  ));
+  @include resM((
+    width: 100%,
+    padding-left: 16px,
+    margin-bottom: 24px,
+  ));
+}
+
+.reason {
+  font-weight: 600;
+  font-family: Nunito;
+  color: #504f4f;
+  @include resD((
+    font-size: 22px,
+  ));
+  @include resM((
+    font-size: 16px,
+  ));
+}
+
+.date {
+  color: #aaacae;
+  font-weight: 300;
+  font-family: Nunito;
+  @include resD((
+    font-size: 18px,
+    margin-top: 5px,
+  ));
+  @include resM((
+    font-size: 14px,
+    margin-top: 8px,
+  ));
+}
+
+.sep {
+  flex: 1;
+  background-color: #61dfef;
+  @include resD((
+    height: 2px,
+    margin: 15px 15px 0 10px
+  ));
+  @include resM((
+    height: 2px,
+    margin: 10px 9px 0 9px
+  ));
+}
+
+.transactions {
+  font-family: Nunito;
+  font-weight: bold;
+  @include resD((
+    font-size: 22px,
+    margin-right: 5px,
+  ));
+  @include resM((
+    font-size: 15px,
+    margin-right: 5px,
+  ));
+}
+
+.coin {
+  @include resD((
+    width: 30px,
+    height: 30px,
+  ));
+  @include resM((
+    width: 22px,
+    height: 22px,
+    margin-right: 16px 
+  ));
+}

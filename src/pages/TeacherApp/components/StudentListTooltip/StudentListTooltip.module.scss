@@ -1,0 +1,50 @@
+@import "src/scss/size.scss";
+@import "src/scss/Inter.scss";
+
+.tooltipContainer {
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+    @include resD1280((
+      margin: 12px,
+    ));
+}
+  
+.tooltipHeadingContainer {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ffffff33;
+    @include resD1280((
+        padding-bottom: 8px
+    ));
+    h2 {
+        font-family: 'Inter';
+        font-style: normal;
+        color: #FFFFFF;
+        font-weight: 600;
+        @include resD1280((
+        font-size: 12px,
+        line-height: 120%,
+        margin-left: 4px,
+        ));
+    }
+}
+  
+.tooltipBodyContainer {
+    padding-inline-start: 0;
+    list-style: none;
+    overflow: scroll;
+    @include resD1280((
+        margin: 0,
+        margin-top: 8px,
+        max-height: 94px,
+    ));
+    li{
+        font-weight: 400;
+        @include resD1280((
+        font-size: 10px,
+        line-height: 160%,
+        margin-bottom: 4px,
+        ));
+    }
+}

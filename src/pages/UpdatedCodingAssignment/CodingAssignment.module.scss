@@ -1,0 +1,358 @@
+@import 'src/scss/size.scss';
+
+.questionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: hs(20px);
+  position: relative;
+  z-index: 20;
+  box-sizing: border-box;
+  @include resD((
+    padding-left: hs(46px),
+  ));
+  @include resM((
+    padding-left: 0px,
+  ));
+}
+
+.questionStatement {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 600;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  color: #504f4f;
+  line-height: 1.6;
+  box-sizing: border-box;
+  @include resD((
+    font-size: hs(26px),
+    width: 93%,
+    padding: 45px 0,
+  ));
+  @include resM((
+    font-size: 18px,
+    width: 100%,
+    padding: 0px 12px,
+  ));
+}
+
+.questionCodeSnippet {
+  @include resD((
+    width: 93%,
+    margin-left: hs(16px),
+  ));
+  @include resM((
+    width: 100%,
+    margin-left: 0,
+  ));
+}
+
+.editorContainer {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 16px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #E9E9E9;
+
+  @include resD((
+    width: 93%,
+    height: hs(700px),
+    margin-top: hs(24px),
+    margin-left: hs(16px),
+  ));
+  @include resM((
+    width: 100%,
+    height: 80vh,
+    margin-top: hs(24px),
+    margin-left: 0,
+  ));
+  &.blocklyContainer{
+    height: unset;
+  }
+}
+
+.editorTitle {
+  width: 100%;
+  background-color: #01AA93;
+  display: flex;
+  align-items: center;
+  // color: #000102;
+  color: #FFF;
+  font-weight: 600;
+  @include resD((
+    font-size: 35px,
+    height: 55px,
+    padding-left: unset,
+    justify-content: center,
+  ));
+  @include resM((
+    font-size: 18px,
+    height: 35px,
+    padding-left: 25px,
+    justify-content: flex-start,
+  ));
+
+  & > .editorfileName {
+    @include resD((
+      opacity: 1
+    ));
+    @include resM((
+      opacity: 0
+    ));
+  }
+}
+
+.skyBlue {
+  @include resD((
+    background-color: #5fc5e5,
+  ));
+  @include resM((
+    background-color: #00ADE6,
+  ));
+}
+
+.editorRunButton {
+  width: hs(70px);
+  height: hs(70px);
+  position: absolute;
+  bottom: hs(0px);
+  right: hs(30px);
+  background-image: url("../../assets/playButton.png");
+  background-size: 117%;
+  background-position: 47% 42%;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.editorOutput {
+  width: 100%;
+  border-radius: hs(21px);
+  box-sizing: border-box;
+  padding: 5px hs(20px) 5px hs(30px);
+  border-radius: hs(5px);
+  font-family: Monaco;
+  font-size: hs(21px);
+  overflow: scroll;
+  line-height: 1.5;
+  color: #ffffff;
+  margin-top: hs(5px);
+  &::-webkit-scrollbar {
+    max-width: hs(10px);
+    height: hs(7px);
+  };
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0;
+  };
+  &::-webkit-scrollbar-corner {
+  }
+}
+
+.editorText {
+  lineHeight: hs(30px);
+}
+
+.editorOutputContainer {
+  flex: 1;
+  height: calc(100% - #{hs(35px)});
+  background-color: #052732;
+  box-sizing: border-box;
+  // padding: hs(5px) hs(20px) hs(30px) hs(20px);
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    max-width: hs(10px);
+  };
+  &::-webkit-scrollbar-thumb {
+    // background-color: rgba(#34e4ea, 0.5);
+    border-radius: 0;
+  };
+}
+
+.lastQuestionEditorOutputContainer {
+  flex: 1;
+  height: calc(100% - #{hs(36px)});
+  // background-color: #052732;
+  box-sizing: border-box;
+  padding: 0 hs(20px) 0 hs(20px);
+  overflow: scroll;
+}
+
+.nextButtonContainer {
+    @include resD((
+    width: 98%,
+  ));
+  @include resM((
+    width: unset,
+  ));
+  // margin-top: hs(36px);
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.submitButtonContainer {
+  width: 87%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  // margin-bottom: hs(18px);
+}
+
+
+.submitButton{
+  display: flex;
+  cursor: default;
+  justify-content: center;
+  align-items: center;
+  font-family: Nunito;
+  width: hs(173.9px);
+  height: hs(50px);
+  border-radius: hs(32px);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-image: linear-gradient(to bottom, #00ade6, #34e4ea);
+  font-size: hs(28px);
+  font-weight: 700;
+  color: #fff;
+  padding-top: hs(4px);
+  border: solid 1px #34e4ea;
+  &:hover {
+    cursor: default;
+    opacity: 0.8;
+  }
+}
+
+.bigNextButtonContainer {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  margin-top: hs(175px);
+  margin-bottom: hs(48px);
+  right: hs(48px);
+}
+
+.topMargin {
+  margin-top: hs(78px) !important;
+}
+
+.footerContainer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  box-sizing: border-box;
+  background: #F9F9F9;;
+  // box-shadow: inset 0px 2px 0px rgba(137, 137, 137, 0.23);
+  z-index: 98;
+  
+  @include resD((
+    padding: 16px 36px,
+  ));
+  @include resM((
+    padding: 0px 14px,
+  ));
+}
+
+.inActiveCircle {
+  background: #E6F7FD !important;
+  color: #000000 !important;
+}
+
+.hintsContainer {
+  @include resD((
+    width: 93%,
+    margin: hs(20px) 0 hs(20px) hs(16px),
+  ));
+  @include resM((
+    width: 100%,
+    margin: hs(20px) 0
+  ));
+}
+
+.hintBox {
+  border: 1px solid #E9E9E9;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+.hintBoxPretextContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  @include resD((
+    padding: 5px 55px
+  ));
+  @include resM((
+    padding: 5px 25px
+  ));
+}
+
+.hintBoxPretext {
+  display: flex;
+  align-items: center;
+  p {
+    margin: 0 0 0 20px;
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    color: #012A38;
+    @include resD((
+      font-size: 25px,
+      line-height: 34px
+    ));
+    @include resM((
+      font-size: 18px,
+      line-height: 25px
+    ));
+  }
+}
+
+.arrowSvg {
+  path {
+    fill: #999;
+    opacity: 0.5;
+  }
+}
+
+.hintTextContainer {
+  @include resD((
+    padding: 10px 30px 10px 110px,
+  ));
+  @include resM((
+    padding: 10px 20px 10px 70px,
+  ));
+}
+
+.embedEditorContainer{
+  @include resD((
+    margin-bottom: 25px,
+  ));
+  @include resM((
+    margin-bottom: 25px,
+  ));
+}
+
+.solutionToggleContainer{
+  @include resD1280((
+    margin-top: 8px,
+  ));
+  width: fit-content;
+  margin-left: auto;
+}
+.footerContainerForTeacherApp{
+  position: absolute;
+}

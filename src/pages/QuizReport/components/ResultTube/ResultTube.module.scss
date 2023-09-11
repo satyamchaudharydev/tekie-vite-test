@@ -1,0 +1,52 @@
+@import 'src/scss/size.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: hs(31.7px);
+}
+
+.label {
+  font-weight: bold;
+  font-size: hs(24px);
+  color: #504f4f;
+  width: hs(224px);
+}
+
+.tube {
+  width: hs(268px);
+  height: hs(52.3px);
+  background-image: linear-gradient(to right, #cffbff 0%, #f1f2f2 100%);
+  border-radius: hs(31px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.scoreLabel {
+  font-weight: 900;
+  width: hs(30px);
+  font-size: hs(25px);
+  margin-left: hs(26px)
+}
+
+.tubeFillSVG {
+  width: hs(268px) * 1.3;
+  height: hs(52.3px) * 1.3;
+  position: relative;
+  top: hs(-7px);
+  margin-left: hs(-347px);
+}
+.tubeFillSVGFull {
+  @extend .tubeFillSVG;
+  margin-left: hs(0px);
+}
+
+.flake {
+  position: relative;
+  left: hs(-12px);
+  top: 0px;
+  width: hs(9.225px);
+  height: hs(29.83px);
+}

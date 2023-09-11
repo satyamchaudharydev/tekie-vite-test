@@ -1,0 +1,51 @@
+@import "src/scss/size.scss";
+
+.button {
+	display: flex;
+	text-decoration: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	@include resD(
+		(
+			gap: 24px,
+			width: 200px,
+			height: 185px,
+			padding: 4px 8px,
+		)
+	);
+
+	background: rgba(39, 117, 181, 0.06);
+	/* Neutral/Emperor-86 */
+
+	border: 1px dashed #dcdcdc;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.iconContainer {
+	@include resD(
+		(
+			width: 49px,
+			height: 49px,
+		)
+	);
+}
+
+.title {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+
+	& span {
+		@include resD(
+			(
+				font-weight: 600,
+				font-size: 16px,
+				line-height: 16px,
+				color: #282828,
+			)
+		);
+	}
+}

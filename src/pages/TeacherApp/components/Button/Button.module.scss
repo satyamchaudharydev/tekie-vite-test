@@ -1,0 +1,179 @@
+@import "../../mixins/_mixins.scss";
+@import "../../variables/_variables.scss";
+@import "src/scss/Inter.scss";
+@import "src/scss/size.scss";
+@import "src/scss/lato.scss";
+@import "src/scss/Inter.scss";
+@import "src/scss/theme/colors.scss";
+
+.btn {
+  @include flex(center, center);
+  color: $white;
+  &:disabled{
+    // background-color: #F5F5F5;
+    color: #CCCCCC;
+  }
+}
+
+.primary {
+  @include resD((
+    padding: 13px 20px,
+    gap: 6px,
+    border-radius: 10px
+  ));
+  background-color: $primary-color;
+  color: $white;
+  border: none;
+  @include flex(center, center);
+  font-weight: 500;
+  cursor: pointer;
+  font-family: "Inter";
+  &:disabled{
+    pointer-events: none;
+    cursor: default;
+    background-color: rgba(245, 245, 245, 0.5);
+    &:hover {
+        background-color: #CCCCCC;
+    }
+  }
+  &:hover {
+    background-color: $primary-color-110
+;
+    transition: 0.4s ease-in-out;
+  }
+
+  span{
+    white-space: nowrap;
+    @include resD((
+      font-size:17px
+    ))
+  }
+}
+.secondary {
+  @extend .primary;
+  background-color: $tekie-amethyst-30;
+  color: $primary-color;
+  font-family: "Inter";
+  &:disabled{
+    pointer-events: none;
+    cursor: default;
+    &:hover {
+        background-color: #CCCCCC;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #e2ceff;
+    transition: 0.2s ease-in-out;
+  }
+  &:active {
+    background: #f3ebff;
+    box-shadow: 0px 2px 8px rgba(113, 62, 188, 0.24);
+    transition: 0.2s ease-in-out;
+  }
+  span{
+    white-space: nowrap;
+    @include resD((
+      font-size:17px
+    ))
+  }
+}
+.tertiary{
+  @include flex(center,center);
+  gap: 8px;
+  color: $primary-color;
+  @include resD((
+    border: 2px solid $primary-color,
+    padding: 9px 12px,
+    border-radius: 8px,
+  ));
+  @include resM((
+    border: 2px solid $primary-color,
+    padding: 9px 12px,
+    border-radius: 8px,
+  ));
+  font-family: "Inter";
+  font-weight: 500;
+  background-color: #FAF6FF;
+  &:disabled{
+    pointer-events: none;
+    cursor: default;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color:#F3EBFF ;
+    transition: 0.4s ease-in-out;
+  }
+}
+.ghost{
+  @include flex(center,center);
+  gap: 5px;
+  color: #282828;
+  font-family: "Inter";
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  text-decoration: none;
+  &:disabled{
+    pointer-events: none;
+    cursor: default;
+  }
+  &:hover {
+    cursor: pointer;
+  };
+  &:disabled{
+   pointer-events: none;
+   color: $tekie-grey-60;
+  }
+}
+.widthFull {
+  width: 100%;
+}
+.rounded {
+  border-radius: 100%;
+}
+.posAbsolute {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: $z999999;
+}
+
+.addIcon {
+  svg {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.hoverStateAmethystDark {
+  &:hover {
+    background: $primary-color-110
+;
+    transition: 0.4s ease-in-out;
+  }
+}
+
+.embedFooterSecondaryText, .embedFooterPrimaryText {
+font-weight: 500;
+display: flex;
+align-items: center;
+color: #8C61CB;
+@include resD1280((
+  font-size: 12px !important,
+  line-height: 18px,
+))
+}
+.embedFooterPrimaryText{
+    color: white;
+}
+.default{
+  @extend .primary;
+  background: rgba(220, 220, 220, 0.4);
+  border: 1px solid rgba(186, 186, 186, 0.3);
+  color: #8C61CB;
+  &:hover {
+   background-color: unset;
+   
+  }
+}

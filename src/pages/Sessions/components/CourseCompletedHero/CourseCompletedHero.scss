@@ -1,0 +1,676 @@
+@import 'src/scss/size.scss';
+
+.sp-completed-component-bg {
+  background: url('../../assets/CompletedCourseBg.svg');
+  background-color: #00171F;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  @include resD((
+    flex-direction: row,
+    align-items: center,
+    height: 555px,
+    padding: 0px 48px
+  ));
+  @include resSm((
+    flex-direction: column,
+    align-items: flex-start,
+    height: 100%,
+    padding: 0px
+  ))
+}
+
+.sp-completed-component-container {
+  background: rgba(#fff, 0.4);
+  // mix-blend-mode: overlay;
+  backdrop-filter: blur(hs(150px));
+  border-radius: 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  @include resD((
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1),
+    padding: 48px 24px 48px 48px,
+    width: 1284px,
+    height: 459px,
+    top: unset,
+  ));
+  @include resMs((
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1),
+    padding: 24px 18px 24px 24px,
+    width: 492px,
+    height: 344px,
+    top: 20px,
+  ))
+}
+
+.sp-completed-component-up-next {
+  letter-spacing: 0.03em;
+  color: rgba(#504F4F, 0.5);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include resD((
+    font-size: 18px,
+  ));
+  @include resMs((
+    font-size: 18px,
+  ));
+}
+
+.sp-completed-component-batch-name {
+  letter-spacing: 0.03em;
+  color: rgba(#504F4F, 0.5);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include resD((
+    font-size: 18px,
+  ));
+  @include resMs((
+    font-size: 16px,
+  ));
+  span {
+    &::before {
+      @include resD((
+        content: 'Batch Name: ',
+      ));
+      @include resMs((
+        content: 'Batch: ',
+      ));
+    }
+  }
+}
+
+.sp-completed-component-next-icon {
+  @include resD((
+    width: 24px,
+    height: 24px,
+    margin-left: 10px
+  ));
+  @include resMs((
+    width: 18px,
+    height: 18px,
+    margin-left: 11px
+  ));
+}
+
+.sp-completed-component-title {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: capitalize;
+  letter-spacing: -0.02em;
+  @include resD((
+    font-size: 40px,
+    margin-top: 16px,
+    margin-bottom: 16px,
+    max-width: 70%,
+  ));
+  @include resMs((
+    font-size: 28px,
+    margin-top: 16px,
+    margin-bottom: 4px,
+    max-width: 100%,
+  ));
+}
+
+.sp-completed-component-divider {
+  background: linear-gradient(270deg, #35E4E9 -8.62%, #00ADE6 109.2%);
+  @include resD((
+    width: 150px,
+    height: 4px,
+    margin-top: 8px,
+    margin-bottom: 16px,
+  ));
+  @include resMs((
+    width: 150px,
+    height: 4px,
+    margin-top: 4px,
+    margin-bottom: 4px,
+  ));
+}
+
+.sp-description {
+  color: #504F4F;
+  @include resD((
+    font-size: 20px,
+    display: block
+  ));
+  @include resMs((
+    display: none,
+  ));
+}
+
+.sp-topic-thumbnail {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include resD((
+    width: 261px,
+    height: 261px,
+    margin-top: 29px,
+    // margin-right: 20px
+  ));
+  @include resMs((
+    width: 171px,
+    height: 171px,
+    margin-top: 0px,
+    // margin-right: 20px
+  ));
+}
+
+.sp-completed-component-buttons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s;
+  @include resD((
+    margin-top: 12px,
+    position: static,
+    width: unset,
+  ));
+  @include resMs((
+    margin-top: 15px,
+    width: 100%,
+  ));
+
+  .sp-completed-component-download-button {
+    font-family: Nunito;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    color: #FFFFFF;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    background: conic-gradient(from -3.29deg at 100% -13%, #35E4E9 0deg, #00ADE6 360deg);
+    border-radius: 40px;
+    transition: all .3s;
+    @include resD((
+      font-size: 18px,
+      padding: 12px 26px,
+      margin: 12px 0px,
+    ));
+    @include resM((
+      font-size: 12px,
+      padding: 8px 12px,   
+      margin: 8px 0px,   
+    ));
+  }
+  .sp-completed-component-share-button {
+    font-family: Nunito;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    color: #00ADE6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @include resD((
+      font-size: 18px,
+      padding: 12px 26px,
+      margin: 12px 0px,
+    ));
+    @include resM((
+      font-size: 12px,
+      padding: 8px 12px,   
+      margin: 8px 0px,   
+    ));
+    transition: all .3s;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+
+    & > .sp-completed-component-shareIcon {
+      background-image: url('../../assets/shareIcon.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      @include resD((
+        width: 28px,
+        height: 28px,
+        margin-left: 6px
+      ));
+      @include resMs((
+        width: 22px,
+        height: 22px,
+        margin-left: 4px
+      ));
+    } 
+  }
+}
+
+.sp-completed-details-rating-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-left: 8px;
+
+  & .sp-completed-rateIcon {
+    cursor: pointer;
+    svg {
+      @include resD((
+        width: 24px,
+        height: 24px,
+        margin: 0px 4px
+      ));
+      @include resM((
+        width: 20px,
+        height: 20px,
+        margin: 0px 2px
+      )); 
+    }
+  }
+}
+
+.sp-circle-icon-button {
+  box-shadow: 0px 0px 30px 0px rgba(53, 201, 233, 0.5), inset 0px 0px 8px #34E4EA;
+  transition: 0.3s all ease-in-out;
+  background: #00ADE6;
+  cursor: pointer;
+
+  @include resD((
+    width: 58px,
+    height: 58px,
+    border-radius: 40px,
+    margin-right: 20px,
+  ));
+  &:hover {
+    box-shadow: 0px 0px 20px 7px rgba(53, 201, 233, 0.5), inset 0px 0px 10px #34E4EA;
+  }
+}
+
+.sp-completed-component-left-container {
+  @include resD((
+    width: 761px,
+    padding: 0
+  ));
+  @include resM((
+    padding: 12px 28px 8px
+  ));
+}
+
+.sp-completed-component-right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  @include resD((
+    width: fit-content,
+    padding: 0
+  ));
+  @include resMs((
+    width: 100%,
+    padding: 4px 28px 12px
+  ));
+}
+
+.sp-container {
+  @include resD((
+    margin-top: 64px,
+  ));
+  @include resMs((
+    margin-top: 65px,
+  ))
+}
+
+.sp-completed-details-row {
+  font-family: Nunito;
+  font-weight: 600;
+  @include resD((
+    margin-top: 40px,
+    margin-bottom: 24px
+  ));
+  @include resMs((
+    margin-top: 23px,
+    margin-bottom: 20px
+  ));
+
+  & .sp-completed-details-header {
+    color: #FFFFFF;
+    opacity: 0.5;
+    @include resD((
+      font-size: 18px,
+      margin-bottom: 6px
+    ));
+    @include resMs((
+      font-size: 14px,
+      margin-bottom: 4px
+    ))
+  }
+  & .sp-completed-details-description {
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    @include resD((
+      font-size: 20px,
+    ));
+    @include resMs((
+      font-size: 16px,
+    ));
+  }
+  .sp-completed-details-mentorContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    margin-top: 4px,
+  }
+  & .sp-completed-details-userIcon {
+    background-image: url('../../assets/gradientUserIcon.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    border-radius: 100px;
+    @include resD((
+      width: 36px,
+      height: 36px,
+      margin-right: 10px
+    ));
+    @include resMs((
+      width: 28px,
+      height: 28px,
+      margin-right: 4px
+    ));
+  }
+}
+
+.sp-md-text {
+  font-family: Nunito;
+  font-weight: 600;
+  color: #504F4F;
+  @include resD((
+    font-size: 20px,
+    margin-left: 13px
+  ));
+  @include resMs((
+    font-size: 15px,
+    margin-left: 10px
+  ))
+}
+
+.sp-loader-card {
+  width: 100%;
+  height: 100%;
+  .sp-loader-1 {
+    @include resD((
+      y: 15px,
+      height: 48px,
+      width: 342px
+    ));
+    @include resSm((
+      y: 15px,
+      height: 20px,
+      width: 150px
+    ))
+  }
+  .sp-loader-2 {
+    @include resD((
+      y: 80px,
+      height: 20px,
+      width: 742px
+    ));
+    @include resSm((
+      y: 45px,
+      height: 20px,
+      width: 120px
+    ))
+  }
+  .sp-loader-3 {
+    @include resD((
+      y: 110px,
+      height: 20px,
+      width: 700px
+    ));
+    @include resSm((
+      opacity: 0
+    ))
+  }
+  .sp-loader-4 {
+    @include resD((
+      y: 150px,
+      height: 61px,
+      width: 61px,
+      rx: 50%,
+    ));
+    @include resSm((
+      y: 80px,
+      height: 30px,
+      width: 30px,
+      rx: 50%,
+    ))
+  }
+  .sp-loader-5 {
+    @include resD((
+      y: 160px,
+      x: 75px,
+      height: 15px,
+      width: 150px,
+    ));
+    @include resSm((
+      y: 80px,
+      x: 35px,
+      height: 10px,
+      width: 50px,
+    ))
+  }
+  .sp-loader-6 {
+    @include resD((
+      y: 180px,
+      x: 75px,
+      height: 20px,
+      width: 50px,
+    ));
+    @include resSm((
+      y: 100px,
+      x: 35px,
+      height: 10px,
+      width: 50px,
+    ))
+  }
+  .sp-loader-7 {
+    @include resD((
+      y: 240px,
+      height: 35px,
+      width: 35px,
+      rx: 5px,
+    ));
+    @include resSm((
+      y: 130px,
+      height: 20px,
+      width: 20px,
+      rx: 5px,
+    ));
+  }
+  .sp-loader-8 {
+    @include resD((
+      y: 247px,
+      height: 20px,
+      width: 120px,
+      x: 50px,
+    ));
+    @include resSm((
+      y: 155px,
+      height: 20px,
+      width: 20px,
+      rx: 5px,
+    ));
+  }
+  .sp-loader-9 {
+    @include resD((
+      y: 290px,
+      x: 0px,
+      height: 35px,
+      width: 35px,
+      rx: 5px,
+    ));
+    @include resSm((
+      y: 155px,
+      x: 30px,
+      height: 15px,
+      width: 80px,
+    ));
+  }
+  .sp-loader-10 {
+    @include resD((
+      y: 297px,
+      height: 20px,
+      width: 120px,
+      x: 50px,
+    ));
+    @include resSm((
+      y: 130px,
+      x: 30px,
+      height: 15px,
+      width: 80px,
+    ));
+  }
+  .sp-loader-11 {
+    @include resD((
+      y: 0px,
+      height: 260px,
+      width: 260px,
+      x: 940px,
+    ));
+    @include resSm((
+      y: 0px,
+      height: 90px,
+      width: 90px,
+      x: 190px,
+    ))
+  }
+  .sp-loader-12 {
+    @include resD((
+      y: 280px,
+      height: 61px,
+      width: 251px,
+      x: 940px,
+      rx: 25px
+    ))
+  }
+  // .sp-loader-9 {
+  //   @include resD((
+  //     y: 220px,
+  //     height: 61px,
+  //     width: 61px,
+  //     rx: 50%,
+  //   ))
+  // }
+  // .sp-loader-10 {
+  //   @include resD((
+  //     y: 220px,
+  //     height: 61px,
+  //     width: 61px,
+  //     rx: 50%,
+  //   ))
+  // }
+}
+
+.sp-completed-component-certificate-container {
+  background: #FFFFFF;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+    margin-top: 20px,
+    width: 580px,
+    height: 350px,
+  ));
+  @include resMs((
+    margin-top: 12px,
+    width: 100%,
+    height: 250px
+  ));
+    
+  & .sp-completed-component-viewCertiText {
+    font-family: Nunito;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
+    z-index: 9;
+    transition: all .3s;
+    bottom: 0px;
+    padding: 12px 0px;
+    background-image: linear-gradient(180deg, rgba(1, 23, 31, 0) 0%, #011820 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+
+    &:hover {
+      transition: all .3s;
+      opacity: 1;
+    }
+    
+    @include resD((
+      font-size: 16px,
+      height: 150px,
+    ));
+    @include resM((
+      font-size: 14px,
+      height: 80px,
+    ));
+    
+    & .sp-completed-component-linkIcon {
+      background-image: url('../../assets/externalLinkIcon.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      @include resD((
+        width: 24px,
+        height: 24px,
+        margin-left: 6px
+      ));
+      @include resM((
+        width: 20px,
+        height: 20px,
+        margin-left: 4px
+      ));
+    }
+  }
+}
+
+.sp-completed-ratedStar {
+  & > svg > g > path { 
+    stroke: #FAAD14 !important;
+    fill: #FAAD14 !important;
+  }
+}
+
+.sp-completed-noView-Canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: -1;
+}

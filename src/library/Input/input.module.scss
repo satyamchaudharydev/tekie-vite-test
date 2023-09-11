@@ -1,0 +1,132 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.inputContainer {
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	& * {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+}
+
+.input {
+	border-radius: 8px;
+	font-weight: 500;
+	outline: none;
+	border: 1px solid rgba(64, 63, 63, 0.25);
+	caret-color: $theme;
+
+	@include resD(
+		(
+			width: 532px,
+			padding: 16px,
+			font-size: 18px,
+			font-family: "Nunito",
+			font-style: normal,
+			font-weight: 600,
+			line-height: 20px,
+			color: rgba(0, 0, 0, 0.72),
+		)
+	);
+
+	&:focus {
+		border: 1px solid $theme;
+	}
+}
+
+.inverted {
+	background: transparent;
+	border: 1px solid rgba($color: #ebebeb, $alpha: 0.2);
+	color: white;
+
+	&::placeholder {
+		color: rgba($color: #fff, $alpha: 0.8);
+	}
+}
+
+.label {
+	font-family: "Nunito";
+	font-style: normal;
+	font-weight: 600;
+
+	@include resD(
+		(
+			font-size: 16px,
+			line-height: 18px,
+		)
+	);
+	@include resM(
+		(
+			font-size: 12px,
+		)
+	);
+	color: #504f4f;
+}
+
+.required {
+	&::after {
+		content: "*";
+		color: #d34b57;
+	}
+}
+
+.rounded {
+	border-radius: 40px;
+}
+
+.leftIconInput {
+	padding-left: 56px;
+}
+
+.leftIcon {
+	position: absolute;
+	left: 24px;
+}
+
+.block {
+	display: block;
+	width: 100%;
+}
+
+.primary {
+	&:focus {
+		border: 1px solid $theme;
+	}
+}
+
+.secondary {
+	&:focus {
+		border: 1px solid $deep-purple;
+	}
+}
+.inputEyeIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  opacity: 0.5;
+  right: 0;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    opacity: 0.8;
+  }
+  @include resD((
+    top: 15px,
+    letter-spacing: 10px,
+    width: 28px,
+    height: 28px,
+    right: 10px,
+  ));
+  @include resM((
+    top: 8px,
+    letter-spacing: 10px,
+    width: 26px,
+    height: 26px,
+    right: 10px,
+  ));
+}

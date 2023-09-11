@@ -1,0 +1,54 @@
+@import 'src/scss/size.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/triangleBG.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nextButtonContainer {
+  width: 95%;
+  margin-bottom: 1%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.textContainer {
+  width: 100%;
+  font-family: Nunito;
+  font-size: hs(28px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.37;
+  color: #92c5eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: hs(31px);
+}
+
+.homeworkIconContainer {
+  width: hs(140px);
+  height: hs(180px);
+  display: flex;
+  background-image: url("../../assets/homeworkIcon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-self: center;
+}
+
+.bodyContainer {
+  width: 100%;
+  height: 92%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

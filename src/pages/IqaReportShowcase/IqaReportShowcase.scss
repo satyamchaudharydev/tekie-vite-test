@@ -1,0 +1,841 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/theme.scss';
+
+.cert-showcase-header-container {
+  padding: $s-xs $s-s;
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 9999;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+}
+
+.cert-showcase-header-tekieLogo {
+  @include resM((
+    width: 88px,
+    height: 48px,
+    position: relative,
+  ));
+  @include resD((
+    width: 108px,
+    height: 38px,
+  ));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.cert-showcase-exploreTekieBtn {
+  @include resM((
+    display: none
+  ));
+  @include resD((
+    width: fit-content,
+    font-size: 22px,
+    min-width: 250px,
+    padding: 12px 0,
+    position: relative,
+    margin-right: 12px,
+    letter-spacing: .5px,
+    display: flex,
+  ));
+  transition: all .2s;
+  font-family: Lato;
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFFFFF;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: linear-gradient(270deg, #35E4E9 -8.62%, #00ADE6 109.2%);
+  border-radius: 6px;
+  &:hover, .code-showcase-header-active {
+    background: linear-gradient(170deg, #35E4E9 -8.62%, #00ADE6 109.2%);
+  }
+}
+
+.cert-showcase-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 90vh;
+  box-sizing: border-box;
+  @include resD((
+    padding: $s-xxl $s-l $s-xs,
+  ));
+  @include resM((
+    padding: $s-xl $s-s $s-m,
+  ));
+}
+
+.cert-showcase-courseDetails-header {
+  font-family: Nunito;
+  letter-spacing: -0.02em;
+  color: #504F4F;
+  @include resD((
+    font-weight: 600,
+    font-size: 26px,
+    margin-bottom: 22px,
+  ));
+  @include resM((
+    font-weight: normal,
+    font-size: 20px,
+    margin-bottom: 20px,
+  ));
+}
+
+.cert-showcase-moreTag {
+  background: #DCDCDC;
+  border-radius: 100%;
+  margin: 0px 6px;
+  padding: 6px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  @include resD((
+    font-size: 16px,
+    width: 28px,
+    height: 28px,
+  ));
+  @include resM((
+    font-size: 14px,
+    width: 28px,
+    height: 28px,
+  ));
+}
+
+.cert-showcase-courseDetails-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: #FFFFFF;
+  border: 1px solid #E6E6E6;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  @include resD((
+    padding: 18px,
+    flex-wrap: nowrap,
+  ));
+  @include resM((
+    padding: 18px,
+    flex-wrap: wrap,
+  ));
+
+  & > .cert-showcase-courseImage {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    @include resD((
+      width: 130px,
+      height: 120px,
+    ));
+    @include resM((
+      width: 82px,
+      height: 82px,
+    ));
+  }
+
+  .cert-showcase-courseDetails {
+    @include resD((
+      padding-left: 18px,
+      padding-top: 6px
+    ));
+    @include resM((
+      padding-left: 12px,
+      padding-top: 4px
+    ));
+    text-transform: capitalize;
+    z-index: 1;
+    & > span { display: block; }
+    font-family: Nunito;
+    .cert-showcase-subHead {
+      letter-spacing: 0.03em;
+      @include resD((
+        font-size: 15px,
+        color: rgba(53, 228, 233, 0.7),
+        font-weight: bold,
+        margin-bottom: 2px
+      ));
+      @include resM((
+        font-size: 12px,
+        color: #00ADE6,
+        font-weight: normal,
+        margin-bottom: 4px
+      ));
+    }
+    .cert-showcase-details-header {
+      letter-spacing: 0.03em;
+      font-weight: bold;
+      color: #504F4F;
+      @include resD((
+        font-size: 20px,
+        margin-bottom: 8px
+      ));
+      @include resM((
+        font-size: 18px,
+        margin-bottom: 6px
+      ));
+    }
+    .cert-showcase-grade-details {
+      letter-spacing: 0.03em;
+      @include resD((
+        font-weight: normal,
+        color: #504F4F,
+        font-size: 16px,
+        margin-bottom: 12px
+      ));
+      @include resM((
+        font-weight: bold,
+        color: #A8A7A7,
+        font-size: 14px,
+        margin-bottom: 12px
+      ));
+    }
+    .cert-showcase-details-viewBtn {
+      font-family: Nunito;
+      font-weight: bold;
+      color: #00ADE6;
+      cursor: pointer;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      letter-spacing: 0.03em;
+      font-weight: bold;
+      @include resD((
+        font-size: 14px,
+        display: flex,
+      ));
+      @include resM((
+        display: none
+      ));
+    }
+  }
+}
+
+.cert-showcase-details-viewBtn-mobileOnly {
+  font-family: Nunito;
+  font-weight: bold;
+  color: #00ADE6;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  font-weight: bold;
+  background: #F0F0F0;
+  border-radius: 24px;
+  flex: 1 1 100%;
+  @include resD((
+    display: none,
+  ));
+  @include resM((
+      font-size: 16px,
+      margin: 18px 0px 6px,
+      padding: 12px 8px
+  ));
+}
+
+.cert-showcase-courseDetails-bgBlur {
+  background: #65DA7A;
+  filter: blur(130px);
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 110px;
+  height: 100%;
+  @include resD(( display: block ));
+  @include resM(( display: none ));
+}
+
+.cert-showcase-exploreTekieBtn-mobile {
+  @include resD((
+    display: none
+  ));
+  @include resM((
+    font-size: 18px,
+    min-width: 250px,
+    padding: 12px 18px,
+    margin: 12px auto,
+    letter-spacing: .5px,
+    display: flex,
+  ));
+  width: 90%;
+  z-index: 99;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 10px;
+  transition: all .2s;
+  font-family: Nunito;
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFFFFF;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: linear-gradient(270deg, #35E4E9 -8.62%, #00ADE6 109.2%);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.cert-showcase-externalIcon {
+  background-image: url('../../assets/externalLinkIcon.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include resD((
+    width: 22px,
+    height: 22px,
+    margin-left: 6px
+  ));
+  @include resMs((
+    width: 24px,
+    height: 24px,
+    margin-left: 8px
+  ));
+}
+
+.cert-showcase-buttons-container {
+  @include resD((
+    display: flex,
+    align-items: center,
+    justify-content: flex-start,
+    transition: all .3s,
+    flex-direction: row,
+    margin-top: 15px,
+    position: static,
+    width: unset,
+  ));
+  @include resM((
+    display: inline-block,
+    transition: all .3s,
+    margin-top: 15px,
+    width: 50%,
+  ));
+
+  .cert-showcase-download-button {
+    font-family: Nunito;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    color: #FFFFFF;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    background: conic-gradient(from -3.29deg at 100% -13%, #35E4E9 0deg, #00ADE6 360deg);
+    border-radius: 40px;
+    transition: all .3s;
+    @include resD((
+      font-size: 18px,
+      padding: 12px 26px,
+      margin: 12px 0px,
+    ));
+    @include resM((
+      font-size: 12px,
+      padding: 8px 12px,   
+      margin: 8px 0px,   
+    ));
+  }
+  .cert-showcase-share-button {
+    font-family: Nunito;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    color: #00ADE6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @include resD((
+      font-size: 18px,
+      padding: 12px 26px,
+      margin: 12px 0px,
+    ));
+    @include resM((
+      font-size: 12px,
+      padding: 8px 12px,   
+      margin: 8px 0px,   
+    ));
+    transition: all .3s;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+
+    & > .cert-showcase-shareIcon {
+      background-image: url('../Sessions/assets/shareIcon.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      @include resD((
+        width: 28px,
+        height: 28px,
+        margin-left: 6px
+      ));
+      @include resMs((
+        width: 22px,
+        height: 22px,
+        margin-left: 4px
+      ));
+    } 
+  }
+}
+
+.cert-showcase-centered-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-showcase-loader {
+  border: 6px solid #FFF;
+  border-radius: 50%;
+  border-top: 2px solid #00ADE6;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  margin-top: 32px;
+  align-self: center;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.cert-showcase-checkmark-icon {
+  background-color: #01AA93;
+  -webkit-mask-image: url('../../assets/b2bLandingPage/icons/checkmark-outline.svg');
+  mask-image: url('../../assets/b2bLandingPage/icons/checkmark-outline.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  
+  @include resD((
+    width: 42px,
+    height: 42px,
+    margin-right: 8px,
+  ));
+  @include resM((
+    width: 30px,
+    height: 30px,
+    margin-right: 4px,
+  ));
+}
+
+.cert-showcase-desktopOnly {
+  @include resD((
+    display: inline-block
+  ));
+  @include resM((
+    display: none
+  ));
+}
+.cert-showcase-mobileOnly {
+  @include resD((
+    display: none
+  ));
+  @include resM((
+    display: inline-block
+  ));
+}
+
+.cert-showcase-footer-container {
+  background-color: rgba(220, 220, 220, 0.3);
+  padding: 18px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  @include resD((
+    flex-direction: row,
+    justify-content: space-between,
+    margin-top: 0px,
+  ));
+  @include resM((
+    flex-direction: column,
+    justify-content: center,
+    margin-top: 12px,
+  ));
+
+  & .cert-showcase-footer-leftContainer,.cert-showcase-footer-rightContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    @include resM((
+      font-size: 14px,
+      flex-wrap: wrap,
+    ));
+    @include resD((
+      font-size: 16px,
+    ));
+
+    .cert-showcase-footer-TekieLogo {
+      @include resM((
+        width: 28px,
+        height: 28px,
+        margin: 0px 6px,
+      ));
+      @include resD((
+        width: 40px,
+        height: 40px,
+        margin: 0px 12px,
+      ));
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    & span {
+      font-family: Nunito;
+      font-weight: normal;
+      color: #504F4F;
+      opacity: 0.7;
+      @include resD((
+        padding: 0
+      ));
+      @include resM((
+        padding-top: 8px
+      ));
+    }
+  }
+  .cert-showcase-footer-privacyAndTerms {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0px 12px;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:nth-child(1) {
+      border-right: 1px solid rgba(80, 79, 79, 0.5);
+    }
+  }
+}
+
+.cert-showcase-Arrowicon {
+  width: 16px;
+  height: 16px;
+  margin: 0px 4px;
+  background-color: #FFFFFF;
+  -webkit-mask-image: url('../../assets/dropdownArrow.svg');
+  mask-image: url('../../assets/dropdownArrow.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  transform: rotate(-90deg);
+}
+
+.cert-showcase-courseSnapshot-tag {
+  background: #8C61CB;
+  border-radius: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #FFFFFF;
+  @include resD((
+    padding: 6px 32px, 
+    font-size: 16px !important
+  ));
+  @include resM((
+    padding: 6px 32px, 
+    font-size: 14px !important
+  ));
+}
+
+.cert-showcase-bookBtn {
+  @include resD((
+    margin-top: 40px !important
+  ));
+  @include resM((
+    margin-top: 28px !important
+  ));
+}
+
+.cert-showcase-header-login-btn {
+  @extend .lato-light;
+  display: flex;
+  @include resM((
+    display: none,
+    padding: 10px,
+    letter-spacing: 0.75px,
+    font-size: 16px,
+  ));
+  @include resD((
+    display: flex,
+    padding: 14px 28px,
+    font-size: 24px,
+    letter-spacing: 0.5px
+  ));
+  border-radius: 100px;
+  background-color: transparent;
+  justify-content: center;
+  text-transform: unset;
+  align-items: center;
+  text-align: left;
+  font-weight: 500;
+  border: 1.5px solid #00ADE5;
+  color: #00ADE5;
+  opacity: 0.8;
+  cursor: pointer;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  &:hover {
+    opacity: 1;
+    box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
+  }
+}
+
+.cert-showcase-component-buttons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all .3s;
+  @include resD((
+    margin-top: 12px,
+    position: static,
+    width: unset,
+  ));
+  @include resMs((
+    margin-top: 15px,
+    width: 100%,
+  ));
+
+  .cert-showcase-component-download-button {
+    font-family: Nunito;
+    font-weight: bold;
+    user-select: none;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    color: #00ADE6;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    background: conic-gradient(from -3.29deg at 100% -13%, white 0deg, white 360deg);
+    border-radius: 40px;
+    transition: all .3s;
+    @include resD((
+      font-size: 18px,
+      padding: 12px 26px,
+      margin: 12px 0px,
+    ));
+    @include resM((
+      font-size: 12px,
+      padding: 8px 12px,   
+      margin: 8px 0px,
+    ));
+  }
+  
+  .cert-showcase-component-share-button {
+    font-family: Nunito;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    border: 1px solid white;
+    @include resD((
+      font-size: 18px,
+      padding: 12px 26px,
+      margin-top: 12px,
+      margin-bottom: 12px,
+      margin-left: 12px,
+    ));
+    @include resM((
+      font-size: 12px,
+      padding: 8px 12px,   
+      margin: 8px 0px,   
+    ));
+    transition: all .3s;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+
+    & > .cert-showcase-component-shareIcon {
+      background-image: url('../Sessions/assets/shareIcon.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      @include resD((
+        width: 28px,
+        height: 28px,
+        margin-left: 6px
+      ));
+      @include resMs((
+        width: 22px,
+        height: 22px,
+        margin-left: 4px
+      ));
+    } 
+  }
+}
+
+.btnDisabled {
+  cursor:no-drop !important;
+  & > .cert-showcase-component-download-button {
+    background: #fff !important;
+    pointer-events: none;
+  }
+  &.cert-showcase-component-share-button{
+    color: #fff !important;
+    user-select: none;
+    & > .cert-showcase-component-shareIcon {
+      opacity: 0;
+    }
+  }
+}
+
+.title {
+    color: #00ade6;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.my-container {
+    width: 90%;
+    margin-top: 20px;
+}
+
+.p {
+    margin: 15px 0px;
+}
+
+.link {
+    color: #00ade6;
+    font-weight: 700;
+}
+
+.image-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10%;
+}
+
+.image-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+}
+
+.blue-container {
+    background-color: #00ade6;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 60vh;
+    box-sizing: border-box;
+    @include resD((
+      flex-direction: row,
+      padding: $s-l $s-l $s-xs,
+    ));
+    @include resM((
+      padding: $s-xl $s-s $s-m,
+      flex-direction: column,
+    ));
+    & > .cert-showcase-innerContainer {
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      @include resM((
+        width: 50%,
+        padding-top: 10px,
+        display: block
+      ));
+    }
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.rightb {
+    @include resD((
+      position: absolute,
+      right: 0,
+      bottom: 85px,
+      width: 30%,
+    ));
+    @include resM((
+      position: absolute,
+      right: 0,
+      bottom: 115px,
+      width: 50%,
+    ));
+}
+
+.rrr {
+    margin-right: 40px;
+}
+
+.btn {
+    border: none;
+    padding: 10px 25px;
+    outline: none;
+    border-radius: 50px;
+    background-color: #ffff;
+    color: #00ade6;
+    text-transform: none;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.btn2 {
+    border: #ffff solid 1px;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 50px;
+    background-color: #00ade6;
+    color: #ffff;
+    text-transform: none;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.btn-img {
+    width: 30px;
+    margin: 0px 1px;
+}

@@ -1,0 +1,77 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.landing-page-feature-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include resM((
+    margin-bottom: 56px,
+  ));
+  @include resDn((
+    border-left: 0,
+    margin-right: 145px,
+    margin-bottom: 68px,
+  ));
+
+  &:nth-child(3n+0) {
+    margin-right: 0px,
+  }
+}
+
+.landing-page-feature-iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resM((
+    width: 114px,
+    margin-right: 0px,
+  ));
+  @include resDn((
+    width: 68px,
+    margin-right: 20px,
+  ));
+}
+
+.landing-page-feature-title {
+  @extend .lato-regular;
+  color: #34e4ea;
+  opacity: 0.6;
+  @include resM((
+    font-size: 20px,
+    letter-spacing: 0.81px,
+  ));
+  @include resDn((
+    font-size: 25.5px,
+    letter-spacing: 1.03px,
+  ));
+}
+
+
+.landing-page-feature-text {
+  @extend .lato-light;
+  font-weight: 400;
+  opacity: 0.6;
+  color: white;
+  @include resM((
+    font-size: 17px,
+    line-height: 23px,
+    letter-spacing: 1.26px,
+    margin-top: 14px,
+  ));
+  @include resDn((
+    font-size: 21px,
+    line-height: 30px,
+    letter-spacing: 0.84px,
+    margin-top: 15px,
+    width: 340px,
+  ));
+}
+
+.landing-page-feature-icon {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  @include resDn((
+    margin-right: hs(14px),
+  ))
+}

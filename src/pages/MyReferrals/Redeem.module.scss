@@ -1,0 +1,94 @@
+@import 'src/scss/size.scss';
+
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: hs(688px);
+  height: hs(396px);
+  border-radius: hs(20px);
+  box-shadow: 0 hs(10px) (20px) 0 rgba(34, 209, 233, 0.75);
+  background-color: #ffffff;
+  margin-left: hs(304px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.credits {
+  height: hs(38px);
+  border-radius: hs(28px);
+  box-shadow: 0 hs(3px) hs(6px) 0 rgba(0, 0, 0, 0.16);
+  background-image: linear-gradient(to bottom, #00ade6, #34e4ea);
+  margin-top: hs(30px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.coin {
+  width: hs(32px);
+  height: hs(31.1px);
+  margin-left: hs(5px);
+}
+
+.amount {
+  font-family: Nunito;
+  font-size: hs(18px);
+  font-weight: bold;
+  color: #ffffff;
+  margin-left: hs(8px);
+  margin-right: hs(15px);
+}
+
+.title {
+  font-family: Nunito;
+  font-size: hs(38px);
+  font-weight: bold;
+  color: #00ade6;
+  margin-top: hs(30px);
+  margin-bottom: hs(30px);
+}
+
+.text {
+  font-family: Nunito;
+  font-size: hs(24px);
+  font-weight: 600;
+  color: #aaacae;
+  a {
+    color: #00ade6;
+    text-decoration: underline;
+  }
+  span {
+    color: #00ade6;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.or {
+  font-family: Nunito;
+  font-size: hs(24px);
+  font-weight: 600;
+  color: #00ade6;
+  margin: hs(15px) 0;
+}
+
+.creditsInfo {
+  font-family: Nunito;
+  font-size: hs(18px);
+  font-style: italic;
+  text-align: right;
+  color: #00ade6;
+  margin-top: hs(8px);
+}

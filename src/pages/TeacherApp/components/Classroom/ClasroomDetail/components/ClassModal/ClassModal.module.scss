@@ -1,0 +1,641 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import 'src/scss/Inter.scss';
+@import '../../../../../variables/_variables.scss';
+$pri-color: $primary-color;
+$pri-color-dark: $primary-color-110;
+
+.Modal_main{
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Modal_body{
+    @include resD((
+        width: 600px,
+  ));
+  z-index: 9998;
+}
+.Modal_Close{
+    & svg{
+        width: 11px;
+        height: 11px;
+    }
+}
+.Modal_header{
+    @include resM((
+    ));
+    @include resD((
+        height: 90px
+  ));
+    background: #FAF7FF;
+    border-radius: 16px 16px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 17px;
+}
+.Modal_header2{
+    @include resM((
+    ));
+    @include resD((
+        height: 100px
+  ));
+    background: #FAF7FF;
+    border-radius: 16px 16px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 17px;
+}
+.Modal_imageContainer{
+    background: #FFFFFF;
+    border-radius: 14px;
+    @include resD((
+        width: 60px,
+        height: 60px
+  ));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+}
+.Modal_imageContainer2{
+    background: #FFFFFF;
+    border-radius: 14px;
+    @include resD((
+        width: 56px,
+        height: 56px
+  ));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+}
+.Modal_HeaderImage{
+    @include resM((
+        width: 32px,
+        height: 32px
+    ));
+    @include resD((
+        width: 22px,
+        height: 22px
+  ));
+}
+.Modal_HeaderImage2{
+    width: 24px;
+    height: 24px;
+}
+.Modal_HeaderTitle{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    @include resD((
+        font-size: 22px
+  ));
+    color: #000000;
+}
+.Modal_HeaderTitleSub{  
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #403F3F;
+    opacity: 0.8;
+    margin-top: 7px;
+}
+.Modal_ReviewHeading{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: -0.02em;
+    color: #282828;
+}
+.Modal_HeaderCross{
+    & svg path{
+        fill: #000000;
+    }
+    & svg{
+        width: 11px !important;
+        height: 11px !important;
+    }
+    @include resM((
+        font-size: 32px
+    ));
+    @include resD((
+        font-size: 22px
+  ));
+    margin-right: 17px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.Modal_HeaderCross2{
+    & svg path{
+        fill: #000000;
+    }
+    & svg{
+        width: 11px !important;
+        height: 11px !important;
+    }
+    @include resM((
+        font-size: 32px
+    ));
+    @include resD((
+        font-size: 22px
+  ));
+    margin-right: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.Modal_HeaderCross:hover{
+    & svg path{
+        fill: white;
+    }
+    padding: 5px;
+    background-color: $pri-color;
+}
+.Modal_HeaderCross2:hover{
+    & svg path{
+        fill: white;
+    }
+    padding: 5px;
+    background-color: $pri-color;
+}
+
+.Modal_mid{
+    background: #FFFFFF;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 21px;
+    padding-right: 21px;
+}
+.Modal_FileContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 5px 8px 8px;
+
+    width: 136px;
+    height: 24px;
+
+
+    background: #FFFFFF;
+    border: 1px solid $primary-color;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px rgba(140, 97, 203, 0.35);
+    border-radius: 75px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    color: $primary-color;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.Modal_fileName{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 85%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.language-selector{
+    width: 200px;
+}
+.Modal_FileClose{
+    & svg{
+        width: 8px !important;
+        height: 8px !important;
+    }
+    margin-left: 5px;
+}
+.Modal_Files{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Modal_Select{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 4px 8px 4px 12px;
+    height: 42px;
+    @include resM((
+    ));
+    @include resD((
+        width: 265px
+  ));
+    background: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.Modal_Select span{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #333333 ;
+}
+
+.Modal_Select option{
+    background: #FFFFFF;
+}
+.Modal_Options1{
+    max-height: 120px;
+    overflow: hidden;
+    margin-top: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background: #FFFFFF;
+    position: absolute;
+    @include resM((
+        // width: 170px
+    ));
+    @include resD((
+        width: 260px
+  ));
+    border-radius: 6px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 1px 1px #cfcece;
+}
+.Modal_Options{
+    max-height: 120px;
+    overflow: scroll;
+    margin-top: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background: #FFFFFF;
+    position: absolute;
+    @include resM((
+        // width: 170px
+    ));
+    @include resD((
+        width: 260px
+  ));
+    border-radius: 6px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 1px 1px #cfcece;
+}
+
+.Module_DropDown{
+    width: 14px;
+    height: 14px;
+}
+
+.Modal_Options div{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #333333;
+    padding: 4px 8px 4px 12px;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.Modal_Options div:hover{
+    background: rgb(186, 186, 187);
+}
+.Modal_Options1 div{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #333333;
+    padding: 4px 8px 4px 12px;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.Modal_Options1 div:hover{
+    background: rgb(186, 186, 187);
+}
+
+.Modal_Label{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    color: #333333;
+    padding-bottom: 8px;
+    padding-left: 1px;
+    cursor: pointer;
+    @include resM((
+    ));
+    @include resD((
+        font-size: 14px
+  ));
+}
+.Modal_Label2{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    color: #333333;
+    padding-bottom: 8px;
+    padding-left: 1px;
+    cursor: pointer;
+    @include resM((
+    ));
+    @include resD((
+        font-size: 15px
+  ));
+}
+
+.Modal_Star{
+    padding-left: 3px;
+}
+
+.Modal_Label span{
+    color: red;
+}
+.Modal_Label2 span{
+    color: red;
+}
+.Modal_DropDowns{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Modal_inputFile{
+    display: none;
+}
+
+.Modal_label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #F3EFFA;
+    border-radius: 8px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: $primary-color;
+    padding-right: 10px;
+    height: 32px;
+    cursor: pointer;
+    width: fit-content;
+    margin-right: 10px;
+//     @include resM((
+//         width: 450px
+//     ));
+//     @include resD((
+//         width: 240px
+//   ));
+}
+
+.Modal_inputMessage1{
+    padding: 10px 12px 8px;
+    margin-bottom: 28px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    border-radius: 8px;
+    width: 98%;
+    @include resM((
+        height: 180px
+    ));
+    @include resD((
+        height: 140px
+  ));
+}
+.Modal_inputMessage{
+    padding: 10px 12px 8px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    border-radius: 8px;
+    width: 98%;
+//     @include resM((
+//         width: 329px
+//     ));
+//     @include resD((
+//         width: 419px
+//   ));
+    @include resD((
+        height: 138px
+    ));
+}
+
+.Modal_footer{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px 10px;
+@include resM((
+));
+@include resD((
+    height: 74px
+));
+background: #FFFFFF;
+box-shadow: 0px -1px 0px #EEEEEE;
+border-radius: 0px 0px 16px 16px;
+}
+.Modal_footerButton{
+    padding: 7px 16px 7px 12px;
+    width: 97%;
+    @include resD((
+        height: 42px,
+        font-size: 14px
+  ));
+    background: $primary-color;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+// .modal__save-btn {
+//     @extend .modal__footer-action-btns;
+//     justify-content: space-between;
+//     align-items: center;
+//     min-width: 110px;
+//     background: $pri-color;
+//     margin: 0px 20px;
+//     color: #fff;
+
+//     &:hover {
+//         cursor: pointer;
+//         background: $pri-color-dark;   
+//     }
+// }
+.Modal_footerButton:hover{
+    background: $pri-color-dark
+}
+
+.Module_ReviewDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10.3013px 13.735px;
+    width: 88.47px;
+    height: 32px;
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 20.6025px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #A8A7A7;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.Module_ReviewDivActive{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10.3013px 13.735px;
+    width: 88.47px;
+    height: 32px;
+    background: #E2CEFF;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 20.6025px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: $primary-color;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.ModalReviewContainer{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+
+.Modal_ReviewImg{
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+}
+.Modal_ReviewImg2{
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    color: white;
+    background-color: $pri-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+.Modal_ReviewName{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #403F3F;
+}
+.Modal_ReviewStatus{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #504F4F;
+}
+.Modal_dot{
+    border-radius: 50%;
+    height: 3px;
+    width: 3px;
+    background-color: #757575;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+.ModalReview{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #282828;
+    overflow-wrap: break-word;
+    margin-top: 3px;
+}
+
+.Modal_ReviewDate span{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #504F4F;
+}
+.Modal_ReviewDate{
+    margin-bottom: 5px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.Modal_LineBreak{
+    width: 97%;
+    opacity: 0.45;
+    border-bottom: 1px solid #AAAAAA;
+    margin-top: 14px;
+}
+.ModalReviews{
+    max-height: 116px;
+    overflow-y: scroll;
+    margin-left: 5px;
+}
+.Modal_noReview{
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+color: #A8A7A7;
+
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 50px;
+padding-bottom: 50px;
+}

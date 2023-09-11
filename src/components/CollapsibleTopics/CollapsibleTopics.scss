@@ -1,0 +1,575 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+.cp-container {
+  // display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  @include resD((
+    // padding-left: 10%,
+    // padding: unset,
+  ));
+  // @include resSm((
+  //   padding: 0 12px,
+  // ));
+  @include resMs((
+    padding-left: 4.5%,
+    padding-right:3%,
+  ));
+  &.cp-container-teacher-app{
+    @include resD1280((
+      padding-left: 27px,
+      padding-right: 35px,
+    ));
+  }
+}
+
+.cp-collapsible-container {
+  background: #F5F5F5;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s all ease-in-out;
+  box-shadow: inset 0 0 1px transparent;
+  &:hover {
+    background: #ecebeb;
+  box-shadow: inset 0 0 3px #bebdbd;
+  }
+  @include resD((
+    width: 1620px + 30px,
+    height: 80px,
+    margin: initial,
+    border-radius: 12px,
+    padding: 21px 24px,
+  ));
+  @include resSm((
+    width: 100%,
+    height: 48px,
+    margin: 6px 0 6px 0,
+    border-radius: 4px,
+    padding: 14px 12px,
+  ));
+  &.cp-collapsible-container-teacherApp{
+    width: 100%;
+  }
+}
+
+.cp-line {
+  background: #A8A7A7;
+  height: 1px;
+  @include resD((
+    width: 1620px,
+    margin-bottom: 16px,
+    margin-top: unset
+  ));
+  @include resMs((
+    width: 100%,
+    margin-bottom: 10px,
+    margin-top: 16px
+  ));
+  &.cp-line-teacher-app{
+    width: 100%;
+  }
+}
+
+.cp-collapsible-title {
+  color: #504F4F;
+  letter-spacing: -0.02em;
+  @include resD((
+    font-size: 26px,
+  ));
+}
+
+.cp-collapsible-arrow {
+  position: relative;
+  @include resD((
+    transform-origin: bottom !important,
+    width: 24px,
+    height: 15px,
+    top: 6px
+  ));
+  @include resSm((
+    width: 10px * 1.4,
+    height: 5px * 1.4,
+    top: -2px,
+    transform-origin: 50% 150% !important,
+  ))
+}
+
+.cp-collapsible-body {
+  display: flex;
+  flex-wrap: wrap;
+  @include resD((
+    width: 1635px + 30px,
+    // height: auto,
+    justify-content: unset,
+    margin-left: unset,
+  ));
+  @include resSm((
+    width: 100%,
+    // height: 256px,
+    margin-left: 0px,
+  ));
+  &.cp-collapsible-body-teacherApp{
+    width: 102%;
+  }
+}
+
+.cp-topic-card {
+  height: auto;
+  @include resD((
+    min-width: 370px,
+    max-width: 370px,
+    border-radius: 0.5vw,
+    margin: 15px 15px 0 0,
+  ));
+  @include resMs((
+    min-width: 94vw,
+    max-width: 94vw,
+    border-radius: 1.1vw,
+    margin: 16px 15px 15px 0,
+  ));
+  &:nth-child(2n) {
+    @include resD((
+      margin-right: 15px,
+    ));
+    @include resM((
+      margin-right: 0px,
+    ));
+  }
+  &:nth-child(4n) {
+    @include resD((
+      margin-right: 0px,
+    ));
+  }
+  background: #FFFFFF;
+  // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.cp-topic-card.withBoxShadow{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.cp-topic-card-disabled {
+  box-shadow: none ;
+  background-color: #FAFAFA;
+  box-sizing: border-box;
+  .cp-topic-card-body {
+    border: 1px solid #eeeeee;
+  }
+}
+
+.cp-topic-card-thumb {
+  width: 100%;
+  background: #005773;
+  position: relative;
+  @include resD((
+    height: 132px,
+    border-radius: 0px,
+  ));
+  @include resMs((
+    height: 36.5vw,
+    background: #005773,
+    border-radius: 5px 5px 0 0,
+  ));
+}
+
+
+.cp-topic-card-body {
+  width: 100%;
+  box-sizing: border-box;
+  @include resD((
+    padding: 24px 16px,
+    margin-top: -1vw,
+  ));
+  @include resMs((
+    padding: 5vw 3vw 5vw 3vw,
+  ))
+}
+
+.cp-topic-card-title-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.cp-topic-classType-icon {
+  @include resD((
+    min-width: 25px,
+    min-height: 25px,
+    max-width: 25px,
+    max-height: 25px,
+    margin-top: 14px,
+    margin-left: 10px,
+  ));
+  @include resMs((
+    min-width: 25px,
+    min-height: 25px,
+    max-width: 25px,
+    max-height: 25px,
+    margin-top: 14px,
+    margin-left: 10px,
+  ));
+}
+
+.cp-topic-card-title {
+  color: #000000;
+  font-family: Nunito;
+  font-weight: bold;
+  @include resD((
+    font-size: 24px,
+    line-height: initial,
+    margin:10px 0px,
+  ));
+  @include resMs((
+    font-size: 6vw,
+    color: #504F4F,
+    line-height: 8vw,
+    margin: 0px,
+  ))
+}
+
+.cp-topic-card-description {
+  color: #504F4F;
+  font-family: Nunito;
+  @include resD((
+    font-weight: 400,
+    font-size: 19px,
+    line-height: initial,
+    margin-top: initial,
+  ));
+  @include resMs((
+    font-weight: normal,
+    font-size: 4vw,
+    line-height: 5vw,
+    margin-top: 8px
+  ))
+}
+
+.cp-topic-order {
+  font-family: Nunito;
+  font-weight: 800;
+  position: absolute;
+  color: white;
+  @include resD((
+    font-size: 36px,
+    line-height: initial,
+    top: 13px,
+    left: 17px,
+  ));
+  @include resMs((
+    font-size: 10.2vw,
+    line-height: 120%,
+    top: 13px,
+    left: 17px,
+  ))
+}
+
+.cp-tab-container {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include resD((
+    width: 1535px,
+    padding: 0 96px,
+    margin-bottom: 48px
+  ));
+  @include resMs((
+    width: 100%,
+    margin-bottom: 44px
+  ))
+}
+
+.cp-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  @include resD((
+    width: 640px,
+  ));
+  @include resMs((
+    width: 50%,
+  ));
+}
+
+.cp-tab-text {
+  font-family: Nunito;
+  text-transform: uppercase;
+  color: #00ADE6;
+  font-weight: bold;
+  transition: 0.3s all ease-in-out;
+  @include resD((
+    font-size: 26px,
+    line-height: 120%,
+    letter-spacing: 0.1em,
+  ));
+  @include resSm((
+    font-size: 13px,
+    line-height: 16px,
+    letter-spacing: initial,
+  ));
+}
+
+.cp-tab-underline {
+  width: 100%;
+  background: linear-gradient(270deg, #35E4E9 -8.62%, #00ADE6 109.2%);
+  opacity: 1;
+  @include resD((
+    font-size: 26px,
+    height: 8px,
+    margin-top: 17px,
+  ));
+  @include resSm((
+    font-size: 26px,
+    height: 5px,
+    margin-top: 15px,
+  ));
+}
+
+.cp-tab.not-active {
+  .cp-tab-text {
+    color: #A8A7A7;
+  }
+  &:hover .cp-tab-text {
+    color: #00ADE6;
+  }
+}
+
+.cp-tab.not-active .cp-tab-underline {
+  opacity: 0;
+}
+
+.cp-topic-thumb-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cp-topic-revisit-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: normal;
+  text-decoration-line: underline;
+  color: #504F4F;
+  opacity: 0.7;
+}
+
+.cp-topic-thumb-completed-icon {
+  @include resD((
+    width: 100px,
+    height: 100px,
+  ));
+  @include resSm((
+    width: 56px,
+    height: 56px,
+  ));
+}
+
+.cp-clock-icon {
+  @include resD((
+    width: 25px,
+    height: 25px,
+    margin-right: 10px
+  ));
+  @include resSm((
+    width: 56px,
+    height: 56px,
+    margin-right: 10px
+  ))
+}
+
+.cp-top-card-line {
+  margin: 0 auto;
+  width: 80%;
+  height: 1px;
+  @include resD((
+    margin-top: 20px,
+    margin-bottom: 20px,
+  ));
+  @include resSm((
+    margin-top: 10px,
+    margin-bottom: 10px,
+  ));
+  background-color: rgba(#000000, 0.2)
+}
+
+.allSessionsContainer{
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  &.allSessionsContainer-teacher-app{
+    max-width: max-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include resD((
+      grid-gap: 10px,
+    ));
+  }
+}
+
+.newcard-container{
+  background: $deep-sky-blue-24;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  @include resD((
+    margin-right: 16px,
+    margin-top: 16px,
+    padding: 24px 16px,
+    border-radius:8px,
+    min-height:230px,
+    max-height:230px,
+    min-width:390px,
+    max-width:390px,
+  ));
+  &:hover{
+    background:linear-gradient(180deg, $deep-sky-blue-24 0%,$deep-sky-blue-24 70%, #014157 100%);
+  }
+ 
+  &:hover .icon-container{
+    @include resD((
+      transform: translateX(-8px),
+      ));
+  }
+    &:hover .card-bg-image {
+      @include resD((
+        transform: translate(-44%,-50%)
+        ))
+    }
+  &:hover .newcard-btn-container{
+    opacity: 1;
+  }
+  &:hover .newcard-topic-description{
+    opacity: 1;
+  }
+  &.newcard-container-teacher-app{
+    margin-right: unset;
+    margin-top: unset;
+    min-width:unset;
+    max-width:unset;
+  }
+}
+.card-bg-image{
+  position: absolute;
+  opacity: 0.15;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: 0.35s all cubic-bezier(0.6, 0.07, 0.64, 1.02);
+  aspect-ratio: 1/1;
+  @include resD((
+    height:80%,
+    width:60%
+  ))
+}
+.newcard-container.not-hover{
+  &:hover .icon-container{
+    @include resD((
+      transform: none,
+      top:0
+      ));
+  }
+}
+.newcard-content-and-icon-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 2;
+}
+.newcard-container.completed-class{
+  // background: linear-gradient(180deg, #0C927F 0%, #026F60 100%);
+  background: linear-gradient(180deg, #0C927F 0%, #026F60 70%,#026F60 100%,);
+  @include resD((
+    min-height:170px
+  ));
+  transition: 0.35s all cubic-bezier(0.6, 0.07, 0.64, 1.02);;
+  &:hover{
+  transition: 0.35s all cubic-bezier(0.6, 0.07, 0.64, 1.02);
+  background: linear-gradient(180deg, #0C927F 0%,#026F60 70%, #014f44 100%);
+  }
+}
+.newcard-btn-container{
+  opacity: 0;
+  transition: 0.35s all ease-in-out;
+  z-index: 99;
+}
+.newcard-topic-description{
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @include resD((
+    gap:5px,
+    margin-bottom: 10px,
+    font-size:16px,
+    font-weight:700
+  ))
+}
+.newcard-topic-description.with-hover{
+  opacity: 0;
+  transition: 0.35s all ease-in-out;
+}
+.checkmark-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-container{
+  transition: 0.35s all cubic-bezier(0.6, 0.07, 0.64, 1.02);
+  position:relative;
+  top: 0;
+  aspect-ratio: 1/1;
+  @include resD((
+    // margin-top:10px,
+    height:100px,
+    width:100px,
+  ));
+}
+.newcard-topic-heading{
+  color: white;
+  word-wrap: break-word;
+  @include resD((
+    font-size:24px,
+    font-weight:700,
+    margin-bottom: 5px
+  ))
+}
+
+.noSessionsEmptyStateContainer {
+  @include resD((height:240px,
+  font-size:24px
+      ));
+  text-align: center;
+  color: #6d6d6dc4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.noSessionsText{
+  color: $emperor-66;
+  @include resD((
+    font-size:24px
+  ))
+}

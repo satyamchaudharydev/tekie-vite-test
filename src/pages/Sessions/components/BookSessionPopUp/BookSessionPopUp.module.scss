@@ -1,0 +1,544 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.timezoneSelect {
+  font-family: 'Nunito' !important;
+  @include resD((
+    width: 320px,
+    font-size: 22px,
+    margin-left: 60px,
+    margin-top: -10px,
+  ));
+  @include resM((
+    width: 320px,
+    font-size: 22px,
+    margin-left: 60px,
+    margin-top: -10px
+  ));
+}
+
+.slotsContainerLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  @include resD((
+    margin-left: 10px,
+    top: -32px
+  ));
+}
+
+@media screen {
+  .horizontalLine {
+    width: hs(3px);
+    background-color: rgba(3, 3, 3, 0.04);
+    margin-top: hs(27px);
+    margin-bottom: hs(27px);
+  }
+
+  .sessionTimeContainer {
+    display: flex;
+    background-color: #fff;
+    margin-left: hs(42px);
+    flex-direction: column;
+    margin-top: hs(42px);
+    height: hs(560px) !important;
+  }
+
+  .dateContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    height: hs(48px);
+    align-self: flex-start;
+    font-size: hs(25px);
+    color: #6b7897;
+    font-weight: 500;
+  }
+
+  .slotsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: hs(60px) 0 hs(24px) 0;
+    flex-wrap: wrap;
+    max-width: hs(610px);
+    overflow: auto;
+  }
+
+  .justifyCenterWithFixedHeight {
+    justify-content: center;
+    align-items: center;
+    height: hs(260px);
+  }
+
+  .justifyStart {
+    justify-content: flex-start;
+  }
+
+  .slotTimeContainer {
+    width: hs(180px);
+    height: hs(53px);
+    border-radius: hs(28px);
+    box-shadow: 0 hs(3px) hs(6px) 0 rgba(0, 0, 0, 0.16);
+    font-size: hs(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    margin-bottom: hs(36px);
+    margin-right: hs(10px);
+    cursor: pointer;
+  }
+
+  .calendarContainer {
+    min-width: hs(660px) !important;
+    height: hs(560px) !important;
+    margin-right: hs(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .emptySession {
+    border: none !important;
+    background-color: #d1d1d1;
+    color: #fff !important;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1) !important;
+    &:hover {
+      cursor: default;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1) !important;
+    }
+  }
+
+  .noSlotsMessage {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #6B7897;
+    font-size: hs(26px);
+    font-style: italic;
+    opacity: 0.8;
+    height: 28%;
+  }
+
+  .sessionNotSelected {
+    border: solid 1px #27d6e9;
+    color: #0fbde7;
+    &:hover {
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+      cursor: default;
+    }
+  }
+
+  .sessionSelected {
+    background-image: linear-gradient(to bottom, #00ade6, #34e4ea);
+    border: solid 1px #34e4ea;;
+    color: #ffffff;
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  .fetchSessionInfoLoaderBox {
+    background-color: rgba(255, 255, 255, 0);
+    height: hs(90px);
+    width: hs(360px);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: hs(28px);
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    margin-left: hs(-150px);
+    margin-top: hs(420px);
+    position: relative;
+    top: hs(-10px);
+  }
+
+  .mentorName {
+    font-size: hs(20px);
+    margin-left: hs(10px);
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+  .calendarContainer {
+    min-width: hs(680px) !important;
+    height: hs(560px) !important;
+    margin-right: hs(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slotsContainer {
+    padding: hs(35px) 0 hs(24px) 0;
+    max-width: hs(660px);
+  }
+
+  .slotTimeContainer {
+    height: hs(57px);
+    font-size: hs(24px);
+    margin-bottom: hs(38px);
+    margin-right: hs(24px);
+  }
+
+  .mentorName {
+    font-size: hs(22px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .dateContainer {
+    display: none;
+  }
+
+  .dateContainerHr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: hsm(48px);
+    background-color: #ededed;
+  }
+
+  .dateTablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: hsm(40px);
+    height: 100%;
+    color: #6b7897;
+  }
+
+  .selectedDateTablet {
+    background-color: #7ed5fc;
+    color: #fff !important;
+    border-radius: hsm(4px);
+  }
+
+  .dateText {
+    font-size: hsm(13px);
+  }
+
+  .slotsContainer {
+    padding: hsm(15px) 0 0 0;
+    max-width: none;
+  }
+
+  .slotTimeContainer {
+    width: hsm(90px);
+    height: hsm(35px);
+    margin-bottom: hsm(15px);
+    margin-left: hsm(23px);
+    font-size: hsm(12px);
+    border-radius: hsm(26px);
+  }
+
+  .noSlotsMessage {
+    width: 100%;
+    margin-top: 10%;
+    height: auto;
+    font-size: hsm(13px);
+  }
+}
+
+
+@media screen and (min-width: 250px) and (max-width: 900px) {
+  .dateContainerHr {
+    width: 100%;
+    height: hsm(46px);
+  }
+
+  .dateTablet {
+    width: hsm(42px);
+    height: 100%;
+    color: #6b7897;
+  }
+
+  .dateText {
+    font-size: hsm(12px);
+  }
+
+  .slotTimeContainer {
+    width: hsm(80px);
+    height: hsm(30px);
+    margin-bottom: hsm(16px);
+    margin-left: hsm(25px);
+    font-size: hsm(12px);
+  }
+
+  .noSlotsMessage {
+    font-size: hsm(14px);
+  }
+
+  .fetchSessionInfoLoaderBox {
+    height: hsm(40px);
+    width: hsm(200px);
+    font-size: hsm(16px);
+    margin-top: hsm(208px);
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 500px) {
+  .fetchSessionInfoLoaderBox {
+    margin-left: hs(-90px);
+    margin-top: hsm(204px);
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .dateContainerHr {
+    width: 100%;
+    height: hsm(41px);
+  }
+
+  .dateTablet {
+    width: hsm(38px);
+  }
+
+  .dateText {
+    font-size: hsm(10.5px);
+  }
+
+  .slotTimeContainer {
+    width: hsm(80px);
+    height: hsm(28px);
+    margin-bottom: hsm(16px);
+    margin-left: hsm(25px);
+    font-size: hsm(11px);
+  }
+
+  .noSlotsMessage {
+    margin-top: 9%;
+    font-size: hsm(13px);
+  }
+
+  .fetchSessionInfoLoaderBox {
+    height: hsm(40px);
+    width: hsm(200px);
+    font-size: hsm(16px);
+    margin-top: hsm(200px);
+    margin-left: hs(-50px);
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 900px) {
+  .dateContainerHr {
+    width: 100%;
+    height: hsm(41px);
+  }
+
+  .dateTablet {
+    width: hsm(38px);
+  }
+
+  .dateText {
+    font-size: hsm(10.5px);
+  }
+
+  .slotTimeContainer {
+    width: hsm(70px);
+    height: hsm(24px);
+    margin-bottom: hsm(16px);
+    margin-left: hsm(29px);
+    font-size: hsm(10px);
+  }
+
+  .noSlotsMessage {
+    font-size: hsm(12px);
+  }
+
+  .fetchSessionInfoLoaderBox {
+    font-size: hsm(14px);
+    margin-top: hsm(180px);
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .dateContainerHr {
+    width: 100%;
+    height: hsm(35px);
+  }
+
+  .dateTablet {
+    width: hsm(33px);
+  }
+
+  .dateText {
+    font-size: hsm(9px);
+  }
+
+  .slotTimeContainer {
+    width: hsm(66px);
+    height: hsm(22px);
+    margin-bottom: hsm(16px);
+    margin-left: hsm(27px);
+    font-size: hsm(9px);
+  }
+
+  .noSlotsMessage {
+    font-size: hsm(11px);
+  }
+
+  .fetchSessionInfoLoaderBox {
+    margin-top: hsm(144px);
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 900px) {
+  .dateContainerHr {
+    width: 100%;
+    height: hsm(30px);
+  }
+
+  .dateTablet {
+    width: hsm(29px);
+  }
+
+  .dateText {
+    font-size: hsm(9px);
+  }
+
+  .slotTimeContainer {
+    width: hsm(60px);
+    height: hsm(20px);
+    margin-bottom: hsm(16px);
+    margin-left: hsm(24px);
+    font-size: hsm(8px);
+  }
+
+  .noSlotsMessage {
+    font-size: hsm(10px);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .fetchSessionInfoLoaderBox {
+    font-size: hsm(12px);
+    margin-top: hsm(120px);
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 900px) {
+  .dateContainerHr {
+    width: 100%;
+    height: hsm(27px);
+  }
+
+  .dateTablet {
+    width: hsm(27px);
+  }
+
+  .dateText {
+    font-size: hsm(8px);
+  }
+
+  .slotsContainer {
+    padding: hsm(13px) 0 0 0;
+  }
+
+  .slotTimeContainer {
+    width: hsm(55px);
+    height: hsm(18px);
+    margin-bottom: hsm(14px);
+    margin-left: hsm(22px);
+    font-size: hsm(7.5px);
+  }
+
+  .noSlotsMessage {
+    font-size: hsm(9px);
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  .dateContainerHr {
+    width: 100%;
+    height: hsm(24px);
+  }
+
+  .dateTablet {
+    width: hsm(24px);
+  }
+
+  .dateText {
+    font-size: hsm(6.4px);
+  }
+
+  .slotsContainer {
+    padding: hsm(13px) 0 0 0;
+  }
+
+  .slotTimeContainer {
+    width: hsm(46px);
+    height: hsm(15px);
+    margin-bottom: hsm(11px);
+    margin-left: hsm(21px);
+    font-size: hsm(6.4px);
+  }
+
+  .noSlotsMessage {
+    font-size: hsm(8px);
+  }
+
+  .fetchSessionInfoLoaderBox {
+    font-size: hsm(11px);
+    margin-top: hsm(104px);
+  }
+}
+
+@media screen and (min-width: 850px) and (max-width: 900px) {
+  .slotTimeContainer {
+    width: hsm(44px);
+    margin-bottom: hsm(10px);
+    font-size: hsm(5.8px);
+  }
+
+  .dateText {
+    font-size: hsm(5.8px);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .fetchSessionInfoLoaderBox {
+    width: hs(500px);
+    font-size: hsm(9px);
+    margin-top: hsm(81px);
+    margin-left: hs(-20px);
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1100px) {
+  .fetchSessionInfoLoaderBox {
+    font-size: hsm(8px);
+  }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1200px) {
+  .fetchSessionInfoLoaderBox {
+    font-size: hsm(7.6px);
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1300px) {
+  .fetchSessionInfoLoaderBox {
+    font-size: hsm(7px);
+    margin-top: hs(330px);
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .fetchSessionInfoLoaderBox {
+    font-size: hsm(6px);
+    margin-top: hs(330px);
+  }
+}

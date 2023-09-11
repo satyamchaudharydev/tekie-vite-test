@@ -1,0 +1,442 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+.popup-confirmation-modal-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.58);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+    opacity: 0;
+    transition: 0.3s all ease-in-out;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.completePop, .pop {
+    font-family: 'Nunito';
+    background: url(./assets/signupBG.png) white;
+    // border: 3px solid #00ADE6,
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    @include resD((
+        width: 680px,
+        // height: 422px,
+        height: fit-content,
+    ));
+    @include resM((
+        width: 344px,
+        height: fit-content,
+    ))
+}
+
+.descs {
+    font-style: normal;
+    line-height: 120%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    letter-spacing: -0.02em;
+    color: #504F4F;
+    position: relative;
+    @include resD((
+        font-weight: normal,
+        font-size: 30px,
+        height: initial,
+        margin-top: 30px,
+    ));
+    @include resM((
+        font-weight: 800,
+        font-size: 18px,
+        height: 70%,
+        margin-top: initial,
+    ))
+}
+
+.finalDesc {
+    font-style: normal;
+    line-height: 120%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.02em;
+    position: relative;
+    @include resD((
+        font-weight: normal,
+        color: #504F4F,
+        font-size: 26px,
+        margin-top: 60px,
+        margin-bottom: 60px,
+        padding: 0 10px,
+    ));
+    @include resM((
+        font-weight: bolder,
+        font-size: 18px,
+        margin-top: 35px,
+        margin-bottom: 30px,
+        color: #282828,
+        padding: 0 10px,
+    ))
+}
+.details {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: #504F4F;
+    letter-spacing: -0.02em;
+    line-height: 120%;
+    @include resD((
+        font-weight: normal,
+        font-size: 30px,
+        margin-top: 40px,
+        margin-bottom: 70px,
+    ));
+    @include resM((
+        font-size: 16px,
+        font-weight: normal,
+        margin-top: 10px,
+        margin-bottom: 30px, 
+    ))
+}
+
+.eventStart {
+    .heading1{
+        @include resD((
+            font-size: 32px,
+            line-height: 120%,
+            color: #504F4F,
+            font-weight: normal,
+        ));
+        @include resM((
+            font-size: 15px,
+            line-height: 120%,
+            color: #282828,
+            font-weight: 800,
+        ));
+    }
+    .time{
+        @include resD((
+            margin: 20px 0,
+            margin-bottom: 40px,
+            line-height: 120%,
+            font-size: 42px,
+        ));
+        @include resM((
+            margin: 20px 0,
+            margin-bottom: 20px,
+            line-height: 120%,
+            font-size: 16px,
+        ));
+    }
+    .details{
+        @include resD((
+            margin-top: 65px,
+            margin-bottom: 60px,
+        ));
+        @include resSm((
+            margin-top: 35px,
+            margin-bottom: 25px,
+        ))
+    }
+}
+
+.time {
+    color: #01AA93;
+    font-weight: 900;
+    @include resD((
+        line-height: 120%,
+        font-size: 40px,
+        margin: 16px 0,
+    ))
+}
+.thanks {
+    font-family: Gilroy;
+    color: #01AA93;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    font-weight: bolder;
+    @include resD((
+        font-size: 62px,
+        font-weight: 900,
+        margin: 14px 0,
+    ));
+    @include resM((
+        font-size:25px,
+        font-weight: 800,
+        margin: 10px,
+    ));
+}
+.confetti{
+    background-image: url('./assets/confetti-ball.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-position: bottom;
+    position: relative;
+    @include resD((
+        height: 70px,
+        width: 70px,
+        bottom: -5px,
+        left:unset,
+    ));
+    @include resM((
+        height: 18px,
+        width: 18px,
+        bottom: 0px,
+        left:4px,
+    ))
+}
+.heading2{
+    font-family: Nunito;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #504F4F;
+    @include resD((
+        font-size: 32px,
+        line-height: 120%,
+        margin: 8px 0,
+    ));
+    @include resM((
+        font-size: 16px,
+        line-height: 120%,
+        margin: 0,
+    ))
+}
+.course {
+    font-family: Nunito;
+    color: #282828;
+    font-weight: bolder;
+    line-height: 120%;
+    @include resD((
+        font-size: 38px,
+        margin: 0,
+    ));
+    @include resM((
+        font-size: 18px,
+        margin: 0,
+    ));
+}
+.okCourse {
+    color: #282828;
+    line-height: 120%;
+    @include resD((
+        font-weight: 900,
+        font-size: 42px,
+        margin: 16px 0,
+    ));
+    @include resM((
+        font-weight: 800,
+        font-size: 20px,
+        margin: 8px 0,
+    ))
+}
+.navbarPopup {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    @include resD((
+        height: 20%,
+    ));
+    @include resD((
+        height: 15%,
+    ))
+}
+
+.joinBtn {
+    font-family: 'Nunito';
+    color: #FFFFFF;
+    background: conic-gradient(from -3.29deg at 100% -13%, #35E4E9 0deg, #00ADE6 360deg);
+    border-radius: 40px;
+    position: relative;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 20px;
+    cursor: pointer;
+    @include resD((
+        margin-top: 17px,
+        text-transform: initial,
+    ));
+    @include resM((
+        margin-top: 10px,
+        text-transform: lowercase,
+    ))
+}
+
+.complete-joinBtn {
+    font-family: 'Nunito';
+    color: #FFFFFF;
+    background: conic-gradient(from -3.29deg at 100% -13%, #35E4E9 0deg, #00ADE6 360deg);
+    border-radius: 40px;
+    font-weight: bold;
+    border: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 20px;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+.okBtn {
+    font-family: 'Nunito';
+    color: #FFFFFF;
+    background: conic-gradient(from -3.29deg at 100% -13%, #35E4E9 0deg, #00ADE6 360deg);
+    border-radius: 40px;
+    position: relative;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    @include resD((
+        margin-top: 0px,
+        font-size: 18px,
+        width: 120px,
+        height: 52px,
+        margin-bottom:0,
+        padding: 0 10px,
+    ));
+    @include resM((
+        margin-top: 5px,
+        font-size: 14px,
+        width: 120px,
+        height: 45px,
+        margin-bottom: 0,
+    ))
+}
+
+
+.btn{
+    font-family: 'Nunito';
+    box-sizing: border-box;
+    border-radius: 40px;
+    position: relative;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    line-height: 120%;
+    align-self: center;
+    margin: 0 5px;
+    letter-spacing: 0.03em;
+    background: conic-gradient(from -3.29deg at 100% -13%, #35E4E9 0deg, #00ADE6 360deg);
+    color: #FFFFFF;
+    @include resD((
+        padding: 14px 22px,
+        font-size: 20px,
+        text-transform: capitalize,
+    ));
+    @include resM((
+        padding: 10px 22px,
+        font-size: 14px,
+        text-transform: capitalize,
+    ))
+}
+.dwnldBtn {
+    color: #FFFFFF;
+    background: conic-gradient(from -3.29deg at 100% -13%, #35E4E9 0deg, #00ADE6 360deg);
+}
+.RemindBtn {
+    font-family: 'Nunito';
+    background: transparent;
+    color: #00ADE6;
+    background: white;
+    border: 2px solid #00ADE6;
+    @include resD((
+        padding: 12px 22px,
+        padding-top: 15px,
+    ))
+}
+
+.buttonLine {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    margin:auto;
+    @include resD((
+        margin-top: 35px,
+    ));
+    @include resM((
+        margin-top: 10px,
+    ));
+}
+
+.poptitle {
+    font-family: Nunito;
+    color: #00ADE6;
+    display: inline-flex;
+    background: rgba(0, 173, 230, 0.1);
+    position: relative;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    @include resD((
+        width: 260px,
+        font-size: 17px,
+        line-height: 120%,
+        height: 34px,
+        padding:0,
+        padding-bottom: 5px,
+        padding-top: 2px,
+        border-radius: 0 0 18px 18px,
+    ));
+    @include resM((
+        width: fit-content,
+        font-size: 12px,
+        height: 30px,
+        padding: 2px 30px 3px 30px,
+        border-radius: 0 0 24px 24px,
+    ));
+}
+
+.crossBtn {
+    background: none;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    @include resD((
+        top: -15px,
+        right: -25px,
+        padding:0 5px,
+    ));
+    @include resM((
+        top: -15px,
+        right: -20px,
+        padding:0,
+    ));
+}
+.desktop{
+    @include resD((
+        display: flex,
+    ));
+    @include resM((
+        display: none,
+    ))
+}
+.mobile{
+    @include resD((
+        display: none,
+    ));
+    @include resM((
+        display: flex,
+    ))
+}

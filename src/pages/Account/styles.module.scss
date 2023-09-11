@@ -1,0 +1,249 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  // position: relative;
+}
+
+.accountBG{
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+}
+
+.parentSection{
+  width: hs(855px);
+  padding-top: hs(60px);
+}
+.header{
+  width: 100%;
+  height: hs(70px);
+  background-color: rgba(191, 247, 249, 0.3);
+  display: flex;
+  align-items: center;
+  border-top-left-radius: hs(10px);
+  border-top-right-radius: hs(10px);
+  position: relative;
+}
+
+.headerText{
+  font-family: Nunito;
+  font-size: hs(28px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: left;
+  color: #333333;
+  padding-left: hs(36px);
+}
+
+.sectionBody{
+  width: 100%;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.06);
+  background-color: #ffffff;
+  padding-bottom: hs(29.6px);
+  border-bottom-left-radius: hs(10px);
+  border-bottom-right-radius: hs(10px);
+}
+
+.row{
+  padding-left: hs(38px);
+  position: relative;
+  height: hs(79px);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #EBFDFD; 
+}
+
+.kidsSection{
+  width: hs(855px);
+  margin-top: hs(65px);
+  margin-bottom: hs(60px);
+}
+
+.infoTypeText{
+  font-family: Nunito;
+  font-size: hs(25px);
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  color: #504f4f;
+}
+
+.infoValueText{
+  position: absolute;
+  left: hs(267px);
+  font-family: Nunito;
+  font-size: hs(23px);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  color: #504f4f;
+}
+
+.bGcolor{
+  background-color: rgba(224, 252, 253, 0.3);
+}
+
+.infoContainer{
+  position: relative;
+}
+
+.infoIcon{
+  width: hs(19.377px);
+  height: hs(19.379px);
+  position: relative;
+  top:hs(-10px);
+}
+
+.editIcon{
+  width: hs(27.002px);
+  height: hs(27.002px);
+  position: absolute;
+  right: hs(41.5px);
+}
+
+.toolTipContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  opacity: 0;
+  left: - hs(142.5px);
+  top: - hs(65.3px);
+}
+
+.infoIcon:hover .toolTipContainer{
+  opacity: 1;
+}
+
+.toolTipTriangle{
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: hs(14.4px) hs(18.9px) hs(0px) hs(18.9px);
+  border-top-color: #bff7f9;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  // border:10px solid red
+}
+.hoverTextLayout{
+  width: hs(303.8px);
+  height: hs(45.6px);
+  // opacity: 0.5;
+  border-radius: hs(10px);
+  background-color: rgba(191, 247, 249, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hoverText{
+  font-family: Nunito;
+  font-size: hs(20px);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  color: #504f4f;
+}
+
+.actionButtons{
+  position: absolute;
+  right: hs(41.5px);
+  display: flex;
+}
+
+.submitEditText{
+  font-family: Nunito;
+  font-size: hs(25px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ade6;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cancelEditText{
+  font-family: Nunito;
+  font-size: hs(25px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: left;
+  color: #aaacae;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-right: hs(10px);
+}
+.inputFieldWrapper{
+  position: absolute;
+  left: hs(267px);
+  display: flex;
+  align-items: center;
+  width: hs(290px);
+  height: hs(41px);
+}
+
+.inputField{
+  width: 100%;
+  height: 100%;
+  padding-left: hs(12px);
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid #707070;
+  opacity: 0.5;
+  font-family: Nunito;
+  font-size: hs(23px);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+}
+
+.countryCode{
+  font-family: Nunito;
+  font-size: hs(23px);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+}
+
+.contactNumber{
+  display: flex;
+  flex:1;
+  margin-left: hs(5px);
+}
+
+.labelText{
+  margin-left: hs(2px);
+  margin-right: hs(2px);
+}
+
+.errorMessage{
+  height: hs(99px);
+}

@@ -1,0 +1,55 @@
+@import 'src/scss/size.scss';
+
+.checkBoxContainer {
+	position: relative;
+	top: hs(12px);
+	right: hs(12px);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: hs(25px);
+  height: hs(25px);
+	border: solid hs(1px) rgba(0, 173, 230, 0.65);
+  border-radius: hs(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkBox {
+  position: absolute;
+  opacity: 0;
+  margin: 0px;
+	width: hs(25px);
+  height: hs(25px);
+  cursor: pointer;
+}
+
+.checkBoxCustom {
+  position: absolute;
+  height: hs(10.901px);
+  width: hs(14.732px);
+  opacity: 0;
+}
+
+.emptySpan{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.checkBoxContainer .checkBox:checked ~ .addBackground {
+  background-color: #44e7f7;
+  opacity: 1;
+}
+
+.checkBoxContainer .checkBox:focus ~ .addBackground {
+  border: hs(2px) solid #44e7f7;
+  border-radius: hs(4px);
+}
+
+.checkBoxContainer svg{
+  position: absolute;
+}

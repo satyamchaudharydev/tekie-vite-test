@@ -1,0 +1,894 @@
+@import "src/scss/size.scss";
+@import "src/scss/utils.scss";
+
+// editors-colors
+$editor-input: #002f3e;
+$editor-header: #00171f;
+$editor-header-text: #ffffff;
+$editor-spinner: #0499ff;
+$editor-output: #052732;
+$editor-check-bg: #01aa93;
+
+.flex {
+	display: flex;
+	&.center {
+		justify-content: center;
+		align-items: center;
+	}
+}
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	overflow: hidden;
+	flex-direction: row;
+}
+
+.pane {
+	position: relative;
+	height: 100%;
+	background-color: $editor-output;
+	overflow: hidden;
+}
+
+.splitPane {
+	height: calc(100%) !important;
+	overflow: hidden;
+}
+
+.editorContainer {
+	background-color: $editor-input;
+	flex: 1;
+	position: relative;
+	@include resD(
+		(
+			height: calc(100vh - #{hs(120px)}),
+		)
+	);
+	@include resM(
+		(
+			height: calc(100% - #{hsm(38px)}),
+		)
+	);
+}
+
+.ace-terminal-theme {
+	background-color: #002f3e !important;
+}
+
+.outputContainer {
+	flex: 1;
+	height: calc(100%);
+	background-color: $editor-output;
+	box-sizing: border-box;
+	padding: 15px 20px 100px 20px;
+	overflow: scroll;
+	&::-webkit-scrollbar {
+		max-width: hs(10px);
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(#34e4ea, 0.5);
+		border-radius: 0;
+	}
+}
+
+.transparent {
+	background-color: transparent !important;
+	padding: 0px 5px 5px 5px !important;
+}
+.output {
+	width: 100%;
+	box-sizing: border-box;
+	@include resD(
+		(
+			font-size: 24px,
+			border-radius: 5px,
+		)
+	);
+	@include resM(
+		(
+			border-radius: 5px,
+			font-size: 16px,
+		)
+	);
+	font-family: Monaco;
+	color: #ffffff;
+	overflow: scroll;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	&:focus-visible {
+		outline: none;
+		border: none;
+	}
+	&:focus {
+		outline: none;
+		border: none;
+	}
+	&::-webkit-scrollbar {
+		@include resD(
+			(
+				max-width: 10px,
+				height: 10px,
+			)
+		);
+		@include resD(
+			(
+				max-width: 7px,
+				height: 7px,
+			)
+		);
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(#34e4ea, 0.5);
+		border-radius: 0;
+	}
+	&::-webkit-scrollbar-corner {
+		background: rgba(0, 0, 0, 0);
+	}
+}
+
+.title {
+	position: relative;
+	box-sizing: border-box;
+	background: linear-gradient(0deg, #0f4b5f, #0f4b5f), #ffffff;
+	padding-inline: 1rem;
+	width: 100%;
+	background-color: $editor-header;
+	display: flex;
+	justify-content: space-between;
+	position: "relative";
+	align-items: center;
+	color: $editor-header-text;
+	border-right: 1px solid $editor-header;
+	font-weight: 600;
+	// & > p {
+	// 	font-weight: bold;
+	// 	@include resD(
+	// 		(
+	// 			font-size: 20px,
+	// 		)
+	// 	);
+	// }
+	// padding-block: 0.5em;
+	@include resD(
+		(
+			height: 66px,
+		)
+	);
+	// height: 606px;
+	@include resD(
+		(
+			font-size: 20px,
+		)
+	);
+	@include resM(
+		(
+			font-size: 18px,
+			// height: 35px,,,,,,,,,,,,,,,,,,,,,,,
+		)
+	);
+}
+
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+
+	@include resD(
+		(
+			gap: 16px,
+		)
+	);
+
+	& > span {
+		font-weight: 700;
+		color: #ffffff;
+		opacity: 0.5;
+
+		@include resD(
+			(
+				font-size: 20px,
+				line-height: 27px,
+				letter-spacing: -0.02em,
+			)
+		);
+	}
+}
+
+.title__brief {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.languageIcon {
+	display: block;
+	@include resD(
+		(
+			width: 20px,
+			height: 20px,
+		)
+	);
+}
+.toolbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.clearButton {
+	width: hs(28px);
+	height: hs(28px);
+	margin-right: hs(11px);
+	margin-top: hs(2px);
+	cursor: pointer;
+}
+
+.backButton {
+	position: absolute;
+	path {
+		fill: #092732 !important;
+	}
+	@include resM(
+		(
+			width: 8px,
+			height: 14px,
+			top: 12px,
+			left: 10px,
+		)
+	);
+}
+
+.clearButtonEditor {
+	cursor: pointer;
+	@include resD(
+		(
+			width: 28px,
+			margin-right: 11px,
+			margin-top: 2px,
+		)
+	);
+	@include resM(
+		(
+			width: 18px,
+			margin-right: 8px,
+			margin-top: 7px,
+		)
+	);
+}
+
+.titleMentor {
+	justify-content: space-around;
+}
+
+.skyBlue {
+	background-color: #5fc5e5;
+}
+
+.bottomToolbar {
+	width: 100%;
+	height: hs(55px);
+	background-color: rgb(1, 61, 78);
+	margin-top: 1px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.buttonContainer {
+	height: hs(27px * 1.5);
+	border-radius: hs(14px * 1.8);
+	margin-left: hs(20px);
+}
+
+.buttonText {
+	font-size: hs(12px * 1.6);
+	margin-left: hs(12px * 2.5);
+	margin-right: hs(12px * 2.5);
+}
+
+.saveButton {
+	position: absolute;
+	background-color: transparent;
+	border: 0;
+	background-image: url("../../assets/saveButton.svg");
+	background-size: 117%;
+	background-position: 47% 42%;
+	cursor: pointer;
+	transition: 0.3s all ease-in-out;
+	z-index: 5;
+	@include resD(
+		(
+			width: 70px,
+			height: 70px,
+			bottom: 30px,
+			left: 4rem,
+		)
+	);
+	@include resM(
+		(
+			width: 60px,
+			height: 60px,
+			bottom: 20px,
+			left: 10px,
+		)
+	);
+	&:focus {
+		border: 0;
+		outline: 0;
+		box-shadow: 0;
+	}
+	&:disabled {
+		opacity: 0.5;
+		cursor: pointer;
+	}
+}
+
+.saveModal {
+	clip-path: polygon(
+		0% 0%,
+		100% 0%,
+		100% 95%,
+		25% 95%,
+		20% 100%,
+		15% 95%,
+		0 95%
+	);
+	transform: translate(-10%, -105%);
+	background-color: #052732;
+	transition: all 0.4s ease-in-out;
+	@include resD(
+		(
+			border-radius: 5px,
+			margin: 0 0 24px,
+			width: 350px,
+		)
+	);
+	@include resM(
+		(
+			border-radius: 5px,
+			margin: 0 0 24px 30px,
+			width: 260px,
+		)
+	);
+	p {
+		line-height: 1.33;
+		letter-spacing: normal;
+		text-align: center;
+		color: #ffffffc1;
+		@include resD(
+			(
+				font-size: 16px,
+			)
+		);
+		@include resM(
+			(
+				font-size: 16px,
+			)
+		);
+	}
+	input,
+	textarea {
+		// min-width: 90%;
+		width: inherit;
+		border: none;
+		background-color: #041c24;
+		color: #ffffff;
+		font-family: "Nunito";
+		font-style: italic;
+		resize: vertical;
+		@include resD(
+			(
+				margin: 0 0 5px,
+				padding: 9px 14px 14px 16px,
+			)
+		);
+		@include resM(
+			(
+				margin: 0 0 6px,
+				padding: 11px 14px 11px 16px,
+			)
+		);
+		border-radius: 5px;
+	}
+	textarea {
+		@include resD(
+			(
+				margin: 0,
+				height: 150px,
+			)
+		);
+		@include resM(
+			(
+				margin: 0,
+				height: 120px,
+			)
+		);
+	}
+}
+
+.showSaveModal {
+	opacity: 1;
+	display: inline-table;
+	@include resD(
+		(
+			padding: 9px 14px 30px 16px,
+			min-height: 300px,
+		)
+	);
+	@include resM(
+		(
+			padding: 9px 14px 30px 16px,
+			min-height: 280px,
+		)
+	);
+}
+
+.hideSaveModal {
+	min-height: 0;
+	height: 0;
+	padding: 0 14px 0 16px;
+	opacity: 0;
+}
+
+.roundedButtons {
+	/* height: 3.125vw; */
+	border-radius: 20px;
+	/* min-width: 60px; */
+	/* width: max-content; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	pointer-events: auto;
+	cursor: pointer;
+	background-color: #00ade6;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+	color: #ffffff;
+	font-family: Nunito;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.2;
+	@include resD(
+		(
+			padding: 8px 32px,
+			font-size: 16px,
+			margin-bottom: unset,
+		)
+	);
+	@include resM(
+		(
+			padding: 8px 32px,
+			margin-bottom: 10px,
+			font-size: 16px,
+		)
+	);
+	&.cancelButton {
+		background-color: transparent;
+		border: solid 2px #00ade6;
+		box-sizing: border-box;
+		color: #ffffffbf;
+	}
+	&:disabled {
+		opacity: 0.5;
+		cursor: auto;
+	}
+	&:focus {
+		border: 0;
+		outline: 0;
+		box-shadow: 0;
+	}
+}
+
+.lastSavedAt {
+	font-family: "Nunito";
+	font-style: normal;
+	font-weight: 400;
+	color: #dcdcdc;
+	opacity: 1;
+}
+
+.fileNameContainer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	@include resD(
+		(
+			top: 3px,
+		)
+	);
+}
+
+.fileName {
+	color: white;
+	font-family: "Nunito";
+
+	&:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	@include resD(
+		(
+			font-size: 20px,
+			line-height: 22px,
+			letter-spacing: -0.02em,
+		)
+	);
+}
+
+.fileName__locked {
+	&:hover {
+		cursor: not-allowed;
+		text-decoration: none;
+	}
+}
+
+// == old styles ==
+// .fileNameWrapper {
+//   width: auto;
+//   background: #2DBFB3;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: white;
+//   @include resD((
+//     height: 25px,
+//     border-radius: 12px 12px 0 0,
+//     padding: 2px 10px,
+//     margin-left: 18px,
+//     font-size: 20px,
+//   ));
+//   @include resM((
+//     height: 20px,
+//     border-radius: 6px 6px 0 0,
+//     padding: 1px 5px,
+//     margin-left: 9px,
+//     font-size: 14px,
+//   ));
+// }
+
+.aceEditor {
+	@include resD(
+		(
+			top: 20px,
+			height: 100%,
+			font-size: 22px,
+			line-height: 33px,
+		)
+	);
+	@include resM(
+		(
+			top: 10px,
+			height: 100%,
+			font-size: 16px,
+			line-height: 24px,
+		)
+	);
+}
+
+.editorLoader {
+	background-color: transparent !important;
+	background-image: none !important;
+	@include resD(
+		(
+			margin-right: 5px,
+			width: 20px,
+			height: 20px,
+			left: -10px,
+		)
+	);
+	@include resM(
+		(
+			margin-right: 5px,
+			width: 15px,
+			height: 14px,
+			left: -5px,
+		)
+	);
+}
+
+.LoadingIcon {
+	background-color: #23d1e9 !important;
+	margin: 30px !important;
+	display: block !important;
+	width: 20px !important;
+	height: 20px !important;
+	bottom: 10px !important;
+	right: 0 !important;
+	left: unset !important;
+	position: absolute !important;
+}
+
+.mobileBodyContainer {
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	overflow-x: hidden;
+	height: 100%;
+}
+
+.mobileOutputShow {
+	transform: translateX(-100vw);
+}
+.mobileOutputHidden {
+	transform: translateX(0vw);
+}
+
+.actionContainer {
+	display: flex;
+	justify-content: space-around;
+
+	@include resD(
+		(
+			margin: 16px 0px 8px,
+		)
+	);
+	@include resM(
+		(
+			margin: 16px 0px 0px,
+		)
+	);
+}
+
+::-webkit-scrollbar {
+	max-width: hs(10px);
+}
+
+.postOnCommunityBtn {
+	font-family: "Nunito";
+	font-weight: 600;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: white;
+
+	@include resD(
+		(
+			margin: 8px 0 0px,
+		)
+	);
+	@include resM(
+		(
+			margin: 4px 0 0px,
+		)
+	);
+
+	.checkBoxContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		@include resM(
+			(
+				height: 24px,
+				width: 24px,
+			)
+		);
+		@include resD(
+			(
+				height: 18px,
+				width: 20px,
+			)
+		);
+	}
+
+	& > span {
+		padding: 0px 6px;
+		user-select: none;
+
+		@include resD(
+			(
+				font-size: hs(16px),
+			)
+		);
+		@include resM(
+			(
+				font-size: 16px,
+			)
+		);
+	}
+}
+
+.editButton {
+	@include resM(
+		(
+			width: 55px,
+			height: 70px,
+		)
+	);
+	background-repeat: no-repeat;
+	background-image: url("../../assets/editButtonPlayground.png") !important;
+}
+
+.saveCodingLoading {
+	$primary-color: #12403c;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.4rem;
+	margin-left: 5px;
+	p {
+		margin: 0;
+		font-weight: 700;
+		@include resD(
+			(
+				font-size: hs(16px),
+			)
+		);
+	}
+	.saveCodeState {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		width: 15px;
+		height: 15px;
+		.checkIconWrapper {
+			@include resD(
+				(
+					width: 16px,
+					height: 16px,
+				)
+			);
+			svg,
+			rect {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	svg {
+		display: block;
+	}
+}
+.spinner {
+	--spinner-size: 1;
+	--line-color: #0499ff;
+	--line-alpha: 1;
+	--ring-color: #0499ff;
+	--ring-alpha: 0.09;
+	--ring-size: 6;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+}
+.spinner .line {
+	fill: none;
+	stroke: var(--line-color);
+	stroke-width: var(--ring-size);
+	opacity: var(--line-alpha);
+	stroke-linecap: round;
+	transform-origin: 50% 50%;
+	transform: rotate3d(0, 0, 1, 0deg);
+	animation: arc 2156ms ease-in-out infinite, rotate 1829ms linear infinite;
+}
+.spinner .ring {
+	fill: none;
+	stroke: var(--ring-color);
+	stroke-width: var(--ring-size);
+	opacity: var(--ring-alpha);
+}
+@keyframes rotate {
+	to {
+		transform: rotate3d(0, 0, 1, 360deg);
+	}
+}
+@keyframes arc {
+	from {
+		stroke-dasharray: 0 150;
+		stroke-dashoffset: 0;
+	}
+	to {
+		stroke-dasharray: 100 150;
+		stroke-dashoffset: -140;
+	}
+}
+
+.javaEditorNavBarText,.javaEditorNavBarCopyButton{
+	display: flex;
+	align-items: center;
+	color: #FFFFFF;
+	text-decoration-line: underline;
+	cursor: pointer;
+	@include resD((
+		font-weight: 700,
+		font-size: 16.5405px,
+		line-height: 23px,
+	))
+}
+
+.javaEditorNavBarCopyButton{
+	@include resD((
+		font-weight: 500,
+		font-size: 12px,
+	));
+	p{
+		@include resD((
+			margin-left: 4px,
+		))
+	}
+}
+
+.toolTipText{
+	display: flex;
+	flex-direction: column;
+	@include resD((
+		padding: 0px 10px 10px 10px,
+		line-height: 24px,
+	));
+	p{
+		text-overflow: ellipsis;
+		font-weight: 400;
+		margin: 0;
+		color: #504F4F;
+		@include resD((
+			font-size:16px,
+		))
+	}
+	button{
+		align-self: center;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+		@include resD((
+			border: 2px solid #00ADE6,
+			border-radius: 20px,
+		));
+	}
+}
+.gotItButton{
+	color: white;
+	background-color: #F0FBFF;
+	@include resD((
+		font-size: 16px,
+	))
+}
+
+.editorLink{
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+	span{
+		color: #00ADE6;
+		font-weight: 700;
+		text-decoration-line: underline;
+		@include resD((
+			font-size: 16px,
+		))
+	}
+}
+
+.viewOutput{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		cursor: pointer;
+		@include resD((
+			height: 25px,
+			width: 25px,
+		))
+	}
+	span{
+		letter-spacing: -0.02em;
+		text-transform: capitalize;
+		font-weight: bold;
+		@include resD((
+			margin-left: 10px,
+			font-size: 20px,
+		));
+	}
+}

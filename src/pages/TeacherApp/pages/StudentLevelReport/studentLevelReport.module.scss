@@ -1,0 +1,918 @@
+@import "src/scss/size.scss";
+@import "src/scss/Inter.scss";
+@import "src/scss/theme/colors.scss";
+@import "../../variables/variables.scss";
+@import "../../mixins/_mixins.scss";
+
+.studentLevelContainer {
+  display: flex;
+  flex-direction: column;
+  @include resD1280(
+    (
+      padding: 20px 20px 20px 0px,
+    )
+  );
+  @include resM(
+    (
+      padding: 20px 20px 20px 0px,
+    )
+  );
+  * {
+    font-family: "Inter";
+  }
+}
+.studentLevelSearchText {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  box-sizing: border-box;
+  width: fit-content;
+  @include resD1280(
+    (
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2),
+      border-radius: 8px,
+      padding: 7px 8px,
+      border: 1px solid #eeeeee,
+      width: 250px,
+    )
+  );
+  @include resM(
+    (
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2),
+      border-radius: 8px,
+      padding: 7px 8px,
+      border: 1px solid #eeeeee,
+    )
+  );
+
+  .studentLevelSearchInput {
+    border: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: "Inter";
+    letter-spacing: 0px;
+    font-weight: 400;
+    flex: 1;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: #aaaaaa;
+    }
+    @include resD1280(
+      (
+        bottom: 1px,
+        height: 100%,
+        font-size: 12px,
+      )
+    );
+    @include resM(
+      (
+        width: 130px,
+        height: 22px,
+        font-size: 14px,
+      )
+    );
+  }
+
+  svg {
+    @include resD1280(
+      (
+        width: 14px,
+        height: 14px,
+      )
+    );
+    @include resM(
+      (
+        width: 14px,
+        height: 14px,
+      )
+    );
+  }
+}
+
+.studentLevelReportTableContainer {
+  .thirdTry,
+  .secondTry,
+  .firstTry {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: #d38d00;
+    width: fit-content;
+    @include resD1280(
+      (
+        padding: 4px,
+        font-size: 12px,
+        line-height: 18px,
+      )
+    );
+    @include resM(
+      (
+        padding: 4px,
+        border-radius: 8px,
+        font-size: 12px,
+        line-height: 18px,
+      )
+    );
+  }
+  .secondTry {
+    color: #d34b57;
+  }
+  .firstTry {
+    color: #01aa93;
+  }
+}
+.reportTimeText {
+  text-align: center;
+  color: #282828;
+  @include resD1280(
+    (
+      border-radius: 12px,
+      font-size: 10px,
+      line-height: 18px,
+    )
+  );
+  @include resM(
+    (
+      border-radius: 8px,
+      line-height: 18px,
+    )
+  );
+}
+
+.codingScore {
+  font-family: "Inter";
+  font-style: normal;
+  text-align: center;
+  span {
+    color: rgba(40, 40, 40, 0.5);
+  }
+  .gainedScore {
+    color: #282828;
+  }
+  @include resD1280(
+    (
+      font-size: 14px,
+      line-height: 21px,
+    )
+  );
+  @include resM(
+    (
+      font-size: 14px,
+      line-height: 21px,
+    )
+  );
+}
+
+.submittedStatus {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: pre !important;
+  word-break: keep-all !important;
+  background: #eeeeee;
+  width: fit-content;
+  @include resD1280(
+    (
+      font-size: 12px,
+      border-radius: 15px,
+      padding: 2px 8px,
+    )
+  );
+  @include resM(
+    (
+      font-size: 12px,
+      border-radius: 15px,
+      padding: 2px 8px,
+    )
+  );
+  color: #616161;
+}
+
+.emptyData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  font-weight: 500;
+  font-family: "Inter";
+  @include resD1280(
+    (
+      font-size: 20px,
+    )
+  );
+  @include resM(
+    (
+      font-size: 12px,
+    )
+  );
+}
+
+.avgTries {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  @include resD1280(
+    (
+      margin-top: 10px,
+      font-size: 8px,
+      line-height: 11px,
+    )
+  );
+  @include resM(
+    (
+      font-size: 7.95506px,
+      line-height: 11px,
+    )
+  );
+  color: #212121;
+}
+
+.noStudentContainer {
+  h1 {
+    margin: 0;
+    @include resD1280(
+      (
+        padding: 14px,
+      )
+    );
+  }
+  @include resD1280(
+    (
+      font-size: 10px,
+    )
+  );
+}
+
+.submittedText {
+  background: rgba(1, 170, 147, 0.1);
+  color: #01aa93;
+  margin: 0 auto;
+}
+
+.evaluationEditContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    color: #282828;
+    margin: 0;
+    @include resD1280(
+      (
+        font-size: 14px,
+        line-height: 21px,
+        margin-left: 6px,
+      )
+    );
+  }
+}
+
+.evaluationEdit {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emptyRow {
+  padding: 0;
+  border-right: 1px dashed rgba(0, 0, 0, 0.05);
+}
+
+.pqReportsDiv {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e2e2e2;
+  width: 50%;
+  p {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.pqReportQuizChild {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  span {
+    margin: 0;
+    font-weight: 500;
+    color: #858585;
+    width: 50%;
+    @include resD1280(
+      (
+        font-size: 8px,
+        line-height: 180%,
+        padding: 4px 0,
+      )
+    );
+  }
+  span:first-child {
+    border-right: 1px solid #e2e2e2;
+  }
+}
+
+.assignmentComponentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.studentLevelReportTableContainer {
+  height: fit-content;
+  width: 100%;
+  background-color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+  @include resD1280(
+    (
+      border-radius: 16px,
+      margin-top: 24px,
+    )
+  );
+  table {
+    border-spacing: 0;
+  }
+}
+
+.studentCardContainer {
+  @include resD1280(
+    (
+      padding: 16px,
+    )
+  );
+}
+
+.studentTableContainer {
+  width: 100%;
+  overflow: auto;
+}
+
+.studentTableContainer table {
+  border-spacing: 0;
+  width: 100%;
+  font-family: "Inter";
+  border: 1px solid #e2e2e2;
+  @include resD1280(
+    (
+      border-radius: 16px,
+    )
+  );
+}
+
+.studentTableContainer .firstHeadColStyle {
+  border-bottom: 1px solid #e2e2e2;
+}
+.studentTableContainer tr:nth-child(1) th:last-child {
+  border-right: none;
+}
+.studentTableContainer .firstHeadColPadding {
+  @include resD1280(
+    (
+      padding: 16px 0,
+    )
+  );
+}
+.studentTableContainer .secondHeadColPadding {
+  @include resD1280(
+    (
+      padding: 13px 0,
+    )
+  );
+}
+.studentTableContainer .secondHeadAssignmentStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  p {
+    margin: 0;
+  }
+  span {
+    font-weight: 500;
+    color: #858585;
+    @include resD1280(
+      (
+        font-size: 8px,
+        line-height: 180%,
+        padding: 4px 0,
+      )
+    );
+  }
+}
+.studentTableContainer tr:nth-child(3) th {
+  font-weight: 500;
+  color: #858585;
+  @include resD1280(
+    (
+      font-size: 8px,
+      line-height: 180%,
+      padding: 4px 0,
+    )
+  );
+}
+.studentTableContainer th {
+  font-weight: 600;
+  color: #000000;
+  border-right: 1px solid #e2e2e2;
+  box-sizing: border-box;
+  background: #f5f5f5;
+  @include resD1280(
+    (
+      font-size: 12px,
+      line-height: 18px,
+    )
+  );
+}
+.studentTableContainer .tableDataBoxes td {
+  border-right: 1px solid #e2e2e2;
+  border-top: 1px solid #e2e2e2;
+  text-align: center;
+  box-sizing: border-box;
+  background: #fff;
+  @include resD1280(
+    (
+      height: 44px,
+    )
+  );
+  &:first-of-type,
+  &:nth-of-type(2),
+  &:last-of-type {
+    @include resD1280(
+      (
+        padding: 0 16px,
+      )
+    );
+  }
+}
+
+.studentTableContainer .assignmentChildrenData {
+  @include resD1280(
+    (
+      min-width: 110px,
+      max-width: 110px,
+      width: 110px,
+    )
+  );
+}
+
+.studentTableContainer tr td:last-child {
+  border-right: none;
+  @include resD1280(
+    (
+      padding: 10px 12px,
+    )
+  );
+}
+
+.studentTableContainer .submissionCount {
+  font-weight: 600;
+  text-align: center;
+  color: #504f4f;
+  @include resD1280(
+    (
+      font-size: 12px,
+      line-height: 130%,
+    )
+  );
+}
+
+.studentTableContainer tr:last-child td:last-child {
+  @include resD1280(
+    (
+      border-bottom-right-radius: 16px,
+    )
+  );
+}
+
+.studentTableContainer tr:last-child td:first-child {
+  @include resD1280(
+    (
+      border-bottom-left-radius: 16px,
+    )
+  );
+}
+
+.studentTableContainer tr:first-child th:first-child {
+  @include resD1280(
+    (
+      border-top-left-radius: 16px,
+    )
+  );
+}
+
+.studentTableContainer tr:first-child th:last-child {
+  @include resD1280(
+    (
+      border-top-right-radius: 16px,
+    )
+  );
+}
+
+.studentTableContainer tr:first-child th {
+  z-index: 2;
+}
+
+.studentTableContainer tr:first-child th:nth-child(1),
+.studentTableContainer td:nth-child(1) {
+  position: sticky;
+  left: 0;
+  text-align: center;
+  @include resD1280(
+    (
+      width: 100px,
+      max-width: 100px,
+      min-width: 100px,
+      border-right: 1px solid #e2e2e2,
+    )
+  );
+}
+
+.studentTableContainer tr:first-child th:nth-child(2),
+.studentTableContainer td:nth-child(2) {
+  text-align: center;
+  position: sticky;
+  @include resD1280(
+    (
+      left: 100px,
+      border-right: 1px solid #e2e2e2,
+    )
+  );
+}
+
+.studentTableContainer tr:first-child th:last-child,
+.studentTableContainer td:last-child {
+  position: sticky;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  @include resD1280(
+    (
+      min-width: 110px,
+      border-left: 1px solid #e2e2e2,
+    )
+  );
+}
+
+.studentTableContainer tr:first-child th:nth-child(1),
+.studentTableContainer tr:first-child th:nth-child(2),
+.studentTableContainer th:last-child {
+  z-index: 99;
+}
+
+.studentRollNo {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  span {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    @include resD1280(
+      (
+        font-size: 12px,
+        line-height: 16px,
+      )
+    );
+  }
+}
+.studentName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  @include resD1280(
+    (
+      font-size: 12px,
+      line-height: 16px,
+    )
+  );
+}
+
+.loCompoentDiv {
+  display: flex;
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  justify-content: center;
+  font-weight: 400;
+  @include resD1280(
+    (
+      font-size: 10px,
+      line-height: 16px,
+      margin-top: 8px,
+    )
+  );
+  color: #212121;
+  &.noMargin {
+    margin-top: 0px;
+  }
+}
+.textAlignCenter {
+  text-align: center;
+}
+.hiddenText {
+  white-space: normal;
+  visibility: hidden;
+  opacity: 0;
+  @include resD1280(
+    (
+      margin-top: 8px,
+    )
+  );
+}
+.componentHeader {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  color: #504f4f;
+  @include resD1280(
+    (
+      font-size: 12px,
+      line-height: 16px,
+    )
+  );
+}
+
+.componentFlexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timetableCalendarLoaderBackdrop,
+.studentDetailsLoader {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  &.studentDetailsLoaderBG {
+    & span {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      width: 100%;
+      font-family: "Inter";
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.progressSkeleton {
+  margin: 0 auto;
+  @include resD1280(
+    (
+      background-color: #ffffff,
+      height: 8px,
+      width: 80%,
+      border-radius: 5px,
+    )
+  );
+  & rect {
+    @include resD1280(
+      (
+        height: 8px,
+        width: 100%,
+      )
+    );
+  }
+}
+.timetableCalendarLoaderBackdrop {
+  background-color: #fff;
+  & span {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 100%;
+    font-family: "Inter";
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.studentsTableWrapper {
+  position: relative;
+}
+
+.studentTableLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD1280(
+    (
+      padding: 8px 0,
+    )
+  );
+}
+
+.headerSubText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  @include resD1280(
+    (
+      font-size: 10px,
+      line-height: 16px,
+    )
+  );
+  color: #504f4f;
+}
+
+.studentFilterContainer {
+  display: flex;
+  justify-content: space-between;
+  @include resD1280(
+    (
+      margin-top: 30px,
+    )
+  );
+}
+
+.emptyDataDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6d6d6d;
+  @include resD1280(
+    (
+      padding: 30px 0,
+      font-size: 14px,
+      line-height: 120%,
+    )
+  );
+  svg {
+    @include resD1280(
+      (
+        margin-right: 8px,
+        height: 180x,
+        width: 180x,
+      )
+    );
+  }
+}
+
+.evaluateText {
+  padding: 0;
+  color: #8c61cb;
+  background: none;
+  border-bottom: 1.5px dashed #8c61cb;
+  outline: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.partialText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  color: #121212;
+  cursor: pointer;
+  background: rgba(250, 173, 20, 0.08);
+  padding: 0;
+  svg {
+    @include resD1280(
+      (
+        margin-right: 4px,
+        width: 16px,
+        height: 16px,
+      )
+    );
+  }
+  @include resD1280(
+    (
+      font-size: 12px,
+      line-height: 130%,
+    )
+  );
+}
+
+.partialEvaluationTooltipContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #ffc700;
+  @include resD1280(
+    (
+      width: 192px,
+      padding: 16px,
+      border-radius: 8px 8px 8px 0px,
+    )
+  );
+  .partialEvaluationTooltipHead {
+    display: flex;
+    align-items: center;
+    h3 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      color: #121212;
+      @include resD1280(
+        (
+          font-size: 14px,
+          line-height: 120%,
+          margin-left: 8px,
+        )
+      );
+    }
+  }
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    color: #121212;
+    word-wrap: break-word;
+    @include resD1280(
+      (
+        font-size: 12px,
+        line-height: 150%,
+        padding: 10px 0,
+        width: 100%,
+      )
+    );
+  }
+  button {
+    span {
+      color: #121212;
+    }
+  }
+  button:hover {
+    background: #fff;
+  }
+}
+
+.partialEvaluationTooltip {
+  background: #faad14;
+  box-sizing: border-box;
+  @include resD1280(
+    (
+      width: 200px,
+      border-radius: 8px,
+      padding: 16px 16px 12px 16px,
+    )
+  );
+}
+
+.quizText {
+  border-bottom: 1px solid #e2e2e2;
+  @include resD1280(
+    (
+      padding: 10px 0,
+    )
+  );
+}
+
+.loCompoentDivQuiz {
+  @include resD1280(
+    (
+      width: 80.5,
+    )
+  );
+}
+
+.viewDetailsButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.practiceContainerHeading {
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.secondHeadColWidth {
+  @include resD1280(
+    (
+      width: 161px,
+    )
+  );
+}

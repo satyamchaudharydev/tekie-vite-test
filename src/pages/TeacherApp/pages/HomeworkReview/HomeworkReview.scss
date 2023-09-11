@@ -1,0 +1,158 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+// * {
+//   margin: 0px;
+//   padding: 0px;
+//   box-sizing: border-box;
+// }
+
+.homework_review_page_embed_container{
+& * {
+  // margin: 0px;
+  // padding: 0px;
+  box-sizing: border-box;
+}
+}
+.pagination {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 18px,
+      line-height: 16px,
+      color: #000000,
+    )
+  );
+  @include resSm(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 400,
+      font-size: 15px,
+      line-height: 16px,
+      color: #000000,
+    )
+  );
+}
+.homework__review__header__main__container {
+  @include resD(
+    (
+      width: 98%,
+      background: #ffffff,
+      border-radius: 16px,
+      padding: 30px 25px 10px 25px,
+      overflow: visible,
+    )
+  );
+  @include resM(
+    (
+      width: 98%,
+      background: #ffffff,
+      border-radius: 16px,
+      padding: 20px,
+      overflow: visible,
+    )
+  );
+}
+.homework__review__graph__section__main__container {
+  @include resD(
+    (
+      width: 98%,
+      background: #ffffff,
+      border-radius: 16px,
+      max-height: 500px,
+      min-height: 499px,
+      height: 52vh,
+      padding-left: 50px,
+      margin-top: 45px,
+      padding-top: 20px,
+      margin-bottom: 10px,
+    )
+  );
+  @include resM(
+    (
+      width: 98%,
+      background: #ffffff,
+      border-radius: 16px,
+    )
+  );
+}
+.top__links {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 400,
+      font-size: 18px,
+      line-height: 16px,
+      color: #000000,
+      margin: 30px 0px,
+    )
+  );
+  @include resM(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 400,
+      font-size: 12px,
+      line-height: 16px,
+      color: #000000,
+    )
+  );
+}
+.floating__button {
+  @include resD(
+    (
+      display: flex,
+      flex-direction: row,
+      justify-content: center,
+      align-items: center,
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 15px,
+      margin-left: auto,
+      margin-right: 32px,
+      cursor: pointer,
+    )
+  );
+  @include resM(
+    (
+      display: flex,
+      flex-direction: row,
+      justify-content: center,
+      align-items: center,
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 15px,
+      cursor: pointer,
+    )
+  );
+}
+.floating__button__container {
+  @include resD(
+    (
+      width: 100vw,
+      background: #ffffff,
+      height: 100px,
+      position:absolute,
+      right: 0%,
+      bottom: 0px,
+      display: flex,
+      align-items: center,
+      z-index: 999,
+    )
+  );
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  @include resM(
+    (
+      width: 100vw,
+      background: #ffffff,
+      height: 80px,
+    )
+  );
+}

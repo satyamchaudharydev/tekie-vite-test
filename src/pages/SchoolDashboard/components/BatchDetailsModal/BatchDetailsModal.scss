@@ -1,0 +1,261 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/Inter.scss';
+@import 'src/scss/theme.scss';
+
+.modal-course-thumbnail-container {
+    border: 2px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 12px;
+    
+    @include resD((
+        width: 110px,
+        height: 110px,
+    ));
+    @include resM((
+        width: 90px,
+        height: 90px,
+    ));
+
+    .modal-course-thumbnail {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.batchDM-header-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.batchDM-primary-text {
+    @extend .Inter-regular;
+    font-weight: normal;
+    color: #616161;
+    
+    @include resD((
+        font-size: 18px,
+    ));
+    @include resM((
+        font-size: 14px,
+    ));
+}
+
+.batchDM-details-container {
+    & .batchDM-details-grade {
+        font-weight: 500;
+        color: #616161;
+        @include resD((
+            font-size: 16px,
+            line-height: 20px,
+            padding-top: 4px,
+        ));
+        @include resM((
+            font-size: 12px,
+            line-height: 14px,
+            padding-top: 2px,
+        ));
+        & > span { 
+            padding-right: 4px;
+        }
+    }
+
+    & .batchDM-details-batchText {
+        font-weight: 500;
+        color: #212121;
+        @include resD((
+            font-size: 22px,
+            line-height: 32px
+        ));
+        @include resM((
+            font-size: 18px,
+            line-height: 28px
+        ));
+
+        & > span {
+            font-weight: 600;
+            color: #212121;
+            @include resD((
+                font-size: 25px,
+            ));
+            @include resM((
+                font-size: 20px,
+            ));
+        }
+    }
+    & .batchDM-details-courseDetails {
+        font-weight: 500;
+        color: #212121;
+        background: #F2F2F2;
+        border-radius: 4px;
+        width: fit-content;
+        @include resD((
+            font-size: 16px,
+            line-height: 32px,
+            padding: 0px 18px,
+            margin: 8px 0px 0px,
+        ));
+        @include resM((
+            font-size: 16px,
+            line-height: 28px,
+            padding: 0px 12px,
+            margin: 8px 0px 0px,
+        ));
+    }
+
+    & .batchDM-modal-header-course-progress-container {
+        @extend .Inter-regular;
+        flex: 1 ;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        @include resD((
+            padding-top: 14px,
+        ));
+        @include resM((
+            padding-top: 12px,
+        ));
+        
+        .batchDM-modal-header-course-progress-text {
+            @extend .batchDM-primary-text;
+            @include resD((
+                padding: 0px 12px 0px 0px,
+            ));
+            @include resM((
+                padding: 0px 12px 0px 0px,
+            ));
+        }
+        .batchDM-modal-header-course-progress {
+            background: #E5E9EB;
+            position: relative;
+            height: 10px;
+            margin: 0px 4px;
+            border-radius: 100px;
+            @include resD((
+                width: 200px,
+            ));
+            @include resM((
+                width: 80px,
+            ));
+            
+            .batchDM-modal-header-course-progress-indicator {
+                background-color: #01AA93;
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                border-radius: 100px;
+                top: 0;
+                left: 0;
+                transition: width .3s;
+            } 
+        }
+        .batchDM-modal-header-course-progress-percentage {
+            font-weight: 600;
+            font-size: 14px;
+            color: #33545F;
+            padding: 0px 8px;
+        }
+    }
+}
+
+.batchDM-modal-content-container {
+    padding: 0px 12px 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    @include resD((
+        align-items: center,
+    ));
+    @include resM((
+        align-items: flex-start,
+    ));
+
+    .batchDM-modal-content-class-title {
+        font-weight: 500;
+        color: #616161;
+        @include resD((
+            font-size:18px,
+            padding: 0px 0px 8px,
+        ));
+        @include resM((
+            font-size: 14px,
+            padding: 8px 0px 8px,
+        ));
+    }
+}
+
+.batchDM-modal-content-container {
+    ::-webkit-scrollbar {
+	  width: 4px !important;
+	}
+	/* Track */
+	::-webkit-scrollbar-track {
+        width: 2px !important; 
+        border-radius: 100%;
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background: #EEEEEE !important; 
+	  border-radius: 10px !important;
+	}
+}
+
+.batchDM-modal-content-tableHeader {
+    @include resD((
+        font-size: 18px,
+    ));
+    @include resM((
+        font-size: 18px,
+    ));
+}
+
+.batchDM-modal-content-tableRow {
+    @include resD((
+        font-size: 18px,
+    ));
+    @include resM((
+        font-size: 18px,
+    ));
+}
+
+.batchDM-modal-filter-dropdown {
+    @extend .Inter-regular;
+    background: #FFFFFF;
+    text-transform: capitalize;
+    border: 2px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #424242;
+    cursor: pointer;
+    padding-left: 0px !important;
+    @include resD((
+      margin: 0px 8px 0px auto,
+      width: 170px !important,
+    ));
+    @include resM((
+      margin: 0px 4px,
+      width: 120px !important,
+    ));
+    & > div {
+      z-index: 999;
+      text-align: left;
+      border-width: 0px;
+      cursor: pointer;
+      @include resD((
+        min-height: 32px !important,
+      ));
+      @include resM((
+        min-height: 28px !important,
+      ));
+    }
+}

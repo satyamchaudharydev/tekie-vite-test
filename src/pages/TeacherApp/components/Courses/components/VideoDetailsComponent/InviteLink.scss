@@ -1,0 +1,228 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.link_container {
+    @include resD(
+        (
+            display: flex,
+            flex-direction: row,
+            align-items: center,
+            box-sizing: border-box,
+            border-radius: 8px,
+            width:80%,
+            margin-right: 10px,
+            background: #F5F5F5,
+            border: 1px solid #AAAAAA,
+            height: 48px,
+        )
+    );
+    @include resSm(());
+}
+.link_container_able {
+    @include resD(
+        (
+            display: flex,
+            flex-direction: row,
+            align-items: center,
+            box-sizing: border-box,
+            border-radius: 8px,
+            width:80%,
+            margin-right: 10px,
+            background: white,
+            border: 1px solid #AAAAAA,
+            height: 48px,
+        )
+    );
+    @include resSm(());
+}
+
+.invite_link_main{
+    border-top: 1px solid #EEEEEE;
+    @include resD(
+        (
+            margin-top: 40px,
+            padding-top: 20px
+        )
+    );
+}
+.invite_link_heading {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 600,
+            font-size: 18px,
+            line-height: 18px,
+            display: flex,
+            align-items: center,
+            color: #424242,
+           
+            margin-top:30px
+        )
+    );
+    @include resSm(());
+}
+.Invite_link_container {
+    @include resD(
+        (
+            display: flex,
+            flex-direction: row,
+            align-items: center,
+            margin-top: 30px,
+            margin-bottom:40px,
+            width:100%
+        )
+    );
+    @include resSm(());
+}
+.input_invite_link {
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    @include resD(
+        (
+            display: flex,
+            flex-direction: row,
+            align-items: flex-start,
+            padding: 11px 12px,
+            background: white,
+            box-sizing: border-box,
+            width: 95%,
+            height: 36px,
+            border-right: none,
+            border-top: none,
+            border-bottom: none,
+            border-left: none,
+
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 12px,
+        color: black,
+        )
+    );
+    @include resSm(());
+}
+.input_invite_link:disabled{
+    cursor: not-allowed;
+    background: #f5f5f5;
+    color: #9E9E9E;
+}
+.input_invite_link:focus {
+    @include resD(
+        (
+            outline: none,
+        )
+    );
+    @include resSm(());
+}
+
+// .input_invite_link_disable {
+//     cursor: not-allowed;
+//     @include resD(
+//         (
+//             display: flex,
+//             flex-direction: row,
+//             align-items: flex-start,
+//             padding: 11px 12px,
+//             background: #f5f5f5,
+//             border: 1px solid #aaaaaa,
+//             box-sizing: border-box,
+//             width: 95%,
+//             height: 36px,
+//             border-right: none,
+//             border-top: none,
+//             border-bottom: none,
+//             border-left: none,
+
+//         font-family: Inter,
+//         font-style: normal,
+//         font-weight: normal,
+//         font-size: 18px,
+//         line-height: 12px,
+//         color: #9E9E9E,
+//         )
+//     );
+//     @include resSm(());
+// }
+.copy_link_button {
+    @include resD(
+        (
+            display: flex,
+            flex-direction: row,
+            justify-content: center,
+            align-items: center,
+            padding: 0px 8px,
+            background: #faf7ff,
+            border-radius: 8px,
+            border: none,
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 16px,
+            line-height: 18px,
+            color: #8c61cb,
+            width:140px,
+            height: 44px,
+            cursor: pointer
+        )
+    );
+    @include resSm(());
+}
+
+// .Invite_link_edit_button:hover {
+//     @include resD(
+//         (
+//             display: flex,
+//             flex-direction: row,
+//             justify-content: space-between,
+//             align-items: center,
+//             padding: 7px 16px 7px 12px,
+//             position: static,
+//             width: 70px,
+//             height: 50px,
+//             background: #8c61cb,
+//             border-radius: 8px,
+//             border: none,
+//             color: #ffffff,
+//             margin-right: 25px,
+//         )
+//     );
+//     @include resSm(());
+// }
+.Invite_link_edit_button {
+    @include resD(
+        (
+            display: flex,
+            flex-direction: row,
+            justify-content: space-between,
+            align-items: center,
+            padding: 7px 20px 7px 18px,
+            position: static,
+            height: 48px,
+            background: #8c61cb,
+            color: white,
+            border-radius: 8px,
+            border: none,
+            margin-right: 25px,
+            cursor: pointer
+        )
+    );
+    @include resSm(());
+}
+
+.video_detail_button_text {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 16px,
+            line-height: 18px,
+            display: flex,
+            align-items: center,
+        )
+    );
+    @include resSm(());
+}

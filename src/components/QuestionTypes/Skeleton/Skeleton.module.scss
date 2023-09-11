@@ -1,0 +1,49 @@
+@import 'src/scss/size.scss';
+
+.cardLayout{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: hs(40px);
+}
+
+.card{
+  width: hs(744px);
+  border-radius: 4px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+}
+.mbCard {
+    width: 95vw;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+}
+
+.topCard {
+  height: hs(80px);
+}
+
+.middleCard {
+  margin-top: hs(30px);
+  height: hs(110px);
+}
+
+.lastCard {
+  margin-top: hs(30px);
+  height: hs(300px);
+}
+.mbTopCard {
+  height: hs(200px);
+}
+
+.mbMiddleCard {
+  margin-top: hs(60px);
+  height: hs(300px);
+}
+
+.mbLastCard {
+  margin-top: hs(60px);
+  height: hs(800px);
+}

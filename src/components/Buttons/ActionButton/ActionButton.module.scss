@@ -1,0 +1,356 @@
+@import 'src/scss/size.scss';
+
+.buttonContainer {
+  border-radius: hs(28px);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  pointer-events:auto;
+  cursor: pointer;
+  background-image: linear-gradient(to top, #00ade6, #34e4ea);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  @include resD((
+    margin: unset,
+    height: hs(54px),
+    width: max-content,
+  ));
+  @include resM((
+    margin: 10px auto,
+    height: hs(900px),
+    width:auto
+  ));
+}
+
+.buttonContainerPadding {
+  padding: hs(1px) hs(10px) hs(1px) 0;
+}
+
+.smallButtonContainer {
+  height: hs(36px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border-radius: hs(28px);
+}
+
+.smallButtonText {
+  height: 100%;
+  font-size: hs(16px);
+  font-weight: bold;
+  margin: 0 hs(19px) 0 hs(19px);
+  display: flex;
+  align-items: center;
+}
+
+.buttonText {
+  user-select: none;
+  white-space: nowrap;
+  font-weight: bold;
+  color: #fff;
+  margin-right: hs(12px);
+  @include resD((
+    font-size: hs(23px),
+    margin-left: hs(24px),
+  ));
+  @include resSm((
+    font-size: 16px,
+    margin-left: 0,
+  ));
+}
+
+.chooseProductButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #27d6e9;
+  background-color: #ffffff;
+  @include resM((
+    height: 24px,
+    border-radius: 14px,
+  ));
+  @include resD((
+    height: 36px,
+    border-radius: 28px,
+  ));
+}
+
+.active {
+  background-color: #cbf7fc;
+  color: #2c505f
+}
+
+.disabled {
+  background-color: #d1d1d1 !important;
+  background-image: none !important;
+  cursor: default !important;
+  pointer-events: none;
+  color: #fff;
+}
+
+.activeProductButton {
+  background-image: linear-gradient(to bottom, #00ade6, #34e4ea);
+}
+
+.disabledProductButton {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  cursor: default !important;
+}
+
+.activeProductButtonText {
+  color: #ffffff !important;
+}
+
+.disabledProductButtonText {
+  color: #27d6e9 !important;
+}
+
+.chooseProductButtonText {
+  height: 100%;
+  font-weight: bold;
+  margin: 0 hs(19px) 0 hs(19px);
+  display: flex;
+  align-items: center;
+  color: #27d6e9;
+  @include resM((
+    font-size: 12px,
+  ));
+  @include resD((
+    font-size: 16px,
+  ));
+}
+
+.iconCircle {
+  background-color: white;
+  box-shadow: 0 3px 6px 0 #34e4ea;
+  border-radius: 50%;
+  margin-right: hs(7px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  @include resM((
+    width: hs(110px),
+    height: hs(110px),
+    margin-left:5px,
+  ));
+  @include resD((
+    width: hs(40px),
+    height: hs(40px),
+    margin-left: unset,
+  ));
+}
+
+.hoverButtonContainer {
+  &:hover {
+    cursor: pointer !important;
+    opacity: 0.93;
+  }
+}
+
+.defaultHover {
+  cursor: default !important;
+}
+
+
+// Media queries for different resolutions.
+
+@media screen and (max-width: 1199px) {
+  .buttonContainer {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px 8px 16px;
+    height: 24px;
+    background: linear-gradient(180deg, #35E4E9 -8.62%, #00ADE6 109.2%);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    @include resD((
+      width:112px
+    ));
+    @include resM((
+      width:auto
+    ))
+  }
+
+  .centerAlignedButtonText {
+    font-size: hsm(14px) ;
+  }
+
+  .smallButtonContainer {
+    height: hsm(24px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border-radius: hsm(28px);
+  }
+
+  .smallButtonText {
+    height: 100%;
+    font-size: hsm(12px);
+    font-weight: bold;
+    margin: 0 hsm(10px) 0 hsm(10px);
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .buttonContainer {
+    height: hsm(22px);
+    width: fit-content;
+    justify-content: space-between;
+    // display: none;
+  }
+
+  .centerAlignedButtonText {
+    font-size: hsm(12px);
+  }
+
+  .smallButtonContainer {
+    height: hsm(20px);
+  }
+
+  .smallButtonText {
+    font-size: hsm(10px);
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  .buttonContainer {
+    height: hsm(17px);
+    width: fit-content;
+    justify-content: center;
+    // display: none;
+  }
+
+  .centerAlignedButtonText {
+    font-size: hsm(10px);
+  }
+
+  .smallButtonContainer {
+    height: hsm(19px);
+    border-radius: hsm(30px);
+  }
+
+  .smallButtonText {
+    font-size: hsm(9px);
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+  .buttonContainer {
+    height: hs(70px);
+    width: 100px;
+    justify-content: center;
+    // display: none;
+  }
+
+  .centerAlignedButtonText {
+    font-size: hsm(9px);
+  }
+
+  .smallButtonContainer {
+    height: hsm(17px);
+    border-radius: hsm(30px);
+  }
+
+  .smallButtonText {
+    font-size: hsm(8px);
+  }
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1199px) {
+  .buttonContainer {
+    height: hs(75px);
+    width: fit-content;
+    justify-content: center;
+    // display: none;
+  }
+
+  .centerAlignedButtonText {
+    font-size: hsm(8px);
+  }
+
+  .smallButtonContainer {
+    height: hsm(14px);
+    border-radius: hsm(30px);
+  }
+
+  .smallButtonText {
+    font-size: hsm(6px);
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .buttonContainer {
+    height: hs(38px);
+    padding: hs(14px) hs(16px) hs(12px) hs(16px);
+  }
+
+  .buttonText {
+    font-size: hs(24px);
+  }
+
+  .smallButtonText {
+    margin: 0 hs(30px) 0 hs(30px);
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+  .smallButtonContainer {
+    height: hsm(13px);
+  }
+
+  .centerAlignedButtonText {
+    font-size: hsm(7px);
+  }
+
+  .smallButtonText {
+    font-size: hsm(5.5px);
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1199px) {
+  .smallButtonContainer {
+    height: hsm(12px);
+  }
+
+  .centerAlignedButtonText {
+    font-size: hsm(6px);
+  }
+}
+.mbButtonContainer {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 12px 8px 16px;
+  width: 112px;
+  background: linear-gradient(270deg, #35E4E9 -8.62%, #00ADE6 109.2%);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  margin: 0;
+}
+.noMarginTop {
+  margin-top: 0px !important;
+}
+
+.mbButtonText {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  margin-left: 1px;
+}
+.mbIconCircle{
+  width: 19.5px;
+  height: 19.5px;
+  // margin-left: 12.5px;
+}

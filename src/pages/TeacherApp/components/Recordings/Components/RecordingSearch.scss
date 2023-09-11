@@ -1,0 +1,194 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.recording_section_title {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 24px,
+            line-height: 24px,
+            display: flex,
+            align-items: center,
+            color: #212121,
+            margin-right:20px
+        )
+    );
+    @include resSm((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: 500,
+        font-size: 24px,
+        line-height: 24px,
+        display: flex,
+        align-items: center,
+        color: #212121,
+        margin-right:20px
+    ));
+}
+.recording_container {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 16px,
+            line-height: 24px,
+            display: flex,
+            align-items: center,
+            color: #212121,
+            width: 100%,
+            justify-content: space-between,
+           
+        )
+    );
+    @include resSm((
+        font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 16px,
+            line-height: 24px,
+            display: flex,
+            align-items: center,
+            color: #212121,
+            width: 100%,
+            justify-content: space-between,
+    ));
+}
+.current_class {
+    @include resD(
+        (
+            display: flex,
+            flex-direction: row,
+            justify-content: space-between,
+            align-items: center,
+            padding: 4px 10px,
+            width: fit-content,
+            height: 30px,
+            background-color: #f2f2f2,
+            border-radius: 4px,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 16px,
+            line-height: 16px,
+            font-family: Inter,
+        )
+    );
+    @include resSm((
+        display: flex,
+            flex-direction: row,
+            justify-content: space-between,
+            align-items: center,
+            padding: 4px 10px,
+            width: fit-content,
+            height: 30px,
+            background-color: #f2f2f2,
+            border-radius: 4px,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 16px,
+            line-height: 16px,
+            font-family: Inter,
+    ));
+}
+.title_section {
+    @include resD(
+        (
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            width: fit-content,
+            
+        )
+    );
+    @include resSm((
+        display: flex,
+        align-items: center,
+        justify-content: space-between,
+        width: fit-content,
+    ));
+}
+.main_container_recording {
+    @include resD(
+        (
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            width: 100%,
+        )
+    );
+    @include resSm((
+        display: flex,
+        align-items: center,
+        justify-content: space-between,
+        width: 100%,
+    ));
+}
+.search_bar {
+    @include resD(
+        (
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            width: 300px,
+            height: 45px,
+            background-color: #ffffff,
+            border: 2px solid #eeeeee,
+            box-sizing: border-box,
+            border-radius: 12px,
+            padding:8px 10px,
+            margin-top:10px
+        )
+    );
+    @include resSm((
+        display: flex,
+        align-items: center,
+        justify-content: space-between,
+        width: 300px,
+        height: 45px,
+        background-color: #ffffff,
+        border: 2px solid #eeeeee,
+        box-sizing: border-box,
+        border-radius: 8px,
+        padding:8px 10px,
+        margin-top:10px
+    ));
+}
+
+.input_search_tag:focus {
+    outline: none;
+    border: none;
+}
+
+.input_search_tag {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 16px,
+            line-height: 20px,
+            color: #AAAAAA,
+            border: none,
+            width:100%,
+            padding:4px
+        )
+    );
+    @include resSm((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 14px,
+        line-height: 20px,
+        color: #9e9e9e,
+        border: none,
+        width:100%,
+        padding:4px
+    ));
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #9e9e9e;
+    opacity: 1; /* Firefox */
+  }

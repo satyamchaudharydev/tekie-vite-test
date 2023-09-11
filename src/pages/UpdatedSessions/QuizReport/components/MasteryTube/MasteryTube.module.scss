@@ -1,0 +1,105 @@
+@import 'src/scss/size.scss';
+
+.masteryTubeContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  @include resD((
+    margin-top:27px
+  ));
+}
+
+.masteryTubeBase {
+  background: linear-gradient(to right, #dcf7fc , #f1f2f2);
+  overflow: hidden;
+  position: relative;
+  @include resD((
+    height: hs(40.2px),
+  width: hs(136.5px)
+  ));
+  @include resM((
+    height:27px,
+    width:90px
+  ))
+}
+.masteryTubeLeft {
+  @extend .masteryTubeBase;
+  @include resD((
+    border-radius: hs(48px) 0 0  hs(48px),
+    margin-right: hs(4.6px)
+  ));
+  @include resM((
+    border-radius: 48px 0 0 48px,
+    margin-right:2px
+  ));
+}
+
+.masteryTubeRight {
+  @extend .masteryTubeBase;
+  @include resD((
+    border-radius: 0 hs(48px) hs(48px) 0
+  ));
+  @include resM((
+    border-radius: 0 48px 48px 0
+  ))
+}
+
+.masteryTubeCenter {
+  @extend .masteryTubeBase;
+  @include resD((
+    margin-right: hs(4.6px)
+  ));
+  @include resM((
+    margin-right:2px
+  ));
+}
+
+.absoulteShine {
+  position: absolute;
+  left: hs(20px);
+  top: hs(10px);
+  z-index: 1;
+  width: hs(563.3px);
+  border-radius: hs(100px);
+  opacity: 0.5;
+  height: hs(26.3px);
+  background-image: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0) 50%);
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  @include resD((
+    left: hs(-136.5px)
+  ));
+  // @include resM((
+  //   left: -100px
+  // ));
+  
+   @media screen and (max-width: 900px) {
+    left:-90px ;
+   }
+   @media screen and (max-width: 460px) and (min-width: 376px) {
+    left:-90px ;
+   }
+   @media screen and (max-width: 451px) and (min-width: 413px) {
+    left:-90px ;
+   }
+ 
+}
+
+.fillLeft {
+  @extend .fill;
+  background-image: linear-gradient(to bottom, #f9ed41, #fbb040);
+}
+
+.fillCenter {
+  @extend .fill;
+  background-image: linear-gradient(to bottom, #ab8ed6, #7b38e0);
+}
+
+.fillRight {
+  @extend .fill;
+  background-image: linear-gradient(to bottom, #34e4ea, #1ac9e8);
+}

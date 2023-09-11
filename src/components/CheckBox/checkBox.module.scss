@@ -1,0 +1,73 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.checkBoxContainer {
+	position: relative;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+	border: solid hs(1px) rgba(0, 173, 230, 0.65);
+  border-radius: hs(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resM((
+    width: 14px,
+    height: 14px
+  ));
+  @include resD((
+    width: 18px,
+    height: 18px
+  ));
+}
+
+.checkBox {
+  position: absolute;
+  opacity: 0;
+  margin: 0px;
+  cursor: pointer;
+  @include resM((
+      width: 18px,
+      height: 18px
+    ));
+  @include resD((
+    width: 18px,
+      height: 18px
+  ));
+}
+
+.checkBoxCustom {
+  position: absolute;
+  opacity: 0;
+  @include resM((
+      width: 14.732px,
+      height: 10.901px
+    ));
+  @include resD((
+    width: 14.732px,
+      height: 10.901px
+  ));
+}
+
+.emptySpan{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.checkBoxContainer .checkBox:checked ~ .addBackground {
+  background-color: #31e1e9;
+  opacity: 1;
+}
+
+.checkBoxContainer .checkBox:focus ~ .addBackground {
+  // border: hs(1px) solid #31e1e9;
+  border-radius: hs(2px);
+}
+
+.checkBoxContainer svg{
+  position: absolute;
+  left: 0;
+}

@@ -1,0 +1,31 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/constants.scss";
+
+
+
+.buttonGroup {
+    border: 1px solid #E2E2E2;
+    @include resD((
+        border-radius: 8px,
+        padding: 12px,
+    ));
+    @include resM((
+        border-radius: 8px,
+        padding: 12px,
+    ));
+    @media (max-width: $mb-breakpoint ) {
+        button{
+            flex: 1;
+        }
+        justify-content: center;
+        width: 92%;
+        max-width: 400px;
+        span{
+            font-size: 0.8rem;
+        }
+        svg{
+            width: 14px;
+            margin-right: 10px;
+        }
+    } 
+}

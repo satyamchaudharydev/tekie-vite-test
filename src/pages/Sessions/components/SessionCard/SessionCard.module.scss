@@ -1,0 +1,749 @@
+@import 'src/scss/size.scss';
+
+//Same css classes are used for the homework card component.
+
+.lastRowLastCardContainer {
+  width: hs(510px);
+  height: hs(268px);
+  border-radius: hs(10px);
+  margin-top: hs(-268px);
+  overflow: hidden;
+  background-color: #0a3145;
+}
+
+.lastRowCardContainer {
+  width: hs(510px);
+  height: hs(268px);
+  background-color: #0A3145;
+  border-radius: hs(10px);
+  margin-right: hs(33px);
+  margin-top: hs(-268px);
+}
+
+.leftPaneHeight {
+  width: hs(281px) !important;
+}
+
+.rightPanel {
+  width: calc(100% - #{hs(281px)});
+  height: hs(207px);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.textContainer {
+  width: hs(184px);
+  height: 100%;
+  margin-left: hs(20px);
+  margin-top: hs(5px);
+  display: flex;
+  justify-content: flex-start;
+  font-size: hs(21px);
+  font-weight: bold;
+  color: #fff;
+}
+
+.textContainerFullWidth {
+  width: 100% !important;
+}
+
+.textContainerBackground {
+  background-color: #d1d1d1;
+}
+
+.thumbnail {
+  position: relative;
+}
+
+.container {
+  overflow: hidden;
+}
+
+
+// Css classes specifically for the homework card component.
+
+.lastRowHomeworkCardContainer {
+  position: relative;
+  width: hs(510px);
+  height: hs(268px);
+  border-radius: hs(10px);
+  margin-right: hs(33px);
+  overflow: hidden;
+  background-color: #0a3145;
+}
+
+.lastRowHomeworkLastCardContainer {
+  width: hs(510px);
+  height: hs(268px);
+  border-radius: hs(10px);
+  overflow: hidden;
+  background-color: #0a3145;
+}
+
+.iconAndTextContainerMargin {
+  margin-top: hs(24px) !important;
+}
+
+.dateTextWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  top: hs(-10px);
+}
+
+.smallTextSize {
+  font-size: hs(16px) !important;
+  position: relative;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.attemptedDateHeading {
+  width: hs(200px) !important;
+  position: relative;
+  top: hs(-6px);
+}
+
+.iconAndTextContainerLarge {
+  height: hs(54px);
+  position: relative;
+  top: hs(5px);
+}
+
+.iconContainerLarge {
+  width: hs(31px) !important;
+  height: hs(31px) !important;
+  margin-left: hs(30px);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.quizCodingStatusContainer {
+  width: 100%;
+  height: hs(100px);
+  margin-top: hs(30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.completedImage {
+  background-image: url("../../../../assets/completedIcon.svg");
+  position: relative;
+  top: hs(6px);
+}
+
+.pendingImage {
+  background-image: url("../../../../assets/pendingIcon.svg");
+  position: relative;
+  top: hs(6px);
+}
+
+.reviewButtonContainer {
+  min-height: hs(36px);
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: hs(10px);
+  margin-left: hs(100px);
+}
+
+.emptyDateTimeText {
+  font-size: hs(18px);
+  align-self: center;
+  font-weight: bold;
+  font-style: italic;
+  opacity: 0.6;
+  top: hs(2px);
+  left: hs(10px);
+  position: relative;
+  cursor: default;
+  color: #fff;
+}
+
+.homeworkCardTextContainer {
+  width: hs(184px);
+  height: 100%;
+  margin-left: hs(20px);
+  display: flex;
+  justify-content: flex-start;
+  font-size: hs(21px);
+  font-weight: bold;
+  color: #fff;
+}
+
+@media screen {
+  .cardContainer {
+    width: hsm(250px);
+    height: hsm(147px);
+    border-radius: hsm(4px);
+    margin-right: hsm(15px);
+    overflow: hidden;
+    background-color: #0a3145;
+    box-shadow: 0 hsm(3px) hsm(4px) 0 rgba(26, 149, 232, 0.4);
+  }
+
+  .lastCardContainer {
+    width: hsm(250px);
+    height: hsm(147px);
+    border-radius: hsm(4px);
+    overflow: hidden;
+    background-color: #0a3145;
+    margin-right: hsm(18px);
+  }
+
+  .topicNameContainer {
+    width: hsm(250px);
+    height: hsm(29px);
+    background-color: #225169;
+    border-radius: hsm(4px) hsm(4px) 0 0;
+  }
+
+  .thumbnailContainer {
+    width: 100%;
+    height: hsm(118px);
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    background-color: #0a3145;
+    background-position: right;
+    position: relative;
+    top: hsm(-2px);
+  }
+
+  .leftPanel {
+    width: 100%;
+    height: hsm(118px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .topicName {
+    height: 100%;
+    font-size: hsm(14px);
+    color: #fff;
+    font-weight: bold;
+    padding-left: hsm(10px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .dateTimeContainer {
+    width: 100%;
+    height: hsm(50px);
+    margin-top: hsm(14px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: hsm(2px);
+  }
+
+  .iconAndTextContainer {
+    width: 100%;
+    height: hsm(14px);
+    margin-bottom: hsm(14px);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .codingStatusContainer {
+    position: relative;
+    top: hs(8px);
+  }
+
+  .iconContainer {
+    margin-left: hsm(10px);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  .calendarImage {
+    width: hsm(17px);
+    height: hsm(17px);
+    background-image: url("../../../../assets/calendar.svg");
+  }
+
+  .clockImage {
+    width: hsm(17px);
+    height: hsm(17px);
+    background-image: url("../../../../assets/clock.svg");
+  }
+
+  .emptyDateTimeText {
+    font-size: hsm(12px);
+    align-self: center;
+    font-weight: normal !important;
+    font-style: italic;
+    opacity: 0.7;
+    left: hsm(9px);
+    top: hsm(2px);
+    position: relative;
+    cursor: default;
+    color: #fff;
+  }
+
+  .buttonContainer {
+    min-height: hsm(22px);
+    display: flex;
+    align-items: center;
+    padding-left: hs(32px);
+    position: relative;
+    top: hsm(-12px);
+    left: hsm(6px);
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .cardContainer {
+    width: hsm(225px);
+    height: hsm(126px);
+    margin-right: hsm(13px);
+  }
+
+  .lastCardContainer {
+    width: hsm(225px);
+    height: hsm(126px);
+  }
+
+  .thumbnailContainer {
+    height: hsm(102px);
+  }
+
+  .leftPanel {
+    height: hsm(98px);
+  }
+
+  .topicNameContainer {
+    width: hsm(225px);
+    height: hsm(24px);
+  }
+
+  .calendarImage {
+    width: hsm(16px);
+    height: hsm(16px);
+  }
+
+  .clockImage {
+    width: hsm(16px);
+    height: hsm(16px);
+  }
+
+  .emptyDateTimeText {
+    font-size: hsm(10px);
+    top: hsm(1px);
+  }
+
+  .buttonContainer {
+    top: hsm(-8px);
+  }
+
+  .iconAndTextContainer {
+    margin-bottom: hsm(10px);
+  }
+
+  .iconContainer {
+    margin-left: hsm(10px);
+  }
+
+  .topicName {
+    font-size: hsm(13px);
+  }
+
+  .dateTimeContainer {
+    margin-top: hsm(14px);
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  .cardContainer {
+    width: hsm(220px);
+    height: hsm(116px);
+    margin-right: hsm(11px);
+  }
+
+  .lastCardContainer {
+    width: hsm(220px);
+    height: hsm(116px);
+  }
+
+  .thumbnailContainer {
+    height: hsm(93px);
+  }
+
+  .leftPanel {
+    height: hsm(80px) !important;
+  }
+
+  .topicNameContainer {
+    width: hsm(220px);
+    height: hsm(23px);
+  }
+
+  .calendarImage {
+    width: hsm(14px);
+    height: hsm(14px);
+  }
+
+  .clockImage {
+    width: hsm(14px);
+    height: hsm(14px);
+  }
+
+  .emptyDateTimeText {
+    font-size: hsm(9px);
+    position: relative;
+    top: 0;
+    left: hsm(7px);
+  }
+
+  .buttonContainer {
+    top: hsm(4px);
+    left: hs(9px);
+  }
+
+  .iconAndTextContainer {
+    margin-bottom: hsm(7px);
+  }
+
+  .iconContainer {
+    margin-left: hsm(8px);
+  }
+
+  .topicName {
+    font-size: hsm(12px);
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 800px) {
+  .cardContainer {
+    width: hsm(195px);
+    height: hsm(104px);
+    border-radius: hsm(3px);
+    margin-right: hsm(9px);
+  }
+
+  .lastCardContainer {
+    width: hsm(185px);
+    height: hsm(100px);
+    border-radius: hsm(3px);
+  }
+
+  .thumbnailContainer {
+    height: hsm(84px);
+  }
+
+  .leftPanel {
+    height: hsm(70px);
+  }
+
+  .topicNameContainer {
+    width: hsm(200px);
+    height: hsm(19px);
+  }
+
+  .calendarImage {
+    width: hsm(12px);
+    height: hsm(12px);
+  }
+
+  .clockImage {
+    width: hsm(12px);
+    height: hsm(12px);
+  }
+
+  .emptyDateTimeText {
+    font-size: hsm(8px);
+    position: relative;
+    top: hsm(-1px);
+  }
+
+  .buttonContainer {
+    top: hsm(5px);
+    left: hsm(3px);
+  }
+
+  .iconAndTextContainer {
+    margin-bottom: hsm(4px);
+  }
+
+  .iconContainer {
+    margin-left: hsm(7px);
+  }
+
+  .topicName {
+    font-size: hsm(10px);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .cardContainer {
+    width: hsm(165px);
+    height: hsm(90px);
+    border-radius: hsm(3px);
+    margin-right: hsm(8px);
+  }
+
+  .lastCardContainer {
+    width: hsm(165px);
+    height: hsm(90px);
+    border-radius: hsm(3px);
+    margin-right: hsm(18px);
+  }
+
+  .thumbnailContainer {
+    height: hsm(74px);
+  }
+
+  .leftPanel {
+    height: hsm(65px);
+  }
+
+  .topicNameContainer {
+    width: hsm(165px);
+    height: hsm(19px);
+  }
+
+  .calendarImage {
+    width: hsm(10px);
+    height: hsm(10px);
+  }
+
+  .clockImage {
+    width: hsm(10px);
+    height: hsm(10px);
+  }
+
+  .emptyDateTimeText {
+    font-size: hsm(7px);
+    position: relative;
+    top: hsm(-2px);
+    left: hsm(6px);
+  }
+
+  .buttonContainer {
+    top: hsm(2px);
+    left: hsm(3px);
+  }
+
+  .iconContainer {
+    margin-left: hsm(7px);
+  }
+
+  .iconAndTextContainer {
+    margin-bottom: hsm(2px);
+  }
+
+  .topicName {
+    font-size: hsm(8px);
+  }
+
+  .dateTimeContainer {
+    margin-top: hsm(10px);
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  .cardContainer {
+    width: hsm(150px);
+    height: hsm(82px);
+  }
+
+  .lastCardContainer {
+    width: hsm(150px);
+    height: hsm(82px);
+  }
+
+  .thumbnailContainer {
+    height: hsm(66px);
+  }
+
+  .leftPanel {
+    height: hsm(60px);
+  }
+
+  .topicNameContainer {
+    width: hsm(200px);
+    height: hsm(17px);
+  }
+
+  .calendarImage {
+    width: hsm(10px);
+    height: hsm(10px);
+  }
+
+  .clockImage {
+    width: hsm(10px);
+    height: hsm(10px);
+  }
+
+  .emptyDateTimeText {
+    font-size: hsm(6px);
+    position: relative;
+    top: 0;
+  }
+
+  .buttonContainer {
+    top: hsm(2px);
+  }
+
+  .iconAndTextContainer {
+    margin-bottom: hsm(5px);
+    height: hsm(10px);
+  }
+
+  .topicName {
+    font-size: hsm(8px);
+  }
+
+  .dateTimeContainer {
+    margin-top: hsm(8px);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .iconContainer {
+    margin-left: hs(26px);
+  }
+
+  .buttonContainer {
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cardContainer {
+    width: hs(590px);
+    height: hs(318px);
+    border-radius: hs(10px);
+  }
+
+  .lastCardContainer {
+    width: hs(590px);
+    height: hs(318px);
+  }
+
+  .thumbnailContainer {
+    height: hs(248px);
+    border-radius: 0 0 hs(10px) hs(10px);
+  }
+
+  .leftPanel {
+    height: hs(70px);
+  }
+
+  .topicNameContainer {
+    width: hs(590px);
+    height: hs(75px);
+    border-radius: hs(10px) hs(10px) 0 0;
+  }
+
+  .dateTimeContainer {
+    margin-top: hs(38px);
+  }
+
+  .calendarImage {
+    width: hs(38px);
+    height: hs(38px);
+  }
+
+  .clockImage {
+    width: hs(38px);
+    height: hs(38px);
+  }
+
+  .emptyDateTimeText {
+    font-size: hs(22px);
+    position: relative;
+    top: hs(-6px);
+    left: hs(16px);
+  }
+
+  .buttonContainer {
+    top: hs(-2px);
+    left: 0;
+  }
+
+  .iconAndTextContainer {
+    margin-bottom: hs(3px);
+    height: hs(50px);
+  }
+
+  .iconContainer {
+    margin-left: hs(22px);
+  }
+
+  .topicName {
+    font-size: hs(30px);
+    padding-left: hs(26px);
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .cardContainer {
+    width: hs(510px);
+    height: hs(268px);
+    border-radius: hs(10px);
+  }
+
+  .lastCardContainer {
+    width: hs(510px);
+    height: hs(268px);
+    border-radius: hs(10px);
+  }
+
+  .thumbnailContainer {
+    height: hs(208px);
+    border-radius: 0 0 hs(10px) hs(10px);
+  }
+
+  .topicNameContainer {
+    width: hs(510px);
+    height: hs(65px);
+    border-radius: hs(10px) hs(10px) 0 0;
+  }
+
+  .calendarImage {
+    width: hs(32px);
+    width: hs(32px);
+  }
+
+  .clockImage {
+    width: hs(32px);
+    width: hs(32px);
+  }
+
+  .emptyDateTimeText {
+    font-size: hs(20px);
+    position: relative;
+    top: hs(-4px);
+    left: hs(16px);
+  }
+
+  .buttonContainer {
+    top: hs(-4px);
+    left: hs(-4px);
+  }
+
+  .iconAndTextContainer {
+    margin-bottom: 0;
+    height: hs(44px);
+  }
+
+  .iconContainer {
+    margin-left: hs(18px);
+  }
+
+  .topicName {
+    font-size: hs(30px);
+    padding-left: hs(26px);
+  }
+
+  .dateTimeContainer {
+    margin-top: hs(30px);
+  }
+}

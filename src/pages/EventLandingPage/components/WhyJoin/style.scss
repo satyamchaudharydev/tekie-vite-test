@@ -1,0 +1,273 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+
+.WhyJoin_why-join-container {
+    @include resD((
+      margin: 0 auto,
+      width: 97%,
+      // height: 650.62px,
+      margin-top: 80px,
+      border-radius: 24px,
+      padding-top: 60px,
+      padding-bottom: 50px,
+      padding-left: 40px,
+      padding-right: 40px,
+      display: flex,
+      flex-direction: column,
+      align-items: center
+    ));
+    @include resM((
+      width: 100%,
+      // height: 670px,
+      margin-top: 37px,
+      border-radius: 16px,
+      padding-top: 27px,
+      padding-left: 16px,
+      padding-right: 16px,
+      display: flex,
+      flex-direction: column,
+      align-items: center
+    ));
+    box-sizing: border-box;
+    background-image: url(../../../../../src/assets/radioStreet/why-join-bg.png);
+  }
+
+  .WhyJoin_gift-icon {
+    @include resD((
+      width: 60px,
+      height: 60px,
+      margin-top: 38px,
+      margin-left: 38px,
+    ));
+    @include resM((
+      width: 20px,
+      height: 20px,
+      margin-top: 23px,
+      margin-left: 23px,
+    ));
+  }
+
+  .WhyJoin_why-join-title {
+    font-family: Gilroy;
+    font-weight: bolder;
+    color: #FFFFFF;
+    text-align: center;
+    @include resD((
+      font-size: 40px,
+      width: fit-content,
+      margin-bottom: 40px,
+      margin-top:0,
+    ));
+    @include resM((
+      font-size: 20px,
+      width: 269px,
+      margin-bottom: 20px,
+      line-height: 120%,
+      margin-top: 0,
+    ));
+    }
+
+    .WhyJoin_row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        width:100%;
+      }
+
+      .WhyJoin_binary-icon {
+        @include resD((
+          width: 60px,
+          height: 60px,
+          margin-top: 51px,
+          margin-left: 38px,
+        ));
+        @include resM((
+          width: 20px,
+          height: 20px,
+          margin-top: 33px,
+          margin-left: 23px,
+        ));
+      }
+
+      .WhyJoin_certificate-icon {
+        @include resD((
+          width: 60px,
+          height: 60px,
+          margin-top: 51px,
+          margin-left: 38px,
+        ));
+        @include resM((
+          width: 20px,
+          height: 20px,
+          margin-top: 33px,
+          margin-left: 23px,
+        ));
+      }
+
+      .WhyJoin_why-join-card {
+        .WhyJoin-overlay{
+          // background-image: url('../../../../../src/assets/radioStreet/why-join-card-bg.png');
+          z-index: 1;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+        };
+        position: relative;
+        z-index: 2;
+        background: #012a38c0;
+        border: 1px solid rgba(219, 219, 219, 0.4);
+        @include resD((
+          width: 426.95px,
+          height: 300px,
+          border-radius: 24px,
+          margin: 20px 40px,
+          padding: unset,
+        ));
+        @include resM((
+          width: 100%,
+          height: fit-content,
+          border-radius: 16px,
+          margin-left:unset,
+          margin-bottom: 12px,
+          padding: 15px 0,
+        ));
+      }
+
+.WhyJoin_Base {
+    @include resD((
+        margin-left: 50px
+    ));
+    @include resSm((
+        margin-left: 12px,
+        width: 94%
+    ))
+}
+
+
+      .WhyJoin_join-desc {
+        font-weight: 600;
+        box-sizing: border-box;
+        @include resD((
+          font-size: 22px,
+          padding: 50px,
+          padding-top: 30px,
+          width: 95%
+        ));
+        @include resM((
+          font-size: 14px,
+          width: 95%,
+          padding: 20px,
+          padding-top: 10px,
+        ));
+        color: #FFFFFF;
+      }
+
+      .WhyJoin_last-register {
+        @include resD((
+          display: flex,
+          padding-bottom: 20px,
+          padding-top: unset,
+        ));
+        @include resM((
+          display: flex,
+          padding-bottom: 30px,
+          padding-top: 10px,
+        ));
+      }
+
+      .WhyJoin_registerButton {
+        display: flex; 
+        flex-direction: row;
+        background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%);
+        color: white;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.3s all ease-in-out;
+        svg {
+          transition: 0.3s all ease-in-out;
+          transform: translateX(0px);
+        }
+        &:hover svg {
+          transform: translateX(5px);
+        }
+        @include resD((
+          font-size: 19px,
+          border-radius: 28.9122px,
+          width: 205px,
+          height: 60px,
+        ));
+        @include resM((
+          font-size: 16px,
+          border-radius: 21.6842px,
+          width: 200px,
+          height: 43px,
+        ));
+      }
+
+
+      .WhyJoin_register-arrow-right {
+        svg {
+          @include resD((
+            width: 14px * 1.4,
+            height: 15px * 1.4,
+            margin-left: 9px,
+            top: 5px
+          ));
+          @include resM((
+            width: 14px,
+            height: 15px,
+            margin-left: 4px,
+            top: 5px
+          ));
+          position: relative;
+        }
+      }
+
+.whyJoin-register-button-style{
+   .event-registerButton{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    font-family: Nunito;
+    &.disabled{
+      background: gray;
+      cursor: not-allowed;
+    }
+    svg {
+      transition: 0.3s all ease-in-out;
+      transform: translateX(0px);
+    }
+    &:hover svg {
+      transform: translateX(5px);
+    }
+    @include resD((
+      font-size: 19px,
+      border-radius: 28.9122px,
+      width: 180px,
+      padding: 8px 20px,
+      margin-top: 25px,
+      margin-left:0px,
+      height: 40px,
+    ));
+    @include resM((
+      border-radius: 21.6842px,
+      width: 140px,
+      margin-top: 0,
+      margin-left:0px,
+      padding: 10px 12px,
+      font-size: 14px,
+    ));
+  }
+}

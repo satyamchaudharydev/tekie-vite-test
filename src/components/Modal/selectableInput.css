@@ -1,0 +1,6 @@
+.searchableSelectInModal input {
+    font-family: 'Nunito';
+    color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    top: -2px;
+}

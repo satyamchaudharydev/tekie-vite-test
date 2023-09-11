@@ -1,0 +1,92 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+
+.lp-courses-section-carousel {
+  @include resD((
+    height: 523px,
+    width: 100%,
+    display: block,
+  ));
+  position: relative;
+  overflow: hidden;
+  @include resM((
+    display: block,
+    height: 300px,
+    width: 100%,
+    margin:auto,
+  ));
+}
+
+.lp-courses-section-carousel-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.lp-courses-section-carousel-slide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+  &.active {
+    transform: translateX(0%);
+    z-index: 3;
+  }
+  &.top {
+    transition: transform 0.3s ease-in;
+    z-index: 3;
+  }
+  & >div{
+    flex: 0.5;
+    box-sizing: border-box;
+    @include resD((
+      display: flex,
+    ));
+  }
+}
+.lp-mobile-arrow-container{
+    position: absolute;
+    top: 30%;
+    z-index: 99;
+  @include resD((
+    justify-content: unset,
+  ));
+  @include resM((
+    display: flex,
+    justify-content:space-between,
+  ));
+}
+
+.lp-mobile-left-arrow{
+  transition: 0.3s all ease-in-out;
+cursor: pointer;
+position: absolute;
+border: 0;
+border-radius: 50%;
+top: 30%;
+background: #fafafa;
+ @include resD((
+    left: -110px,
+    margin-top: 4px,
+  ));
+  cursor: pointer;
+}
+.lp-mobile-right-arrow{
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    border: 0;
+    border-radius: 50%;
+    background: #fafafa;
+    top: 30%;
+   @include resD((
+    right: -110px,
+    margin-top: 4px,
+  ));
+}

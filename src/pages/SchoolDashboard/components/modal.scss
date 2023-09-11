@@ -1,0 +1,294 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/Inter.scss';
+@import 'src/scss/theme.scss';
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.modal {
+    font-family: 'Inter' ;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // background: rgba(0,0,0,0.4);
+}
+
+.modal-Backdrop {
+    @extend .Inter-regular;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: filter 200ms ease-in-out, visibility .1s .1s cubic-bezier(0.4,0.0,0.2,1), backdrop-filter .3s ease-in-out;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(0px);
+}
+
+.modal-Backdrop-visible {
+    visibility: visible;
+    backdrop-filter: blur(5px);
+}
+
+.modalBox {
+    z-index: 9999;
+    min-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #FAFAFA;
+    box-shadow: 0px 6px 48px rgba(51, 51, 51, 0.24);
+    border-radius: 16px;
+    transition: opacity 400ms ease-in-out, transform 400ms ease-in-out, visibility .2s cubic-bezier(0.4,0.0,0.2,1), height 400ms ease-in-out;
+    visibility: hidden;
+    transform: translate(-50%,-50%) scale(.8);
+    opacity: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Inter' !important;
+}
+
+.modalBox-visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1)
+}
+
+@media screen and (max-width: 500px) {
+    .modalBox {
+        min-width: 100%;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.primary-text {
+    font-weight: normal;
+    color: #667F87;
+    @include resD((
+        font-size: 18px,
+    ));
+    @include resM((
+        font-size: 16px,
+    ));
+}
+
+.modal-closeIcon {
+    fill: #333333;
+    cursor: pointer;
+    height: 100%;
+    @include resD((
+        width: 20px,
+        height: 20px,
+        // padding: 0px 10px,
+    ));
+    @include resM((
+        width: 18px,
+        height: 18px,
+    ));
+    padding: 0;
+}
+
+.modal-header-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #FAFAFA;
+}
+
+.modal-content-container {
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    @include resD((
+        align-items: center,
+    ));
+    @include resM((
+        align-items: flex-start,
+    ));
+
+    .modal-content-class-completed {
+        @extend .primary-text;
+    
+        & > span {
+            font-weight: 700;
+            color: #667F87;
+        }
+    }
+    .modal-content-class-title {
+        font-style: normal;
+        font-weight: 600;
+        color: #012A38;
+        line-height: 1;
+        @include resD((
+            font-size:28px,
+            padding: 12px 0px,
+        ));
+        @include resM((
+            font-size: 18px,
+            padding: 8px 0px
+        ));
+    }
+    .modal-content-class-timeStamp {
+        font-weight: normal;
+        color: #33545F;
+        @include resD((
+            font-size: 16px,
+        ));
+        @include resM((
+            font-size: 14px,
+        ));
+    }
+    .modal-content-mentor-profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-direction: row;
+        width: fit-content;
+        padding-top: 8px;
+        .modal-content-mentor-profilePic {
+            width: 36px;
+            height: 36px;
+            background-color: #33545F;
+            border-radius: 100%;
+            margin-right: 8px;
+        }
+        .modal-content-mentor-profileDetails {
+            display: block;
+            .modal-content-mentor-profile-name {
+                font-weight: 500;
+                font-size: 16px;
+                color: #012A38;
+            }
+        }
+    }
+}
+
+.modal-courseDetails-collapsible {
+    @extend .Inter-regular;
+    padding: 12px 20px;
+    padding-top: 0;
+
+    & .modal-courseDetails-collapsible-header {
+        font-weight: 500;
+        color: #33545F;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        @include resD((
+            font-size: 20px,
+            padding: 20px 0
+        ));
+        @include resM((
+            font-size: 16px,
+            padding: 10px 0
+        ));
+    }
+
+    & .modal-courseDetails-collapsible-content {
+        padding: 0px 4px;
+        overflow: hidden;
+        max-height: 0px;
+        transition: max-height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
+    }
+
+    & .modal-courseDetails-collapsible-content-visible {
+        max-height: 400px;
+        transition: max-height 600ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
+    }
+
+    .modal-collapsible-dropdown-icon-closed {
+        width: 14px;
+        height: 14px;
+        margin: 3px 7px 0px;
+        background-image: url('../../../assets/dropdownArrow.svg');
+        background-color: #403F3F;
+        -webkit-mask-image: url('../../../assets/dropdownArrow.svg');
+        mask-image: url('../../../assets/dropdownArrow.svg');
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+        transition: -webkit-transform .1s;
+        transition: transform .1s;
+        transition: transform .1s,-webkit-transform .1s;
+        transform: rotate(0deg) rotate(0deg);;
+    }
+
+    .modal-collapsible-dropdown-icon-open {
+        transform: rotate(180deg);
+    }
+}
+
+.modal-courseDetails-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 0px;
+        
+        .modal-courseDetails-icon {
+            width: 18px;
+            height: 18px;
+            fill: #99A9AF;
+        }
+        .modal-courseDetails-text {
+            @extend .primary-text;
+            padding: 0px 12px;
+            min-width: 90px;
+        }
+        .modal-courseDetails-description {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            color: #012A38;
+        }
+}
+
+.modal-footer-container {
+    background-color: #F9F9F9;
+    display: flex;
+    justify-content: flex-end;
+    @include resD((
+        padding: 20px
+    ));
+    @include resM((
+        padding: 12px
+    ));
+
+    .modal-footer-btn {
+        border: none;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 14px;
+        display: grid;
+        place-items: center;
+        line-height: 1;
+        color: #FFF;
+        background: #00ADE6;
+        border-radius: 4px;
+        cursor: pointer;
+        @include resD((
+            padding: 12px 18px,
+        ));
+        @include resM((
+            padding: 10px 14px,
+        ));
+    }
+}

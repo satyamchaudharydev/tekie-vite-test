@@ -1,0 +1,66 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+.pq__fill__blank__main__container {
+  @include resD(
+    (
+      display: flex,
+    )
+  );
+  @include resSm(
+    (
+      display: flex,
+    )
+  );
+}
+.pq__fill__blank_tag {
+  @include resD(
+    (
+      background: #65da7a,
+      border-radius: 24px,
+      padding: 5px 14px,
+      color: #ffffff,
+      width: fit-content,
+      height: fit-content,
+      margin-right: 15px,
+      font-family: Inter,
+      font-size: 14px,
+    )
+  );
+  @include resSm(
+    (
+      background: #65da7a,
+      border-radius: 24px,
+      padding: 7px 11px,
+      color: #ffffff,
+      width: fit-content,
+      height: fit-content,
+      margin-right: 15px,
+    )
+  );
+}
+.pq__fill__blank__answer__container {
+  @include resD(
+    (
+      background: rgb(0, 47, 62),
+      padding: 20px,
+      color:white,
+      width:60vw,
+      border-radius:8px
+      
+    )
+  );
+  @include resSm(
+    (
+      background: rgb(0, 47, 62),
+      padding: 20px,
+      color:white,
+      
+      width:60vw,
+      border-radius:8px
+
+
+    )
+  );
+}

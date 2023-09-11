@@ -1,0 +1,69 @@
+@import 'src/scss/size.scss';
+
+.solutionContainer {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #A8A7A7;
+    &.active {
+      border: 1px solid #01AA93;
+    }
+    @include resD((
+      padding: 4px,
+      padding-right: 10px,
+      border-radius: 12px
+    ));
+    @include resSm((
+      padding: 0,
+    ))
+  }
+  
+  .toggleContainer {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    box-sizing: border-box;
+    background: #b8b8b8;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    &.active {
+      background: #01AA93;
+      box-shadow: inset 0px 3px 20px rgba(0, 0, 0, 0.25);
+    }
+    width: 25px;
+    height: 14px;
+  }
+    
+  .toggleSwitch {
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s all ease-in-out;
+    transform: translateX(1px);
+    &.active {
+      transform: translateX(12px);
+    }
+    width: 12px;
+    height: 12px;
+  }
+  
+  .solutionText {
+    color: #A8A7A7;
+    font-family: Nunito;
+    font-weight: 700;
+    white-space: nowrap;
+    &.active {
+      color: #01AA93;
+    }
+    @include resD((
+      margin: 0,
+      margin-left: 10px,
+      font-size: 14px,
+      line-height: 14px
+    ));
+    @include resSm((
+      margin: 0,
+      margin-left: 10px,
+      font-size: 14px,
+      line-height: 14px
+    ))
+  }

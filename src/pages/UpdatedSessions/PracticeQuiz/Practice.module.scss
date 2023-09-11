@@ -1,0 +1,78 @@
+@import 'src/scss/size.scss';
+
+.container{
+  width: hs(1569.8px);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  // flex-direction: column;
+  // min-height: calc(100vh - 70px);
+  padding-bottom: hs(150px);
+}
+
+
+.hintIcon {
+  fill: #00ADE6;
+  width: 40px;
+  height: 40px;
+}
+
+.mbContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 60px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: hs(150px);
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.infoAndCheck {
+  position: relative;
+  z-index: -1
+}
+.mbaActiveCheckButton {
+  background: #FFFFFF;
+  // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  color: #00ADE6;
+  border: 2px solid #00ADE6;
+  box-sizing: border-box;
+  border-radius: 40px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 6px 12px 6px 12px;
+}
+.mbUnactiveCheckButton {
+  background-color:#e9e9ea;
+  color: #fff;
+  border:none;
+  box-sizing: border-box;
+  border-radius: 40px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 6px 12px 6px 12px;
+}
+
+.solutionToggleContainer{
+  @include resD1280((
+    margin-top: 35px,
+  ));
+  width: fit-content;
+  margin-left: auto;
+}
+
+.containerForTeacherApp{
+    width: hs(1150px);
+    margin-left: auto;
+    margin-right: auto;
+}

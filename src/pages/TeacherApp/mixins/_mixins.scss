@@ -1,0 +1,16 @@
+@import "src/scss/size.scss";
+
+
+@mixin flex($arg1,$arg2){
+    display: flex;
+    justify-content: $arg1;
+    align-items: $arg2;
+}
+
+@mixin textStyle($colorVal,$size,$weight) {
+    font-weight:$weight ;
+    color: $colorVal;
+    @include resD((
+        font-size:$size
+    ))
+}

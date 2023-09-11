@@ -1,0 +1,74 @@
+@import 'src/scss/size.scss';
+
+.card{
+  width: hs(510px);
+  height: hs(268px);
+  border-radius: hs(10px);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #0a3145;
+  margin-top: hs(150px);
+}
+
+.cardTopMargin {
+  margin-top: hs(100px) !important;
+}
+
+.cardContainer {
+  margin-right: hs(33px);
+  margin-bottom: hs(48px);
+}
+
+.lastCardContainer {
+  margin-bottom: hs(48px);
+}
+
+@media screen and (max-width: 1200px) {
+  .card {
+    width: hsm(250px);
+    height: hsm(147px);
+    border-radius: hsm(4px);
+    box-shadow: 0 hsm(3px) hsm(6px) 0 rgba(0, 0, 0, 0.16);
+    margin-top: hsm(62px);
+    margin-right: hs(33px);
+  }
+
+  .cardContainer {
+    margin-right: hsm(15px);
+  }
+
+  .lastCardContainer {
+    margin-right: hsm(18px);
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .card {
+    width: hsm(225px);
+    height: hsm(126px);
+    margin-top: hsm(62px);
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .card {
+    width: hsm(220px);
+    height: hsm(116px);
+    margin-top: hsm(48px);
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  .card {
+    width: hsm(165px);
+    height: hsm(90px);
+    margin-top: hsm(52px);
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .card {
+    width: hsm(150px);
+    height: hsm(82px);
+    margin-top: hsm(44px);
+  }
+}

@@ -1,0 +1,230 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+.carousel-item {
+    @include resD((
+        display: inline-flex,
+        align-items: center,
+        justify-content: center,
+        height: 600px,
+        background-color: rgb(255, 255, 255),
+    ));
+    @include resSm((
+        display: inline-flex,
+        align-items: center,
+        justify-content: center,
+        height: 300px,
+        background-color: rgb(255, 255, 255),
+    ))
+}
+.signup-carousel-section-carousel-main{
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+}
+.signup-carousel-section-carousel{
+    display: -webkit-box;
+    transition: transform 0.3s;
+    white-space: nowrap;
+}
+
+.signup-carousel-section-indicator{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    @include resD((
+        margin-top: 30px,
+    ));
+    & .signup-carousel-dot-button{
+        @include resD((
+            width: 20px,
+            height: 20px,
+            margin: 0 5px,
+        ));
+        @include resM((
+            width: 8px,
+            height: 8px,
+            margin: 0 5px,
+            padding: 0,
+        ));
+        background: #00ADE6;
+        opacity: 0.2;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 0;
+    }
+    & .active{
+        opacity: 1;
+    }
+}
+
+.signup-carousel-section-prev-btn, .signup-carousel-section-next-btn{
+display: flex;
+flex-direction: row;
+align-items: center;
+@include resD((
+    width: 32px,
+    height: 32px,
+    border-radius: 34.0195px,
+));
+& rect{
+    fill: rgb(220, 220, 220);
+}
+& path{
+    fill: rgb(64, 63, 63);
+}
+& circle{
+    fill: rgb(220, 220, 220);
+}
+&.leftActive rect, &.leftActive circle{
+    fill: rgb(0, 173, 230);
+}
+&.leftActive path, &.rightActive path{
+    fill: rgb(255, 251, 251);
+}
+&.rightActive rect, &.rightActive circle{
+    fill: rgb(0, 173, 230);
+}
+}
+
+.signup-carousel-section-action-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include resD((
+            margin-top: -10px,
+            margin-bottom: 20px,
+        ));
+        @include resM((
+            margin-top: 10px,
+            margin-bottom: 0px,
+        ));
+    & >span{
+        cursor: pointer;
+        @include resD((
+            margin: 0 5px,
+            width: 24px,
+            height: 24px,
+        ));
+        @include resM((
+            margin: 0 5px,
+            width: 24px,
+            height: 24px,
+        ));
+    }
+    @include resD((
+        position: unset,
+        top: unset,
+        right: unset,
+    ));
+}
+
+.signup-carousel-carousel-container{
+    @include resD((
+        max-width: 1737px,
+        margin: 0 auto,
+    ));
+    position: relative;
+}
+
+.signup-carousel-main-image{
+    @include resD((
+        width: 268px,
+        height: 243px,
+        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25)),
+        border-radius: 24px,
+        margin-right: 40px,
+    ));
+    @include resM((
+        width: 60px,
+        height: 60px,
+        filter: drop-shadow(0px 20px 50px rgba(18, 17, 39, 0.08)),
+        border-radius: 12px,
+        margin-right: 16px,
+    ))
+}
+.signup-carousel-main-profile{
+    margin: 0;
+@include resD((
+    font-size: 14px,
+    line-height: 24px,
+));
+@include resM((
+font-weight: normal,
+font-size: 11px,
+line-height: 19px,
+color: #005773,
+));
+font-family: Nunito;
+font-style: normal;
+font-weight: 600;
+letter-spacing: 0.8px;
+text-transform: uppercase;
+color: #005773;
+}
+
+.signup-carousel-main-profile-container{
+    display: flex;
+    @include resD((
+        padding: 10px,
+    ));
+}
+
+.signup-carousel-main-profile-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-carousel-profile-name{
+    font-family: Nunito;
+font-style: normal;
+font-weight: bold;
+margin: 0;
+@include resD((
+    font-size: 40px,
+line-height: 56px,
+));
+@include resM((
+    font-style: normal,
+font-weight: 600,
+font-size: 16px,
+line-height: 22px,
+));
+font-family: Nunito;
+color: #121127;
+}
+.signup-carousel-profile-about{
+    font-family: Nunito;
+font-style: normal;
+margin: 0;
+font-weight: normal;
+@include resD((
+    font-size: 16px,
+line-height: 29px,
+));
+
+@include resM((
+  font-size: 14px,
+  line-height: 25px,
+));
+color: rgba(18, 17, 39, 0.56);
+}
+.signup-carousel-profile-linkedIn-link{
+    @include resD((
+    width: 20px,
+height: 20px,
+));
+    @include resM((
+    width: 20px,
+height: 20px,
+));
+}
+
+@media (max-width: 500px) {
+    .signup-carousel-section-carousel-main{
+        @include resM((
+            width: 100%,
+        ));
+    }
+}

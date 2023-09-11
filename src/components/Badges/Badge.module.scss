@@ -1,0 +1,65 @@
+@import "src/scss/size.scss";
+@import "src/scss/Inter.scss";
+@import "../../pages/TeacherApp/variables/_variables.scss";
+@import "../../pages/TeacherApp/mixins/_mixins.scss";
+
+
+.badge{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    @include resD((
+        font-size: 15px,
+        line-height: 17px,
+        border-radius: 5px,
+        padding: 5px 11px,
+    ));
+    &.rounded{
+        @include resD((
+            border-radius: 28px,
+            ))
+    }
+}
+
+.red {
+    background-color: $tekie-red-20;
+    color: $tekie-red-100;
+}
+
+.green {
+    background: rgba(1, 170, 147, 0.1);
+    color: #01AA93;
+}
+.yellow{
+    background-color: $tekie-yellow-20;
+    color: $tekie-yellow-100;
+}
+
+.greenSec {
+    color: #01AA93;
+    background: #E6FFFB;
+}
+
+.outline{
+    background-color:white;
+    color: $tekie-black-50;
+    @include resD((
+        border: 1px solid $tekie-grey-45,
+        padding:7px 11px
+    ));
+}
+.outline.purple{
+    @include resD((
+        border: 1px solid $tekie-amethyst
+    ));
+}
+
+.purple{
+    background-color: $tekie-amethyst;
+    color: white;
+    @include resD((
+        padding:7px 11px
+    ))
+}

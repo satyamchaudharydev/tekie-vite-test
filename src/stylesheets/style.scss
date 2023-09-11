@@ -1,0 +1,44 @@
+@import './size.scss';
+@import '../../views/leadgen/style.scss';
+@import '../../views/LandingPage/style.scss';
+@import '../../views/Legals/style.scss';
+@import './normalize.scss';
+@import '../../views/CoursePage/style.scss';
+
+body {
+  margin: 0;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: overlay;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face{
+    font-family: 'Nunito-Bold';
+    src: local(Nunito-Bold),url('./assets/Nunito-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito-SemiBold';
+  src: local(Nunito-SemiBold),url('./assets/Nunito-SemiBold.ttf') format('truetype');
+}
+
+.lp-course-kickstart-container .kickstart-sonpar-outer-container{
+  @include resD((
+    width: 1554px !important,
+  ));
+  @include resSm((
+    width: 300px !important,
+  ));
+  .kickstart-sonpar-title{
+    align-self: flex-end;
+  }
+}

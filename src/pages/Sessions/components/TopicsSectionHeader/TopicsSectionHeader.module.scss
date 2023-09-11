@@ -1,0 +1,101 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+.spContainer {
+    @include resD((
+      margin-top: 64px,
+    ));
+    @include resMs((
+      margin-top: 65px,
+    ));
+    &.spContainerTeacherApp{
+      margin-top: unset;
+      @include resD1280((
+        padding-left: 27px,
+        padding-right: 35px,
+      ))
+    }
+  }
+
+  .allTopicsContainer{
+    // padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .coursePackageTitleAndProgressBar{
+    @include resD((
+      margin-bottom:28px
+    ));
+    &.coursePackageTitleAndProgressBarTeacherApp{
+      width: 100%;
+    }
+  }
+  
+  .coursePackageTitle{
+    font-weight: 600;
+    margin-top: 0;
+    @include resD((
+      font-size:27px,
+      margin-bottom:24px
+    ));
+    &.coursePackageTitleTeacherApp{
+      margin-bottom: unset;
+    }
+  }
+  .courseCompletionPercent{
+    color: $deep-sky-blue-24;
+    font-weight: 800;
+  }
+.dropdownAndPillsContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @include resD((
+    gap:36px
+  ))
+}
+.courseFiltersContainer {
+  width: 85vw;
+  &.courseFiltersContainerTeacherApp{
+    width: 100%;
+    @include resD((
+      margin-bottom: 30px,
+    ))
+  }
+}
+  .courseFiltersContainer,.coursePillsContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .coursePillsContainer{
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-self: stretch;
+    @include resD((
+      margin-right: 16px,
+      gap:8px
+    ))
+  }
+
+  .clearFilter{
+    background-color: transparent;
+    border: none;
+    color: $deep-sky-blue;
+    font-weight: 600;
+    font-family: 'Nunito';
+    cursor: pointer;
+    min-width: fit-content;
+    @include resD((
+      font-size:20px,
+      border-bottom:1px dashed $deep-sky-blue,
+      padding:1px 2px
+    ))
+  }
+  .coursePackageTitleAndBatchSelector{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

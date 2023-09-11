@@ -1,0 +1,352 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/Inter.scss';
+@import 'src/scss/lato.scss';
+
+h1, h2,  h3{
+  margin:0;
+  padding:0;
+}
+
+.footer-noneUnderline {
+  text-decoration: none;
+  color: none;
+}
+
+.footer-socialMediaContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.footer-socialMediaWrapper {
+  display: flex;
+  flex-direction: flex-end;
+  position: relative;
+  @include resM((
+    left: 7.5px,
+  ));
+  @include resD((
+    left: 10px,
+  ));
+}
+
+.footer-socialMediaIcon {
+  cursor: pointer;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  @include resM((
+    width: 20px,
+    height: 20px,
+    margin-right: 15px,
+  ));
+  @include resD((
+    width: 30px,
+    height: 30px,
+    margin-right: 20px
+  ));
+}
+.footer-smFacebook {
+  background: url('./icons/facebook.svg');
+  fill: #504F4F;
+}
+
+.footer-smInstagram {
+  background: url('./icons/instagram.svg')
+}
+.footer-smYoutube {
+  background: url('./icons/youtube.svg')
+}
+.footer-smLinkedin {
+  background: url('./icons/linkedin.svg')
+}
+.footer-footerLinks {
+  display: flex;
+  flex-direction: row;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15.0439px;
+  color: #504F4F;;
+  opacity: 0.5;
+  
+  @include resD((
+    justify-content: flex-end,
+  ));
+  @include resM((
+    justify-content: center,
+  ));
+}
+
+.footer-footerRightBorder {
+  border-right: 1px solid #504f4f85;
+}
+
+.footer-footerText {
+  @extend .Inter-regular;
+  @include resM((
+    font-size: 12px,
+    letter-spacing: 0px,
+    color: #504F4F,
+  ));
+  @include resD((
+    font-size: 16px,
+    letter-spacing: 0px,
+    color: #504F4F,
+  ));
+}
+
+.footer-footerLink {
+  cursor: pointer;
+  letter-spacing: 0px;
+  &:hover {
+    text-decoration: underline;
+  }
+    @include resD((
+    display: block
+  ));
+    @include resM((
+    display: none
+  ));
+}
+
+.footer-footerLinkPaddingRight {
+  @include resM((
+    padding-right: 15px,
+  ));
+  @include resD((
+    padding-right: 20px,
+  ));
+}
+
+.footer-footerLinkPadding {
+  @include resM((
+    padding:0px 20px,
+  ));
+  @include resD((
+    padding:0px 30px,
+  ));
+}
+
+.footer-noborder {
+  border: none !important;
+}
+
+.footer-footerLinkPaddingLeft {
+  @include resM((
+    padding-left: 20px,
+  ));
+  @include resD((
+    padding-left: 30px,
+  ));
+}
+
+.footer-footerLinksUnderlines {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  @include resM((
+    margin-top: 14px,
+    left: -5px,
+  ));
+  @include resD((
+    margin-top: 14px,
+    left: -5px,
+  ));
+
+}
+
+.footer-footerLinkUnderline {
+  background-color: #003446;
+  @include resM((
+    width: 77px,
+    height: 1px,
+    margin-right: 26px,
+    ));
+  @include resD((
+    width: 77px,
+    height: 1px,
+    margin-right: 26px,
+  ));
+}
+
+.footer-footerLinkUnderlineNoMargin {
+  margin-right: 0px !important;
+}
+
+.footer-footer-subText {
+  font-family: Nunito;
+  letter-spacing: 0;
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  color: #504F4F;
+  padding: 12px 4px;
+}
+
+.footer-footer-container {
+  width: 100%;
+  background: tranparent;
+  padding-top: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 30px;
+  box-sizing: border-box;
+  color: #504F4F;
+  background-color: #dcdcdc;
+  background-color: #F5F5F4;
+  bottom: 0;
+    @include resM((
+     position: none,
+  ));
+  @include resD((
+     position: fixed,
+  ));
+}
+
+.footer-madeBy {
+  // @extend .Inter-regular;
+  @include resM((
+    font-size: 28px,
+    line-height: 35px,
+    letter-spacing: 0px,
+    padding-bottom: 56px,
+    margin-top: 37px,
+  ));
+  @include resD((
+    padding-top: 37px,
+    padding-bottom: 56px,
+    margin-top: 0px,
+    opacity: 1,
+    font-size: 24px,
+    line-height: 62px,
+    letter-spacing: 0px,
+    text-align: center,
+  ));
+  color: white;
+  opacity: 0.8;
+}
+
+.footer-brandCopyRight {
+  font-family: Inter;
+  font-weight: normal;
+  color: #504F4F;
+  letter-spacing: 0px;
+  @include resM((
+    text-align: center,
+    font-size: 13px,
+    padding-top: 0px,
+    line-height: 27px,
+    margin-top: 0px,
+    padding-bottom: 0px,
+  ));
+  @include resD((
+    text-align: right,
+    font-size: 18px,
+    padding-top: 0px,
+    padding-bottom: 0px,
+    line-height: 30px,
+  ));
+}
+
+.footer-copyRightContainer {
+  @include resM((
+    margin-top: 12px,
+    padding-bottom: 30px,
+  ));
+  @include resD((
+    margin-top: 18px,
+    padding-bottom: 50px,
+  ));
+}
+
+.footer-tekieLogo {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  @include resM((
+    width: 98px,
+    height: 54px,
+    margin-top: 14px,
+    padding-bottom: 17px,
+  ));
+  @include resD((
+    width: 125px,
+    height: 70px,
+    margin-top: 68px,
+    padding-bottom: 0px,
+    margin-bottom: 0px,
+  ));
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-footer-tekieLogo {
+  @include resM((
+    width: 50px,
+    height: 40px,
+    position: relative,
+  ));
+  @include resD((
+    width: 50px,
+    height: 44px,
+  ));
+  left: -5px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: left center !important;
+}
+
+.footer-flex-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0;
+  @include resD((
+    align-items: flex-start,
+  ));
+  @include resM((
+    align-items: center,
+  ));
+}
+
+.flex-footer{
+  display: flex;
+  align-items: center;
+  align-self: center;
+      @include resM((
+        width: unset,
+      ));
+      @include resD((
+        width: 33.33%,
+      ));
+}
+
+.center{
+  @include resM((
+    justify-content: flex-end,
+  ));
+  @include resD((
+    justify-content: center,
+  ));
+}
+.start{
+  justify-content: flex-start,
+}
+.end{
+   @include resM((
+    justify-content: flex-end,
+    display: none,
+    visibility: collapse
+  ));
+  @include resD((
+    justify-content: flex-end,
+    display: block,
+    visibility: visible,
+  ));
+}

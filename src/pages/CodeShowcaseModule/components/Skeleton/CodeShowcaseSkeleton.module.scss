@@ -1,0 +1,191 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme.scss';
+
+.cardLayout{
+  box-sizing:border-box;
+  padding: hs(20px) 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  
+  @include resD((
+    flex-direction: row,
+  ));
+  @include resM((
+    flex-direction: column,
+  ));
+}
+
+.card{
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+}
+
+.codeAuthorDetails {
+  box-sizing:border-box;
+  padding: 0px 32px;
+  display: flex;
+  flex-direction: column;
+  @include resD((
+    width: 10vw,
+    justify-content: flex-start,
+    align-items: flex-start,
+  ));
+  @include resM((
+    width: 100%,
+    justify-content: center,
+    align-items: center,
+  ));
+
+  & > svg {
+    margin-top: 8px;
+  }
+}
+
+.codeDetailsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 15px 0px;
+  padding-right: 26px;
+  
+  & .codeDetails {
+    box-sizing:border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    
+    @include resD((
+      padding: 0px
+    ));
+    @include resM((
+      width: 100%,
+      padding: 0px 26px
+    ));
+  }
+}
+
+.reactionContainer {
+  @include resD((
+      padding: 0px
+  ));
+  @include resM((
+      padding: 0px 26px
+  ));
+}
+
+.profileCard {
+  align-self: center;
+  border-radius: 100%;
+
+  @include resD((
+    width: 120px,
+    height: 120px,
+  ));
+  @include resM((
+    width: 70px,
+    height: 70px,
+  ));
+}
+
+.profileSubCard {
+  align-items: center;
+  @include resD((
+    width: 100%,
+    height: hs(20px),
+  ));
+  @include resM((
+    width: hsm(80px),
+    height: hsm(15px),
+  ));
+}
+
+.SecondarySubCard {
+  align-items: center;
+  @include resD((
+    width: 80%,
+    height: hs(20px),
+  ));
+  @include resM((
+    width: hsm(60px),
+    height: hsm(10px),
+  ));
+}
+
+.reactionCard {
+  margin: 10px 10px 10px 0px;
+  border-radius: 50px;
+
+  @include resD((
+    width: hs(90px),
+    height: hs(35px),
+  ));
+  @include resM((
+    width: hsm(50px),
+    height: hsm(20px),
+  ));
+}
+
+.topCard {
+  
+  @include resD((
+    width: 30%,
+    height: hs(40px),
+    margin-top: 0,
+  ));
+  @include resM((
+    width: 40%,
+    height: hs(100px),
+    margin-top: hs(50px),
+  ));
+}
+
+.subHeadingCard {
+  width: 50%;
+
+  @include resD((
+    height: hs(20px),
+    margin-top: hs(15px),
+  ));
+  @include resM((
+    margin-top: hs(50px),
+    height: hs(50px)
+  ));
+}
+
+.middleCard {
+  width: 100%;
+  
+  @include resD((
+    margin: hs(5px) 0,
+    height: hs(60px),
+  ));
+  @include resM((
+    margin: 0,
+    height: hs(300px)
+  ));
+}
+
+.lastCard {
+  box-sizing: border-box;
+
+  @include resD((
+    width: 100%,
+    margin-top: hs(20px),
+    height: hs(300px),
+    border-radius: 0px 20px 20px 20px,
+    padding: 0px,
+  ));
+  @include resM((
+    width: 100%,
+    height: hs(1000px),
+    margin-top: hs(50px),
+    border-radius: 0px,
+    padding: 0px hs(10px),
+  ));
+}

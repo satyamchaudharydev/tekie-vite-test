@@ -1,0 +1,10 @@
+NODE_ENV=production
+NODE_MODULES_CACHE=false
+REACT_APP_API_BASE_URL=https://tekie-backend-pre-prod.herokuapp.com/graphql/core
+REACT_APP_CLOUDFRONT_BASE_URL=https://dijvw6rlprlv2.cloudfront.net
+REACT_APP_FILE_BASE_URL=https://tekie-backend.s3.amazonaws.com
+REACT_APP_NODE_ENV=production
+REACT_APP_SHEET_URL=https://script.google.com/macros/s/AKfycbzZCbndgw14Y4gtwrYkBKtfbb5_cVav2kBIamaMFSo30gsLOSTb/exec
+REACT_APP_TEKIE_APP_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJbmZvIjp7Im5hbWUiOiJ0ZWtpZVRtcyIsInR5cGUiOiJzdGF0aWMifSwiaWF0IjoxNTg5NTMwODU4LCJleHAiOjE5MDUxMDY4NTh9.7rOH-n_3fuuDtMahMWIQXNA-gz9e_mzcJ9VSNLwuZeo
+REACT_APP_TEKIE_APP_URL=https://www.tekie.in
+TZ=Asia/Kolkata

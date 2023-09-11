@@ -1,0 +1,1 @@
+export const homeworkComponents = ['quiz', 'homeworkAssignment', 'homeworkPractice']

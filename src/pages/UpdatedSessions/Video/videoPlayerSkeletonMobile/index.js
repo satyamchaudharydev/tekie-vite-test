@@ -1,0 +1,3 @@
+import VideoPlayerSkeletonVideoPlayerSkeletonMobile from './videoPlayerSkeleton'
+
+export default VideoPlayerSkeletonMobile

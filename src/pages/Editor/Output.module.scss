@@ -1,0 +1,23 @@
+@import 'src/scss/size.scss';
+@import "src/scss/utils.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+.outputContainer {
+  display: flex;
+
+  @include resD((
+    height: calc(100vh - #{hs(140px)}),
+  ));
+  color: #fff;
+  font-family: 'Courier Prime', monospace;
+}
+
+.outputWrapper {
+  box-sizing: border-box;
+  @include resD((
+    margin-left: 20px,
+    padding-block: 20px,
+
+  ));
+ 
+}

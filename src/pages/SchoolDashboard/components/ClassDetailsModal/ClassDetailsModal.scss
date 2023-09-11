@@ -1,0 +1,410 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/Inter.scss';
+@import 'src/scss/theme.scss';
+
+.classDM-flexContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.classDM-modal {
+    font-family: 'Inter' ;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // background: rgba(0,0,0,0.4);
+}
+
+.classDM-modalBox {
+    z-index: 9999;
+    min-width: 580px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: #FFFFFF;
+    box-shadow: 0px 6px 48px rgba(51, 51, 51, 0.24);
+    border-radius: 8px;
+    transition: opacity 200ms ease-in-out, left 300ms ease-in-out, visibility .2s cubic-bezier(0.4,0.0,0.2,1);
+    visibility: hidden;
+    opacity: 0;
+    left: 51%;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Inter' !important;
+}
+
+.classDM-modalBox-visible {
+    visibility: visible;
+    opacity: 1;
+    left: 50%;
+}
+
+@media screen and (max-width: 500px) {
+    .classDM-modalBox {
+        min-width: 100%;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.classDM-primary-text {
+    font-weight: normal;
+    color: #667F87;
+    @include resD((
+        font-size: 18px,
+    ));
+    @include resM((
+        font-size: 16px,
+    ));
+}
+
+.classDM-modal-closeIcon {
+    fill: #333333;
+    cursor: pointer;
+    height: 100%;
+    // padding: 0px 10px;
+    @include resD((
+        width: 20px,
+        height: 20px,
+    ));
+    @include resM((
+        width: 18px,
+        height: 18px,
+    ));
+}
+
+.classDM-modal-header-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+    @include resD((
+        align-items: center
+    ));
+    @include resM((
+        align-items: flex-start
+    ));
+    
+    .classDM-modal-header-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .classDM-modal-header-course-tag {
+            @extend .Inter-regular;
+            font-weight: 550;
+            font-size: 12px;
+            background-color: #E8DFEC;
+            color: #012A38;
+            text-transform: uppercase;
+            border-radius: 4px;
+            padding: 8px 14px;
+            margin-top: 2px;
+            margin-right: 4px;
+        }
+        .classDM-modal-header-course-progress-container {
+            @extend .Inter-regular;
+            flex: 1 ;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            @include resD((
+                padding-top: 8px,
+            ));
+            @include resM((
+                padding-top: 12px,
+            ));
+            
+            .classDM-modal-header-course-progress-text {
+                @extend .classDM-primary-text;
+                
+                @include resD((
+                    padding: 0px 12px 0px 0px,
+                ));
+                @include resM((
+                    padding: 0px 12px 0px 0px,
+                ));
+            }
+            .classDM-modal-header-course-progress {
+                background: #E5E9EB;
+                position: relative;
+                height: 10px;
+                margin: 0px 4px;
+                @include resD((
+                    width: 200px,
+                ));
+                @include resM((
+                    width: 80px,
+                ));
+                .classDM-modal-header-course-progress-indicator {
+                    background-color: #01AA93;
+                    width: 0%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: width .3s;
+                } 
+            }
+            .classDM-modal-header-course-progress-percentage {
+                font-weight: 600;
+                font-size: 12px;
+                color: #33545F;
+                padding: 0px 8px;
+            }
+        }
+    }
+}
+
+.classDM-modal-content-container {
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    @include resD((
+        align-items: center,
+    ));
+    @include resM((
+        align-items: flex-start,
+    ));
+
+    .classDM-modal-content-class-completed {
+        @extend .classDM-primary-text;
+    
+        & > span {
+            font-weight: 700;
+            color: #667F87;
+        }
+    }
+    .classDM-modal-content-class-title {
+        font-style: normal;
+        font-weight: 600;
+        color: #012A38;
+        line-height: 1;
+        @include resD((
+            font-size:28px,
+            padding: 12px 0px,
+        ));
+        @include resM((
+            font-size: 18px,
+            padding: 8px 0px
+        ));
+    }
+    .classDM-modal-content-class-timeStamp {
+        font-weight: normal;
+        color: #33545F;
+        @include resD((
+            font-size: 16px,
+        ));
+        @include resM((
+            font-size: 14px,
+        ));
+    }
+    .classDM-modal-content-class-type-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 12px 0px;
+        
+        .classDM-modal-content-class-type-icon {
+            width: 18px;
+            height: 18px;
+            fill: #99A9AF;
+        }
+        .classDM-modal-content-class-type-text {
+            @extend .classDM-primary-text;
+            padding: 0px 12px;
+        }
+        .classDM-modal-content-class-type-tag {
+            background: #EEEEEE;
+            border-radius: 15px;
+            font-weight: 500;
+            font-size: 14px;
+            width: fit-content;
+            color: #012A38;
+            padding: 4px 10px;
+        }
+    }
+    .classDM-modal-content-mentor-profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-direction: row;
+        width: fit-content;
+        padding-top: 8px;
+        .classDM-modal-content-mentor-profilePic {
+            width: 36px;
+            height: 36px;
+            background-color: #33545F;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 100%;
+            margin-right: 8px;
+        }
+        .classDM-modal-content-mentor-profileDetails {
+            display: block;
+            .classDM-modal-content-mentor-profile-name {
+                font-weight: 500;
+                font-size: 16px;
+                color: #012A38;
+            }
+            .classDM-modal-content-mentor-profile-role {
+                @extend .classDM-primary-text;
+                font-size: 12px;
+            }
+        }
+    }
+    .classDM-modal-content-topic-thumbnail-container {
+        border: 2px solid #EEEEEE;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 12px;
+        
+        @include resD((
+            width: 180px,
+            height: 180px,
+        ));
+        @include resM((
+            width: 120px,
+            height: 120px,
+        ));
+
+        .classDM-modal-content-topic-thumbnail {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+}
+
+.classDM-modal-courseDetails-collapsible {
+    @extend .Inter-regular;
+    padding: 12px 20px;
+    padding-top: 0;
+
+    & .classDM-modal-courseDetails-collapsible-header {
+        font-weight: 500;
+        color: #33545F;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        @include resD((
+            font-size: 20px,
+            padding: 20px 0
+        ));
+        @include resM((
+            font-size: 16px,
+            padding: 10px 0
+        ));
+    }
+
+    & .classDM-modal-courseDetails-collapsible-content {
+        padding: 0px 4px;
+        overflow: hidden;
+        max-height: 0px;
+        transition: max-height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
+    }
+
+    & .classDM-modal-courseDetails-collapsible-content-visible {
+        max-height: 400px;
+        transition: max-height 600ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
+    }
+
+    .classDM-modal-collapsible-dropdown-icon-closed {
+        width: 14px;
+        height: 14px;
+        margin: 3px 7px 0px;
+        background-image: url('../../../../assets/dropdownArrow.svg');
+        background-color: #403F3F;
+        -webkit-mask-image: url('../../../../assets/dropdownArrow.svg');
+        mask-image: url('../../../../assets/dropdownArrow.svg');
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+        transition: -webkit-transform .1s;
+        transition: transform .1s;
+        transition: transform .1s,-webkit-transform .1s;
+        transform: rotate(0deg) rotate(0deg);;
+    }
+
+    .classDM-modal-collapsible-dropdown-icon-open {
+        transform: rotate(180deg);
+    }
+}
+
+.classDM-modal-courseDetails-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 0px;
+        
+        .classDM-modal-courseDetails-icon {
+            width: 18px;
+            height: 18px;
+            fill: #99A9AF;
+        }
+        .classDM-modal-courseDetails-text {
+            @extend .classDM-primary-text;
+            padding: 0px 12px;
+            min-width: 90px;
+        }
+        .classDM-modal-courseDetails-description {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            color: #012A38;
+        }
+        .classDM-modal-courseDetails-link {
+            color: #00ADE6;
+        }
+}
+
+.classDM-modal-footer-container {
+    background-color: #F9F9F9;
+    display: flex;
+    justify-content: flex-end;
+    @include resD((
+        padding: 20px
+    ));
+    @include resM((
+        padding: 12px
+    ));
+
+    .classDM-modal-footer-btn {
+        border: none;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 14px;
+        display: grid;
+        place-items: center;
+        line-height: 1;
+        color: #FFF;
+        background: #00ADE6;
+        border-radius: 4px;
+        cursor: pointer;
+        @include resD((
+            padding: 12px 18px,
+        ));
+        @include resM((
+            padding: 10px 14px,
+        ));
+    }
+}

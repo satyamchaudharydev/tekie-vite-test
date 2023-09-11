@@ -1,0 +1,155 @@
+@import 'src/scss/size.scss';
+
+@media screen {
+  .buttonContainer {
+    min-width: hs(200px);
+    height: hs(56px);
+    object-fit: contain;
+    border-radius: hs(28px);
+    box-shadow: 0 hs(3px) hs(6px) 0 rgba(0, 0, 0, 0.16);
+    border: solid hs(1px) #27d6e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hoverButtonContainer {
+    &:hover {
+      cursor: default;
+      box-shadow: 0 hs(3px) hs(6px) 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .buttonText {
+    font-weight: bold;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #0fbde7;
+    font-size: hs(25px);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .buttonText {
+    position: relative;
+    top: hs(2px);
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+  .buttonContainer {
+    height: hs(64px);
+    border-radius: hs(30px);
+    min-width: hsm(34px);
+    padding: 0 hsm(6px) 0 hsm(6px);
+  }
+
+  .buttonText {
+    font-size: hsm(7px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .buttonContainer {
+    height: hsm(35px);
+    min-width: hsm(115px);
+    border-radius: hsm(24px);
+    box-shadow: 0 hs(3px) hs(6px) 0 rgba(0, 0, 0, 0.16);
+  }
+
+  .buttonText {
+    font-size: hsm(14px);
+  }
+}
+
+@media screen and (min-width: 250px) and (max-width: 900px) {
+  .buttonContainer {
+    height: hsm(33px);
+    min-width: hsm(105px);
+  }
+
+  .buttonText {
+    font-size: hsm(13px);
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .buttonContainer {
+    height: hsm(27px);
+    min-width: hsm(80px);
+  }
+
+  .buttonText {
+    font-size: hsm(11px);
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 900px) {
+  .buttonContainer {
+    height: hsm(24px);
+    min-width: hsm(75px);
+  }
+
+  .buttonText {
+    font-size: hsm(10px);
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .buttonContainer {
+    height: hsm(22px);
+    min-width: hsm(70px);
+  }
+
+  .buttonText {
+    position: relative;
+    top: hsm(1px);
+    font-size: hsm(9px);
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 900px) {
+  .buttonContainer {
+    height: hsm(20px);
+    min-width: hsm(65px);
+  }
+
+  .buttonText {
+    position: relative;
+    top: 0;
+    font-size: hsm(8px);
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 900px) {
+  .buttonContainer {
+    height: hsm(18px);
+    min-width: hsm(60px);
+  }
+
+  .buttonText {
+    position: relative;
+    top: 0;
+    font-size: hsm(7.5px);
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  .buttonContainer {
+    height: hsm(17px);
+    min-width: hsm(55px);
+  }
+
+  .buttonText {
+    position: relative;
+    top: 0;
+    font-size: hsm(7px);
+  }
+}
+
+@media screen and (min-width: 850px) and (max-width: 900px) {
+  .buttonContainer {
+    height: hsm(16px);
+    min-width: hsm(50px);
+  }
+}

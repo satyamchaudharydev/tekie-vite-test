@@ -1,0 +1,297 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/Inter.scss';
+@import '../../../../scss/theme.scss';
+
+$sideNavWidth: 250px;
+
+.screen {
+  display: flex;
+  width: 100vw;
+  overflow: hidden;
+  
+  @include resD((
+    height: calc(100vh - 70px),
+  ));
+  @include resM((
+    height: 100vh,
+  ));
+}
+
+.sideWrapper {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 250px);
+    height: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .sideWrapper {
+        width: 100%;
+    }
+    .sidebar-container {
+        min-width: 0 !important;
+        width: 0;
+    }
+}
+
+.main {
+    flex: 1;
+    overflow: scroll;
+    background-color: #FAFAFA;
+}
+
+.sideNav-menu-icon {
+  @include resD((
+    width: 30px,
+    height: 30px,
+    margin-right: 12px,
+  ));
+  @include resM((
+    width: 22px,
+    height: 22px,
+    margin-right: 8px,
+  ));
+  box-sizing: border-box;
+  display: block;
+
+  > svg {
+    fill: #000;
+  }
+}
+
+.sidebar-container {
+  @include resM((
+    min-width: 0,
+  ));
+  @include resD((
+    padding: 18px,
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1),
+    background: white,
+  ));
+  min-width: $sideNavWidth;
+  max-width: $sideNavWidth + 50;
+  height: 100vh;
+  padding: 0px;
+  font-family: 'Inter';
+  z-index: 999;
+  transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+}
+
+.sideNav-header-nav-container {
+  & .sideNav-header-nav-menu-container {
+    & .sideNav-header-menu-items {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      text-decoration: none;
+      padding: 12px 16px;
+      transition: all .3s;
+      color: #403F3F;
+      border-radius: 8px;
+      cursor: pointer;
+      transform: scale(1);
+
+      @include resD((
+        margin: 12px,
+      ));
+      @include resM((
+        margin: 12px 0px,
+      ));
+
+      &:active {
+        transform: scale(0.98)
+      }
+    }
+  }
+}
+
+.sideNav-header-menu-item-text {
+  @extend .Inter;
+  font-weight: 500;
+  @include resM((
+    border-radius: 2px,
+    letter-spacing: 0.0px,
+    font-size: 16px,
+  ));
+  @include resD((
+    border-radius: 5px,
+    font-size: 20px,
+    letter-spacing: 0.5px,
+    display: flex,
+  ));
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  margin: 0;
+}
+
+.sideNav-header-menu-active, .sideNav-header-menu-items:hover {
+  color: #FFF !important;
+  background-color: $theme;
+  border-radius: 8px;
+
+  & .sideNav-menu-icon > svg {
+    fill: #FFF !important;
+  }
+}
+
+.sideNav-header-hamburgerContainer {
+  @include resM((
+    display:flex,
+    justify-content: center,
+    align-items: center,
+    z-index: 99999999,
+    outline: none,
+    border: none,
+    -webkit-user-select: none,
+    -moz-user-select: none,
+    -ms-user-select: none,
+    cursor: pointer,
+    width: 50px,
+    height: 55px,
+    border-radius: 50%,
+    background: transparent,
+  ));
+  @include resD((
+    display: none,
+    // position: absolute,
+  ));
+}
+
+
+/** Sidebar */
+
+.sideNav-header-overlayNavItem {
+  @extend .Inter;
+  font-size: 16px;
+  color: #A8A7A7;
+  padding: 24px 20px;
+  cursor: pointer;
+  min-width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 0.75px;
+
+  &:active {
+    background: #e6f7fd;
+    color: #403F3F;
+  }
+}
+
+.sideNav-header-overlay-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sideNav-header-overlayNavSubMenu {
+  overflow: hidden;
+}
+
+.sideNav-header-overlayNavbar {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  // left: -100vw;
+  z-index: 9999;
+  display: flex;
+  flex-direction: row;
+}
+
+.sideNav-header-backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.sideNav-header-overlayNavbarHide {
+  left: -100vw;
+  background-color: transparent;
+}
+
+.sideNav-header-overlayNavbarWrapper {
+  z-index: 9999;
+  height: 100%;
+  transform: translate3d(0,0,0);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  max-width: $sideNavWidth + 50;
+  @include resM((
+    width: 280px,
+    padding: 12px
+  ));
+}
+.sideNav-header-nav-menu-desktopOnly {
+  @include resD((
+    display: block
+  ));
+  @include resM((
+    display: none
+  ));
+}
+
+.sideNav-header-overlayNavbarWrapperHide {
+  transform: translate3d(-100%,0,0);
+}
+
+.sideNav-header-overlayNavbarClose {
+  height: 100%;
+  flex: 1;
+}
+
+.sideNav-header-tekieBgLogo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; 
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 20px;
+  flex-direction: column;
+  @include resD((
+    width: 200px,
+    height: 200px,
+  ));
+  @include resM((
+    width: 140px,
+    height: 140px,
+  ));
+}
+
+.sideNav-header-tekieLogo {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; 
+  @include resD((
+    width: 100px,
+    height: 80px,
+  ));
+  @include resM((
+    width: 80px,
+    height: 60px,
+  ));
+}
+.sideNav-header-tekieLogo-subtext {
+  @extend .Inter-regular;
+  font-weight: normal;
+  color: #9E9E9E;
+  white-space: nowrap;
+  
+  @include resD((
+    font-size: 14px,
+  ));
+  @include resM((
+    font-size: 12px,
+  ));
+}

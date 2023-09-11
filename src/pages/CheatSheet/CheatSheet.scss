@@ -1,0 +1,7 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+.cheatsheet-cheatSheetsContainer{
+  flex: 1;
+  height: calc(100vh - #{hs(88px)});
+  overflow-x: hidden;
+}

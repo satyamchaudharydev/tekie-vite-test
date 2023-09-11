@@ -1,0 +1,161 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import 'src/scss/Inter.scss';
+
+$primary-color: #8C61CB;
+$primary-color-dark: #7b40d4;
+$primary-fontFamily: Inter;
+$primary-fontStyle: normal;
+$primary-fontWeight: 500;
+
+.classModal-select {
+  @include resD(( 
+      height: 52px
+  ));
+  @include resM((
+      height: 38px
+  ));
+}
+
+.classModal-select__fixed_hw {
+  @include resD(( 
+      min-height: 51px,
+      max-height: 51px,
+  ));
+  @include resM((
+      min-height: 38px,
+      max-height: 38px,
+  ));
+}
+
+.classModal-select__control.classModal-select__control {
+  @include resD(( 
+      min-height: 51px,
+      max-height: 51px,
+      border-radius: 11px
+  ));
+  @include resM((
+      min-height: 38px,
+      max-height: 38px,
+      border-radius: 8px
+  ));
+}
+
+.classModal-select__indicators.classModal-select__indicators {
+  @extend .classModal-select__fixed_hw;
+}
+
+.classModal-select__value-container.classModal-select__value-container {
+  @extend .classModal-select__fixed_hw;
+  @include resD(( 
+      padding-left: 16px
+  ));
+}
+
+.classModal-select__placeholder.classModal-select__placeholder,
+.classModal-select__single-value.classModal-select__single-value {
+  font-family: $primary-fontFamily;
+  font-weight: 400;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+      top: 46%,
+      margin-left: 2px,
+      font-size: 18px,
+  ));
+  @include resM((
+      top: 45%,
+      font-size: 14px,
+  ));
+}
+
+.classModal-select__option.classModal-select__option {
+  font-family: $primary-fontFamily;
+  font-weight: 400;
+  @include resD((
+      height: 48px,
+      font-size: 18px,
+      padding: 14px,
+      margin: 4px 0px
+  ));
+  @include resM((
+      height: 36px,
+      font-size: 14px,
+      padding: 11px,
+      margin: 0px 0px
+  ));
+}
+
+.classModal-select__dropdown-indicator.classModal-select__dropdown-indicator {
+  & svg {
+      @include resD(( 
+          height: 24px,
+          width: 29px
+      ));
+      @include resM((
+          height: 20px,
+          width: 25px
+      ));
+  }
+}
+
+.classModal-select__menu.classModal-select__menu {
+  @include resD(( 
+      margin: 9px 0px
+  ));
+  @include resM((
+      margin: 7px 0px
+  ));
+}
+
+.classModal-select__menu-list.classModal-select__menu-list {
+  border: 0.01px outset rgb(226, 226, 226);
+  border-bottom: #dcdde0;
+  border-right: #dcdde0;
+  @include resD((
+      min-height: 38px,
+      max-height: 216px,
+      border-radius: 8px
+  ));
+  @include resM((
+      min-height: 27px,
+      max-height: 149px,
+      border-radius: 3px
+  ));
+  &::-webkit-scrollbar {
+      @include resD(( 
+          width: 9px,
+      ));
+      @include resM((
+          width: 8px
+      ));
+  }
+  &::-webkit-scrollbar-thumb {
+      background: rgba(140, 97, 203, 0.6);
+      @include resD(( 
+          margin-right: 12px,
+      ));
+      @include resM((
+          margin-right: 6px,
+      ));
+  }
+  &::-webkit-scrollbar-thumb:hover {
+      background: #8C61CB
+  }
+}
+
+.classModal-select__menu-notice.classModal-select__menu-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+      height: 38px,
+      font-size: 16px
+  ));
+  @include resM((
+      height: 27px,
+      font-size: 11px
+  ));
+}

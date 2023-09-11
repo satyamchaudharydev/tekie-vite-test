@@ -1,0 +1,65 @@
+@import 'src/scss/size.scss';
+
+.masteryTubeContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-top: hs(71.3px);
+}
+
+.masteryTubeBase {
+  background: linear-gradient(to right, #dcf7fc , #f1f2f2);
+  width: hs(196.5px);
+  height: hs(68.2px);
+  overflow: hidden;
+  position: relative;
+}
+.masteryTubeLeft {
+  @extend .masteryTubeBase;
+  margin-right: hs(7.6px);
+  border-radius: hs(48px) 0 0  hs(48px);
+}
+
+.masteryTubeRight {
+  @extend .masteryTubeBase;
+  border-radius: 0 hs(48px) hs(48px) 0;
+}
+
+.masteryTubeCenter {
+  @extend .masteryTubeBase;
+  margin-right: hs(7.6px);
+}
+
+.absoulteShine {
+  position: absolute;
+  left: hs(20px);
+  top: hs(10px);
+  z-index: 1;
+  width: hs(563.3px);
+  border-radius: hs(100px);
+  opacity: 0.5;
+  height: hs(26.3px);
+  background-image: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0) 50%);
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: hs(-196.5px);
+}
+
+.fillLeft {
+  @extend .fill;
+  background-image: linear-gradient(to bottom, #f9ed41, #fbb040);
+}
+
+.fillCenter {
+  @extend .fill;
+  background-image: linear-gradient(to bottom, #ab8ed6, #7b38e0);
+}
+
+.fillRight {
+  @extend .fill;
+  background-image: linear-gradient(to bottom, #34e4ea, #1ac9e8);
+}

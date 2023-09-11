@@ -1,0 +1,39 @@
+@import "src/scss/size.scss";
+
+.dialog {
+	position: relative;
+	box-sizing: border-box;
+	max-height: 80%;
+	max-width: 80%;
+	background-color: white;
+	border-radius: 20px;
+	z-index: 1000;
+	color: black;
+
+	@include resD(
+		(
+			// min-width: 500px,
+		)
+	);
+}
+
+.closeIconButton {
+	position: absolute;
+
+	@include resD(
+		(
+			top: -20px,
+			right: -20px,
+			padding: 12px,
+			height: 39px,
+			width: 39px,
+		)
+	);
+
+	cursor: pointer;
+	border-radius: 50%;
+	border: none;
+	outline: none;
+	background-color: white;
+	box-shadow: 0 0px 10px rgba($color: #000000, $alpha: 0.1);
+}

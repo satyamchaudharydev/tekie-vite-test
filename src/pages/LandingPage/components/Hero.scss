@@ -1,0 +1,447 @@
+@import 'src/scss/size.scss';
+
+.landing-page-hero-container {
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+  position: relative;
+  background: rgba($color: #000000, $alpha: 0.4)
+}
+
+.landing-page-hero-containerThumbail {
+  background-size: cover;
+  background-position: center center;
+}
+
+.landing-page-hero-videoPlayerHeight {
+  height: 100%;
+  position: relative;
+  background-size: cover;
+}
+
+.landing-page-hero-videoPlayerWidth {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+}
+
+.landing-page-hero-videoPlayer::-webkit-media-controls-start-playback-button {
+  display: none;
+}
+
+.landing-page-hero-absoluteContainer {
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.landing-page-hero-flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-page-hero-videoOverlay {
+  width: 100%;
+  position: relative;
+  flex: 1;
+  background-image: linear-gradient(179deg, #000d11 12%, rgba(2, 15, 19, 0) 59%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  display: flex;
+  align-items: flex-end;
+  @include resDn((
+    justify-content: space-between,
+    align-items: center,
+    padding-top: 133px,
+  ));
+}
+
+.landing-page-hero-teamFromContainer {
+  width: 100%;
+  background-color: rgba(#000D11, 0.55);
+  backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  @include resM((
+    height: 124px
+  ));
+  @include resDn((
+    height: 133px
+  ));
+}
+
+.landing-page-hero-teamFromContainerNoIIT {
+  @include resM((
+    height: 110px
+  ));
+  @include resDn((
+    height: 133px
+  ));
+}
+
+.lato {
+  font-family: Lato, sans-serif;
+}
+
+.lato-light {
+  @extend .lato;
+  font-weight: 300;
+}
+
+.lato-regular {
+  @extend .lato;
+  font-weight: 400;
+}
+
+.landing-page-hero-title {
+  @extend .lato-light;
+  color: white;
+  // text-transform: uppercase;
+  letter-spacing: hsm(-0.19px);
+  @include resM((
+    width: auto,
+    font-size: 30px,
+  ));
+  @include resDn((
+    font-size: 50px,
+    width: 700px,
+  ));
+}
+
+.landing-page-hero-info {
+  @extend .lato-regular;
+  color: white;
+  @include resM((
+    font-size: 18px,
+    margin-top: 25px,
+    letter-spacing: -0.06px,
+  ));
+  @include resDn((
+    font-size: 28px,
+    width: 600px,
+    margin-top: 37px,
+  ));
+}
+
+.landing-page-hero-body {
+  @include resM((
+    padding-left: 20px,
+    padding-bottom: 56px,
+  ));
+  @include resDn((
+    padding-left: 48px,
+    padding-bottom: 0px,
+  ));
+  box-sizing: border-box;
+}
+
+.landing-page-hero-button {
+  @extend .lato-regular;
+  user-select: none;
+  background-color: rgba(#022F3F, 0.8);
+  @include resM((
+    border-radius: 2px,
+    width: 180px,
+    height: 50px,
+    font-size: 20px,
+    margin-top: 20px,
+    letter-spacing: 1.22px,
+  ));
+  @include resDn((
+    border-radius: 5px,
+    width: 226px,
+    padding: 0px 20px,
+    height: 59px,
+    font-size: 27px,
+    margin-top: 34px,
+    letter-spacing: 1.22px,
+  ));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(white, 0.8);
+  cursor: pointer;
+  transition: 0.3s color ease-in-out;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  &:hover {
+    background-color: rgba(#022F3F, 1);
+    box-shadow: 2px 10px 15px 0 rgba(0, 0, 0, 0.16);
+    color: rgba(white, 1);
+  }
+}
+
+.landing-page-hero-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  @include resM((
+    justify-content: center,
+    margin-top: 14px,
+    padding: unset,
+  ));
+  @include resDn((
+    justify-content: space-between,
+    margin-top: 14px,
+    padding: 0 55px,
+  ));
+}
+
+.landing-page-hero-rowText {
+  @include resM((
+    justify-content: space-evenly,
+  ));
+}
+
+.landing-page-hero-watchTrailer {
+  @extend .lato-light;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  @include resM((
+    font-size: 18px,
+    letter-spacing: -0.19px,
+    margin-top: 14px,
+    ));
+  @include resDn((
+    font-size: 23px,
+    letter-spacing: 1.61px,
+    margin-top: 14px,
+  ));
+  span {
+    // border-bottom: 1px solid #fff !important;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    @include resM((
+      height: 22px,
+    ));
+    @include resDn((
+      height: 30px,
+      padding-bottom: 10px,
+      // border-bottom: 1px solid rgba(#fff, 0.8) !important,
+      opacity: 0.8,
+    ));
+  }
+}
+
+.landing-page-hero-playButton {
+  @include resM((
+    width: 28px,
+    height: 28px,
+    margin-right: 14px,
+  ));
+  @include resDn((
+    width: 30px,
+    height: 30px,
+    margin-right: 13px,
+  ));
+  opacity: 0.8;
+  background-image: url('../../../assets/play.svg');
+}
+
+.landing-page-hero-broughtToYou {
+  @extend .lato-light;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  @include resM((
+    font-size: 16px,
+    margin-top: 14px,
+    letter-spacing: 0.88px,
+  ));
+  @include resDn((
+    letter-spacing: 1.0px,
+    margin-top: 17px,
+    font-size: 25px,
+  ));
+}
+
+.landing-page-hero-age12 {
+  opacity: 0.8;
+  background-color: #022f3f;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  @include resM((
+    width: 71px,
+    height: 36px,
+    bottom: 200px,
+  ));
+  @include resDn((
+    position: static,
+    width: 109px,
+    height: 49px,
+  ));
+}
+
+.landing-page-hero-age12Text {
+  @extend .lato-regular;
+  color: white;
+  @include resM((
+    font-size: 16px,
+  ));
+  @include resDn((
+    font-size: 23px,
+  ));
+}
+
+.landing-page-hero-age12Textmd {
+  @extend .landing-page-hero-age12Text;
+  @include resM((
+    font-size: 13px,
+  ));
+  @include resDn((
+    font-size: 21px,
+  ));
+}
+
+.landing-page-hero-age12Textsm {
+  @extend .landing-page-hero-age12Text;
+  @include resM((
+    font-size: 13px,
+  ));
+  @include resDn((
+    font-size: 23px,
+  ));
+}
+
+.landing-page-hero-icon {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  @include resM((
+    margin-right: 53px,
+  ));
+  @include resDn((
+    margin-right: unset,
+  ));
+}
+
+.landing-page-hero-google {
+  @extend .landing-page-hero-icon;
+  @include resM((
+    width: 26px,
+    height: 26px,
+  ));
+  @include resDn((
+    width: 44px,
+    height: 44px,
+  ));
+}
+
+.landing-page-hero-intel {
+  @extend .landing-page-hero-icon;
+  @include resM((
+    width: 33px,
+    height: 22px,
+  ));
+  @include resDn((
+    width: 56px,
+    height: 37px,
+  ));
+}
+.landing-page-hero-microsoft {
+  @extend .landing-page-hero-icon;
+  @include resM((
+    width: 84px,
+    height: 31px,
+  ));
+  @include resDn((
+    width: 143px,
+    height: 52px,
+  ));
+}
+.landing-page-hero-amazon {
+  @extend .landing-page-hero-icon;
+  @include resM((
+    margin-right: 0px,
+    width: 50px,
+    height: 15px,
+  ));
+  @include resDn((
+    width: 85px,
+    height: 26px,
+    // margin-right: 186px,
+    position: relative,
+    top: 6px,
+  ));
+}
+
+.landing-page-hero-colleges {
+  @include resM((
+    margin-top: 14px,
+  ));
+  @include resDn((
+    margin-top: 0px,
+  ));
+}
+
+.landing-page-hero-iconText {
+  @extend .lato-light;
+  color: white;
+  @include resM((
+    font-size: 15px,
+    letter-spacing: 1.05px,
+  ));
+  @include resDn((
+    font-weight: normal,
+    font-size: 24px,
+    letter-spacing: 1.68px,
+    position: relative,
+  ));
+}
+
+.landing-page-hero-noIITFeatureRow {
+  @include resM((
+    margin-top: 25px,
+    padding: unset,
+  ));
+  @include resD((
+    margin-top: unset,
+    padding: 0 300px,
+  ));
+}
+
+.landing-page-hero-flexSingleRow {
+  display: flex;
+  width: 100%;
+  @include resDn((
+    flex-direction: row,
+    align-items: unset,
+    flex: unset
+  ));
+  @include resM((
+    flex-direction: column,
+    flex: 1,
+    align-items: center
+  ));
+}
+
+.landing-page-hero-flexSingleRowNoIIT {
+  @include resDn((
+    flex: 1
+  ));
+}
+
+.landing-page-hero-displayOnlyMobile {
+  @include resM((
+    display: flex,
+  ));
+  @include resDn((
+    display: none,
+  ))
+}
+
+.landing-page-hero-displayOnlyDesktop {
+  @include resM((
+    display: none,
+  ));
+  @include resDn((
+    display: block,
+  ))
+}

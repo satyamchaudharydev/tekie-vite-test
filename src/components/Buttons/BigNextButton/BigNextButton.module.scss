@@ -1,0 +1,62 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+
+.container {
+  width: hs(543.1px);
+  height: hs(118.5px);
+  border-radius: hs(62px);
+  box-shadow: 0 hs(3px) hs(6px) 0 rgba(0, 0, 0, 0.16);
+  background-image: linear-gradient(to bottom, #34e4ea, #00ade6);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: hs(97.4px);
+  height: hs(97.4px);
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.6;
+  margin-left: hs(11px);
+  background-size: cover;
+  box-shadow: 0 hs(3px) hs(6px) 0 rgba(0, 0, 0, 0.16);
+}
+
+.body {
+  flex: 1;
+}
+
+.circle {
+  @include flex-center;
+  width: hs(85.6px);
+  height: hs(85.6px);
+  box-shadow: 0 hs(3px) hs(6px) 0 #34e4ea;
+  background-color: #ffffff;
+  margin-right: hs(11px);
+  border-radius: 50%; 
+}
+
+.arrowCircle {
+  width:  hs(19px);
+  height: hs(32.5px);
+  transform: scaleX(-1);
+  position: relative;
+  left: hs(3px);
+}
+.nextUp {
+  font-family: Nunito;
+  font-size: hs(22px);
+  font-weight: bold;
+  line-height: 1.14;
+  color: #ffffff;
+  margin-left: hs(25px);
+}
+
+.title {
+  @extend .nextUp;
+  font-size: hs(28px);
+  margin-left: hs(25px);
+  margin-top: hs(5px);
+}

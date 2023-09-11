@@ -1,0 +1,37 @@
+@import 'src/scss/size.scss';
+
+.bannerLayout{
+  position: absolute;
+  right: hs(20px);
+  top: calc(100% - 70px);
+  display: flex;
+  padding: 10px 15px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #202124;
+  -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+  user-select: none;
+}
+.textLayout{
+  margin-right: 20px;
+}
+
+.undoLayout{
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.textStyle{
+  color: #F5F5F5;
+}
+
+.undoTextStyle{
+  color: #8AAAE4;
+}
+
+.closeIcon{
+  color: #F5F5F5;
+  cursor: pointer;
+}

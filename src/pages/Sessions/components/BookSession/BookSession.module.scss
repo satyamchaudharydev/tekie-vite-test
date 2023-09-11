@@ -1,0 +1,1866 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+@mixin flex($arg1:'center',$arg2:'center') {
+  display: flex;
+  justify-content: $arg1;
+  align-items: $arg2;
+}
+.pastSession {
+  text-decoration: underline;
+  margin-left: 5px;
+  &:hover {
+    cursor: pointer !important;
+    opacity: 0.8 !important;
+  }
+}
+
+//Same css classes are used for the current homework component.
+
+.infoContainer {
+  margin-left: hs(70px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.description {
+  color: #504f4f;
+  margin-right: hs(73px);
+  height: hs(107px);
+}
+
+.descriptionText {
+  font-size: hs(22px);
+  font-weight: 300;
+  margin-top: hs(15px);
+}
+
+.calendarDateContainer {
+  width: 100%;
+  position: relative;
+  margin-bottom: hs(21px);
+  height: hs(47px);
+  display: flex;
+  flex-direction: row;
+}
+
+.calendarIconMargin {
+  position: relative;
+  top: hs(6px);
+}
+
+.timeClockContainer {
+  max-width: hs(400px);
+  height: hs(53px);
+  display: flex;
+  flex-direction: row;
+}
+
+.clockContainer {
+  width: hs(42px);
+  height: hs(42px);
+  position: relative;
+  top: hs(6px);
+  background-image: url("../../../../assets/clock.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.dateTimeWrapper {
+  max-width: hs(300px);
+  margin-top: hs(14px);
+  margin-left: hs(20px);
+  height: hs(32px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: flex-end;
+  width: 94%;
+  height: hs(53px);
+  position: relative;
+  left: -6%;
+}
+
+.hover {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+
+  &:hover {
+    cursor: default !important;
+    opacity: 0.7 !important;
+  }
+}
+
+.activityIconContainer {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.timerIcon {
+  width: hs(41px);
+  height: hs(43.4px);
+  opacity: 0.8;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../../../assets/timerIcon.svg");
+}
+
+.mentorInfoContainer {
+  top: hs(48px);
+}
+
+.mentorInfoIcon {
+  width: hs(42px);
+  height: hs(42px);
+  position: relative;
+  top: hs(6px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon {
+  background-image: url("../../../../assets/product1.svg");
+}
+
+//Css classes specifically for current homework component.
+
+.homeworkMainContainer {
+  margin-top: hs(100px);
+  width: hs(1418px);
+  height: hs(340px);
+  display: flex;
+  border-radius: 5px 5px 0 0;
+  flex-direction: row;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+}
+
+.completedIcon {
+  width: hs(45px);
+  height: hs(45px);
+  position: relative;
+  background-image: url("../../../../assets/completedIcon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.pendingIcon {
+  width: hs(45px);
+  height: hs(45px);
+  position: relative;
+  background-image: url("../../../../assets/pendingIcon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.homeworkCalendarDateContainer {
+  width: 100%;
+  position: relative;
+  height: hs(47px);
+  display: flex;
+  flex-direction: row;
+}
+
+.quizStatusContainer {
+  width: 100%;
+  margin-top: hs(32px) !important;
+  height: hs(47px);
+  display: flex;
+  flex-direction: row;
+}
+
+.codingAssignmentContainer {
+  width: 100%;
+  height: hs(47px);
+  display: flex;
+  flex-direction: row;
+}
+
+.homeworkFooterMargin {
+  margin-top: hs(20px) !important;
+}
+
+.homeworkFooterWrapperPadding {
+  padding-top: hs(32px);
+}
+
+.textWrapper {
+  max-width: hs(300px);
+  margin-left: hs(30px);
+  align-self: center;
+  height: hs(32px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.homeworkDateContainer {
+  font-size: hs(17px);
+  font-weight: bold;
+  align-self: flex-start;
+  color: #696868;
+  font-family: Nunito;
+}
+
+//Css for speed test popup.
+
+.speedTestIcon {
+  width: 8%;
+  height: 100%;
+  background-image: url('../../../../assets/speedTestIcon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  display: 'flex';
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.animateSpeedTestIcon {
+  position: relative;
+  animation: speedTestIconAnimation 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes speedTestIconAnimation {
+  0% {top: 0px;}
+  80% {top: 0px;}
+  100% {top: -20px;}
+}
+
+.speedTestPopupMainContainer {
+  width: hs(695px);
+  height: hs(425px);
+  border-radius: hs(20px);
+  background-color: #ffffff;
+  margin-top: hs(250px);
+  display: flex;
+  flex-direction: column;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.03;
+  letter-spacing: normal;
+  font-family: Nunito;
+  color: #00ade6;
+}
+
+.cloudContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: hs(20px);
+}
+
+.topLeftCloud {
+  width: hs(122px);
+  height: hs(107px);
+  background-image: url('../../../../assets/speedTestPopupCloudTopLeft.svg');
+  background-size: 130%;
+  background-repeat: no-repeat;
+  display: flex;
+  border-radius: hs(20px) 0 0 0;
+}
+
+.topRightCloud {
+  width: hs(247px);
+  height: hs(75px);
+  background-image: url('../../../../assets/speedTestPopupCloudTopRight.svg');
+  background-position: hs(20px);
+  background-repeat: no-repeat;
+  background-size: 150%;
+  display: flex;
+  border-radius: 0 hs(20px) 0 0;
+}
+
+.confettiContainer {
+  width: hs(280px);
+  height: hs(100px);
+  display: flex;
+}
+
+.resultContainer {
+  width: 100%;
+  object-fit: contain;
+  font-size: hs(38px);
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.speedTextContiner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-weight: 600;
+}
+
+.speedTestLoader {
+  width: 30px;
+  height: 53px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statusBox {
+  width: hs(119.2px);
+  height: hs(38.2px);
+  margin: 0 0 0 hs(11px);
+  object-fit: contain;
+  border-radius: hs(19px);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.goodConnection {
+  background-color: #61cb65;
+}
+
+.fairConnection {
+  background-color: #d5dc07;
+}
+
+.poorConnection {
+  background-color: #e84343;
+}
+
+.speedTestProceedButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: hs(-15px);
+}
+
+.buttonStyling {
+  top: hs(-8px) !important;
+}
+
+//Media queries for different resolutions.
+
+@media screen {
+  .topContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+    box-shadow: 0 6px 10px 0 rgba(26, 149, 232, 0.2);
+    width: hsm(382px);
+    border-radius: hsm(5px) 0 hsm(5px) hsm(5px);
+  }
+
+  .marginFromTop {
+    margin-top: hsm(30px);
+  }
+
+  .mainContainer {
+    width: hsm(382px);
+    height: hsm(184px);
+    display: flex;
+    border-radius: 5px 5px 0 0;
+    flex-direction: row;
+  }
+
+  .thumbnailContainer {
+    width: hsm(105px);
+    height: hsm(126px);
+    background-position: right;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: hsm(16px) 0 0 hsm(16px);
+  }
+
+  .title {
+    margin-top: hsm(16px);
+    margin-left: hsm(10px);
+    display: flex;
+    color: rgba(0, 0, 0, 1);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .titleText {
+    font-size: hsm(19px);
+    font-weight: bold;
+    margin-top: hs(35px);
+  }
+
+  .description {
+    display: none !important;
+  }
+
+  .emptyDateTimeText {
+    font-size: hsm(12px);
+    align-self: center;
+    font-weight: bold;
+    font-style: italic;
+    opacity: 0.2;
+    position: relative;
+    cursor: default;
+  }
+
+  .calendarContainer {
+    width: hsm(24px);
+    height: hsm(24px);
+    background-image: url("../../../../assets/calendar.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .calendarDateContainer {
+    width: 100%;
+    position: relative;
+    height: hsm(22px);
+    margin-top: hsm(22px);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .timeClockContainer {
+    max-width: 100%;
+    height: hs(53px);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .clockContainer {
+    width: hsm(24px);
+    height: hsm(24px);
+    background-image: url("../../../../assets/clock.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .mentorInfoContainer {
+    width: hsm(28px);
+    height: hsm(28px);
+  }
+
+  .dateTime {
+    font-size: hsm(13px);
+    align-self: center;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.75);
+  }
+
+  .dateTimeWrapper {
+    max-width: hsm(120px);
+    margin-top: hsm(10px);
+    margin-left: hsm(10px);
+    height: hs(32px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footerWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: hsm(10px);
+  }
+
+  .footerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: flex-end;
+    width: 94%;
+    margin-top: hsm(10px);
+    height: hs(53px);
+    position: relative;
+    left: -6%;
+  }
+
+  .timerBanner {
+    width: hsm(382px);
+    height: hsm(35px);
+    background-color: rgba(94, 224, 241, 0.13);
+    border-radius: 0 0 hsm(5px) hsm(5px);
+    display: flex;
+    flex-direction: row;
+    color: #00ade6;
+    font-size: hsm(13px);
+    opacity: 0.9;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    cursor: default;
+    margin-top: hsm(2px);
+  }
+
+  .timerMsg {
+    color: #504f4f !important;
+    font-size: hsm(14px) !important;
+    opacity: 0.8 !important;
+    margin: 0 hsm(5px) 0 hsm(9px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timerIcon {
+    width: hsm(22px);
+    height: hsm(22px);
+    opacity: 0.8;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../../../assets/timerIcon.svg");
+  }
+
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: hsm(16px);
+    margin-top: hsm(4px);
+  }
+
+  .activityContainer {
+    display: none;
+  }
+
+  .mobileActivityContainer {
+    width: 60%;
+    height: 5vh;
+    margin-top: hsm(30px);
+    margin-right: 3.4%;
+    border-radius: hsm(3px) hsm(3px) 0 0;
+    box-shadow: 0 -5px 10px 0 rgba(26, 149, 232, 0.2);
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .editIcon {
+    height: 1.6vh;
+    width: 1.6vh;
+    background-image: url("../../../../assets/edit.svg");
+    position: relative;
+    top: -1vh;
+    left: -1vh;
+  }
+
+  .cancelIcon {
+    background-image: url("../../../../assets/cancel.svg");
+    position: relative;
+    top: -1vh;
+    right: 0.2vh;
+    height: 1.6vh;
+    width: 1.6vh;
+  }
+
+  .activityText {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.8vh;
+    font-weight: bold;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cancelText {
+    color: #ff5744;
+    position: relative;
+    left: 1vh;
+    display: flex;
+  }
+
+  .editText {
+    color: #00ade6;
+    display: flex;
+  }
+
+  .separator {
+    align-self: center;
+    justify-self: center;
+    border: 0.5px solid #00ade6;
+    opacity: 0.2;
+  }
+
+  .activitySeparator {
+    height: 3vh !important;
+    align-self: flex-end !important;
+    margin: 0 2vh 0 2vh;
+    position: relative;
+    top: -0.5vh;
+  }
+
+  .batchNameContainer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: hs(-5px);
+    font-size: hs(23px);
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  .toolTip {
+    background-color: rgba(191, 247, 249, 0.5) !important;
+    font-weight: 600 !important;
+    font-size: hs(23px) !important;
+  }
+}
+
+
+@media screen and (min-width: 1100px) and (max-width: 1199px) {
+  .batchNameContainer {
+    font-size: hs(28px);
+  }
+
+  .toolTip {
+    font-size: hs(26px) !important;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1099px) {
+  .batchNameContainer {
+    font-size: hs(30px);
+  }
+
+  .toolTip {
+    font-size: hs(28px) !important;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 999px) {
+  .batchNameContainer {
+    font-size: hs(30px);
+    top: hs(-8px);
+  }
+
+  .toolTip {
+    font-size: hs(30px) !important;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .activityText {
+    font-size: 70% !important;
+  }
+
+  .activitySeparator {
+    height: 2.5vh !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mobileActivityContainer {
+    height: hsm(30px);
+    padding-top: hsm(5px);
+    position: relative;
+    right: 0;
+  }
+
+  .activitySeparator {
+    top: 0;
+  }
+
+  .activityText {
+    font-size: 90%;
+  }
+
+  .editIcon {
+    width: hsm(13px);
+    height: hsm(13px);
+    top: hsm(-5px);
+  }
+
+  .cancelIcon {
+    width: hsm(13px);
+    height: hsm(13px);
+    top: hsm(-5px);
+  }
+
+  .mentorInfoIcon {
+    width: hsm(26px);
+    height: hsm(26px);
+    margin-left: 0;
+    left: 0;
+    top: hs(2px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mainContainer {
+    height: hsm(208px);
+  }
+
+  .buttonContainer {
+    margin-top: hsm(24px);
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 550px) {
+  .mentorInfoIcon {
+    width: hsm(24px);
+    height: hsm(24px);
+    margin-left: 0;
+    left: hs(2px);
+    top: hs(2px);
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
+  .activityText {
+    font-size: 2vh;
+  }
+
+  .editIcon {
+    top: -0.4vh;
+    height: 1.77vh;
+    width: 1.78vh;
+  }
+
+  .cancelIcon {
+    top: -0.4vh;
+    height: 1.77vh;
+    width: 1.78vh;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 600px) {
+  .mainContainer {
+    height: hsm(165px);
+  }
+
+  .buttonContainer {
+    margin-top: hsm(2px);
+  }
+
+  .calendarContainer {
+    width: hsm(20px);
+    height: hsm(20px);
+  }
+
+  .clockContainer {
+    width: hsm(20px);
+    height: hsm(20px);
+  }
+
+  .dateTime {
+    font-size: hsm(11px);
+  }
+
+  .emptyDateTimeText {
+    font-size: hsm(11px);
+  }
+
+  .titleText {
+    font-size: hsm(17px);
+  }
+
+  .title {
+    margin-top: hsm(12px);
+  }
+
+  .dateTimeWrapper {
+    margin-top: hsm(9px);
+  }
+
+  .footerContainer {
+    margin-top: hsm(5px);
+  }
+
+  .calendarDateContainer {
+    margin-top: hsm(18px);
+  }
+
+  .timerBanner {
+    height: hsm(26px);
+    font-size: hsm(11px);
+  }
+
+  .timerMsg {
+    font-size: hsm(11px) !important;
+    margin: 0 hsm(5px) 0 hsm(5px);
+  }
+
+  .timerIcon {
+    width: hsm(17px);
+    height: hsm(17px);
+  }
+
+  .mentorInfoIcon {
+    width: hsm(20px);
+    height: hsm(20px);
+    margin-left: 0;
+    left: hs(2px);
+    top: hsm(3px);
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .topContainer {
+    width: hsm(360px);
+    border-radius: hsm(3px);
+  }
+
+  .marginFromTop {
+    margin-top: hsm(22px);
+  }
+
+  .mobileActivityContainer {
+    margin-top: hsm(22px);
+    position: relative;
+    right: 3%;
+    border-radius: hsm(2px) hsm(2px) 0 0;
+    width: 45%;
+  }
+
+  .mainContainer {
+    height: hsm(135px);
+    width: hsm(360px);
+  }
+
+  .buttonContainer {
+    margin-top: 0;
+  }
+
+  .calendarContainer {
+    width: hsm(18px);
+    height: hsm(18px);
+  }
+
+  .clockContainer {
+    width: hsm(18px);
+    height: hsm(18px);
+  }
+
+  .dateTime {
+    font-size: hsm(10px);
+  }
+
+  .emptyDateTimeText {
+    font-size: hsm(10px);
+  }
+
+  .titleText {
+    font-size: hsm(14px);
+  }
+
+  .title {
+    margin-top: hs(18px);
+  }
+
+  .dateTimeWrapper {
+    margin-top: hsm(8px);
+  }
+
+  .footerContainer {
+    margin-top: hs(10px);
+  }
+
+  .calendarDateContainer {
+    margin-top: hsm(15px);
+  }
+
+  .timerBanner {
+    width: hsm(360px);
+    height: hsm(24px);
+    font-size: hsm(10px);
+  }
+
+  .timerMsg {
+    font-size: hsm(10px) !important;
+    margin: 0 hsm(5px) 0 hsm(5px);
+  }
+
+  .timerIcon {
+    width: hsm(17px);
+    height: hsm(17px);
+  }
+
+  .mentorInfoIcon {
+    width: hsm(18px);
+    height: hsm(18px);
+    margin-left: 0;
+    left: hs(2px);
+    top: hsm(2px);
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+  .mainContainer {
+    height: hsm(115px);
+    width: hsm(360px);
+  }
+
+  .thumbnailContainer {
+    width: hsm(85px);
+    height: hsm(90px);
+  }
+
+  .buttonContainer {
+    margin-top: hsm(-2px);
+  }
+
+  .calendarContainer {
+    width: hsm(16px);
+    height: hsm(16px);
+  }
+
+  .clockContainer {
+    width: hsm(16px);
+    height: hsm(16px);
+  }
+
+  .dateTime {
+    font-size: hsm(9px);
+  }
+
+  .emptyDateTimeText {
+    font-size: hsm(9px);
+  }
+
+  .titleText {
+    font-size: hsm(12px);
+  }
+
+  .title {
+    margin-top: 0;
+  }
+
+  .dateTimeWrapper {
+    margin-top: hsm(7px);
+  }
+
+  .footerContainer {
+    margin-top: hs(8px);
+  }
+
+  .calendarDateContainer {
+    margin-top: hsm(12px);
+    margin-bottom: 0px;
+  }
+
+  .timerBanner {
+    width: hsm(360px);
+    height: hs(88px);
+    font-size: hsm(9px);
+  }
+
+  .timerMsg {
+    font-size: hsm(9px) !important;
+    margin: 0 hsm(3px) 0 hsm(5px);
+  }
+
+  .timerIcon {
+    width: hsm(15px);
+    height: hsm(15px);
+  }
+
+  .mobileActivityContainer {
+    width: 45%;
+  }
+
+  .activityText {
+    font-size: 110%;
+  }
+
+  .editIcon {
+    top: hsm(-2.8px);
+  }
+
+  .cancelIcon {
+    top: hsm(-2.8px);
+  }
+
+  .mentorInfoIcon {
+    width: hsm(17px);
+    height: hsm(17px);
+    margin-left: hs(-6px);
+    left: hs(2px);
+    top: hs(8px);
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  .topContainer {
+    width: hsm(340px);
+  }
+
+  .marginFromTop {
+    margin-top: hs(100px);
+  }
+
+  .mobileActivityContainer {
+    margin-top: hs(100px);
+    position: relative;
+    right: 5.4%;
+    border-radius: hsm(2px) hsm(2px) 0 0;
+    width: 40%;
+  }
+
+  .mainContainer {
+    height: hs(460px);
+    width: hsm(340px);
+  }
+
+  .thumbnailContainer {
+    width: hsm(75px);
+    height: hsm(85px);
+    margin: hsm(8px) 0 0 hsm(16px);
+  }
+
+  .buttonContainer {
+    margin-top: hsm(-8px);
+  }
+
+  .calendarContainer {
+    width: hsm(13px);
+    height: hsm(13px);
+  }
+
+  .clockContainer {
+    width: hsm(13px);
+    height: hsm(13px);
+  }
+
+  .dateTime {
+    font-size: hsm(8px);
+  }
+
+  .emptyDateTimeText {
+    font-size: hsm(8px);
+  }
+
+  .titleText {
+    font-size: hsm(10px);
+  }
+
+  .title {
+    margin-top: 0;
+  }
+
+  .dateTimeWrapper {
+    margin-top: hsm(5px);
+    margin-left: hsm(8px);
+  }
+
+  .footerContainer {
+    margin-top: 0px;
+  }
+
+  .calendarDateContainer {
+    margin-top: hsm(12px);
+    margin-bottom: 0px;
+  }
+
+  .timerBanner {
+    width: hsm(340px);
+    height: hs(88px);
+    font-size: hsm(8px);
+  }
+
+  .timerMsg {
+    font-size: hsm(8px) !important;
+    margin: 0 hsm(2px) 0 hsm(4px);
+  }
+
+  .timerIcon {
+    width: hsm(13px);
+    height: hsm(13px);
+  }
+
+  .mentorInfoIcon {
+    width: hsm(15px);
+    height: hsm(15px);
+    margin-left: hs(-14px);
+    left: hs(14px);
+    top: hs(2px);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .topContainer {
+    width: hs(1480px);
+    margin-top: hs(100px);
+    border-radius: hs(12px);
+    box-shadow: 0 3px 10px 0 #1ac9e8;
+  }
+
+  .mobileActivityContainer {
+    display: none;
+  }
+
+  .mainContainer {
+    width: hs(1480px);
+    height: hs(380px);
+  }
+
+  .thumbnailContainer {
+    width: hsm(70px);
+    height: hsm(78px);
+    margin: hsm(2px) 0 0 hsm(8px);
+    background-position: right;
+  }
+
+  .buttonContainer {
+    margin-top: hs(-28px);
+  }
+
+  .title {
+    position: relative;
+    top: hs(-6px);
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .calendarContainer {
+    width: hsm(11px);
+    height: hsm(11px);
+  }
+
+  .clockContainer {
+    width: hsm(11px);
+    height: hsm(11px);
+  }
+
+  .dateTime {
+    font-size: hsm(7px);
+  }
+
+  .emptyDateTimeText {
+    font-size: hsm(7px);
+  }
+
+  .titleText {
+    font-size: hs(45px);
+    margin-top: hs(35px);
+  }
+
+  .dateTimeWrapper {
+    margin-top: hs(17px);
+    margin-left: hs(30px);
+  }
+
+  .footerWrapper {
+    margin-left: 0;
+  }
+
+  .footerContainer {
+    margin-top: hs(-20px);
+  }
+
+  .calendarDateContainer {
+    margin-top: hs(35px);
+    margin-bottom: 0px;
+  }
+
+  .timerBanner {
+    width: hs(1480px);
+    height: hs(88px);
+  }
+
+  .activityIconContainer {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+  }
+
+  .timerBanner {
+    font-size: hsm(7px)
+  }
+
+  .timerMsg {
+    font-size: hsm(7px) !important;
+    margin: 0 hsm(2px) 0 hsm(4px);
+  }
+
+  .timerIcon {
+    width: hsm(12px);
+    height: hsm(12px);
+  }
+
+  .activityContainer {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    left: -6%;
+    top: hs(8px);
+  }
+
+  .editIcon {
+    height: hs(19px);
+    width: hs(18px);
+    background-image: url("../../../../assets/edit.svg");
+    position: relative;
+    top: hs(-7px);
+    left: hs(-6px);
+  }
+
+  .cancelIcon {
+    background-image: url("../../../../assets/cancel.svg");
+    position: relative;
+    left: hs(-3px);
+    top: hs(-6px);
+    height: hs(20px);
+    width: hs(20px);
+  }
+
+  .editText {
+    color: #00ade6;
+    display: flex;
+  }
+
+  .cancelText {
+    color: #ff5744;
+    position: relative;
+    left: hs(6px);
+    display: flex;
+  }
+
+  .separator {
+    align-self: center;
+    justify-self: center;
+    border: 0.5px solid #00ade6;
+    opacity: 0.2;
+    margin-left: hs(50px);
+    height: hs(280px);
+  }
+
+  .activitySeparator {
+    height: hs(36px) !important;
+    align-self: flex-end !important;
+    margin: 0 hs(10px) 0 hs(10px);
+    position: relative;
+    top: hs(-3px);
+  }
+
+  .activityText {
+    font-size: hs(26px);
+  }
+
+  .mentorInfoIcon {
+    width: hsm(15px);
+    height: hsm(15px);
+    margin-left: hs(-14px);
+    left: hs(8px);
+    top: hs(-4px);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .topContainer {
+    width: hs(1540px);
+    margin-top: hs(84px);
+    border-radius: hs(10px);
+  }
+
+  .mainContainer {
+    width: hs(1540px);
+    height: hs(386px);
+  }
+
+  .thumbnailContainer {
+    width: hsm(65px);
+    height: hsm(75px);
+    margin: hs(10px) 0 0 hs(50px);
+  }
+
+  .buttonContainer {
+    margin-top: 0px;
+    position: relative;
+    top: hs(-28px);
+  }
+
+  .footerContainer {
+    margin-top: hs(-23px);
+  }
+
+  .timerBanner {
+    width: hs(1540px);
+    height: hs(80px);
+  }
+
+  .activityText {
+    font-size: hs(24px);
+  }
+
+  .mentorInfoIcon {
+    width: hsm(14px);
+    height: hsm(14px);
+    margin-left: hs(-14px);
+    left: hs(8px);
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .calendarContainer {
+    width: hsm(11px);
+    height: hsm(11px);
+  }
+
+  .clockContainer {
+    width: hsm(11px);
+    height: hsm(11px);
+  }
+
+  .mentorInfoIcon {
+    width: hsm(13px);
+    height: hsm(13px);
+    margin-left: hs(-8px);
+    left: hs(2px);
+    top: hs(-2px);
+  }
+
+  .dateTime {
+    font-size: hs(29px);
+  }
+
+  .emptyDateTimeText {
+    font-size: hs(29px);
+  }
+
+  .titleText {
+    font-size: hs(40px);
+  }
+
+  .dateTimeWrapper {
+    margin-top: hs(14px);
+    margin-left: hs(30px);
+  }
+
+  .footerContainer {
+    margin-top: hs(-27px);
+  }
+
+  .calendarDateContainer {
+    margin-top: hs(35px);
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .topContainer {
+    width: hs(1418px);
+    border-radius: hs(3px);
+    margin-top: hs(90px);
+  }
+
+  .mainContainer {
+    width: hs(1418px);
+    height: hs(340px);
+    border-radius: hs(5px) hs(5px) 0 0;
+  }
+
+  .thumbnailContainer {
+    //width: hsm(62px);
+    //height: hsm(65px);
+    width: hs(340px);
+    height: 100%;
+    margin: 0 0 0 hs(20px);
+  }
+
+  .timerBanner {
+    width: hs(1418px);
+    height: hs(64px);
+    border-radius: 0 0 hs(5px) hs(5px);
+  }
+
+  .infoContainer {
+    margin-left: hs(70px);
+  }
+
+  .calendarContainer {
+    width: hs(42px);
+    height: hs(42px);
+  }
+
+  .clockContainer {
+    width: hs(42px);
+    height: hs(42px);
+  }
+
+  .mentorInfoIcon {
+    width: hs(50px);
+    height: hs(50px);
+    margin-left: hs(-8px);
+    left: hs(6px);
+    top: hs(4px);
+  }
+
+  .dateTimeWrapper {
+    margin-top: hs(13px);
+  }
+
+  .footerContainer {
+    margin-top: hs(-29px);
+  }
+
+  .dateTime {
+    font-size: hs(26px);
+  }
+
+  .emptyDateTimeText {
+    font-size: hs(26px);
+  }
+
+  .calendarDateContainer {
+    margin-top: hs(30px);
+  }
+
+  .titleText {
+    font-size: hs(30px);
+  }
+
+  .timerMsg {
+    font-size: hs(21px) !important;
+    margin: 0 hs(11px) 0 hs(15px) ;
+  }
+
+  .timerBanner {
+    font-size: hs(24px);
+  }
+
+  .timerIcon {
+    width: hs(41px);
+    height: hs(43.4px);
+  }
+
+  .activityText {
+    font-size: hs(22px);
+    font-weight: bold;
+  }
+
+  .buttonContainer {
+    margin-right: hs(60px);
+    margin-top: hs(20px);
+  }
+}
+
+// Contact school pop up styles
+
+@media screen {
+  .contactSchoolContainer {
+    width: hs(545px);
+    height: hs(400px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: hs(20px);
+    position: relative;
+    top: hs(180px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 9999;
+  }
+
+  .contactBatchContainer {
+    height: hs(350px);
+  }
+
+  .centerAligned {
+    justify-content: center;
+  }
+
+  .contactSchoolText {
+    font-size: hs(24px);
+    color: #00ade6;
+    font-family: Nunito;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: hs(20px);
+    font-weight: 600;
+    padding: 0 hs(20px) 0 hs(20px);
+  }
+
+  .heading {
+    margin-top: hs(0px) !important;
+    margin-bottom: hs(10px);
+    font-size: hs(34px) !important;
+  }
+
+  .batchHeading {
+    margin-top: hs(30px) !important;
+    margin-bottom: hs(10px);
+    font-size: hs(34px) !important;
+  }
+
+  .lessMargin {
+    margin-top: 0 !important;
+  }
+
+  .okButton {
+    background-image: linear-gradient(to top, #00ade6, #34e4ea);
+    width: hs(100px);
+    height: hs(50px);
+    font-size: hs(22px);
+    font-family: Nunito;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: hs(40px);
+    border-radius: hs(28px);
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .okButtonTopMargin {
+    margin-top: hs(140px) !important
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contactSchoolContainer {
+    margin-top: hs(80px);
+  }
+}
+
+@media screen and (width: 1100px) {
+  .contactSchoolContainer {
+    width: hs(625px) !important;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  .contactSchoolContainer {
+    width: hs(650px);
+    height: hs(470px);
+  }
+
+  .contactSchoolText {
+    font-size: hs(29px);
+  }
+
+  .heading {
+    font-size: hs(38px) !important;
+  }
+
+  .batchHeading {
+    margin-top: hs(40px) !important;
+    font-size: hs(38px) !important;
+  }
+
+  .okButtonTopMargin {
+    margin-top: hs(155px) !important
+  }
+
+  .okButton {
+    width: hs(110px);
+    height: hs(70px);
+    border-radius: hs(32px);
+    font-size: hs(28px);
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 900px) {
+  .contactSchoolContainer {
+    width: hs(720px);
+    height: hs(520px);
+  }
+
+  .contactSchoolText {
+    font-size: hs(32px);
+  }
+
+  .heading {
+    font-size: hs(42px) !important;
+  }
+
+  .batchHeading {
+    margin-top: hs(50px) !important;
+    font-size: hs(42px) !important;
+  }
+
+  .okButtonTopMargin {
+    margin-top: hs(165px) !important
+  }
+
+  .okButton {
+    width: hs(130px);
+    height: hs(80px);
+    border-radius: hs(38px);
+    font-size: hs(32px);
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 800px) {
+  .contactSchoolContainer {
+    width: hs(790px);
+    height: hs(570px);
+  }
+
+  .contactSchoolText {
+    font-size: hs(36px);
+  }
+
+  .heading {
+    font-size: hs(46px) !important;
+  }
+
+  .batchHeading {
+    margin-top: hs(55px) !important;
+    font-size: hs(46px) !important;
+  }
+
+  .okButtonTopMargin {
+    margin-top: hs(190px) !important
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 700px) {
+  .contactSchoolContainer {
+    width: hs(870px);
+    height: hs(625px);
+    margin-top: hs(150px);
+  }
+
+  .contactSchoolText {
+    font-size: hs(40px);
+  }
+
+  .heading {
+    font-size: hs(50px) !important;
+  }
+
+  .okButton {
+    width: hs(160px);
+    height: hs(100px);
+    border-radius: hs(48px);
+    font-size: hs(40px);
+  }
+
+  .batchHeading {
+    margin-top: hs(65px) !important;
+    font-size: hs(50px) !important;
+  }
+
+  .okButtonTopMargin {
+    margin-top: hs(190px) !important
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 600px) {
+  .contactSchoolContainer {
+    width: hsm(230px);
+    height: hsm(165px);
+    margin-top: hsm(46px);
+  }
+
+  .contactSchoolText {
+    font-size: hsm(10.5px);
+  }
+
+  .heading {
+    font-size: hsm(15px) !important;
+    margin-top: hsm(-7px) !important;
+    margin-bottom: hsm(4px) !important;
+  }
+
+  .okButton {
+    width: hsm(40px);
+    height: hsm(25px);
+    border-radius: hsm(16px);
+    font-size: hsm(11px);
+    margin-top: hsm(15px);
+  }
+
+  .batchHeading {
+    margin-top: hsm(15px) !important;
+    font-size: hsm(15px) !important;
+  }
+
+  .okButtonTopMargin {
+    margin-top: hsm(50px) !important
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 500px) {
+  .contactSchoolContainer {
+    width: hsm(250px);
+    height: hsm(180px);
+  }
+
+  .contactSchoolText {
+    font-size: hsm(11.5px);
+  }
+
+  .okButtonTopMargin {
+    margin-top: hsm(60px) !important
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contactSchoolContainer {
+    width: hsm(280px);
+    height: hsm(200px);
+    margin-top: hsm(70px);
+  }
+
+  .contactSchoolText {
+    font-size: hsm(13px);
+  }
+
+  .heading {
+    font-size: hsm(17px) !important;
+    margin-top: hsm(-4px) !important;
+    margin-bottom: hsm(8px) !important;
+  }
+
+  .okButton {
+    width: hsm(50px);
+    height: hsm(30px);
+    border-radius: hsm(16px);
+    font-size: hsm(13px);
+    margin-top: hsm(15px);
+  }
+
+  .batchHeading {
+    margin-top: hsm(18px) !important;
+    font-size: hsm(17px) !important;
+  }
+
+  .okButtonTopMargin {
+    margin-top: hsm(65px) !important
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 370px) {
+  .contactSchoolContainer {
+    margin-top: hsm(50px);
+  }
+}
+
+.newCardContainer{
+  margin: auto;
+  background: white;
+  @include resD((
+    height:380px,
+    width:1000px,
+    border-radius:32px,
+    padding:30px 36px
+  ))
+}
+.newCardTopicTextContainer{
+  flex: 0.8;
+}
+.newCardCtaContainer{
+  display: flex;
+  justify-content: flex-end;
+}
+.newCardTopicTitle{
+  color: $emperor-25;
+  @include resD((
+    font-size:40px,
+    font-weight:700,
+    margin-bottom:14px
+  ))
+}
+.newCardTopicDetailsContainer{
+  @include flex(space-between,flex-start);
+  @include resD((
+    height:300px
+  ))
+}
+.newCardTopicDescription{
+  color: #6A6A6A;
+  @include resD((
+    font-size:20px,
+    font-weight:400,
+    line-height:140%
+  ))
+}
+.newCardUpcomingClass{
+  color: #929292;
+  @include flex(flex-start,center);
+  @include resD((
+      gap:8px,
+      font-size:20px,
+      font-weight:700,
+      margin-bottom:18px
+  ))
+}
+.centerSvg{
+  @include flex()
+}
+.courseBadgeContainer{
+  background:$deep-sky-blue-95;
+  width: max-content;
+  @include resD((
+    padding:8px 10px,
+    border-radius:30px,
+    margin-bottom:20px
+  ))
+}
+.courseBadgeContentContainer{
+  color: $deep-sky-blue-24;
+  width: 100%;
+ @include flex(space-between,center );
+ @include resD((
+  gap:4px,
+  font-weight:700,
+  font-size:16px
+ ))
+}
+.courseBadgeIconContainer{
+  @include flex
+}
+.topicThumbnailContainer{
+  aspect-ratio: 1/1;
+  @include resD((
+    height:200px,
+    width:200px
+  ))
+}

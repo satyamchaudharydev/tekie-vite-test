@@ -1,0 +1,1152 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import 'src/scss/Inter.scss';
+@import '../../../variables/variables';
+
+$pri-color: $primary-color;
+$pri-color-dark:  $primary-color;
+// $pri-color: #8C61CB;
+// $pri-color-dark: #7b40d4;
+$primary-fontFamily: Inter;
+$primary-fontStyle: normal;
+$primary-fontWeight: 500;
+
+// body {
+//     font-family: $primary-fontFamily;
+//     font-weight: $primary-fontWeight;
+//     font-style: $primary-fontStyle;
+// }
+
+.default-font-styles {
+    font-family: $primary-fontFamily;
+    font-weight: $primary-fontWeight;
+    font-style: $primary-fontStyle;
+}
+
+.classroom-main-container {
+    @include resD((
+        margin-top: 24px,
+        margin-left: 29px,
+        width: 94%,
+        min-height: 700px,
+    ));
+    @include resM((
+        margin-top: 16px,
+        margin-left: 21px,
+        width: 94%,
+        min-height: 600px,
+    ));
+    box-sizing: unset;
+}
+
+
+.classroom-header {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    span {
+        font-family: 'Nunito';
+        // font-style: $primary-fontStyle;
+        font-weight: 550;
+        @include resD((
+            font-size: 18px,
+            margin-bottom: 15px
+        ));
+        @include resM((
+            font-size: 10px,
+            margin-bottom: 15px
+        ));
+        color: #1e1f1e;
+    }
+}
+
+.classroom-dropdowns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    @include resD((
+        width: 100%,
+    ));
+    @include resM((
+        width: 70%
+    ));
+
+    .filter-container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .label-dropdown {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            @include resD((
+                margin-right: 18px
+            ));
+            @include resM((
+                margin-right: 16px
+            ));
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            label {
+                font-family: $primary-fontFamily;
+                font-weight: 400;
+                font-style: $primary-fontStyle;
+                color: #1a1a1a;
+                margin-bottom:  0px;
+                @include resD((
+                    font-size: 17px,
+                ));
+                @include resM((
+                    font-size: 12px,
+                ));
+            }
+
+            .classroom-dropdown {
+                @include resD((
+                    margin-left: 8px,
+                    height: 52px,
+                    width: 212px,
+                ));
+                @include resM((
+                    margin-left: 10px,
+                    height: 38px,
+                    width: 192px,
+                ));
+            }
+        }
+    }
+}
+
+.classroom-filters {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @include resD((
+        margin-top: 16px
+    ));
+    @include resM((
+        margin-top: 12px
+    ));
+}
+
+.classroom-filter-tags {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // height: 32px;
+    // padding: 4px 8px;
+    @include resD((
+        height: 40px,
+        min-width: 122px,
+        max-width: 234px,
+        margin-right: 10px,
+        margin-bottom: 16px,
+        padding: 9px 12px 9px 16px,
+        border-radius: 64px
+    ));
+    @include resM((
+        height: 28px,
+        min-width: 84px,
+        max-width: 116px,
+        margin-right: 6px,
+        margin-bottom: 11.4px,
+        padding: 6px 10px 6px 12px,
+        border-radius: 42px
+    ));
+    cursor: pointer;
+    background: rgba(140, 97, 203, 0.1);
+    border: 1px solid $pri-color;
+    box-sizing: border-box;
+    transition: all .2s;
+    
+    &:hover {
+        transition: all .2s;
+        background: rgba(140, 97, 203, 0.16);
+    }
+
+    span {
+        @extend .default-font-styles;
+        font-weight: 400;
+        color: $pri-color;
+        // margin-left: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: flex;
+        align-items: center;
+        display:inline-block;
+        @include resD((
+            min-width: 42px,
+            max-width: 164px,
+            font-size: 16.2px,
+            margin-right: 10px,
+            height: 20.2px,
+        ));
+        @include resM((
+            min-width: 32px,
+            max-width: 86px,
+            font-size: 14px,
+            margin-right: 10px,
+            height: 17px,
+        ));
+    }
+}
+
+.classroom-filter-remove {
+    cursor: pointer;
+    margin-left: 8px;
+    margin-right: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include resD((
+        height: 100%,
+        width: 20.2px
+    ));
+    @include resM((
+        height: 17px,
+        width: 17px
+    ));
+
+    & svg {
+        @include resD((
+            height: 16.5px,
+            width: 16.5px
+        ));
+        @include resM((
+            height: 11.5px,
+            width: 11.5px
+        ));
+    }
+
+    svg > path {
+        fill: $pri-color;
+    }
+}
+
+.create-classroom-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+    font-family: $primary-fontFamily;
+    font-style: $primary-fontStyle;
+    font-weight: 400;
+    box-sizing: unset;
+    @include resD((
+        height: 30px,
+        width: 220px,
+        padding: 10px 16px 10px 15px,
+        bottom: 2px,
+        font-size: 15.5px,
+        border-radius: 11px,
+        left: 32px
+        // margin-right: 45px
+    ));
+    @include resM((
+        height: 30px,
+        width: 139px,
+        padding: 9px 16px 9px,
+        bottom: 1px,
+        font-size: 10px,
+        border-radius: 6px,
+        margin: 0px 16px 0px 0px,
+    ));
+    width: fit-content;
+    background: $pri-color;
+    color: #fff;
+    border-width: inherit;
+    // font-size: 12.5px;
+    transition: all 0.2s;
+    letter-spacing: 0.2px;
+    user-select: none;
+    // line-height: 1;
+
+    svg {
+        position: relative;
+        @include resD((
+            left: -1px,
+            margin-right: 10px,
+            height: 21px,
+            width: 21px
+        ));
+        @include resM((
+            left: 2px,
+            margin-right: 6px,
+            height: 13px,
+            width: 13px
+        ));
+    }
+
+    svg > path {
+        fill: white;
+    }  
+
+    &:hover {
+        cursor: pointer;
+        transition: all 0.2s;
+        background: $pri-color-dark;   
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.45);
+    }
+}
+//Class Cards
+
+.classes-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @include resD((
+        justify-content: flex-start,
+        // gap: 6px 34px,
+        width: 100%
+    ));
+    @include resM((
+        justify-content: space-around,
+        // gap: 4px 26px,
+        width: 100%
+    ));
+    margin-top: 0px;
+}
+
+.skeleton-card-container {
+    position: relative;
+    background: #F1F1F1;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    @include resD((
+        width: 320px,
+        height: 405px,
+        margin-top: 27px,
+        margin-right: 26px,
+        border-radius: 21px,
+    ));
+    @include resM((
+        width: 260px,
+        height: 309px,
+        margin-top: 20px,
+        margin-right: 22px,
+        border-radius: 12px,
+    ));
+}
+
+.classroom-skeleton-loader {
+    position: relative;
+    background: #F1F1F1;
+    box-shadow: none;
+    @include resD((
+        width: 45px,
+        height: 42px,
+        top: 45%,
+        left: 47%
+    ));
+    @include resM((
+        width: 32px,
+        height: 29px,
+        top: 45%,
+        left: 47%
+    ));
+}
+
+.classroom-card-container {
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    // position: relative;
+    @include resD((
+        width: 320px,
+        height: 465px,
+        margin-top: 27px,
+        margin-right: 26px,
+        border-radius: 21px,
+        padding-bottom:20px
+        // flex-grow: 1
+    ));
+    @include resM((
+        width: 260px,
+        height: 325px,
+        margin-top: 20px,
+        margin-right: 22px,
+        border-radius: 12px,
+        // flex-grow: 0
+    ));
+
+    &:hover {
+        // cursor: pointer;
+        transition: 0.2s ease-in-out;
+        background-color: #fafafa;
+    }
+
+    .classroom-card-header {
+        display: flex;
+        align-items: center;
+
+        @include resD((
+            width: 272px,
+            height: 72px,
+            margin-top: 25px,
+            margin-left: 0px,
+        ));
+        @include resM((
+            width: 213px,
+            height: 60px,
+            margin-top: 24px,
+            margin-left: 0px,
+        ));
+    .classroom-teacher-name {
+        display: flex;
+        align-items: center;
+
+        @include resD((
+           font-family:Inter,
+           font-weight:500,
+           font-size: 17px,
+           padding:6px 0px 4px 0px
+
+        ));
+        @include resM((
+          
+        ));
+    }
+
+        .classroom-card-header-desc {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            @include resD((
+                width: fit-content,
+                height: fit-content,
+                margin-left: 4px   
+            ));
+            @include resM((
+                width: 126px,
+                height: 51px,
+                margin-left: 1px     
+            ));
+
+            .card-title {
+                position: relative;
+                // font-weight: 650;
+                letter-spacing: 0.001rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                @include resD((
+                    width: 192px,
+                    // bottom: 1px
+                    bottom: unset,
+                    margin-top:5px
+                    // height: px,   
+                ));
+                @include resM((
+                    width: 154px,
+                    bottom: 2px
+                    // height: 51px,   
+                ));
+                span {
+                    font-weight: 500;
+                    font-family: $primary-fontFamily;
+                    font-style: $primary-fontStyle;
+                    @include resD((
+                        font-size: 20px,
+                        
+                    ));
+                    @include resM((
+                        font-size: 16px,  
+                    ));
+                }
+            }
+        }
+    }
+
+    .card-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        @include resD((
+            margin-top: 12px,
+        ));
+        @include resM((
+            margin-top: 8px,
+        ));
+
+        .card-data-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            @include resD((
+                margin-top: 12px,
+            ));
+            @include resM((
+                margin-top: 8px,
+            ));
+        }
+
+        .card-data-container-2 {
+            @extend .card-data-container;
+            @include resD((
+                margin-top: 24px,
+            ));
+            @include resM((
+                margin-top: 17px,
+            ));
+        }
+
+        .card-data-container-3 {
+            @extend .card-data-container;
+            @include resD((
+                margin-top: 32px,
+            ));
+            @include resM((
+                margin-top: 17px,
+            ));
+        }
+    }
+}
+
+.classroom-card-details {
+    position: relative;
+    background-color: #F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: unset;
+    
+
+    @include resD((
+        width: 126px,
+        padding: 6px 10px,
+        bottom: unset,
+        border-radius: 6px,
+        // height: 28px,
+    ));
+    @include resM((
+        // font-size: 14px,
+        width: 102px,
+        padding: 3px 6px,
+        border-radius: 3px,
+        bottom: 2px
+    ));
+
+    svg {
+        @include resD((
+            height: 21px,
+            width: 21px,
+            margin-right: 8px
+        ));
+        @include resM((
+            height: 15px,
+            width: 15px,
+            margin-right: 5px
+        ));
+    }
+
+    svg > path {
+        fill: #777777;
+        @include resD((
+            padding: 2px 6px,
+        ));
+        @include resM((
+            padding: 4px 8px,
+        ));
+    }
+}
+
+.classroom-card-grade-span {
+    color: #757575;
+    font-weight: 500;
+    font-family: $primary-fontFamily;
+    @include resD((
+        font-size: 18px,  
+    ));
+    @include resM((
+        font-size: 14px,  
+    ));
+}
+
+.classroom-card-grade-span-2{
+    font-weight: 500;
+    font-family: $primary-fontFamily;
+    @include resD((
+        font-size: 18px,  
+    ));
+    @include resM((
+        font-size: 14px,  
+    ));
+}
+
+@keyframes load {
+    from {
+        left: -150px;
+    }
+    to   {
+        left: 100%;
+    }
+}
+
+.card-data-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include resD((
+        width: 272px,
+        height: 18px,
+        margin-top: 12px,
+    ));
+    @include resM((
+        width: 213px,
+        height: 16px,
+        // margin-top: 17px,
+    ));
+
+    svg {
+        fill: #757575;
+        @include resD((
+            height: 24px,
+            width: 24px
+        ));
+        @include resM((
+            height: 14px,
+            width: 14px
+        ));
+    }
+
+    span {
+        color: #757575;
+        font-family: $primary-fontFamily;
+        font-weight: 400;
+        @include resD((
+            margin-left: 12px,
+            font-size: 15.8px, 
+        ));
+        @include resM((
+            margin-left: 8px,
+            font-size: 10px,
+        ));
+    }
+}
+
+.card-thumbnail-container {
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    cursor: pointer;
+    // Can change width, height in future
+    @include resD((
+        width: 80px,
+        height: 80px,
+        padding-left: 4.5px,
+        border-radius: 15px 
+    ));
+    @include resM((
+        width: 51px,
+        height: 51px,
+        padding-left: 4px ,
+        border-radius: 9px  
+    ));
+    margin-right: 13px;
+
+    .card-thumbnail {
+        background-position: center;
+        @include resD((
+            width: 68px,
+            height: 68px,   
+        ));
+        @include resM((
+            width: 47px,
+            height: 47px,   
+        ));
+    }
+}
+
+.card-data-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+    @include resD((
+        width: 256px,
+        // height: 58px,
+        margin-top: 6px,
+        margin-left: 50px,
+    ));
+    @include resM((
+        width: 198px,
+        // height: 43px,
+        margin-top: 0px,
+        margin-left: 32px,
+    ));
+
+    span {
+        font-family: $primary-fontFamily;
+        font-style: $primary-fontStyle;
+        font-weight: $primary-fontWeight;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+        @include resD((
+            width: 96%,
+            font-size: 17px,
+            margin: 5px 0px 5px,
+        ));
+        @include resM((
+            width: 96%,
+            font-size: 13px,
+            margin: 4px 0px,
+        ));
+
+        span {
+            position: relative;
+            overflow: unset;
+            text-overflow: unset;
+            white-space: unset;
+            display: unset;
+            bottom: 3px;
+            margin: 0px 2px;
+        }
+    }
+
+    .classroom-data-loader-1 {
+        border-radius: 2px;
+        position: relative;
+        overflow: hidden;
+        height: 18px;
+        width: 150px;
+        margin-top: 6px;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -110px;
+            top: 0;
+            height: 100%;
+            width: 150px;
+            background: linear-gradient(to right, transparent 0%, rgb(233, 233, 233) 50%, transparent 100%);
+            animation: load 1.8s cubic-bezier(.17,.67,.83,.67) infinite;
+        }
+    }
+
+    .classroom-data-loader-2 {
+        border-radius: 2px;
+        position: relative;
+        overflow: hidden;
+        height: 18px;
+        width: 100px;
+        margin-top: 6px;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -30px;
+            top: 0;
+            height: 100%;
+            width: 100px;
+            background: linear-gradient(to right, transparent 0%, rgb(233, 233, 233) 50%, transparent 100%);
+            animation: load 1.8s 0.1s cubic-bezier(.17,.67,.83,.67) infinite;
+        }
+    }
+}
+
+.card-data-details-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+    @include resD((
+        width: 256px,
+        height: 18px,
+        margin-top: 12px,
+        margin-left: 53px,
+    ));
+    @include resM((
+        width: 198px,
+        margin-top: 7px,
+        height: 16px,
+        margin-left: 32px,
+    ));
+
+    span {
+        font-family: $primary-fontFamily;
+        font-style: $primary-fontStyle;
+        font-weight: $primary-fontWeight;
+        @include resD((
+            font-size: 19px,
+        ));
+        @include resM((
+            font-size: 13px,
+        ));
+    }
+}
+
+.card-data-details-3 {
+    @include resD((
+        width: 256px,
+        height: 18px,
+        margin-top: 16px,
+        margin-left: 50px,
+    ));
+    @include resM((
+        width: 198px,
+        height: 16px,
+        margin-top: 4px,
+        margin-left: 32px,
+    ));
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.card-data-tag {
+    background: #EEEEEE;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: $primary-fontFamily;
+    font-style: $primary-fontStyle;
+    font-weight: $primary-fontWeight;
+    color: #616161;
+    display: block;
+    // align-items: flex-start;
+    // justify-content: flex-start;
+    text-transform: capitalize;
+    box-sizing: unset;
+
+    @include resD((
+        padding: 4px 10px,
+        width: fit-content,
+        max-width: 78px,
+        margin-right: 12px,
+        margin-bottom: 11px,
+        height: 21px,
+        font-size: 15px,
+        border-radius: 18px
+    ));
+    @include resM((
+        padding: 1.5px 6px,
+        width: fit-content,
+        max-width: 60px,
+        margin-right: 9px,
+        margin-bottom: 9px,
+        height: 14px,
+        font-size: 10px,
+        border-radius: 12px
+    ));
+}
+
+.floating-add-button {
+    z-index: 99;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 42px;
+    padding: 12px 14px;
+    background: $pri-color;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0px 2px 8px rgba(113, 62, 188, 0.24);
+    transition: 0.2s all ease-in-out;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        background: $pri-color-dark;   
+    }
+
+    svg {
+        height: 24px;
+        width: 24px;
+    }
+
+    svg > path {
+        fill: #fff
+    }
+}
+
+.lottie-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.lottie-animation {
+    opacity: 0.6;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include resD((
+        margin-bottom: unset,
+        height: 240px,
+    ));
+    @include resM((
+        height: 180px,
+    ));
+}
+
+.lottie-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 34.73px;
+
+    span {
+        font-family: $primary-fontFamily;
+        font-weight: 500;
+        color: #6D6D6D;
+    }
+
+    @include resD((
+        font-size: 40px,
+        height: 130px,
+    ));
+    @include resM((
+        font-size: 26px,
+        height: 90px,
+    ));
+
+    button {
+        @include resD((
+            margin-left: 7px
+        ));
+        @include resM((
+            margin-left: 24px
+        ));
+    }
+}
+
+.classroom-loading-ref-container {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.classroom-loading-ref-css {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.tag-tooltip {
+    position: relative;
+    padding: 4px 5px 4px;
+    border-radius: 50%;
+    background: #EEEEEE;
+    color: #616161;
+    font-family: $primary-fontFamily;
+    font-style: $primary-fontStyle;
+    font-weight: 500;
+    @include resD((
+        font-size: 15px,
+        bottom: 6px
+    ));
+    @include resM((
+        font-size: 10px,
+        bottom: 5px
+    ));
+}
+
+// Dropdown styling
+
+.classHome-select {
+    @include resD(( 
+        height: 52px,
+    ));
+    @include resM((
+        height: 38px
+    ));
+}
+
+.classHome-select__fixed_hw {
+    @include resD(( 
+        min-height: 51px,
+        max-height: 51px,
+    ));
+    @include resM((
+        min-height: 38px,
+        max-height: 38px,
+    ));
+}
+
+.classHome-select__control.classHome-select__control {
+    @include resD(( 
+        min-height: 51px,
+        max-height: 51px,
+        border-radius: 11px
+    ));
+    @include resM((
+        min-height: 38px,
+        max-height: 38px,
+        border-radius: 8px
+    ));
+}
+
+.classHome-select__indicators.classHome-select__indicators {
+    @extend .classHome-select__fixed_hw;
+}
+
+.classHome-select__value-container.classHome-select__value-container {
+    @extend .classHome-select__fixed_hw;
+    @include resD(( 
+        padding-left: 16px
+    ));
+}
+
+.classHome-select__placeholder.classHome-select__placeholder,
+.classHome-select__single-value.classHome-select__single-value {
+    font-family: $primary-fontFamily;
+    font-weight: 400;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    @include resD((
+        top: 46%,
+        margin-left: 2px,
+        font-size: 20px,
+    ));
+    @include resM((
+        top: 45%,
+        font-size: 16px,
+    ));
+}
+
+.classHome-select__option.classHome-select__option {
+    font-family: $primary-fontFamily;
+    font-weight: 400;
+    @include resD((
+        height: 48px,
+        font-size: 18px,
+        padding: 14px,
+        margin: 4px 0px
+    ));
+    @include resM((
+        height: 36px,
+        font-size: 14px,
+        padding: 11px,
+        margin: 0px 0px
+    ));
+}
+
+.classHome-select__dropdown-indicator.classHome-select__dropdown-indicator {
+    & svg {
+        @include resD(( 
+            height: 24px,
+            width: 29px
+        ));
+        @include resM((
+            height: 20px,
+            width: 25px
+        ));
+    }
+    & svg > path {
+        fill: #AAA
+    }
+}
+
+.classHome-select__menu.classHome-select__menu {
+    @include resD(( 
+        margin: 9px 0px
+    ));
+    @include resM((
+        margin: 7px 0px
+    ));
+}
+
+.classHome-select__menu-list.classHome-select__menu-list {
+    border: 0.01px outset rgb(226, 226, 226);
+    border-bottom: #dcdde0;
+    border-right: #dcdde0;
+    @include resD((
+        min-height: 38px,
+        max-height: 216px,
+        border-radius: 8px
+    ));
+    @include resM((
+        min-height: 27px,
+        max-height: 149px,
+        border-radius: 3px
+    ));
+    &::-webkit-scrollbar {
+        @include resD(( 
+            width: 9px,
+        ));
+        @include resM((
+            width: 8px
+        ));
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(140, 97, 203, 0.6);
+        @include resD(( 
+            margin-right: 12px,
+        ));
+        @include resM((
+            margin-right: 6px,
+        ));
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: $pri-color
+    }
+}
+
+.classHome-select__menu-notice.classHome-select__menu-notice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include resD((
+        height: 38px,
+        font-size: 16px
+    ));
+    @include resM((
+        height: 27px,
+        font-size: 11px
+    ));
+}
+.timetable-loading-text{
+    font-weight: 600;
+}

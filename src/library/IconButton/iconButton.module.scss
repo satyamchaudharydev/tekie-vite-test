@@ -1,0 +1,64 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.iconButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color, opacity 0.2s ease-in-out;
+	border: none;
+	outline: none;
+	background: transparent;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	@include resD(
+		(
+			width: 48px,
+			height: 48px,
+			border-radius: 50%,
+		)
+	);
+
+	&:hover {
+		background: rgba(255, 255, 255, 0.24);
+	}
+}
+
+.primaryGradient {
+	background: $primary-gradient;
+
+	&:hover {
+		background: $primary-gradient;
+		opacity: 0.6;
+	}
+}
+
+.small {
+	@include resD(
+		(
+			width: 32px,
+			height: 32px,
+		)
+	);
+}
+
+.large {
+	@include resD(
+		(
+			width: 72px,
+			height: 72px,
+		)
+	);
+
+	& svg {
+		@include resD(
+			(
+				width: 32px,
+				height: 32px,
+			)
+		);
+	}
+}

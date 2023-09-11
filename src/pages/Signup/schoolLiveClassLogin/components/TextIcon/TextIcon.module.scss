@@ -1,0 +1,32 @@
+@import "src/scss/size.scss";
+
+.textIcon {
+  @include resD(
+    (
+      margin-right: 118px,
+    )
+  );
+  @include resMs(
+    (
+      margin-right: 36px,
+    )
+  );
+  font-family: Lato;
+  font-weight: bold;
+  @include resD(
+    (
+      color: #fff,
+      opacity: 1,
+      font-size: 25px,
+      line-height: 30px,
+    )
+  );
+  @include resMs(
+    (
+      color: #737373,
+      opacity: 1,
+      font-size: 15px,
+      line-height: 18px,
+    )
+  );
+}

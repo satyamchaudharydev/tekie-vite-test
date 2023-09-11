@@ -1,0 +1,20 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+.main__container__title__homework__review {
+  @include resD(
+    (
+      
+      max-height:240px,
+      overflow-y:visible
+      
+    )
+  );
+  @include resSm(
+    (
+      height:240px,
+      overflow-y:visible
+    )
+  );
+}

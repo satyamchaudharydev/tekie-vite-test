@@ -1,0 +1,297 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+
+.homework__title__image__section {
+  @include resD(
+    (
+      background: #ffffff,
+      border: 1px solid #eeeeee,
+      box-sizing: border-box,
+      border-radius: 24px,
+      padding: 10px,
+      width: fit-content,
+      height: fit-content,
+      margin-right: 20px,
+    )
+  );
+  @include resSm(
+    (
+      background: #ffffff,
+      border: 1px solid #eeeeee,
+      box-sizing: border-box,
+      border-radius: 16px,
+      width: fit-content,
+      height: fit-content,
+    )
+  );
+  img{
+    @include resD(
+    (
+     width:120px,
+     height:120px
+    )
+  );
+    @include resSm(
+    (
+     width:80px,
+     height:80px
+    )
+  );
+  }
+}
+.graph__section__homework__review {
+  @include resD(
+    (
+      position: relative,
+      bottom: 350px,
+      left: 550px,
+      width:fit-content,
+    )
+  );
+  @include resSm(
+    (
+      position: relative,
+      bottom: 200px,
+      left: 500px,
+      width:fit-content
+    )
+  );
+}
+.graph__section__homework__review2 {
+  @include resD(
+    (
+      position: relative,
+      bottom: 710px,
+      left: 830px,
+      width:fit-content,
+      
+    )
+  );
+  @include resSm(
+    (
+      position: relative,
+      bottom: 200px,
+      left: 900px,
+      width:fit-content
+    )
+  );
+}
+.homework__review__main__component {
+  @include resD(
+    (
+      height: 350px,
+      width: 500px,
+      
+      border-right: 1.3px solid rgba(0,0,0,0.2),
+    )
+  );
+  @include resSm(
+    (
+      height: 500px,
+      width: 500px,
+      
+      border-right: 1px solid #e3e3e3,
+    )
+  );
+}
+.hr__tag {
+  @include resD(
+    (
+      height: 1px,
+      width: 300px,
+      background: red,
+      transform: rotate(90deg),
+      position: relative,
+      bottom: 800px,
+      right: 200px,
+    )
+  );
+  @include resSm(
+    (
+      height: fit-content,
+      width: fit-content,
+    )
+  );
+}
+
+.graph__label {
+  @include resD(
+    (
+      position: relative,
+      top: -100px,
+      left: 250px,
+      display: flex,
+      align-items: flex-start,
+    )
+  );
+}
+.Homework__Review__Graph__Title {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 700,
+      font-size: 22px,
+      line-height: 24px,
+      display: flex,
+      align-items: center,
+      color: #504f4f,
+    )
+  );
+  @include resSm(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 700,
+      font-size: 16px,
+      line-height: 24px,
+      display: flex,
+      align-items: center,
+      color: #504f4f,
+    )
+  );
+
+  span {
+    margin-left: 10px;
+  }
+
+  svg{
+    @include resD((
+      width:30px,
+      height:30px
+    ));
+    @include resSm((
+      width:30px,
+      height:30px
+    ))
+  }
+}
+.Homework__Review__Overall__Title {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 600,
+      font-size: 26px,
+      line-height: 24px,
+      display: flex,
+      align-items: center,
+      margin-top: 45px,
+      margin-bottom: 30px,
+      color:#212121
+    )
+  );
+  @include resSm( 
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 600,
+      font-size: 16px,
+      line-height: 24px,
+      display: flex,
+      align-items: center,
+      color:#212121
+
+    )
+  );
+
+  span {
+    margin-left: 10px;
+  }
+}
+.Homework__Review__Overall__percentage__title {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 600,
+      font-size: 43.6923px,
+      line-height: 100%,
+      display: flex,
+      align-items: center,
+      color: #403f3f,
+    )
+  );
+  @include resSm(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 600,
+      font-size: 33.6923px,
+      line-height: 100%,
+      display: flex,
+      align-items: center,
+      color: #403f3f,
+    )
+  );
+
+  span {
+    margin-left: 10px;
+  }
+}
+.Homework__Review__Overall__percentage__description {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 18px,
+      line-height: 16px,
+      display: flex,
+      align-items: center,
+      color: #403f3f,
+     
+      margin-top: 10px,
+    )
+  );
+  @include resSm(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 12px,
+      line-height: 16px,
+      display: flex,
+      align-items: center,
+      color: #403f3f,
+      
+    )
+  );
+}
+.Homework__Review__Overall__percentage {
+  @include resD(
+    (
+      background: #fafafa,
+      border: 1px solid #efefef,
+      box-sizing: border-box,
+      box-shadow: 0px 2px 5px #fafafa,
+      border-radius: 8px,
+      line-height: 16px,
+      display: flex,
+      align-items: flex-start,
+      flex-direction: column,
+      color: #aba1b9,
+      width: fit-content,
+      padding: 25px,
+      margin-top:60px
+    )
+  );
+  @include resSm(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 12px,
+      line-height: 16px,
+      display: flex,
+      align-items: center,
+      color: #aba1b9,
+    )
+  );
+
+  span {
+    margin-left: 10px;
+  }
+}

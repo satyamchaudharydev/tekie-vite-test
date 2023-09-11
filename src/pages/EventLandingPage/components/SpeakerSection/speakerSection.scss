@@ -1,0 +1,277 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+.carousel-item {
+    @include resD((
+        display: inline-flex,
+        align-items: center,
+        justify-content: center,
+        height: 600px,
+        background-color: rgb(255, 255, 255),
+    ));
+    @include resSm((
+        display: inline-flex,
+        align-items: center,
+        justify-content: center,
+        height: 300px,
+        background-color: rgb(255, 255, 255),
+    ))
+}
+.speaker-section-carousel-main{
+    overflow: hidden;
+    @include resD((
+        max-width: 100%,
+        width: 100%,
+        // margin-left: 10%,
+    ));
+    @include resM((
+        max-width: 560px,
+        width: 100%,
+    ));
+}
+.speaker-section-carousel{
+    display: -webkit-box;
+    transition: transform 0.3s;
+    white-space: nowrap;
+}
+
+.speaker-section-indicator{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    @include resD((
+        margin-top: 60px,
+        left: -5%,
+        position: relative,
+    ));
+    @include resSm((
+        margin-top: 20px,
+        left: unset,
+        position: unset,
+    ));
+    & .speaker-dot-button{
+        padding:0;
+        @include resD((
+            width: 20px,
+            height: 20px,
+            margin: 0 5px,
+        ));
+        @include resM((
+            width: 10px,
+            height: 10px,
+            margin: 0 5px,
+        ));
+        background: #00ADE6;
+        opacity: 0.2;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 0;
+    }
+    & .active{
+        opacity: 1;
+    }
+}
+
+.speaker-section-prev-btn, .speaker-section-next-btn{
+display: flex;
+flex-direction: row;
+align-items: center;
+& svg{
+    @include resD((
+        width: 32px,
+        height: 32px,
+        border-radius: 34.0195px,
+    ));
+}
+}
+
+.speaker-section-action-btns{
+    justify-content: center;
+    align-items: center;
+    & >span{
+        cursor: pointer;
+        @include resD((
+            margin: 0 5px,
+        ));
+        @include resM((
+            margin: 0 5px,
+        ));
+        & rect{
+            fill: rgb(220, 220, 220);
+        }
+        & path{
+            fill: rgb(64, 63, 63);
+        }
+        & circle{
+            fill: rgb(220, 220, 220);
+        }
+        &.leftActive rect, &.leftActive circle{
+            fill: rgb(0, 173, 230);
+        }
+        &.leftActive path, &.rightActive path{
+            fill: rgb(255, 251, 251);
+        }
+        &.rightActive rect, &.rightActive circle{
+            fill: rgb(0, 173, 230);
+        }
+    }
+    @include resD((
+        position: unset,
+        top: unset,
+        right: unset,
+        display: flex,
+    ));
+    @include resM((
+        display: none,
+    ))
+}
+
+.speaker-carousel-container{
+    @include resD((
+        max-width: 1800px,
+        width: 92%,
+        margin: 0 auto,
+    ));
+    position: relative;
+    @include resSm((
+        width: 90%,
+        margin: 0 auto,
+    ));
+    
+    .Carousel_head {
+
+        font-family: Gilroy;
+        @include resD((
+            font-style: normal,
+            font-weight: bolder,
+            font-size: 40px,
+            line-height: 49px,
+            display: flex,
+            align-items: center,
+            color: #504F4F,
+            width: 60%,
+            // margin: 20px 0px,
+        ));
+        @include resSm((
+            font-style: normal,
+            font-weight: bolder,
+            font-size: 24px,
+            line-height: 120%,
+            letter-spacing: -0.02em,
+            color: #504F4F,
+            width: unset,
+            margin-left: 0,
+        ))
+    }
+
+}
+
+.speaker-main-image{
+    @include resD((
+        width: 243px,
+        height: 243px,
+        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25)),
+        border-radius: 24px,
+        margin-right: 40px,
+    ));
+    @include resM((
+        width: 60px,
+        height: 60px,
+        filter: drop-shadow(0px 20px 50px rgba(18, 17, 39, 0.08)),
+        border-radius: 12px,
+        margin-right: 16px,
+    ))
+}
+.speaker-main-profile{
+    margin: 0;
+@include resD((
+    font-size: 14px,
+    line-height: 24px,
+));
+@include resM((
+font-weight: normal,
+font-size: 11px,
+line-height: 19px,
+color: #005773,
+));
+font-family: Nunito;
+font-style: normal;
+font-weight: 600;
+letter-spacing: 0.8px;
+text-transform: uppercase;
+color: #005773;
+}
+
+.speaker-main-profile-container{
+    display: flex;
+    white-space: pre-wrap;
+    @include resD((
+        padding: 15px,
+        padding-left: 5px,
+    ));
+}
+
+.speaker-main-profile-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.speaker-profile-name{
+    font-family: Nunito;
+    font-style: normal;
+    margin: 0;
+    @include resD((
+        font-size: 40px,
+        line-height: 56px,
+        font-weight: bold,
+    ));
+    @include resM((
+        font-style: normal,
+        font-weight: 600,
+        font-size: 16px,
+        line-height: 22px,
+    ));
+    color: #121127;
+}
+.speaker-profile-about{
+    font-family: Nunito;
+    font-style: normal;
+    margin: 0;
+    font-weight: normal;
+    // word-break: break-all;
+    word-break: break-word;
+    @include resD((
+        font-size: 18px,
+        line-height: 29px,
+        margin-top: 0,
+        margin-bottom: 0,
+    ));
+
+    @include resM((
+        font-size: 16px,
+        line-height: 25px,
+        margin-top: 10px,
+        margin-bottom: 8px,
+    ));
+    color: rgba(18, 17, 39, 0.56);
+}
+.speaker-profile-linkedIn-link{
+    @include resD((
+    width: 20px,
+height: 20px,
+));
+    @include resM((
+    width: 20px,
+height: 20px,
+));
+}
+
+@media (max-width: 500px) {
+    .speaker-section-carousel-main{
+        @include resM((
+            max-width: unset,
+            width: 100%,
+        ));
+    }
+}

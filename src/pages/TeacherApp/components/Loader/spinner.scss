@@ -1,0 +1,302 @@
+@import '../../variables/_variables.scss';
+@import '../../mixins/_mixins.scss';
+
+// Custom Loader Css
+
+$color-1: $primary-color  !default;
+
+// Timing
+$container-rotate-timing: 2000ms !default;
+$spinner-fill-unfill-rotate-timing: 6000ms !default;
+
+
+$spinner-line-count: 4;
+
+$spinner-left-spin: $spinner-fill-unfill-rotate-timing / $spinner-line-count; // Changes these values can be interesting
+$spinner-right-spin: $spinner-fill-unfill-rotate-timing / $spinner-line-count; // Changes these values can be interesting
+
+.loader-container {
+    @include flex(center, center);
+    gap: 8px;
+    color: $tekie-black-80;
+    z-index: 999
+}
+
+.Spinner {
+    /* Spins external container */
+    animation: container-rotate #{$container-rotate-timing} linear infinite;
+    z-index: 999999999999;
+}
+
+.Spinner-line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.Spinner-line--animation {
+    border-color: $color-1;
+    animation: fill-unfill-rotate #{$spinner-fill-unfill-rotate-timing} cubic-bezier(0.4, 0, 0.2, 1) infinite both,
+    line-1-fade-in-out #{$spinner-fill-unfill-rotate-timing} cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+}
+
+.Spinner-line-cog {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-color: inherit;
+}
+
+.Spinner-line-cog-inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 200%;
+    box-sizing: border-box;
+    height: 100%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: inherit;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: none;
+}
+
+.Spinner-line-cog-inner--left {
+    border-right-color: transparent;
+    transform: rotate(129deg);
+    animation: left-spin #{$spinner-left-spin} cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+}
+
+.Spinner-line-cog-inner--right {
+    left: -100%;
+    border-left-color: transparent;
+    transform: rotate(-129deg);
+    animation: right-spin #{$spinner-right-spin} cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+}
+
+.Spinner-line-cog-inner--center {
+    width: 1000%;
+    left: -450%;
+}
+
+.Spinner-line-ticker {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 45%;
+    width: 10%;
+    height: 100%;
+    overflow: hidden;
+    border-color: inherit;
+}
+
+// ===============================
+// Animations
+// ===============================
+
+@keyframes container-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fill-unfill-rotate {
+    12.5% {
+        transform: rotate(135deg);
+    }
+
+    25% {
+        transform: rotate(270deg);
+    }
+
+    37.5% {
+        transform: rotate(405deg);
+    }
+
+    50% {
+        transform: rotate(540deg);
+    }
+
+    62.5% {
+        transform: rotate(675deg);
+    }
+
+    75% {
+        transform: rotate(810deg);
+    }
+
+    87.5% {
+        transform: rotate(945deg);
+    }
+
+    to {
+        transform: rotate(1080deg);
+    }
+}
+
+@keyframes left-spin {
+    0% {
+        transform: rotate(130deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    to {
+        transform: rotate(130deg);
+    }
+}
+
+@keyframes right-spin {
+    0% {
+        transform: rotate(-130deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    to {
+        transform: rotate(-130deg);
+    }
+}
+
+// This could be automated
+
+@keyframes line-1-fade-in-out {
+    0% {
+        opacity: 1
+    }
+
+    25% {
+        opacity: 1
+    }
+
+    26% {
+        opacity: 1
+    }
+
+    89% {
+        opacity: 1
+    }
+
+    90% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+// Here is where the magic happens
+
+$offset: 187;
+$duration: 1.8s;
+
+.spinner {
+    animation: rotator $duration linear infinite;
+}
+
+@keyframes rotator {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+.path {
+    stroke-dasharray: $offset;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    stroke: #8C61CB;
+    animation:
+        dash $duration ease-in-out infinite,
+}
+
+// @keyframes colors {
+// 	0% { stroke: #4285F4; }
+// 	25% { stroke: #DE3E35; }
+// 	50% { stroke: #F7C223; }
+// 	75% { stroke: #1B9A59; }
+//   100% { stroke: #4285F4; }
+// }
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: $offset;
+    }
+
+    50% {
+        stroke-dashoffset: $offset/4;
+        transform: rotate(135deg);
+    }
+
+    100% {
+        stroke-dashoffset: $offset;
+        transform: rotate(450deg);
+    }
+}
+
+//SpinnerLoader2
+
+.cp-spinner {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative
+}
+
+.cp-round:before {
+    border-radius: 50%;
+    content: " ";
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-top: solid 6px rgba(172, 171, 171, 0.2);
+    border-right: solid 6px rgba(172, 171, 171, 0.2);
+    border-bottom: solid 6px rgba(172, 171, 171, 0.2);
+    border-left: solid 6px rgba(172, 171, 171, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.cp-round:after {
+    border-radius: 50%;
+    content: " ";
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-top: solid 6px #00ADE6;
+    border-right: solid 6px transparent;
+    border-bottom: solid 6px transparent;
+    border-left: solid 6px transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: cp-round-animate 1s ease-in-out infinite
+}
+
+@keyframes cp-round-animate {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}

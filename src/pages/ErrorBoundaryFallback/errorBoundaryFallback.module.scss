@@ -1,0 +1,54 @@
+@import "src/scss/size.scss";
+
+.mainContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(0, 23, 31);
+    backdrop-filter: blur(6px);
+}
+
+.responsiveImage{
+    @include resD((
+        width: 578.5px,
+        height: 493.5px,
+    ));
+    @include resM((
+        width: 300px,
+        height: 200px,
+    ));
+    object-fit: contain;
+}
+.somethingCooking{
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 800;
+color: #FFFFFF;
+margin-bottom: 0;
+@include resD((
+    font-size: 54px,
+    line-height: 87px,
+    text-shadow: 3px 3px 0px #218DBF,
+));
+@include resM((
+    font-size: 34px,
+    line-height: 47px,
+    text-shadow: 3px 3px 0px #218DBF,
+));
+}
+.stayTunned{
+margin: 0;
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 600;
+color: rgba(255, 255, 255, 0.8);
+@include resD((
+font-size: 25px,
+));
+@include resM((
+font-size: 20px,
+));
+}

@@ -1,0 +1,397 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/Inter.scss';
+@import 'src/scss/theme.scss';
+
+.modal-course-thumbnail-container {
+    border: 2px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 12px;
+    
+    @include resD((
+        width: 110px,
+        height: 110px,
+    ));
+    @include resM((
+        width: 90px,
+        height: 90px,
+    ));
+
+    .modal-course-thumbnail {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.courseDM-header-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.courseDM-primary-text {
+    @extend .Inter-regular;
+    font-weight: normal;
+    color: #616161;
+    
+    @include resD((
+        font-size: 18px,
+    ));
+    @include resM((
+        font-size: 14px,
+    ));
+}
+
+.courseDM-details-container {
+    padding: 0px 12px;
+    & .courseDM-details-grade {
+        font-weight: 500;
+        color: #616161;
+        @include resD((
+            font-size: 16px,
+            line-height: 20px,
+            padding-top: 4px,
+        ));
+        @include resM((
+            font-size: 12px,
+            line-height: 14px,
+            padding-top: 2px,
+        ));
+    }
+
+    & .courseDM-details-courseText {
+        font-weight: 500;
+        color: #212121;
+        @include resD((
+            font-size: 22px,
+            line-height: 32px
+        ));
+        @include resM((
+            font-size: 18px,
+            line-height: 28px
+        ));
+
+        & > span {
+            text-transform: capitalize;
+            font-weight: 600;
+            color: #212121;
+            @include resD((
+                font-size: 25px,
+            ));
+            @include resM((
+                font-size: 20px,
+            ));
+        }
+    }
+    & .courseDM-details-recurrenceText {
+        font-weight: normal;
+        display: flex;
+        align-items: center;
+        color: #424242;
+        @include resD((
+            font-size: 16px,
+            line-height: 32px
+        ));
+        @include resM((
+            font-size: 16px,
+            line-height: 28px
+        ));
+    }
+
+    & .courseDM-modal-header-course-progress-container {
+        @extend .Inter-regular;
+        flex: 1 ;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        @include resD((
+            padding-top: 14px,
+        ));
+        @include resM((
+            padding-top: 12px,
+        ));
+        
+        .courseDM-modal-header-course-progress-text {
+            @extend .courseDM-primary-text;
+            @include resD((
+                padding: 0px 12px 0px 0px,
+            ));
+            @include resM((
+                padding: 0px 12px 0px 0px,
+            ));
+        }
+        .courseDM-modal-header-course-progress {
+            background: #E5E9EB;
+            position: relative;
+            height: 10px;
+            margin: 0px 4px;
+            border-radius: 100px;
+            @include resD((
+                width: 200px,
+            ));
+            @include resM((
+                width: 80px,
+            ));
+            
+            .courseDM-modal-header-course-progress-indicator {
+                background-color: #01AA93;
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                border-radius: 100px;
+                top: 0;
+                left: 0;
+                transition: width .3s;
+            } 
+        }
+        .courseDM-modal-header-course-progress-percentage {
+            font-weight: 600;
+            font-size: 14px;
+            color: #33545F;
+            padding: 0px 8px;
+        }
+    }
+}
+
+.courseDM-modal-content-container {
+    padding: 8px 22px 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all .5s;
+    
+    @include resD((
+        align-items: center,
+    ));
+    @include resM((
+        align-items: flex-start,
+    ));
+
+    .courseDM-modal-content-class-title {
+        font-weight: 500;
+        color: #616161;
+        @include resD((
+            font-size:18px,
+            padding: 0px 0px 8px,
+        ));
+        @include resM((
+            font-size: 14px,
+            padding: 8px 0px 8px,
+        ));
+    }
+}
+
+.courseDM-modal-content-container {
+    ::-webkit-scrollbar {
+	  width: 4px !important;
+	}
+	/* Track */
+	::-webkit-scrollbar-track {
+        width: 2px !important; 
+        border-radius: 100%;
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background: #EEEEEE !important; 
+	  border-radius: 10px !important;
+	}
+}
+.courseDM-modal-content-batchSessions-container {
+    @extend .Inter-regular;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    flex: 1;
+    transition: all .5s;
+    overflow-y: scroll;
+    background:
+    /* Shadow covers */
+    linear-gradient(white 30%, rgba(255,255,255,0)),
+    linear-gradient(rgba(255,255,255,0), white 70%) 0 100%,
+    /* Shadows */
+    radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.2), rgba(0,0,0,0)),
+    radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+    /* Opera doesn't support this in the shorthand */
+    background-attachment: local, local, scroll, scroll;
+    
+    @include resD((
+        max-height: 50vh,
+    ));
+    @include resM((
+        max-height: 60vh,
+    ));
+
+    // &:nth-last-child(1)
+    & .courseDM-modal-content-sessions {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: flex-start;
+        @include resD((
+            padding: 18px 0px,
+        ));
+        @include resM((
+            padding: 12px 0px,
+        ));
+
+        &:nth-last-child(1) {
+            .courseDM-modal-session-order-container {
+                &::after {
+                    content: '';
+                    height: 0px;
+                }
+            }
+        }
+
+        & .courseDM-modal-session-order-container {
+            position: relative;
+            @include resD((
+                margin-right: 24px,
+            ));
+            @include resM((
+                margin-right: 20px,
+            ));
+            &::after {
+                content: '';
+                border-left: 1px solid #EEEEEE;
+                height: 120px;
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 50%;
+            }
+            & .courseDM-modal-session-order-icon {
+                width: 25px;
+                height: 25px;
+                fill: #01AA93;
+                background: #FFF;
+            }
+            & .courseDM-modal-session-order {
+                background: #FFFFFF;
+                border: 1px solid #EEEEEE;
+                box-sizing: border-box;
+                z-index: 1;
+                width: 25px;
+                height: 25px;
+                display: grid;
+                place-items: center;
+                border-radius: 100%;
+                font-weight: 500;
+                color: #424242;
+                margin: 0;
+                @include resD((
+                    font-size: 18px,
+                ));
+                @include resM((
+                    font-size: 14px,
+                ));
+            }
+        }
+
+        & .courseDM-modal-session-thumbnail {
+            background: #FFFFFF;
+            border: 1px solid #EEEEEE;
+            box-sizing: border-box;
+            border-radius: 8px;
+            z-index: 0;
+
+            @include resD((
+                width: 82px,
+                height: 82px,
+                margin-right: 20px,
+            ));
+            @include resM((
+                width: 70px,
+                height: 70px,
+                margin-right: 18px,
+            ));
+
+            & .modal-course-thumbnail {
+                 width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+
+        & .courseDM-modal-session-details {
+            display: block;
+            box-sizing: border-box;
+            & .courseDM-modal-session-details-heading {
+                font-weight: 500;
+                color: #212121;
+                @include resD((
+                    font-size: 21px,
+                ));
+                @include resM((
+                    font-size: 18px
+                ));
+            }
+
+            & .courseDM-modal-session-details-timeTable {
+                display: flex;
+                font-weight: normal;
+                color: #424242;
+                @include resD((
+                    font-size: 16px,
+                    padding: 10px 0px 0px,
+                ));
+                @include resM((
+                    font-size: 14px,
+                    padding: 10px 0px 0px,
+                ));
+            }
+            
+            & .courseDM-modal-session-details-classType {
+                display: inline-flex;
+                place-items: center;
+                font-weight: normal;
+                color: #424242;
+                @include resD((
+                    font-size: 16px,
+                    padding: 6px 0px 0px,
+                ));
+                @include resM((
+                    font-size: 14px,
+                    padding: 6px 0px 0px,
+                ));
+    
+                & .courseDM-modal-session-details-classType-icon {
+                    width: 14px;
+                    height: 14px;
+                    fill: #616161;
+                    margin-right: 8px;
+                }
+
+                & .courseDM-modal-session-details-classType-tag {
+                    background: #EEEEEE;
+                    border-radius: 15px;
+                    padding: 4px 8px;
+                    font-weight: 500;
+                    color: #212121;
+                    margin-left: 8px;
+                }
+
+            }
+        }
+    }
+}
+.courseDM-modal-session-details-timeTable-icon {
+    width: 14px;
+    height: 14px;
+    fill: #616161;
+    margin-right: 8px;
+}

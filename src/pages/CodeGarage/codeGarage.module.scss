@@ -1,0 +1,108 @@
+@import "src/scss/size.scss";
+
+a {
+	text-decoration: none;
+}
+
+svg {
+	display: block;
+}
+
+.root {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	& > * {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+}
+
+.content {
+	@include resD(
+		(
+			padding: 72px,
+		)
+	);
+}
+
+.header {
+	background-image: url(../../assets/codeGarage/Header.png);
+	color: white;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	@include resD(
+		(
+			height: 297px,
+		)
+	);
+
+	& > * {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+}
+
+.heading {
+	@include resD(
+		(
+			margin-bottom: 10px,
+		)
+	);
+}
+
+.paragraph {
+	@include resD(
+		(
+			margin-bottom: 32px,
+		)
+	);
+}
+
+.filtersContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include resD(
+		(
+			margin-bottom: 72px,
+			gap: 24px,
+		)
+	);
+}
+
+.radioGroup {
+	display: flex;
+	align-items: center;
+	@include resD(
+		(
+			gap: 24px,
+		)
+	);
+}
+
+.searchIcon {
+	display: block;
+	@include resD(
+		(
+			width: 18px,
+			height: 18px,
+		)
+	);
+}
+
+.deleteConformationDialog {
+	@include resD((
+		width: 432px,
+		padding: 32px,
+	))
+}

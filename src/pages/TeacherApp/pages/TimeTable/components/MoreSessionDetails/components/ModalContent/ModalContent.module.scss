@@ -1,0 +1,175 @@
+@import "src/scss/theme/colors.scss";
+@import "src/scss/size.scss";
+@import "../../../../../../variables/_variables.scss";
+
+
+.cardContainer{
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.modalContentContainer {
+  width: 100%;
+  flex: 0.95;
+  overflow-y: scroll;
+  @include resD(
+    (
+      padding: 16px,
+    )
+  );
+  @include resMs(
+    (
+      padding: 16px,
+    )
+  );
+  > h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    @include resD(
+      (
+        font-size: 18px,
+      )
+    );
+    @include resMs(
+      (
+        font-size: 18px,
+      )
+    );
+  }
+}
+.modalContentHeading{
+  @include resD(
+    (
+    margin:12px 0 16px 0
+    )
+  );
+  @include resMs(
+    (
+     margin:12px 0 14px 0
+    )
+  );
+}
+.singleSessionDetailContainer {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  border-radius: 4px;
+  @include resD(
+    (
+      height: 85px,
+      padding: 4px,
+      padding-bottom: 0px,
+      margin-block: 4px,
+    )
+  );
+  @include resMs(
+    (
+      height: 85px,
+      padding: 4px,
+      padding-bottom: 0px,
+      margin-block: 4px,
+    )
+  );
+  padding-left: 4px !important;
+}
+.sessionTagsContainer {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  display: flex;
+  max-width: 50%;
+  align-items: center;
+  flex-wrap: wrap;
+  > span:first-child {
+    margin-left: 0px !important;
+  }
+  > span:last-child {
+    margin-right: 0px !important;
+  }
+}
+.sessionTag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 4px;
+  font-weight: 400;
+  margin-inline: 2px;
+  @include resD(
+    (
+      padding: 2px 4px,
+      font-size: 14px,
+    )
+  );
+  @include resMs(
+    (
+      padding: 2px 4px,
+      font-size: 14px,
+    )
+  );
+}
+.singleSessionDetailsWrapper {
+  // > p {
+  //   color: white;
+  // }
+  color: white;
+  > p:first-child {
+    font-style: normal;
+    font-family: Inter;
+    font-weight: 400;
+    @include resD(
+      (
+        font-size: 14px,
+      )
+    );
+    @include resMs(
+      (
+        font-size: 14px,
+      )
+    );
+  }
+  > p:not(:first-child) {
+    font-weight: 700;
+    position: relative;
+    transform: translateX(3%);
+    &::before {
+      content: "";
+      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+      background-color: White;
+      position: absolute;
+      left: 0%;
+      top: 50%;
+      transform: translate(-8px, -50%);
+    }
+    @include resD(
+      (
+        font-size: 14px,
+      )
+    );
+    @include resMs(
+      (
+        font-size: 14px,
+      )
+    );
+  }
+}
+.darkFontSessionWrapper {
+  > p {
+    color: black !important;
+  }
+  > p:not(:first-child) {
+    &::before {
+      background-color: black !important;
+    }
+  }
+}
+
+.outlinedCard{
+  background-color: white;
+  border: 2px solid $primary-color;
+   p{
+    color:black;
+  }
+}

@@ -1,0 +1,113 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+
+.title {
+  width: hs(368px);
+  height: hs(115.3px);
+  margin-left: hs(37.2px);
+  margin-top: hs(42.4px);
+  padding-top: hs(14px);
+  padding-left: hs(100px);
+  box-sizing: border-box;
+  background-image: url("./assets/titleBG.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  color: #fff;
+  font-size: hs(28px);
+  position: relative;
+}
+.titleSm {
+  font-size: hs(24px);
+}
+
+.hole {
+  width: hs(17px);
+  height: hs(17px);
+  background-color: #fff;
+  position: absolute;
+  top: hs(30px);
+  left: hs(9.1px);
+  border-radius:50%;
+}
+
+.shadow {
+  position: absolute;
+  width: hs(152px);
+  height: hs(11px);
+  opacity: 0.07;
+  background: black;
+  -webkit-filter: blur(hs(9px));
+  filter: blur(hs(9px));
+  top: hs(124px);
+  left: 0;
+  border-radius: hs(10px);
+}
+
+.triangleBGContainer {
+  @include absolute-container;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.masteryTextContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: hs(51px);
+  margin-bottom: hs(51px);
+  align-items: center;
+}
+.masteryText {
+  font-size: hs(24px);
+  font-weight: bold;
+  color: #707070;
+}
+.masteryLabel {
+  font-size: hs(24px);
+  font-weight: 800;
+  color: white;
+  background-color: #8c61cb;
+  border-radius: hs(31px);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  padding: hs(8px) hs(18px);
+  margin: 0 hs(18.8px);
+  text-transform: uppercase;
+}
+
+.goalWiseContainer {
+  margin-top: hs(23px);
+  margin-bottom: hs(90px);
+}
+
+.nextButtonContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding-right: hs(48px);
+  margin-top: hs(175px);
+  margin-bottom: hs(48px);
+}
+
+.autoSubmitQuizBox {
+  background-color: rgba(255, 255, 255, 0);
+  height: hs(90px);
+  width: hs(360px);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: hs(28px);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  margin-left: hs(-150px);
+  margin-top: hs(420px);
+  position: relative;
+  top: hs(-10px);
+}

@@ -1,0 +1,308 @@
+@import 'src/scss/size.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/triangleBG.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.creditInfoText {
+  font-family: Nunito;
+  font-style: italic;
+  color: #00ade6;
+  @include resD((
+    font-size: 18px,
+    height: 24px,
+    margin-top: 15px,
+  ));
+  @include resM((
+    font-size: 13px,
+    height: 18px,
+    margin-top: 8px,
+  ));
+}
+
+.bodyContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.flexStart {
+  justify-content: flex-start;
+  @include resD((
+    padding-top: 60px !important,
+  ));
+  @include resM((
+    padding-top: 92px !important,
+  ));
+}
+
+.invitedUserContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  @include resD((
+    margin-bottom: 60px,
+  ));
+  @include resM((
+    margin-bottom: 16px,
+    width: 100%,
+    box-sizing: border-box,
+    padding: 0 16px,
+  ));
+}
+
+.invitedUserHeaderContainer {
+  background-color: #bff7f9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  @include resD((
+    width: 855px,
+    height: 70px,
+    border-top-left-radius: unset,
+    border-top-right-radius: unset
+  ));
+  @include resM((
+    width: 100%,
+    height: 40px,
+    background-color: rgba(#bff7f9, 0.3),
+    border-top-left-radius: 8px,
+    border-top-right-radius: 8px,
+    padding-right: 15px,
+  ));
+}
+
+.invitedUserHeaderName {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: left;
+  color: #333333;
+  @include resD((
+    font-size: 25px,
+    margin-left: 24px,
+  ));
+  @include resM((
+    font-size: 18px,
+    margin-left: 13px,
+  ));
+}
+
+.invitedUserHeaderCredit {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: right;
+  color: #333333;
+  @include resD((
+    font-size: 22px,
+    margin-right: 24px,
+  ));
+  @include resM((
+    font-size: 15px,
+  ));
+}
+
+.invitedUserBodyContainer {
+  @include resD((
+    width: 855px,
+    height: 410px,
+    padding-top: 0px,
+  ));
+  @include resM((
+    width: 100%,
+    height: 300px,
+    padding-top: 16px
+  ));
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.06);
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.invitedUserBodyStepParentContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-left: 2px solid #bff7f9;
+  @include resD((
+    width: 784px,
+    height: 100px,
+    margin-left: 48px,
+    margin-right: 24px,
+  ));
+  @include resM((
+    width: 100%,
+    height: 72px,
+    margin-left: 29px,
+    margin-right: 17px,
+  ));
+  opacity: 0.3;
+}
+
+.invitedUserBodyStepContainer {
+  @include resD((
+    width: 784px,
+    height: 100px,
+  ));
+  @include resM((
+    height: 72px,
+    width: 83%,
+  ));
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.invitedUserBodyStepLeftContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  @include resD((
+    height: 70px,
+    margin-left: 30px,
+    top: 0px,
+  ));
+  @include resM((
+    height: unset,
+    margin-left: 12px,
+    position: relative,
+    top: 4px,
+  ));
+}
+
+.invitedUserBodyStepLeftUpperText {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.76;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+  @include resD((
+    font-size: 22px,
+    margin-bottom: 16px,
+  ));
+  @include resM((
+    font-size: 16px,
+    margin-bottom: 8px,
+  ));
+}
+
+.invitedUserBodyStepLeftBottomText {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.93;
+  letter-spacing: normal;
+  text-align: left;
+  color: #aaacae;
+  @include resD((
+    font-size: 18px,
+  ));
+  @include resM((
+    font-size: 13px,
+  ));
+}
+
+.creditContainer {
+  position: absolute;
+  @include resM((
+    width: 89px,
+    height: 32px,
+    top: 17px,
+    right: 16px,
+  ));
+  @include resD((
+    width: 137px,
+    height: 51px,
+    top: 40px,
+    right: 65px,
+  ));
+}
+
+.referralStepsCheckBox {
+  @include resM((
+    width: 24px,
+    height: 24px,
+    margin-left: -12px
+  ));
+  @include resD((
+    width: 36px,
+    height: 36px,
+    margin-left: -18px,
+    margin-top: -1px,
+  ));
+}
+
+.fullOpacity {
+  opacity: 1;
+}
+
+.coloredBorder {
+  border-color: #61dfef;
+}
+
+.blueColor {
+  color: #00ade6 !important;
+}
+
+.emptyInvitedUsersText {
+  font-family: Nunito;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.07;
+  letter-spacing: normal;
+  text-align: left;
+  color: #aaacae;
+  @include resM((
+    font-size: 16px,
+    text-align: center,
+    padding: 0 10px,
+  ));
+  @include resD((
+    font-size: 30px,
+  ));
+}
+
+.noRefer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

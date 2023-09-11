@@ -1,0 +1,13 @@
+@import "src/scss/size.scss";
+
+.cardsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	@include resD(
+		(
+			gap: 24px,
+		)
+	);
+}

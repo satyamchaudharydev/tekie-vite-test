@@ -1,0 +1,800 @@
+@import "src/scss/size.scss";
+@import "src/scss/Inter.scss";
+@import "src/scss/theme/colors.scss";
+@import "../../../../variables/variables.scss";
+@import "../../../../mixins/_mixins.scss";
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.box {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    transition: 0.8s all ease-in-out;
+    font-family: 'Inter';
+  }
+  .quesBox{
+    overflow: auto;
+    background: #FFFFFF;
+    border: 1px solid rgba(140, 97, 203, 0.2);
+    box-shadow: 0px 1px 10px rgba(140, 97, 203, 0.1);
+    box-sizing: border-box;
+    height: 100%;
+    @include resD((
+      border-radius:8px,
+      padding: 0 24px 32px 24px,
+      line-height: 150%,
+    ));
+    p {
+      font-size: 9px;
+    }
+  }
+  .correctAnsBox{
+    position: relative;
+    overflow: auto;
+    background: linear-gradient(260.26deg, #F0FFF3 0%, #FAFAFA 47.95%);
+    border: 1px solid rgba(140, 97, 203, 0.2);
+    @include resD((
+      padding:10px 14px,
+      border-radius: 12px,
+    ));
+    & .badgeContainer{
+      @include resD((
+        margin-left: 10.36px,
+        margin-bottom:12px
+      ))
+    }
+  }
+  .studAnsBox{
+    position: relative;
+    overflow: hidden;
+    height: 50%;
+      // background: #0F2E3C;
+    & .aceEditor{
+      width: 100%;
+    }
+    & .badgeContainer{
+      @include resD((
+        border-radius: 12px,
+        margin: 5px 0 15px 35px
+      ))
+    }
+    @include resD((
+      border-radius:12px
+    ))
+  }
+
+  .aceEditorContainer{
+    @include resD((
+      border-radius: 12px,
+      height: 85%,
+    ));
+    @include resM((
+      height: 85%,
+    ))
+  }
+  .aceEditorContainer.blackBg{
+    background: #0f2e3c;
+    padding-top: 10px;
+    p {
+      color: #fff;
+      padding-left: 10px;
+      font-weight: 500;
+      @include resD((
+        font-size: 18px
+      ));
+      @include resM((
+        font-size: 18px
+      ));
+    }
+  }
+  .aceEditorContainer.blackBg .ace_gutter-cell{
+    background-color: #0f2e3c!important;
+  }
+
+  .aceEditor{
+    background:transparent;
+    line-height: 140%;
+    height: 100%;
+  }
+
+  .evalBox {
+    border: 1px solid rgba(140, 97, 203, 0.2);
+    box-shadow: 0px 1px 10px rgba(140, 97, 203, 0.1);
+    box-sizing: border-box;
+    z-index: 0;
+    @include resD((
+      border-radius: 8px,
+    ));
+    height: 50%;
+  }
+  .evalBoxBodyContainer {
+    @include resD((
+      margin: 18px 0 0 20px,
+      height: calc(100% - 70px),
+    ))
+  }
+  .evalBoxBody{
+    width: 100%;
+    overflow: scroll;
+    box-sizing: border-box;
+    @include resD((
+      height: calc(100% - 45px),
+    ))
+  }
+  .evalBoxHeaderContainer{
+      @include flex(space-between,flex-start);
+      position: sticky;
+      width: 100%;
+      top: 0;
+      left: 0;
+      @include resD((
+        height: 60px
+      ))
+  }
+  .evalBoxHeading{
+    @include textStyle($tekie-black-50,18px,700)
+  }
+
+  .scoreDetailsContainer{
+    @include flex(space-between,flex-start);
+    gap: 8px;
+    @include resD((
+      margin-right: 18px
+    ))
+  }
+  .scoreTextAtPresent{
+    @include textStyle(black,18px,400)
+  }
+  .scoreValue{
+    font-weight: 700;
+    @include resD((
+      font-size:20px,
+    ))
+  }
+  .scoreAndBadgeContainer{
+    @include flex(flex-end,flex-end);
+    flex-direction: column;
+    @include resD((
+      gap:12px
+    ))
+  }
+  .infoIconContainer{
+    @include flex(center,center);
+    cursor: pointer;
+  }
+
+  .modalBackdrop{ 
+    background-color: rgba(0, 0, 0, 0.105);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100vw;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+    z-index: 99999;
+  }
+  
+  .modalWrapper {
+    width: 93%;
+    height:90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    overflow: hidden;
+    z-index: 99999;
+    @include resD((
+        margin: 0 20px 20px 0,
+        border-radius:20px
+    ))
+  }
+  
+  .headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    @include resD((
+        border-bottom:1px solid rgba(0, 0, 0, 0.21),
+        gap: 16px,
+        padding:16px 24px
+    ))
+  }
+  
+  .leftWrapper,
+  .rightWrapper {
+    @include flex(space-between,center);
+    flex: 1;
+    transition: 0.8s all ease-in-out;
+    z-index: 999;
+  }
+
+  .topicTitle{
+    @include textStyle($tekie-black-90,18px,600);
+  }
+  .quesNos{
+    @include textStyle($tekie-amethyst,18px,400);
+    @include resD((
+        margin-left:-5px
+    ))
+  }
+  .quesAndBtnContainer{
+    @include flex(space-between,center)
+  }
+  .rightHeaderTitle{
+    @include textStyle($tekie-black-50,18px,700);
+  }
+  .evalCount{
+    @include textStyle($tekie-black-40,16px,400)
+  }
+  
+  .bodyWrapper {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 100%;
+    height: 90%;
+    @include resD((
+      padding: 16px 24px,
+      margin-bottom: 10px
+    ))
+  }
+
+  .studDropdownAndCloseIconContainer{
+    @include flex(space-between,center)
+  }
+
+  .closeModalIcon {
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    z-index: 9999;
+    svg {
+      @include resD((
+        width: 32px,
+        height: 32px
+      ))
+    }
+    &:hover {
+      & svg>rect{
+        fill: $tekie-amethyst !important;
+      }
+    }
+  }
+
+  .closeModalIconMarginMain {
+    @include resD((
+      margin: 20px 20px 0 20px,
+    ))
+  }
+
+  .closeModalIconMarginOutput {
+    @include resD((
+      margin: 0 20px,
+    ))
+  }
+
+  .react-select__menu{
+    background-color: red;
+  }
+
+  .starsContainer{
+    @include resD((
+      margin-bottom:30px
+    ))
+  }
+  .pillsContainer{
+    @include flex(flex-start,center);
+    flex-wrap: wrap;
+    @include resD((
+      gap:20px,
+      margin-bottom:24px
+    ));
+    & div{
+      cursor: pointer;
+    }
+  }
+
+  .footer{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #f2f2f2;
+    border-radius: 0 0 8px 8px;
+    box-sizing: border-box;
+    z-index: 9;
+    @include resD((
+      padding:18px 20px 18px 9px,
+      height: 70px,
+    ))
+  }
+
+  .loadingText{
+    opacity: 0.4;
+    margin-top: -30%;
+    font-weight: 400;
+    @include resD((
+      font-size:16px
+    ))
+  }
+
+  .red {
+    color: $tekie-red-100;
+}
+
+.yellow{
+    color: $tekie-yellow-100;
+}
+.greenSec {
+    color: $tekie-green-100;
+}
+.tooltipHeadingContainer{
+  width: 100%;
+  @include flex(flex-start,center);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  @include resD((
+    gap:10px,
+    padding-bottom:8px,
+    margin-bottom: 8px,
+  ))
+}
+.tooltipTitle {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  color: #FFFFFF;
+  @include resD((
+    font-size: 16px,
+    line-height: 120%
+  ))
+}
+
+.scoreLineContainer {
+  display: flex;
+  align-items: center;
+}
+
+.scoreContainer {
+  background: #5E6E7A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD((
+    width: 25px,
+    height: 22px,
+    border-top-left-radius: 4px,
+    border-bottom-left-radius: 4px,
+    padding: 3px 14px 3px 11px
+  ))
+}
+
+.starContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #5E6E7A;
+  border-radius: 100%;
+  @include resD((
+    border: 5px solid #4A336C,
+    padding: 5px,
+    margin-left: -5px
+  ))
+}
+
+.scoreText {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  color: #FFFFFF;
+  @include resD((
+    font-size: 16px,
+    line-height: 150%,
+  ))
+}
+
+.infoIconContainer{
+  line-height: 140%;
+}
+.alignCenter{
+  @include flex(center,center)
+}
+
+.outputModalContainerBackdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  z-index: 99999;
+}
+
+.outputModalContainer{
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 99999;
+  @include resD((
+    // min-height:350px,
+    // width:1300px,
+    min-height:50%,
+    width:70%,
+    border-radius:16px,
+    padding:20px 28px
+  ));
+  @include resM((
+    min-height:50%,
+    width:70%,
+    border-radius:16px,
+    padding:20px 28px
+  ));
+  & button{
+    color: #9E9E9E;
+    font-weight: 400;
+    @include resD((
+      margin-bottom:24px
+    ))
+  }
+  & h4{
+    color: #504F4F;
+    font-weight: 700;
+    @include resD((
+      margin-bottom:24px,
+      font-size:18px
+    ))
+  }
+}
+
+.outputsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include resD((
+    width: 100%
+  ));
+  @include resM((
+    width: 100%
+  ));
+}
+
+.correctOutput,.studentOutput{
+  @include resD((
+    height:480px,
+    width: 48%,
+  ));
+  @include resM((
+    height:480px,
+    width: 48%,
+  ));
+}
+
+.maximizeIconContainer {
+  position: absolute;
+  cursor: pointer;
+  z-index: 999;
+  @include resD((
+    top:20px,
+    right:20px,
+  ))
+}
+
+.playBtnContainer{
+  position: absolute;
+  cursor: pointer;
+  z-index: 999;
+  @include resD((
+    bottom:20px,
+    right:20px
+  ))
+}
+
+.outputModalHeadContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.compareButtonContainer {
+  display: flex;
+  border: 1px solid #DCDCDC;
+  border-radius: 400px;
+  background-color: #FFFFFF;
+  @include resD((
+    margin-bottom: 16px,
+  ))
+}
+
+.compareButtonContainerStyles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 400px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  @include resD((
+    padding: 8px 12px,
+    gap: 8px,
+    margin: 4px,
+    font-family: 'Inter',
+    font-style: normal,
+    font-weight: 500,
+    font-size: 16px,
+    line-height: 20px,
+  ))
+}
+
+.primaryButtonStyle {
+  color: #FFFFFF !important;
+  background: #8C61CB;
+}
+
+.secButtonStyle {
+  color: #858585 !important;
+  background: #fff;
+}
+
+.questionArrows:hover{
+  border: 1px solid #8C61CB;
+  transition: 0.4s ease;
+  border-radius: 100%;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+.correctAnswerOutput {
+  background: linear-gradient(260.26deg, #F0FFF3 0%, #FAFAFA 47.95%) !important;
+  padding-top: 10px;
+  padding-left: 13px;
+}
+
+.practiceQuestionTitleStyle {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  color: #000000;
+  @include resD((
+    font-size: 22px,
+    line-height: 150%,
+    margin-top: 16px,
+    margin-bottom: 25px
+  ))
+}
+
+.studentPracBoxContainer {
+  background: #FAFAFA;
+  @include resD((
+    border-radius:12px,
+    padding: 15px 17px,
+  ));
+  height: 50%;
+  overflow: auto;
+}
+
+.answerPracticeBoxTypeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.answerNotSubmittedContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.filePreviewContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  inset: 0;
+  background-color: #000000c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img,video{
+    max-width: 80%;
+    max-height: 80%;
+  }
+}
+
+.viewAttachment {
+  cursor: pointer;
+  color: #00ade6;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  @include resD((
+    font-size: 22px,
+    margin-bottom: 35px,
+    margin-right: 30px,
+  ));
+  @include resM((
+    font-size: 22px,
+    margin-bottom: 35px,
+    margin-right: 30px,
+  ));
+}
+
+.studentPracBoxFooterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include resD((
+    width: 100%,
+    margin: 20px 0 10px 0,
+  ));
+  @include resM((
+    width: 100%,
+    margin: 20px 0 10px 0,
+  ));
+  .logoTitleContainer {
+    display: flex;
+  }
+  .titleDescriptionContainer {
+    display: flex;
+    flex-direction: column;
+    @include resD((
+      // margin-left: 18px,
+    ));
+    @include resM((
+      // margin-left: 18px,
+    ));
+    p {
+      font-family: 'Nunito';
+      font-style: normal;
+      font-weight: 700;
+      color: #504F4F;
+      @include resD((
+        font-size: 18px,
+        line-height: 120%,
+      ));
+      @include resM((
+        font-size: 18px,
+        line-height: 120%,
+      ));
+    }
+    span {
+      font-family: 'Nunito';
+      font-style: normal;
+      font-weight: 700;
+      color: #282828;
+      opacity: 0.3;
+      @include resD((
+        font-size: 16px,
+        line-height: 120%,
+      ));
+      @include resM((
+        font-size: 16px,
+        line-height: 120%,
+      ));
+    }
+  }
+}
+
+.studentNameContainerHeader {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  font-family: Inter;
+  border: 1px solid #F4F0FA;
+  box-shadow: 0 0 0 0px black;
+  overflow: hidden;
+  p {
+    color: #8C61CB;
+    font-weight: 700;
+    line-height: 100%;
+    margin: 0;
+    @include resD((
+      font-size: 20px,
+    ));
+    @include resM((
+      font-size: 20px,
+    ));
+  }
+  @include resD((
+    width: 260px,
+    min-height: 30px,
+    max-height: 30px,
+    border-radius: 14px,
+    margin-right: 45px,
+    padding: 4px 4px 4px 13px,
+  ));
+  @include resM((
+    width: 260px,
+    min-height: 30px,
+    max-height: 30px,
+    border-radius: 14px,
+    margin-right: 45px,
+    padding: 4px 4px 4px 13px,
+  ));
+}
+
+.evaluationComment {
+  width: 98%;
+  box-sizing: border-box;
+  font-family: 'Inter';
+  border: 1px solid $tekie-grey-10;
+  &::placeholder{
+    font-style: italic;
+    @include textStyle($tekie-grey-60,14px,400);
+  }
+  &:focus{
+    outline: 1px solid $tekie-amethyst;
+  }
+  @include resD((
+    padding: 6px 8px,
+    margin-left: 2px,
+    border-radius:8px,
+    margin-bottom: 25px
+  ))
+}
+
+.previewWebEditor {
+  border: none;
+  outline: none;
+  height: 85%;
+  width: 100%;
+}
+
+.backToQuestionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+  color: #333;
+  gap: 4px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+  @include resD((
+    font-size: 16px,
+    line-height: 20px,
+    margin-bottom: 16px,
+  ))
+}
+
+.verticalLine {
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  width: 1px;
+  top: 0;
+  background: #000;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.copyText{
+  font-weight: 500;
+  color: #8C61CB;
+  align-self: center;
+  text-decoration-line: underline;
+  @include resD((
+    font-size: 12px,
+    margin-left: 4px,
+  ))
+}

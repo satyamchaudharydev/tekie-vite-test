@@ -1,0 +1,542 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+$primary-color: #00ade6;
+$primary-fontFamily: Inter;
+$primary-fontStyle: normal;
+$primary-fontWeight: 500;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.teacher-main-container {
+  
+  @include resD(
+    (
+      margin-top: 24px,
+      margin-left: 15px,
+      width: 100%,
+      min-height: 700px,
+    )
+  );
+  @include resM(
+    (
+      margin-top: 16px,
+      margin-left: 11px,
+      width: 100%,
+      min-height: 600px,
+    )
+  );
+}
+
+.teacher-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  span {
+    font-family: "Nunito";
+    // font-style: $primary-fontStyle;
+    font-weight: 550;
+    @include resD(
+      (
+        font-size: 18px,
+        margin-bottom: 15px,
+        width: 70%,
+      )
+    );
+    @include resM(
+      (
+        font-size: 10px,
+        margin-bottom: 15px,
+        width: 70%,
+      )
+    );
+    color: #1e1f1e;
+  }
+}
+
+.teacher-table-main-container {
+  background: #ffffff;
+
+  @include resD(
+    (
+      font-size: 18px,
+      margin-top: 15px,
+      width: 95%,
+      min-height: 700px,
+      padding: 20px 12px,
+      border-radius: 21px,
+    )
+  );
+  @include resM(
+    (
+      font-size: 10px,
+      margin-top: 15px,
+      width: 95%,
+      border-radius: 13px,
+      padding: 14px 7px,
+      min-height: 600px,
+    )
+  );
+}
+
+.teacher__table__container {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include resD(
+    (
+      font-size: 18px,
+      width: 100%,
+      min-height: 700px,
+      padding: 0px 12px 10px 12px,
+      border-radius: 21px,
+    )
+  );
+  @include resM(
+    (
+      font-size: 10px,
+      width: 95%,
+      border-radius: 13px,
+      padding: 14px 7px,
+      min-height: 600px,
+    )
+  );
+
+  thead {
+    @include resD(
+      (
+        // font-size: 18px,
+          width: 100%,
+        height: 24px,
+        padding: 0px 12px 16px 12px,
+        border-radius: 9px
+      )
+    );
+    @include resM(
+      (
+        // font-size: 10px,
+          width: 100%,
+        border-radius: 4px,
+        padding: 14px 6px,
+        height: 12px
+      )
+    );
+  }
+  tbody {
+    @include resD(
+      (
+        // font-size: 18px,
+          width: 100%,
+        margin-top: 12px,
+        // height: 24px,
+          padding: 16px 12px,
+        // border-radius: 9px
+      )
+    );
+    @include resM(
+      (
+        // font-size: 10px,
+          width: 100%,
+        margin-top: 6px,
+        // border-radius: 4px,
+          padding: 14px 6px,
+        // height: 12px
+      )
+    );
+  }
+}
+
+.teacher__table__header__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include resD(
+    (
+      font-size: 15px,
+      margin-top: 15px,
+      // width: 100%,
+        height: 24px,
+      padding: 30px 50px,
+      border-radius: 9px,
+    )
+  );
+  @include resM(
+    (
+      font-size: 8px,
+      margin-top: 15px,
+      // width: 100%,
+        border-radius: 4px,
+      padding: 14px 12px,
+      height: 12px,
+    )
+  );
+
+  th {
+    text-align: left;
+    @include resD(
+      (
+        width: 12%,
+        margin: 0px 4px,
+        font-family: Inter,
+        font-style: normal,
+        font-weight: 500,
+        font-size: 15px,
+        line-height: 16px,
+        color: #212121,
+      )
+    );
+    @include resM(
+      (
+        width: 10%,
+        margin: 0px 2px,
+      )
+    );
+  }
+
+  :nth-child(1) {
+    text-align: right;
+    @include resD(
+      (
+        width: 3%,
+        margin: 0px 12px 0px 4px,
+      )
+    );
+    @include resM(
+      (
+        width: 5%,
+        margin: 0px 2px,
+      )
+    );
+  }
+  background: #f5f5f5;
+}
+
+.teacher-table-data-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include resD(
+    (
+      font-size: 18px,
+      margin-top: 15px,
+      // width: 100%,
+        height: 24px,
+      padding: 30px 50px,
+      border-radius: 9px,
+    )
+  );
+  @include resM(
+    (
+      font-size: 10px,
+      margin-top: 15px,
+      // width: 100%,
+        border-radius: 4px,
+      padding: 14px 12px,
+      height: 12px,
+    )
+  );
+
+  td {
+    text-align: left;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include resD(
+      (
+        width: 12%,
+        margin: 0px 4px,
+      )
+    );
+    @include resM(
+      (
+        width: 10%,
+        margin: 0px 2px,
+      )
+    );
+  }
+
+  :nth-child(1) {
+    text-align: right;
+    @include resD(
+      (
+        width: 3%,
+        margin: 0px 12px 0px 4px,
+      )
+    );
+    @include resM(
+      (
+        width: 5%,
+        margin: 0px 2px,
+      )
+    );
+  }
+  // @include resD((
+  //   overflow-x: unset
+  // ));
+  // @include resM((
+  //   overflow-x: scroll,
+  //   overflow-y: hidden
+  // ));
+  // :nth-child(1) {
+  //   position: relative;
+  //   text-align: right;
+  //   @include resD((
+  //     width: 50px,
+  //     right: 7px
+  //   ));
+  //   @include resM((
+  //     width: 42px,
+  //   ));
+  // }
+
+  // // display: block;
+  // // overflow: hidden;
+  // // text-overflow: ellipsis;
+  // // white-space: nowrap;
+
+  // :nth-child(2) {
+  //   display: block;
+  //   overflow: hidden;
+  //   text-overflow: ellipsis;
+  //   white-space: nowrap;
+  //   @include resD((
+  //     width: 196px,
+  //     padding-left: 0px,
+  //     margin: 0px 12px 0px 24px
+  //   ));
+  //   @include resM((
+  //     width: 130px,
+  //     padding-left: 0px
+  //   ));
+  // }
+
+  // :nth-child(3) {
+  //   text-align: center;
+  //   display: block;
+  //   overflow: hidden;
+  //   text-overflow: ellipsis;
+  //   white-space: nowrap;
+  //   @include resD((
+  //     margin: 0px 4px,
+  //     width: 100px,
+  //   ));
+  //   @include resM((
+  //     margin-left: 7px
+  //   ));
+  // }
+  // :nth-child(4) {
+  //   display: block;
+  //   overflow: hidden;
+  //   text-overflow: ellipsis;
+  //   white-space: nowrap;
+  //   text-align: right;
+  //   @include resD((
+  //     margin: 0px 25px 0px 25px,
+  //     width: 72px,
+  //   ));
+  //   @include resM((
+  //     margin-left: 7px
+  //   ));
+  // }
+  // :nth-child(5) {
+  //   display: block;
+  //   overflow: hidden;
+  //   text-overflow: ellipsis;
+  //   white-space: nowrap;
+  //   @include resD((
+  //     margin: 0px 2px 0px 6px,
+  //     padding-right: 0px,
+  //     width: 168px,
+  //   ));
+  //   @include resM((
+  //     padding-right: 7px,
+  //   ));
+  // }
+
+  // :nth-child(6) {
+  //   display: block;
+  //   overflow: hidden;
+  //   text-overflow: ellipsis;
+  //   white-space: nowrap;
+  //   @include resD((
+  //     padding: 0px 0px,
+  //     margin: 0px 4px 0px 10px,
+  //     width: 132px,
+  //   ));
+  //   @include resM((
+  //     padding-right: 7px,
+  //   ));
+  // }
+  // :nth-child(7) {
+  //   display: block;
+  //   overflow: hidden;
+  //   text-overflow: ellipsis;
+  //   white-space: nowrap;
+  //   @include resD((
+  //     padding-left: 0px,
+  //     width: 156px,
+  //   ));
+  //   @include resM((
+  //     padding-left: 12px,
+  //     width: 92px,
+  //   ));
+  // }
+  :nth-child(8) {
+    @include resD((
+      cursor:pointer
+    ));
+    @include resM((
+      cursor:pointer
+
+    ));
+  }
+}
+
+.admin_search_filter_area {
+  @include resD(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: space-between,
+      height: 70px,
+      padding: 0px 14px,
+    )
+  );
+  @include resM(());
+}
+
+.admin_table_buttons_container {
+  @include resD(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: space-between,
+      height: 70px,
+      z-index: 1,
+      position: relative,
+    )
+  );
+  @include resM(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: space-between,
+      height: 70px,
+      z-index: 1,
+      position: relative,
+    )
+  );
+}
+.student_list_title_container {
+  @include resD(
+    (
+      display: flex,
+      align-items: center,
+      padding-left:20px
+    )
+  );
+  @include resM(
+    (
+      display: flex,
+      align-items: center,
+      padding-left:20px
+    )
+  );
+}
+.student_title_box {
+  @include resD(
+    (
+      display: flex,
+      flex-direction: row,
+      justify-content: center,
+      align-items: center,
+      padding: 6px 10px,
+      background: #f2f2f2,
+      border-radius: 6px,
+    )
+  );
+  @include resM(
+    (
+      display: flex,
+      flex-direction: row,
+      justify-content: center,
+      align-items: center,
+      padding: 10px 10px,
+      background: #f2f2f2,
+      border-radius: 6px,
+    )
+  );
+svg{
+  @include resD(
+    (
+    width:14px,
+    height:14px
+    )
+  );
+}
+  
+}
+
+.grade_text_box{
+ 
+    @include resD(
+      (
+        margin-left: 6px,
+        font-family: Inter,
+        font-style: normal,
+        font-weight: 500,
+        font-size: 16px,
+        line-height: 16px,
+        color: #757575,
+      )
+    );
+    @include resSm(
+      (
+        margin-left: 6px,
+        font-family: Inter,
+        font-style: normal,
+        font-weight: 500,
+        font-size: 16px,
+        line-height: 16px,
+        color: #757575,
+      )
+    );
+  
+}
+.student_title_list {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 600,
+      font-size: 20px,
+      line-height: 24px,
+      display: flex,
+      align-items: center,
+      margin-right: 10px,
+      color: #212121,
+    )
+  );
+  @include resM(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 20px,
+      line-height: 24px,
+      display: flex,
+      align-items: center,
+      margin-right: 10px,
+      color: #212121,
+    )
+  );
+}

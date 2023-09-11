@@ -1,0 +1,648 @@
+@import 'src/scss/size.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/triangleBG.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.refferalCount {
+  @include resD((
+    padding: 8px 18px,
+    border-radius: 28px,
+    border: solid 1px #27d6e9,
+    right: 60px,
+    top: 50px,
+    font-size: 18px,
+  ));
+  @include resM((
+    position: relative,
+    padding: 8px 12px,
+    border-radius: 28px,
+    border: solid 1px #27d6e9,
+    right: 16px,
+    top: 17px,
+    font-size: 12px,
+  ));
+  object-fit: contain;
+  position: absolute;
+  background: #fbffff;
+  font-family: Nunito;
+  font-weight: bold;
+  color: #0fbde7;
+}
+.bodyContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.text {
+  font-family: Nunito;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.37;
+  color: #92c5eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: hs(28px);
+  margin-top: hs(31px);
+}
+
+.inviteIcon {
+  @include resD((
+    width: 138px,
+    height: 98px,
+    margin-top: 60px,
+  ));
+  @include resM((
+    width: 124px,
+    height: 88px,
+    margin-top: 80px,
+  ));
+}
+
+.referTitle {
+  font-family: Nunito;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.07;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ade6;
+  @include resD((
+    font-size: 30px,
+    height: 41px,
+    margin-top: 18px,
+    margin-bottom: 10px,
+  ));
+  @include resM((    
+    font-size: 18px,
+    margin-top: 18px,
+    margin-bottom: 16px,
+  ));
+}
+
+.inviteCouponContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.inviteCouponBox {
+  position: absolute;
+  @include resD((
+    width: 740px,
+    margin-top: 60px,
+  ));
+  @include resM((
+    width: 382px,
+    margin-top: 40px,
+  ));
+}
+
+.copyIcon {
+  @include resD((
+    top: 56px,
+    left: -15px,
+    width: 40px,
+  ));
+  @include resM((
+    top: 20px,
+    left: 0px,
+    width: 25px,
+  ));
+  position: relative;
+  cursor: pointer;
+}
+
+.referralCode {
+  @include resD((
+    min-width: 590px,
+    height: 30px,
+    top: 52px,
+    font-size: 22px,
+    left: 10px,
+  ));
+  @include resM((
+    min-width: 290px,
+    height: 30px,
+    top: 22px,
+    font-size: 12px,
+    left: -4px,
+  ));
+  position: relative;
+  object-fit: contain;
+  opacity: 0.5;
+  font-family: Nunito;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 1.37;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+  border: none !important;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+}
+
+.shareButtonContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @include resM((
+    width: 166px,
+    margin-top: 45px,
+  ));
+  @include resD((
+    width: 300px,
+    margin-top: 120px,
+  ));
+}
+
+.shareButton {
+  width: hs(250px);
+  height: hs(51px);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.referralStepsTitleContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: hs(60px);
+}
+
+
+.referralStepsTitleM {
+  @include resM((
+    font-family: Nunito,
+    font-size: 16px,
+    font-weight: 600,
+    margin-left: 10px,
+  ));
+}
+
+.referralStepsDescM {
+  @include resM((
+    font-family: Nunito,
+    font-size: 13px,
+    font-weight: 300,
+    line-height: 18px,
+    margin-left: 10px,
+    margin-top: 10px,
+    color: #504f4f,
+    width: 223px,
+  ));
+}
+
+.referralStepsTitle {
+  width: hs(296px);
+  height: hs(30px);
+  object-fit: contain;
+  font-family: Nunito;
+  font-size: hs(22px);
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.76;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.referralStepsCheckBoxContainer {
+  width: hs(940px);
+  height: hs(4px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #61dfef;
+  margin-top: hs(40px);
+}
+
+.referralStepsCheckBox {
+  @include resD((
+    width: 50px,
+    height: 50px,
+  ));
+  @include resM((
+    width: 32px,
+    height: 32px,
+  ));
+}
+
+.referralContainerM {
+  @include resM((
+    width: 100%,
+    margin-left: 16px,
+  ));
+}
+
+.referralWrapperM {
+  @include resM((
+    margin-top: 32px,
+    width: 100%,
+  ));
+}
+
+.stepsM {
+  @include resM((
+    display: flex,
+    flex-direction: column,
+    align-items: center,
+    width: min-content,
+  ));
+}
+
+.stepsRowM {
+  @include resM((
+    display: flex,
+    flex-direction: row,
+  ));
+}
+
+.stepLineM {
+  @include resM((
+    width: 2px,
+    height: 64px,
+    background: #61dfef,
+  ));
+}
+
+.referralStepsDescContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: hs(40px);
+}
+
+.referralStepsDesc {
+  width: hs(296px);
+  height: hs(30px);
+  object-fit: contain;
+  font-family: Nunito;
+  font-size: hs(20px);
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+}
+
+.referralStepsCriteriaContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  border: solid 0.5px #31e1e9;
+  @include resM((
+    width: unset,
+    height: unset,
+    margin: 32px 20px 100px 20px,
+    border-radius: 15px,
+    padding: 16px,
+  ));
+  @include resD((
+    width: 946px,
+    height: 295px,
+    margin-top: 100px,
+    border-radius: 15px,
+    padding: 30px,
+    margin-bottom: 80px,
+  ));
+}
+
+.referralStepsCriteriaWrapperM {
+  @include resM((
+    width: 100%,
+    padding-right: 15px,
+    padding-left: 15px,
+  ));
+  @include resD((
+    width: unset,
+    padding-right: unset,
+    padding-left: unset,
+  ));
+}
+
+.referralStepsCriteriaTitle {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  color: #00ade6;
+  @include resD((
+    text-align: left,
+    font-size: 26px,
+    margin-bottom: 10px,
+  ));
+  @include resM((
+    font-size: 18px,
+    margin-bottom: 16px,
+    text-align: center,
+    width: 100%
+  ));
+}
+
+.referralStepsCriteriaPoints {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.14;
+  letter-spacing: normal;
+  text-align: left;
+  color: #aaacae;
+  @include resD((
+    font-size: 22px,
+  ));
+  @include resM((
+    font-size: 13px,
+  ));
+}
+
+.shareButtonIcon{
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  @include resD((
+    width: 40px,
+    height: 40px,
+  ));
+  @include resM((
+    width: 28px,
+    height: 28px,
+  ));
+}
+
+.react_share_shareButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  border: solid 0.5px #31e1e9;
+}
+
+// logout screen
+
+.loggedOutContainer {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../assets/triangleBG.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: scroll;
+  @include resM((
+    padding: 0 20px,
+    box-sizing: border-box,
+  ));
+  @include resD((
+    padding: 0 0,
+  ));
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.logo {
+  background-image: url('../../assets/tekieLogo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  @include resD((
+    width: 125px,
+    height: 44px,
+    margin-top: 30px,
+  ));
+  @include resM((
+    width: 69px,
+    margin-top: 20px,
+    height: 35px
+  ));
+}
+
+.mainRow {
+  display: flex;
+  @include resD((
+    margin-top: 60px,
+    flex-direction: row,
+    justify-content: center,
+    align-items: unset,
+  ));
+  @include resM((
+    flex-direction: column,
+    align-items: center,
+    justify-content: unset,
+    margin-top: 30px,
+  ));
+}
+
+.imageContainer {
+  position: relative;
+  @include resD((
+    height: 309px,
+    width: 440px,
+  ));
+  @include resM((
+    height: 309px * 0.6,
+    width: 440px * 0.6,
+  ));
+}
+
+.imageDrop {
+  position: relative;
+  background-image: url('../../assets/inviteIconLoggedOut.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include resD((
+    height: 219px,
+    width: 254px,
+    left: 20px,
+  ));
+  @include resM((
+    height: 219px * 0.6,
+    width: 254px * 0.6,
+    left: 20px * 0.6,
+  ));
+
+}
+
+.imageContainerAbsolute {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.info {
+  @include resD((
+    margin-left: 100px,
+    align-items: flex-start,
+  ));
+  @include resM((
+    margin-left: 0px,
+    display: flex,
+    flex-direction: column,
+    align-items: center,
+  ));
+}
+
+.title {
+  font-family: Nunito;
+  font-weight: bold;
+  @include resD((
+    font-size: 30px,
+    color: #00ade6,
+    margin-bottom: 15px,
+    margin-top: 70px
+  ));
+  @include resM((
+    font-size: 30px * 0.6,
+    color: #00ade6,
+    margin-bottom: 15px * 0.6,
+    margin-top: 70px * 0.6
+
+  ));
+}
+
+.inviteButton {
+  @include resD((
+    width: 204px,
+    height: 53px,
+    border-radius: 28px,
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16),
+    color: #fff,
+    font-size: 23px,
+    margin-top: 30px,
+    ));
+  @include resM((
+    width: 204px * 0.6,
+    height: 53px * 0.6,
+    border-radius: 28px * 0.6,
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16),
+    color: #fff,
+    font-size: 23px * 0.6,
+    margin-top: 30px * 0.6,
+  ));
+  background-image: linear-gradient(to top, #00ade6, #34e4ea);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: Nunito;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.cardLogout {
+  background: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include resD((
+    width: 1370px,
+    padding: 60px,
+    padding-top: 30px,
+    border-radius: 20px,
+    box-shadow: 0 15px 20px 0 rgba(47, 223, 233, 0.39),
+  ));
+  @include resM((
+    width: unset,
+    padding: 10px,
+    padding-top: 0px,
+    border-radius: 10px,
+    box-shadow: 0 7px 10px 0 rgba(47, 223, 233, 0.39),
+  ));
+}
+
+.titleH2 {
+  font-family: Nunito;
+  font-weight: 600;
+  color: #00ade6;
+  @include resD((
+    font-size: 26px,
+    margin-top: unset
+  ));
+  @include resM((
+    font-size: 16px,
+    margin-top: 20px
+  ));
+}
+
+.refferalStepsDescContainerLoggedOut {
+  @include resD((
+    margin-bottom: 70px
+  ));
+  @include resM((
+    margin-bottom: 10px
+  ));
+}
+
+.referralStepsCriteriaContainerL {
+  @include resD((
+    margin-top: 30px,
+    margin-bottom: 10px
+  ));
+  @include resM((
+    margin-top: 10px,
+    margin-bottom: 20px
+  ));
+}

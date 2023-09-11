@@ -1,0 +1,74 @@
+@import 'src/scss/size.scss';
+
+
+.mainContainer {
+  width: hs(545px);
+  height: hs(400px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: hs(20px);
+  position: relative;
+  top: hs(180px);
+  background-repeat: no-repeat;
+  background-image: url("../../assets/loginBG.png");
+  background-position: center;
+  background-size: contain;
+}
+
+.headingContainer {
+  font-size: hs(38px);
+  color: #00ade6;
+  font-family: Nunito;
+  display: flex;
+  align-items: flex-end;
+  margin-top: hs(28px);
+}
+
+.formContainer {
+  width: 100%;
+  height: calc(100% - #{hs(52px)});
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
+  border: none !important;
+}
+
+
+.input {
+  width: 100%;
+  border: none;
+  border-bottom: hs(1.5px) solid rgba(0, 0, 0, .1) !important;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+  font-size: hs(20px);
+  font-weight: bold;
+  color: #000;
+  opacity: .7;
+  background-color: rgba(255, 255, 255, 0);
+  outline: none !important;
+}
+
+.firstField {
+  width: calc(100% - #{hs(104px)});
+  min-height: hs(30px);
+}
+
+.field {
+  width: calc(100% - #{hs(104px)});
+  min-height: hs(30px);
+  margin-top: hs(60px);
+}
+
+.submitButtonContainer {
+  width: 100%;
+  height: hs(66px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: hs(60px);
+  margin-right: hs(52px);
+}

@@ -1,0 +1,302 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.banner-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: 1s all ease;
+    cursor: pointer;
+    background: linear-gradient(280.79deg, #4099f7 2.79%, #00ade6 98.42%);
+    font-family:Gilroy;
+    @include resD(
+        (
+            padding: 16.6071px 25.7143px 16.6071px 30px,
+            color: #ffffff,
+            font-weight: 800,
+            width: 260px,
+            height: 60px,
+            margin-top: 20px,
+            border-radius: 60px !important,
+            border: none,
+            font-family:Gilroy,
+            line-height:27px,
+            font-size: 19.2857px,
+        )
+    );
+    @include resM(
+        (
+            padding: 16.6071px 25.7143px 16.6071px 30px,
+            color: #ffffff,
+            font-weight: 700,
+            // width: 240px,
+            // height: 47px,
+            width: 215px,
+            height: 50px,
+            margin-top: 80px,
+            border-radius: 60px !important,
+            line-height:27px,
+            font-size: 16px,
+            border: none,
+        )
+    );
+}
+.banner-btn > .bannerIcon {
+    @include resD((
+        height: 14px,
+        width: 14px,
+        font-size: 14px,
+        margin-left: 10px,
+    ));
+    @include resSm((
+        height: 14px,
+        width: 14px,
+        font-size: 14px,
+        margin-left: 10px,
+    ));
+}
+
+.banner-btn:hover > .bannerIcon {
+    transition: .3s all ease;
+    margin-top: 5px;
+}
+
+.videoDiv-button.custom-event-buttons{
+    @include resD((
+        padding: 14px 6px,
+    ));
+    @include resSm((
+        padding: 10px 14px,
+    ))
+}
+
+.videoDiv-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    color: white;
+    background: linear-gradient(280.79deg, #4099f7 2.79%, #00ade6 98.42%);
+    border-radius: 29.6569px;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 140%;
+    color: #ffffff;
+    @include resD(
+        (
+            font-size: 19.2857px,
+            width: 292px,
+            padding: 15.5px 24px 15.5px 28px,
+            margin-top: 30px,
+            margin-left: 77px,
+        )
+    );
+    @include resM(
+        (
+            font-size: 15px,
+            width: fit-content,
+            padding: 10.5px 20px 10.5px 20px,
+            margin-top: 20px,
+            border:none,
+            margin-left: 15px,
+        )
+    );
+    cursor: pointer;
+}
+.videoDiv-button > img {
+    margin-left: 5px;
+    @include resD(
+        (
+            width: 24px,
+        )
+    );
+    @include resM(
+        (
+            width: 22px,
+        )
+    );
+}
+
+.custom-button-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: linear-gradient(280.79deg, #4099f7 2.79%, #00ade6 98.42%);
+    border-radius: 28px;
+    font-family: Gilroy;
+    font-style: normal;
+    color: #ffffff;
+    @include resM(
+        (
+            left: 84px,
+            top: 65px,
+            font-weight: bolder,
+            width: 160px,
+            height: 43px,
+          border:none,
+        )
+    );
+    @include resD(
+        (
+            left: 105px,
+            top: 64px,
+            font-size: 18px,
+            cursor: pointer,
+            padding: 16.6071px 24.7143px 16.6071px 28px,
+            color: #ffffff,
+            font-weight: 800,
+            width: 198px,
+            height: 56px,
+            border-radius: 29px,
+            border: none,
+        )
+    );
+    & img{
+        @include resD(
+            (
+                margin-left: 5px,
+                height:22px,
+                width: 22px,
+            )
+        );
+        @include resM(
+            (
+                margin-left: 5px,
+                height: 20px,
+                width: 20px,
+            )
+        );
+    }
+}
+.custom-button-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    position: absolute;
+    background: #ffffff;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    color: #00ade6;
+    cursor: pointer;
+    @include resM(
+        (
+            left: 84px,
+            top: 120px,
+            width: 160px,
+            height: 43px,
+            border-radius: 28px,
+        )
+    );
+    @include resD(
+        (
+            left: 105px,
+            top: 144.94px,
+            font-size: 18px,
+            border: none,
+            width: 198px,
+            height: 56px,
+            border-radius: 28px,
+        )
+    );
+    & img{
+        @include resD(
+        (
+            margin-left: 15px,
+            height: 16px,
+            width: 16px,
+        )
+    );
+    @include resM(
+        (
+            margin-left: 14px,
+            height: 13.5px,
+            width: 13.5px,
+        )
+    );
+    }
+}
+
+.custom-button-register{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    background: linear-gradient(280.79deg, #4099f7 2.79%, #00ade6 98.42%);
+    border-radius: 28px;
+    font-family: Gilroy;
+    font-style: normal;
+    color: #ffffff;
+    @include resM(
+        (
+            left: 84px,
+            top: 65px,
+            font-weight: bolder,
+            width: 160px,
+            height: 43px,
+          border:none,
+     
+
+
+        )
+    );
+    @include resD(
+        (
+            left: 105px,
+            top: 64px,
+            font-size: 18px,
+            cursor: pointer,
+            padding: 16.6071px 24.7143px 16.6071px 28px,
+            color: #ffffff,
+            font-weight: 800,
+            width: 198px,
+            height: 56px,
+            border-radius: 29px,
+            border: none,
+        )
+    );
+    & img{
+        @include resD(
+        (
+            margin-left: 10px,
+            height: 25px,
+            width: 25px,
+        )
+    );
+    @include resM(
+        (
+            margin-left: 10px,
+            height: 20px,
+            width: 20px,
+        )
+    );
+    }
+}
+
+.custom-event-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    outline: none;
+    padding: 5px;
+    padding-left: 15px;
+    align-items: center;
+    @include resD(
+    (
+        padding: 13px 20px 13px 24px,
+        background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%),
+        border-radius: 29px,
+    ));
+}

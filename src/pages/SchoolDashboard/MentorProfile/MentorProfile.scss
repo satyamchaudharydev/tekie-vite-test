@@ -1,0 +1,362 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/Inter.scss';
+@import 'src/scss/theme.scss';
+
+
+.school-dashboard-header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @include resD((
+    padding-bottom: 18px,
+  ));
+  @include resM((
+    padding-bottom: 12px,
+  ));
+}
+
+.school-dashboard-students-borderContainer {
+  border: 1px solid #EEEEEE;
+  border-radius: 8px;
+  background: #fff;
+  @include resD((
+    margin: 28px 0px,
+  ));
+  @include resM((
+    margin: 22px 0px,
+  ));
+}
+
+.school-dashboard-mentorProfile-filters-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @include resD((
+    padding: 18px,
+  ));
+  @include resM((
+    padding: 12px,
+  ));
+}
+
+#school-dashboard-students-container {
+	height: 100%;
+	width: 100%;
+	letter-spacing: 0.4px;
+  box-sizing: border-box;
+     
+    @include resD((
+      padding: 28px 32px,
+    ));
+    @include resM((
+      padding: 16px,
+    ));
+	& a:hover {
+		color: #605959;
+	}
+}
+
+.school-dashboard-filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.school-dashboard-students-courseContainer,
+.school-dashboard-students-ind-courseContainer {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 20px 0px 0px;
+}
+
+.school-dashboard-students-profileContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  .school-dashboard-students-profilePic {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: #EEEEEE;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 12px;
+  }
+}
+
+.school-dashboard-students-courseIcon {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include resD((
+    width: 35px,
+    height: 35px,
+    margin-right: 12px,
+  ));
+  @include resM((
+    width: 28px,
+    height: 28px,
+    margin-right: 10px,
+  ));
+}
+
+.school-dashboard-students-action-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  & .school-dashboard-students-actionBtn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    background: transparent;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    padding: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background: #FFF;
+    }
+  
+    & > svg {
+      width: 100%;
+      height: 100%;
+      fill: #00ADE6;;
+    } 
+  }
+}
+.school-dashboard-mentor-codingLang-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 18px 0px 0px;
+  .school-dashboard-mentor-codingLang {
+    padding-right: 12px;
+    font-weight: normal;
+    color: #212121;
+
+    @include resD((
+      font-size: 20px,
+    ));
+    @include resM((
+      font-size: 16px,
+    ))
+  }
+}
+
+.school-dashboard-students-duration-desc {
+  @include resD((
+    font-size: 16px,
+    padding-top: 8px,
+  ));
+  @include resM((
+    font-size: 14px,
+    padding-top: 4px,
+  ));
+}
+
+.school-dashboard-mentorProfile-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px;
+  flex-wrap: wrap;
+
+  .school-dashboard-mentorProfile-personalProfile-column {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include resD((
+      flex: 1 1 40%,
+    ));
+    @include resM((
+      flex: 1 1 100%,
+    ));
+  }
+  .school-dashboard-mentorProfile-details-column {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    @include resD((
+      flex: 1 1 50%,
+    ));
+    @include resM((
+      flex: 1 1 100%,
+    ));
+  }
+
+  .school-dashboard-mentorProfile-profilePic {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    border-radius: 100%;
+    background-color: #EEEEEE;
+    @include resD((
+      width: 220px,
+      height: 220px,
+    ));
+    @include resM((
+      width: 100px,
+      height: 100px,
+    ));
+  }
+
+  .school-dashboard-profile-container {
+    @extend .Inter-regular;
+    padding-left: 18px;
+    .school-dashboard-mentorProfile-name {
+      font-weight: 600;
+      color: #000000;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-transform: capitalize;
+      @include resD((
+        font-size: 38px,
+        padding: 18px 0px
+      ));
+      @include resM((
+        font-size: 30px,
+        padding: 12px 0px
+      ));
+    }
+    .school-dashboard-mentorProfile-gradeAndSection {
+      font-weight: normal;
+      color: #424242;
+      @include resD((
+        font-size: 20px,
+        padding: 6px 0px 22px,
+      ));
+      @include resM((
+        font-size: 16px,
+        padding: 6px 0px 18px
+      ));
+    }
+    .school-dashboard-mentorProfile-bullet {
+      color: #757575;
+      padding: 0px 8px;
+    }
+  }
+
+  .school-dashboard-mentorProfile-details-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 220px;
+    @include resD((
+      flex: 0 1 30%,
+      padding: 32px 32px 8px 20px,
+    ));
+    @include resM((
+      flex: 0 1 100%,
+      padding: 20px 12px 0px,
+    ));
+  }
+
+  .school-dashboard-mentorProfile-details-icon {
+    width: 18px;
+    height: 18px;
+    fill: #BDBDBD;
+    padding: 0px 12px;
+  }
+  
+  .school-dashboard-mentorProfile-details-title {
+    font-weight: normal;
+    color: #757575;
+    display: block;
+    @include resD((
+      font-size: 16px,
+      padding-bottom: 4px
+    ));
+    @include resM((
+      font-size: 14px,
+      padding-bottom: 2px
+    ));
+  }
+
+  .school-dashboard-mentorProfile-details-value {
+    font-weight: normal;
+    color: #424242;
+    display: block;
+    @include resD((
+      font-size: 18px,
+    ));
+    @include resM((
+      font-size: 16px,
+    ));
+  }
+}
+
+.school-dashboard-mentor-rating-container {
+  @extend .Inter-regular;
+  background: #FEF6E6;
+  color: #FAAD14;
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  font-weight: 500;
+  @include resD((
+    font-size: 20px,
+    padding: 4px 12px,
+    margin-left: 12px,
+  ));
+  @include resM((
+    font-size: 18px,
+    padding: 4px 10px,
+    margin-left: 10px,
+  ));
+  
+  & > span {
+    @include resD((
+      font-size: 20px,
+    ));
+    @include resM((
+      font-size: 18px,
+    ));
+    margin-right: 4px;
+  }
+}
+
+.school-dashboard-courseContainer,
+.school-dashboard-ind-courseContainer {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 20px 0px 0px;
+}
+.school-dashboard-courseIcon {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include resD((
+    width: 35px,
+    height: 35px,
+    margin-right: 12px,
+  ));
+  @include resM((
+    width: 28px,
+    height: 28px,
+    margin-right: 10px,
+  ));
+}

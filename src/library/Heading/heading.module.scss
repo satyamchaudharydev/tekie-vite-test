@@ -1,0 +1,92 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.root {
+	font-family: "Nunito";
+	font-weight: 700;
+	color: #282828;
+	margin: 0;
+	padding: 0;
+
+	@include resD(
+		(
+			font-size: 32px,
+			line-height: 140%,
+		)
+	);
+
+	& * {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+}
+
+.size-sm {
+	@include resD(
+		(
+			font-size: 24px,
+			line-height: 140%,
+		)
+	);
+}
+
+.size-md {
+	@include resD(
+		(
+			font-size: 32px,
+			line-height: 140%,
+		)
+	);
+}
+
+.size-lg {
+	@include resD(
+		(
+			font-size: 48px,
+			line-height: 140%,
+		)
+	);
+}
+
+.size-xl {
+	@include resD(
+		(
+			font-size: 64px,
+			line-height: 140%,
+		)
+	);
+}
+
+.weight-light {
+	font-weight: 300;
+}
+
+.weight-normal {
+	font-weight: 400;
+}
+
+.weight-bold {
+	font-weight: 600;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.color-primary {
+	color: $theme;
+}
+
+// classes[`color-${color}`],
+// 		classes[`size-${size}`],
+// 		classes[`weight-${weight}`],
+// 		classes[`align-${align}`],

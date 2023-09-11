@@ -1,0 +1,173 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+.pq_reports_page_embed_container{
+  & * {
+    // margin: 0px;
+    // padding: 0px;
+    box-sizing: border-box;
+  }
+}
+.pq__report__header__main__container {
+  @include resD(
+    (
+      width: 98%,
+      background: #ffffff,
+      border-radius: 16px,
+      padding: 40px 25px 0px 25px,
+      overflow: visible,
+      max-height:530px,
+      min-height:529px,
+    )
+  );
+  @include resM(
+    (
+      width: 98%,
+      background: #ffffff,
+      border-radius: 16px,
+      padding: 20px,
+      overflow: visible,
+    )
+  );
+}
+.button__pq__end__session {
+  @include resD(
+    (
+      display: flex,
+      flex-direction: row,
+      justify-content: center,
+      align-items: center,
+      padding: 10px 16px 10px 12px,
+      background: #8c61cb,
+      border-radius: 8px,
+      color: #fff,
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 16px,
+      line-height: 18px,
+      margin-top:20px,
+      margin-bottom:30px,
+      border:none,
+      position:relative,
+      left:85%,
+      cursor:pointer
+    )
+  );
+  @include resM(
+    (
+      display: flex,
+      flex-direction: row,
+      justify-content: center,
+      align-items: center,
+      padding: 7px 16px 7px 12px,
+      background: #8c61cb,
+      border-radius: 8px,
+      color: #fff,
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 12px,
+      line-height: 18px,
+      margin-top:20px,
+      margin-bottom:30px,
+      border:none
+    )
+  );
+}
+
+.top__links {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 400,
+      font-size: 18px,
+      line-height: 16px,
+      color: #000000,
+      margin: 30px 0px,
+    )
+  );
+  @include resM(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 400,
+      font-size: 12px,
+      line-height: 16px,
+      color: #000000,
+    )
+  );
+}
+
+.pagination {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 18px,
+      line-height: 16px,
+      color: #000000,
+    )
+  );
+  @include resSm(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 400,
+      font-size: 15px,
+      line-height: 16px,
+      color: #000000,
+    )
+  );
+}
+
+.floating__button {
+  @include resD1280(
+    (
+      display: flex,
+      flex-direction: row,
+      justify-content: center,
+      align-items: center,
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 15px,
+      line-height: 18px,
+      color: #ffffff,
+      cursor: pointer,
+      margin-left: auto,
+      margin-right: 32px,
+    )
+  );
+  @include resM(
+    (
+      
+    )
+  );
+}
+.floating__button__container {
+  z-index: 999;
+  @include resD(
+    (
+      width: 100vw,
+      background: #ffffff,
+      height: 100px,
+      position:absolute,
+      right:0%,
+      bottom:0px,
+      display:flex,
+      align-items:center,
+    )
+  );
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  @include resM(
+    (
+      width: 100vw,
+      background: #ffffff,
+      height: 80px,
+    )
+  );
+}

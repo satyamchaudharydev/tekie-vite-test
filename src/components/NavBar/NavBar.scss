@@ -1,0 +1,1363 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+@import 'src/scss/theme/constants.scss';
+@import 'src/scss/theme/colors.scss';
+
+.main_navbar_container {
+  width: 100%;
+  height: hs($topNavBarHeight);
+  background: white;
+  box-shadow: 0px 4px 5px rgba(0, 31, 41, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  z-index: 9999999;
+  @include resD((
+    display: flex,
+  ));
+  @include resM((
+    display: none,
+  ));
+}
+.main_navbar_allottedMentor{
+  color: #aaacae;
+  font-weight: 500;
+  display: block;
+  @include resD((
+    margin-top: 10px,
+  ));
+}
+
+.main_navbar_session_hide_mobile {
+  @include resD((
+    display: flex,
+  ));
+  @include resM((
+    display: none,
+  ));
+}
+
+.main_navbar_tekieLogo {
+  width: hs(78px);
+  height: hs(30px);
+  background-image: url("../../assets/tekieLogo.png");
+  background-size: contain;
+  align-self: flex-start;
+  margin-left: hs(24px);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.main_navbar_tekie_school_logo {
+  width: hs(60px);
+  height: hs(60px);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center center;
+  border: hs(6px) solid #00ADE6;
+  margin-top: hs(2px);
+  margin-left: hs(50px);
+  margin-right: hs(60px);
+}
+
+.main_navbar_coin {
+  width: hs(31.6px);
+  height: hs(31.6px);
+  border-radius: 50%;
+}
+
+.main_navbar_creditsText {
+  font-family: Nunito;
+  font-size: hs(22px);
+  margin-left: hs(10px);
+  color: #fff;
+  font-weight: bold;
+
+}
+
+.main_navbar_navContainer {
+  flex: 1;
+  height: 100%;
+  // margin: 0 hs(50px) 0 hs(50px);
+  display: flex;
+  align-items: center;
+}
+
+.main_navbar_navItem {
+  font-size: hs(20px);
+  color: $grey3;
+  margin-left: hs(60px);
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.4s all ease-in-out;
+  text-transform: capitalize;
+  &:hover {
+    color: #00ade6;
+    path {
+      fill: rgb(128, 214, 243);
+    }
+  }
+  svg.down_Arrow {
+    @include resD((
+      width: 10px,
+      height: 7px,
+      margin-left: 10px,
+    ))
+  }
+}
+
+.main_navbar_navItemIcon {
+  @include resD((
+    width: 22px,
+    height: 22px,
+    margin-right: 15px,
+  ));
+  path {
+    fill: $grey3;
+    transition: 0.3s all ease-in-out;
+    stroke: $white;
+  }
+}
+
+.main_navbar_profileSectiondownArrow {
+  @include resD((
+    width: 12px,
+    height: 6.5px,
+    margin-right: 20px,
+  ));
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  transition: 0.3s all ease-in-out;
+  transform: translateY(hs(-5px));
+  opacity: 0;
+  margin-left: auto;
+}
+
+.main_navbar_profileSectionContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    background: linear-gradient(0deg, rgba(0, 173, 230, 0.04), rgba(0, 173, 230, 0.04)), #FFFFFF;
+    .main_navbar_profileSectiondownArrow {
+      transform: translateY(hs(0px));
+      opacity: 1;
+    }
+  }
+  @include resD((
+    width: 267px,
+    height: 100%,
+    padding-left: 16px,
+    border-left: 1px solid rgba(0, 0, 0, 0.08),
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12),
+  ));
+}
+
+.main_navbar_profileDropdown {
+  
+  @include resD((
+    width: 247px,
+    border-radius: 8px,
+    box-shadow: 0px 0px 16px rgba(56, 56, 56, 0.12), 
+    top: $topNavBarHeight + 5px,
+    left: 0,
+    padding: 24px,
+    min-width: 247px,
+  ));
+  box-sizing: border-box;
+  position: absolute;
+  background: $white;
+}
+
+.main_navbar_switch_account_text {
+  @include resD((
+    font-size: 14px !important,
+  ));
+  font-weight: 700;
+}
+
+.main_navbar__dropdown_hr {
+  width: 100%;
+  @include resD((
+    height: 1px,
+    background: rgba(0, 0, 0, 0.2),
+    margin-top: 24px,
+    margin-bottom: 24px,
+  ));
+}
+
+.main_navbar_profileDropdown__content {
+  @include resD((
+    display: flex,
+    flex-direction: column,
+    align-items: center,
+  ));
+}
+
+.main_navbar_dropdown_item {
+  @include resD((
+    display: flex,
+    align-items: center,
+    width: 100%,
+    height: 17px,
+    gap: 10px,
+    margin-top: 30px,
+    cursor: pointer,
+    transition: 0.3s all ease-in-out,
+  ));
+  &:first-child {
+    margin-top: 0;
+  }
+  &:hover {
+    background: rgba(0, 173, 230, 0.04);
+  }
+}
+
+.main_navbar_dropdown_text {
+  font-weight: 600;
+  color: $grey4;
+  @include resD((
+    font-size: 20px,
+    margin-left: 19px,
+  ));
+  &.danger {
+    color: $red;
+    font-weight: 700;
+  }
+}
+
+.main_navbar_dropdown_item_icon {
+  @include resD((
+    width: 24px,
+    height: 24px,
+  ));
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main_navbar_profilePicture {
+  background: rgb(227,100,139);
+  border-radius: 50%;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include resD((
+    max-width: 48px,
+    max-height: 48px,
+    min-width: 48px,
+    min-height: 48px,
+  ));
+}
+.main_navbar_profilePicture:not(:nth-child(1)){
+  left: -10px;
+}
+
+.main_navbar_profileIconContainer {
+  display: flex;
+  flex-direction: row;
+  margin-right: hs(50px);
+  border-radius: hs(26px);
+  cursor: pointer;
+  box-shadow: 0 hs(3px) hs(6px) 0 rgba(0, 0, 0, 0.08);
+  transition: 0.5s all ease-in-out;
+}
+
+.main_navbar_profilePicture_inset_overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 50%;
+  @include resD((
+    border: 5px solid rgba(250, 250, 250, 0.6),
+  ));
+}
+
+.main_navbar_user_name {
+  color: $grey4;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include resD((
+    max-width: 150px,
+    font-size: 18px,
+    line-height: 25px,
+  ));
+}
+
+.main_navbar_user_grade {
+  color: $grey3;
+  font-weight: 600;
+  @include resD((
+    font-size: 14px,
+    margin-top: 1px,
+    line-height: 19px,
+  ));
+}
+
+.main_navbar_profileSectionBody {
+  @include resD((
+    margin-left: 16px,
+  ))
+}
+
+.main_navbar_profileIconContainerNoReferral {
+  background: #e0fcfd;
+  &:hover {
+    background: #d2fdff;
+    box-shadow: 0 hs(3px) hs(6px) 0 rgba(0, 0, 0, 0.08), 0 0 0 hs(2px) rgba(#00ADE5, 0.4)
+  }
+}
+
+.main_navbar_creditsContainer {
+  height: hs(51px);
+  border-radius: hs(26px) 0 0 hs(26px);
+  background-image: linear-gradient(to bottom, #00ade6, #34e4ea);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 hs(10px) 0 hs(7px);
+}
+
+.main_navbar_profileIcon {
+  height: hs(51px);
+  border-radius: 0 hs(26px) hs(26px) 0;
+  // position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_navbar_profileIconNoReferral {
+  @include resD((
+    padding: 0 10px
+  ));
+}
+
+.main_navbar_profileWrapper {
+  width: hs(31.5px);
+  height: hs(35.8px);
+  margin-right: hs(19px);
+}
+
+.main_navbar_profileWrapperNoReferral {
+  margin-right: 0px;
+}
+
+.main_navbar_noMargin {
+  margin-right: 0;
+}
+
+.main_navbar_activeNav {
+  color: #00ade6;
+  .main_navbar_navItemIcon {
+    path {
+      fill: rgb(128, 214, 243);
+      stroke: rgb(0, 173, 230);
+    }
+  }
+}
+
+.main_navbar_arrowUp {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-left: hs(20.75px) solid transparent;
+  border-right: hs(20.75px) solid transparent;
+  border-bottom: hs(15.3px) solid #e0fcfd;
+  top:hs(70px - 20px);
+  right: hs(65px - 20px);
+}
+
+.main_navbar_arrowUpNoReferral {
+  right: hs(4px);
+}
+
+.main_navbar_dropDownContainer{
+  position: absolute;
+  width: hs(280px);
+  top:hs(85.3px - 20px);
+  right: hs(10px - 20px);
+  border-radius: 10px;
+  z-index: 9999;
+  overflow: hidden;
+  background-color: #e0fcfd;
+  box-shadow: 0px 4px 16px rgba(51, 51, 51, 0.08);
+}
+
+.main_navbar_dropDownBG{
+  position: absolute;
+  width: 100%;
+  margin: hs(-240px) 0px 0px 0px;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+}
+
+.main_navbar_dropDownItemsLayout{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main_navbar_dropDownRow{
+  display: flex;
+  flex: 1;
+  padding-left: hs(21.7px);
+  align-items: center;
+  min-height: hs(76px);
+  transition: 0.3s all ease-in-out;
+  background: transparent;
+  &:hover {
+    background: #fff;
+    .main_navbar_rowText {
+      transform: translateX(hs(10px));
+    }
+  }
+}
+
+.main_navbar_rowText{
+  padding-left: hs(15px);
+  font-family: Nunito-SemiBold;
+  font-size: hs(22px);
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  transition: 0.2s all ease-in-out;
+  letter-spacing: normal;
+  text-align: center;
+  color: #004e64;
+}
+
+.main_navbar_horizontalLine{
+  border: 1px solid rgba(#fff, 0.5);
+  width: 80%;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.main_navbar_settingsIcon{
+  width: hs(22.476px);
+  height: hs(22.476px);
+  position: relative;
+}
+
+.main_navbar_logoutIcon{
+  width: hs(22.163px);
+  height: hs(22.163px);
+  position: relative;
+}
+
+.main_navbar_link{
+  text-decoration: none;
+}
+
+.main_navbar_timerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: hs(130px);
+}
+
+//Media queries for different resolutions.
+@media screen and (max-width: 1000px) {
+  .main_navbar_container {
+    width: 100%;
+    height: hsm(54px);
+    justify-content: space-between;
+  }
+
+  .main_navbar_navContainer {
+    display: none !important;
+  }
+
+  .main_navbar_tekieLogo {
+    width: hsm(72px);
+    height: hsm(40px);
+    margin-left: 23%;
+  }
+  
+  .main_navbar_tekie_school_logo {
+    width: hsm(60px);
+    height: hsm(60px);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+    border: hsm(6px) solid #00ADE6;
+    margin-top: hsm(12px);
+    margin-left: 20%;
+  }
+
+  .main_navbar_profileIconContainer {
+    opacity: 0;
+    pointer-events: none;
+    margin-right: hsm(16px);
+    border-radius: hsm(26px);
+    cursor: pointer;
+    box-shadow: 0 hsm(3px) hsm(6px) 0 rgba(0, 0, 0, 0.16);
+  }
+
+  .main_navbar_creditsContainer {
+    height: hsm(37px);
+    border-radius: hsm(26px) 0 0 hsm(26px);
+    background-image: linear-gradient(to bottom, #00ade6, #34e4ea);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 hsm(10px) 0 hsm(7px);
+  }
+
+  .main_navbar_coin {
+    width: hsm(20.3px);
+    height: hsm(20.3px);
+    border-radius: 50%;
+  }
+
+  .main_navbar_profileIcon {
+    height: hsm(37px);
+    border-radius: 0 hsm(26px) hsm(26px) 0;
+  }
+
+  .main_navbar_creditsText {
+    font-family: Nunito;
+    font-size: hsm(16px);
+    margin-left: hsm(6px);
+  }
+
+  .main_navbar_profileWrapper {
+    width: hsm(20.3px);
+    height: hsm(23px);
+    margin-right: hsm(13px);
+  }
+
+  .main_navbar_arrowUp {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: hsm(14.75px) solid transparent;
+    border-right: hsm(14.75px) solid transparent;
+    border-bottom: hsm(15.3px) solid rgb(196, 239, 245);
+    top:hsm(38px);
+    right: hs(65px - 20px);
+  }
+
+  .main_navbar_dropDownContainer{
+    position: absolute;
+    width: hsm(135px);
+    top: hsm(54px);
+    right: hsm(-8px);
+    border-radius: hsm(6px);
+  }
+
+  .main_navbar_settingsIcon{
+    width: hsm(20.476px);
+    height: hsm(19.476px);
+    position: relative;
+  }
+
+  .main_navbar_logoutIcon{
+    width: hsm(19.163px);
+    height: hsm(19.163px);
+    position: relative;
+    right: -2px;
+  }
+
+  .main_navbar_dropDownRow{
+    padding-left: hsm(10px);
+    min-height: hsm(38px);
+  }
+
+  .main_navbar_rowText{
+    padding-left: hsm(8px);
+    font-family: Nunito-Bold;
+    font-size: hsm(16px);
+  }
+
+  .main_navbar_horizontalLine{
+    border: 0.5px solid #004e64;
+    width: 90%;
+  }
+
+  .main_navbar_hamburgerWrapper {
+    height: 60%;
+    width: 8%;
+    margin-left: 3%;
+    margin-top: 2%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../../assets/Hamburger.svg");
+  }
+}
+
+@media screen and (min-width: 475px) and (max-width: 500px) {
+  .main_navbar_container {
+    height: hsm(51px);
+  }
+
+  .main_navbar_profileWrapper {
+    margin-right: hsm(11px) !important;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 550px) {
+  .main_navbar_container {
+    height: hsm(51px);
+  }
+
+  .main_navbar_profileWrapper {
+    margin-right: hsm(9px);
+  }
+
+  .main_navbar_hamburgerWrapper {
+    width: 7%;
+  }
+}
+
+.main_navbar_savedCodeIcon{
+  background-image: url('../../assets/All_code.svg');
+  width: hsm(19.476px);
+  height: hsm(18.476px);
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main_navbar_studentCommunityIcon{
+  background-image: url('../../assets/studentCommunityIcon.svg');
+  width: hsm(19.476px);
+  height: hsm(18.476px);
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 550px) and (max-width: 600px) {
+  .main_navbar_container {
+    height: hsm(50px);
+  }
+
+  .main_navbar_profileWrapper {
+    margin-right: hsm(10px);
+  }
+
+  .main_navbar_creditsText {
+    font-size: hsm(14px);
+  }
+
+  .main_navbar_hamburgerWrapper {
+    width: 7%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  .main_navbar_creditsText {
+    font-size: hsm(13px);
+    margin-left: hsm(5px);
+  }
+
+  .main_navbar_profileIcon {
+    height: hsm(32px);
+  }
+
+  .main_navbar_container {
+    width: 100%;
+    height: hsm(49px);
+  }
+
+  .main_navbar_creditsContainer {
+    height: hsm(35px);
+  }
+
+  .main_navbar_tekieLogo {
+    width: hsm(66px);
+    height: hsm(36px);
+    margin-left: 20%;
+  }
+
+  .main_navbar_tekie_school_logo {
+    width: hsm(60px);
+    height: hsm(60px);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+    border: hsm(6px) solid #00ADE6;
+    margin-top: hsm(12px);
+    margin-left: 20%;
+  }
+
+  .main_navbar_profileWrapper {
+    width: hsm(19.3px);
+    height: hsm(22px);
+    margin-right: hsm(13px);
+  }
+
+  .main_navbar_coin {
+    width: hsm(19.3px);
+    height: hsm(19.3px);
+    border-radius: 50%;
+  }
+
+  .main_navbar_dropDownContainer{
+    width: hsm(130px);
+  }
+
+  .main_navbar_settingsIcon{
+    width: hsm(19.476px);
+    height: hsm(18.476px);
+  }
+
+  .main_navbar_logoutIcon{
+    width: hsm(18.163px);
+    height: hsm(18.163px);
+  }
+
+  .main_navbar_dropDownRow{
+    padding-left: hsm(8px);
+    min-height: hsm(36px);
+  }
+
+  .main_navbar_rowText{
+    padding-left: hsm(7px);
+    font-family: Nunito-Bold;
+    font-size: hsm(15px);
+  }
+
+  .hamburgerWrapper main_navbar_{
+    width: 6.5%;
+  }
+
+  .main_navbar_savedCodeIcon{
+    width: hsm(19.476px);
+    height: hsm(18.476px);
+  }
+  .main_navbar_studentCommunityIcon{
+    width: hsm(19.476px);
+    height: hsm(18.476px);
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  main_navbar_.creditsText {
+    font-size: hsm(10px);
+    margin-left: hsm(4px);
+  }
+
+  .main_navbar_profileIcon {
+    height: hsm(28px);
+  }
+
+  .main_navbar_container {
+    width: 100%;
+    height: hsm(39px);
+  }
+
+  .main_navbar_tekieLogo {
+    width: hsm(60px);
+    height: hsm(30px);
+    margin-left: 0%;
+  }
+
+  .main_navbar_tekie_school_logo {
+    width: hsm(60px);
+    height: hsm(60px);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+    border: hsm(6px) solid #00ADE6;
+    margin-top: hsm(12px);
+    margin-left: 20%;
+  }
+
+  .main_navbar_creditsContainer {
+    height: hsm(28px);
+  }
+
+  .main_navbar_profileWrapper {
+    width: hsm(15.3px);
+    height: hsm(17px);
+    margin-right: hsm(9px);
+  }
+
+  .main_navbar_coin {
+    width: hsm(15.3px);
+    height: hsm(15.3px);
+  }
+
+  .main_navbar_arrowUp {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: hsm(11.75px) solid transparent;
+    border-right: hsm(11.75px) solid transparent;
+    border-bottom: hsm(12.3px) solid rgb(196, 239, 245);
+    top:hsm(30px);
+    right: hs(65px - 20px);
+  }
+
+  .main_navbar_dropDownContainer{
+    width: hsm(110px);
+    top: hsm(43px);
+  }
+
+  .main_navbar_settingsIcon{
+    width: hsm(15.476px);
+    height: hsm(14.476px);
+  }
+
+  .main_navbar_logoutIcon{
+    width: hsm(14.163px);
+    height: hsm(14.163px);
+  }
+
+  .main_navbar_dropDownRow{
+    padding-left: hsm(7px);
+    min-height: hsm(30px);
+  }
+
+  .main_navbar_rowText{
+    padding-left: hsm(4px);
+    font-family: Nunito-Bold;
+    font-size: hsm(12px);
+  }
+
+  .main_navbar_hamburgerWrapper{
+    width: 6%;
+    margin-top: 1.8%;
+  }
+
+
+  .main_navbar_savedCodeIcon{
+width: hsm(19.476px);
+    height: hsm(18.476px);
+}
+  .main_navbar_studentCommunityIcon{
+width: hsm(19.476px);
+    height: hsm(18.476px);
+}
+}
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  .main_navbar_creditsText {
+    font-size: hsm(11px);
+    margin-left: hsm(4px);
+  }
+
+  .main_navbar_profileIcon {
+    height: hsm(31px);
+  }
+
+  .main_navbar_container {
+    height: hsm(42px);
+  }
+
+  .main_navbar_tekieLogo {
+    width: hsm(62px);
+    height: hsm(33px);
+    margin-left: 20%;
+  }
+
+  .main_navbar_tekie_school_logo {
+    width: hsm(60px);
+    height: hsm(60px);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+    border: hsm(6px) solid #00ADE6;
+    margin-top: hsm(12px);
+    margin-left: 20%;
+  }
+
+  .main_navbar_creditsContainer {
+    height: hsm(30px);
+  }
+
+  .main_navbar_profileWrapper {
+    width: hsm(17.3px);
+    height: hsm(19px);
+    margin-right: hsm(10px);
+  }
+
+  .main_navbar_coin {
+    width: hsm(17.3px);
+    height: hsm(17.3px);
+  }
+
+
+  .main_navbar_savedCodeIcon{
+    width: hsm(22px);
+    height: hsm(22px);
+  }
+  .main_navbar_studentCommunityIcon{
+    width: hsm(22px);
+    height: hsm(22px);
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+  .main_navbar_creditsText {
+    font-size: hsm(10px);
+    margin-left: hsm(3px);
+  }
+
+  .main_navbar_profileIcon {
+    height: hsm(28px);
+  }
+
+  .main_navbar_container {
+    height: hsm(38px);
+  }
+
+  .main_navbar_tekieLogo {
+    width: hsm(58px);
+    height: hsm(30px);
+    margin-left: 20%;
+  }
+
+  .main_navbar_tekie_school_logo {
+    width: hsm(20px);
+    height: hsm(20px);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+    border: hsm(2px) solid #00ADE6;
+    margin-top: hsm(1px);
+    margin-left: unset;
+  }
+
+  .main_navbar_creditsContainer {
+    height: hsm(26px);
+  }
+
+  .main_navbar_profileWrapper {
+    width: hsm(15.3px);
+    height: hsm(16px);
+    margin-right: hsm(8px);
+  }
+
+  .main_navbar_coin {
+    width: hsm(15.3px);
+    height: hsm(15.3px);
+  }
+
+  .main_navbar_profileIconContainer {
+    height: hsm(26px);
+  }
+
+  .main_navbar_dropDownContainer{
+    width: hsm(100px);
+  }
+
+  .main_navbar_settingsIcon{
+    width: hsm(13.476px);
+    height: hsm(12.476px);
+  }
+
+  .main_navbar_logoutIcon{
+    width: hsm(12.163px);
+    height: hsm(12.163px);
+  }
+
+  .main_navbar_dropDownRow{
+    padding-left: hsm(7px);
+    min-height: hsm(26px);
+  }
+
+  .main_navbar_rowText{
+    font-size: hsm(10px);
+  }
+
+
+  .main_navbar_hamburgerWrapper {
+    margin-top: 1.5%;
+  }
+
+  .main_navbar_savedCodeIcon{
+    width: hsm(22px);
+    height: hsm(22px);
+  }
+  .main_navbar_studentCommunityIcon{
+    width: hsm(22px);
+    height: hsm(22px);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .main_navbar_savedCodeIcon{
+    width: 1.5vw;
+    height: hsm(18px);
+  }
+  .main_navbar_studentCommunityIcon{
+    width: 1.5vw;
+    height: hsm(18px);
+  }
+}
+
+/* dropdown menu */
+
+.main_navbar_menus {
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.main_navbar_drop {
+  box-shadow: 0 4px 5px #ccc;
+  transform-origin: 0 0;
+  position: absolute;
+  z-index: 25;
+  box-sizing: border-box;
+  color: black;
+  @include resD((
+    top: 85px,
+    width: 270px,
+  ));
+  opacity: 0;
+  visibility: hidden;
+  transform: rotateX(90deg);
+  background: #FFFFFF;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+}
+.main_navbar_drop a{
+  transition: 300ms all ease-in-out;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  color: inherit;
+}
+.main_navbar_drop::before {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border: 20px solid transparent;
+    border-bottom: 25px solid #E6F7FD;
+    left: 25px;
+    top: -43px;
+    z-index: 1;
+}
+.main_navbar_drop div {
+  display: block;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  @include resD((
+    font-size: 23.5px,
+    padding: 15px,
+    line-height: 28px,
+  ));
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  color: #504F4F;
+  transition: 0.3s all ease-in-out;
+  &:hover{
+    background-color: #E6F7FD;
+    color: #00ADE6;
+    &  > a{
+      transform: translateX(hs(10px));
+    }
+  }
+}
+
+.main_navbar_drop div.main_navbar_activeNav {
+  background-color: #E6F7FD;
+  color: #00ADE6 !important;
+}
+
+.main_navbar_dropShow {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(0);
+}
+
+.main_navbar_drop_course.main_navbar_dropShowCourse {
+  z-index: 99999;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0px);
+}
+
+.main_navbar_drop_course {
+  transform-origin: 0 0;
+  z-index: 0;
+  box-sizing: border-box;
+  color: black;
+  @include resD((
+    pointer-events: none,
+    background: #FFFFFF,
+    position: absolute,
+    top: $topNavBarHeight - 16px,
+    width: 687px,
+    padding: 16px 24px,
+    box-shadow: 0px 4px 20px rgba(0, 25, 34, 0.1),
+    border: 1px solid #E0E0E0,
+    transform: translateY(10px),
+    border-radius: 4px,
+    visibility: hidden,
+    opacity: 0,
+    max-height: 70vh,
+    overflow: scroll,
+  ));
+  transition: all 0.3s ease-in-out;
+  @include resM((
+    pointer-events: all,
+    background: unset,
+    position: relative,
+    top: unset,
+    width: unset,
+    padding: unset,
+    box-shadow: none,
+    border: none,
+    transform: unset,
+    border-radius: u,
+    visibility: visible,
+    opacity: 1,
+    max-height: unset,
+    overflow: visible,
+  ));
+}
+.main_navbar_drop_course a{
+  transition: 300ms all ease-in-out;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  color: inherit;
+}
+
+.main_navbar_drop_course > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  @include resD((
+    // font-size: 23.5px,
+    padding: 16px 0px,
+    line-height: 28px,
+  ));
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  color: #504F4F;
+  transition: 0.3s all ease-in-out;
+  &:hover{
+    // background: rgba(230, 247, 253, 0.3);
+    color: #00ADE6;
+    &  > a{
+      transform: translateX(hs(10px));
+    }
+  }
+}
+
+.main_navbar_drop_course div.main_navbar_activeNav {
+  @include resD((
+    background: rgba(230, 247, 253, 0.3),
+  ));
+  @include resM((
+    background: rgba(230, 247, 253, 0.5),
+  ));
+  color: #00ADE6 !important;
+}
+
+.main_navbar_thumbnail {
+  @include resD((
+    width: 116px,
+    height: 111px,
+    margin-right: 16px
+  ));
+  @include resM((
+    width: 116px,
+    height: 111px,
+    margin-right: 16px
+  ));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.main_navbar_drop_course div.main_navbar_course_title{
+  color: #504F4F;
+  display: block !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  @include resD((
+    font-size: 26px,
+    width: 420px,
+    font-weight: bold,
+  ));
+  @include resM((
+    font-size: 18px,
+    width: 200px,
+    font-weight: bold,
+  ));
+}
+
+.main_navbar_noThumbnailText {
+  @include resD((
+    width: 550px !important,
+  ));
+}
+.main_navbar_drop_course div.main_navbar_activeNav div.main_navbar_course_title {
+  color: #00ADE6;
+
+}
+
+.main_navbar_course_arrow {
+  @include resD((
+    width: 14px,
+    height: 25px,
+    margin-right: 14px
+  ));
+  @include resM((
+    width: 14px,
+    height: 25px,
+    margin-right: 14px
+  ));
+  path {
+    stroke: #DCDCDC;
+    transition: 0.3s all ease-in-out;
+  }
+}
+.main_navbar_course_arrow.active {
+  path {
+    stroke: #00ADE6;
+  }
+}
+
+.main_navbar_hrLineCourse {
+  opacity: 0.2;
+  height: 0px !important;
+  padding: 0px !important;
+  @include resD((
+    margin-bottom: 16px,
+    margin-top: 16px,
+    border-top: 0.8px solid #000000,
+  ));
+  @include resM((
+    margin-bottom: 10px,
+    margin-top: 10px,
+    border-top: 0.8px solid #000000,
+  ));
+}
+
+.main_navbar_active_drop_item:hover {
+  .main_navbar_course_title {
+    color: #00ADE6;
+  }
+  .main_navbar_course_arrow path {
+    stroke: #00ADE6;
+  }
+}
+
+.main_navbar_up_next {
+  display: flex;
+  align-items: center;
+  color: rgba(#504F4F, 0.5);
+  @include resD((
+    font-size: 12px,
+    margin-top: 16px
+  ));
+  @include resM((
+    font-size: 12px,
+    margin-top: 6px
+  ));
+}
+
+.main_navbar_up_next_arrow {
+  position: relative;
+  @include resD((
+    width: 16px,
+    height: 16px,
+    margin-left: 6px,
+    top: -4px
+  ));
+  @include resM((
+    width: 12px,
+    height: 12px,
+    margin-left: 4px,
+    top: -4px
+  ));
+}
+
+.main_navbar_topic_title {
+  color: #504F4F;
+  @include resD((
+    font-size: 20px,
+    margin-top: 3px,
+    font-weight: bold,
+  ));
+  @include resM((
+    font-size: 16px,
+    margin-top: 2px,
+    font-weight: 600,
+  ));
+  letter-spacing: -0.02em;
+}
+
+.main_navbar_course_completed_tag {
+  text-transform: uppercase;
+  width: min-content;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  @include resD((
+    background: rgba(66, 232, 209, 0.2),
+    color: rgba(#01AA93, 0.5),
+    border-radius: 4px,
+    padding: 4px 5px,
+    font-size: 12px,
+    margin-top: 8px
+  ));
+  @include resM((
+    border-radius: 4px,
+    padding: 4px 5px,
+    font-size: 12px,
+    margin-top: 8px,
+    background: rgba(101, 218, 122, 0.1),
+    color: #65DA7A,
+  ));
+}
+.dropdown-text{
+  white-space: nowrap;
+  color: #504F4F;
+  font-weight: 400;
+  @include resD((
+    font-size: 20px,
+  ))
+  
+}
+.profile-logout-button{
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  height: unset;;
+  border: 2px solid #FF5744; 
+  @include resD((
+    border-radius: 30px,
+    padding: 6px 14px,
+
+  ))
+}

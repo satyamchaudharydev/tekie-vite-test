@@ -1,0 +1,64 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    align-items: center;
+    // max-height: hs(992px);
+    overflow-y: scroll;
+    position: relative;
+}
+
+.section{
+    margin-top: hs(53px);
+}
+
+.mainTitle{
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    font-family: Nunito-Bold;
+    font-size: hs(30px);
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.37;
+    letter-spacing: normal;
+    text-align: left;
+    color: #00ade6;
+    margin-bottom: hs(18px);
+}
+
+.triangleBGContainer{
+  position: fixed;
+  width: 100%;
+  height: $height-without-navbar;
+  z-index: -1;
+}
+
+.uhohMsgContainer {
+    margin-top: hs(100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: hs(30px);
+    font-weight: 600;
+    color: #000000;
+    opacity: 0.6;
+}
+
+.emptyMsgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: hs(26px);
+    font-weight: 500;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.messageContainer {
+    display: flex;
+    flex-direction: column;
+}

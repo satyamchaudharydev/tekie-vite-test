@@ -1,0 +1,45 @@
+@import 'src/scss/size.scss';
+
+.masteryTubeContainer {
+  margin-top: hs(7.5px) !important;
+  display: flex;
+  flex-direction: row;
+}
+
+.masteryTubeBase {
+  width: hs(131.8px) !important;
+  height: hs(45.7px) !important;
+}
+
+.masteryTubeLeft {
+  @extend .masteryTubeBase;
+  margin-right: hs(5.8px) !important;
+  border-radius: hs(48px) 0 0  hs(48px) !important;
+}
+
+.masteryTubeRight {
+  @extend .masteryTubeBase;
+  border-radius: 0 hs(48px) hs(48px) 0 !important;
+}
+
+.masteryTubeCenter {
+  @extend .masteryTubeBase;
+  margin-right: hs(5.8px) !important;
+}
+
+.absoulteShine {
+  position: absolute;
+  left: hs(15px) !important;
+  top: hs(7px) !important;
+  z-index: 1;
+  width: hs(377.9px) !important;
+  border-radius: hs(100px) !important;
+  height: hs(17.5px) !important;
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: hs(-196.5px) !important;
+}

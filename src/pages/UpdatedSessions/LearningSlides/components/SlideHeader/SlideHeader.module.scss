@@ -1,0 +1,297 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/theme/spacing.scss";
+
+$slide-indicator-primary: #7dc7ec;
+$completed-tab-shadow: #018573;
+$multiple-attempts-tab-shadow: #dd9405;
+.headerWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.slideHeaderContentWrapper {
+  width: 85%;
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+.beforeEffects {
+  &::before {
+    content: "";
+    position: absolute;
+    height: inherit;
+    top: 50;
+    left: 0%;
+    transform: translateX(-50%);
+    width: 12%;
+    backdrop-filter: blur(3px);
+    background-image: linear-gradient(to right, white, #3ad4da);
+    z-index: -1;
+    @include resD(
+      (
+        height: 7px,
+      )
+    );
+    @include resM(
+      (
+        height: 4px,
+      )
+    );
+  }
+}
+.afterEffects,
+.afterEffectsIncomplete {
+  &::after {
+    content: "";
+    position: absolute;
+    height: inherit;
+    top: 50%;
+    right: 0%;
+    transform: translate(50%, -50%);
+    width: 12%;
+    backdrop-filter: blur(1px);
+    background-image: linear-gradient(to right, #3ad4da, white);
+    z-index: -1;
+    @include resD(
+      (
+        height: 7px,
+      )
+    );
+    @include resM(
+      (
+        height: 4px,
+      )
+    );
+  }
+}
+.afterEffectsIncomplete::after {
+  background-image: linear-gradient(to right, $emperor-86, white);
+}
+.dualEffects,
+.dualEffectsIncomplete {
+  &::before {
+    content: "";
+    position: absolute;
+    height: inherit;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    width: 12%;
+    backdrop-filter: blur(3px);
+    background-image: linear-gradient(to right, white, #3ad4da);
+    @include resD(
+      (
+        height: 7px,
+      )
+    );
+    @include resM(
+      (
+        height: 4px,
+      )
+    );
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: inherit;
+    top: 50%;
+    right: 0%;
+    transform: translate(50%, -50%);
+    width: 12%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    background-image: linear-gradient(to left, white, #3ad4da);
+    z-index: -1;
+    @include resD(
+      (
+        height: 7px,
+      )
+    );
+    @include resM(
+      (
+        height: 4px,
+      )
+    );
+  }
+}
+.dualEffectsIncomplete::after {
+  background-image: linear-gradient(to left, white, $emperor-86);
+}
+.sliderHeaderProgressBarOuter,
+.sliderHeaderProgressBarInner {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 100%;
+  transform: translateY(-50%);
+  @include resD(
+    (
+      height: 7px,
+    )
+  );
+  @include resM(
+    (
+      height: 4px,
+    )
+  );
+  background-color: $emperor-86;
+  z-index: 4;
+}
+.sliderHeaderProgressBarInner {
+  background-image: linear-gradient(to bottom, #35e4e9 0%, $deep-sky-blue 100%);
+  opacity: 0.7;
+  width: 0%;
+  transition: all 0.35s ease-in-out;
+  z-index: 5;
+}
+.slideGridIndicator {
+  z-index: 6;
+  @include resD(
+    (
+      width: 20px,
+      height: 20px,
+    )
+  );
+  @include resM(
+    (
+      width: 16px,
+      height: 16px,
+    )
+  );
+  border-radius: 50%;
+  background-color: $slide-indicator-primary;
+}
+.slidePQIndicator {
+  z-index: 6;
+  @include resD(
+    (
+      width: 44px,
+      height: 44px,
+    )
+  );
+  @include resM(
+    (
+      width: 26px,
+      height: 26px,
+    )
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  > svg {
+    @include resD(
+      (
+        width: 15px,
+        height: 30px,
+      )
+    );
+    @include resM(
+      (
+        width: 10px,
+        height: 20px,
+      )
+    );
+    transform: translateX(5%);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    transform: translateY(6%);
+    z-index: -1;
+  }
+}
+.leftButtonWrapper,
+.rightButtonWrapper {
+  cursor: pointer;
+  background-color: white;
+  transform: translateY(5%);
+  z-index: 9999;
+  @include resD(
+    (
+      padding: 10px,
+    )
+  );
+  @include resM(
+    (
+      padding: 10px,
+    )
+  );
+  > svg {
+    @include resD(
+      (
+        width: 18px,
+        height: 32px,
+      )
+    );
+    @include resM(
+      (
+        width: 12px,
+        height: 25px,
+      )
+    );
+  }
+}
+.disabled {
+  cursor: default;
+  > svg > path {
+    fill: $emperor-86;
+  }
+}
+.slidePQIndicatorContainer {
+  border-radius: 50%;
+}
+.activeSlideGrid {
+  position: relative;
+  z-index: 6;
+  cursor: pointer;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) scale(1.5);
+    background-image: url("../../../../../assets/ActiveTabSmall.png");
+    background-position: center;
+    background-size: 100%;
+  }
+}
+.activeSlidePQ {
+  position: relative;
+  z-index: 6;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../../../../assets/ActiveTabBig.png");
+    background-position: center;
+    background-size: cover;
+    @include resD(
+      (
+        width: 58px,
+        height: 58px,
+      )
+    );
+    @include resM(
+      (
+        width: 40px,
+        height: 40px,
+      )
+    );
+  }
+}

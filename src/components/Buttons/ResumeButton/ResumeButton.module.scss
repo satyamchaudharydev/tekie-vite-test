@@ -1,0 +1,24 @@
+@import 'src/scss/size.scss';
+
+.iconContainer {
+  position: relative;
+  width: hs(14.3px);
+  height: hs(15.6px);
+  top: hs(-5px)
+}
+
+.iconContainerArrow {
+  position: relative;
+  
+  left: hs(2px);
+  @include resSm((
+    width: hs(24.3px),
+    height: hs(120.6px),
+    top: hs(0px),
+  ));
+  @include resD((
+    top: hs(-4px),
+    width: hs(14.3px),
+    height: hs(17.6px),
+  ));
+}

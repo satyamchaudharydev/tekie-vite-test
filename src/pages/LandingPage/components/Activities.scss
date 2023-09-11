@@ -1,0 +1,79 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.landing-page-activities-container {
+  // width: 100%;
+  @include resM((
+    padding-left: 14px,
+    margin-top: 28px,
+  ));
+  @include resDn((
+    padding-left: 0px,
+    margin-top: 68px,
+    width: 470px,
+  ));
+  box-sizing: border-box;
+}
+
+.landing-page-activities-title {
+  @extend .lato-light;
+  color: #34e4ea;
+  @include resM((
+    font-size: 18px,
+    line-height: 22px,
+    letter-spacing: 1.26px,
+    opacity: 0.8,
+  ));
+  @include resDn((
+    font-size: 30px,
+    font-weight: normal,
+    line-height: 35px,
+    letter-spacing: 1.2px,
+    opacity: 0.7,
+    margin-bottom: 34px,
+  ));
+}
+
+.landing-page-activities-row {
+  display: flex;
+  align-items: center;
+  @include resM((
+    margin-top: 14px,
+  ));
+  @include resDn((
+    margin-top: 5px,
+  ));
+}
+
+.landing-page-activities-bullet {
+  border-radius: 50%;
+  background-color: white;
+  @include resM((
+    min-width: 5.6px,
+    min-height: 5.6px,
+    margin-right: 15.2px,
+  ));
+  @include resDn((
+    min-width: 5.6px,
+    min-height: 5.6px,
+    margin-right: 19px,
+    opacity: 0.7,
+  ));
+}
+
+.landing-page-activities-activity {
+  @extend .lato-light;
+  color: white;
+  font-weight: 400;
+  @include resM((
+    font-size: 16px,
+    letter-spacing: 0.57px,
+    opacity: 0.8,
+  ));
+  @include resDn((
+    font-size: 25px,
+    letter-spacing: 1.53px,
+    opacity: 0.6,
+    line-height: 45px,
+  ));
+}

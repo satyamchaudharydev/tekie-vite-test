@@ -1,0 +1,229 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import '../../../../variables/_variables.scss';
+
+.Session_details_container {
+    border-top: 1px solid #EEEEEE;
+    @include resD(
+        (
+            width: 93%,
+            display: flex,
+            flex-direction: column,
+            align-items: flex-start,
+            margin-top: 40px,
+            margin-bottom:20px,
+            padding-top: 45px
+        )
+    );
+    @include resSm(());
+}
+.Course_tags{
+    @include resD((
+        display: flex,
+    margin-bottom: 34px,
+    flex-wrap: wrap,
+  ));
+    
+}
+
+.Course_tag{
+    @include resD((
+        display: flex,
+flex-direction: row,
+justify-content: center,
+align-items: center,
+padding: 4px 12px,
+background: #EEEEEE,
+border-radius: 15px,
+    font-size: 14px,
+    font-family: Inter,
+    font-style: normal,
+    font-weight: 500,
+    color: #616161,
+    margin-right: 12px,
+    margin-top: 2px,
+  ));
+   
+}
+.session_icon{
+    @include resD(
+        (
+            height: 20px,
+            width: 20px
+        )
+    );
+}
+.sessions_heading1{
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+@include resD(
+        (
+            font-size: 16px,
+        )
+    );
+line-height: 12px;
+color: #757575;
+padding-top: 4px;
+padding-bottom: 8px;
+}
+.sessions_heading2{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    @include resD(
+        (
+            font-size: 18px,
+        )
+    );
+    line-height: 17px;
+    color: #282828;
+    margin-top:6px;
+}
+.modal_Link_heading{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #424242;
+    margin-bottom: 8px;
+    margin-top: 22px;
+}
+
+.modal_link_input{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 9px 12px;
+background: #FFFFFF;
+border: 1.5px solid #AAAAAA;
+box-sizing: border-box;
+border-radius: 7.5px;
+margin-bottom: 50px;
+width: 97%;
+}
+
+.sessions_recording {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    @include resD(
+        (
+            font-size: 18px,
+        )
+    );
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-decoration-line: underline;
+    color: $primary-color;
+    cursor: pointer;
+    margin-top: 4px;
+}
+.session_details {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 600,
+            font-size: 18px,
+            line-height: 18px,
+            display: flex,
+            align-items: center,
+            color: #424242,
+            margin-bottom: 30px,
+        )
+    );
+    @include resSm(());
+}
+.sessions_details_heading {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 18px,
+            line-height: 12px,
+            display: flex,
+            align-items: center,
+            color: #757575,
+            
+
+        )
+    );
+    @include resSm(());
+}
+.sessions_details_headings {
+    @include resD(
+        (
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            width: 80%,
+            margin-bottom:25px
+        )
+    );
+    @include resSm(());
+}
+.sessions_details_heading_1 {
+    @include resD(
+        (
+            display: flex,
+            align-items: center,
+            justify-content: start,
+            width: 200px,
+            margin-bottom:25px,
+            text-align:left,
+            font-size:16px,
+            margin-top:20px
+        )
+    );
+    @include resSm(());
+}
+.sessions_details_description {
+    @include resD(
+        (
+            font-size: 18px,
+        )
+    );
+    @include resSm(());
+}
+.sessions_details_description_tags {
+    @include resD(
+        (
+            display: flex,
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 14px,
+            line-height: 12px,  
+            align-items: center,
+            color: #616161,
+            
+        )
+    );
+    @include resSm(());
+}
+.sessions_details_tags {
+    @include resD(
+        (
+           margin-right:15px,
+           background: #EEEEEE,
+            padding: 2px 8px,
+            
+        )
+    );
+    @include resSm(());
+}
+.sessions_details_desc {
+    @include resD(
+        (
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            width:80%
+        )
+    );
+    @include resSm(());
+}

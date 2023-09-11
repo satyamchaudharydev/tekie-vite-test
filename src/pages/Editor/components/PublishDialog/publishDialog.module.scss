@@ -1,0 +1,24 @@
+@import "src/scss/size.scss";
+
+.previewContainer {
+	@include resD(
+		(
+			width: 600px,
+			padding: 24px,
+		)
+	);
+
+    & pre {
+        margin: 0;
+    }
+}
+
+.noEditMessageContainer {
+	border: 1px solid #dcdcdc;
+	@include resD(
+		(
+			border-radius: 12px,
+			padding: 12px,
+		)
+	);
+}

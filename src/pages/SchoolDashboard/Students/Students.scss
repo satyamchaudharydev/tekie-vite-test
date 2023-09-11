@@ -1,0 +1,145 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/Inter.scss';
+@import 'src/scss/theme.scss';
+
+
+.school-dashboard-header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @include resD((
+    padding-bottom: 18px,
+  ));
+  @include resM((
+    padding-bottom: 12px,
+  ));
+}
+
+.school-dashboard-students-tableContainer {
+  border: 1px solid #EEEEEE;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.school-dashboard-filters-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @include resD((
+    padding-bottom: 18px,
+  ));
+  @include resM((
+    padding-bottom: 12px,
+  ));
+}
+
+#school-dashboard-students-container {
+	height: 100%;
+	width: 100%;
+	letter-spacing: 0.4px;
+  box-sizing: border-box;
+     
+    @include resD((
+      padding: 28px 32px,
+    ));
+    @include resM((
+      padding: 16px,
+    ));
+	& a:hover {
+		color: #605959;
+	}
+}
+
+.school-dashboard-filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.school-dashboard-students-courseContainer,
+.school-dashboard-students-ind-courseContainer {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 20px 0px 0px;
+}
+
+.school-dashboard-students-profileContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  .school-dashboard-students-profilePic {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: #EEEEEE;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 12px;
+  }
+}
+
+.school-dashboard-students-courseIcon {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include resD((
+    width: 35px,
+    height: 35px,
+    margin-right: 12px,
+  ));
+  @include resM((
+    width: 28px,
+    height: 28px,
+    margin-right: 10px,
+  ));
+}
+
+.school-dashboard-students-action-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  & .school-dashboard-students-actionBtn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    background: transparent;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    padding: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background: #FFF;
+    }
+  
+    & > svg {
+      width: 100%;
+      height: 100%;
+      fill: #00ADE6;;
+    } 
+  }
+}
+
+.school-dashboard-students-duration-desc {
+  @include resD((
+    font-size: 16px,
+    padding-top: 8px,
+  ));
+  @include resM((
+    font-size: 14px,
+    padding-top: 4px,
+  ));
+}

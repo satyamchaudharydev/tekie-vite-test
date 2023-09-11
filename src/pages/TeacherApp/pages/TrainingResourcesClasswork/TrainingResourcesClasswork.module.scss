@@ -1,0 +1,39 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+@import "../../variables/_variables.scss";
+
+.trainingResourcesLoaderBackdrop{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    background-color: #fff;
+    & span{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        width: 100%;
+        font-family: 'Inter';
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.trainingResourcesMainContainer{
+    background: #FFFFFF;
+    @include resD1280((
+        margin-top: 18px,
+        padding: 30px 11px,
+        width: 95%
+    ));
+}
+.dropdownContainer {
+    @include resD((
+        width: 240px,
+        margin-bottom: 20px,
+    ));
+    text-align: left;
+}

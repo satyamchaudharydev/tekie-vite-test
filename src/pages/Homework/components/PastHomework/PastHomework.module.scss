@@ -1,0 +1,64 @@
+@import 'src/scss/size.scss';
+
+.pastHomeworkContainer {
+  width: 100%;
+  margin-top: hs(55px);
+  display: flex;
+  flex-direction: column;
+  transition: linear 0.3s all;
+  @include resD((
+    padding-left: hs(325px)
+  ));
+  @include resM((
+    padding-left: 0px
+  ));
+  &.pastHomeworkContainer-teacherApp{
+    padding: unset;
+  }
+}
+
+.homeworkRowContainer {
+  display: flex;
+  margin-top: hs(48px);
+}
+
+.title {
+  font-size: hs(40px);
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.topicTitle {
+  font-size: hs(30px);
+  font-weight: bold;
+  line-height: 1.37;
+  color: #0d2f40;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: hs(35px);
+}
+
+.homeworkCardsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.noPastHomeworkMsgContainer {
+  margin-top: hs(70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-style: italic;
+  font-size: hs(40px);
+  font-weight: 600;
+  color: #7c86a2;
+  position: relative;
+  left: hs(-160px);
+}

@@ -1,0 +1,272 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+.register-arrow-right {
+    svg {
+      @include resD((
+        width: 14px * 1.4,
+        height: 15px * 1.4,
+        margin-left: 15px,
+        top: 5px
+      ));
+      @include resM((
+        width: 14px,
+        height: 15px,
+        margin-left: 8px,
+        top: 5px
+      ));
+      position: relative;
+    }
+  }
+
+
+.EventDesc_base {
+    background-size: contain !important;
+    @include resD((
+        width: 1920px,
+        height: 570px,
+        background: url('../../../../../src/assets/eventPage/FrameWithLogo.svg'),
+        // position: relative,
+        // margin-top: 90px
+        // top: 30px
+    ));
+    @include resSm((
+        width: 100%,
+        height: 450px,
+        margin-bottom: 20px,
+        background: url('../../../../../src/assets/eventPage/mobile_banner.svg'),
+        // margin-top: 0px,
+        // background-repeat: no-repeat,
+        // background-size: 380px 430px
+    ))
+}
+
+.EventDesc_EventLogo {
+    @include resD((
+        display: none
+    ));
+    @include resSm((
+        display: inline,
+        position: relative,
+        top: 80px,
+        left: 85px,
+        width: 200px,
+    ));
+}
+
+.EventDesc_p {
+    @include resD((
+        color: white,
+        position: relative,
+        left: 110px,
+        top: 60px,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 22px,
+        line-height: 100%,
+        width: 70%,
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: normal,
+        font-size: 16px,
+        line-height: 160%,
+        text-transform: capitalize,
+        color: rgba(255, 255, 255, 0.75),
+        position: relative,
+        top: 220px,
+        width: 80%,
+        left: 35px
+    ))
+}
+
+.EventDesc_info {
+    @include resD((
+        color: white,
+        position: relative,
+        left: 110px,
+        top: 65px,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 22px,
+        line-height: 10%,
+        padding: auto,
+        width: 60%,
+        padding-top: -10px,
+    ));
+    @include resSm((
+        color: white,
+        position: relative,
+        top: 60px,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 14px,
+        line-height: 10%,
+        padding: auto,
+        width: 60%,
+        left: 35px
+    ))
+}
+
+.icons {
+    color: white;
+    @include resD((
+        width: 30px,
+        height: 30px,
+        margin-right: 5px
+    ));
+    @include resM((
+        width: 20px,
+        height: 20px,
+        margin-right: 5px
+    ));
+}
+
+.mobile_trans {
+    @include resD((
+        display: none,
+    ));
+    @include resSm((
+        display: block,
+        position: relative,
+        top: 80px,
+        width: 100%,
+    ))
+}
+
+.black_block {
+    @include resD((
+        display: none
+    ));
+    @include resSm((
+        display: block,
+        position: relative,
+        top: -45px,
+        width: 100%
+
+    ))
+}
+
+.EventDesc_info span {
+    @include resD((
+        position: relative,
+        top: -7px,
+        left: 10px
+    ));
+    @include resSm((
+        position: relative,
+        top: -4px,
+        left: 10px
+    ));
+}
+
+.EventDesc_btn_container {
+    @include resD((
+        display: flex,
+        flex-direction: row,
+        align-items: center,
+        justify-content: flex-start,
+        position: relative,
+        left: 110px,
+        top: 70px,
+    ));
+    @include resM((
+        display: flex,
+        flex-direction: column,
+        align-items: flex-start,
+        justify-content: center,
+        position: relative,
+        left: 35px,
+        top: 140px,
+    ))
+}
+
+.EventDesc_btn_register {
+    &:hover {
+        cursor: pointer;
+    }
+    margin-top: 10px;
+    @include resD((
+        display: flex,
+        flex-direction: row,
+        justify-content: center,
+        align-items: center,
+        padding: 13px 20px 13px 24px,
+        // position: absolute,
+        // left: 110px,
+        // top: 70px,
+
+        background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%),
+        // border-radius: 24px,
+        border-radius: 50px,
+        border: none,
+    ));
+    @include resSm((
+        display: flex,
+        flex-direction: row,
+        justify-content: center,
+        align-items: center,
+        padding: 5px 7px 5px 7px,
+        color: white,
+
+        // position: relative,
+        // left: 35px,
+        // top: 140px,
+
+        background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%),
+        // border-radius: 24px,
+        border-radius: 50px,
+        border: none,
+    ));
+}
+
+.EventDesc_btn_download {
+    &:hover {
+        cursor: pointer;
+    }
+    font-weight: 550;
+    @include resD((
+        margin: 0px 10px,
+        color: white,
+        padding: 25px 20px 13px 24px,
+        font-size: unset
+    ));
+    @include resM((
+        margin: 18px 10px,
+        color: white,
+        padding: 5px 7px 5px 7px,
+        font-size: 16px
+    ))
+}
+
+.EventDesc_Spon {
+    @include resD((
+        display: inline-block,
+        position: relative,
+        left: 1700px,
+        top: 80px
+    ));
+    @include resSm((
+        display: none
+    ))
+}
+
+.EventDesc_blackStrip {
+    @include resD((
+        width: 100%,
+        height: 100px,
+        background-color: black,
+        position: fixed,
+        z-index: 2,
+        margin-top: -90px
+    ));
+    @include resSm((
+        width: 100%,
+        height: 60px,
+        background-color: rgb(255, 255, 255),
+        position: fixed,
+        z-index: 2
+    ))
+}
+
+
+   

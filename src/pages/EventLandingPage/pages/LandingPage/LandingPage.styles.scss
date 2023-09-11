@@ -1,0 +1,129 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    font-weight: bolder;
+    src: local('Gilroy-Bold'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gilroy-Heavy';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy-Heavy'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Heavy.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gilroy-Light';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy-Light'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gilroy-Medium';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy-Medium'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gilroy-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy-Regular'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy-ExtraBold';
+    font-weight: bolder;
+    src: local('Gilroy-Bold'), url('../../components/PopUp/assets/Gilroy-ExtraBold.otf') format('otf');
+}
+html {
+    scroll-behavior: smooth;
+  }
+.scroll-container{
+    width: 100hw;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.scroll-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.anti-scroll-container{
+    width: 100hw;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.event-landing-page{
+    
+    @include resD((
+        background: #FAFAFA,
+    ));
+    @include resSm((
+        background: unset,
+    ))
+}
+.event-noEvent-title{
+    text-align: center;
+    @include resD((
+        font-size: 40px,
+    ));
+    @include resM((
+        font-size: 20px,
+    ));
+    &.fromUpcoming{
+        @include resD((
+            margin-top: -15px,
+        ));
+        @include resM((
+            margin-top: -15px,
+        ));
+    }
+}
+// .event-landing-page .EventFaq {
+//     margin-top:10px;
+//     .head{
+//         color: #403F3F;
+//         @include resD((
+//             margin-bottom: 100px,
+//             letter-spacing: -0.03em,
+//         ));
+//         @include resSm((
+//             margin-bottom: 30px,
+//             letter-spacing: 0em,
+//         ))
+//     }
+//     .ques{
+//         letter-spacing: -0.03em;
+//         color: #403F3F;
+//         @include resD((
+//             font-size: 24px,
+//             line-height: 140%,
+//         ));
+//         @include resSm((
+//             font-size: 16px,
+//             line-height: 140%,
+//         ))
+//     }
+//     .ans{
+//         opacity: 1;
+//         color: #403F3F;
+//         letter-spacing: -0.03em;
+//         @include resD((
+//             font-size: 22px,
+//             line-height: 140%,
+//             font-weight: bold,
+//         ));
+//         @include resSm((
+//             font-size: 16px,
+//             line-height: 140%,
+//             font-weight: normal,
+//         ))
+//     }
+//     .event-divider{
+//         margin-bottom: 40px;
+//     }
+// }

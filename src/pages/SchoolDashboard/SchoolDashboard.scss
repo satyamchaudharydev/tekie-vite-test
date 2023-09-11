@@ -1,0 +1,22 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/Inter.scss';
+@import 'src/scss/theme.scss';
+
+#school-dashboard-calender-container {
+	height: 100%;
+	width: 100%;
+	letter-spacing: 0.4px;
+    position: relative;
+    box-sizing: border-box;
+     
+    @include resD((
+      padding: 20px,
+    ));
+    @include resM((
+      padding: 16px,
+    ));
+	& a:hover {
+		color: #605959;
+	}
+}

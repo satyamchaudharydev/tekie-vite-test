@@ -1,0 +1,586 @@
+@import 'src/scss/size.scss';
+
+.userWaitingListBgOverlay {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99991;
+}
+.userWaitListModal{
+  .country-list li{
+    text-align: left;
+  }
+}
+.opened .userWaitingListBgOverlay {
+  display: block;
+}
+.opened .modal-dialog-main,
+ .opened .successMessageModal, 
+ .opened .failureMessageModal{
+  transform: translate(-50%, -50%) scale(1);
+    transition: all 0.2s ease-in-out;
+    z-index: 99992;
+    & p{
+      margin: 0;
+    }
+}
+.modal-dialog-main , .successMessageModal, .failureMessageModal{
+//   background: #fefefe;
+//   border: #333333 solid 0px;
+  border-radius: 5px;
+  text-align:center;
+  position: fixed;
+  z-index: 11;
+  box-shadow:0 5px 10px rgba(0,0,0,0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.2s ease-in-out;
+  @include resD((
+        min-width:555px,
+        max-width: 555px,
+        // min-height: 540px,
+        border-radius: 16px,
+      ));
+    @include resM((
+        min-width:380px,
+        max-width: 380px,
+        // min-height: 540px,
+        border-radius: 16px,
+      ));
+}
+
+.imageHolder {
+    position: relative;
+    background-image: url('../../assets/waitListMain.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    @include resD((
+        width: 555px,
+        height: 148.66px,
+        border-radius: 16px 16px 0px 0px,
+      ));
+    @include resM((
+        width: 380px,
+        height: fit-content,
+        border-radius: 16px 16px 0px 0px,
+      ));
+
+      &.successModal, &.failureModal{
+        background-image: url('../../assets/waitListThankyou.png');
+        justify-content: center;
+        @include resD((
+            height: 148.66px,
+        ));
+        @include resM((
+            height: 100.66px,
+        ));
+      }
+}
+.iconHolder {
+    position: absolute;
+    @include resD((
+        width: 165px,
+        height: 200px,
+        left: 350px,
+      ));
+    @include resM((
+        width: 165px,
+        height: 200px,
+        left: 350px,
+      ));
+}
+.heading-text {
+    font-family: Gilroy;
+    color: #FFFFFF;
+    font-weight: 600;
+    @include resD((
+        font-size: 28px,
+        margin-bottom: 10px,
+      ));
+    @include resM((
+        font-size: 18px,
+        margin-bottom: 8px,
+      ));  
+}
+.special-text {
+    font-family: Gilroy;
+    color: #1FBF75;
+    font-weight: 600;
+    @include resD((
+        font-size: 28px,
+      ));
+    @include resM((
+        font-size: 18px,
+      ));  
+}
+.heading-sub-text {
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+color: #FFFFFF;
+@include resD((
+    width:361px,
+    font-size: 16px,
+    line-height: 21px,
+  ));
+@include resM((
+    width:250px,
+    font-size: 12px,
+    line-height: 17px,
+  ));  
+}
+.logic-holder {
+    display: flex;
+    flex-direction: column;
+}
+.logic-heading-text {
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+
+text-align: center;
+color: #282828;
+    @include resD((
+        width: 404px,
+        font-size: 20px,
+        line-height:28px,
+        margin-top: 24px,
+        margin-bottom: 8px,
+      ));
+    @include resM((
+        width: 300px,
+        font-size: 15px,
+        line-height: 20px,
+        margin-top: 18px,
+        margin-bottom: 8px,
+      ));  
+}
+.text-Holder {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+     @include resD((
+        padding: 28px,
+      ));
+    @include resM((
+        padding: 18px 15px,
+      )); 
+}
+.input-holder {
+    display: flex;
+   flex-direction: column;
+   justify-content:center;
+   align-items: center;
+}
+.detail-input {
+    outline: none !important;
+    @include resD((
+        width: 480px,
+        height: 56px,
+        margin: 18px 0px,
+        border: 1px solid #C4C4C4,
+        border-radius: 6px,
+      ));
+    @include resM((
+        width: 480px,
+        height: 56px,
+        margin: 10px 0px,
+        border: 1px solid #C4C4C4,
+        border-radius: 6px,
+      ));   
+}
+.notify-button {
+    background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%);
+    border: white;
+    font-family: 'Gilroy';
+    color: #FFFFFF;
+    @include resD((
+        border-radius: 29.6569px,
+        width: 448px,
+        height: 59px,
+        padding: 15.5px 24px 15.5px 28px,
+        margin: 24px 0px,
+        font-size: 20px,
+      ));
+    @include resM((
+        border-radius: 29.6569px,
+        width: 350px,
+        height: 59px,
+        padding: 15.5px 24px 15.5px 28px,
+        margin: 24px 0px,
+        font-size: 20px,
+      ));  
+}
+.button-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.modal-div {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.parent-email{
+    position: relative;
+}
+.parent-email input{
+    position: relative;
+    @include resD((
+        width: 480px,
+        height: 56px,
+        margin: 18px 0px,
+        border: 1px solid #C4C4C4,
+        border-radius: 6px,
+      ));
+    @include resM((
+        width: 350px,
+        height: 45px,
+        margin: 10px 0px,
+        border: 1px solid #C4C4C4,
+        border-radius: 6px,
+      ));  
+}
+.parent-email label{
+    position: absolute;
+    color:#ccc;
+    @include resD((
+        left:15px,
+        top:35px,
+        z-index:1,
+      ));
+    @include resM((
+        left:10px,
+        top:22px,
+        z-index:1,
+      ));  
+}
+.parent-name{
+    position: relative;
+}
+.parent-name input{
+    position: relative;
+    @include resD((
+        width: 480px,
+        height: 56px,
+        margin: 18px 0px,
+        border: 1px solid #C4C4C4,
+        border-radius: 6px,
+      ));
+    @include resM((
+        width: 350px,
+        height: 45px,
+        margin: 10px 0px,
+        border: 1px solid #C4C4C4,
+        border-radius: 6px,
+      ));  
+}
+.parent-name label{
+    position: absolute;
+    color:#ccc;
+    @include resD((
+        left:15px,
+        top:35px,
+        z-index:1,
+      ));
+    @include resM((
+        left:10px,
+        top:22px,
+        z-index:1,
+      ));  
+}
+.parent-email input::-webkit-input-placeholder:after{content:"*";color:red;}
+input[required]:valid + label{display: none;}
+
+.waitingListform-group{
+  position: relative;
+  @include resD((
+        margin: 20px auto,
+      ));
+    @include resM((
+        margin: 10px auto,
+      ));
+  & .palceholder{
+   position: absolute;
+   top: 7px;
+   left: 8px;
+    color: #B1B1B1;
+    display: none;
+  }
+  & label{
+   font-weight: normal;
+    position: absolute;
+    cursor: text;
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+color: #504F4F;
+& .parentEmailSpan{
+    opacity: 0.4;
+}
+    @include resD((
+        top: 18px,
+        left: 15px,
+        font-size: 18px,
+        line-height: 22px,
+      ));
+    @include resM((
+        top: 10px,
+        left: 15px,
+        font-size: 16px,
+        line-height: 20px,
+      ));
+  } 
+  & .palceholder-star{
+    color: red
+  }
+  & input::placeholder{
+      font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 500;
+        color: #504F4F;
+        opacity: 0.4;
+        @include resD((
+            font-size: 18px,
+            line-height: 22px,
+        ));
+        @include resM((
+            font-size: 16px,
+            line-height: 20px,
+        ));
+  }
+  & input{
+      @include resD((
+        font-size: 18px,
+        line-height: 22px,
+    ));
+    @include resM((
+        font-size: 16px,
+        line-height: 20px,
+    ));
+  }
+}
+
+.form-input-modal {
+  width: 100% !important;
+  border: 1px solid #C4C4C4;
+  @include resD((
+    height: 55px,
+    border-radius: 8px,
+    font-size: 20px,
+    letter-spacing: 0.18681px,
+    padding-left: 15px,
+    padding-right: 15px
+  ));
+  @include resSm((
+    height: 36px,
+    border-radius: 5px,
+    font-size: 16px,
+    letter-spacing: 0.123814px,
+    padding-left: 15px,
+    padding-right: 15px
+  ));
+  box-sizing: border-box;
+  &:focus, &:active {
+    border: 1px solid #4099F7;
+    outline: none;
+  }
+  font-family: 'Nunito', 'Gilroy';
+  background: white;
+  color: #333333;
+  &.error {
+    background: #FDECEA;
+    border: 1.8681px solid #EF4A3C;
+  }
+}
+
+.form-input-modal.form-input-phone{
+  // width: 100% !important;
+  border: 1px solid #C4C4C4;
+  @include resD((
+    height: 55px,
+    border-radius: 8px,
+    // font-size: 20px !important,
+    letter-spacing: 0.18681px,
+    padding-left: 80px !important,
+  ));
+  @include resSm((
+    height: 36px,
+    border-radius: 5px,
+    // font-size: 16px !important,
+    letter-spacing: 0.123814px,
+    padding-left: 50px !important,
+  ));
+  box-sizing: border-box;
+  &:focus, &:active {
+    border: 1px solid #4099F7;
+    outline: none;
+  }
+  font-family: 'Nunito', 'Gilroy';
+  background: white;
+  color: #333333;
+  &.error {
+    background: #FDECEA;
+    border: 1.8681px solid #EF4A3C;
+  }
+}
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fefefe;
+    @include resD((
+    border-radius: 0px 0px 16px 16px,
+  ));
+  @include resSm((
+    border-radius: 0px 0px 16px 16px,
+  ));
+}
+.waitingListFormContainer{
+    width: 85%;
+    margin: 0 auto;
+    .iti__country-list{
+        overflow-x: hidden;
+    }
+    .btn-sd-blue-container {
+  @include resD((
+    padding: 18px 28px 18px 36px,
+    border-radius: 30px,
+    // margin-top: unset
+    height:fit-content,
+    width:fit-content
+  ));
+  @include resSm((
+    padding: 10px 18px 10px 22px,
+    border-radius: 20px,
+    height:fit-content,
+    width:fit-content
+    // margin-top: 16px
+  ));
+  cursor: pointer;
+  font-family: Gilroy;
+  background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%);
+  font-weight: bold;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #fff;
+  box-sizing: border-box;
+  span{
+    @include resD((
+      font-size: 22px,
+    ));
+    @include resSm((
+      font-size: 16px,
+    ))
+  }
+}
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+}
+.loader {
+  margin-right: 10px;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.4em solid rgba(255, 255, 255, 0.2);
+  border-right: 0.4em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.4em solid rgba(255, 255, 255, 0.2);
+  border-left: 0.4em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+  &.hide {
+    display: none;
+  }
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+}
+
+
+.waitingListButton{
+    @include resD((
+    margin: 20px auto,
+  ));
+  @include resSm((
+    margin: 15px auto,
+  ));
+    .btn-sd-blue-container{
+        @include resD((
+            width: 92%,
+            margin: 0 auto,
+        ));
+        @include resSm((
+            width: 100%,
+        ));
+    }
+    .btn-arrow{ display: none; }
+}
+
+.successMessageModal, .failureMessageModal, .modal-dialog-main{
+    display: none;
+    &.show{
+        display: block !important;
+    }
+}
+.notification-error {
+  font-family: 'Nunito', 'Gilroy';
+}
+
+.successMessageModal, .failureMessageModal{
+        .heading-text{
+            margin: 0 !important;
+        }
+        .logic-heading-text{
+            margin-bottom: 0 !important;
+            @include resD((
+              width: 420px,
+            ));
+          @include resM((
+              width: 320px,
+            )); 
+        }
+        .waitingListButton{
+            @include resD((
+            margin-bottom: 25px,
+            ));
+            @include resM((
+                margin-bottom: 25px,
+            ));
+        }
+      }

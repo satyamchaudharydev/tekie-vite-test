@@ -1,0 +1,237 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import 'src/scss/Inter.scss';
+@import '../../../../variables/_variables.scss';
+@import '../../../../mixins/_mixins.scss';
+
+$primary-color: #8C61CB;
+$primary-color-dark: #7b40d4;
+$primary-fontFamily: Inter;
+$primary-fontStyle: normal;
+$primary-fontWeight: 500;
+
+$radioSize: 14px;
+$radioBorder: #D1D7E3;
+
+$defaultLabelSizeD: 16px;
+$defaultLabelSizeM: 11px;
+
+$borders: 1px solid #AAAAAA;
+
+.days-grid-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 0px;
+}
+
+.days-grid {
+    width: 160px;
+    @include resD((
+        width: 180px
+    ));
+    @include resM((
+        width: 140px
+    ));
+    display: flex;
+    // justify-content: flex-start;
+    position: relative;
+    top: 5px;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    label {
+        display: flex;
+        flex-wrap: nowrap;
+        // justify-content: flex-start;
+        align-items: center;
+        font-weight: 400;
+        // @include resD((
+        //     font-size: $defaultLabelSizeD,
+        // ));
+        // @include resM((
+        //     font-size: $defaultLabelSizeM,
+        // ));
+
+        .days-grid-span {
+            font-family: $primary-fontFamily;
+            @include resD((
+                margin-left: 28px,
+                font-size: 18px
+            ));
+            @include resM((
+                margin-left: 4px,
+                font-size: 10px
+            ));
+        }
+    }
+}
+
+.common-time-container {
+    box-sizing: border-box;
+    border: $borders;
+}
+
+hr {
+    opacity: 0.5;
+}
+
+.time-grid {
+    display: flex;
+    margin-left: 10px;
+    width: 320px;
+    justify-content: flex-end;
+    align-items: center;
+
+    .time-grid-container {
+        align-items: center;
+        width: 80px;
+        margin: 0px;
+        font-weight: 500;
+        @media (min-width: 1200px) {
+            margin: 0px 6px;
+        }
+        @include resD((
+            font-size: $defaultLabelSizeD,
+        ));
+        @include resM((
+            font-size: $defaultLabelSizeM,
+        ));
+
+        span {
+            font-weight: 550;
+        }
+    }
+
+    .time-container {
+        @extend .common-time-container;
+        width: 74px;
+        padding: 6px 4px 6px 6px;
+        border-radius: 8px;
+        @include flex(center,center);
+        
+    }
+    input{
+        text-align:center;
+      }
+
+    .mode-container {
+        font-family: $primary-fontFamily;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.common-datetime-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 60px;
+    margin-bottom: 16px;
+}
+
+.date-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 16px;
+    width: 200px;
+    font-family: $primary-fontFamily;
+
+    label {
+        font-weight: $primary-fontWeight;
+        @include resD((
+            font-size: $defaultLabelSizeD,
+        ));
+        @include resM((
+            font-size: $defaultLabelSizeM,
+        ));
+    }
+
+    .datepicker-container {
+        @extend .common-datetime-container;
+    }
+
+    .date-container {
+        @extend .common-time-container;
+        width: 140px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-family: $primary-fontFamily;
+    }
+}
+.date-container {
+    @extend .common-time-container;
+    width: 140px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: $primary-fontFamily;
+}
+.flexed{
+    margin: 8px 0;
+   @include flex(flex-start,center);
+   gap: 16px;
+}
+.time-section-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+
+    .time-grid-container {
+        @extend .common-datetime-container;
+        margin-right: 9px;
+    }
+    .time-container {
+        @extend .common-time-container;
+        font-family: $primary-fontFamily;
+        width: 120px;
+        padding: 8px 10px;
+        border-radius: 8px;
+    }
+    span {
+        font-family: $primary-fontFamily;
+        position: relative;
+        top: 6px;
+        padding: 8px 10px;
+        margin-right: 9px;
+    }
+}
+
+// button:disabled{
+//     background-color: $tekie-grey-40;
+//     color: $white;
+//     pointer-events: none;
+// }
+.footer-btns-container{
+   @include flex(space-between,center);
+   padding-right: 16px;
+   width: 100%;
+}
+
+.mandatory-star{
+    color: $validation-red;
+}
+.react-datepicker-wrapper{
+    width:140px
+}
+.datepicker-component-wrapper{
+    position: relative;
+}
+.icon-wrapper{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+.icon-wrapper.calendar{
+    top: 7px;
+}
+.modal__rounded-checkbox.spacing{
+    margin: 12px 0;
+}

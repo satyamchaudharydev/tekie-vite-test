@@ -1,0 +1,570 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/theme.scss';
+
+.code-showcase-header-container {
+  @include resM((
+    padding-bottom: 14px,
+    padding-top: 14px,
+  ));
+  @include resD((
+    padding-bottom: 10px,
+    padding-top: 14px,
+  ));
+  left: 0;
+  width: 100vw;
+  top: 0;
+  z-index: 9999;
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+}
+
+.code-showcase-header-noPaddingContainer {
+  @include resM((
+    padding-top: 0px,
+  ));
+  @include resD((
+    padding-top: 0px,
+  ))
+}
+
+.code-showcase-header-bannerSpecialContainer {
+  background-image: url('../../../../assets/usBanner.webp');
+  background-size: cover;
+  position: relative;
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+    width: 100%,
+    height: 50px !important,
+    margin-bottom: 24px,
+    background-size: cover,
+  ));
+  @include resM((
+    width: 100%,
+    height: 50px,
+    background-size: cover,
+    margin-bottom: 10px,
+  ));
+  // @media (max-width: 1200px) and (min-width: code-showcase-header-950px) {
+  //   background-size: hsm(1000px) !important;
+  //   height: hsm(25px) !important;
+  // }
+}
+
+.code-showcase-header-limitedText {
+  position: absolute;
+  font-family: Lato;
+  color: white;
+  @include resD((
+    font-size: 17px,
+    right: 37px,
+    top: 25px,
+    opacity: 1
+  ));
+  @include resM((
+    font-size: 12px,
+    right: 20px,
+    top: 30px,
+    opacity: 0.7
+  ));
+}
+
+.code-showcase-header-bannerText {
+  font-family: Lato;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  @include resD((
+    font-size: 29px,
+    top: unset,
+    font-weight: 300,
+  ));
+  @include resM((
+    font-size: 16px,
+    font-weight: 400,
+    top: -5px
+  ));
+}
+
+.code-showcase-header-gradientText {
+  background-image: linear-gradient(180deg, #C6F8FF, #03BEE7);
+  background-size: 100%;
+  font-weight: 900;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.code-showcase-header-lottieAbsoluteContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include resD((
+    width: 100%,
+    height: 40px,
+  ));
+  @include resM((
+    width: 100%,
+    height: 15px,
+  ));
+}
+.code-showcase-header-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include resM((
+    padding: 0px 20px,
+  ));
+  @include resD((
+    padding: 0px 45px
+  ));
+
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.code-showcase-header-tekieLogo {
+  @include resM((
+    width: 88px,
+    height: 48px,
+    position: relative,
+  ));
+  @include resD((
+    width: 108px,
+    height: 38px,
+  ));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.code-showcase-header-login {
+  @extend .lato-light;
+  display: flex;
+  @include resM((
+    display: none,
+    padding: 10px,
+    letter-spacing: 0.75px,
+    font-size: 16px,
+  ));
+  @include resD((
+    display: flex,
+    padding: 14px 28px,
+    font-size: 24px,
+    letter-spacing: 0.5px
+  ));
+  border-radius: 100px;
+  background-color: transparent;
+  justify-content: center;
+  text-transform: unset;
+  align-items: center;
+  text-align: left;
+  font-weight: 500;
+  border: 1.5px solid #00ADE5;
+  color: #00ADE5;
+  opacity: 0.8;
+  cursor: pointer;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  &:hover {
+    opacity: 1;
+    box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
+  }
+}
+
+.code-showcase-header-hamburgerContainer {
+  @include resM((
+    width: 26.6px,
+    height: 17.8px,
+    display: flex,
+    flex-direction: column,
+    justify-content: space-between
+  ));
+  & > div {
+    width: 100%;
+    background-color: #21d0e9;
+    @include resM((
+      min-height: 3.2px,
+    ));
+  }
+  @include resD((
+    display: none,
+    // position: absolute,
+  ));
+}
+
+.code-showcase-header-navLinkDesktop {
+  @extend .lato-light;
+  font-weight: 400;
+  opacity: 0.8;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+  @include resD((
+    display: block,
+    font-size: 24px,
+    letter-spacing: 0.5px,
+    margin-right: 34px,
+    padding: 13px 0px,
+  ));
+  @include resM((
+    display: none,
+  ));
+}
+
+.code-showcase-header-bookFreeSession {
+  display: flex;
+  align-items: center;
+  @extend .lato-light;
+  font-weight: 600;
+  opacity: 0.9;
+  @include resM((
+    padding: 14px,
+    letter-spacing: 0.3px,
+    font-size: 16px,
+    justify-content: center,
+    margin-right: 0px,
+  ));
+  @include resD((
+    padding: $s-s $s-m,
+    justify-content: space-between,
+    font-size: 24px,
+    letter-spacing: 0.5px,
+    margin-right: 28px,
+    position: relative,
+  ));
+  border-radius: 100px;
+  background: $primary-gradient;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  &:hover {
+    opacity: 1;
+    box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
+  }
+  &::before {
+    content: 'Get in Touch'
+  }
+}
+
+.code-showcase-header-mobile-login-btn {
+  @extend .lato-light;
+  font-weight: 600;
+  opacity: 0.9;
+  @include resM((
+    padding: 10px 12px,
+    border-radius: 2px,
+    letter-spacing: 0.0px,
+    font-size: 16px,
+    margin-right: 0px,
+  ));
+  @include resD((
+    padding: 13px 18px,
+    border-radius: 5px,
+    font-size: 24px,
+    letter-spacing: 0.5px,
+    margin-right: 68px,
+    position: relative,
+    padding-top: 15px
+  ));
+  background-color: #022f3f;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: #2abac1;
+  cursor: pointer;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  &:hover {
+    opacity: 1;
+    box-shadow: 2px 10px 15px 0 rgba(0, 0, 0, 0.16);
+  }
+}
+
+.code-showcase-calender-icon {
+  display: block;
+  margin-left: $s-xs;
+  background-image: url("../../../../assets/calendarOutline.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include resD((
+    width: 26px,
+    height: 26px,
+  ));
+  @include resM((
+    width: 18px,
+    height: 18px,
+  ));
+}
+
+.code-showcase-header-buyNowButton {
+  @include resM((
+    margin-left: 0,
+  ));
+  @include resD((
+    margin-left: 68px,
+  ));
+}
+
+.code-showcase-header-headerButton {
+  font-weight: 600;
+  opacity: 0.8;
+  transition: all .2s;
+  @include resM((
+    display: none,
+    padding: 10px,
+    border-radius: 2px,
+    letter-spacing: 0.0px,
+    font-size: 16px,
+    margin-right: 14px,
+  ));
+  @include resD((
+    padding: 13px 18px,
+    border-radius: 5px,
+    font-size: 25px,
+    letter-spacing: 0.5px,
+    margin-right: 68px,
+    display: flex,
+    margin-top: 5px,
+  ));
+  font-weight: bold;
+  justify-content: center;
+  color: #C4C4C4;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover, .code-showcase-header-active {
+    color: #00ADE5;
+  }
+}
+
+.code-showcase-header-active {
+  color: #00ADE5;
+}
+
+.code-showcase-header-text {
+    font-style: normal;
+    flex-direction: row; 
+    justify-content: flex-end; 
+    width: 100%; 
+    font-family: Nunito;
+    font-weight: bold;
+    line-height: 41px;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    color: #00ADE5;
+    align-items: center;
+    opacity: 0.8;
+    
+    @include resD((
+      font-size: hs(28px),
+      display: flex
+    ));
+    @include resM((
+      font-size: 16px,
+      display: none
+    ));
+}
+
+.code-showcase-header-overlayNavItem {
+  @extend .lato-light;
+  @include resM((
+    padding: 28px 20px,
+    flex: 1,
+    cursor: pointer,
+    min-width: 100%,
+    box-sizing: border-box,
+    border-bottom: solid 1px #2abac1,
+    color: #ffffff,
+    letter-spacing: 0.75px,
+    font-size: 18px,
+  ));
+}
+
+.code-showcase-header-bookFreeSessionMobile {
+  @include resM((
+    font-size: 18px,
+    margin-right: 20px,
+    margin-left: 20px,
+    font-weight: 600,
+    letter-spacing: 0.7px,
+    margin-top: 16px,
+    margin-bottom: 0px
+  ));
+}
+
+.code-showcase-header-contentNone {
+  @include resM((
+    padding: 10px 20px,
+    height: 30px
+  ));
+  &:before {
+    content: '' !important
+  }
+}
+.code-showcase-header-overlayNavbar {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: row;
+  @include resD((
+    display: none,
+  ));
+}
+
+.code-showcase-header-overlayNavbarHide {
+  left: -100vw;
+  background-color: transparent;
+}
+
+.code-showcase-header-overlayNavbarWrapper {
+  height: 100%;
+  transform: translate3d(0,0,0);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(179deg, #00171f 55%, #002835 100%);
+  @include resM((
+    width: 232px,
+    padding-top: 20px
+  ));
+}
+
+.code-showcase-header-overlayNavbarWrapperHide {
+  transform: translate3d(-100%,0,0);
+}
+
+.code-showcase-header-overlayNavbarClose {
+  height: 100%;
+  flex: 1;
+}
+
+.code-showcase-header-profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0px 0px;
+
+  & .code-showcase-header-profile-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: top center !important;
+    background-color: $white;
+    border: 3px solid #47A9B0;
+  }
+
+  & .code-showcase-header-profile-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: $white;
+    padding-top: 8px;
+  }
+}
+
+
+/* dropdown menu */
+
+.code-showcase-header-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.code-showcase-header-drop {
+  box-shadow: 0 4px 5px #ccc;
+  transform-origin: 0 0;
+  position: absolute;
+  box-sizing: border-box;
+  color: black;
+  border-radius: 5px;
+  @include resD((
+    top: 85px,
+    width: 252px,
+    right: -14px,
+  ));
+  opacity: 0;
+  visibility: hidden;
+  transform: rotateX(90deg);
+  transition: all 0.5s ease-in-out;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+.code-showcase-header-drop a{
+  transition: 0.2s all ease-in-out;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  color: inherit;
+}
+.code-showcase-header-drop::before {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border: 20px solid transparent;
+    border-bottom: 26px solid #E6F7FD;
+    left: 25px;
+    top: -45px;
+    z-index: 1;
+}
+.code-showcase-header-drop span {
+  @include resM((
+    display: none,
+    font-size: 16px,
+  ));
+   @include resD((
+    font-size: 23px,
+    padding: 15px,
+    line-height: 28px,
+  ));
+  box-sizing: border-box;
+  display: block;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  color: #504F4F;
+  transition: all 0.5s ease-in-out;
+  &:hover{
+    background-color: #E6F7FD;
+    color: #00ADE6;
+    & > a{
+      transform: translateX(hs(10px));
+    }
+  }
+}
+.code-showcase-header-droShow {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(0);
+}
+.code-showcase-header-drop span.activeNav{
+  background-color: #E6F7FD;
+  color: #00ADE6 !important;
+}

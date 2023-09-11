@@ -1,0 +1,17 @@
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.lato-light {
+  @extend .lato;
+  font-weight: 300;
+}
+
+.lato-regular {
+  @extend .lato;
+  font-weight: 400;
+}
+.lato-hairline {
+  @extend .lato;
+  font-weight: 100;
+}

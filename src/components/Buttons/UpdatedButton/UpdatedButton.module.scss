@@ -1,0 +1,305 @@
+@import 'src/scss/size.scss';
+
+.updatedButton{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito';
+    cursor: pointer;
+    border: none;
+    box-sizing: border-box;
+    & span{
+        font-style: normal;
+        display: flex;
+        align-items: center;
+        @include resD((
+            font-weight: 700,
+            font-size: 20px,
+            line-height: 22px,
+        ));
+        @include resM((
+            font-weight: 700,
+            font-size: 16px,
+            line-height: 22px,
+        ));
+    }
+    &.noShadowBtn{
+        border-radius: 100px;
+        box-shadow: none !important;
+    }
+    @include resD((
+        border-radius: 20px,
+        padding: 16px 24px,
+        // border: 2px solid #00ADE6,
+        box-shadow: 0px 4px 0px #00ADE6,
+        height: 55px,
+    ));
+    @include resM((
+        padding:10px 16px,
+        border-radius: 20px,
+        // border: 2px solid #00ADE6,
+        box-shadow: 0px 4px 0px #00ADE6,
+        height: 55px,
+    ));
+    & svg{
+        @include resD((
+            width: 24px,
+            height: 24px,
+        ));
+        @include resM((
+            width: 24px,
+            height: 24px,
+        ))
+    }
+}
+.overlayLoading{
+    position: absolute;
+
+}
+.primary{
+    gap: 16px;
+    background: linear-gradient(287.49deg, #00ADE6 38.78%, #29C8FC 98.2%);
+    color: white;
+    border: none;
+    font-family: 'Nunito';
+    font-weight: 700;
+    cursor: pointer;
+    &:active{
+        box-shadow:none;
+        transform:translateY(3px)
+    }
+    &:disabled{
+        cursor: unset;
+        background: #E2E2E2;
+        box-shadow:none;
+        color: #A8A7A7;
+       &:active{
+        box-shadow:none;
+        transform:translateY(0px)
+       } 
+    }
+    @include resD((
+        padding:12px 24px,
+        box-shadow: 0px 4px 0px #007FA9,
+    ));
+    @include resM((
+        padding:10px 16px,
+        box-shadow: 0px 4px 0px #007FA9,
+    ))
+}
+
+.quaternary{
+    gap: 16px;
+    background: linear-gradient(287.49deg, #8C61CB 38.78%, #8C61CB 98.2%);
+    color: white;
+    border: none;
+    font-family: 'Nunito';
+    font-weight: 700;
+    cursor: pointer;
+    &:active{
+        box-shadow:none;
+        transform:translateY(3px)
+    }
+    &:disabled{
+        cursor: unset;
+        background: #E2E2E2;
+        box-shadow:none;
+        color: #A8A7A7;
+       &:active{
+        box-shadow:none;
+        transform:translateY(0px)
+       } 
+    }
+    @include resD((
+        padding:12px 24px,
+        box-shadow: 0px 4px 0px #8C61CB,
+    ));
+    @include resM((
+        padding:10px 16px,
+        box-shadow: 0px 4px 0px #8C61CB,
+    ))
+}
+
+.secondary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito';
+    cursor: pointer;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    @include resD((
+        border: 2px solid #00ADE6,
+    ));
+    & span{
+        color: #00ADE6;
+    }
+    &:active{
+        box-shadow:none;
+        transform:translateY(3px)
+    }
+    &:disabled{
+        background: #E2E2E2;
+        box-shadow:none;
+        color: #A8A7A7;
+    }
+}
+
+.tertiary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito';
+    cursor: pointer;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 2px solid #dcdcdc;
+    
+    & span{
+        color: #403F3F;
+    }
+    &:active{
+        box-shadow:none;
+        transform:translateY(3px)
+    }
+    &:disabled{
+        background: #dcdcdc;
+        box-shadow:none;
+        color: #A8A7A7;
+    }
+
+    @include resD((
+        box-shadow: 0px 4px 0px #dcdcdc,
+    ));
+}
+
+.border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito';
+    cursor: pointer;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 2px solid #00ADE6;
+    & span{
+        color: #00ADE6;
+    }
+    &:active{
+        box-shadow:none;
+        transform:translateY(3px)
+    }
+}
+.disabled{
+border: none;
+background: #E2E2E2;
+box-shadow: none;
+& span{
+    color: #A8A7A7;
+}
+cursor: not-allowed;
+}
+.reportButton{
+    & span{
+        @include resD((
+            width: 200px,
+        ));
+        @include resM((
+            width: 200px,
+        ))
+    }
+}
+
+.widthFull {
+    @include resD((
+        width: 100%
+    ));
+    @include resM((
+        width: 100%
+    ))
+}
+
+.updatedBtn2{
+    width:max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito';
+    font-weight: 700;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: white; 
+    border:none;
+    @include resD((
+        padding:14px 22px,
+        gap:12px,
+        font-size:18px
+    ))
+}
+
+.dangerBtn2{
+//   text-shadow: 0px 2px rgba(0,0,0,.25);
+  background: #D34B57;
+//   box-shadow: 0px 0px 30px rgba(255, 101, 84, 0.3), inset 0px 0px 8px #FD8679;
+  box-shadow: 0px 4px 0px #B4313C;
+
+  @include resD((
+    border-radius: 20px,
+  ));
+
+}
+.dangerBtn2:active{
+    box-shadow: 0px 2px 0px #B4313C;
+    transform:translateY(3px);
+}
+
+.dangerBtnWrapper{
+    border: none;
+    background: #D34B57;
+    // box-shadow: 0px 0px 30px rgba(255, 101, 84, 0.3), inset 0px 0px 7px #FD8679;
+    border-radius: 20px;
+    box-shadow: 0px 7px 0px #B4313C;
+}
+
+.dangerBtnWrapper:active{
+   box-shadow: 0px 2px 0px #B4313C;
+   transform:translateY(3px)
+}
+
+.dangerBtnWrapper:hover{
+//   box-shadow: 0px 5px 14px #F97263;
+}
+.noSpace{
+  padding:0;
+  border: none;
+}
+.noSpace:hover{
+//   box-shadow: 0px 5px 14px #B4313C;
+}
+.noSpace:active{
+    box-shadow: 0px 2px 0px #B4313C;
+    transform:translateY(3px)
+ }
+ .dangerBtnWrapper:disabled{
+    background: conic-gradient(from -3.29deg at 100% -13%, #DBDBDB 0deg, #A6A6A6 360deg);
+    box-shadow: 0px 7px 0px rgba(194, 194, 194, 0.5);
+    pointer-events: none;
+}
+.dangerBtn2:disabled{
+    background: conic-gradient(from -3.29deg at 100% -13%, #DBDBDB 0deg, #A6A6A6 360deg);
+    box-shadow: 0px 7px 0px #808080;
+    // box-shadow: 0px 4px 0px rgba(194, 194, 194, 0.5)
+}
+.noSpace:disabled{
+    background: conic-gradient(from -3.29deg at 100% -13%, #DBDBDB 0deg, #A6A6A6 360deg);
+    box-shadow: 0px 7px 0px rgba(194, 194, 194, 0.5);
+    pointer-events: none;
+    box-shadow: 0px 7px 0px #808080;
+}
+.dangerDisabled{
+    background: conic-gradient(from -3.29deg at 100% -13%, #DBDBDB 0deg, #A6A6A6 360deg);
+    box-shadow: 0px 0px 30px rgba(194, 194, 194, 0.5), inset 0px 0px 8px rgba(179, 179, 179, 0.8);
+    box-shadow: inset 0px 0px 8px #C2C2C2;
+    pointer-events: none;
+}

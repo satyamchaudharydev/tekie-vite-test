@@ -1,0 +1,342 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/size.scss';
+
+
+
+.signup-page-login-container {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(#000, 0.85);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD((
+    padding: unset,
+  ));
+}
+
+.signup-page-login-popup {
+  position: relative;
+  background: #fff;
+  box-shadow: 0px 20px 30px rgba(0, 23, 31, 0.15);
+  box-sizing: border-box;
+  @include resD((
+    width: 536px,
+    border-radius: 12px,
+    padding: 30px,
+  ));
+  @include resM((
+    width: 380px,
+    border-radius: 12px,
+    padding: 24px 15px,
+  ));
+}
+
+.signup-page-login-signinText {
+  font-family: Lato;
+  font-weight: bold;
+  color: #00ADE5;
+  opacity: 0.8;
+  @include resD((
+    font-size: 35px,
+    line-height: 42px,
+  ));
+  @include resM((
+    font-size: 18px,
+    line-height: 21px,
+  ));
+}
+
+.signup-page-login-helpText {
+  font-family: Nunito;
+  font-weight: 600;
+  color: #504F4F;
+  @include resD((
+    font-size: 20px,
+    line-height: 159.4%,
+    margin-top: 15px
+  ));
+  @include resM((
+    font-size: 14px,
+    line-height: 22.32px,
+    margin-top: 6px
+  ));
+}
+
+
+.signup-page-login-input {
+  background-color: #fff;
+  color: rgb(17, 17, 17) !important;
+  border: none !important;
+  outline: none !important;
+  font-family: Nunito !important;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  &.signup-page-login-inputError {
+    background-color: #F9E3E3 !important;
+  }
+  @include resD((
+    font-size: 17px !important,
+    width: 460px !important,
+    height: 56px !important,
+    border-radius: 4px !important,
+    margin-top: 30px !important,
+    padding-left: 16px !important,
+  ));
+  @include resM((
+    font-size: 14px !important,
+    width: 325px !important,
+    height: 42px !important,
+    border-radius: 4px !important,
+    margin-top: 17px !important,
+    padding-left: 11px !important,
+  ));
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(#00ADE5, 0.6), 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  }
+  &::placeholder {
+    color: rgba(17, 17, 17, 0.48) !important;
+    opacity: 0.7 !important;
+  }
+}
+
+.signup-page-login-otpInput {
+  @extend .signup-page-login-input;
+  @include resD((
+    width: 56px !important,
+    margin-top: 10px !important,
+    padding-left: 0px !important,
+    font-size: 22px !important
+  ));
+  @include resM((
+    width: 34px !important,
+    margin-top: 0px !important,
+    padding-left: 0px !important,
+    font-size: 16px !important
+  ));
+}
+
+.signup-page-login-phoneInputContainer {
+  display: flex;
+  flex-direction: space-between;
+  @include resD((
+    margin-top: 30px !important,
+    align-self: center
+  ));
+  @include resM((
+    margin-top: 17px !important,
+    align-self: flex-start
+  ));
+}
+
+.signup-page-login-otpContainer {
+  display: flex;
+  justify-content: space-between; 
+  @include resD((
+    width: 354px !important
+  )); 
+  @include resM((
+    width: 250px !important
+  )); 
+}
+
+.signup-page-login-dropdownButtonClass {
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  background-color: transparent !important;
+  transition: 0.3s all ease-in-out;
+  @include resD((
+    border: unset !important,
+    width: 70px,
+    font-size: 18px
+  ));
+  @include resM((
+    border: unset !important,
+    width: 45px,
+    font-size: 14px
+  ));
+  &:hover {
+    background-color: rgba(#00ADE5, 0.2) !important;
+  }
+}
+
+.signup-page-login-phoneInput {
+  @extend .signup-page-login-input;
+  @include resD((
+    width: 370px !important,
+    margin-left: 85px !important
+  ));
+  @include resM((
+    width: 286px !important,
+    margin-left: 52px !important,
+  ));
+}
+
+.signup-page-login-notOnTekie {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  color: #504F4F;
+  @include resD((
+    font-size: 20px,
+    line-height: 159.4%,
+    margin-top: 40px,
+    align-self: flex-start,
+    margin-left: unset
+  ));
+  @include resM((
+    font-size: 14px,
+    line-height: 22.32%,
+    margin-top: 25px,
+    align-self: flex-start,
+  ));
+}
+
+.signup-page-login-signupButton {
+  align-self: center;
+  color: white;
+  font-family: Nunito;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  align-items: center;
+  width: auto;
+  @include resD((
+    padding-left: 30px,
+    padding-top: 15px,
+    padding-bottom: 15px,
+    padding-right: 30px,
+    background: linear-gradient(180deg, #34E4EA 0%, #00ADE6 100%),
+    border-radius: 14px,
+    margin-top: 40px,
+    font-size: 25px,
+    margin-bottom: 15px,
+    align-self: unset
+  ));
+  @include resM((
+    padding-left: 25px,
+    padding-top: 10px,
+    padding-bottom: 10px,
+    padding-right: 25px,
+    background: linear-gradient(180deg, #34E4EA 0%, #00ADE6 100%),
+    border-radius: 6px,
+    margin-top: 24px,
+    font-size: 14px,
+    align-self: flex-start,
+  ));
+}
+
+.signup-page-login-loadingIconContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD((
+    width: 30px,
+    height: 30px,
+    margin-right: 0px,
+    top: -1px
+  ));
+  @include resM((
+    width: 15px,
+    height: 15px,
+    margin-right: 5px,
+    top: -1px
+  ))
+}
+
+
+.signup-page-login-error {
+  font-family: Nunito;
+  font-weight: 500;
+  position: relative;
+  width: 100%;
+  color: #DB524E;
+  @include resM((
+    height: 10px,
+    top: 4px,
+    left: 4px,
+    font-size: 12px,
+    align-self: flex-start,
+  ));
+  @include resD((
+    align-self: center,
+    height: 7px,
+    top: 5px,
+    left: 10px,
+    font-size: 17px,
+  ));
+  &.signup-page-login-otpError {
+    @include resD((
+      left: 60px,
+      top: 10px
+    ));
+    @include resM((
+      left: 0px,
+      top: 5px
+    ));
+  }  
+}
+
+.signup-page-login-loadingIcon {
+  position: relative;
+  @include resD((
+    min-width: 15px,
+    min-height: 15px
+  ));
+  @include resM((
+    min-width: 12px,
+    min-height: 12px
+  ));
+}
+
+.signup-page-login-close {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  @include resD((
+    width: 50px,
+    height: 50px,
+    top: -50px / 2,
+    right: -50px / 2,
+  ));
+  @include resM((
+    width: 30px,
+    height: 30px,
+    top: -30px / 2,
+    right: -20px / 2,
+  ));
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    background: #ccf2ff;
+    box-shadow: 0px 6px 6px rgba(51, 51, 51, 0.2), 0px 5px 20px rgba(51, 51, 51, 0.08);
+  }
+}
+
+.signup-page-login-closeIcon {
+  position: relative;
+  @include resD((
+    width: 20px,
+    height: 20px,
+    top: -1px,
+  ));
+  @include resM((
+    width: 12px,
+    height: 12px,
+    top: -6px,
+  ));
+  path {
+    fill: #00ADE5;
+    opacity: 1;
+  }
+}

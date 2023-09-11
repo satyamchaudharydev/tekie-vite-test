@@ -1,0 +1,156 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/constants.scss';
+
+.container {
+  position: absolute;
+  top: 0;
+  left: hs($sideNavWidth);
+  width: calc(100% - #{hs($sideNavWidth)});
+  height: 100%;
+  background-color: rgba(#000000, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.autoImportant {
+  &#{&}#{&}#{&}#{&}#{&}#{&} {
+    height: auto !important;
+  }
+}
+
+.hoveringScores {
+  &#{&}#{&}#{&}#{&}#{&}#{&} {
+    margin-top: hs(40px) !important;
+  }
+}
+
+.arrowDown {
+  width: hs(21.4px);
+  height: hs(21.4px);
+  margin-top: hs(5.8px);
+  margin-bottom: hs(7.5px);
+}
+
+.scoreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scoreText {
+  font-family: Nunito;
+  font-weight: bold;
+  color: #00ade6;
+  @include resD((
+    font-size: hs(21px),
+  ));
+  @include resM((
+    font-size: 18px,
+  ));
+}
+
+.popup {
+  background: #fff url('./assets/bg.png');
+  position: relative;
+  // margin-left: hs(349px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include resD((
+    width: hs(634.9px),
+    height: hs(550.5px),
+    border-radius: hs(20px),
+  ));
+  @include resM((
+    width: 90%,
+    height: fit-content,
+    border-radius: 10px,
+  ));
+}
+
+.introducing {
+  font-family: Nunito;
+  color: #00ade6;
+  @include resD((
+    font-size: hs(20px),
+    margin-top: hs(40px),
+  ));
+  @include resM((
+    font-size: 16px,
+    margin-top: 20px,
+  ));
+}
+
+.text {
+  font-family: Nunito;
+  color: #00ade6;
+  -top: hs(19px);
+  text-align: center;
+  @include resD((
+    font-size: hs(19px),
+    margin-top: hs(40px),
+    width: hs(260px),
+  ));
+  @include resM((
+    width: fit-content,
+    font-size: 15px,
+    margin-top: 8px,
+  ));
+}
+
+.title {
+  font-family: Nunito;
+  font-weight: bold;
+  color: #00ade6;
+  @include resD((
+    font-size: hs(38px),
+  ));
+  @include resM((
+    font-size: 26px,
+  ));
+}
+
+.labels {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: hs(10.4px);
+}
+
+.label {
+  width: hs(131.5px);
+  height: hs(38.2px);
+  background-color: #f7941d;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border-radius: hs(19px);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Nunito;
+  font-size: hs(18px);
+  font-weight: 800;
+  margin-right: hs(12.7px);
+  text-transform: uppercase;
+}
+
+.gotIt {
+  width: hs(154px);
+  height: hs(57px);
+  border-radius: hs(29px);
+  color: white;
+  margin-top: hs(40px);
+  margin-bottom: hs(10px);
+  font-size: hs(22px);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  user-select: none;
+  background-image: linear-gradient(to bottom, #34e4ea, #00ade6);
+}

@@ -1,0 +1,135 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import 'src/scss/Inter.scss';
+
+.Updates_main{
+    width: 100%;
+    height: 206px;
+    background: #FFFFFF;
+    border-radius: 16px;
+}
+
+.Updates_heading{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #212121;
+    padding-top: 24px;
+    padding-left: 26px;
+}
+
+.Updates_loader{
+    justify-content: flex-start !important;
+}
+.Updates_noUpdates{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6D6D6D;
+    height: inherit;
+}
+.Updates_updates{
+    display: flex;
+    overflow-x: scroll;
+    @include resM((
+        width: 440px
+    ));
+    @include resD((
+        width: 1485px
+  ));
+    // -ms-overflow-style: none;  /* IE and Edge */
+    // scrollbar-width: none; 
+}
+// .Updates_updates::-webkit-scrollbar {
+//     display: none;
+//   }
+  
+
+.update{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    margin-left: 24px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    width: 432px;
+    height: 105px;
+    &:hover{
+        background: #F5F5F5;
+    }
+}
+
+.sessionImg{
+    width: 89px;
+    height: 89px;
+}
+
+.sessionTitle{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.sessionFont{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    color: #757575;
+    @include resM((
+        font-size: 8px
+    ));
+    @include resD((
+        font-size: 10px
+  ));
+}
+
+.sessionFont2{ 
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    color: #282828;
+    padding-top: 5px;
+    @include resM((
+        font-size: 10px
+    ));
+    @include resD((
+        font-size: 14px
+  ));
+}
+
+.container{
+    display: flex;
+}
+.container2{
+    display: flex;
+    padding-right: 17px;
+}
+
+.icon{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+.Update_conatiner{
+    width:fit-content ;
+//     @include resM((
+//         width: 270px
+//     ));
+//     @include resD((
+//         width: 320px
+//   ));
+}

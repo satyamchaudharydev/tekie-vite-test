@@ -1,0 +1,759 @@
+@import 'src/scss/size.scss';
+
+.sp-current-component-bg {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &.disabled {
+   
+  }
+  @include resD((
+    background: url('./assets/SessionPageBG.svg'),
+    background-position: center center,
+    background-size: cover,
+    height: 555px
+  ));
+  @include resMs((
+    background: url('./assets/MobilesessionPageBG.svg'),
+    height: fit-content,
+  ))
+}
+
+.toolTip2 {
+  background-color: #00ADE6 !important;
+  color: white;
+  @include resD((
+    font-size: 22px !important,
+    border-radius: 8px
+  ));
+  @include resSm((
+    font-size: 22px !important,
+    border-radius: 8px
+  ));
+}
+
+.sp-current-component-container {  
+  // mix-blend-mode: overlay;
+  backdrop-filter: blur(hs(150px));
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  background: rebeccapurple;
+  &.disabled {
+    }
+  @include resD((
+    background: rgba(#fff, 0.4),
+    border-radius:52px,
+    padding: 48px 24px 48px 48px,
+    width: 1284px,
+    min-height: 459px,
+    top: unset,
+  ));
+  @include resM((
+    padding: 24px,
+    width: 96vw,
+    min-height: 50vh,
+    border-radius: 16px,
+    flex-wrap: wrap,
+    top: 10px,
+    background: #FFFFFF,
+  ))
+}
+
+.sp-current-component-up-next {
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include resD((
+    color: rgba(#504F4F, 0.5),
+    font-size: 18px,
+    font-weight: initial,
+  ));
+  @include resMs((
+    color: rgba(80, 79, 79, 0.5),
+    font-weight: 700,
+    font-size: 3.40vw,
+  ));
+}
+
+.sp-current-component-refer-theory {
+  position: absolute;
+  // margin: 0 auto;
+  background: linear-gradient(180deg, #E5FAFF 0%, #CAF4FF 100%);
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  @include resD((
+    width: 340px,
+    height: 50px,
+    font-size: 16px,
+    border-radius: 0px 0px 20px 20px,
+  ))
+}
+
+.sp-current-theory {
+  @include resD((
+    width: 20px,
+    height: 20px,
+    margin-right: 10px,
+    margin-top: 1px,
+  ));
+}
+
+.sp-current-component-batch-name {
+  letter-spacing: 0.03em;
+  color: rgba(#504F4F, 0.5);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include resD((
+    font-size: 18px,
+  ));
+  @include resMs((
+    font-size: 16px,
+  ));
+  span {
+    &::before {
+      @include resD((
+        content: 'Batch Name: ',
+      ));
+      @include resMs((
+        content: 'Batch: ',
+      ));
+    }
+  }
+}
+
+.sp-current-component-classroom-name {
+  span {
+    &::before {
+      content: 'Classroom : ' !important;
+    }
+  }
+}
+
+.sp-current-component-next-icon {
+  @include resD((
+    width: 24px,
+    height: 24px,
+    margin-left: 10px,
+    margin-top: 0px,
+    margin-bottom: 1.5px,
+    opacity: 0.6,
+  ));
+  @include resMs((
+    width: 22px,
+    height: 24px,
+    margin-left: 11px,
+    opacity: 1,
+    margin-top: 0px,
+    margin-bottom: 1.5px,
+  ));
+}
+
+.sp-current-component-title {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  color: #504F4F;
+  letter-spacing: -0.02em;
+  @include resD((
+    font-size: 40px,
+    margin-top: 16px,
+    line-height: initial,
+    margin-bottom: 16px,
+  ));
+  @include resMs((
+    font-size: 5.7vw,
+    line-height: 8vw,
+    margin-top: 3.50vw,
+    margin-bottom: 3px,
+  ));
+}
+
+.sp-description {
+  color: #504F4F;
+  @include resD((
+    font-size: 20px,
+    display: block
+  ));
+  @include resMs((
+    display: none,
+  ));
+}
+
+.sp-topic-thumbnail {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include resD((
+    width: 261px,
+    height: 261px,
+    margin-left: 0.5vw,
+  ));
+  @include resMs((
+    width: 31.6vw,
+    height: 31.6vw,
+    margin-left: -7vw,
+  ))
+}
+
+.sp-current-component-buttons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  @include resD((
+    margin-top: 15px,
+    position: static,
+    width: unset,
+    flex: unset,
+  ));
+  @include resMs((
+    margin-top: 32px,
+    width: 100%,
+    flex: 1 1 100%,
+  ));
+}
+
+.sp-circle-icon-button {
+  box-shadow: 0px 0px 30px 0px rgba(53, 201, 233, 0.5), inset 0px 0px 8px #34E4EA;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+  background-color: #00ADE6;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD((
+    width: 58px,
+    height: 58px,
+    border-radius: 40px,
+    margin-right: 20px,
+  ));
+  &:hover {
+    box-shadow: 0px 0px 20px 7px rgba(53, 201, 233, 0.5), inset 0px 0px 10px #34E4EA;
+  }
+}
+
+.sp-meet-link {
+  background-image: url("./components/BookSession/video-session-link.svg");
+  background-size: cover;
+  @include resD((
+    width: 36px,
+    height: 36px
+  ));
+
+}
+
+.sp-current-component-left-container {
+  @include resD((
+    width: 761px
+  ));
+  @include resMs((
+    width: 60%,
+    z-index: 9
+  ))
+}
+
+.sp-current-component-right-container {
+  @include resD((
+    display: flex,
+    flex-direction: column,
+    align-items: center,
+    height: 100%,
+  ));
+  @include resMs((
+    display: flex,
+    flex-direction: column,
+    // width: 30%,
+    // height: 60%,
+  ))
+}
+
+.sp-container {
+  @include resD((
+    margin-top: 64px,
+  ));
+  @include resMs((
+    margin-top: 65px,
+  ))
+}
+.sp-container.mTop{
+  @include resD((
+    margin-top: 44px,
+  ));
+  @include resMs((
+    margin-top: 44px,
+  ))
+}
+
+.sp-details-mentor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include resD((
+    margin-top: 1vw,
+  ));
+  @include resMs((
+    margin-top: 3.5vw,
+  ))
+}
+
+.sp-details-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include resD((
+    margin-top: 24px,
+    width: auto,
+    height: 2vw,
+    font-size: initial,
+  ));
+  @include resMs((
+    margin-top: 3.5vw,
+    width: 89vw,
+    height: 10vw,
+    font-size: 3.9vw,
+  ))
+}
+.sp-details-batch-row {
+  @include resD((
+    margin-top: 24px,
+    width: auto,
+    height: 2vw,
+    font-size: initial,
+  ));
+  @include resMs((
+    margin-top: 0vw,
+    width: 89vw,
+    height: 9.5vw,
+    font-size: 3.9vw,
+  ))
+}
+.sp-detail-row-block {
+  @include resD((
+    display: block,
+    margin-top: 24px
+  ));
+  @include resMs((
+    margin-top: 5vw,
+    display: flex,
+  ))
+}
+
+.sp-mentor-pic {
+  border-radius: 50%;
+  background-size: cover;
+  @include resD((
+    border: 3px solid #504F4F,
+    width: 60px,
+    height: 60px,
+    margin-right: 14px,
+  ));
+  @include resMs((
+    border: 3px solid #504F4F,
+    width: 11vw,
+    height: 11vw,
+    margin-right: 2.5vw,
+  ))
+}
+
+.sp-mentor-pic-default {
+  background: url('./assets/mentorProfilePlaceholder.svg');
+  background-size: 122%;
+  background-position: -50% -10%;
+  transform: scaleX(-1);
+}
+
+.sp-mentor-name {
+  font-family: Nunito;
+  font-weight: bold;
+  color: #504F4F;
+  @include resD((
+    font-size: 20px,
+    text-transform: initial,
+    line-height: initial,
+  ));
+  @include resMs((
+    font-size: 3.5vw,
+    font-style: normal,
+    line-height: 6vw,
+    text-transform: uppercase,
+  ))
+}
+
+.sp-mentor-rating {
+  font-weight: normal;
+  @include resD((
+    font-size: 20px,
+    line-height: initial,
+    // margin-top: 3px,
+  ));
+  @include resMs((
+    font-size: 3.5vw,
+    margin-left: 3.5%,
+    font-style: normal,
+    line-height: 130%,
+  ))
+}
+
+.sp-star-text {
+  background-image: url(../../assets/star.png);
+  display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include resD((
+    font-size: 28px,
+    width: 14px,
+    height: 14px,
+    margin-top: -2px,
+  ));
+  @include resMs((
+    font-size: 20px,
+    width: 12px,
+    height: 12px,
+  ));
+}
+
+.sp-calendar-icon {
+  @include resD((
+    width: 35px,
+    height: 35px,
+  ));
+  @include resMs((
+    width: 20px,
+    height: 20px,
+  ))
+}
+.sp-current-component-icon-container {
+  @include resD((
+    width: 35px,
+    height: 35px,
+  ));
+  @include resMs((
+    width: 30px,
+    height: 30px,
+  ))
+}
+
+.sp-md-texts {
+  font-family: Nunito;
+  font-weight: 600;
+  color: #504F4F;
+  @include resD((
+    font-size: 20px,
+    margin-left: 13px,
+  ));
+  @include resMs((
+    font-weight: normal,
+    margin: 0 0 0 2vw,
+  ));
+}
+
+.sp-loader-card {
+  width: 100%;
+  height: 100%;
+  .sp-loader-1 {
+    @include resD((
+      y: 15px,
+      height: 48px,
+      width: 342px
+    ));
+    @include resSm((
+      y: 15px,
+      height: 20px,
+      width: 150px
+    ))
+  }
+  .sp-loader-2 {
+    @include resD((
+      y: 80px,
+      height: 20px,
+      width: 742px
+    ));
+    @include resSm((
+      y: 45px,
+      height: 20px,
+      width: 120px
+    ))
+  }
+  .sp-loader-3 {
+    @include resD((
+      y: 110px,
+      height: 20px,
+      width: 700px
+    ));
+    @include resSm((
+      opacity: 0
+    ))
+  }
+  .sp-loader-4 {
+    @include resD((
+      y: 150px,
+      height: 61px,
+      width: 61px,
+      rx: 50%,
+    ));
+    @include resSm((
+      y: 80px,
+      height: 30px,
+      width: 30px,
+      rx: 50%,
+    ))
+  }
+  .sp-loader-5 {
+    @include resD((
+      y: 160px,
+      x: 75px,
+      height: 15px,
+      width: 150px,
+    ));
+    @include resSm((
+      y: 80px,
+      x: 35px,
+      height: 10px,
+      width: 50px,
+    ))
+  }
+  .sp-loader-6 {
+    @include resD((
+      y: 180px,
+      x: 75px,
+      height: 20px,
+      width: 50px,
+    ));
+    @include resSm((
+      y: 100px,
+      x: 35px,
+      height: 10px,
+      width: 50px,
+    ))
+  }
+  .sp-loader-7 {
+    @include resD((
+      y: 240px,
+      height: 35px,
+      width: 35px,
+      rx: 5px,
+    ));
+    @include resSm((
+      y: 130px,
+      height: 20px,
+      width: 20px,
+      rx: 5px,
+    ));
+  }
+  .sp-loader-8 {
+    @include resD((
+      y: 247px,
+      height: 20px,
+      width: 120px,
+      x: 50px,
+    ));
+    @include resSm((
+      y: 155px,
+      height: 20px,
+      width: 20px,
+      rx: 5px,
+    ));
+  }
+  .sp-loader-9 {
+    @include resD((
+      y: 290px,
+      x: 0px,
+      height: 35px,
+      width: 35px,
+      rx: 5px,
+    ));
+    @include resSm((
+      y: 155px,
+      x: 30px,
+      height: 15px,
+      width: 80px,
+    ));
+  }
+  .sp-loader-10 {
+    @include resD((
+      y: 297px,
+      height: 20px,
+      width: 120px,
+      x: 50px,
+    ));
+    @include resSm((
+      y: 130px,
+      x: 30px,
+      height: 15px,
+      width: 80px,
+    ));
+  }
+  .sp-loader-11 {
+    @include resD((
+      y: 0px,
+      height: 260px,
+      width: 260px,
+      x: 940px,
+    ));
+    @include resSm((
+      y: 0px,
+      height: 90px,
+      width: 90px,
+      x: 190px,
+    ))
+  }
+  .sp-loader-12 {
+    @include resD((
+      y: 280px,
+      height: 61px,
+      width: 251px,
+      x: 940px,
+      rx: 25px
+    ))
+  }
+  // .sp-loader-9 {
+  //   @include resD((
+  //     y: 220px,
+  //     height: 61px,
+  //     width: 61px,
+  //     rx: 50%,
+  //   ))
+  // }
+  // .sp-loader-10 {
+  //   @include resD((
+  //     y: 220px,
+  //     height: 61px,
+  //     width: 61px,
+  //     rx: 50%,
+  //   ))
+  // }
+}
+
+.sp-current-component-batch-code {
+  font-weight: 300;
+  @include resD((
+    font-size: 18px
+  ))
+}
+
+.sp-md-reschedule {
+  color: #00ADE6;
+  text-decoration: underline;
+  transition: 0.3s all ease-in-out;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+  @include resD((
+    margin: 0,
+    font-size: initial,
+  ));
+  @include resMs((
+    margin-right: 3vw,
+    font-size: 4.3vw,
+  ))
+}
+
+.sp-md-cancel {
+  color: #D34B57;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  z-index: 99;
+  &:hover {
+    opacity: 0.7;
+  }
+  @include resD((
+    margin: 0,
+    font-size: initial,
+  ));
+  @include resMs((
+    margin: 0 3vw,
+    font-size: 4.3vw,
+  ))
+}
+
+.sp-reschedule-cancel {
+  @include resD((
+    margin-top: 30px,
+    // margin-left: 0px,
+    width: initial,
+  ));
+  @include resSm((
+    margin-top: 2.9vw,
+    width: max-content,
+  ))
+}
+.goBackToTeacherAppBtn{
+  position: absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  @include resD((
+    padding:20px 100px,
+    font-size: 24px
+  ));
+  @include resM((
+    padding:16px,
+    font-size: 20px,
+    width:fit-content
+  ));
+  top: 3.75vh;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 0px 0px 24px 24px;
+  background: #E6F7FD;
+  color: #00ADE6;
+  border: 1px solid #00ADE6;
+  box-shadow:0px 4px 0px #80D6F3;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 140%;
+  text-decoration: underline;
+  cursor: pointer
+}
+
+.allTopicsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 80vw;
+  margin: auto;
+  // & h1,h2,h3,h4,h5,h6,p{
+  //   margin: 0;
+  // }
+}
+
+.coursePackageTitleAndProgressBar{
+  min-width: 100%
+}
+
+.coursePackageTitle{
+  font-weight: 600;
+  margin-top: 0;
+  @include resD((
+    font-size:27px,
+    margin-bottom:24px
+  ))
+}

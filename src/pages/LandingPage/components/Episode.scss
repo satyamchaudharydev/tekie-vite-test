@@ -1,0 +1,134 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.landing-page-episode-videoPlayerHeight {
+  height: 100%;
+  position: relative;
+}
+
+.landing-page-episode-videoPlayerWidth {
+  width: 100%;
+  position: relative;
+}
+
+.landing-page-episode-textCenter {
+  text-align: center;
+}
+
+.landing-page-episode-body {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,13,17,1) 0%,rgba(2,15,19,0.03) 100%);
+  @include resM((
+    padding: 0px 0px 14px 14px,
+  ));
+  @include resD((
+    padding: 0px 0px 34px 34px,
+  ));
+}
+
+.landing-page-episode-absoluteContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.landing-page-episode-title {
+  @extend .lato-light;
+  opacity: 0.8;
+  color: #ffffff;
+  // text-transform: uppercase;
+  @include resM((
+    font-size: 19px,
+    margin-top: 28px,
+    margin-bottom: 14px,
+    letter-spacing: 0.93px,
+  ));
+  @include resD((
+    font-size: 30px,
+    margin-top: 68px,
+    margin-bottom: 51px,
+    letter-spacing: 1.2px,
+    font-weight: normal,
+    color: #57e1ed,
+    opacity: 0.8
+  ));
+}
+
+.landing-page-episode-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  box-sizing: border-box;
+  align-items: flex-end;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include resM((
+    width: 100%,
+    height: 280px,
+  ));
+  @include resD((
+    width: 100%,
+    height: 629px,
+    background-position: center,
+  ));
+}
+
+.landing-page-episode-cardEpisodes {
+  @extend .landing-page-episode-card;
+  @include resD((
+    width: 742px,
+    height: 418px
+  ));
+  @include resM((
+    width: 100%,
+    height: 200px
+  ))
+}
+
+.landing-page-episode-description {
+  @extend .lato-light;
+  font-weight: 400;
+  color: white;
+  @include resM((
+    font-size: 15px,
+    letter-spacing: 0.38px,
+    line-height: 22px,
+  ));
+  @include resD((
+    font-size: 27px,
+    line-height: 1.22,
+    letter-spacing: 0.62px,
+    opacity: 0.8,
+  ));
+}
+
+.landing-page-episode-episode {
+  @extend .lato-light;
+  font-weight: 400;
+  color: #34e4ea;
+  @include resM((
+    font-size: 16px,
+    letter-spacing: 0.38px,
+    margin-bottom: 8px,
+  ));
+  @include resD((
+    font-size: 27px,
+    letter-spacing: 0.62px,
+    margin-bottom: 8px,
+    line-height: 1.22,
+    opacity: 0.8,
+  ));
+}
+
+.landing-page-episode-episodeReveal {
+  @include resD((
+    margin-bottom: 0px,
+    margin-top: 70px
+  ));
+}

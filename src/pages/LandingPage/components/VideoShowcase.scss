@@ -1,0 +1,170 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.landing-page-video-showcase-container {
+  margin-top: hs(28px);
+}
+
+.landing-page-video-showcase-blueTitle {
+  padding: 0;
+  margin-left: 0;
+  font-weight: 300;
+  color: #57e1ed;
+}
+
+.landing-page-video-showcase-text {
+  margin-top: hsm(10px);
+  margin-bottom: hsm(28px);
+}
+
+.landing-page-video-showcase-title {
+  @extend .lato-regular;
+  text-align: center;
+  opacity: 0.8;
+  color: white;
+
+  @include resM((
+    letter-spacing: 2.05px,
+    font-size: 32px,
+    line-height: 41px,
+    margin-bottom: 28px,
+  ));
+  @include resD((
+    font-weight: 300,
+    font-size: 48px,
+    line-height: 40px,
+    margin-bottom: 17px,
+  ));
+}
+
+.landing-page-video-showcase-rowForBig {
+  @include resD((
+    display: flex,
+    flex-direction: row,
+  ))
+}
+
+.landing-page-video-showcase-card {
+  user-select: none;
+  @include resD((
+    flex: 1,
+    height: 525px,
+    margin-bottom: 102px,
+    cursor: pointer,
+  ))
+}
+
+.landing-page-video-showcase-thumbnail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include resM((
+    width: 100%,
+    height: 240px,
+    margin-top: 14px,
+  ));
+  @include resD((
+    width: 100%,
+    height: 100%,
+    margin-top: 0,
+    display: flex,
+    flex-direction: column,
+    align-items: center,
+    justify-content: center,
+  ));
+}
+
+.landing-page-video-showcase-playButton {
+  @include resM((
+    width: 52px,
+    height: 52px,
+  ));
+  @include resD((
+    width: 80px,
+    height: 77px,
+  ));
+}
+
+.landing-page-video-showcase-playSvg {
+  g {
+    stroke-width: 1px;
+  }
+}
+
+.landing-page-video-showcase-cardLg {
+  width: 100%;
+  background-color: #010911;
+  display: flex;
+  flex-direction: row;
+  height: hs(440px);
+}
+
+
+.landing-page-video-showcase-bodyLg {
+  width: hs(1100px);
+  box-sizing: border-box;
+  padding: hs(115px) hs(48px) hs(115px) hs(136px);
+}
+
+.landing-page-video-showcase-posterLg {
+  flex: 1;
+  height: 100%;
+}
+
+.landing-page-video-showcase-posterThumbLg {
+  height: 100%;
+  background-image: url('../../../assets/ep1thumb.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-page-video-showcase-playButtonLg {
+  width: hs(90px);
+  height: hs(90px);
+  background-image: url('../../../assets/play.svg');
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  position: relative;
+  z-index: 5;
+  opacity: 1;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.landing-page-video-showcase-titleLgBlue {
+  font-family: Lato;
+  font-size: hs(35px);
+  line-height: 1.17;
+  letter-spacing: 1.2px;
+  text-align: left;
+  color: #57e1ed;
+  letter-spacing: 0.7px;
+  font-weight: 300;
+  position: relative;
+  z-index: 5;
+}
+
+.landing-page-video-showcase-textLg {
+  font-size: hs(25.5px);
+  line-height: hs(34px);
+  color: #ffffff;
+  opacity: 0.7;
+  line-height: 1.57;
+  position: relative;
+  z-index: 5;
+}
+
+.landing-page-video-showcase-gradientOverlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  background: linear-gradient(to right, #02080f 57%, rgba(2, 8, 15, 0.35) 78%);
+}

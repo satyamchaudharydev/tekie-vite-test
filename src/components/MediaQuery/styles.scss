@@ -1,0 +1,20 @@
+@import 'src/scss/size.scss';
+
+.mediaDesktopOnly {
+  width: 100%;
+  @include resD((
+    display: block,
+  ));
+  @include resM((
+    display: none
+  ))
+}
+
+.mediaMobileOnly {
+  @include resD((
+    display: none,
+  ));
+  @include resM((
+    display: block
+  ))
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__clock" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:#00ade6}
+        </style>
+    </defs>
+    <circle id="prefix__Ellipse_1057" cx="22" cy="22" r="22" data-name="Ellipse 1057" style="fill:#b9f6ff"/>
+    <g id="prefix__Group_14265" data-name="Group 14265">
+        <g id="prefix__Group_14264" data-name="Group 14264">
+            <path id="prefix__Path_21812" d="M22 0a22 22 0 1 0 22 22A22.025 22.025 0 0 0 22 0zm0 40.282A18.282 18.282 0 1 1 40.282 22 18.3 18.3 0 0 1 22 40.282z" class="prefix__cls-2" data-name="Path 21812"/>
+        </g>
+    </g>
+    <g id="prefix__Group_14267" data-name="Group 14267" transform="translate(19.157 11.027)">
+        <g id="prefix__Group_14266" data-name="Group 14266">
+            <path id="prefix__Path_21813" d="M238 87.652h-7.087V77.061a1.519 1.519 0 1 0-3.037 0v12.11a1.519 1.519 0 0 0 1.519 1.519H238a1.519 1.519 0 1 0 0-3.037z" class="prefix__cls-2" data-name="Path 21813" transform="translate(-227.876 -75.542)"/>
+        </g>
+    </g>
+</svg>

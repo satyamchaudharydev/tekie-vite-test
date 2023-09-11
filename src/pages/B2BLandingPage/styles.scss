@@ -1,0 +1,1543 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/Inter.scss';
+@import 'src/scss/lato.scss';
+
+.b2b-landing-page-container {
+  transition: 0.3s all ease-in-out;
+  @include resM((
+    padding: 0px 20px,
+  ));
+  @include resD((
+    padding: 0px 68px,
+  ));
+}
+
+.b2b-landing-page-body {
+  width: 100%; 
+  padding-top: 10px;
+  @include resD((
+    background: #F1FAFE,
+  ));
+  @include resM((
+    background: #E6F7FD,
+  ));
+}
+.b2b-landing-page-divider-container {
+  display: flex;
+  justify-content: center;
+  transition: 0.3s all ease-in-out;
+  @include resM((
+    padding: 0px 8px,
+  ));
+  @include resD((
+    padding: 0px 68px,
+  ));
+}
+
+h1, h2,  h3{
+  margin:0;
+  padding:0;
+}
+
+.b2b-landing-page-noneUnderline {
+  text-decoration: none;
+  color: none;
+}
+
+.b2b-landing-page-socialMediaContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.b2b-landing-page-socialMediaWrapper {
+  display: flex;
+  flex-direction: flex-end;
+  position: relative;
+  @include resM((
+    left: 7.5px,
+  ));
+  @include resD((
+    left: 10px,
+  ));
+}
+
+.b2b-landing-page-socialMediaIcon {
+  cursor: pointer;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  @include resM((
+    width: 32px,
+    height: 32px,
+    margin-right: 15px,
+  ));
+  @include resD((
+    width: 55px,
+    height: 55px,
+    margin-right: 20px
+  ));
+}
+.b2b-landing-page-smFacebook {
+  background: url('../../assets/b2bLandingPage/icons/facebook.svg');
+  fill: #00ADE6
+}
+
+.b2b-landing-page-smInstagram {
+  background: url('../../assets/b2bLandingPage/icons/instagram.svg')
+}
+.b2b-landing-page-smYoutube {
+  background: url('../../assets/b2bLandingPage/icons/youtube.svg')
+}
+.b2b-landing-page-smLinkedin {
+  background: url('../../assets/b2bLandingPage/icons/linkedin.svg')
+}
+.b2b-landing-page-footerLinks {
+  display: flex;
+  flex-direction: row;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15.0439px;
+  color: #504F4F;
+  opacity: 0.5;
+  
+  @include resD((
+    justify-content: flex-end,
+  ));
+  @include resM((
+    justify-content: center,
+  ));
+}
+
+.b2b-landing-page-footerRightBorder {
+  border-right: 1px solid #504f4f85;
+}
+
+.b2b-landing-page-footerText {
+  @extend .Inter-regular;
+  @include resM((
+    font-size: 12px,
+    letter-spacing: 0px,
+    color: #504F4F,
+  ));
+  @include resD((
+    font-size: 16px,
+    letter-spacing: 0px,
+    color: #504F4F,
+  ));
+}
+
+.b2b-landing-page-footerLink {
+  cursor: pointer;
+  letter-spacing: 0px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.b2b-landing-page-footerLinkPaddingRight {
+  @include resM((
+    padding-right: 15px,
+  ));
+  @include resD((
+    padding-right: 20px,
+  ));
+}
+
+.b2b-landing-page-footerLinkPadding {
+  @include resM((
+    padding:0px 8px,
+  ));
+  @include resD((
+    padding:0px 10px,
+  ));
+}
+
+.b2b-landing-page-noborder {
+  border: none !important;
+}
+
+.b2b-landing-page-footerLinkPaddingLeft {
+  @include resM((
+    padding-left: 8px,
+  ));
+  @include resD((
+    padding-left: 10px,
+  ));
+}
+
+.b2b-landing-page-footerLinksUnderlines {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  @include resM((
+    margin-top: 14px,
+    left: -5px,
+  ));
+  @include resD((
+    margin-top: 14px,
+    left: -5px,
+  ));
+
+}
+
+.b2b-landing-page-footerLinkUnderline {
+  background-color: #003446;
+  @include resM((
+    width: 77px,
+    height: 1px,
+    margin-right: 26px,
+    ));
+  @include resD((
+    width: 77px,
+    height: 1px,
+    margin-right: 26px,
+  ));
+}
+
+.b2b-landing-page-footerLinkUnderlineNoMargin {
+  margin-right: 0px !important;
+}
+
+.b2b-landing-page-footer-subText {
+  @extend .Inter-regular;
+  @include resD((
+    letter-spacing: 0,
+    display: block,
+    font-weight: 400,
+    font-size: 18px,
+    color: #504F4F,
+    padding: 12px 4px,
+  ));
+  @include resM((
+    display: none
+  ));
+}
+
+.b2b-landing-page-footer-container {
+  width: 100%;
+  background: tranparent;
+  padding-top: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 32px;
+  box-sizing: border-box;
+}
+
+.b2b-landing-page-madeBy {
+  @extend .Inter-regular;
+  @include resM((
+    font-size: 28px,
+    line-height: 35px,
+    letter-spacing: 0px,
+    padding-bottom: 56px,
+    margin-top: 37px,
+  ));
+  @include resD((
+    padding-top: 37px,
+    padding-bottom: 56px,
+    margin-top: 0px,
+    opacity: 1,
+    font-size: 24px,
+    line-height: 62px,
+    letter-spacing: 0px,
+    text-align: center,
+  ));
+  color: white;
+  opacity: 0.8;
+}
+
+.b2b-landing-page-brandCopyRight {
+  font-weight: normal;
+  color: #504F4F;
+  letter-spacing: 0px;
+  @include resM((
+    text-align: center,
+    font-size: 13px,
+    padding-top: 0px,
+    line-height: 27px,
+    margin-top: 0px,
+    padding-bottom: 0px,
+  ));
+  @include resD((
+    text-align: right,
+    font-size: 18px,
+    padding-top: 0px,
+    padding-bottom: 0px,
+    line-height: 30px,
+  ));
+}
+
+.b2b-landing-page-copyRightContainer {
+  @include resM((
+    margin-top: 12px,
+    padding-bottom: 30px,
+  ));
+  @include resD((
+    margin-top: 18px,
+    padding-bottom: 50px,
+  ));
+}
+
+.b2b-landing-page-tekieLogo {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  @include resM((
+    width: 98px,
+    height: 54px,
+    margin-top: 14px,
+    padding-bottom: 17px,
+  ));
+  @include resD((
+    width: 125px,
+    height: 70px,
+    margin-top: 68px,
+    padding-bottom: 0px,
+    margin-bottom: 0px,
+  ));
+}
+
+.b2b-landing-page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.b2b-landing-page-testtimonial-header-text {
+  @extend .lato;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  padding-top: 48px;
+
+  @include resD((
+    font-size: 40px
+  ));
+  @include resM((
+    font-size: 24px
+  ));
+
+  & > span { 
+    @extend .b2b-landing-page-bottomOverlayLine;
+  }
+}
+
+.b2b-landing-page-lms {
+  position: relative;
+}
+
+.b2b-landing-page-section-header {
+  @extend .lato;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  color: #000000;
+  padding-top: 18px;
+
+  @include resD((
+    font-size: 40px,
+  ));
+  @include resM((
+    font-size: 24px
+  ))
+}
+
+.b2b-landing-page-section-subheader {
+  @extend .Inter-regular;
+  font-weight: normal;
+  color: rgba(0,0,0,0.5);
+  box-sizing: border-box;
+  text-align: center;
+  
+  @include resD((
+    padding: 0,
+    padding-top: 22px,
+    font-size: 22px,
+  ));
+  @include resM((
+    padding: 22px 24px 18px,
+    font-size: 16px,
+  ));
+}
+.b2b-landing-page-subheader-mobileOnly {
+  @include resD((
+    text-align: center,
+  ));
+  @include resM((
+    text-align: left
+  ));
+}
+
+.b2b-landing-page-horizontal-testimonial-cards-container {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  // height: 100%;
+  
+  @include resD((
+    padding: 0 0 0 32px,
+  ));
+  @include resM((
+    padding: 0 0 0 20px,
+  ));
+}
+
+.b2b-landing-page-testimonial-stickyContainer {
+  position: sticky;
+  top: 60px;
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.b2b-landing-page-testimonial-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-height: 450px;
+  width: 586px;
+  border-radius: 6px;
+  background-color: #fff;
+  overflow: hidden;
+  
+  @include resD((
+    margin: 75px 32px 0px 0px,
+  ));
+  @include resM((
+    margin: 48px 48px 0px 0px,
+  ));
+
+  & .b2b-landing-page-testimonial-image {
+    width: 100%;
+    height: 300px;
+    max-height: 60%;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+  }
+
+  & .b2b-landing-page-testimonial-details {
+    flex: 1 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include resD((
+      padding: 40px 24px,
+    ));
+    @include resM((
+      padding: 32px 20px,
+    ));
+
+    & .b2b-landing-page-testimonial-profileImage {
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      border: 2px solid rgba(0, 173, 230, 0.5);
+      border-radius: 100px;
+      background-position: center !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;      
+    }
+
+    & .b2b-landing-page-testimonial-detailsContainer {
+      width: 80%;
+      padding: 0px 0px 0px 12px;
+      & .b2b-landing-page-testimonial-details-feedback-text {
+        @extend .lato;
+        font-style: normal;
+        font-weight: bold;
+        text-align: left;
+        color: #504F4F;
+        @include resD((
+          font-size: 20px,
+        ));
+        @include resM((
+          font-size: 20px,
+        ));
+      }
+
+      & .b2b-landing-page-testimonial-details-profile-designation {
+        @extend .Inter-regular;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-style: normal;
+        font-weight: normal;
+        color: #005773;
+        opacity: 0.75;
+        padding: 8px 0px;
+        @include resD((
+          font-size: 18px,
+        ));
+
+        & .b2b-landing-page-testimonial-org-logo {
+          display: block;
+          width: 22px;
+          height: 22px;
+          background-position: center !important;
+          background-size: contain !important;
+          background-repeat: no-repeat !important;
+          padding-right: 4px;
+        }
+      }
+
+    }
+  }
+}
+
+.b2b-landing-page-imageContainer {
+  background-size: cover !important;
+  background-position: center center !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #04181f;
+  width: 100%;
+  height: 100%;
+}
+
+.b2b-landing-page-hero-absolute-button {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+}
+
+.b2b-landing-page-getStarted-button {
+  @extend .Inter-regular;
+  display: flex;
+  background: #00ADE6;
+  width: fit-content;
+  color: #fff;
+  justify-content: center;
+  text-transform: unset;
+  align-items: center;
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 20px;
+  transform: scale(1);
+  transition: all .3s;
+  @include resM((
+    padding: 10px,
+    letter-spacing: 0.75px,
+    font-size: 16px,
+    border-radius: 4px,
+  ));
+  @include resD((
+    display: flex,
+    border-radius: 6px,
+    padding: 14px 20px,
+    font-size: 22px,
+    letter-spacing: 0.2px,
+  ));
+  &:hover {
+    background: #06afe7;
+    box-shadow: 4px 8px 10px rgba(0, 173, 230, 0.21);
+  }
+  &:active {
+    transform: scale(.96);
+  }
+}
+
+.b2b-landing-page-divider {
+  width: 90%;
+  height: 1px;
+  background-color: #DCDCDC;
+  
+  @include resM((
+    margin-top: 28px,
+    margin-bottom: 28px,
+  ));
+
+  &.b2b-landing-page-dividerTopBottom {
+    @include resD((
+      margin-top: 102px,
+      margin-bottom: 102px,
+    ));
+  }
+  &.b2b-landing-page-dividerTop {
+    @include resD((
+      margin-top: 48px,
+      margin-bottom: 51px,
+    ));
+  }
+  &.b2b-landing-page-dividerBottom {
+    @include resD((
+      margin-bottom: 102px,
+      margin-top: 51px,
+    ));
+  }
+  &.b2b-landing-page-dividerExplore {
+    @include resD((
+      margin-bottom: 102px + 56px,
+      margin-top: 51px,
+    ));
+  }
+}
+
+.b2b-landing-page-footer-divider {
+  width: 100%;
+}
+
+.b2b-landing-page-immersive-pedagogy-action-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0px;
+
+  & .b2b-landing-page-text-muted {
+    color: #000000;
+    opacity: 0.2;
+    font-size: 16px;
+    padding: 0px 12px;
+  }
+
+  & .b2b-landing-page-button-link {
+    @extend .Inter-regular;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration-line: underline;
+    color: #00ADE6;
+    display: flex;
+    align-items: center;
+    
+    @include resD((
+      font-size: 24px
+    ));
+    @include resM((
+      font-size: 16px
+    ));
+
+    & .b2b-landing-page-hero-playIcon {
+      display: block;
+      background-image: url('../../assets/b2bLandingPage/icons/play-circle-outline.svg');
+      background-repeat: no-repeat !important;
+      background-size: contain !important;
+      margin-left: 5px;
+
+      @include resD((
+        width: 28px,
+        height: 28px,
+      ));
+      @include resM((
+        width: 20px,
+        height: 20px,
+      ));
+    }
+  }
+}
+
+.b2b-landing-page-lms-features-container {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+  @include resD((
+    padding: 48px 180px 48px 220px,
+  ));
+  @include resM((
+    padding: 20px 0px,
+  ));
+
+  & .b2b-landing-page-lms-features-row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    
+    @include resD((
+      flex-direction: row,
+      align-items: flex-start,
+      padding: 16px 0px,
+    ));
+    @include resM((
+      padding: 0px,
+      flex-direction: column,
+      align-items: center,
+    ));
+
+    & .b2b-landing-page-lms-feature {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      z-index: 1;
+      
+      @include resD((
+        width: 350px,
+        align-items: flex-start,
+        background: transparent,
+        padding: 0,
+      ));
+      @include resM((
+        padding: 12px,
+        width: 100%,
+        align-items: center,
+        background: #fff,
+      ));
+
+      &:nth-child(1) {
+        @include resD((
+          background: transparent,
+        ));
+        @include resM((
+          background: #D5F4FE,
+        ))
+      }
+
+      & .b2b-landing-page-lms-feature-icon {
+        width: 30px;
+        height: 30px;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+      }
+
+      & .b2b-landing-page-lms-feature-heading {
+        font-family: Lato, Nunito;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        color: #000000;
+        padding-top: 12px;
+      }
+
+      & .b2b-landing-page-lms-feature-list {
+        list-style: none;
+        padding: 4px 0px 0px 4px;
+
+        & .b2b-landing-page-lms-feature-list-item {
+          @extend .Inter-regular;
+          font-weight: normal;
+          font-size: 15px;
+          text-transform: capitalize;
+          color: #878a8c;
+          background: url('../../assets/b2bLandingPage/icons/checkmark-circle-outline.svg') no-repeat left top;
+          padding: 0px 0px 5px 28px;
+          list-style: none;
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}
+
+.b2b-landing-page-tekieMentorForce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .b2b-landing-page-section-subheader {
+    
+    @include resD((
+      width: 40%,
+      line-height: 28px,
+    ));
+    @include resM((
+      width: 100%,
+      line-height: 24px,
+    ));
+
+    & > .b2b-landing-page-gradientText {
+      font-weight: bold;
+      font-size: 20px;
+      background: linear-gradient(rgba(53, 228, 233, 1.0) 0%, rgba(0, 173, 230, 1.0) 100%);
+      background-clip: text;
+      padding-left: 2px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.b2b-landing-page-footer-tekieLogo {
+  @include resM((
+    width: 98px,
+    height: 54px,
+    position: relative,
+  ));
+  @include resD((
+    width: 125px,
+    height: 44px,
+  ));
+  left: -5px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: left center !important;
+}
+
+.b2b-landing-page-flex-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include resD((
+    align-items: flex-start,
+  ));
+  @include resM((
+    align-items: center,
+  ));
+}
+
+.b2b-landing-page-bottomOverlayLine {
+  position: relative;
+  z-index: 5;
+
+  &::after{
+    content: '';
+    width: 100%;
+    position: absolute;
+    background-color: #65DA7A;
+    opacity: 0.5;
+    left: 0;
+    z-index: -1;
+    @include resD ((
+      bottom: 4px,
+      height: 14px,
+    ));
+    @include resM ((
+      bottom: 0,
+      height: 10px,
+    ));
+  }
+}
+
+.b2b-landing-page-journey-top-nav {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 16px;
+  
+  @include resD((
+    display: flex
+  ));
+      
+  > .b2b-landing-page-journey-nav-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
+    
+    @include resD((
+      padding: 38px 0px, 
+    ));
+    @include resM((
+      padding: 32px 0px, 
+    ));
+  }
+
+  & .b2b-landing-page-journey-nav-item {
+    @extend .Inter;
+    cursor: pointer;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+    color: #00ADE6;
+    background: #E6F7FD;
+    border-radius: 6px;
+    font-weight: 700;
+    user-select: none;
+    display: flex;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    border-width: 3px;
+    border-style: solid;
+    flex-direction: row;
+    text-align: center;
+    white-space: pre-line;
+    margin-right: 48px;
+    
+    & > div span:nth-last-child(1) {
+      white-space: pre;
+    }
+    
+    @include resD((
+      font-size: 18px,
+      padding: 8px 18px,
+    ));
+    @include resM((
+      font-size: 14px,
+      padding: 4px 8px,
+    ));
+
+    &:nth-last-child(3) {
+      margin-right: 0px !important;
+    }
+  }
+
+  & .b2b-landing-page-journey-nav-icon {
+    width: 34px;
+    height: 34px; 
+    background-size: contain !important; 
+    background-repeat: no-repeat !important;
+    margin: 0px 0px 0px 8px;
+  }
+
+  & .b2b-landing-page-journey-nav-icon-outline {
+    transition: opacity .5s;
+    position: absolute;
+    top: -5px;
+    left: -4px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.b2b-landing-page-journey-nav-progress {
+  width: 100%;
+  background: #A0A0A0;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  
+  @include resD((
+    height: 4px,
+  ));
+  @include resM((
+    height: 3px,
+  ));
+}
+
+.b2b-landing-page-journey-progress-primaryBg {
+  background: #00ADE6;
+  z-index: 1;
+  width: 0%;
+  transition: width .8s ease-out;
+}
+
+.b2b-landing-page-mobilePaddingBottom {
+  @include resD((
+    padding-bottom: 0px,
+  ));
+  @include resM((
+    padding-bottom: 18px,
+  ));
+}
+
+.b2b-landing-page-journey-toolbar {
+  width: 100%;
+  background-color: #F5F6F8;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4px;
+
+  @include resD(( height: 16px ));
+  @include resM(( height: 14px ));
+
+  & > div {
+    border-radius: 100%;
+    margin-left: 6px;
+
+    @include resD((
+      width: 10px,
+      height: 10px,
+    ));
+    @include resM((
+      width: 8px,
+      height: 8px
+    ));
+
+    &:nth-child(1) {
+      background-color:#F75F58;
+    }
+    &:nth-child(2) {
+      background-color:#F6BB47;
+    }
+    &:nth-child(3) {
+      background-color:#37C441;
+    }
+  }
+}
+
+.b2b-landing-page-journey-container {
+  height: 100%;
+  margin: 18px 58px;
+  display: block;
+  box-sizing: border-box;
+  background-color: #F5F6F8;
+  border-radius: 4px;
+  box-shadow: 0px 4.29337px 21.4669px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  & .b2b-landing-page-journey-slide-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 62px 68px 48px;
+    overflow: hidden;
+    position: relative;
+
+    & .b2b-landing-page-journey-slide-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex: 0 1 40%;
+      color: #000000;
+      position: relative;
+      
+      & .b2b-landing-page-journey-slide-programme {
+        @extend .Inter-SemiBold;
+        font-weight: bold;
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        opacity: 0.5;
+      }
+      & .b2b-landing-page-journey-slide-header {
+        @extend .Inter;
+        font-size: 24px;
+        text-transform: capitalize;
+        font-weight: 800;
+        padding: 4px 0px 2px;
+        letter-spacing: 0px;
+        transition: all .5s;
+      }
+      & .b2b-landing-page-journey-slide-class {
+        @extend .Inter;
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: capitalize;
+        letter-spacing: 0px;
+        padding-top: 4px;
+      }
+      & .b2b-landing-page-journey-slide-description {
+        @extend .Inter;
+        font-weight: 400;
+        font-size: 14px;
+        color: #504F4F;
+        line-height: 24px;
+        padding-top: 12px;
+        text-align: justify;
+
+        @include resD((
+          width: 80%,
+        ));
+        @include resM((
+          width: 100%,
+        ));
+      }
+      & .b2b-landing-page-journey-slide-tags {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 14px 0px 20px;
+
+        @include resD((
+          width: 80%,
+        ));
+        @include resM((
+          width: 100%,
+        ));
+
+        & .b2b-landing-page-journey-slide-tag {
+          @extend .Inter;
+          color: white;
+          font-weight: 700;
+          text-transform: capitalize;
+          border-radius: 100px;
+          padding: 6px 22px;
+          margin: 8px 8px 0px 0px;
+
+          @include resD((
+            font-size: 16px,
+          ));
+          @include resM((
+            font-size: 14px,
+          ));
+        }
+      }
+    }
+
+    & .b2b-landing-page-journey-slide-image {
+      flex: 1 1 60%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 300px;
+      background-repeat: no-repeat !important;
+      background-size: contain !important;
+      background-position: top right !important;
+      z-index: 1;
+
+    }
+    & .b2b-landing-page-journey-slide-image-backdrop {
+      position: absolute;
+      right: 70px;
+      width: 300px;
+      height: 300px;
+      filter: blur(30px);
+      border-radius: 100%;
+      overflow: hidden;
+      z-index: 0;
+      
+      @include resD((
+        opacity: .1
+      ));
+      @include resM((
+        opacity: 0
+      ));
+    }
+  }
+}
+
+.b2b-landing-page-mentorForce-mentor-details-container {
+  box-sizing: border-box;
+  margin: 24px 0px;
+  padding: 24px 4px;
+  background-color: #D5F4FE;
+  width: 100%;
+}
+
+.b2b-landing-page-mentorForce-mentor-image-view {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 100px;
+  background-size: cover !important;
+  background-position: top !important;
+  background-repeat: no-repeat !important;
+  border: 2px solid rgba(53, 228, 233, 1.0);
+  border-radius: 100%
+}
+
+.b2b-landing-page-tekiementorForce-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  
+  & .b2b-landing-page-tekiementorForce-highlight {
+    width: 160px;
+    padding-top: 20px;
+
+    & .b2b-landing-page-tekiementorForce-highlight-title {
+      font-family: Nunito;
+      
+      @include resM((
+        font-weight: 600,
+        color: #504F4F,
+        font-size: 16px,
+      ))
+    }
+    & .b2b-landing-page-tekiementorForce-highlight-description {
+      @extend .Inter;
+      @include resM((
+        font-weight: normal,
+        color: #000000,
+        opacity: 0.5,
+        font-size: 14px,
+      ))
+    }
+  }
+}
+
+/** Tekie Mentor Force Section */
+
+.b2b-landing-page-tekieMentorForce-DesktopOnly-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  & .b2b-landing-page-tekieMentorForce-Svg {
+    min-width: 280px;
+    @include resD((
+      width: 350px,
+    ))
+  }
+
+  & .b2b-landing-page-tekieMentorForce-col {
+    & > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: flex-start;
+      position: relative;
+    }
+    & .b2b-landing-page-col-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+  & .b2b-landing-page-tekieMentorForce-topArrowToRight {
+    .b2b-landing-page-tekieMentorForce-highlight-details {
+     top: -12px; 
+    }
+  }
+  & .b2b-landing-page-tekieMentorForce-middleArrowToRight {
+    top: -14px;
+    left: -2px;
+    .b2b-landing-page-tekieMentorForce-highlight-details {
+     top: 32px; 
+    }
+  }
+
+  & .b2b-landing-page-tekieMentorForce-bottomArrowToRight {
+    justify-content: flex-start !important;
+
+    & > .b2b-landing-page-tekieMentorForce-bottomArrowSVG {
+      position: absolute !important;
+      top: -68px;
+      right: -10px;
+      width: 160px;
+      height: 200px;
+      background-position: center center !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+    }
+
+    & .b2b-landing-page-tekieMentorForce-highlight-details {
+      top: 110px;
+      left: 0px;
+    }
+  }
+
+  & .b2b-landing-page-tekieMentorForce-topArrowToLeft {
+    & > svg {
+      position: relative;
+      bottom: -15px;
+    }
+  }
+  & .b2b-landing-page-tekieMentorForce-bottomArrowToLeft {
+    align-items: flex-end !important;
+    & .b2b-landing-page-tekieMentorForce-highlight-details {
+      bottom: -12px;
+    }
+  }
+}
+
+.b2b-landing-page-tekieMentorForce-highlight-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    padding: 0px 10px 0px 16px;
+
+    & span {
+      @extend .Inter-regular;
+      font-size: 13px;
+      font-weight: 400;
+      color: #504F4F;
+      opacity: .5;
+    }
+  }
+
+.b2b-landing-page-pre-footer-pitch-container {
+  @extend .lato;
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  background: #FFF;
+  
+  @include resD((
+    margin-top: 62px,
+    padding: 102px
+  ));
+  @include resM((
+    margin-top: 48px,
+    padding: 32px
+  ));
+
+  & .b2b-landing-page-pre-footer-pitch-header {
+    font-weight: bold;
+    color: #00ade6;
+    text-align: center;
+    @include resD((
+      font-size: 42px,
+    ));
+    @include resM((
+      font-size: 24px,
+    ));
+  }
+  & .b2b-landing-page-pre-footer-pitch-description {
+    font-weight: normal;
+    color: #000000;
+    margin: 18px 0px 12px;
+    text-align: center;
+
+    @include resD((
+      font-size: 24px
+    ));
+    @include resM((
+      font-size: 18px
+    ));
+  }
+}
+
+.b2b-landing-page-lms-absolute-container {
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 0;
+  @include resD((
+    display: block,
+  ));
+  @include resM((
+    display: none,
+  ));
+}
+.b2b-landing-page-lms-absolute-leftTop {
+  top: 0;
+  left: 60px;
+}
+.b2b-landing-page-lms-absolute-leftBottom {
+  bottom: 30px;
+  left: 60px;
+}
+.b2b-landing-page-lms-absolute-rightTop {
+  top: 20px;
+  right: 60px;
+}
+.b2b-landing-page-lms-absolute-rightBottom {
+  bottom: 30px;
+  right: 60px;
+}
+
+.b2b-landing-page-hero-input-container {
+  
+  @include resD((
+    margin-top: 32px,
+    width: 60%, 
+  ));
+  @include resM((
+    margin-top: 12px,
+    width: 100%, 
+  ));
+  
+  & .b2b-landing-page-hero-input {
+    @extend .Inter-regular;
+    position: relative;
+    background: #FFFFFF;
+    opacity: 0.9;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+    border: none;
+    border-radius: 6px;
+    padding-left: 55px;
+    overflow: hidden;
+
+    @include resD ((
+      font-size: 20px
+    ));
+    @include resM ((
+      font-size: 16px
+    ));
+    
+    & input {
+      border: none !important;
+      font: inherit;
+      outline: none !important;
+      width: 100%;
+
+      @include resD((
+        padding: 16px 22px 16px 0,
+      ));
+      @include resM((
+        padding: 12px 18px 12px 0,
+      ));
+    } 
+
+    & .b2b-landing-page-hero-input-icon {
+      background-image: url('../../assets/b2bLandingPage/icons/mailIcon.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top:50%; 
+      left:0%;
+      transform: translate(40%, -50%);
+
+      @include resD((
+        height: 38px,
+        width: 38px,
+      ));
+      @include resM((
+        height: 32px,
+        width: 32px,
+      ));
+    }
+  }
+}
+
+.b2b-landing-page-swiper-indicator-container {
+  width: min-content;
+  position: relative;
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 34px;
+}
+
+.b2b-landing-page-carousel-ArrowSVG-container {
+  width: 16px; 
+  height: 16px;
+  margin-right: 12px;
+
+  & .b2b-landing-page-carousel-mobileArrowSVG {
+    path {
+      fill: #00ADE6;
+    }
+    opacity: 0.8
+  }
+}
+
+.b2b-landing-page-carousel-indicator {
+  width: 12px;
+  height: 12px;
+  opacity: 0.4;
+  margin-right: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #C4C6CF;
+}
+
+
+/**
+ * Breakpoints
+ */
+
+@media screen and (max-width: 426px) {
+  .b2b-landing-page-journey-slide-container {
+    padding: 14px 16px !important;
+  }
+  .b2b-landing-page-journey-slide-description {
+    padding-top: 8px !important;
+  }
+  .b2b-landing-page-journey-slide-tags {
+    margin-top: 0px !important;
+  }
+  .b2b-landing-page-journey-slide-tag {
+    padding: 4px 18px !important;
+    margin-right: 4px !important;
+  }
+  .b2b-landing-page-journey-nav-container {
+    padding-bottom: 0px !important;
+  }
+  .b2b-landing-page-journey-nav-item {
+    margin-right: 20px !important;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 900px) {
+  .b2b-landing-page-testimonial-card {
+    height: 400px;
+    width: 400px;
+  }
+  .b2b-landing-page-testtimonial-header-text {
+    @include resM((
+      font-size: 28px
+    ))
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .b2b-landing-page-hero-absolute-button {
+    bottom: 4%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .b2b-landing-page-journey-nav-item {
+    flex-direction: column-reverse !important;
+  }
+  .b2b-landing-page-journey-nav-item-DesktopOnly {
+    display: block;
+  }
+  .b2b-landing-page-journey-nav-icon {
+    margin: 0px 0px 6px 0px !important;
+  }
+  .b2b-landing-page-journey-container {
+    margin: 24px 12px;
+    
+    & .b2b-landing-page-journey-slide-container {
+      flex-direction: column-reverse;
+      padding: 20px 28px;
+      
+      & .b2b-landing-page-journey-slide-details {
+        width: 100%;
+        & .b2b-landing-page-journey-slide-tags {
+          margin: 4px 0px 20px;
+        }
+      }
+      & .b2b-landing-page-journey-slide-image {
+        width: 100%;
+        flex: none;
+        height: 150px;
+        background-position: center center !important;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .b2b-landing-page-testimonial-card {
+    // height: 350px;
+    height: 100%;
+    width: 350px;
+    margin: 0px;
+    & .b2b-landing-page-testimonial-image {
+      max-height: 50%;
+    }
+    & .b2b-landing-page-testimonial-details {
+      padding: 0px 12px;
+      & .b2b-landing-page-testimonial-profileImage {
+        width: 80px;
+        height: 80px;
+      }
+      & .b2b-landing-page-testimonial-detailsContainer {
+        & .b2b-landing-page-testimonial-details-feedback-text {
+          font-size: 13px;
+          line-height: 18px;
+        }
+        & .b2b-landing-page-testimonial-details-profile-designation {
+          font-size: 10px;
+          & .b2b-landing-page-testimonial-org-logo {
+            width: 18px;
+            height: 18px;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .b2b-landing-page-journey-slide-details {
+    flex: 1 1 50% !important;
+  }
+  .b2b-landing-page-tekieMentorForce-character-svg {
+    width: 230px;
+    height: 450px;
+  }
+}

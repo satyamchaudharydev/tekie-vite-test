@@ -1,0 +1,101 @@
+@import 'src/scss/size.scss';
+
+.dropdown-phone-number-light {
+  font-family: Nunito !important;
+  .react-tel-input {
+    font-family: 'Lato', sans-serif;
+    width: 100% !important;
+  }
+  .selected-flag {
+    width: 100% !important;
+    @include resD((
+      padding-left: 18px !important,
+    ));
+    &:hover {
+      background: transparent !important;
+    }
+  }
+  
+  .arrow {
+    opacity: 0.4;
+  }
+  
+  .selected-flag.open {
+    background: transparent !important;
+  }
+  
+  .country-list {
+    background-color: #fff !important;
+    overflow-y: auto !important;
+  }
+  
+  .flag-dropdown:focus {
+    outline: none;
+  }
+  
+  .country {
+    color: #222 !important;
+    user-select: none;
+    &:hover {
+      background-color: #fff !important;
+      background-color: rgba(#06B3E6, 0.3) !important;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  .country.highlight {
+    background-color: rgba(#06B3E6, 0.7) !important;
+    color: white !important;
+    font-weight: 700;
+    border: unset !important;
+    .dial-code { 
+      color: white !important;
+    }
+  }
+
+  .icon {
+    background-repeat: no-repeat !important;
+  }
+  .flag.in {
+    @extend .icon;
+    background-image: url(../../assets/countries/in.svg) !important;
+    background-position: 0 0 !important;
+  };
+  .flag.ru {
+    @extend .icon;
+    background-image: url(../../assets/countries/ru.svg) !important;
+    background-position: 0 0 !important;
+  };
+  .flag.af {
+    @extend .icon;
+    background-image: url(../../assets/countries/af.svg) !important;
+    background-position: 0 0 !important;
+  };
+  .flag.au {
+    @extend .icon;
+    background-image: url(../../assets/countries/au.svg) !important;
+    background-position: 0 0 !important;
+  };
+  .flag.sg {
+    @extend .icon;
+    background-image: url(../../assets/countries/sg.svg) !important;
+    background-position: 0 0 !important;
+  };
+  .flag.us {
+    @extend .icon;
+    background-image: url(../../assets/countries/us.svg) !important;
+    background-position: 0 0 !important;
+  };
+  .flag.gb {
+    @extend .icon;
+    background-image: url(../../assets/countries/gb.svg) !important;
+    background-position: 0 0 !important;
+  };
+  .flag.ae {
+    @extend .icon;
+    background-image: url(../../assets/countries/ae.svg) !important;
+    background-position: 0 0 !important;
+  };
+}

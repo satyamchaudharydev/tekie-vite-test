@@ -1,0 +1,367 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+.sessionCardUpComingContainer{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+background: #FFFFFF;
+@include resD1280(
+    (
+      border-radius: 8px,
+      box-shadow: 0px 2px 10px rgba(140, 97, 203, 0.1),
+      padding: 12px,
+    )
+  );
+}
+
+.sessionCardUpComingHeader{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+color: #212121;
+@include resD1280(
+  (
+    font-size: 14px,
+    line-height: 18px,
+  )
+);
+margin: 0;
+}
+.sessionCard{
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-sizing: border-box;
+cursor: pointer;
+.classroomIcon{
+  color: #999999;
+  width: 20px;
+}
+@include resD1280(
+  (
+    border-radius: 4px,
+    padding: 8px 15px,
+    margin-top: 10px,
+    height: 53px,
+  )
+);
+&.noMargin{
+  margin-top: 0px;
+}
+}
+
+.upComingSession-sessionCard, .liveSession-sessionCard{
+  .classroomIcon{
+  color: #8C61CB;
+}
+background: rgba(140, 97, 203, 0.09);
+@include resD1280(
+  (
+    border: 1.5px solid rgba(140, 97, 203, 0.1),
+  )
+);
+& .sessionCardTopic{
+  color: #8C61CB;
+  & .topicTitle{
+    font-weight: 700;
+  }
+}
+& .topicOrder{
+  color: #8C61CB !important;
+}
+}
+.sessionCardLiveOrUpComingSession{
+  background: linear-gradient(269.75deg, rgba(140, 97, 203, 0.1) 0%, rgba(250, 250, 250, 0.1) 64.75%);
+  border: none;
+  & .sessionCardTopic{
+    color: #8C61CB;
+    & .topicTitle{
+      font-weight: 700;
+    }
+  }
+  .classroomIcon{
+  color: #8C61CB;
+}
+
+  & .topicOrder{
+    color: #8C61CB !important;
+  }
+  &:hover{
+    background: rgba(140, 97, 203, 0.09);
+  }
+  & .theoryIndicator{
+      color: #8C61CB;
+  }
+}
+.completed-sessionCard{
+  background: linear-gradient(269.75deg, rgba(1, 170, 147, 0.1) 0%, rgba(250, 250, 250, 0.1) 64.75%);
+  transition: all 0.2s ease-in;
+  .classroomIcon{
+  color: #01AA93;
+  }
+  &:hover{
+    background: rgba(1, 170, 147, 0.1);
+    .nextArrowIcon path{
+      fill: #01AA93;
+    }
+  }
+}
+.allotted-sessionCard{
+background: linear-gradient(269.68deg, #F2F2F2 0%, #FFFFFF 50.22%);
+cursor: pointer;
+&:hover{
+  background: rgba(242, 242, 242, 0.9);
+  .nextArrowIcon path{
+    fill: #504F4F;
+  }
+}
+& .theoryIndicator{
+  color: #999;
+}
+}
+.allotted-sessionCard:hover, .completed-sessionCard:hover, .sessionCardLiveOrUpComingSession:hover{
+  & .sessionCardTopic, & .topicThumbnail{
+    @include resD1280((
+      left: 15px,
+    ))
+  }
+}
+.topicThumbnail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.2s ease-in;
+  left: 0;
+  @include resD1280(
+    (
+      height: 35px,
+      width: 35px,
+      border-radius: 50%,
+      margin: 0 9px 0 16px,
+    )
+  );
+  background-color: rgba(140, 97, 203, 0.2);
+  & img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  &.topicThumbnail-completed{
+    background-color: rgba(101, 218, 122, 0.3);
+  }
+  &.topicThumbnail-allotted{
+    background-color: rgba(212, 212, 212, 0.5);
+  }
+}
+.topicThumbnailEmptyArea{
+  @include resD1280(
+    (
+      margin: 0 6px,
+    )
+  );
+}
+.sessionCardDetailsArea{
+  display: flex;
+  align-items: center;
+}
+.sessionCardTopic{
+position: relative;
+transition: all 0.2s ease-in;
+font-family: 'Inter';
+font-style: normal;
+left: 0;
+& .topicOrder{
+  font-weight: 400;
+  line-height: 100%;
+  opacity: 0.8;
+  color: #403F3F;
+  @include resD1280(
+    (
+      font-size: 12px,
+    )
+  );
+}
+& .topicTitle{
+  font-weight: 500;
+  @include resD1280(
+    (
+      font-size: 14px,
+      line-height: 16px,
+    )
+  );
+}
+}
+
+.nextArrowIcon{
+& path{
+  fill: #A8A7A7;
+}
+@include resD1280(
+  (
+    height: 20px,
+    width: 20px,
+  )
+);
+@include resM(
+  (
+    height: 20px,
+    width: 20px,
+  )
+);
+}
+
+.allottedOrCompletedSession{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  color: #01AA93;
+@include resD1280(
+  (
+    font-size: 12px,
+    line-height: 12px,
+  )
+);
+& p{
+  display: flex;
+  align-items: center;
+  @include resD1280(
+    (
+      margin-top: 2.5px,
+      margin-right: 8px,
+    )
+  );
+  & svg{
+    @include resD1280(
+      (
+        margin-right: 8px,
+      )
+    );
+  }
+}
+}
+
+.sessionEndTime{
+  font-weight: 700;
+  @include resD1280(
+    (
+      margin-left: 4px,
+    )
+  );
+}
+
+.liveSessionIndicatorContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.liveSessionIndicator{
+  @include resD1280((
+    width: 9px,
+    height: 9px,
+    box-shadow: 0px 0px 1px 1px #0000001a,
+  ));
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  background: #FF5744;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #FF5744;
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 8px rgba(204,169,44, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 #FF5744;
+    box-shadow: 0 0 0 0 #FF5744;
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 5px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 5px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+
+.liveSessionText{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+@include resD1280((
+  font-size: 8px,
+  line-height: 12px,
+  margin-top: 4px,
+));
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #FF5744;
+}
+
+.sessionManualButtonsContainer {
+  display: flex;
+  align-items: center;
+  @include resD1280((
+    gap: 9px,
+  ));
+}
+
+.manualContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(220, 220, 220, 0.4);
+  border: 1px solid rgba(186, 186, 186, 0.3);
+  @include resD1280((
+    padding: 8px,
+    gap: 4px,
+    border-radius: 8px,
+  ));
+}
+
+.teacherManualTooltipContainer {
+  display: flex;
+  align-items: center;
+  @include resD1280((
+    gap: 4px,
+  ));
+  p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    @include resD1280((
+      font-size: 12px,
+      line-height: 150%,
+    ));
+  }
+}
+.theoryIndicator{
+  // color: #8C61CB;
+
+  // &.allotted-sessionCard{
+  //   background-color: none;
+  //   color: #999999;
+  // }
+  path{
+    stroke-width: 3px;
+  }
+}
+.theoryToolipContainer{
+  text-wrap: nowrap; 
+}

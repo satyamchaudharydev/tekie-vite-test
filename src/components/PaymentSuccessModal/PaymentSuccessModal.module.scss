@@ -1,0 +1,210 @@
+@import 'src/scss/size.scss';
+
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: hs(20px);
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  background-image: url("../../assets/payment_complete_background.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  @include resM((
+    width: 80vw,
+    height: 300px,
+    top: 100px,
+    padding: 12px,
+  ));
+  @include resD((
+    width: 750px,
+    height: 400px,
+    top: 150px,
+    padding: 32px,
+  ));
+}
+
+.paymentSuccessDrop {
+  @include resM((
+      width: 65px,
+      height: 80px,
+      margin-bottom: 20px,
+      margin-top: -40px,
+  ));
+  @include resD((
+      width: 114px,
+      height: 133px,
+      margin-bottom: 20px,
+      margin-top: -60px,
+  ));
+}
+
+.paymentSuccessCheck {
+  background: linear-gradient(44.71deg, #7CFFED -8.43%, #01AA93 114.08%);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resM((
+      width: 45px,
+      height: 45px,
+      padding: 12px,
+      margin-bottom: 12px
+  ));
+  @include resD((
+      width: 90px,
+      height: 90px,
+      padding: 12px,
+      margin-bottom: 22px
+  ));
+
+  > div {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 90%;  
+  }
+}
+
+.paymentSuccessContainer{
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.03;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ade6;
+  @include resM((
+      height: 51px,
+      margin-bottom: 0px,
+      font-size: 24px,
+  ));
+  @include resD((
+      height: 51px,
+      margin-bottom: 14px,
+      font-size: 36px,
+  ));
+}
+
+.paymentSuccessSubHeader {
+  font-family: Nunito;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.08;
+  letter-spacing: normal;
+  color: #00ade6;
+  text-align: center;
+  @include resM((
+    margin-bottom: 12px,
+    font-size: 16px,
+  ));
+  @include resD((
+    margin-bottom: 20px,
+    font-size: 22px,
+  ));
+}
+
+.paymentSuccessCourseContainer {
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.03;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ade6;
+  @include resM((
+      height: 40px,
+      margin-bottom: 0,
+      font-size: 20px,
+  ));
+  @include resD((
+      height: 51px,
+      margin-bottom: 45px,
+      font-size: 38px,
+  ));
+}
+
+.paymentSuccessActionContainer {
+  display: flex;
+  @include resM((
+      margin: 12px 0px 0px
+  ));
+  @include resD((
+      margin: 12px 0px 0px
+  ));
+}
+
+.paymentSuccessActionText {
+  font-family: Nunito;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.08;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ade6;
+  @include resM((
+      height: 32px,
+      font-size: 18px,
+  ));
+  @include resD((
+      height: 32px,
+      font-size: 24px,
+      margin-right: 10px,
+  ));
+}
+
+.paymentSuccessClose {
+  position: absolute;
+  background: #00ADE6;
+  filter: drop-shadow(-2px 2px 4px #026282);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  @include resD((
+    width: 50px,
+    height: 50px,
+    top: -40px / 2,
+    right: -40px / 2,
+  ));
+  @include resM((
+    width: 35px,
+    height: 35px,
+    top: -30px / 2,
+    right: -20px / 2,
+  ));
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    box-shadow: 0px 6px 6px rgba(51, 51, 51, 0.2), 0px 5px 20px rgba(51, 51, 51, 0.08);
+  }
+}
+
+.paymentSuccessCloseIcon {
+  position: relative;
+  @include resD((
+    width: 20px,
+    height: 20px,
+    top: -1px,
+  ));
+  @include resM((
+    width: 12px,
+    height: 12px,
+    top: -6px,
+  ));
+  path {
+    fill: #FFF;
+    opacity: 1;
+  }
+}

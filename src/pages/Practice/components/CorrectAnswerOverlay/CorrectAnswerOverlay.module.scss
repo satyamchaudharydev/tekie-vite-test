@@ -1,0 +1,74 @@
+@import 'src/scss/size.scss';
+
+.correctAnswerContainer{
+  height: hs(284px);
+  background-image: url('../../../../assets/hintBackgound.png') ;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: hs(352px);
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+//   transform: translateY(200%);
+//   -webkit-transform: translateY(200%);
+}
+
+.mainArea{
+    width: hs(743px);
+    margin-top: hs(24px);
+}
+
+.correctHeading{
+  height: hs(37px);
+  object-fit: contain;
+  font-family: Nunito;
+  font-size: hs(28px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: left;
+  color: #16d977;
+}
+
+.explanation{
+  margin-top: hs(18px);
+  height: hs(80px);
+  font-family: Nunito;
+  font-size: hs(24px);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #707070;
+}
+
+.nextBtn{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: hs(145px);
+  height: hs(51px);
+  object-fit: contain;
+  border-radius: hs(28px);
+  margin-top: hs(44px);
+  float: right;
+  font-family: Nunito;
+  font-size: hs(64px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: hs(1.33px);
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}

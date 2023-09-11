@@ -1,0 +1,15 @@
+@import "src/scss/size.scss";
+@import "src/scss/lato.scss";
+
+.tekieLogo {
+  width: 98px;
+  height: 54px;
+  margin-top: 5px;
+  align-self: flex-start;
+  background-image: url("../../../assets/tekieLogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 99;
+  background-position: center center;
+}

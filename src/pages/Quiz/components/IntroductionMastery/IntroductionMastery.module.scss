@@ -1,0 +1,123 @@
+@import 'src/scss/size.scss';
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#000000, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.autoImportant {
+  &#{&}#{&}#{&}#{&}#{&}#{&} {
+    height: auto !important;
+  }
+}
+
+.hoveringScores {
+  &#{&}#{&}#{&}#{&}#{&}#{&} {
+    margin-top: hs(40px) !important;
+  }
+}
+
+.arrowDown {
+  width: hs(21.4px);
+  height: hs(21.4px);
+  margin-top: hs(5.8px);
+  margin-bottom: hs(7.5px);
+}
+
+.scoreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scoreText {
+  font-family: Nunito;
+  font-size: hs(21px);
+  font-weight: bold;
+  color: #00ade6;
+}
+
+.popup {
+  width: hs(634.9px);
+  height: hs(525.5px);
+  border-radius: hs(20px);
+  background: #fff url('./assets/bg.png');
+  position: relative;
+  margin-left: hs(0px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introducing {
+  font-family: Nunito;
+  font-size: hs(20px);
+  color: #00ade6;
+  margin-top: hs(40px);
+}
+
+.text {
+  font-family: Nunito;
+  font-size: hs(19px);
+  color: #00ade6;
+  -top: hs(19px);
+  width: hs(260px);
+  text-align: center;
+}
+
+.title {
+  font-family: Nunito;
+  font-size: hs(38px);
+  font-weight: bold;
+  color: #00ade6;
+}
+
+.labels {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: hs(10.4px);
+}
+
+.label {
+  width: hs(131.5px);
+  height: hs(38.2px);
+  background-color: #f7941d;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border-radius: hs(19px);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Nunito;
+  font-size: hs(18px);
+  font-weight: 800;
+  margin-right: hs(12.7px);
+  text-transform: uppercase;
+}
+
+.gotIt {
+  width: hs(154px);
+  height: hs(57px);
+  border-radius: hs(29px);
+  color: white;
+  margin-top: hs(40px);
+  font-size: hs(22px);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  user-select: none;
+  background-image: linear-gradient(to bottom, #34e4ea, #00ade6);
+}

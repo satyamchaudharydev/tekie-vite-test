@@ -1,0 +1,137 @@
+@import 'src/scss/size.scss';
+
+.container{
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 999;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+}
+
+.modalContainer{
+    background-color: #fff;
+    width: hs(695px);
+    height: hs(420.9px);
+    bottom: hs(329.1px);
+    left: hs(589px);
+    position: absolute;
+    border-radius: hs(20px);
+    object-fit: contain;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    transform: scale(100%);
+    background-image: url('../../../../../assets/pqStory.svg');
+}
+
+.modalContainer:focus{
+    outline: none;
+}
+
+.continueBtn{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: hs(145px);
+    height: hs(51px);
+    object-fit: contain;
+    border-radius: hs(28px);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-image: linear-gradient(to bottom, #34e4ea, #00ade6);
+    margin-top: hs(44px);
+    float: right;
+    font-family: Nunito;
+    font-size: hs(24px);
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: hs(1.33px);
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.pqStory{
+  font-family: Nunito;
+  font-size: hs(24px);
+  padding-left: hs(60px);
+  padding-right: hs(60px);
+  padding-top: hs(90px);
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ade6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  text-align: justify;
+}
+
+.mbModalContainer {
+    background-color: #fff;
+    width: 80%;
+    height: 27%;
+    bottom: 65.14063vw;
+    left: 33px;
+    position: absolute;
+    border-radius: 15px;
+    object-fit: contain;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    transform: scale(100%);
+    background-image: url('../../../../../assets/pqStory.svg');
+    background-size: cover;
+}
+.mbPqStory {
+    font-family: Nunito;
+    font-size: 13px;
+    padding-left: hs(60px);
+    padding-right: hs(60px);
+    padding-top: hs(90px);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: #00ade6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align: justify;
+} 
+.mbContinueBtn{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 19.55208vw;
+    height: 6.65625vw;
+    object-fit: contain;
+    border-radius: 6.45833vw;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-image: linear-gradient(to bottom, #34e4ea, #00ade6);
+    margin-top: 2.29167vw;
+    float: right;
+    font-family: Nunito;
+    font-size: 1.25vw;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.06927vw;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    font-size: 12px;
+}

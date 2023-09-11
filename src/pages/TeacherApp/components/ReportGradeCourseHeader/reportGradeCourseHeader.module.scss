@@ -1,0 +1,181 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+
+.detailed__report__topic__details__container {
+  background: #ffffff;
+  @include resD1280(
+    (
+      padding: 16px,
+      border-radius: 12px,
+      margin-top: 40px,
+    )
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detailed__report__topic__details__container__contain {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.detailed__report__topic__details__container__left {
+  display: flex;
+  align-items: center;
+  @include resD1280(
+    (
+      width: 50%,
+    )
+  );
+}
+.detailed__report__topic__details__thumbnailWrapper {
+  border-radius: 100%;
+  @include resD1280(
+    (
+      height: 80px,
+      width: 80px,
+    )
+  );
+}
+.detailed__report__topic__details__description__container {
+    display: flex;
+  flex-direction: column;
+  @include resD1280(
+    (
+      margin-left: 16px,
+    )
+  );
+}
+.detailed__report__topic__details__description__contain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detailed__report__topic__details__description__completed {
+  display: flex;
+  flex-direction: column;
+  @include resD1280(
+    (
+      margin-right: 48px,
+    )
+  );
+  .attendenceText {
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #403f3f;
+    opacity: 0.6;
+    @include resD1280(
+      (
+        font-size: 10px,
+        line-height: 16px,
+        margin-bottom: 4px,
+      )
+    );
+  }
+  p {
+    font-weight: 500;
+    color: #121212;
+    margin: 0;
+    white-space: nowrap;
+    @include resD1280(
+      (
+        font-size: 14px,
+        line-height: 20px,
+      )
+    );
+  }
+}
+.detailed__report__topic__details__description__attendence {
+  display: flex;
+  align-items: center;
+  .absentStudentCount {
+    font-weight: 500;
+    color: #A8A7A7;
+    display: flex;
+    @include resD1280(
+      (
+        margin-right: 9px,
+        font-size: 14px,
+        line-height: 20px,
+      )
+    );
+  }
+}
+.detailed__report__topic__details__head {
+  display: flex;
+  align-items: flex-end;
+  @include resD1280(
+    (
+      margin-bottom: 16px,
+    )
+  );
+  h2 {
+    font-weight: 600;
+    color: #282828;
+    margin: 0;
+    white-space: nowrap;
+    @include resD1280(
+      (
+        font-size: 24px,
+        line-height: 100%,
+        margin: 0 8px,
+      )
+    );
+  }
+  p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    color: #504F4F;
+    margin: 0;
+    text-transform: capitalize;
+    white-space: nowrap;
+    @include resD1280(
+      (
+        font-size: 16px,
+        line-height: 114%,
+      )
+    );
+  }
+}
+.detailed__report__evaluation__container {
+    display: flex;
+    align-items: flex-end;
+}
+.detailed__report__evaluation__container__progress__container {
+    display: flex;
+    flex-direction: column;
+    @include resD1280(
+        (
+            margin-right: 24px,
+        )
+    );
+    p {
+        font-weight: 500;
+        color: #858585;
+        margin: 0;
+        @include resD1280(
+            (
+                font-size: 14px,
+                line-height: 17px,
+                margin-bottom: 8px,
+            )
+        );
+    }
+}
+
+.timeDaySeparator {
+  display: inline-block;
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  background-color: #757575;
+  color: #757575;
+@include resD((
+  margin: auto 12px,
+  margin-bottom: 5px,
+))
+}

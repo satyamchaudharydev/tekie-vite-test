@@ -1,0 +1,361 @@
+@import 'src/scss/size.scss';
+
+.body {
+    @include resD((  
+        flex: 1,
+        height: 100%,
+        display: flex,
+        flex-direction: column,
+        align-items: center,
+        justify-content: center, 
+    ));
+    @include resSm((
+        height: 100%,
+        display: flex,
+        flex-direction: column,
+        align-items: center,
+    ));
+  }
+
+.profileAvatar {
+    @include resD((
+        width: 100%,
+        min-height: 120px,
+        margin-top: 20px,
+        background-size: cover,
+        background-repeat: no-repeat,
+        background-position: -290% 0%
+    ));
+    @include resSm((
+        width: 100%,
+        min-height: 70px,
+        margin-top: 0px,
+        background-size: contain,
+        background-repeat: no-repeat,
+        background-position: center,
+    ));
+  }
+.profileAvatarForEventRegisteration{
+    // @extend .profileAvatar;
+    // @include resD((
+    //     height:120px,
+    //     width:120px
+    // ));
+    // @include resM((
+    //     height:60px,
+    //     width:60px,
+    // ))
+    @include resD((
+      width: 100%,
+      min-height: 100px,
+      margin-top: 20px,
+      background-size: cover,
+      background-repeat: no-repeat,
+      background-position: -290% 0%
+  ));
+  @include resSm((
+      width: 100%,
+      height: 50px,
+      margin-top: 0px,
+      background-size: contain,
+      background-repeat: no-repeat,
+      background-position: center,
+  ));
+}
+.profile {
+    @include resD((
+        width: 138px,
+        height: 138px,
+        background-color: #E9FBFD,
+        box-shadow: 0px 6px 10px 0px rgba(0,173,230,0.49),
+        border-radius: 50%,
+        overflow: hidden,
+        display: flex,
+        flex-direction: column,
+        align-items: center,
+        padding: unset,
+        min-width: unset,
+        min-height: unset,
+    ));
+    @include resSm((
+        min-width: 100px,
+        min-height: 100px,
+        height: auto,
+        background-color: none,
+        box-shadow: none,
+        padding: 18px 14px,
+        overflow: visible,
+        display: flex,
+        flex-direction: column,
+        align-items: center,
+    ));
+  }
+
+  .profileForEventRegisteration{
+      @extend .profile;
+      @include resD((
+        // height:120px,
+        // width:120px,
+        height:100px,
+        width:100px,
+        border-radius: 50%,
+    ));
+    @include resSm((
+        height:60px,
+        width:60px,
+        padding:2px,
+        box-shadow:0 0 0 0 white,
+        // align-items:flex-start,
+        align-items:center,
+        min-width:unset,
+        // border-radius: 50%,
+    ))
+  }
+.profilesContainer {
+    @include resD((
+        height: auto,
+        display: flex,
+        flex-direction: row,
+        margin-top: 24px,
+        margin-bottom: 1px,
+        flex-wrap: wrap,
+        justify-content: center,
+    ));
+    @include resSm((
+        display: flex,
+        flex-direction: row,
+        margin-top: auto,
+        margin-bottom: auto,
+        flex-wrap: wrap,
+        justify-content: center
+    ));
+  }
+
+.profilesContainerForEventRegisteration{
+      @extend .profilesContainer;
+      height:100%;
+      @include resD(
+         ( margin-top:0,
+         display:flex,
+         gap:5px,
+         justify-content:center,
+        flex-wrap:wrap,
+        //  justify-content:flex-start,
+        //  height:100%
+         )
+      );
+      @include resSm((
+        // background-color:red,
+        display: flex,
+        justify-content: flex-start,
+        flex-wrap:nowrap,
+    ));
+  }
+  .profilesContainerForEventRegisterationFlexStart{
+      @extend .profilesContainerForEventRegisteration;
+      height:100%;
+      @include resD((
+          justify-content:flex-start,
+        flex-wrap:wrap,
+
+      ));
+      @include resSm((
+        // background-color:pink,
+        display: flex,
+        justify-content: flex-start,
+        flex-wrap:nowrap,
+    ));
+  }
+ 
+
+.whoLearning {
+    box-sizing: border-box;
+    @include resD((
+        font-weight: bold,
+        text-align: center,
+        color: #333,
+        font-size: 30px,
+        margin-bottom: 0px,
+        box-shadow: 0 0 0 0 rgb(255, 255, 255),
+        background-color: transparent,
+        padding: unset
+    ));
+    @include resSm((
+        font-weight: bold,
+        color: #00ADE6,
+        font-size: 22px,
+        width: 100%,
+        padding: 14px 12px,
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
+        margin-bottom: 5px,
+        background-color: white,
+        position: sticky,
+        top: 0,
+        display: flex,
+        align-items: center,
+        justify-content: flex-start,
+    ));
+  }
+
+  .profileContainer {
+    // &:nth-last-child(1) {
+    //     @include resM((
+    //         width: fit-content !important,
+    //         flex: none !important,
+    //     ))
+    // }
+    @include resD((
+        margin-right: 10px,
+        margin-left: 10px,
+        cursor: pointer,
+        user-select: none,
+        min-width: 180px,
+        display: flex,
+        flex-direction: column,
+        align-items: center,
+        justify-content: center,
+        flex: unset,
+        width: unset
+    ));
+    @include resSm((
+        margin: 10px,
+        cursor: pointer,
+        user-select: none,
+        // min-width: 180px,
+        width: 50%,
+        display: flex,
+        flex-direction: column,
+        align-items: center,
+        justify-content: center,
+        flex: 1,
+    ));
+  }
+  .profileContainerForEventRegisteration{
+      @extend .profileContainer;
+      @include resD((
+          margin-top:0,
+          margin-bottom:0.5rem,
+         margin-left: 8px,
+         margin-right: 8px,
+          min-width: unset,
+          align-items: center,
+        justify-content:flex-start
+      ));
+      @include resSm((
+        //   background-color:rgb(199, 197, 197),
+          min-width:unset,
+          justify-content:flex-start,
+          align-items:flex-start,
+        //   margin-left:0,
+        //   margin-right:0px,
+        margin-left: 8px,
+         margin-right: 8px,
+      flex:0
+      ));
+      &:first-child{
+          @include resD((
+margin-left:0
+          ));
+          @include resSm((
+              margin-left:0.5rem
+          ))
+      }
+  }
+  .profileContainerForEventRegisterationMinWidth{
+      @extend .profileContainer;
+      @include resD((
+          margin-top:0,
+          margin-bottom:0.5rem,
+          align-items: center,
+          min-width:180px,
+            margin-left:8px,
+        margin-right:8px,
+        // justify-content:center,
+        justify-content:flex-start,
+        flex:1
+      ));
+      @include resSm((
+        // background-color:salmon,
+        min-width:unset,
+        justify-content:flex-start,
+        align-items:flex-start,
+        // margin-left:0,
+        // margin-right:0,
+        margin-left:4px,
+        margin-right:4px,
+        flex:0
+      ));
+      &:first-child{
+        @include resD((
+margin-left:0
+        ));
+        @include resSm((
+            margin-left:0.5rem
+        ))
+    }
+  }
+
+.accountName {
+    @include resD((
+        font-size: 24px,
+        color: #00ade6,
+        text-align: center,
+        margin-top: 5px,
+        font-weight: normal,
+        margin-bottom: 5px,
+        width: unset,
+    ));
+    @include resSm((
+        font-size: 12px,
+        font-weight: bold,
+        color: #00ADE6,
+        text-align: center,
+        margin-top: 15px,
+        margin-bottom: 5px,
+        width: 110px,
+        text-overflow: ellipsis,
+        overflow: hidden,
+        white-space: nowrap,
+    ));
+
+    &.eventAccountName{
+  @include resD((
+        font-size: 20px,
+        width: 150px !important,
+    ));
+    @include resSm((
+        font-size: 12px,
+        width: 70px,
+    ));
+}
+  }
+
+.backIcon {
+    @include resD((
+        display: none
+    ));
+    margin-right: 10px;
+}
+
+.backArrowNotVisible {
+  text-align: center;
+}
+
+.backArrowVisible {
+    @include resD((
+        padding-left: 50px
+    ));
+    @include resSm((
+        padding-left: 10px
+    ));
+}
+
+.desktopContainer {
+    width: fit-content
+}
+.profilesContainerForEventRegisteration{
+  height: max-content;
+}
+.profilesContainerForEventRegisteration>.profileContainerForEventRegisteration{
+ height: max-content;
+}

@@ -1,0 +1,168 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import 'src/scss/Inter.scss';
+
+.tab {
+  --animation-time: 200ms;
+  position: relative;
+}
+.tab.afterSlide::after {
+  transform: translateX(100%);
+}
+.tab.beforeSlide::after {
+  transform: translateX(-100%);
+}
+
+.tab.isActive ~ .tab::after {
+  transform: translateX(1%);
+}
+
+.tabsWrapper:not(:hover) .tab:not(.isActive)::after {
+  transform: translateY(100%);
+}
+
+.tabs:hover .tab.isActive::after,
+.tabsWrapper:hover .tabs:hover .tab.isActive::after {
+  transition-delay: 0ms, 0ms;
+}
+
+.tab.isActive::after {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.tabsHrLine{
+position: absolute;
+width: 100%;
+background: rgba(140, 97, 203, 0.08);
+@include resD1280((
+    height: 3px,
+    bottom: 0px,
+  ));
+}
+
+/* Just for styling */
+.tabsWrapper {
+  width: fit-content;
+  background: #FFFFFF;
+  border: 1px solid #DCDCDC;
+  @include resD1280((
+    border-radius: 400px,
+    margin: 16px 0,
+    padding: 4px,
+  ));
+}
+
+.tabsWrapperOther{
+  display: flex;
+  width: fit-content;
+  overflow: hidden;
+  flex-wrap: wrap;
+  .attendanceTab{
+    background: rgba(80, 79, 79, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #504F4F;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Inter';
+    span{
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 100%;
+      white-space: nowrap;
+      text-align: center;
+    }
+    @include resD1280((
+      padding: 8px 20px,
+      width: 150px,
+      // height: 40px,
+      font-size: 14px,
+      line-height: 24px,
+      margin-top: 24px,
+    ));
+  }
+  .attendanceTab.activeTab{
+      background: #8C61CB;
+      box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.15);
+      color: white;
+    }
+    .attendanceTab:first-of-type{
+      @include resD1280((
+        border-radius: 6px 0 0 6px,
+      ));
+    }
+    .attendanceTab:last-of-type{
+      @include resD1280((
+        border-radius: 0 6px 6px 0,
+      ));
+    }
+    .attendanceTab.singletab{
+      @include resD1280((
+        border-radius:6px,
+      ));
+    }
+}
+
+.tabs {
+  display: flex;
+  @include resD1280((
+    gap: 8px,
+  ));
+}
+
+.tab {
+  font-weight: 500;
+  color: #858585;
+  cursor: pointer;
+  @include resD1280((
+    gap: 8px,
+    font-size: 12px,
+    line-height: 16px,
+    border-radius: 400px,
+    padding: 8px 12px
+  ));
+}
+
+.tab1 {
+  background: #8C61CB;
+  color: #FFFFFF;
+}
+
+.tab2 {
+  background: #65DA7A;
+  color: #025C12;
+}
+
+.active-content .text {
+  display: none;
+}
+.active-content .text.active-text {
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .tabsWrapper {
+    overflow-x: scroll;
+  }
+  ::-webkit-scrollbar {
+    background: transparent;
+    display: none; /* Optional: just make scrollbar invisible */
+  }
+  /* Optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+}
+
+.reportLoTabs{
+  width: fit-content !important;
+  position: relative;
+  .hiddenLoTitle{
+    visibility: hidden;
+  }
+  .actualLoTitle{
+    position: absolute;
+  }
+}

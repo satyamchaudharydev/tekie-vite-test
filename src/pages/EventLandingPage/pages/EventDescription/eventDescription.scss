@@ -1,0 +1,64 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy-Bold'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gilroy-Heavy';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy-Heavy'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Heavy.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gilroy-Light';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy-Light'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gilroy-Medium';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy-Medium'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gilroy-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy-Regular'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Regular.woff') format('woff');
+}
+
+.post-event-download-container-main{
+  @include resD((
+    display: flex,
+    // justify-content: center,
+    align-items: center,
+    flex-direction: row,
+  ));
+  @include resSm((
+    display: flex,
+    // justify-content: center,
+    flex-direction: column-reverse,
+    // align-items: center
+  ));
+}
+.event-registerButton{
+  &.completedEvent{
+    & .viewDetails{
+      @include resD((
+        height: 14px,
+        width: 14px,
+        margin-left: 8px,
+      ));
+      @include resM((
+        height: 10px,
+        width: 10px,
+        margin-left: 5px,
+      ));
+    }
+  }
+}

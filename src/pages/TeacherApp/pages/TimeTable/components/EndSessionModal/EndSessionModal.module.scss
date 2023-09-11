@@ -1,0 +1,65 @@
+@import 'src/scss/Inter.scss';
+@import "src/scss/size.scss";
+
+
+.endSessionModalContainer{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    & h3{
+        margin: 0;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        color: #403F3F;
+        margin: 0;
+        @include resD1280((
+            font-size: 14px,
+            line-height: 24px,
+        ))
+    }
+    & p{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        text-align: center;
+        color: #858585;
+        margin: 0;
+        @include resD1280((
+            font-size: 12px,
+            line-height: 140%,
+            margin-top: 8px,
+        ))
+    }
+}
+
+.endSessionModalContainerSec{
+    box-sizing: border-box;
+    @include resD((
+        padding: 30px 35px,
+    ));
+    & h3, p{
+        margin: 0px,
+    }
+    & h3{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        color: #212121;
+        @include resD1280((
+            font-size: 17px,
+            line-height: 24px,
+        ))
+    }
+    & p{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        color: #616161;
+        @include resD1280((
+            font-size: 13px,
+            line-height: 21px,
+        ))
+    }
+}

@@ -1,0 +1,82 @@
+@import "src/scss/size.scss";
+@import "src/scss/lato.scss";
+@import "src/scss/Inter.scss";
+@import "src/scss/theme/colors.scss";
+@import "../../../../TeacherApp/variables/_variables.scss";
+@import '../../../../TeacherApp/mixins/_mixins.scss';
+
+
+.listContainer {
+    padding-inline-start: 0;
+    background: #FFFFFF;
+    overflow: auto;
+    margin-top: 2px;
+    @include resD((width:398px,
+            max-height:300px,
+            box-shadow: 0px 0px 20px rgba(56, 56, 56, 0.12),
+            border-radius: 6px 6px 6px 6px));
+}
+
+.listContainer::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7px;
+}
+
+.listContainer::-webkit-scrollbar-thumb {
+    background-color: #00ade671;
+}
+
+.option {
+    @include resD((padding:4px 12px));
+    @include flex(flex-start, center);
+    overflow: hidden;
+    background-color: white;
+    &:hover {
+        cursor: pointer;
+        background-color: #E6F7FD;
+        transition: 200ms ease;
+    }
+}
+.studentDetailsContainer{
+    @include resD((padding:16px 0,
+    gap:14px));
+    @include resM((padding:16px 0,
+    gap:14px));
+    @include flex(flex-start, center);
+    flex:2;
+    overflow: hidden;
+}
+
+.rollNoAndNameContainer {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include resD((
+        font-size: 20px,
+    ));
+    @include resM((
+        font-size: 14px,
+    ))
+}
+.studentName{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+.avatar {
+    border-radius: 50%;
+    @include resD((height:40px,
+            min-width:40px,
+        ));
+    @include resM((height:30px,
+    min-width:30px,
+));
+}
+.addStudentLoader {
+    @include resD((
+        height:60px,
+        width:60px
+    ));
+}
+

@@ -1,0 +1,439 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/Inter.scss';
+@import 'src/scss/theme.scss';
+
+
+.school-dashboard-header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @include resD((
+    padding-bottom: 18px,
+  ));
+  @include resM((
+    padding-bottom: 12px,
+  ));
+}
+
+.school-dashboard-students-borderContainer {
+  border: 1px solid #EEEEEE;
+  border-radius: 8px;
+  background: #fff;
+  @include resD((
+    margin: 28px 0px,
+  ));
+  @include resM((
+    margin: 22px 0px,
+  ));
+}
+
+.school-dashboard-schoolProfile-filters-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @include resD((
+    padding: 18px,
+  ));
+  @include resM((
+    padding: 12px,
+  ));
+}
+
+#school-dashboard-students-container {
+	height: 100%;
+	width: 100%;
+	letter-spacing: 0.4px;
+  box-sizing: border-box;
+     
+    @include resD((
+      padding: 28px 32px,
+    ));
+    @include resM((
+      padding: 16px,
+    ));
+	& a:hover {
+		color: #605959;
+	}
+}
+
+.school-dashboard-filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.school-dashboard-students-courseContainer,
+.school-dashboard-students-ind-courseContainer {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 20px 0px 0px;
+}
+
+.school-dashboard-students-profileContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  .school-dashboard-students-profilePic {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: #EEEEEE;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 12px;
+  }
+}
+
+.school-dashboard-students-courseIcon {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include resD((
+    width: 35px,
+    height: 35px,
+    margin-right: 12px,
+  ));
+  @include resM((
+    width: 28px,
+    height: 28px,
+    margin-right: 10px,
+  ));
+}
+
+.school-dashboard-students-action-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  & .school-dashboard-students-actionBtn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    background: transparent;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    padding: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background: #FFF;
+    }
+  
+    & > svg {
+      width: 100%;
+      height: 100%;
+      fill: #00ADE6;;
+    } 
+  }
+}
+
+.school-dashboard-students-duration-desc {
+  @include resD((
+    font-size: 16px,
+    padding-top: 8px,
+  ));
+  @include resM((
+    font-size: 14px,
+    padding-top: 4px,
+  ));
+}
+
+.school-dashboard-schoolProfile-row {
+  .school-dashboard-schoolProfile-divider {
+    border-top: 2px solid #EEEEEE;
+    width: 100%;
+    @include resD((
+      margin: 18px 0px,
+    ));
+    @include resM((
+      margin: 14px 0px,
+    ));
+  }
+  .school-dashboard-schoolProfile-personalProfile-column {
+    padding: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    @include resD((
+      flex: 1 1 40%,
+    ));
+    @include resM((
+      flex: 1 1 100%,
+    ));
+  }
+  .school-dashboard-schoolProfile-details-column {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    @include resD((
+      flex: 1 1 50%,
+    ));
+    @include resM((
+      flex: 1 1 100%,
+    ));
+  }
+
+  .school-dashboard-schoolProfile-profilePic {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    display: block;
+    border-radius: 100%;
+    background-color: #FFF;
+    border: 4px solid #EEEEEE;
+    @include resD((
+      width: 220px,
+      height: 220px,
+    ));
+    @include resM((
+      width: 100px,
+      height: 100px,
+    ));
+  }
+
+  .school-dashboard-profile-container {
+    @extend .Inter-regular;
+    @include resD((
+      padding-left: 32px
+    ));
+    @include resM((
+      padding-left: 20px
+    ));
+    flex: 1;
+    .school-dashboard-schoolProfile-name {
+      font-weight: 600;
+      color: #000000;
+      @include resD((
+        font-size: 32px,
+        padding: 6px 0px
+      ));
+      @include resM((
+        font-size: 20px,
+        padding: 6px 0px
+      ));
+    }
+    .school-dashboard-schoolProfile-coordinatorName {
+      font-weight: 600;
+      color: #000000;
+      @include resD((
+        font-size: 22px,
+        padding: 6px 0px
+      ));
+      @include resM((
+        font-size: 18px,
+        padding: 6px 0px
+      ));
+    }
+    .school-dashboard-schoolProfile-location {
+      font-weight: normal;
+      color: #424242;
+      @include resD((
+        font-size: 20px,
+        padding: 6px 0px 22px,
+      ));
+      @include resM((
+        font-size: 16px,
+        padding: 6px 0px 18px
+      ));
+    }
+  }
+
+.school-dashboard-heading-text {
+  padding: 12px 18px !important;
+}
+
+.school-dashboard-schoolCoordinator-flexContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.school-dashboard-schoolCoordinator-profilePic {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: block;
+  border-radius: 100%;
+  background-color: #FFF;
+  border: 4px solid #EEEEEE;
+  box-sizing: border-box;
+  @include resD((
+    width: 180px,
+    height: 180px,
+  ));
+  @include resM((
+    width: 80px,
+    height: 80px,
+  ));
+}
+
+.school-dashboard-schoolCoordinator-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.school-dashboard-schoolProfile-details-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 220px;
+  @include resD((
+    flex: 0 1 30%,
+    padding: 18px 32px 8px 0px,
+  ));
+  @include resM((
+    flex: 0 1 100%,
+    padding: 14px 12px 0px 0px,
+  ));
+}
+
+  .school-dashboard-schoolProfile-details-icon {
+    width: 18px;
+    height: 18px;
+    fill: #BDBDBD;
+    padding: 0px 12px 0px 0px;
+  }
+  
+  .school-dashboard-schoolProfile-details-title {
+    font-weight: normal;
+    color: #757575;
+    display: block;
+    @include resD((
+      font-size: 16px,
+      padding-bottom: 4px
+    ));
+    @include resM((
+      font-size: 14px,
+      padding-bottom: 2px
+    ));
+  }
+
+  .school-dashboard-schoolProfile-details-value {
+    font-weight: normal;
+    color: #424242;
+    display: block;
+    text-transform: capitalize;
+    @include resD((
+      font-size: 18px,
+    ));
+    @include resM((
+      font-size: 16px,
+    ));
+  }
+}
+
+.school-dashboard-input-btn {
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: Inter;
+  font-weight: 500;
+  position: relative;
+  font-size: 14px;
+  width: fit-content;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+  background-color: #FFF;
+  color: #00ADE6;
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+  @include resD((padding: 12px 18px, ));
+  @include resM((padding: 10px 14px, ));
+
+  & input {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 500px;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+
+    span {
+      cursor: pointer;
+    }
+  } 
+}
+
+
+.profileLogo-submit-container {
+  position: absolute;
+  border-radius: 100%;
+  z-index: 17;
+  box-sizing: border-box;
+  background: #00ade6;
+  bottom: 6px;
+  right: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include resD((
+    width: 38px,
+    height: 38px,
+    padding: 6px,
+  ));
+  @include resM((
+    width: 28px,
+    height: 28px,
+    padding: 4px,
+  ));
+
+  & .correctIcon {
+    background: url('../../../assets/checkmark-outline.png');
+    width: 100%;
+    display: block;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  & .loader {
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    border-top: 2px solid #00ADE6;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+  }
+
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,33 @@
+@import "src/scss/size.scss";
+
+.statusLabel {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: white;
+	box-sizing: border-box;
+
+	@include resD(
+		(
+			padding: 6px 12px 6px 8px,
+			gap: 8px,
+			border-radius: 8px,
+			font-weight: 700,
+			font-size: 16px,
+			line-height: 22px,
+			letter-spacing: -0.02em,
+		)
+	);
+
+	svg {
+		display: block;
+	}
+}
+
+.inReview {
+	background: #8c61cb;
+}
+
+.published {
+	background: #01aa93;
+}

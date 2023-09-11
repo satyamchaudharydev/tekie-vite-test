@@ -1,0 +1,395 @@
+@import 'src/scss/size.scss';
+
+.tag {
+  &:last-child {
+    margin: 2px auto 8px;
+  }
+  user-select: none;
+  cursor: pointer;
+}
+
+.tagHover {
+  &:hover {
+    // transition: 0.3s all ease-in-out;
+    color: rgba(34, 209, 233, 0.75) !important;
+    border: solid 1.25px rgba(34, 209, 233, 0.75) !important;
+  }
+}
+
+.textArea {
+  &:focus {
+    border: unset;
+    border-bottom: 1px solid #aaacae;
+    outline: none;
+  }
+  &::placeholder {
+    // font-style: italic;
+    color: rgba(#969696, 0.5);
+  }
+  @include resD((
+    width: 100%,
+    border: unset,
+    border-bottom: 1px solid #aaacae,
+    font-family: Nunito,
+    font-size: hs(22px),
+    line-height: 20.33px,
+    color: #504f4f,
+    margin-top: hs(15px),
+    height: 20px
+  ));
+  @include resSm((
+    width: 100%,
+    border: unset,
+    border-bottom: 1px solid #aaacae,
+    font-family: Nunito,
+    font-size: 15px,
+    line-height: 1.33,
+    color: #504f4f,
+    margin-top: hs(15px),
+    height: 50px
+  ));
+}
+
+.title {
+  font-family: 'Nunito';
+  @include resD((
+    font-size: hs(34px)
+  ));
+  // font-weight: bold;
+  color: #3286E6;
+  position: relative;
+  letter-spacing: hs(1px);
+  @include resSm((
+    font-size: 16px
+  ));
+}
+
+.titleLine1Margin {
+  @include resD((
+   top: hs(20px),
+   margin-top: hs(16px)
+  ));
+  @include resSm((
+   top: hs(30px),
+   margin-top: 40px
+  ));
+}
+
+.titleLine2Margin {
+  margin-top: hs(14px);
+}
+
+.titleLine3Margin {
+  @include resD((
+   top: hs(20px),
+   margin-top: hs(16px)
+  ));
+  @include resSm((
+   top: hs(30px),
+   margin-top: 20px
+  ));
+}
+
+.popup {
+  @include resD((
+    background-color: #ffffff,
+    width: 756px,
+    height: auto,
+    border-radius: 20px,
+    box-shadow: 0 10px 20px 0 rgba(34, 209, 233, 0.75),
+    display: flex,
+    flex-direction: column,
+    align-items: center,
+    padding-bottom: 50px,
+    box-sizing: border-box,
+    margin: 0 auto,
+    margin-top: 64px
+  ));
+  @include resSm((
+    width: 328px,
+    height: auto,
+    border-radius: 31px,
+    box-shadow: 0 10px 20px 0 rgba(34, 209, 233, 0.75),
+    display: flex,
+    background-color: #ffffff,
+    flex-direction: column,
+    align-items: center,
+    padding-bottom: 35px,
+    box-sizing: border-box,
+    margin: 0px auto,
+    margin-top: 84px
+  ));
+}
+
+.tagsContainer {
+  @include resD((
+    width: 680px,
+    display: flex,
+    flexDirection: row,
+    justifyContent: space-between,
+    flexWrap: wrap,
+  ));
+  @include resSm((
+    width: 300px,
+    display: flex,
+    flex-direction: row,
+    justify-content: space-between,
+    flex-wrap: wrap,
+  ));  
+  // padding: 10,
+  // margin: -10,
+}
+
+.tagText {
+  @include resD((
+    padding: hs(7px) hs(45px),
+    border-radius: 22px,
+    border: solid 1.25px #d4d4d4,
+    background-color: #ffffff,
+    display: flex,
+    justify-content: center,
+    letter-spacing: 0.3px,
+    align-items: center,
+    color: rgba(80, 80, 80, 0.5),
+    font-style: italic,
+    font-size: 24.2px,
+    // transition: '0.3s all ease-in-out',
+    cursor: 'pointer',
+    margin-bottom: 10px,
+  ));
+  @include resSm((
+    padding: hs(40px) hs(80px),
+    border-radius: 18px,
+    border: solid 1.25px #d4d4d4,
+    background-color: #ffffff,
+    display: flex,
+    justify-content: center,
+    letter-spacing: 0.1px,
+    align-items: center,
+    color: rgba(80, 80, 80, 0.5),
+    font-style: normal,
+    font-size: 15px,
+    // transition: '0.3s all ease-in-out',
+    cursor: 'pointer',
+    margin-bottom: 10px,
+  ));
+}
+
+.mentorAvatar {
+  @include resD((
+    width: 91px,
+    height: 91px,
+    margin-top: 30px,
+    position: relative,
+    top: 20px,
+    background-image: url(./mentorDrop.svg),
+    background-size: contain,
+    background-repeat: no-repeat,
+    background-position: center center
+  ));
+  @include resSm((
+    width: 66px,
+    height: 54px,
+    // margin-bottom: 30px,
+    position: relative,
+    top: 15px,
+    background-image: url(./mentorDrop.svg),
+    background-size: contain,
+    background-repeat: no-repeat,
+    background-position: center center
+  ));
+}
+
+.star {
+  @include resD((
+    width: 64px,
+    height: 60.8px,
+    margin-right: 12px,
+    cursor: pointer,
+    margin-top: 0px,
+    margin-bottom: 10px
+  ));
+  @include resSm((
+    width: 45px,
+    height: 45px,
+    margin-right: 4px,
+    cursor: pointer,
+    margin-top: 15px,
+    margin-bottom: 20px
+  ));
+}
+
+.createdBy {
+  @include resD((
+    font-family: Nunito,
+    font-size: 18px,
+    font-style: italic,
+    color: #aaacae,
+    margin-top: 6px
+  ));
+  @include resSm((
+    font-family: Nunito,
+    font-size: 11px,
+    // font-style: italic,
+    color: #B9B9B9,
+    margin-top: 4px,
+  )); 
+}
+
+.comment {
+  @include resD((
+    display: inline,
+    width: 100%,
+  ));
+  @include resSm((
+    display: none
+  )); 
+}
+
+.comments {
+  @include resD((
+    font-size: 28.8px,
+    font-weight: 400px,
+    color: #00ade6,
+    margin-top: 45px,
+    align-self: flex-start
+  ));
+  @include resSm((
+    font-size: 24 * 1.2,
+    font-weight: 400,
+    color: #3286E6,
+    margin-top: 45,
+    align-self: flex-start
+  ));
+}
+
+.commentOnMobile {
+  @include resD((
+    display: none,
+    width: 100%,
+  ));
+  @include resSm((
+    display: inline,
+    width: 100%,
+    margin-top: 40px
+  )); 
+}
+
+.firstPageButtons {
+  @include resD((
+    display: none,
+  ));
+  @include resSm((
+    display: flex,
+    justify-content: center,
+    gap: 10px 20px,
+    margin-top: 10px,
+    // position: absolute,
+    // top: 500px
+    ));
+    // box-shadow: 0px 0px 10px rgba(53, 201, 233, 0.3), inset 0px 0px 2px rgba(0, 255, 240, 0.3), 0px 0px 15px rgba(0, 255, 240, 0.8);
+}
+
+.secondPageButtons {
+  @include resD((
+    display: none,
+  ));
+  @include resSm((
+    display: flex,
+    justify-content: center,
+    gap: 10px 20px,
+    margin-top: 10px,
+    // position: absolute,
+    // top: 500px,
+    // left: 60px
+  ));
+}
+
+.btn1 {
+  display: none;
+  background-color: red;
+  font-size: 300px;
+}
+
+.name {
+  @include resD((
+    font-size: 30px,
+    font-style: normal,
+    line-height: 2.5px,
+    color: #09b6e6,
+    margin-top: 50px,
+    font-weight: bold,
+    margin-bottom: 10px,
+  ));
+  @include resSm((
+    font-size: 15px,
+    font-style: normal,
+    line-height: 1px,
+    color: #3286E6,
+    margin-top: 40px,
+    font-weight: bold,
+    margin-bottom: 10px,
+  ));
+}
+
+.footer {
+  @include resD((
+    box-sizing: border-box,
+    width: 100%,
+    padding: 0 hs(60px)
+  ));
+  @include resSm((
+    box-sizing: border-box,
+    width: 100%,
+    padding: 0 hs(120px)
+  ));
+}
+
+.button {
+    padding: hs(15px) hs(42px);
+    background-image: linear-gradient(180deg, #3390E7 0%, #63C4F0 77.08%, #88ECF7 100%);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    color: white;
+    font-size: 23;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 1.35px;
+    border-radius: 28px;
+    margin-top: 45px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tagActive {
+  background-image: linear-gradient(180deg, #86E9F8 0%, #5FBDF0 51.04%, #3EAAE8 100%);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  color: white;
+  border: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.43);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  height: 100%;
+  overflow: scroll;
+}
+
+.loader {
+  left: 7;
+}
+
+.backButton {
+  height: 0px;
+  width: 100px;
+}

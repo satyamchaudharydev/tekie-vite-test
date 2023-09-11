@@ -1,0 +1,1065 @@
+@import 'src/scss/size.scss';
+
+.cp-hero-container {
+  width: 100%;
+  background-image: url('../../assets/course-page-hero-bg.png');
+  box-sizing: border-box;
+  display: flex;
+  @include resD((
+    height: 537px,
+    min-height: 537px,
+    padding: 54px 245px 65px 202px,
+    flex-direction: row,
+    background-size: contain,
+    justify-content: unset,
+  ));
+  @include resMs((
+    // height: auto,
+    min-height: 600px,
+    padding: 0px,
+    flex-direction: column-reverse,
+    background-size: cover,
+    justify-content: flex-end,
+  ));
+}
+
+.cp-hero-line {
+  background: linear-gradient(270deg, #35E4E9 -8.62%, #00ADE6 109.2%);
+  @include resD((
+    width: 170px,
+    height: 3px,
+    margin-bottom: 20px,
+    margin-top: 22px,
+  ));
+  @include resMs((
+    width: 170px,
+    height: 3px,
+    margin-bottom: 40px,
+    margin-top: 20px,
+  ));
+}
+
+// .cp-tab-container {
+//   background-color: white;
+//   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+//   width: 100%;
+//   display: flex;
+//   flex-direction: row;
+//   overflow: scroll;
+//   align-items: center;
+//   box-sizing: border-box;
+//   @include resD((
+//     padding: 0 134px,
+//     height: 108px,
+//   ));
+//   @include resMs((
+//     padding: 20px 28px,
+//     height: 104px,
+//   ));
+// }
+
+.cp-title {
+  color: #fff;
+  line-height: 120%;
+  font-weight: bold;
+  @include resD((
+    font-size: 48px,
+    letter-spacing: -0.02em,
+  ));
+  @include resMs((
+    font-size: 36px,
+    letter-spacing: -0.02em,
+  ));
+}
+
+.cp-hero-title {
+  @extend .cp-title;
+  @include resD((
+    width: 460px,
+  ));
+  @include resMs((
+    width: auto,
+  ));
+}
+
+.cp-hero-text {
+  font-family: Nunito;
+  line-height: 140%;
+  color: #FFFFFF;
+  @include resD((
+    font-size: 20px,
+  ));
+  @include resMs((
+    font-size: 20px,
+  ));
+}
+
+.cp-hero-left-container {
+  box-sizing: border-box;
+  @include resMs((
+    padding: 33px
+  ));
+  @include resD((
+    padding: 0px
+  ))
+}
+
+.cp-hero-description {
+  @extend .cp-hero-text;
+  @include resD((
+    width: 755px
+  ));
+  @include resMs((
+    width: 100%
+  ));
+}
+
+.cp-tab-wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  flex-shrink: 0;
+  & > div {
+    display: flex;
+    flex-direction: row;
+    font-family: Nunito;
+    color: #282828;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    box-sizing: border-box;
+    @include resD((
+      font-size: 24px,
+      margin-right: 100px,
+      padding: 15px 25px,
+    ));
+    @include resMs((
+      font-size: 24px,
+      margin-right: 0px,
+      padding: 15px 34px,
+    ));
+    &.active {
+      color: #00ADE6;
+      // font-weight: bold;
+      text-shadow:0px 0px 1px #00ADE6;
+    }
+    &.active .cp-tab-icon {
+      opacity: 1;
+      top: 0px;
+    }
+    &:hover {
+      color: #00ADE6;
+    }
+  }
+  & > div:last-child {
+    @include resD((
+      margin-right: 0px,
+    ))
+  }
+}
+
+.cp-tab-active-bg {
+  position: absolute !important;
+  z-index: 1 !important;
+  transition: 0.3s all ease-in-out !important;
+  background: #E6F7FD;
+  @include resD((
+    border-radius: 30px,
+    height: 61px,
+  ));
+  @include resMs((
+    border-radius: 30px,
+    height: 64px,
+  ));
+}
+
+.cp-tab-icon {
+  transition: 0.3s all ease-in-out;
+  opacity: 0;
+  position: relative;
+  top: 5px;
+  @include resD((
+    width: 31px,
+    height: 31px,
+    margin-right: 20px,
+  ));
+  @include resMs((
+    width: 28px,
+    height: 28px,
+    margin-right: 20px,
+  ));
+}
+
+.cp-trailer-thumb {
+  background: url('../../assets/coursePageThumbnail.png');
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  @include resD((
+    width: 564px,
+    height: 317px,
+    margin-bottom: 25px,
+  ));
+  @include resMs((
+    width: 100%,
+    height: 302px,
+    margin-bottom: 25px,
+  ));
+}
+
+.cp-hero-right-container {
+  @include resD((
+    margin-left: 160px,
+  ));
+  @include resMs((
+    margin-left: 0px,
+  ));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.cp-tab-body-container {
+  box-sizing: border-box;
+  width: 100%;
+  @include resD((
+    // padding-top: 72px,
+    padding-left: 190px,
+    padding-right: unset,
+    padding-top: unset
+  ));
+  @include resMs((
+    // padding-top: 72px,
+    padding-left: 28px,
+    padding-right: 28px,
+    padding-top: 24px,
+    padding-bottom: 30px
+  ));
+}
+
+.cp-tab-body-container.no-padding {
+  @include resD((
+    padding-left: 190px,
+    padding-right: unset,
+    padding-top: unset
+  ));
+  @include resMs((
+    padding-left: 0px,
+    padding-right: 0px,
+    padding-top: 0px,
+    padding-bottom: 0px
+  ));
+}
+
+.cp-tab-body-container.no-padding-desktop {
+  @include resD((
+    padding-left: 0px,
+    padding-right: 0px,
+    padding-top: 0px,
+    padding-bottom: 0px
+  ));
+}
+
+.topics-heading {
+  @include resMs((
+    margin-left: 20px,
+    margin-top: 30px
+  ));
+  @include resD((
+    margin-left: 0px,
+    margin-right: 0px,
+    margin-top: 0px
+  ))
+}
+.cp-h2 {
+  line-height: 120%;
+  font-weight: bold;
+  color: #504F4F;
+  letter-spacing: -0.02em;
+  @include resD((
+    font-size: 40px,
+    margin-bottom: 20px,
+  ));
+  @include resMs((
+    font-size: 22px,
+    margin-bottom: 16px,
+  ));
+}
+
+.cp-h3 {
+  line-height: 120%;
+  font-weight: bold;
+  color: #504F4F;
+  letter-spacing: -0.02em;
+  @include resD((
+    font-size: 30px,
+    margin-bottom: 20px,
+  ));
+  @include resMs((
+    font-size: 22px,
+    margin-bottom: 16px,
+  ));
+}
+
+.cp-16 {
+  @include resD((
+    margin-top: 36px,
+    text-align: center,
+    width: auto,
+  ));
+  @include resMs((
+    margin-top: 16px,
+    text-align: left,
+  ))
+}
+
+.cp-2d-price-button-mobile {
+  .photon-button-3d-inner-container {
+    @include resM((
+      box-shadow: none,
+      background: linear-gradient(270deg, #35E4E9 -8.62%, #00ADE6 109.2%),
+    ));
+    span {
+      @include resM((
+        text-shadow: none,
+      ))
+    }
+  }
+}
+
+
+.cp-display-only-desktop {
+  @include resD((
+    display: block !important,
+  ));
+  @include resMs((
+    display: none !important,
+  ))
+}
+
+.cp-display-only-mobile {
+  @include resD((
+    display: none !important,
+  ));
+  @include resMs((
+    display: block !important,
+  ))
+}
+
+.cp-h4 {
+  color: #504F4F;
+  font-weight: bold;
+  @include resD((
+    font-size: 22px,
+    margin-top: 28px,
+  ));
+  @include resMs((
+    font-size: 22px,
+    margin-top: 28px,
+  ));
+}
+
+.cp-text {
+  @include resD((
+    font-size: 22px,
+    width: 1031px,
+  ));
+  @include resMs((
+    font-size: 22px,
+    width: auto,
+  ));
+  line-height: 140%;
+  font-weight: 400;
+  color: #504F4F;
+}
+
+.cp-text-narrow {
+  @include resD((
+    width: 708px, 
+  ));
+}
+
+.cp-li {
+  @extend .cp-text;
+  line-height: 200%;
+  @include resD((
+    padding-left: 26px,
+  ));
+  @include resMs((
+    padding-left: 26px,
+  ));
+}
+
+.cp-hr {
+  background: rgba($color: #000000, $alpha:0.2);
+  @include resD((
+    width: 857px,
+    height: 0.7px,
+    margin-bottom: 32px,
+    margin-top: 44px
+  ))
+
+}
+
+.cp-hero-pointer-container {
+  display: flex;
+  align-items: center;
+  .cp-hero-text {
+    @include resMs((
+      opacity: 0.7,
+    ));
+    @include resD((
+      opacity: 1,
+    ))
+  }
+  @include resD((
+    margin-top: 28px,
+  ));
+  @include resMs((
+    margin-top: 28px,
+  ));
+}
+ 
+.cp-hero-pointer-icon {
+  @include resD((
+    width: 25px,
+    height: 25px,
+    margin-right: 25px,
+  ));
+  @include resMs((
+    width: 25px,
+    height: 25px,
+    margin-right: 11px,
+  ));
+}
+.cp-hero-brush-icon {
+  @include resD((
+    width: 30px,
+    height: 30px,
+    margin-right: 19px,
+  ));
+  @include resMs((
+    width: 30px,
+    height: 30px,
+    margin-right: 9px,
+  ));
+}
+
+.cp-pricing {
+  box-sizing: border-box;
+  @include resD((
+    width: 560px,
+    height: 740px,
+    padding: 64px 52px,
+    box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.16),
+    margin-bottom: 0px,
+    border: 0px solid #DCDCDC,
+    border-radius: unset,
+    display: block
+  ));
+  @include resMs((
+    display: flex,
+    flex-direction: column,
+    width: 100%,
+    height: 566px,
+    padding: 32px,
+    border: 1px solid #DCDCDC,
+    border-radius: 0 0 12px 12px,
+    margin-bottom: 58px
+  ));
+  background: white;
+}
+
+.cp-pricing-sm {
+  box-sizing: border-box;
+  @include resD((
+    width: 490px,
+    height: 700px,
+    padding: 40px,
+    border: 1px solid #DCDCDC,
+    margin-top: 52px,
+    margin-bottom: 0px,
+    display: block,
+  ));
+  @include resMs((
+    display: flex,
+    flex-direction: column,
+    width: 100%,
+    height: 554px,
+    padding: 32px,
+    border: 1px solid #DCDCDC,
+    border-radius: 12px,
+    margin-bottom: 58px
+  ));
+}
+
+.cp-pricing-sm-left {
+  @extend .cp-pricing-sm;
+  @include resD((
+    margin-right: -1px,
+    border-radius: 16px 0px 0px 16px,
+  ));
+}
+.cp-pricing-sm-right {
+  @extend .cp-pricing-sm;
+  @include resD((
+    margin-left: -1px,
+    border-radius: 0px 16px 16px 0px,
+  ));
+}
+
+.cp-pricing-container {
+  display: flex;
+  width: 100%;
+  @include resD((
+    margin-top: 60px,
+    justify-content: center,
+    flex-direction: row,
+    margin-bottom: 30px,
+  ));
+  @include resMs((
+    margin-top: 18px,
+    justify-content: center,
+    flex-direction: column,
+    margin-bottom: 0px,
+  ))
+}
+
+.cp-pricing-card-top-row {
+  @include resM((
+    display: flex,
+    flex-direction: row,
+    width: 100%,
+    justify-content: space-between,
+  ));
+  @include resD((
+    display: block,
+  ));
+}
+.cp-pricing-wrapper {
+  @include resMs((
+    order: -1,
+  ));
+  @include resD((
+    order: unset,
+  ));
+}
+.cp-pricing-best {
+  position: relative;
+  @include resD((
+    width: 560px,
+    height: 32px,
+    border-radius: 16px 16px 0px 0px,
+    font-size: 20px,
+  ));
+  @include resMs((
+    width: 100%,
+    height: 28px,
+    border-radius: 12px 12px 0px 0px,
+    font-size: 16px,
+  ));
+  span {
+    position: relative;
+    @include resD((
+      top: 3px,
+    ));
+    @include resMs((
+      top: 3px,
+    ));
+  }
+  text-transform: uppercase;
+  background: #01AA93;
+  text-align: center;
+  color: #fff;
+}
+
+.cp-pricing-title {
+  color: #00ADE6;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  @include resD((
+    font-size: 22px,
+  ));
+  @include resMs((
+    font-size: 22px,
+  ))
+}
+
+.cp-pricing-currency {
+  @include resD((
+    font-size: 22px,
+    margin-right: 4px
+  ));
+  font-weight: bold;
+  background: linear-gradient(90deg, #00ADE6, #35E4E9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cp-pricing-price {
+  position: relative;
+  @include resD((
+    top: -5.5px,
+    font-size: 64px,
+  ));
+  @include resMs((
+    top: -5.5px,
+    font-size: 55px,
+  ));
+  background: linear-gradient(90deg, #00ADE6, #35E4E9);
+  -webkit-background-clip: text;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  line-height: 120%;
+  -webkit-text-fill-color: transparent;
+}
+
+.cp-pricing-per-session {
+  position: relative;
+  align-self: flex-end;
+  color: #A8A7A7;
+  letter-spacing: 0.03em;
+  line-height: 120%;
+  @include resD((
+    font-weight: bold,
+    font-size: 14px,
+    top: -20px,
+    margin-left: 6px,
+    flex-basis: unset,
+  ));
+  @include resMs((
+    display: block,
+    font-weight: normal,
+    font-size: 17px,
+    top: -10px,
+    margin-left: 16px,
+    flex-basis: 100%,
+  ))
+}
+
+.cp-pricing-text {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  @include resD((
+    margin-top: 24px,
+    margin-bottom: 32px,
+  ));
+  @include resMs((
+    width: 113px
+  ));
+}
+
+.cp-margin-top-32 {
+  @include resD((
+    margin-top: 32px,
+  ))
+}
+
+.cp-pricing-line {
+  width: 100%;
+  background-color: #dcdcdc;
+  min-height: 1px;
+  @include resD((
+    margin-top: 40px,
+    margin-bottom: 44px,
+  ));
+  @include resMs((
+    margin-top: 21px,
+    margin-bottom: 44px,
+  ))
+}
+
+.cp-pricing-pointers-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include resD((
+    margin-top: 32px,
+    margin-bottom: unset,
+  ));
+  @include resMs((
+    margin-top: unset,
+    margin-bottom: 32px,
+  ));
+}
+
+.cp-pricing-check {
+  background-image: url('./checkmark-circle.svg');
+  background-size: cover;
+  @include resD((
+    width: 32px,
+    height: 32px,
+    margin-right: 28px,
+  ));
+  @include resMs((
+    width: 24px,
+    height: 24px,
+    margin-right: 28px,
+  ))
+}
+
+.cp-pricing-pointer-text {
+  font-family: Nunito;
+  color: #504F4F;
+  font-weight: 600;
+  @include resD((
+    font-size: 20px,
+  ));
+  @include resMs((
+    font-size: 20px,
+  ))
+}
+
+.cp-2d-price-button {
+  box-shadow: none;
+  background: linear-gradient(90deg, #00ADE6, #35E4E9);
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+    width: 180px,
+    height: 66px,
+    padding: 4px,
+  ));
+  @include resMs((
+    width: 205px,
+    height: 64px,
+    padding: 4px,
+  ));
+  &:hover .photon-button-3d-inner-container {
+    box-shadow: 0px 0px 10px rgba(53, 201, 233, 0.3), inset 0px 0px 2px rgba(0, 255, 240, 0.3), 0px 0px 15px rgba(0, 255, 240, 0.8);
+  }
+  &:active .photon-button-3d-inner-container {
+    @include resD((
+      transform: none,
+    ));
+  }
+  .photon-button-3d-inner-container {
+    text-shadow: none;
+    box-shadow: none;
+    text-align: center;
+    background: white;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    color: white; 
+    span {
+      background: linear-gradient(90deg, #00ADE6, #35E4E9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      @include resD((
+        left: 5px
+      ))
+    }
+  }
+}
+
+.cp-hero-glass-wrapper {
+  @include resD((
+    width: 565px,
+    height: 312px,
+    padding: 24px 50px,
+    margin-top: 62px,
+    margin-bottom: unset
+  ));
+  @include resMs((
+    width: 565px * 0.85,
+    height: 312px * 0.9,
+    padding: 25px,
+    margin-top: 30px,
+    margin-bottom: 30px
+  ));
+  box-sizing: border-box;
+  position: relative;
+}
+
+.cp-hero-glass-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include resD((
+    width: 565px,
+    height: 312px,
+    border-radius: 32px,
+    border: 3px solid rgba(#fff, 0.4),
+  ));
+  @include resMs((
+    width: 565px * 0.85,
+    height: 312px * 0.9,
+    border-radius: 32px,
+    border: 3px solid rgba(#fff, 0.4),
+  ));
+  opacity: 0.3;
+  backdrop-filter: blur(150px);
+  mix-blend-mode: normal;
+  background: radial-gradient(100% 275.21% at 0% 4.41%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+
+.cp-hero-glass-title {
+  color: #FFFFFF;
+  font-family: Nunito;
+  font-weight: bold;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  @include resD((
+    font-size: 30px,
+  ));
+}
+
+.cp-hero-session-container {
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include resD((
+    border-radius: 24px,
+    width: 485px,
+    height: 120px,
+    margin-top: 18px,
+    margin-bottom: 24px,
+    padding: 12px 16px,
+  ));
+  @include resMs((
+    border-radius: 15px,
+    width: auto,
+    height: 120px * 0.9,
+    margin-top: 18px * 0.9,
+    margin-bottom: 24px * 0.9,
+    padding: 12px 20px,
+  ));
+  box-sizing: border-box;
+}
+
+.cp-course-button {
+  @include resMs((
+    align-self: center,
+  ));
+  @include resD((
+    align-self: flex-start,
+  ))
+}
+
+.cp-hero-session-thumb {
+  @include resD((
+    width: 100px,
+    height: 100px,
+    margin-right: 24px,
+  ));
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.cp-hero-session-title {
+  color: #000000;
+  font-family: Nunito;
+  font-weight: bold;
+  line-height: 120%;
+  @include resD((
+    font-size: 20px,
+  ))
+}
+
+.cp-details-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include resD((
+    margin-top: 17px,
+  ));
+  @include resMs((
+    margin-top: 18px
+  ))
+}
+
+.cp-current-component-icon-container {
+  @include resD((
+    width: 24px,
+    height: 24px,
+  ));
+  @include resMs((
+    width: 25px,
+    height: 25px,
+  ))
+}
+
+.cp-md-text {
+  font-family: Nunito;
+  font-weight: 700;
+  color: #504F4F;
+  @include resD((
+    font-size: 16px,
+    margin-left: 9px,
+    margin-right: 25px
+  ));
+  @include resMs((
+    font-size: 15px,
+    margin-left: 10px,
+    margin-right: 15px
+  ))
+}
+
+.cp-loader-card {
+  width: 100%;
+  opacity: 0.4;
+  color: #9aa3a7;
+  padding: 10px;
+  box-sizing: border-box;
+  @include resMs((
+    min-height: 600px,
+  ));
+  @include resD((
+    min-height: 537px,
+  ));
+  .cp-loader-1 {
+    @include resD((
+      y: 15px,
+      height: 40px,
+      width: 342px
+    ));
+    @include resSm((
+      y: 15px,
+      height: 200px,
+      width: 100%
+    ))
+  }
+  .cp-loader-2 {
+    @include resD((
+      y: 70px,
+      height: 40px,
+      width: 400px
+    ));
+    @include resSm((
+      y: 230px,
+      height: 20px,
+      width: 250px
+    ))
+  }
+  .cp-loader-3 {
+    @include resD((
+      y: 160px,
+      height: 20px,
+      width: 600px
+    ));
+    @include resSm((
+      y: 260px,
+      height: 20px,
+      width: 240px
+    ));
+  }
+  .cp-loader-4 {
+    @include resD((
+      y: 185px,
+      height: 20px,
+      width: 590px
+    ));
+    @include resSm((
+      y: 310px,
+      height: 15px,
+      width: 150px
+    ))
+  }
+  .cp-loader-5 {
+    @include resD((
+      y: 260px,
+      height: 30px,
+      width: 30px
+    ));
+    @include resSm((
+      y: 335px,
+      height: 15px,
+      width: 170px
+    ))
+  }
+  .cp-loader-6 {
+    @include resD((
+      y: 310px,
+      height: 30px,
+      width: 30px
+    ));
+    @include resSm((
+      y: 15px,
+      height: 20px,
+      width: 150px
+    ))
+  }
+  .cp-loader-7 {
+    @include resD((
+      y: 360px,
+      height: 30px,
+      width: 30px,
+      display: block,
+    ));
+    @include resSm((
+      display: none,
+    ))
+  }
+  .cp-loader-8 {
+    @include resD((
+      y: 265px,
+      x: 60px,
+      height: 20px,
+      width: 200px,
+      display: block,
+    ));
+    @include resSm((
+      display: none,
+    ))
+  }
+  .cp-loader-9 {
+    @include resD((
+      y: 315px,
+      x: 60px,
+      height: 20px,
+      width: 200px,
+      display: block,
+    ));
+    @include resSm((
+      display: none,
+    ))
+  }
+  .cp-loader-10 {
+    @include resD((
+      y: 365px,
+      x: 60px,
+      height: 20px,
+      width: 200px,
+      display: block,
+    ));
+    @include resSm((
+      display: none,
+    ))
+  }
+  .cp-loader-11 {
+    @include resD((
+      y: 50px,
+      x: 1000px,
+      height: 250px,
+      width: 500px,
+      display: block,
+    ));
+    @include resSm((
+      display: none,
+    ))
+  }
+}
+
+.cp-trailer-play-button {
+  @include resD((
+    width: 101px,
+    height: 101px,
+  ));
+  @include resMs((
+    width: 95px,
+    height: 95px,
+  ));
+}

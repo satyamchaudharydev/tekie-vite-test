@@ -1,0 +1,1045 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+
+$logo-width:130px;
+
+.quizReportContainer {
+  @include resD((
+    padding:12px 48px
+  ));
+  @include resM((
+    padding:16px
+  ))
+}
+.titleContainer {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  @include resD((
+    margin-bottom:0,
+    border-radius:30px
+  ));
+  @include resM((
+    margin-bottom:21px,
+    border-radius:25px
+  ))
+}
+
+.topicThumbnail {
+  width: hs($logo-width);
+  height:100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include resD((
+    flex-basis:$logo-width,
+    border-radius:30px
+  ));
+  @include resM((
+    flex-basis: calc(1.2 * #{$logo-width}),
+    border-radius:20px
+  ))
+}
+
+.qrTopicContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(255, 255, 255, 0.5);
+  background: white;
+  border: 1px solid #FFF;
+  position: relative;
+  min-height: 100px;
+  height: fit-content;
+  @include resD((
+    margin: hs(40px) hs(50px) hs(20px),
+    padding: 12px 20px,
+    justify-content:flex-start,
+    border-radius: 30px
+  ));
+  @include resM((
+    border-radius:20px,
+    padding: 0.5rem
+  ));
+  @include resSm((
+  justify-content: center,
+  
+  ))
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .qrTopicContainer, .resultContainer, .statsContainer, .goalWiseContainer{
+    @include resD((
+      background: radial-gradient(100% 275.21% at 0% 4.41%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 100%),
+      mix-blend-mode: normal,
+      backdrop-filter: blur(150px),
+      -webkit-backdrop-filter: blur(150px)
+    ));
+   @include resM((
+     background:white
+   ))
+  }
+    
+}
+
+.titleSm {
+  font-family: Nunito;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #282828;
+  @include resD((
+    font-size: 40px,
+    text-align: center
+  ));
+  @include resM((
+    font-size: 19px,
+    text-align:left
+  ));
+}
+
+.goalWiseText {
+  @extend .titleSm;
+  @include resD((
+    font-size: 40px,
+    text-align: center
+  ));
+  @include resM((
+    font-size: 30px,
+    text-align:center
+  ));
+}
+
+.reportContainer {
+  position: relative;
+  min-height: 150px;
+  @include resD((
+    display: flex,
+    flex-direction: row,
+    align-items: flex-start,
+    margin: hs(10px) hs(50px),
+    padding: 12px 0px,
+  ));
+  @include resM((
+    display:block
+  ));
+}
+
+.resultContainer {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #FFF;
+  position: relative;
+  height: auto;
+  @include resD((
+    border-radius: 30px,
+    margin-right: hs(20px),
+    padding: 20px 32px,
+    margin-bottom:0
+  ));
+  @include resM((
+
+    border-radius:25px,
+    margin-bottom:34px,
+    padding:26px 40px
+  ));
+}
+
+.statsContainer {
+ 
+  flex: 1 1 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border: 1px solid #FFF;
+  height: auto;
+  position: relative;
+  @include resD((
+    border-radius: 30px,
+    margin-right: hs(20px),
+    padding: 38px 30px,
+  align-items: flex-start
+
+  ));
+  @include resM((
+    border-radius: 25px,
+    align-items:center,
+    margin-bottom:1rem,
+    padding: 16px 0px 24px,
+  ));
+}
+
+.masteryTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: hs(41px);
+  margin-bottom: hs(41px);
+}
+
+.masteryText {
+  font-weight: bold;
+  text-align: center;
+  color: #282828;
+  @include resD((
+    font-size: 24px,
+    margin: 24px 0px
+  ));
+  @include resM((
+    font-size: 24px,
+  ));
+  @include resSm((
+    font-size:16px
+  ))
+}
+
+.congratulationText {
+  font-family: Nunito;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  letter-spacing: -0.02em;
+  color: #282828;
+  display: flex;
+  flex-direction: row;
+  @include resD((
+    font-size: 28px,
+    margin:0
+  ));
+  @include resM((
+    font-size: 24px,
+    margin: 15px 0
+  ));
+
+  & > span {
+    background-image: url('../../../assets/emojis/starEyesSmiley.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    width: 28px;
+    height: 28px;
+    margin-left: 12px;
+  } 
+}
+
+.masteryLabel {
+  font-weight: 800;
+  color: white;
+  margin: 0 hs(18.8px);
+  text-transform: uppercase;
+  background: #8C61CB;
+  border-radius: 40px;
+  @include resD((
+  font-size: hs(22px),
+  padding: hs(15px) hs(48px),
+  margin: 0 hs(18.8px)
+  ));
+  @include resM((
+    font-size:17px,
+  padding: 10px 40px,
+  margin: 15px hs(18.8px)
+  ))
+}
+
+.summaryText {
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #282828;
+  @include resD((
+    font-size: 30px,
+    margin-bottom: 28px,
+    margin-left:0
+
+  ));
+  @include resM((
+    font-size: 30px,
+    margin-left:0
+    
+  ));
+  @include resSm((
+    margin-bottom:24px,
+    font-size: 26px,
+    align-self:flex-start,
+    margin-left:1.6rem
+  ))
+}
+
+.goalWiseContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #FFF;
+  position: relative;
+  min-height: 100px;
+  height: fit-content;
+  @include resD((
+    margin: hs(40px) hs(50px) hs(100px),
+    padding: 40px 68px,
+    box-shadow:none,
+    border-radius: 30px
+  ));
+  @include resM((
+    margin: 0,
+    margin-bottom:4rem,
+    padding:1rem,
+    border-radius: 25px
+  ));
+
+  & > .titleSm {
+    margin-bottom: hs(48px);
+  }
+
+  & .LoContainer {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    @include resD((
+      flex-wrap:wrap
+    ));
+    @include resM((
+      max-width: 100%,
+      overflow-x: scroll
+    ))
+  }
+}
+
+.nextButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding-right: 0;
+}
+
+.autoSubmitQuizBox {
+  background-color: rgba(255, 255, 255, 0);
+  height: hs(90px);
+  width: hs(360px);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: hs(28px);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  margin-left: hs(-350px);
+  margin-top: hs(420px);
+  position: relative;
+  top: hs(-10px);
+}
+
+.qrLoaderCard {
+  width: 100%;
+  height: 100%;
+  .qrLoaderCircle {
+    @include resD((
+      y: 25px,
+      height: 120px,
+      width: 120px,
+      rx: 50%,
+    ));
+    @include resSm((
+      y: 25px,
+      height: 100px,
+      width: 100px,
+      rx: 50%,
+    ))
+  }
+  .qrLoader1 {
+    @include resD((
+      y: 50px,
+      x: 154px,
+      height: 70px,
+      width: 450px,
+      rx: 10px,
+    ));
+    @include resSm((
+      y: 40px,
+      x: 120px,
+      height: 70px,
+      width: 200px,
+      rx: 10px,
+    ))
+  }
+  .qrLoaderSq {
+    @include resD((
+      y: 0px,
+      x: 0px,
+      height: 250px,
+      width: 100%,
+      rx: 10px,
+    ));
+    @include resSm((
+      y: 40px,
+      x: 40px,
+      height: 70px,
+      width: 200px,
+      rx: 10px,
+    ))
+  }
+  .qrLoader2 {
+    @include resD((
+      y: 265px,
+      height: 25px,
+      width: 350px,
+      rx: 10px,
+    ));
+    @include resSm((
+      y: 160px,
+      height: 20px,
+      width: 80px
+    ))
+  }
+  .qrLoader3 {
+    @include resD((
+      y: 300px,
+      height: 25px,
+      width: 280px,
+      rx: 10px,
+    ));
+    @include resSm((
+      y: 170px,
+      height: 20px,
+      width: 80px
+    ))
+  }
+  .qrLoaderBox1 {
+    @include resD((
+      y: 2px,
+      x: 250px,
+      height: 300px,
+      width: 250px,
+      rx: 10px,
+    ));
+    @include resSm((
+      y: 40px,
+      x: 120px,
+      height: 70px,
+      width: 200px,
+      rx: 10px,
+    ))
+  }
+  .qrLoaderBox2 {
+    @include resD((
+      y: 2px,
+      x: 550px,
+      height: 300px,
+      width: 250px,
+      rx: 10px,
+    ));
+    @include resSm((
+      y: 40px,
+      x: 120px,
+      height: 70px,
+      width: 200px,
+      rx: 10px,
+    ))
+  }
+  .qrLoaderBox3 {
+    @include resD((
+      y: 2px,
+      x: 850px,
+      height: 300px,
+      width: 250px,
+      rx: 10px,
+    ));
+    @include resSm((
+      y: 40px,
+      x: 120px,
+      height: 70px,
+      width: 200px,
+      rx: 10px,
+    ))
+  }
+}
+
+.loaderContainer {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.loaderModal {
+  padding: 32px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #00ADE6;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Nunito;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #00ADE6;
+  @include resD((
+    z-index: 999,
+    width: 500px,
+    height: 380px,
+    font-size: 24px,
+  ));
+  @include resM((
+    width: 250px,
+    height: 240px,
+    font-size: 20px,
+    z-index: 99,
+  ));
+
+  > .loadingAnimation {
+    background-image: url(../../../assets/LoadingAnimation.gif);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .loadingText{
+    @include resD((
+      text-align:left
+    ));
+    @include resM((
+      text-align:center
+    ))
+  }
+
+  /* loading dots */
+
+  .loadingText::after {
+    content: '.';
+    animation: dots 1s steps(5, end) infinite;}
+
+  @keyframes dots {
+    0%, 20% {
+      color: rgba(0,0,0,0);
+      text-shadow:
+        .25em 0 0 rgba(0,0,0,0),
+        .5em 0 0 rgba(0,0,0,0);}
+    40% {
+      color: white;
+      text-shadow:
+        .25em 0 0 rgba(0,0,0,0),
+        .5em 0 0 rgba(0,0,0,0);}
+    60% {
+      text-shadow:
+        .25em 0 0 white,
+        .5em 0 0 rgba(0,0,0,0);}
+    80%, 100% {
+      text-shadow:
+        .25em 0 0 white,
+        .5em 0 0 white;}}
+}
+
+
+.homeworkReportContainer {
+  background: #F7F7F7;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include resD((
+    padding: 40px 0 80px 0
+  ));
+  @include resM((
+    padding: 40px 0 80px 0
+  ))
+}
+
+.homeReportstatsCotainer {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  display: flex;
+  justify-content: space-between;
+  @include resD((
+    width: 60%,
+    margin-bottom: 28px
+  ));
+  @include resM((
+    width: 60%,
+    margin-bottom: 28px
+  ))
+}
+
+.statsLeftContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include resD((
+    padding: 30px 30px 33px 30px
+  ));
+  @include resM((
+    padding: 30px 30px 33px 30px
+  ))
+}
+
+.topicThumbnailContainer {
+  display: flex;
+  @include resD((
+    height: 78px
+  ));
+  @include resM((
+    height: 78px
+  ))
+}
+
+.topicThumbnailSmall {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include resD((
+    height: 70px,
+    width: 65px,
+    margin-right: 23px
+  ));
+  @include resM((
+    height: 70px,
+    width: 65px,
+    margin-right: 23px
+  ))
+}
+
+.topicContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    color: #929292;
+    margin: 0;
+    @include resD((
+      font-size: 14px,
+      line-height: 120%,
+      letter-spacing: 0.02em,
+      margin-bottom: 6px
+    ));
+    @include resM((
+      font-size: 14px,
+      line-height: 120%,
+      letter-spacing: 0.02em,
+      margin-bottom: 6px
+    ))
+  }
+  h1 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    color: #282828;
+    margin: 0;
+    @include resD((
+      font-size: 30px,
+      line-height: 120%,
+      letter-spacing: -0.02em
+    ));
+    @include resM((
+      font-size: 30px,
+      line-height: 120%,
+      letter-spacing: -0.02em
+    ))
+  }
+}
+
+.questionTypeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.questionTypeLeft {
+  display: flex;
+  align-items: center;
+  h4 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    @include resD((
+      font-size: 16px,
+      line-height: 120%,
+      margin: 0 12px 0 8px
+    ));
+    @include resM((
+      font-size: 16px,
+      line-height: 120%,
+      margin: 0 12px 0 8px
+    ))
+  }
+  p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    color: #5E5E5E;
+    margin: 0;
+    b {
+      font-weight: 700; 
+    }
+    @include resD((
+      font-size: 14px,
+      line-height: 120%
+    ));
+    @include resM((
+      font-size: 14px,
+      line-height: 120%
+    ))
+  }
+  @include resD((
+    margin-top: 20px
+  ));
+  @include resM((
+    margin-top: 20px
+  ))
+}
+
+.statsRightContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  @include resD((
+    padding: 30px
+  ));
+  @include resM((
+    padding: 30px
+  ))
+}
+
+.statsRightDoughnutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    color: #A8A7A7;
+    margin: 0;
+    @include resD((
+      font-size: 16px,
+      line-height: 120%,
+      margin-bottom: 8.5px,
+    ));
+    @include resM((
+      font-size: 16px,
+      line-height: 120%,
+      margin-bottom: 8.5px,
+    ))
+  }
+}
+
+.doughnutContainer {
+  position: relative;
+  .doughnutInnerTextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h4 {
+      font-family: 'Nunito';
+      font-style: normal;
+      font-weight: 700;
+      margin: 0;
+      @include resD((
+        font-size: 22px,
+        line-height: 140%
+      ));
+      @include resM((
+        font-size: 22px,
+        line-height: 140%
+      ))
+    }
+    p {
+      font-family: 'Nunito';
+      font-style: normal;
+      font-weight: 600;
+      color: #A8A7A7;
+      white-space: nowrap;
+      margin: 0;
+      @include resD((
+        font-size: 16px,
+        line-height: 140%
+      ));
+      @include resM((
+        font-size: 16px,
+        line-height: 140%
+      ))
+    }
+  }
+}
+
+.doughnutSvg {
+  @include resD((
+      width: 131.5px !important,
+      height: 131.5px !important
+    ));
+    @include resM((
+      width: 131.5px !important,
+      height: 131.5px !important
+    ))
+}
+
+.homeworkReportFooterContainer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  @include resD((
+    height: 83px,
+    padding: 14px 28px 14px 0
+  ));
+  @include resM((
+    height: 83px,
+    padding: 14px 28px 14px 0
+  )) 
+}
+
+.summaryContainers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.summaryContainer {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  @include resD((
+    width: 60%,
+    margin-bottom: 28px
+  ));
+  @include resM((
+    width: 60%,
+    margin-bottom: 28px
+  ))
+}
+
+.summaryheadingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  h3 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #282828;
+    margin: 0;
+    @include resD((
+      font-size: 24px,
+      line-height: 120%
+    ));
+    @include resM((
+      font-size: 24px,
+      line-height: 120%
+    ))
+  }
+  h4 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    color: #504F4F;
+    margin: 0;
+    span {
+      font-weight: 700;
+      @include resD((
+        font-size: 24px,
+        line-height: 120%
+      ));
+      @include resM((
+        font-size: 24px,
+        line-height: 120%
+      ))
+    }
+    @include resD((
+      font-size: 20px,
+      line-height: 120%
+    ));
+    @include resM((
+      font-size: 20px,
+      line-height: 120%
+    ))
+  }
+  @include resD((
+    padding: 40px 40px 21px 40px
+  ));
+  @include resM((
+    padding: 40px 40px 21px 40px
+  ))
+}
+
+.tubeContainer {
+  display: flex;
+  flex-direction: column;
+  @include resD((
+    padding: 4px 40px 40px 40px
+  ));
+  @include resM((
+    padding: 4px 40px 40px 40px
+  ))
+}
+
+.masteryLabelNew {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #8C61CB;
+  box-shadow: 0px 25px 33.3333px rgba(140, 97, 203, 0.1);
+  border-radius: 33.3333px;
+  @include resD((
+    font-size: 16px,
+    line-height: 20px,
+    padding: 12.5px 47px
+  ));
+  @include resM((
+    font-size: 18px,
+    line-height: 25px,
+    padding: 12.5px 47px
+  ))
+}
+
+.zeroAnsweredContainerBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F7F7F7;
+  width: 100%;
+  min-height: 100%;
+}
+
+.zeroAnsweredContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include resD((
+    width: 60%,
+  ));
+  @include resM((
+    width: 60%,
+  ))
+}
+
+.zeroAnsweredThumbnail {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include resD((
+    width: 140.74px,
+    height: 150px,
+    margin-bottom: 25px
+  ));
+  @include resM((
+    width: 140.74px,
+    height: 150px,
+    margin-bottom: 25px
+  ))
+}
+
+.zeroAnsweredHeadContainer {
+  text-align: center;
+  h2 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    color: #282828;
+    margin: 0;
+    span {
+      color: #D34B57;
+    }
+    @include resD((
+      font-size: 40px,
+      line-height: 100%,
+      letter-spacing: -0.02em,
+      margin-bottom: 16px
+    ));
+    @include resM((
+      font-size: 40px,
+      line-height: 100%,
+      letter-spacing: -0.02em,
+      margin-bottom: 16px
+    ))
+  }
+  p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    color: #484848;
+    margin: 0;
+    @include resD((
+      font-size: 20px,
+      line-height: 100%
+    ));
+    @include resM((
+      font-size: 20px,
+      line-height: 100%
+    ))
+  }
+  @include resD((
+    margin-bottom: 21px
+  ));
+  @include resM((
+    margin-bottom: 21px
+  ))
+}
+
+.zeroAnsweredButtonsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    color: #A8A7A7;
+    @include resD((
+      margin: 0 12px,
+      font-size: 20px,
+      line-height: 100%
+    ));
+    @include resM((
+      margin: 0 12px,
+      font-size: 20px,
+      line-height: 100%
+    ))
+  }
+  @include resD((
+    margin-top: 36px
+  ));
+  @include resM((
+    margin-top: 36px
+  ))
+}

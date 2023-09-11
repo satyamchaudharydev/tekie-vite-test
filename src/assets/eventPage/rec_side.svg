@@ -1,0 +1,16 @@
+<svg width="96" height="915" viewBox="0 0 96 915" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.65">
+<g opacity="0.45">
+<path d="M5 0V169.5" stroke="white" stroke-width="10"/>
+<path d="M5 233.5V403" stroke="white" stroke-width="10"/>
+<path d="M5 467V636.5" stroke="white" stroke-width="10"/>
+<path d="M5 700.5V870" stroke="white" stroke-width="10"/>
+</g>
+<g opacity="0.45">
+<path d="M91 45V214.5" stroke="white" stroke-width="10"/>
+<path d="M91 278.5V448" stroke="white" stroke-width="10"/>
+<path d="M91 512V681.5" stroke="white" stroke-width="10"/>
+<path d="M91 745.5V915" stroke="white" stroke-width="10"/>
+</g>
+</g>
+</svg>

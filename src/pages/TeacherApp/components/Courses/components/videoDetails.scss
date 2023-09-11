@@ -1,0 +1,20 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.videos_container {
+    @include resD(
+        (
+            width: 356px,
+            height: fit-content,
+            padding: 20px,
+            border-radius: 16px,
+            display: flex,
+            align-items: center,
+            justify-content: space-around,
+            border:0.5px solid black,
+            margin-bottom:20px,
+            margin-left:20px
+        )
+    );
+    @include resSm(());
+}

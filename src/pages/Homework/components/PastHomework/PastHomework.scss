@@ -1,0 +1,91 @@
+@import 'src/scss/size.scss';
+
+.pastHomeworkContainer {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+  @include resD((
+    padding-left: 3vw,
+    padding-right: 4.5vw,
+  ));
+  @include resM((
+    padding-left: 0,
+    padding-right: 0,
+  ));
+  &.pastHomeworkContainer-teacherApp{
+    padding: unset;
+  }
+}
+
+.homeworkRowContainer {
+  display: flex;
+  margin-top: hs(48px);
+}
+
+.pastHomework-mainContainer {
+  width: 100%;
+  box-shadow: 2px 7px 24px 7px rgba(232, 232, 232, 0.25);
+  
+
+  @include resD((
+    border-radius: 20px,
+    padding: 28px 0px,
+    background: #FFF,
+  ));
+  @include resM((
+    border-radius: 20px,
+    padding: 10px 0px,
+    background: unset,
+  ));
+}
+
+.title {
+  font-size: hs(40px);
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.topicTitle {
+  font-size: hs(30px);
+  font-weight: bold;
+  line-height: 1.37;
+  color: #0d2f40;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: hs(35px);
+}
+
+.homeworkCardsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.noPastHomeworkMsgContainer {
+  font-family: Nunito;
+  font-weight: 550;
+  letter-spacing: -0.02em;
+  color: #cbcbcb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  // color: #7c86a2;
+  position: relative;
+  @include resD((
+    font-size: hs(30px),
+    margin-top: hs(90px),
+  ));
+  @include resM((
+    font-size: 20px,
+    text-align: center,
+    margin-top: 150px,
+  ));
+}

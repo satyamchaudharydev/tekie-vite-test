@@ -1,0 +1,249 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/theme.scss';
+
+.avatar-page-container {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(#000, 0.6);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD((
+    padding: unset,
+  ));
+}
+
+.avatar-page-popup {
+  position: relative;
+  background: #fff;
+  box-shadow: 0px 20px 30px rgba(0, 23, 31, 0.15);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include resD((
+    width: 1206px,
+    border-radius: 12px,
+    padding: 30px,
+    height: fit-content
+  ));
+  @include resM((
+    width: 380px,
+    border-radius: 12px,
+    padding: 24px 15px,
+    height: 90%
+  ));
+}
+
+.avatar-page-text {
+  font-family: Lato;
+  font-weight: bold;
+  color: #00ADE5;
+  opacity: 0.8;
+  @include resD((
+    font-size: 35px,
+    line-height: 42px,
+  ));
+  @include resM((
+    font-size: 18px,
+    line-height: 21px,
+  ));
+}
+
+.avatar-page-saveButton {
+  color: white;
+  font-family: Nunito;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  align-items: center;
+  width: auto;
+  z-index: 2;
+  @include resD((
+    padding-left: 30px,
+    padding-top: 15px,
+    padding-bottom: 15px,
+    padding-right: 30px,
+    background: linear-gradient(180deg, #34E4EA 0%, #00ADE6 100%),
+    border-radius: 100px,
+    margin-top: 40px,
+    font-size: 25px,
+    margin-bottom: 15px,
+  ));
+  @include resM((
+    padding-left: 25px,
+    padding-top: 10px,
+    padding-bottom: 10px,
+    padding-right: 25px,
+    background: linear-gradient(180deg, #34E4EA 0%, #00ADE6 100%),
+    border-radius: 6px,
+    margin-top: 24px,
+    font-size: 14px,
+  ));
+
+  & > span {
+    user-select: none;
+  } 
+}
+
+.avatar-page-loadingIconContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD((
+    width: 30px,
+    height: 30px,
+    margin-right: 0px,
+    top: -1px
+  ));
+  @include resM((
+    width: 15px,
+    height: 15px,
+    margin-right: 5px,
+    top: -1px
+  ))
+}
+
+
+.avatar-page-error {
+  font-family: Nunito;
+  font-weight: 500;
+  position: relative;
+  width: 100%;
+  color: #DB524E;
+  @include resM((
+    height: 10px,
+    top: 4px,
+    left: 4px,
+    font-size: 12px,
+    align-self: flex-start,
+  ));
+  @include resD((
+    align-self: center,
+    height: 7px,
+    top: 5px,
+    left: 10px,
+    font-size: 17px,
+  ));
+}
+
+.avatar-page-loadingIcon {
+  position: relative;
+  @include resD((
+    min-width: 15px,
+    min-height: 15px
+  ));
+  @include resM((
+    min-width: 12px,
+    min-height: 12px
+  ));
+}
+
+.avatar-page-close {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  @include resD((
+    width: 50px,
+    height: 50px,
+    top: -50px / 2,
+    right: -50px / 2,
+  ));
+  @include resM((
+    width: 30px,
+    height: 30px,
+    top: -30px / 2,
+    right: -20px / 2,
+  ));
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    background: #ccf2ff;
+    box-shadow: 0px 6px 6px rgba(51, 51, 51, 0.2), 0px 5px 20px rgba(51, 51, 51, 0.08);
+  }
+}
+
+.avatar-page-closeIcon {
+  position: relative;
+  @include resD((
+    width: 20px,
+    height: 20px,
+    top: -1px,
+  ));
+  @include resM((
+    width: 12px,
+    height: 12px,
+    top: -6px,
+  ));
+  path {
+    fill: #00ADE5;
+    opacity: 1;
+  }
+}
+
+.avatar-page-img-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow-y: scroll;
+  background:
+  /* Shadow covers */
+  linear-gradient(white 30%, rgba(255,255,255,0)),
+  linear-gradient(rgba(255,255,255,0), white 70%) 0 100%,
+  
+  /* Shadows */
+  radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.2), rgba(0,0,0,0)),
+  radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  
+  /* Opera doesn't support this in the shorthand */
+  background-attachment: local, local, scroll, scroll;
+  @include resD((
+    margin: 0,
+    padding: $s-xm $s-xs 0,
+  ));
+  @include resM((
+    margin-top: 20px,
+    padding: $s-xxs $s-xs 0,
+  ));
+
+  & .avartar-page-img {
+    border-radius: 100%;
+    border: 4px solid #9FB5D1;
+    background-size: cover !important;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    cursor: pointer;
+    @include resD((
+      margin: $s-s $s-xm,
+      width: 180px,
+      height: 180px,
+    ));
+    @include resM((
+      margin: $s-s,
+      width: 120px,
+      height: 120px,
+    ));
+  }
+  .active {
+    border-color: $deep-sky-blue;
+  }
+}

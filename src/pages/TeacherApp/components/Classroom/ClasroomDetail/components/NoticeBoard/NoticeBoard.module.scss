@@ -1,0 +1,163 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import 'src/scss/Inter.scss';
+@import '../../../../../variables/variables';
+
+.heading{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #212121;
+    padding-left: 24px;
+    padding-top: 21px;
+}
+
+.NoticeBoard_main{
+    height: 401px;
+    @include resM((
+        width: 100%
+    ));
+    @include resD((
+        width: 97%
+  ));
+}
+.NoNotice{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6D6D6D;
+    height: inherit;
+    padding-top: 25%;
+}
+.NoticeBoard_Announcements{
+    max-height: 300px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar  {
+        background-color: #eeeeee;
+        border-radius: 16px;
+      }
+}
+.docContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.noticeButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    padding: 7px 16px 7px 12px;
+    background: #F3EFFA;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: $primary-color;
+    margin-right: 4%;
+    margin-top: 21px;
+    cursor: pointer;
+}
+
+.noticeButton:hover{
+    background: #E2CEFF;
+}
+.noticeButton:active{
+    background: #F3EBFF;
+}
+
+.flexbox{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 27px;
+}
+.flexbox2{
+    display: flex;
+    align-items: center;
+}
+
+.announcement{
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding-left: 24px;
+    padding-bottom: 32px;
+    @include resM((
+        width: 72%
+    ));
+    @include resD((
+        width: 93%
+  ));
+}
+.announcementImg{
+    width: 27px;
+    height: 27px;
+    background-color: $primary-color;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading1{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000000;
+    padding-left: 10px;
+}
+
+.paragraph{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #757575;
+    // padding-bottom: 10px;
+    padding-top: 10px;
+    overflow-wrap: break-word;
+}
+.doc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    gap:5px;
+    padding: 7px 16px 7px 12px;
+    background: #F3EFFA;
+    border-radius: 8px;
+    margin: 10px 0px;
+    margin-right: 10px;
+    cursor: pointer;
+    width: fit-content;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    @include resM((
+        font-size: 10px
+    ));
+    @include resD((
+        font-size: 12px
+  ));
+    line-height: 18px;
+    color: $primary-color;
+}
+.doc:hover{
+    background: #E2CEFF;
+}
+.doc:active{
+    background: #F3EBFF;
+}

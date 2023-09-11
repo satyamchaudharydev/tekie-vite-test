@@ -1,0 +1,80 @@
+@import 'src/scss/size.scss';
+
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: hs(20px);
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  background-image: url("../../assets/payment_complete_background.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  @include resM((
+    width: 80vw,
+    height: 300px,
+    top: 100px,
+  ));
+  @include resD((
+    width: 645px,
+    height: 421px,
+    top: 100px,
+  ));
+}
+
+.paymentFailureContainer{
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.03;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00ade6;
+  @include resM((
+      height: 51px,
+      margin-bottom: 30px,
+      font-size: 24px,
+  ));
+  @include resD((
+      height: 51px,
+      margin-bottom: 60px,
+      font-size: 38px,
+  ));
+}
+
+.paymentFailureSubHeader {
+  font-family: Nunito;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.08;
+  letter-spacing: normal;
+  text-align: center;
+  color: #aaacae;
+  @include resM((
+      height: 50px,
+      margin-bottom: 20px,
+      font-size: 16px,
+  ));
+  @include resD((
+      height: 50px,
+      margin-bottom: 20px,
+      font-size: 24px,
+  ));
+}
+
+.link {
+  font-weight: 600;
+  color: #00ade6;
+}
+
+.tryAgainButtonContainer {
+  display: flex;
+  flex-direction: row;;
+  margin-top: hs(50px);
+}

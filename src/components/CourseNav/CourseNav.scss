@@ -1,0 +1,750 @@
+@import 'src/scss/size.scss';
+
+.cn-container {
+  @include resD((
+    display: block,
+    position: fixed,
+    width: 100vw,
+    height: 100vh,
+    pointer-events: none,
+    z-index: 99,
+    top: 0,
+    left: 0,
+  ));
+  @include resSm((
+    display: block,
+    position: fixed,
+    width: 0vw,
+    height: 100vh,
+    pointer-events: none,
+    z-index: 999999,
+    // top: 50vw,
+    left: 0,
+  ));
+}
+
+.main_coursenavbar_allottedMentor{
+  color: #aaacae;
+    font-weight: 500;
+    display: block;
+    @include resD((
+      margin-top: 8px,
+    ));
+}
+.cn-nav-container {
+  height: 100%;
+  @include resD((
+    width: 102px,
+    padding-top: 120px,
+  ));
+  @include resSm((
+    // width: 0px,
+    // padding-top: 80px,
+  ));
+  &.open {
+    @include resD((
+      width: 380px,
+      animation: fadeInAnimationss ease 1s,
+    ));
+    @include resSm((
+      width: 100vw,
+      animation: fadeInAnimation ease 0.5s,
+      // animation-iteration-count: 1,
+      // animation-fill-mode: forwards,
+    ));
+    @keyframes fadeInAnimation {
+      0% {
+          opacity: 0;
+          transform: translateY(100%)
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0%)
+       }
+    }
+  }
+  &.close-animation {
+    @include resD((
+      animation: fadeInAnimationss ease 1s,
+    ));
+    @include resSm((
+      animation: fadeInAnimation2 ease 1s,
+    ));
+    @keyframes fadeInAnimation2 {
+      0% {
+          opacity: 1;
+          transform: translateY(0%)
+      }
+      100% {
+          opacity: 0;
+          transform: translateY(100%)
+       }
+    }
+  }
+  transition: 0.4s all cubic-bezier(0.38, 0.99, 0.35, 1.07);
+  box-sizing: border-box;
+  pointer-events: auto;
+}
+
+.cn-nav-container-electron {
+  @include resD((
+    padding-top: calc(#{hs(120px)} + 36px)
+  ))
+}
+
+.cn-nav-wrapper {
+  height: 100%;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include resD((
+    border-radius: 12px,
+    justify-content: unset,
+    padding-bottom: unset,
+    position: relative,
+  ));
+  @include resSm((
+    border-radius: unset,
+    // justify-content: flex-end,
+  ));
+  }
+  
+.open {
+  .cn-nav-wrapper {
+    box-sizing: border-box;
+    @include resD((
+      width: unset,
+      position: relative,
+      bottom: 0px,  
+      padding: unset,
+    ));
+    @include resM((
+      width: 100%,
+      position: fixed,
+      bottom: 0px,
+      overflow: scroll,
+      padding: 12px,
+    ));
+  }
+  .cn-nav-bg {
+    @include resM((
+      display: block,
+    ))
+  }
+}
+
+.cn-nav-bg {
+  background-image: url('https://tekie-backend.s3.amazonaws.com/python/courseNavBg_ckxuhqifs00q8106y0rmp0ipq_1640960874712.png');
+  background-size: cover;
+  background-position: center center;
+  // opacity: 0.1;
+  width: 100%;
+  bottom: 0;
+  @include resD((
+    height: 398px,
+    position: absolute,
+    display: block,
+    z-index: unset
+  ));
+  @include resSm((
+    height: 598px,
+    position: fixed,
+    display: none,
+    z-index: -1,
+  ));
+}
+
+.cn-navbar {
+  @include resD((
+    height: 60px,
+    width: 60px,
+    margin-top: 19px,
+    left: -143px,
+    top: 0px,
+    display: flex,
+    border-radius: 50%,
+    flex-direction: column,
+    justify-content: center,
+    align-items: center,
+    background: rgba(#E6F7FD, 0),
+    transition: 0.3s all ease-in-out,
+    cursor: pointer,
+    position: relative,
+    filter: unset,
+  ));
+  @include resSm((
+    position:fixed,
+    height: 50px,
+    width: 50px,
+    margin-top: 0px,
+    bottom: 30px,
+    right: 20px,
+    display: flex,
+    border-radius: 50%,
+    flex-direction: column,
+    pointer-events: all,
+    justify-content: center,
+    align-items: center,
+    transition: 0.3s all ease-in-out,
+    cursor: pointer,
+    // position: absolute,
+    background-color: #00ADE6,
+    z-index: 9999,
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15)),
+  ));
+  
+  &.open {
+    // left: 0px,
+    @include resD((
+      left: 0px
+    ));
+  }
+  // open state
+  &.open {
+    // transition: 0.5s ease-in-out;
+    @include resD((
+      transform: rotate(90deg)
+    ));
+  }
+  &.open .lines-1 .cn-navbar-line-1  {
+    // transition: 0.5s ease-in-out;
+    @include resD((
+      transform: rotate(45deg),
+      margin-top: 0px
+    ));
+    @include resSm((
+      transform: rotate(45deg),
+      margin-top: 6.5px
+    ));
+  }
+  &.open .lines-1 .cn-navbar-line-2  {
+    // transition: 0.5s ease-in-out;
+    @include resD((
+      transform: rotate(-45deg),
+      margin-top: 0px
+    ));
+    @include resSm((
+      transform: rotate(45deg),
+      margin-top: 6px
+    ));
+  }
+  &.open .lines-3 .cn-navbar-line-1  {
+    // transition: 0.5s ease-in-out;
+    @include resD((
+      transform: rotate(45deg)
+    ));
+    @include resSm((
+      transform: rotate(135deg)
+    ));
+  }
+  &.open .lines-3 .cn-navbar-line-2  {
+    // transition: 0.5s ease-in-out;
+    @include resD((
+      transform: rotate(-45deg)
+    ));
+    @include resSm((
+      transform: rotate(135deg)
+    ));
+  }
+  &.open .lines-2 .cn-navbar-line-1  {
+    // transition: 0.5s ease-in-out;
+    @include resD((
+      transform: rotate(45deg)
+    ));
+    @include resSm((
+      transform: rotate(135deg),
+      margin-top: -.1px
+    ));
+  }
+  &.open .lines-2 .cn-navbar-line-2  {
+    // transition: 0.5s ease-in-out;
+    @include resD((
+      transform: rotate(-45deg)
+    ));
+    @include resSm((
+      transform: rotate(135deg),
+      margin-top: -.1px
+    ));
+  }
+
+  &.open .cn-navbar-line {
+    // transition: 0.5s ease-in-out;
+    @include resD((
+      transform: translateY(200%)
+    ));
+  }
+
+  &.open .lines-2  {
+    @include resD((
+      opacity: 0
+    ));
+  }
+
+  &.open .lines-3  {
+    @include resD((
+      opacity: 1
+    ));
+    @include resSm((
+      opacity: 0
+    ));
+  }
+
+  // hover animation when closed
+  &.close:hover .lines-2  {
+    @include resD((
+      transition: 0s ease-in-out,
+      opacity: 0,
+    ));
+  }
+  &.close:hover .lines-1 .cn-navbar-line-1  {
+    // transition: 0.5s ease-in-out;
+    @include resD((
+      transform: rotate(45deg)
+    ));
+  }
+  &.close:hover .lines-1 .cn-navbar-line-2  {
+    // transition: 0.5s ease-in-out;
+    @include resD((
+      transform: rotate(-45deg)
+    ));
+  }
+  &.close:hover .lines-3 .cn-navbar-line-1  {
+    // transition: 0.5s ease-in-out;
+    @include resD((
+      transform: rotate(45deg)
+    ));
+    
+  }
+  &.close:hover .lines-3 .cn-navbar-line-2  {
+    // transition: 0.5s ease-in-out;
+    @include resD((
+      transform: rotate(-45deg)
+    ));
+  }
+  &.close:hover .cn-navbar-line {
+    // transition: 0.5s ease-in-out;
+    @include resD((
+      transform: translateY(200%)
+    ));
+  }
+  &.close:hover {
+    // transition: 0.5s ease-in-out;
+    @include resD((
+      transform: rotate(-90deg)
+    ));
+  }
+  &:hover {
+    @include resD((
+      background: #E6F7FD
+    ));
+  }
+}
+
+
+.cn-navbar-line {
+  height: 2px;
+  display: flex;
+  transition: 0.3s ease-in-out;
+  flex-direction: row;
+  @include resD((
+    width: 24px,
+    margin-top: 4px,
+  ));
+  &:first-child {
+    @include resD((
+      margin-top: 0px,
+    ));
+    @include resSm((
+      margin-top: 0px,
+    ));
+  }
+  @include resSm((
+    width: 24px,
+    margin-top: 4px,
+  ));
+}
+.cn-navbar-line-1 {
+  
+  height: 100%;
+  width: 50%;
+  transform-origin: right;
+  transition: 0.3s all ease-in-out;
+  @include resD((
+    background: #00ADE6
+  ));
+  @include resSm((
+    background: #fff
+  ));
+}
+
+.cn-navbar-line-2 {
+  height: 100%;
+  width: 50%;
+  transform-origin: left;
+  transition: 0.3s all ease-in-out;
+  @include resD((
+    background: #00ADE6
+  ));
+  @include resSm((
+    background: #fff
+  ));
+}
+
+.cn-title {
+  line-height: 120%;
+  font-weight: bold;
+  background: -webkit-linear-gradient( 0deg, #00ADE6, #35E4E9,);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @include resD((
+    width: 280px,
+    font-size: 28px,
+    line-height: 120%,
+    margin-top: 35px,
+    display: block
+  ));
+  @include resSm((
+    display: none
+  ))
+}
+
+.cn-navbar-item-shadow {
+  background: #005773;
+  position: relative;
+  @include resD((
+    width: 98px,
+    height: 61px,
+    margin-top: 48px,
+    border-radius: 12px,
+    align-self: flex-start,
+  ));
+  @include resSm((
+    width: 90px,
+    height: 50px,
+    margin-top: 18px,
+    border-radius: 12px,
+    align-self: center,
+  ));
+  transition: 0.4s all cubic-bezier(0.38, 0.99, 0.35, 1.07);
+}
+
+.cn-navbar-item {
+  position: relative;
+  
+  display: flex;
+  flex-direction: row;
+  
+  transition: 0.4s all cubic-bezier(0.38, 0.99, 0.35, 1.07);
+  
+  // background: conic-gradient(from 137.97deg at 11.44% 100%, #35E4E9 -229.21deg, #00ADE6 23.4deg, #35E4E9 130.79deg, #00ADE6 383.4deg);
+  background: conic-gradient(from 137.97deg at 31.44% 100%, #35E4E9 -129.21deg, #00ADE6 -223.4deg, #35E4E9 -220.79deg, #00ADE6 483.4deg);
+  @include resD((
+    width: 100%,
+    top: -8px,
+    height: 61px,
+    border: 2px solid #35E4E9,
+    border-radius: 12px,
+    align-self: flex-start,
+    justify-content: center,
+    align-items: center,
+    padding-left: 0px,
+    left: 0px
+  ));
+  @include resSm((
+    width: 96%,
+    top: -8px,
+    height: 50px,
+    border: 2px solid #35E4E9,
+    border-radius: 12px,
+    align-self: flex-start,
+    justify-content: left,
+    align-items: center,
+    padding-left: 10px,
+    left: 0px
+  ));
+}
+.cn-nav-container.open .cn-navbar-item-shadow.not-active {
+  align-self: flex-start;
+  @include resD((
+    width: auto,
+    margin-left: 48px,
+  ));
+  @include resSm((
+    width: 100%,
+    margin-left: 4px,
+  ));
+}
+
+
+.cn-nav-container.open .cn-navbar-item-shadow {
+  @include resD((
+    width: 332px,
+    left: unset,
+  ));
+  @include resSm((
+    width: 332px,
+    left: unset,
+  ));
+}
+
+.cn-nav-container.open .cn-navbar-item-title {
+  width: auto;
+  opacity: 1;
+  @include resD((
+    margin-left: 18px
+  ));
+  @include resSm((
+    margin-left: 8px
+  ))
+}
+
+.cn-nav-container.open .cn-navbar-item-shadow.active .cn-navbar-item {
+  background: conic-gradient(from 137.97deg at 31.44% 100%, #35E4E9 -129.21deg, #00ADE6 -223.4deg, #35E4E9 -220.79deg, #00ADE6 483.4deg);
+}
+
+.cn-navbar-icon {
+  transition: 0.4s all cubic-bezier(0.38, 0.99, 0.35, 1.07);
+  @include resD((
+    width: 36px,
+    height: 36px,
+  ));
+  @include resSm((
+    width: 22px,
+    height: 36px,
+  ));
+}
+
+.cn-navbar-item-title {
+  font-family: Nunito;
+  font-style: normal;
+  line-height: 120%;
+  color: white;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.3s all ease-in-out, opacity 0.1s ease-in-out 0.2s;
+  @include resD((
+    font-size: 24px,
+    margin-left: 0px,
+    font-weight: bold,
+    margin-top: unset,
+  ));
+  @include resSm((
+    font-size: 16px,
+    margin-left: 0px,
+    margin-top: 2px,
+    font-weight: 600,
+  ))
+}
+
+.cn-navbar-item-shadow.not-active {
+  background: transparent;
+  .cn-navbar-item {
+    background: transparent;
+    border: 2px solid transparent;
+  }
+  .cn-navbar-item-title {
+    color: #A8A7A7;
+  }
+  .cn-navbar-icon {
+    path, circle, rect {
+      transition: 0.3s all ease-in-out;
+      stroke: #A8A7A7;
+    }
+  }
+}
+
+.cn-navbar-item-shadow.not-active {
+  cursor: pointer;
+  &:hover .cn-navbar-icon path {
+    stroke: #00ADE6 !important;
+  }
+  &:hover .cn-navbar-icon circle {
+    stroke: #00ADE6 !important;
+  }
+  &:hover .cn-navbar-icon rect {
+    stroke: #00ADE6 !important;
+  }
+  &:hover .cn-navbar-item-title {
+    color: #00ADE6;
+  }
+}
+
+.cn-navbar-icon .strokeDisabled {
+  path {
+    stroke: none !important;
+  }
+}
+
+.photon-input-tooltip.cn-tooltip {
+  background-color: #00ADE6 !important;
+  color: white;
+  @include resD((
+    font-size: 22px !important,
+    border-radius: 8px
+  ));
+  @include resSm((
+    font-size: 22px !important,
+    border-radius: 8px
+  ));
+}
+
+.cn-navbar-warning {
+  width: 18px;
+  height: 18px;
+  border-radius: 20px;
+  background: radial-gradient(50% 50% at 50% 50%, #FF5744 0%, #FF9084 100%);
+  position: absolute;
+  right: 5px;
+  top: -10px;
+  box-shadow: 0 0 0 #FF9084;
+  animation: pulse 2s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Nunito;
+  font-weight: normal;
+  @include resD((
+    font-size: 14px,
+  ));
+  @include resSm((
+    font-size: 14px,
+  ));
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transition: all .3s ease-in-out;
+}
+.open-style {
+  width: fit-content !important;
+  height: fit-content !important;
+  padding: 2px 8px 2px 4px;
+  & svg {
+    margin-right: 4px;
+  }
+}
+.inActive-style {
+  position: relative;
+  top: 0;
+  right: 0;
+  margin: 0px 6px;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #FF9084;
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 8px rgba(204,169,44, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 #FF9084;
+    box-shadow: 0 0 0 0 #FF9084;
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 8px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 8px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+
+.navbar_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &.open {
+    // margin-left: -40px;
+  }
+  &.isClose {
+    @include resD((
+      display: block,
+    ));
+    @include resSm((
+      display: none,
+    ));
+  }
+}
+
+.horizontal_line {
+  @include resD((
+    display: none
+  ));
+  @include resSm((
+    margin-top: 15px,
+    margin-bottom: 0px,
+    position: relative,
+    width: 192px,
+    height: 0px,
+    left: -55px,
+    top: 0px,
+    opacity: 0.1,
+    border-bottom: 1px solid #000000,
+    background-color: black
+  ))
+}
+
+.bottom_icons {
+  @include resD((
+    display: none
+  ));
+  @include resSm((
+    display: flex,
+    position: relative,
+    // left: -80px,
+    flex-direction: column,
+    color: #00ADE6,
+    font-weight: 600,
+    width: 100%,
+    padding: 0px 25px 50px,
+    box-sizing: border-box,
+  ))
+}
+
+.bottom_icon_item {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.bottom_icon_img {
+  margin-right: 10px;
+}
+
+.mobile_screen_top_padding {
+  @include resD((
+    height: 0px
+  ));
+  @include resSm((
+    height: 110px
+  ));
+}
+
+.mobile_nav_visible {
+  @include resD((
+    display: none
+  ));
+  @include resSm((
+    display: flex
+  ));
+}
+
+.mobile_nav_hide {
+  @include resD((
+    opacity: 1
+  ));
+  @include resSm((
+    opacity: 0
+    
+  ));
+}

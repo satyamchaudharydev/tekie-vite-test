@@ -1,0 +1,8 @@
+@import 'src/scss/size.scss';
+
+
+.displayH4{
+    @include resD((
+        font-size:17px
+      ));
+}

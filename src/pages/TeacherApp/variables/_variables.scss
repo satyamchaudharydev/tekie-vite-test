@@ -1,0 +1,76 @@
+$tekie-amethyst:#8C61CB;
+$tekie-amethyst-dark: #7b40d4;
+
+:root{
+    --accent-color:$tekie-amethyst;
+    --accent-color-110: $tekie-amethyst-dark;
+  }
+$primary-color:var(--accent-color);
+$primary-color-110:var(--accent-color-110);
+$tekie-blue:#00ADE6;
+$tekie-blue-110:#01a3da;
+$tekie-amethyst-10:#FAF6FF;
+$tekie-amethyst-30:#F3EFFA;
+$tekie-amethyst-35:#E1D6F0;
+$tekie-amethyst-40:#E1D6F0;
+$tekie-amethyst-50:#b49adb;
+$tekie-amethyst-40:#a27fd5;
+$tekie-amethyst-70:#FAF7FF;
+$inProgress:#FAAD14;
+$inProgress-30:#FFF7E7;
+$inProgress-10:#FFF7E6;
+$yetToBegin:#504F4F;
+$yetToBegin-30:#ebecec;
+// $yetToBegin-30:#E6EAEB;
+$yetToBegin-50:var(--accent-color);
+// $yetToBegin-50:#DCDCDC;
+// $yetToBegin-100:#282828;
+$yetToBegin-100:var(--accent-color-110);
+$completed:#01AA93;
+$completed-10:#E7FFFC;
+$completed-30:#E6F7F4;
+$unattended:#FF5744;
+$unattended-10:#FFF6F5;
+$unattended-30:#FBEDEE;
+$light-grey:#f9f9f9;
+$dark-grey:#F1F1F1;
+$tekie-black:#0000;
+$tekie-black-90:#212121;
+$tekie-black-80:#282828;
+$tekie-black-60:#333333;
+$tekie-black-50:#504F4F;
+$tekie-black-40:#403F3F;
+$tekie-grey: #666666;
+$tekie-grey-5: #F9F9F9;
+$tekie-grey-7: #F1F1F1;
+$tekie-grey-10:#EEEEEE;
+$tekie-grey-20:#ECECEC;
+$tekie-grey-30:#c4c4c492;
+$tekie-grey-40:#CCCCCC;
+$tekie-grey-45:#A8A7A7;
+$tekie-grey-50: #AAAAAA;
+$tekie-grey-60: #9E9E9E;
+$tekie-grey-65: #DCDCDC;
+$tekie-grey-70: #757575;
+$white:#FFFFFF;
+$validation-red:#D34B57;
+$golden:#FFD028;
+$tekie-red-20:#FAEBEC;
+$tekie-red-100:#D34B57;
+$tekie-green-20:#01aa941e;   //already same color exists above, but this variable name is reusable
+$tekie-green-100:#01AA93;
+$tekie-yellow-20:#FEF6E6;
+$tekie-yellow-100:#FAAD14;
+//Zindex
+$z999: 999;
+$z9999: 9999;
+$z99999: 99999;
+$z999999: 999999;
+
+:export {
+    schoolAdmin:$tekie-blue;
+    schoolAdmin110:$tekie-blue-110;
+    schoolTeacher:$tekie-amethyst;
+    schoolTeacher110:$tekie-amethyst-dark;
+    primaryColor:$primary-color;
+}

@@ -1,0 +1,276 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+.Quiz__title__linear__graph {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 600,
+      font-size: 24px,
+      line-height: 24px,
+      color: #212121,
+      margin-right:10px
+    )
+  );
+  @include resSm(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 600,
+      font-size: 18px,
+      line-height: 24px,
+      color: #212121,
+    )
+  );
+}
+.Quiz__text__linear__graph {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 600,
+      font-size: 16px,
+      line-height: 24px,
+      color: #212121,
+    )
+  );
+  @include resSm(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 600,
+      font-size: 18px,
+      line-height: 24px,
+      color: #212121,
+    )
+  );
+}
+.Quiz__percentage__container {
+  @include resD(
+    (
+      width: fit-content,
+      height: fit-content,
+      background: #fafafa,
+      border: 1px solid #efefef,
+      box-sizing: border-box,
+      box-shadow: 0px 2px 5px #fafafa,
+      border-radius: 8px,
+      padding: 20px,
+      margin-top: 15px,
+    )
+  );
+  @include resSm(
+    (
+      width: fit-content,
+      height: fit-content,
+      background: #fafafa,
+      border: 1px solid #efefef,
+      box-sizing: border-box,
+      box-shadow: 0px 2px 5px #fafafa,
+      border-radius: 8px,
+    )
+  );
+}
+.Quiz__percentage__text {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 600,
+      font-size: 40.6923px,
+      line-height: 100%,
+      display: flex,
+      align-items: center,
+      color: #403f3f,
+    )
+  );
+  @include resSm(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 600,
+      font-size: 33.6923px,
+      line-height: 100%,
+      display: flex,
+      align-items: center,
+      color: #403f3f,
+    )
+  );
+}
+
+.Quiz__percentage__description {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 16px,
+      line-height: 16px,
+      display: flex,
+      align-items: center,
+      color: #aba1b9,
+      margin-top: 15px,
+    )
+  );
+  @include resSm(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 12px,
+      line-height: 16px,
+      display: flex,
+      align-items: center,
+      color: #aba1b9,
+    )
+  );
+}
+.bar__graph__image1 {
+  @include resD(
+    (
+      width: 50px,
+      background: #01aa93,
+      border-radius: 3px,
+      margin-right:40px
+    )
+  );
+  @include resSm(
+    (
+      width: 50px,
+      background: #01aa93,
+      border-radius: 3px,
+    )
+  );
+}
+.bar__graph__image2 {
+  @include resD(
+    (
+      width: 50px,
+      background: #ff5744,
+      border-radius: 3px,
+    )
+  );
+  @include resSm(
+    (
+      width: 50px,
+      background: #ff5744,
+      border-radius: 3px,
+    )
+  );
+}
+.bar__graph__main__container {
+  @include resD(
+    (
+      display: flex,
+      align-items: flex-end,
+      margin-top:60px
+    )
+  );
+  @include resSm(
+    (
+      display: flex,
+      align-items: flex-end,
+      margin-top:60px
+    )
+  );
+}
+.bar__graph__text {
+  @include resD(
+    (
+      display: flex,
+      flex-direction: column,
+    )
+  );
+  @include resSm(
+    (
+      display: flex,
+      flex-direction: column,
+    )
+  );
+}
+.Quiz__total__text {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 400,
+      font-size: 18px,
+      line-height: 12px,
+     
+      color: #757575,
+      margin-top:15px,
+      text-align:left
+    )
+  );
+  @include resSm(
+    (
+        font-family: Inter,
+        font-style: normal,
+        font-weight: 400,
+        font-size: 10px,
+        line-height: 12px,
+        
+        color: #757575,
+    )
+  );
+}
+.Quiz__total__number {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 600,
+      font-size: 18px,
+      line-height: 12px,
+      margin-left:8px,
+      color: black,
+      margin-top:10px
+    )
+  );
+  @include resSm(
+    (
+        font-family: Inter,
+        font-style: normal,
+        font-weight: 400,
+        font-size: 18px,
+        line-height: 12px,
+        margin-left:8px,
+        color: black,
+    )
+  );
+}
+.Quiz__main__component1 {
+  @include resD(
+    (
+      width:fit-content,
+      height:360px,
+      border-right:1px solid #e3e3e3,
+        padding:0px 50px 0px 0px
+    )
+  );
+  @include resSm(
+    (
+        
+      width:fit-content,
+      height:fit-content
+    )
+  );
+}
+.Quiz__main__component2 {
+  @include resD(
+    (
+      width:fit-content,
+      height:fit-content,
+    padding:0px 50px 0px 0px
+    )
+  );
+  @include resSm(
+    (
+        
+      width:fit-content,
+      height:fit-content
+    )
+  );
+}

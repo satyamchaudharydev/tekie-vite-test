@@ -1,0 +1,57 @@
+@import 'src/scss/size.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/triangleBG.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bodyContainer {
+  width: 100%;
+  height: 92%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nextButtonContainer {
+  width: 98%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  position: relative;
+  bottom: hs(20px);
+}
+
+.videoDiscussionIconContainer {
+  width: hs(140px);
+  height: hs(180px);
+  display: flex;
+  background-image: url("../../assets/homeworkIcon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-self: center;
+}
+
+.text {
+  font-family: Nunito;
+  font-size: hs(26px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  color: #92c5eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marginText {
+  font-size: hs(30px) !important;
+  margin-top: hs(31px);
+}

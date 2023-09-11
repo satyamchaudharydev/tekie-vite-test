@@ -1,0 +1,216 @@
+@import 'src/scss/size.scss';
+
+.landing-page-login-form-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: rgba(0,0,0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999
+}
+
+.landing-page-login-form-loginContainer {
+  background-color: #021d27;
+  box-shadow: -30px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  @include resD((
+    width: 612px,
+    padding: unset
+  ));
+  @include resM((
+    width: 380px,
+    padding: 0 30px
+  ));
+}
+
+.landing-page-login-form-close {
+  align-self: flex-end;
+  background-image: url('../../../assets/close.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  @include resM((
+    width: 15px,
+    height: 15px,
+    margin-top: 40px,
+    margin-bottom: 10px,
+  ));
+  @include resD((
+    width: 21px,
+    height: 21px,
+    margin-top: 110px,
+    margin-bottom: 10px,
+  ));
+}
+
+.landing-page-login-form-title {
+  opacity: 0.8;
+  font-family: Lato;
+  text-align: left;
+  @include resD((
+    font-size: 29px,
+    font-weight: 300,
+    line-height: 1.21,
+    letter-spacing: 2.03px,
+    color: #34e4ea,
+    margin-bottom: 50px,
+    margin-top: 60px,
+  ));
+  @include resM((
+    font-size: 15,
+    font-weight: 300,
+    line-height: 1.21,
+    letter-spacing: 1.43px,
+    color: #34e4ea,
+    margin-bottom: 20px,
+    margin-top: 30px,
+  ));
+}
+
+.landing-page-login-form-text {
+  text-align: center;
+  opacity: 0.7;
+  @include resM((
+    margin-top: 0px,
+    line-height: 25px,
+    margin-bottom: 20px,
+    font-size: 18px,
+  ));
+  @include resD((
+    font-size: 25px,
+    line-height: 45px,
+    letter-spacing: 1.53px,
+    margin-bottom: 51px,
+    margin-top: 0px,
+  ));
+}
+
+.landing-page-login-form-inputContainer {
+  @include resM((
+    width: 100%,
+  ));
+  @include resD((
+    width: 476px !important,
+  ))
+}
+
+.landing-page-login-form-input {
+  @include resM((
+    min-height: 45px,
+  ));
+  @include resD((
+    min-height: 42px,
+  ));
+}
+
+.landing-page-login-form-button {
+  font-family: Lato;
+  text-transform: uppercase;
+  line-height: 1.21;
+  color: rgba(#ffffff, 0.7);
+  background-color: rgba(#022f3f, 0.8);
+  @include resD((
+    font-size: 28px,
+    letter-spacing: 2.26px,
+    padding: 15px 25px,
+    border-radius: 5px,
+  ));
+  @include resM((
+    font-size: 16px,
+    letter-spacing: 1px,
+    padding: 10px 20px,
+    border-radius: 5px,
+  ));
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &:hover {
+    color: rgba(#ffffff, 1);
+    box-shadow: 2px 10px 15px 0 rgba(0, 0, 0, 0.16);
+  }
+}
+
+.landing-page-login-form-error {
+  @include resD((
+    margin-left: 120px,
+    margin-top: 18px,
+    font-size: 22px !important,
+  ));
+  @include resM((
+    width: 100%,
+    margin-left: unset,
+    margin-top: 25px,
+    font-size: 15px !important,
+  ));
+}
+
+.landing-page-login-form-row {
+  display: flex;
+  flex-direction: row;
+  margin-top: hs(45px);
+  align-items: center;
+  margin-bottom: hs(45px);
+}
+
+.landing-page-login-form-line {
+  width: hs(145px);
+  height: 0;
+  opacity: 0.1;
+  border: solid 0.3px #ffffff;
+}
+
+.landing-page-login-form-or {
+  opacity: 0.7;
+  font-family: Lato;
+  font-size: hs(25.5px);
+  font-weight: 300;
+  line-height: 1.76;
+  letter-spacing: hs(1.53px);
+  color: #fff;
+  margin: 0 hs(17px);
+}
+
+.landing-page-login-form-notOnTekie {
+  opacity: 0.7;
+  font-family: Lato;
+  font-weight: 300;
+  line-height: 1.72;
+  color: #ffffff;
+  @include resD((
+    letter-spacing: 1.5px,
+    font-size: 25px,
+    margin-top: 34px,
+    margin-bottom: 68px,
+  ));
+  @include resM((
+    letter-spacing: 1.5px,
+    font-size: 16px,
+    margin-top: 15px,
+    margin-bottom: 30px,
+  ));
+
+}
+
+.landing-page-login-form-link {
+  color: #34e4ea;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.landing-page-login-form-phoneInput {
+  width: 100% !important
+}

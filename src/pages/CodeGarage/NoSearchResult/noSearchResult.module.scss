@@ -1,0 +1,21 @@
+@import "src/scss/size.scss";
+
+.container {
+	height: 100%;
+	width: 100%;
+}
+
+.iconWrapper {
+	background-color: rgba(220, 220, 220, 0.12);
+	border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include resD(
+		(
+			height: 112px,
+			width: 112px,
+		)
+	);
+}

@@ -1,0 +1,26 @@
+@import 'src/scss/size.scss';
+
+.iconContainer {
+  position: relative;
+  @include resD((
+    width: 14.3px,
+    height: 15.6px,
+    top: -1.3px,
+    left: 2px,
+  ));
+}
+
+.creditIconContainer {
+  @include resD((
+    width: 42px,
+    height: 42px,
+  ));
+  @include resM((
+    width: 27px,
+    height: 27px,
+  ));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

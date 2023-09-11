@@ -1,0 +1,301 @@
+@import "src/scss/size.scss";
+@import "src/scss/Inter.scss";
+@import "src/scss/theme/colors.scss";
+@import "../../../../variables/variables.scss";
+@import "../../../../mixins/_mixins.scss";
+
+h1,
+h4,
+p {
+    margin: 0;
+}
+
+.batchCarouselContainer {
+    @include resD1280((margin-bottom:16px,
+            padding:16px,
+            border-top-left-radius:16px,
+            border-bottom-left-radius:16px,
+        ));
+    font-family: 'Inter';
+    // background-color: pink;
+    background-color: white;
+}
+
+.batchCarouselContainer.forClassroomsPage{
+    background-color: transparent;
+    @include resD((
+        border-bottom:2px solid $tekie-grey-65,
+        border-top-left-radius:0,
+        border-bottom-left-radius:0,
+        padding:11px 12px 8px 0,
+        margin-bottom:0
+    ))
+}
+
+.batchGrade.batchGradeForClassroom{
+    @include resD1280((font-size:12px));
+    @include resD((font-size:16px));
+}
+
+.carouselContainer{
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    transition: all 0.1s ease-in-out;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    display: -webkit-inline-box;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.batchGrade {
+    @include resD1280((font-size:16px));
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    color: $tekie-black-90;
+    font-family: 'Inter'
+}
+.batchGrade.batchGradeForClassroom{
+    @include resD1280((font-size:12px));
+    @include resD((font-size:16px));
+}
+
+.batchCarouselHeaderContainer {
+    @include resD1280((margin-bottom:16px));
+    @include flex(space-between, center)
+}
+
+.batchCarouselHeaderContainer.forClassrooms{
+    @include resD1280((margin-bottom:8px));
+}
+
+.scrollBtnsContainer {
+    @include flex(center, center);
+    @include resD1280((gap:0px))
+}
+
+.batchCardContainer {
+    display:flex;
+    flex-direction: column;
+    @include resD1280((
+        border-radius:16px,
+        width:300px,
+        border: 1.7px solid $tekie-grey-20,
+        margin-right:8px
+    ));
+}
+
+.thumbnailAndBatchDetailsContainer {
+    @include flex(flex-start,flex-start);
+    @include resD1280((padding:16px 14px,
+            gap:16px));
+    flex: 1;
+}
+
+.carouselCardsContainer {
+    overflow-x: hidden;
+    // width: 100%
+}
+.scrollableContainer {
+    // @include flex(flex-start, flex-start);
+    // @include resD1280((
+    //     gap:8px
+    // ));
+    // width: 100%;
+    // height: calc(100%);
+    // overflow-x: scroll;
+    // transition:all 0.4s ease;
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    transition: all 0.1s ease-in-out;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    display: -webkit-inline-box;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.batchThumbnail {
+    @include resD1280((height: 80px,
+            width: 80px,
+            border-radius: 4px));
+    border: 1px solid $tekie-grey-30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+}
+
+.batchCardHeadingContainer {
+    @include flex(flex-start, center);
+    @include resD1280((gap:10px,
+            margin-bottom:10px))
+}
+
+.batchGradeSection {
+    margin: 0;
+    @include resD1280((font-size:14px));
+    font-weight: 500;
+    font-family: 'Inter';
+    color: #000;
+}
+
+.batchStrength {
+    margin: 0;
+    @include resD1280((font-size:10px));
+    color: #403F3F;
+    font-family: 'Inter';
+}
+
+.batchDataPointsContainer {
+    @include flex(flex-start, flex-start);
+    flex-direction: row;
+    @include resD1280((gap:12px));
+    flex-wrap: wrap;
+}
+
+.timeDaySeparator {
+    display: inline-block;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: $tekie-grey-70;
+    color: $tekie-grey-70;
+    @include resD1280((margin: auto 10px,
+            margin-bottom: 4px,
+        ))
+}
+
+.dataPointLabelAndTextContainer {
+    position: relative;
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    @include resD1280((
+        gap: 4px,
+        top:1px
+    ))
+}
+
+.individualDataPointContainer {
+    @include flex(flex-start, flex-start);
+    overflow: hidden;
+    @include resD1280((
+        gap:9px,
+        margin-right: 2%
+    ));
+    font-family: 'Inter';
+}
+
+.dataPointLabel {
+    @include resD1280((font-size:10px,
+        ));
+    color: $tekie-grey-70;
+    @media screen and (min-width:1600px) {
+        @include resD((font-size:15px))
+    }
+}
+
+.dataPointValue {
+    color: #212121;
+    @include resD1280((
+        font-weight: 600,
+        font-size: 12px,
+        line-height: 15px,
+    ));
+    margin: 0;
+    @media screen and (min-width:1600px) {
+        @include resD((font-size:15px))
+    }
+
+}
+
+.dataHeading {
+    @include resD1280((margin-bottom:4px))
+}
+
+.progress {
+    @include resD1280((border-radius: 4px,
+            height: 4px,
+            width: 120px,
+        ));
+    background-color: #01aa9453;
+    position: relative;
+}
+.progress.forClassroomsPage{
+    @include resD1280((
+        width:100%,
+        border-radius:0,
+        background-color:$tekie-grey-7
+    ));
+}
+
+.progressDone {
+    @include resD1280((border-top-left-radius: 4px,
+            border-bottom-left-radius: 4px,
+        ));
+    background-color: #01AA93;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    // transition: 1s ease 0.3s;
+}
+.fullProgressDone{
+    @include resD1280((
+        border-radius:4px
+    ))
+}
+.progressDoneForClassroom{
+    background: linear-gradient(270deg, #029883 0%, #52C6B5 115.74%);
+}
+.progressDone.forClassroomsPage{
+    @include resD1280((
+    border-top-left-radius:0,
+    border-top-right-radius: 4px,
+    border-bottom-right-radius: 4px,
+)); 
+}
+
+.percentage {
+    @include resD1280((margin-bottom:4px))
+}
+
+.batchCardFooter {
+    @include resD1280((
+        padding: 0 16px 16px 16px
+    ));
+}
+.removeLinkStyles{
+    text-decoration: none;
+}
+
+.progressSkeleton{
+      @include resD((
+        background-color: #ffffff,
+        height: 4px,
+        width: 100px,
+        border-radius: 5px,
+      ))
+  }
+
+  .classroomProgress{
+    @include resD1280((
+        height: 10px,
+        width: 99%,
+        border-radius: 20px,
+    ));
+    & .progressDone{
+        @include resD1280((
+            border-radius: 20px,
+        ))
+    }
+  }

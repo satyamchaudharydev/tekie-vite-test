@@ -1,0 +1,1750 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+
+.carousel {
+    @include resD((
+        overflow: hidden,
+        width: 90%,
+        padding-bottom: 10px
+    ));
+    @include resSm((
+        overflow: hidden,
+        width: 90%,
+        margin-left:5%  
+    ))
+}
+.events_carousel {
+    @include resD((
+        overflow: hidden,
+        width: 100%,
+    ));
+    @include resSm((
+        overflow: hidden,
+        width: 90%,
+    ));
+}
+.bannner_carousel {
+    @include resD((
+        width: 100%,
+        height: auto,
+        position: absolute,
+        top:100px,
+    ));
+    @include resSm((
+        width: 100%,
+        margin-left:0%,
+    ))   
+}
+.winner_c_carousel {
+    @include resD((
+        overflow: hidden,
+        width: 90%,
+        margin-left:auto,
+        margin-right:auto,
+        height: auto,
+        position: relative,
+        top: -90px,
+    ));
+    @include resSm((
+        overflow: hidden,
+        width: 100%,
+        margin-left:0%,
+        height: 450px,
+        position: relative,
+        top: -100px,
+    ))
+}
+
+.BannerCarousel_mob_para {
+    @include resD((
+    ));
+    @include resSm((
+        width: 50%,
+        margin-top: -10px
+    ))
+}
+
+.carousel_single_item {
+    @include resD((
+        overflow: hidden,
+        width: 90%,
+        margin-left:35%
+    ));
+}
+
+.inner
+ {
+    @include resD((
+        white-space: nowrap,
+        transition: transform 0.3s,
+        display: -webkit-box,
+    ));
+    @include resSm((
+        white-space: nowrap,
+        transition: transform 0.3s,
+        display: -webkit-box,
+    ))
+}
+
+.carousel-item {
+    @include resD((
+        display: inline-flex,
+        align-items: center,
+        justify-content: center,
+        background-color: #fafafa,
+        
+    ));
+    @include resSm((
+        display: flex,
+        align-items: center,
+        justify-content: center,
+        background-color: #fafafa,
+        // color: #fff,
+    ))
+    
+}
+.winner-banner-carousel{
+    z-index: 99;
+    @include resD((
+        top: 120px,
+        background-image: url('../../../../../src/assets/eventPage/bg_triangle.svg'),
+        background-repeat: no-repeat,
+        background-position: top,
+        background-size: 50%,
+        height: 84%,
+    ));
+    @include resSm((
+        top: 60px,
+        position: absolute,
+        background-image: url('../../../../../src/assets/eventPage/bg_triangle.svg'),
+        background-repeat: no-repeat,
+        background-position: center,
+        background-size: 76% 100%,
+    ));
+}
+.prizeHolder{
+    text-align: center;
+    p{
+        @include resD((
+            margin: 5px 0,
+        ));
+        @include resSm((
+            margin: 5px 0,
+        ));
+    };
+    @include resD((
+        display: flex,
+        justify-content: center,
+        align-items: center,
+        flex-direction: column,
+        margin-top: 0px,
+    ));
+    @include resSm((
+        display: flex,
+        justify-content: center,
+        align-items: center,
+        flex-direction: column,
+        margin-top:0,
+    ));
+    .text{
+        @include resD((
+            margin: 10px 0,
+            margin-bottom: 10px,
+        ));
+        @include resSm((
+            margin: 0,
+            margin-bottom: 0px !important,
+        ))
+    }
+}
+
+.carousel-item_winner {
+    flex-direction: column;
+    @include resD((
+        display: inline-flex,
+        align-items: center,
+        justify-content: center,
+        // height: 400px,
+        // background-color: #00171F,
+        // background-image: url(../../../../../src/assets/eventPage/bg_triangle.svg),
+        background-repeat: no-repeat,
+        background-size: 1400px 450px,
+        background-position: center,
+    ));
+    @include resSm((
+        display: inline-flex,
+        align-items: center,
+        justify-content: flex-start,
+        // height: 360px,
+        // background-color: #00171F,
+        // background-image: url(../../../../../src/assets/eventPage/bg_triangle.svg),
+        background-repeat: no-repeat,
+        background-size: 350px 350px,
+        background-position: center
+    ))
+    
+}
+
+
+.speak_mob_indicators {
+    @include resD((
+        display: none
+    ));
+    @include resSm((
+        position: relative,
+        top: -335px,
+        right: -245px,
+        display: flex,
+        justify-content: center,
+        align-items: center
+    ))
+}
+
+.speak_mob_indicators>button {
+    @include resSm((
+        margin: 5px
+    ))
+}
+
+
+.Winner_App .indicators {
+    position: absolute;
+    @include resD((
+        display: flex,
+        width: 100%,
+        margin: auto,
+        justify-content: center,
+        margin-top: 0px,
+        bottom: 0px,
+    ));
+    @include resSm((
+        display: flex,
+        justify-content: center,
+        margin-top:unset,
+        width:100%,
+        bottom:5px,
+    )) 
+}
+
+
+.carousel_navs {
+    @include resD((
+        position: relative,
+        top: -30px
+    ))
+}
+
+.banner_carousel_navs {
+    @include resD((
+        position: relative,
+        top: 30px,
+        left: 10px,
+        display:flex,
+        align-items:center,
+        justify-content:center
+    ));
+    @include resSm((
+        position: relative,
+        top: 10px,
+        display:flex,
+        align-items:center,
+        justify-content:center
+    ))
+}
+
+.indicators>div>button.active {
+    @include resD((
+        width: 15px,
+        height: 15px,
+        background: #00ADE6,
+        border: none,
+        border-radius: 50%,
+        margin-right: 10px
+    ));
+    @include resSm((
+        width: 8px,
+        height: 8px,
+        padding:0,
+        background: #00ADE6,
+        border: none,
+        border-radius: 40%,
+        margin-right: 10px
+    ))
+}
+
+.Carousel_head {
+    font-family: Gilroy;
+    @include resD((
+        font-style: normal,
+        font-weight: bolder,
+        font-size: 40px,
+        line-height: 49px,
+        display: flex,
+        align-items: center,
+        color: #282828,
+        width: 60%,
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: bold,
+        font-size: 18px,
+        line-height: 120%,
+        letter-spacing: -0.02em,
+        color: #403F3F,
+        width: 60%,
+        margin-left: 15px,
+    ))
+}
+
+.EventSpeakers_ui{
+    @include resD((
+        position: relative,
+        left: 10px,
+        width: 280px,
+        height: 280px,
+        top: 0px
+    ));
+    @include resSm((
+        position: relative,
+        left: -5px,
+        width: 72px,
+        height: 72px,
+        top: unset,
+    ))
+}
+.EventSpeakers_text{
+    @include resD((
+        width: inherit,
+    ));
+    @include resSm((
+        width: 100px,
+    ))
+}
+
+.BannerCarousel_ui {
+    @include resD((
+        position: relative,
+        z-index:0,
+        width: 80%,
+        border-radius: 20px,
+        display: inline-block
+    ));
+    @include resSm((
+        display: none
+    ))
+}
+
+.BannerCarousel_App {
+    @include resD((
+        position: relative,
+        left: -100px
+    ));
+    @include resSm((
+        position: relative,
+        left: 0px,
+        // height: 400px
+    ))
+}
+
+.EventSpeakers_profile{
+    @include resD((
+        font-style: normal,
+        font-weight: 600,
+        font-size: 14px,
+        line-height: 170%,
+        letter-spacing: 0.8px,
+        text-transform: uppercase,
+        color: #005773,
+        position: relative,
+        top: 0px,
+        left: 0px,
+        text-align: left
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: normal,
+        font-size: 11px,
+        line-height: 170%,
+        text-align: center,
+        letter-spacing: 0.8px,
+        text-transform: uppercase,
+        color: #005773,
+        position: relative,
+        left: -25px,
+        top: -40px
+    ))
+}
+
+.EventSpeakers_name{
+    @include resD((
+        font-style: normal,
+        font-weight: bold,
+        font-size: 40px,
+        line-height: 140%,
+        color: #121127,
+        position: relative,
+        top: -20px,
+        left: 0px,
+        margin-top: 25px,
+        margin-bottom: 0,
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: 600,
+        font-size: 16px,
+        line-height: 140%,
+        color: #121127,
+        position: relative,
+        left: 13px,
+        top: -50px        
+    ))
+}
+
+.EventSpeakers_text {
+    @include resD((
+        position: relative,
+        left: 40px,
+        width: 60%
+    ))
+}
+
+.EventSpeakers_desc{
+    @include resD((
+        display: block,
+        // flex-wrap: wrap,
+        // font-style: normal,
+        // font-weight: normal,
+        font-size: 16px,
+        line-height: 180%,
+        color: rgba(18, 17, 39, 0.56),
+        width: 350px,
+        position: relative,
+        left: 0px,
+        top: -10px,
+        white-space: normal,
+    ));
+    @include resSm((
+        // display: flex,
+        // flex-wrap: wrap,
+        // font-style: normal,
+        // font-weight: normal,
+        // font-size: 14px,
+        // line-height: 180%,
+        // color: rgba(18, 17, 39, 0.56),
+        // position: relative,
+        // left: 13px,
+        // top: -60px,
+    ))
+}
+
+.carousel_prev_btn {
+    @include resD((
+        width: 38px,
+        height: 38px,
+        background: #00ADE6,
+        border-radius: 34.0195px,
+        transform: rotate(180deg),
+        border: none,
+        position: relative,
+        left: 80px,
+        top: 5px,
+        cursor: pointer,
+        display: block
+    ));
+    @include resSm((
+        width: 22px,
+        height: 22px,
+        background: #DCDCDC,
+        border-radius: 34.0195px,
+        transform: rotate(180deg),
+        border: none,
+        position: relative,
+        left: 215px,
+        top: -298px,
+        display: none
+    ));
+}
+.mob_carousel_prev_btn {
+    @include resD((
+        display: none
+    ));
+    @include resSm((
+        width: 22px,
+        height: 22px,
+        background: #DCDCDC,
+        border-radius: 34.0195px,
+        transform: rotate(180deg),
+        border: none,
+        position: relative,
+        // left: 215px,
+        // top: -298px,
+        display: block
+    ));
+}
+
+.banner_carousel_prev_btn {
+    @include resD((
+        width: 60px,
+        height: 60px,
+        background: #504F4F,
+        border-radius: 34.0195px,
+        transform: rotate(180deg),
+        border: none,
+        display:flex,
+        align-items:center,
+        justify-content:center,
+        position:relative,
+        top:-300px,
+        cursor: pointer
+    ));
+    @include resSm((
+        width: 22px,
+        height: 22px,
+        background: #DCDCDC,
+        border-radius: 34.0195px,
+        transform: rotate(180deg),
+        border: none,
+        display: none
+    ));
+}
+
+.carousel_next_btn {
+    @include resD((
+        width: 38px,
+        height: 38px,
+        background: #00ADE6,
+        border-radius: 34.0195px,
+        // transform: rotate(180deg),
+        border: none,
+        position: relative,
+        cursor: pointer,
+        display: flex,
+        align-items:center,
+        justify-content:center
+    ));
+    @include resSm((
+        width: 22px,
+        height: 22px,
+        background: #00ADE6,
+        border-radius: 34.0195px,
+        // transform: rotate(180deg),
+        border: none,
+        position: relative,
+        display: none
+    ));
+}
+.mob_carousel_next_btn {
+    @include resD((
+        display: none
+    ));
+    @include resSm((
+        width: 22px,
+        height: 22px,
+        background: #00ADE6,
+        border-radius: 34.0195px,
+        // transform: rotate(180deg),
+        border: none,
+        position: relative,
+        // left: 230px,
+        // top: -298px,
+        display: display
+    ));
+}
+
+.banner_carousel_next_btn {
+    @include resD((
+        width: 60px,
+        height: 60px,
+        background: #504F4F,
+        border-radius: 34.0195px,
+        // transform: rotate(180deg),
+        border: none,
+        left:unset,
+        display: block
+    ));
+    @include resSm((
+        width: 22px,
+        height: 22px,
+        background: #00ADE6,
+        border-radius: 34.0195px,
+        // transform: rotate(180deg),
+        border: none,
+        display: none
+    ));
+}
+
+.carousel_prev_text {
+    @include resD((
+        position: relative,
+        top: -1px,
+        width: 10px,
+        left: 5px,
+        display: block
+    ));
+    @include resSm((
+        display: none
+    ))
+}
+
+.banner_carousel_prev_text {
+    @include resD((
+        position: relative,
+        width: 20px,
+        height:20px,
+        display: block
+    ));
+    @include resSm((
+        position: relative,
+        width: 7px,
+        display: block
+    ))
+}
+
+.carousel_next_text {
+    @include resD((
+        position: relative,
+        top: 1px,
+        width: 10px,
+        left: 5px,
+        display: block
+    ));
+    @include resSm((
+        display: none
+    ))
+}
+
+.banner_carousel_next_text {
+    @include resD((
+        
+        width: 20px,
+        height:20px,
+       
+        display: block
+    ));
+    @include resSm((
+       
+        width: 7px,
+        
+    ))
+}
+
+.caro_active_btn {
+    @include resD((
+        width: 15px,
+        height: 15px,
+        left: 876px,
+        background: #00ADE6,
+        opacity: 0.2,
+        border: none,
+        border-radius: 50%,
+        margin-right: 10px
+    ));
+    @include resSm((
+        padding:0,
+        width: 8px,
+        height: 8px,
+        left: 876px,
+        background: #00ADE6,
+        opacity: 0.2,
+        border: none,
+        border-radius: 40%,
+        margin-right: 10px
+    ));
+}
+
+.variable_width_caro {
+    @include resD((
+        width: 50%,
+        display: none
+    ));
+    @include resSm((
+        width: 50%,
+        display: none        
+    ))
+}
+
+.mobile_back_button {
+    @include resD((
+        display: none
+    ));
+    @include resSm((
+        display: inline-block,
+        transform: rotate(180deg),
+        position: relative,
+        top: 2px
+    ))
+}
+
+.banner_mobile_back_button {
+    display: none
+}
+
+.mobile_next_button {
+    @include resD((
+        display: none
+    ));
+    @include resSm((
+        display: inline-block,
+        position: relative,
+        top: 2px
+    ))
+}
+
+.banner_mobile_next_button {
+    display: none
+}
+
+.BannerCarousel_p {
+    @include resD((
+        font-style: normal,
+        font-weight: normal,
+        font-size: 20.4474px,
+        line-height: 140%,
+        color: #FFFFFF,
+        
+        
+        
+        display:block
+
+        
+        
+    ));
+    @include resSm((
+        display: none
+    ))
+}
+
+.BannerCarousel_info {
+    @include resD((
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 18px,
+        text-align: left,
+        text-transform: capitalize,
+        color: #FFFFFF,
+        display: block,
+        margin: 5px 0,
+    ));
+    @include resSm((
+        display: none
+    ))
+}
+
+.BannerCarousel_info>img {
+    @include resD((
+        width: 35px
+    ));
+    @include resSm((
+        
+    ))
+}
+
+.BannerCarousel_info>span {
+    @include resD((
+        position: relative,
+        top: -10px,
+        left: 10px
+    ));
+    @include resSm((
+        position: relative,
+        top: -10px,
+        left: 10px
+    ));
+}
+
+.BannerCarousel_info_2 {
+    @include resD((
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 18px,
+        text-align: left,
+        text-transform: capitalize,
+        color: #FFFFFF,
+       
+        display:block
+    ));
+    @include resSm((
+        display: none,
+    ))
+}
+
+.BannerCarousel_info_2>img {
+    @include resD((
+        width: 35px
+    ));
+    @include resSm((
+        
+    ))
+}
+
+.BannerCarousel_info_2>span {
+    @include resD((
+        position: relative,
+        top: -10px,
+        left: 10px
+    ));
+    @include resSm((
+        position: relative,
+        top: -10px,
+        left: 10px
+    ));
+}
+
+.BannerCarousel_info_3 {
+    @include resD((
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 18px,
+        text-align: left,
+        text-transform: capitalize,
+        color: #FFFFFF,
+        display: inline-block
+    ));
+    @include resSm((
+        display: none
+    ))
+}
+
+.BannerCarousel_info_3>img {
+    @include resD((
+        width: 35px
+    ));
+    @include resSm((
+        
+    ))
+}
+
+.BannerCarousel_info_3>span {
+    @include resD((
+        position: relative,
+        top: -10px,
+        left: 10px
+    ));
+    @include resSm((
+        position: relative,
+        top: -10px,
+        left: 10px
+    ));
+}
+
+.BannerCarousel_btn {
+    @include resD((
+        display: flex,
+        flex-direction: row,
+        justify-content: center,
+        align-items: center,
+        padding: 16px 20px 16px 24px,
+        font-size: 16px,
+        font-weight:700,
+        background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%),
+        border-radius: 24px,
+        border: none,
+        width: 290px,
+        margin-top:30px,
+        color:white
+    ));
+    @include resSm((
+        display: none
+    ))
+}
+
+.EventDesc_base_caro {
+    @include resD((
+        display: none
+    ));
+    @include resSm((
+        display: block,
+        position: relative,
+        top: -20px,
+        // left: 20px,
+        margin-top: 20px
+    ))
+}
+.mobile_caro_banner {
+    @include resD((
+        display: none
+    ));
+    @include resSm((
+        display: inline-block,
+        width: 100%,
+        // height: 600px,
+        // margin-left: 30px
+    ))
+}
+
+.BannerCarousel_mobile_trans {
+    @include resD((
+        display: none,
+    ));
+    @include resSm((
+        display: block,
+        position: relative,
+        top: 70px,
+        width: 100%,
+    ))
+}
+
+.BannerCarousel_black_block {
+    @include resD((
+        display: none
+    ));
+    @include resSm((
+        display: block,
+        position: relative,
+        top: -75px,
+        width: 100%
+
+    ))
+}
+
+.Winner_App {//winner_c_carousel
+    position: relative;
+    overflow: hidden;
+    @include resD((
+        background-color: #00171F,
+        margin-bottom: 50px,
+        padding-bottom: -50px,
+        height: 850px,
+        margin-top: 50px,
+    ));
+    @include resSm((
+        background-color: #00171F,
+        margin-bottom: 50px,
+        padding-bottom: 10px,
+        height: 360px,
+        margin-top: 50px,
+    ))
+}
+
+.Winner_Carousel {
+    @include resD((
+    ))
+}
+
+.carousel .carousel-item:nth-child(1){
+    @include resD((
+        margin-left:8%,
+    ));
+}
+
+.WinnerCarousel_head {
+    font-family: Gilroy;
+    & span{
+        color: #00ADE6;
+        @include resD((
+            margin-right: 10px,
+            width: fit-content,
+        ));
+        @include resSm((
+            margin-right:5px,
+            width: fit-content,
+        ))
+    }
+    @include resD((
+        font-style: normal,
+        font-weight: bolder,
+        font-size: 44px,
+        line-height: 54px,
+        display: block,
+        align-items: center,
+        color: white,
+        text-align: center,
+        margin:auto,
+        background-color: #00171F,
+        padding-top: 0,
+        margin-top: -16px,
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: 800,
+        font-size: 18px,
+        line-height: 22px,
+        display: flex,
+        align-items: center,
+        color: white,
+        z-index: 2,
+        justify-content: center,
+        margin: auto,
+        padding-top: 0,
+        margin-top: 10px,
+        padding-left: 10px,
+        padding-right: 10px,
+        // overflow: hidden,
+        // text-overflow: ellipsis,
+        // white-space: pre,
+    ));
+}
+.WinnerCarousel_head_partyPoper{
+    background-image: url('../PopUp/assets/partyPopper.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include resD((
+        display: inline-block,
+        height: 44px,
+        width: 44px,
+    ));
+    @include resSm((
+        display: none,
+    ))
+}
+
+.bg_triable {
+    @include resD((
+        width: 70%,
+        position: relative,
+        left: 17%
+    ));
+    @include resSm((
+    ))
+}
+
+.decorator_1 {
+    @include resD((
+        width: 4%,
+        position: absolute,
+        left: 91.1%,
+        top: unset,
+        bottom: 3px,
+        right:unset,
+    ));
+    @include resSm((
+        position: absolute,
+        left: unset,
+        right:0,
+        top: unset,
+        bottom: 3px,
+    ))
+}
+
+.decorator_2 {
+    @include resD((
+        width: 4%,
+        position: relative,
+        left: 5%,
+    ));
+    @include resSm((
+        // width: 4%,
+        position: relative,
+        left: 1px,
+        z-index: 2
+    ))
+}
+
+.secondPrize {
+    @include resD((
+        width: 200px,
+        height: 200px,
+        position: relative,
+ 
+    ));
+    @include resSm((
+        width: 40px,
+        height: 40px,
+        position: relative,
+        // left: -10px,
+        // top: -60px
+    ));
+    &:before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        @include resD((
+            border-radius: 999px,
+            padding: 4px,
+        ));
+        @include resSm((
+            border-radius: 999px,
+            padding: 2px,
+        ));
+        background: linear-gradient(136.81deg, #A7A7AD -8.16%, rgba(215, 215, 215, 0) 106.83%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+	}
+}
+
+.firstPrize {
+    position: relative;
+    @include resD((
+        width: 268px,
+        position: relative,
+        height: 268px,
+    ));
+    @include resSm((
+        width: 56px,
+        height: 56px,
+        position: relative,
+        // left: 30px,
+        // top: -85px
+    ));
+    &:before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        @include resD((
+            border-radius: 999px,
+            padding: 4px,
+        ));
+        @include resSm((
+            border-radius: 999px,
+            padding: 2px,
+        ));
+        background: linear-gradient(134.33deg, #D6AF36 -4.03%, #FEE101 100%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+	}
+}
+
+.thirdPrize {
+    @include resD((
+        width: 200px,
+        position: relative,
+        height: 200px,
+    ));
+    @include resSm((
+        width: 40px,
+        position: relative,
+        height: 40px,
+        // left: 78px,
+        // top: -60px
+    ));
+    &:before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        @include resD((
+            border-radius: 999px,
+            padding: 4px,
+        ));
+        @include resSm((
+            border-radius: 999px,
+            padding: 2px,
+        ));
+        background: linear-gradient(135deg, #842A02 -3.13%, rgba(167, 112, 68, 0) 109.12%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+	}
+}
+
+.forthPrize{
+    @include resD((
+        width: 200px,
+        height: 200px,
+        position: relative,
+    ));
+    @include resSm((
+        width: 32px,
+        height: 32px,
+        position: relative,
+        // left: -10px,
+        // top: 60px
+    ));
+    &:before {
+		content: "";
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        @include resD((
+            border-radius: 999px,
+            padding: 4px,
+        ));
+        @include resSm((
+            border-radius: 999px,
+            padding: 2px,
+        ));
+        background: linear-gradient(135deg, #E5E4E2 -3.13%, rgba(160, 160, 158, 0) 109.12%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+	}
+}
+.prizeCardBox{
+    @include resD((
+        border: 5px solid transparent,
+        margin-bottom: 5px,
+    ));
+    @include resSm((
+       border: 2px solid transparent,
+       margin-bottom: 5px,
+    ));
+    flex-shrink: 0;
+	background-clip: content-box, border-box;
+	background-size: cover;
+	box-sizing: border-box;
+    border-radius: 999px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.fifthPrize{
+    @include resD((
+        width: 200px,
+        height: 200px,
+        position: relative,
+    ));
+    @include resSm((
+        width: 32px,
+        height: 32px,
+        position: relative,
+        // left: 70px,
+        // top: 60px
+    ));
+	&:before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        @include resD((
+            border-radius: 999px,
+            padding: 4px,
+        ));
+        @include resSm((
+            border-radius: 999px,
+            padding: 2px,
+        ));
+        background: linear-gradient(135deg, #E5E4E2 -3.13%, rgba(160, 160, 158, 0) 109.12%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+	}
+}
+
+
+.secondHead{
+    @include resD((
+        font-style: normal,
+        font-weight: 600,
+        font-size: 20px,
+        line-height: 40px,
+        text-align: center,
+        letter-spacing: 0.8px,
+        text-transform: uppercase,
+        color: #005773,
+        position: relative,
+        margin-bottom: 0,
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: 600,
+        font-size: 13px,
+        line-height: 18px,
+        text-align: center,
+        letter-spacing: 0.8px,
+        text-transform: uppercase,
+        color: #005773,
+        position: relative,
+        margin-bottom: 0,
+        // left: -205px,
+        // top: 50px
+    ))
+}
+
+.prizeTitle{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-align: center;
+    opacity: 0.7;
+    @include resD((
+        font-weight: 400,
+        font-size: 20px,
+        // margin-top: -8px,
+        display: block,
+    ));
+    @include resSm((
+        font-weight: 400,
+        font-size: 12px,
+        // margin-top: -14px,
+        display: none,
+    ))
+    & li{
+        display: inline;
+    }
+    & li::after { 
+    content: '\a';
+    }
+    & li:nth-child(3n+3):after {
+      white-space: pre;
+    }
+}
+.secondName{
+    @include resD((
+        font-style: normal,
+        font-weight: bold,
+        font-size: 24px,
+        line-height: 34px,
+        color: #FFFFFF,
+        position: relative,
+        text-align: center,
+        width: fit-content,
+        overflow-x: unset,
+        text-overflow: unset,
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: bold,
+        color: #FFFFFF,
+        text-align: center,
+        position: relative,
+        font-size: 13px,
+        line-height: 18px,
+        width: 80px,
+        overflow-x: hidden,
+        text-overflow: ellipsis,
+    ))
+}
+
+.firstHead{
+    @include resD((
+        font-style: normal,
+        font-weight: 600,
+        font-size: 20px,
+        line-height: 34px,
+        text-align: center,
+        letter-spacing: 0.8px,
+        text-transform: uppercase,
+        color: #FAAD14,
+        position: relative,
+        margin-bottom: 0px !important,
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: 600,
+        font-size: 13px,
+        line-height: 22px,
+        text-align: center,
+        letter-spacing: 0.8px,
+        text-transform: uppercase,
+        color: #FAAD14,
+        position: relative,
+        // left: -100px,
+        // top: -30px
+        margin-bottom: 0px !important,
+    ))
+}
+
+.firstName{
+    @include resD((
+        font-style: normal,
+        font-weight: bold,
+        font-size: 24px,
+        line-height: 34px,
+        color: #FFFFFF,
+        position: relative,
+        text-align: center,
+        // margin-bottom: 20px !important,
+        width: fit-content,
+        overflow-x: unset,
+        text-overflow: unset,
+    ));
+    @include resSm((
+        // margin-bottom: 20px !important,
+        font-style: normal,
+        font-weight: bold,
+        font-size: 13px,
+        line-height: 18px,
+        color: #FFFFFF,
+        text-align: center,
+        position: relative,
+        width: 90px,
+        overflow-x: hidden,
+        text-overflow: ellipsis,
+        // left: -100px,
+        // top: -45px
+    ))
+}
+
+.thirdHead{
+    @include resD((
+        font-style: normal,
+        font-weight: 600,
+        font-size: 20px,
+        line-height: 34px,
+        text-align: center,
+        letter-spacing: 0.8px,
+        text-transform: uppercase,
+        color: #01AA93,
+        position: relative,
+        margin-bottom: 0px !important,
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: 600,
+        font-size: 13px,
+        line-height: 22px,
+        text-align: center,
+        letter-spacing: 0.8px,
+        text-transform: uppercase,
+        color: #01AA93,
+        position: relative,
+        margin-bottom: 0px !important,
+        // left: 13px,
+        // top: -60px
+    ))
+}
+
+.thirdName{
+    @include resD((
+        font-style: normal,
+        font-weight: bold,
+        font-size: 24px,
+        line-height: 34px,
+        color: #FFFFFF,
+        position: relative,
+        width: fit-content,
+        overflow-x: unset,
+        text-overflow: unset,
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: bold,
+        font-size: 13px,
+        line-height: 18px,
+        color: #FFFFFF,
+        text-align: center,
+        position: relative,
+        width: 80px,
+        overflow-x: hidden,
+        text-overflow: ellipsis,
+        // left: 13px,
+        // top: -75px
+    ))
+}
+
+.forthHead{
+    @include resD((
+        font-style: normal,
+        font-weight: 600,
+        font-size: 20px,
+        line-height: 34px,
+        text-align: center,
+        letter-spacing: 0.8px,
+        text-transform: uppercase,
+        color: #80D6F3,
+        position: relative,
+        margin-bottom: 0px !important,
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: 600,
+        font-size: 13px,
+        line-height: 22px,
+        text-align: center,
+        letter-spacing: 0.8px,
+        text-transform: uppercase,
+        color: #005773,
+        position: relative,
+        margin-bottom: 0px !important,
+        // left: -115px,
+        // top: 135px
+    ))
+}
+
+.forthName{
+    @include resD((
+        font-style: normal,
+        font-weight: bold,
+        font-size: 24px,
+        line-height: 34px,
+        color: #FFFFFF,
+        position: relative,      
+        width: fit-content,
+        overflow-x: unset,
+        text-overflow: unset,
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: bold,
+        font-size: 13px,
+        line-height: 18px,
+        color: #FFFFFF,
+        text-align: center,
+        position: relative,
+        width: 70px,
+        overflow-x: hidden,
+        text-overflow: ellipsis,
+        // left: -115px,
+        // top: 120px
+    ))
+}
+
+.fifthHead{
+    @include resD((
+        font-style: normal,
+        font-weight: 600,
+        font-size: 20px,
+        line-height: 34px,
+        text-align: center,
+        letter-spacing: 0.8px,
+        text-transform: uppercase,
+        color: #80D6F3,
+        position: relative,
+        margin-bottom: 0px !important,
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: 600,
+        font-size: 13px,
+        line-height: 22px,
+        text-align: center,
+        letter-spacing: 0.8px,
+        text-transform: uppercase,
+        color: #005773,
+        position: relative,
+        margin-bottom: 0px !important,
+        // left: 15px,
+        // top: 80px
+    ))
+}
+
+.fifthName{
+    @include resD((
+        font-style: normal,
+        font-weight: bold,
+        font-size: 24px,
+        line-height: 34px,
+        color: #FFFFFF,
+        position: relative,
+        width: fit-content,
+        overflow-x: unset,
+        text-overflow: unset,
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: bold,
+        font-size: 13px,
+        line-height: 18px,
+        color: #FFFFFF,
+        text-align: center,
+        position: relative,
+        width: 70px,
+        overflow-x: hidden,
+        text-overflow: ellipsis,
+        // left: 15px,
+        // top: 65px
+    ))
+}
+
+
+.winner_first_section {
+    position: relative;
+    display: flex;
+    @include resD((
+        margin-top: -10px,
+    ));
+    @include resSm((
+        margin-top: 40px,
+        align-items: flex-end,
+    ));
+    & .firstSectionWinner{
+        @include resD((
+            margin: 0 150px,
+        ));
+        @include resSm((
+            margin: 0 28px,
+        ))
+    }
+    &.onlyOneSection{
+        @include resD((
+           margin-top: 150px !important,
+        ));
+        @include resSm((
+            margin-top: 60px,
+            align-items: flex-end,
+        ));
+    }
+}
+
+.winner_first_sec_text {
+    @include resD((
+        position: relative,
+    ));
+    @include resSm((
+        position: relative,
+        // left: 80px
+    ))
+}
+
+.winner_second_section {
+    position: relative;
+    display: flex;
+    @include resD((
+        margin-top: 25px,
+    ));
+    @include resSm((
+        margin-top: 20px,
+    ));
+    & .prizeHolder{
+        @include resD((
+            margin: 0 90px,
+        ));
+        @include resSm((
+            margin: 0 15px,
+        ))
+    }
+}
+
+.winner_second_sec_text {
+    @include resD((
+        position: relative,
+    ));
+    @include resSm((
+        position: relative,
+        // left: -130px
+    ))
+}
+
+.winner_carousel_prev_btn {
+    align-items: center;
+    @include resD((
+        width: 32px,
+        height: 32px,
+        background: #DCDCDC,
+        border-radius: 34.0195px,
+        transform: rotate(180deg),
+        border: none,
+        position: relative,
+        left: 0,
+        top: 5px,
+        cursor: pointer,
+        margin-right:10px,
+        display: flex,
+    ));
+    @include resSm((
+        display: none,
+        width: 24px,
+        height: 24px,
+        background: #DCDCDC,
+        border-radius: 34.0195px,
+        transform: rotate(180deg),
+        border: none,
+        position: relative,
+        left: 35px,
+        top: 20px,
+        cursor: pointer
+    ));
+}
+
+.carousel_invisible {
+    display: none;
+}
+
+.winner_carousel_next_btn {
+    align-items: center;
+    @include resD((
+        width: 32px,
+        height: 32px,
+        background: #00ADE6,
+        border-radius: 34.0195px,
+        // transform: rotate(180deg),
+        border: none,
+        position: relative,
+        left: 0,
+        top: 5px,
+        cursor: pointer,
+        margin-left: 0px,
+        display: flex,
+    ));
+    @include resSm((
+        display: none,
+        width: 24px,
+        height: 24px,
+        background: #00ADE6,
+        border-radius: 34.0195px,
+        // transform: rotate(180deg),
+        border: none,
+        position: relative,
+        left: -45px,
+        top: 20px,
+        cursor: pointer
+    ));
+}
+
+.winner_carousel_navs {
+    @include resD((
+        position: absolute,
+        top: -40px,
+    ));
+    @include resSm((
+    ))
+}
+
+
+.single_item_caraousel{
+    display: flex;
+    border-radius: 24px; 
+    @include resD((
+        width: 80%,
+        height: 100%,
+    flex-wrap:unset
+
+    ));
+    @include resSm((
+        width: 100%,
+    height: 100%,
+    border-radius: 24px,
+    flex-wrap:wrap-reverse
+    ))
+}
+   
+
+.wow{
+    
+    @include resD((
+        padding-left:50px,
+        padding-top:130px,
+        width:400px ,
+        height:300px, 
+        display:flex,
+        flex-direction:column,
+        justify-content:flex-start,
+        align-items:left  
+    ));
+    @include resSm((
+  
+    ))
+}
+
+.banner__main__mobile{
+    @include resD((
+          display:none
+    ));
+    @include resSm((
+        width:100%,
+        
+        display:inline-flex,
+        align-items:center,justify-content:center
+    ))
+}
+
+// .mobile_banner_caraousel{
+//     @include resD((
+//         display:none
+//   ));
+//   @include resSm((
+//       width:100%,
+      
+//       display:flex
+//   ))
+// }

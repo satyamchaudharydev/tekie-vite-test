@@ -1,0 +1,34 @@
+@import 'src/scss/size.scss';
+
+.input {
+  width: 100%;
+  border: none;
+  border-bottom: hs(1.5px) solid rgba(0, 0, 0, .1) !important;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+  font-size: hs(20px);
+  font-weight: bold;
+  color: #000;
+  opacity: .7;
+  outline: none !important;
+}
+
+.firstField {
+  width: calc(100% - #{hs(104px)});
+  min-height: hs(30px);
+}
+
+.field {
+  width: calc(100% - #{hs(104px)});
+  min-height: hs(30px);
+  margin-top: hs(80px);
+}
+
+.submitButtonContainer {
+  width: 100%;
+  height: hs(66px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: hs(78px);
+  margin-right: hs(52px);
+}

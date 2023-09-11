@@ -1,0 +1,531 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme.scss';
+
+.ind-code-showcase-row {
+  display: flex;
+}
+
+.ind-code-showcase-container {
+  @include resD((
+    padding: $s-xl $s-xxxl,
+    padding-top: ($s-xl),
+  ));
+  @include resM((
+      padding: 0,
+      padding-top: $s-m,
+      padding-bottom: $s-m,
+  ));
+
+  & > .ind-code-showcase-row {
+    position: relative;
+    @include resD((
+      display: flex
+    ));
+    @include resM((
+      display: block,
+    ));
+  }
+}
+
+.ind-code-showcase-mobile-hero-t {
+  @include resD((
+    display: none
+  ));
+  @include resM((
+    font-weight: bold,
+    line-height: 19px,
+    color: $deep-sky-blue,
+    opacity: 0.8,
+    padding: $s-xxxs $s-s $s-s,
+    display: flex,
+    justify-content: center,
+    align-items: center
+  ));
+}
+
+.ind-code-showcase-leftArrow {
+  background-repeat: no-repeat;
+  width: hs(22.7px);
+  cursor: pointer;
+  padding: 0px $s-m 0 0;
+  margin: $s-s;
+  height: hs(38.9px);
+  object-fit: contain;
+  background-size: contain;
+  background-image: url('../../../assets/quizLeftArrow.svg');
+
+  @include resD((
+    display: block
+  ));
+  @include resM((
+    display: none
+  ));
+  &:hover {
+    color: #aaacae;
+    opacity: 0.7;
+  }
+}
+
+.ind-code-showcase-m-rxl {
+  @include resD((
+    margin-right: $s-xl,
+  ));
+}
+
+.ind-code-showcase-ph-card {
+  box-shadow: $box-shadow;
+  background: $white;
+}
+
+.ind-code-showcase-card-container {
+  @include resD((
+    min-width: 75vw, 
+    max-width: 80vw,
+    min-height: 60vh
+  ));
+  @include resM((
+    min-width: 100%, 
+    min-height: 100%
+  ));
+}
+
+.ind-code-showcase-code-block {
+  position: relative;
+  & > .ind-code-showcase-row {
+    @include resD((
+      padding: $s-xm,
+      padding-bottom: $s-s,
+      justify-content: flex-start,
+      align-items: flex-start,
+      flex-direction: row
+    ));
+    @include resM((
+      padding: $s-m 0,
+      padding-bottom: 0,
+      justify-content: center,
+      align-items: center,
+      flex-direction: column
+    ));
+  }
+}
+
+.ind-code-showcase-author-details {
+  color: $emperor;
+  font-weight: normal;
+  
+  @include resD((
+    width: 8vw,
+    text-align: left
+  ));
+    @include resM ((
+    text-align: center
+  ));
+
+  & .ind-code-showcase-author-profile-img-container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    
+    @include resD((
+      display:block
+    ));
+
+    @include resM((
+      display:flex
+    ));
+
+    & .ind-code-showcase-profile-img {
+      display: block;
+      box-sizing: border-box;
+      border-radius: 100%;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-position: top center !important;
+      border: 2px solid $swamp;
+
+      @include resD((
+        width: 100px,
+        height: 100px,
+      ));
+      @include resM((
+        width: 70px,
+        height: 70px,
+      ));
+    }
+  }
+
+  & .ind-code-showcase-author-name {
+    overflow: hidden;
+    white-space: pre;
+    text-overflow: ellipsis;
+    line-height: 32px;
+    
+    @include resD((
+      margin-top: hs(10px),
+      font-size: 20px
+    ));
+    @include resM((
+      font-size: 18px
+    ));
+  }
+  
+  & .ind-code-showcase-author-grade {
+    opacity: 0.6;
+    color: $emperor;
+    @include resD((
+      line-height: 20px,
+      font-size: 18px,
+    ));
+    @include resM((
+      line-height: 18px,
+      font-size: 16px
+    ));
+  }
+}
+
+.ind-code-showcase-details-container {
+  width: 100%;
+
+  .ind-code-showcase-details {
+    width: 100%;
+    box-sizing: border-box;
+
+    @include resD((
+      padding: 0px,
+      margin-top: 0
+    ));
+    @include resM((
+      padding: 0px $s-m,
+      margin-top: $s-s
+    ));
+
+    & .ind-code-showcase-file-name {
+      margin: 0;
+      color: $emperor;
+      @include resD((
+        font-weight: 600,
+        font-size: 26px,
+      ));
+      @include resM((
+        font-weight: bold,
+        font-size: 22px
+      ))
+    }
+
+    & .ind-code-showcase-timestamp {
+      color: $emperor-66;
+      font-size: 16px;
+      margin: 0;
+      font-weight: normal;
+      letter-spacing: 0.03em;
+    }
+
+    & .ind-code-showcase-description {
+      margin: 0;
+      text-align: justify;
+      color: $emperor;
+      @include resD((
+        padding: 0 0 $s-xxs,
+        line-height: $s-xm,
+        font-size: 20px,
+      ));
+      @include resM((
+        padding: 0,
+        font-size: 16px,
+      ));
+    }
+  }
+}
+
+.ind-code-showcase-tags-container {
+  @include resD((
+    padding: $s-xxs 0
+  ));
+  @include resM((
+    padding: 0
+  ));
+ 
+  .ind-code-showcase-tags {
+    cursor: pointer;
+    border: 1px solid $deep-sky-blue;
+    border-radius: 100px;
+    width: fit-content;
+    height: fit-content;
+    color: $deep-sky-blue;
+    transition: background-color .3s;
+    
+    @include resD((
+      margin: hs($s-xs) hs($s-xs) hs($s-xxxs) 0,
+      font-size: hs(18px),
+      padding: hs($s-xxs) hs($s-s),
+    ));
+    @include resM((
+      margin: $s-xs $s-xs $s-xs 0,
+      font-size: 16px,
+      padding: $s-xxxs $s-s,
+    ));
+    
+    & span {
+      font-weight: normal;
+      color: $emperor-66;
+    }
+    
+    &:hover, &.active {
+      transition: background-color .3s;
+      background-color: $deep-sky-blue;
+      color: #fff;
+      
+      & span {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+.ind-code-showcase-editorq-titleClass {
+  width: 100%;
+  background-color: #64d5cb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000102;
+  font-weight: 600;
+  @include resD((
+    font-size: 22px,
+    height: 45px,
+  ));
+  @include resM((
+    font-size: 18px,
+    height: 35px,
+  ));
+}
+
+.ind-code-showcase-editorq-OutputClass {
+  background-color: #5fc5e5;
+}
+
+#ind-code-showcase-editor-view {
+  height: 55vh;
+  display: block;
+
+  @include resD((
+    margin: 0,
+  ));
+  @include resM((
+    margin: $s-s 0,
+  ));
+}
+
+.ind-code-showcase-editor-CustomLoadingIcon {
+  background-color: #23d1e9 !important;
+  margin: 30px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  bottom: -20px;
+  right: 5px;
+  left: inherit;
+  position: absolute;
+}
+
+.ind-code-showcase-editorRunButton {
+  position: absolute;
+  background-image: url("../../../assets/playButton.png");
+  background-size: 117%;
+  background-position: 47% 42%;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  @include resD((
+    width: 70px,
+    height: 70px,
+    bottom: 0px,
+    right: 30px,
+  ));
+  @include resM((
+    width: 60px,
+    height: 60px,
+    bottom: 0px,
+    right: 10px,
+  ));
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.ind-code-showcase-editorOutput {
+  width: 100%;
+  border-radius: hs(21px);
+  background-color: #014257;
+  box-sizing: border-box;
+  padding: 5px hs(20px) 5px hs(30px);
+  border-radius: hs(5px);
+  font-family: Monaco;
+  font-size: hs(21px);
+  overflow: scroll;
+  line-height: 1.5;
+  color: #ffffff;
+  margin-top: hs(5px);
+  &::-webkit-scrollbar {
+    max-width: hs(10px);
+    height: hs(7px);
+  };
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(#34e4ea, 0.5);
+    border-radius: 0;
+  };
+  &::-webkit-scrollbar-corner {
+    background: rgba(0,0,0,0)
+  }
+}
+
+.ind-code-showcase-details-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include resD((
+    padding: 14px
+  ));
+  @include resM((
+    padding:$s-s $s-xs,
+    padding-top: 0
+  ));
+
+  & .ind-code-showcase-reactions {
+    user-select: none;
+    min-width: hs($s-l);
+    text-align: center;
+    color: $emperor;
+    border-radius: 100px;
+    cursor: pointer;
+    margin: 0 $s-xxs;
+    
+    @include resD((
+      font-size: hs(18px),
+      padding: $s-xs $s-m
+    ));
+    @include resM((
+      font-size: 14px,
+      padding: $s-xxs $s-s
+    ));
+
+    &.hot.active, &.hot:hover {
+      background: #FFE2E0;
+    }
+    &.heart.active, &.heart:hover {
+      background: #FCE3F2;
+    }
+    &.celebrate.active, &.celebrate:hover{
+      background: rgba(249, 231, 63, 0.2);
+    }
+  }
+
+  & .ind-code-showcase-share-container {
+    cursor: pointer;
+
+    @include resD((
+      font-size: hs(22px)
+    ));
+    @include resM((
+      font-size: 18px
+    ));
+
+    .ind-code-showcase-shareIcon {
+      display: block;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-image: url('../../../assets/shareCode.svg');
+      
+      @include resD((
+        width: 17px,
+        margin-right: hs(10px)
+      ));
+      @include resM((
+        width: 15px,
+        margin-right: hsm(8px)
+      ));
+    }
+  }
+}
+
+.ind-code-showcase-trending-text {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @include resD((
+    font-size: 18px,
+    margin: hs($s-m) hs($s-xm),
+  ));
+  @include resM((
+    font-size: 12px,
+    margin: hs($s-l),
+  ));
+
+  & > div > span {
+    @include resD((
+      display: block
+    ));
+    @include resM((
+      display: none
+    ))
+  } 
+}
+
+.ind-code-showcase-trendingIcon {
+  margin-right: 10px;
+  display: block;
+  position: relative;
+  width: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url('../../../assets/trending.svg');
+}
+
+.ind-code-showcase-empty-container {
+  width: 100%;
+  padding: 1rem 0;
+
+  .ind-code-showcase-uhohMsgContainer {
+    margin-top: hs(100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: 600;
+    color: $swamp;
+    opacity: 0.6;
+    @include resD((
+    font-size: hs(30px)
+    ));
+    @include resM((
+      font-size: 18px
+    ));
+  }
+  
+  .ind-code-showcase-emptyMsgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: 500;
+    color: $swamp;
+    opacity: 0.5;
+    line-height: 32px;
+    
+    @include resD((
+    font-size: hs(26px)
+    ));
+    @include resM((
+      font-size: 18px
+    ));
+  }
+}
+
+#ind-code-showcase-editor-view #editor {
+  height: 100% !important;
+}

@@ -1,0 +1,661 @@
+@import "src/scss/size.scss";
+@import "src/scss/lato.scss";
+@import "src/scss/Inter.scss";
+@import 'src/scss/theme/constants.scss';
+@import "src/scss/theme/colors.scss";
+@import "../../variables/_variables.scss";
+@import '../../mixins/_mixins.scss';
+
+.embedPageContainer,.modalPopup,.otpmodalPopup {
+  font-family: 'Inter';
+}
+.embedPageContainer{
+@include resD((
+    padding: 24px 24px 24px 0px,
+));
+  height:100%;
+  box-sizing: border-box;
+  padding-bottom: 0;
+}
+.iframeContainer{
+	background-color: white;
+  @include resD1280((
+    height: calc(100vh - #{hs($teacherAppSessionHeight)}),
+  )); 
+  overflow-y: hidden;
+  position: relative;
+  @include resD((
+    margin-top: 15px,
+  ))
+}
+.sessionEmbedIframeContainer{
+    height: 100%;
+    width: 100%;
+    // width: 88%;
+    border: none;
+    background-color: white;
+    @include resD((
+      padding: 20px,
+      border-radius: 16px,
+    ))
+}
+.embedPageHeader{
+  @include flex(space-between,center);
+  // margin-bottom: 18px;
+  // position: fixed;
+  // width: 88.5%;
+  background: #f9f9f9;
+  // padding-top: 27px;
+  // top: 0;
+  // padding-bottom: 10px;
+}
+.currentTime{
+  font-weight: 700;
+  cursor: pointer;
+}
+.routerLink, .currentTime{
+	text-decoration: none;
+	background-color: transparent;
+  & button{
+    & span{
+      @include resD((
+      font-weight: 500,
+      font-size: 16px,
+      line-height: 20px,
+    ));
+    @include resM((
+      font-weight: 500,
+      font-size: 16px,
+      line-height: 20px,
+    ));
+    }
+}
+& svg{
+  @include resD((
+    height: 18px,
+    width: 16px,
+    font-size: 18px,
+  ));
+  @include resM((
+    height: 18px,
+    width: 16px,
+    font-size: 18px,
+  ))
+}
+}
+.routerLink{
+  display: flex;
+  border-radius: 8px;
+  border: 1px solid #D2D2D2;
+  color: #858585;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+    width: 40px,
+    height: 40px
+  ));
+  & button {
+    gap: 0px !important;
+  }
+}
+.timetableCalendarLoaderBackdrop {
+  position: absolute;
+	left: 0px;
+	top: 0px;
+	// background: rgba($color: #000000, $alpha: 0.1);
+  background-color: #fff;
+	height: 100%;
+	width: 100%;
+	z-index: 99;
+}
+.endClassCtaContainer{
+  @include flex(center,center);
+  @include resD((
+    gap:6px
+  ))
+}
+
+.ctaContainer{
+  @include flex(center,center);
+  @include resD((
+    gap:24px
+  ))
+}
+
+.endClassLink{
+  box-sizing: border-box;
+	text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #FFCACF;
+  @include flex(center,center);
+  @include resD((
+    gap: 8px,
+    padding: 12px 16px,
+    border-radius: 10px,
+  ))
+}
+.endClassBtn{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  color: #D34B57;
+  margin: 0;
+  @include resD((
+    font-size: 18px,
+    line-height: 22px,
+  ))
+}
+
+.linkContainer{
+  @include flex(center,center);
+  @include resD((
+    gap:24px
+  ));
+  display:flex;
+  flex-direction:row;
+  align-items:center
+}
+
+.attendance{
+  border: 1px solid #D2D2D2;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 700;
+  cursor: pointer;
+  @include resD((
+    font-size: 18px,
+    border-radius: 8px,
+    line-height: 17px,
+    padding-right: 20px,
+    height: 40px,
+    min-width:155px,
+  ));
+}
+
+.joinedText{
+  font-weight: 500;
+  color: #858585;
+  @include resD((
+    font-size: 20px,
+    line-height: 24px,
+  ));
+}
+
+.modalPopup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background: white;
+  flex-direction: column;
+  align-items: center;
+  z-index: 99999999;
+  @include resD((
+    width: 640px,
+    border-radius: 12px,
+    height: 687px
+  ));
+}
+
+.modalOverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 9999999;
+}
+
+.attendanceText{
+  display: flex;
+  justify-content: space-between;
+  background-color: #FAF7FF;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid #D4D4D4;
+  @include resD((
+    border-radius: 12px 12px 0 0,
+  ));
+  >p{
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    @include resD((
+      font-size: 24px,
+      margin: 16px 0 16px 20px,
+    )
+    )
+  }
+  >div{
+    @include resD((
+      padding-right: 16px,
+    )
+    )
+  }
+}
+
+.closeButton{
+  width: 95%;
+  color: #858585;
+  background-color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid #E2E2E2;
+  @include resD((
+    height: 58px,
+    border-radius: 12px,
+    margin: 20px 20px 12px 20px,
+  ))
+}
+
+.table{
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  width: 92%;
+  border: 1px solid #E2E2E2;
+  border-collapse: collapse;
+  @include resD((
+    height: 500px,
+    border-radius: 12px,
+  ))
+}
+
+.tableHead{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-color:'#0000000A';
+  background: white;
+  z-index: 1;
+  font-weight: 600;
+  border-bottom: 1px solid #E2E2E2;
+  color:'##858585';
+  background:'white';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD((
+    font-size: 12px,
+    height: 42px,
+    line-height: 18px,
+    color: #858585,
+  ))
+}
+.tableData{
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid #E2E2E2;
+  border-collapse: collapse;
+}
+.studentDetail {
+  display: flex;
+
+  flex-direction: column;
+  @include resD((
+    font-size: 18px,
+    // height: 24px,
+    gap: 6px,
+    padding: 16px 28px,
+    width:100%,
+  ));
+
+}
+
+.attendanceStatusContainer{
+  display: flex;
+  width: 90%;
+  border: 1px solid #E2E2E2;
+  @include resD((
+    margin: 16px 24px,
+    border-radius: 12px,
+    padding: 8px,
+  ));
+  button {
+    @include resD((
+      height: 42px,
+    ))
+  }
+}
+
+.absentButton{
+  width: 50%;
+  cursor: pointer;
+  background: rgba(211, 75, 87, 0.12);
+  border: none;
+  color: #D34B57;
+  @include resD((
+    border-radius: 12px,
+    font-size: 16px,
+    line-height: 18px,
+    padding: 8px 0,
+  ))
+}
+
+.presentButton{
+  width: 50%;
+  cursor: pointer;
+  background: rgba(1, 170, 147, 0.12);
+  border: none;
+  font-weight: 600;
+  color: #01AA93;
+  @include resD((
+    border-radius: 12px,
+    font-size: 16px,
+    line-height: 18px,
+    padding: 8px 0,
+  ))
+}
+
+.groupIcon{
+  background: rgba(220, 220, 220, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+    padding: 2px,
+    border-radius: 8px,
+    margin: 8px 12px 8px 8px,
+  ))
+}
+
+.inactiveButton{
+  width: 50%;
+  cursor: pointer;
+  background: white;
+  border: none;
+  font-weight: 600;
+  color: #A8A7A7;
+  @include resD((
+    font-size: 16px,
+    line-height: 18px,
+    padding: 8px 0,
+  ))
+}
+
+.otpmodalPopup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background: white;
+  flex-direction: column;
+  align-items: center;
+  z-index: 99999999;
+  @include resD1280((
+    border-radius: 12px,
+    width: 420px,
+  ));
+}
+
+.otpmodalPopupHeading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FAF7FF;
+  @include resD1280((
+    border-top-left-radius: 12px,
+    border-top-right-radius: 12px,
+  ));
+}
+
+.otpmodalNameContainer {
+  display: flex;
+  align-items: center;
+  p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    color: #000000;
+    @include resD1280((
+      font-size: 16px,
+      line-height: 19px,
+    ));
+  }
+}
+
+.otpmodalNameIconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  @include resD1280((
+    width: 36px,
+    height: 36px,
+    border-radius: 12px,
+    margin: 12px 16px,
+  ));
+}
+
+.otpmodalCloseContainer {
+  cursor: pointer;
+  @include resD1280((
+    margin-right: 16px,
+  ));
+}
+
+.otpmodalPopupBody {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  @include resD1280((
+    padding: 32px 56px 32px 56px,
+    gap: 32px,
+  ));
+}
+
+.otpmodaPopBodyTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include resD1280((
+    gap: 16px,
+  ));
+  p {
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    color: #858585;
+    @include resD1280((
+      font-size: 14px,
+      line-height: 140%,
+    ));
+  }
+  span {
+    font-weight: 700;
+  }
+}
+
+.otpContainer {
+  display: flex;
+  align-items: center;
+  @include resD1280((
+    gap: 12px,
+  ));
+}
+
+.otptext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(140, 97, 203, 0.12);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  color: #8C61CB;
+  box-sizing: border-box;
+  @include resD1280((
+    padding: 8px 16px,
+    width: 45px,
+    height: 47px,
+    border-radius: 8px,
+    font-size: 25.625px,
+    line-height: 31px,
+  ));
+}
+
+.otpmodalPopupFooter {
+  width: 95%;
+  @include resD1280((
+    padding: 12px 16px,
+  ));
+}
+
+.otpContainerLoader{
+  @include resD1280((
+    width: 230px,
+    height: 47px,
+  ));
+}
+
+.otpButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: rgba(140, 97, 203, 0.12);
+  color: #8C61CB;
+  cursor: pointer;
+  @include resD((
+    padding: 12px 16px,
+    gap: 8px,
+    border: 1px solid rgba(140, 97, 203, 0.24),
+    border-radius: 8px,
+  ));
+  h3 {
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    @include resD((
+      font-size: 18px,
+      line-height: 22px,
+    ));
+  }
+  span {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    color: #8C61CB;
+    @include resD((
+      font-size: 18px,
+      line-height: 22px,
+    ));
+  }
+}
+
+.attendanceWarningContainer {
+  display: flex;
+  align-items: center;
+  p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    @include resD1280((
+      font-size: 12px,
+      line-height: 140%,
+    ));
+  }
+  @include resD1280((
+    padding: 12px,
+    border-radius: 12px,
+    margin: 0 16px,
+  ));
+}
+
+.attendanceWarningIconContainer {
+  box-sizing: border-box;
+  @include resD1280((
+    border-radius: 100%,
+    width: 32px,
+    height: 32px,
+    margin-right: 10px,
+    padding: 4px,
+  ));
+  svg {
+    @include resD1280((
+      width: 22px,
+      height: 22px,
+    ));
+  }
+}
+
+.trainingIframeContainer{
+  margin: unset;
+   @include resD1280((
+    height: 100vh,
+  )); 
+
+}
+.buddyLoginActive{
+  display: flex;
+  height: 100%;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background: rgba(1, 170, 147, 0.1);
+  box-sizing: border-box;
+  padding: 6px;
+  @include resD1280((
+    width: 30px,
+  
+  ));
+
+  .userIcon{
+    color: #01AA93;
+  }
+}
+.attendanceItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD1280((
+    margin-left: 25px,
+  
+  ));
+
+}
+.tooltipContent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.warningIcon{
+  color:#D34B57;
+}
+.viewTeacherManualContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid rgba(140, 97, 203, 0.24);
+  @include resD((
+    padding: 12px 16px,
+    gap: 8px,
+    border-radius: 8px,
+  ));
+  p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    color: #8C61CB;
+    margin: 0;
+    @include resD((
+      font-size: 18px,
+      line-height: 22px,
+      margin-left: 8px,
+    ));
+  }
+}

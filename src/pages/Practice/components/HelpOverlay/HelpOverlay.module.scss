@@ -1,0 +1,197 @@
+@import 'src/scss/size.scss';
+
+.helpOverlayContainer{
+  height: hs(381px);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  background-image: url('../../../../assets/hintBackgound.png');
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: hs(352px);
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+  transform: translateY(200%);
+  -webkit-transform: translateY(200%);
+}
+
+.slideIn {
+    animation: slideIn 0.5s forwards;
+    -webkit-animation: slideIn 0.5s forwards;
+}
+
+.slideOut {
+    animation: slideOut 0.5s forwards;
+    -webkit-animation: slideOut 0.5s forwards;
+}
+    
+@keyframes slideIn {
+    100% { transform: translateY(0%); }
+}
+
+@-webkit-keyframes slideIn {
+    100% { -webkit-transform: translateY(0%); }
+}
+    
+@keyframes slideOut {
+    0% { transform: translateY(0%); }
+    100% { transform: translateY(200%); }
+}
+
+@-webkit-keyframes slideOut {
+    0% { -webkit-transform: translateY(0%); }
+    100% { -webkit-transform: translateY(200%); }
+}
+
+.mainArea{
+    width: hs(743px);
+}
+
+.headingArea {
+    margin-top: hs(29px);
+    display: flex;
+    justify-content: space-around;
+}
+
+.hintHeading {
+    font-family: Nunito;
+    font-size: hs(28px);
+    cursor: pointer;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: left;
+    color: #aaacae;
+}
+
+.answerHeading{
+    font-family: Nunito;
+    font-size: hs(28px);
+    font-weight: 600;
+    cursor: pointer;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: center;
+    color: #aaacae;
+}
+
+.underline{
+    width: hs(144px);
+    height: hs(2px);
+    background-color:#00ade6;
+}
+
+.textArea{
+  width: hs(743px);
+  height: hs(138px);
+  font-family: Nunito;
+  margin-top: hs(26.3px);
+  font-size: hs(24px);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #707070;
+}
+
+.buttonArea{
+    margin-top: hs(61px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.closeBtn{
+    width: hs(174.1px);
+    height: hs(51.9px);
+    object-fit: contain;
+    border-radius: hs(32px);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-image: linear-gradient(to top, #00ade6 174%, #34e4ea);
+    font-family: Nunito;
+    font-size: hs(28px);
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkBtn{
+    width: hs(174.1px);
+    height: hs(51.9px);
+    object-fit: contain;
+    border-radius: hs(32px);
+    background-color: #e9e9ea;
+    color:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Nunito;
+    font-size: hs(28px);
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.slideDownBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    bottom: hs(356px);
+    border-radius: 50%;
+    right: 50%;
+}
+
+.downArrow{
+    width: 21.6px;
+    height: 12.6px;
+    object-fit: contain;
+    background-image: linear-gradient(to left, #00ade6 110%, #34e4ea);
+}
+
+.recommendationText{
+    margin-top: hs(30px);
+    display: inline-flex;
+    font-family: Nunito;
+    font-size: hs(24px);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.videoRecommendationText{
+    text-decoration: underline;
+    color: #00ade6;
+    cursor: pointer;
+}

@@ -1,0 +1,788 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+@import 'src/scss/theme.scss';
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.pane {
+  height: 100%;
+  @include resD((
+    width: 50%,
+    overflow-y: hidden,
+  ));
+  @include resD((
+    width: 100%,
+    overflow-y: hidden,
+    overflow-x: hidden,
+  ));
+  background-color: #002f3e;
+}
+
+.splitPane {
+  height: calc(100%) !important;
+  overflow: hidden;
+}
+
+.editorContainer {
+  flex: 1;
+  background-color: #002f3e;
+  position: relative;
+  @include resD((
+    height: calc(100% - #{hs(85px)}),
+  ));
+  @include resM((
+    height: 100%,
+  ));
+}
+
+.ace-terminal-theme {
+  background-color: #002f3e !important;
+}
+
+.outputContainer {
+  flex: 1;
+  height: calc(100%);
+  background-color: #052732;
+  box-sizing: border-box;
+  padding: 15px 20px 100px 20px;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    max-width: hs(10px);
+  };
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(#34e4ea, 0.5);
+    border-radius: 0;
+  };
+}
+
+.transparent {
+  background-color: transparent !important;
+  padding: 0px 5px 5px 5px !important;
+}
+.output {
+  width: 100%;
+  box-sizing: border-box;
+  @include resD((
+    font-size: 24px,
+    border-radius: 5px,
+  ));
+  @include resM((
+    border-radius: 5px,
+    font-size: 16px,
+  ));
+  font-family: Monaco;
+  color: #ffffff;
+  overflow: scroll;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  &:focus-visible {
+    outline: none;
+    border: none
+  }
+  &:focus {
+    outline: none;
+    border: none
+  }
+  &::-webkit-scrollbar {
+    @include resD((
+      max-width: 10px,
+      height: 10px,
+    ));
+    @include resD((
+      max-width: 7px,
+      height: 7px,
+    ));
+  };
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(#34e4ea, 0.5);
+    border-radius: 0;
+  };
+  &::-webkit-scrollbar-corner {
+    background: rgba(0,0,0,0)
+  }
+}
+
+.playButton {
+  position: absolute;
+  background-image: url("../../assets/playButton.png");
+  background-size: 117%;
+  background-position: 47% 42%;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  @include resD((
+    width: 70px,
+    height: 70px,
+    bottom: 30px,
+    right: 60px,
+  ));
+  @include resM((
+    width: 60px,
+    height: 60px,
+    bottom: 80px,
+    right: 15px,
+  ));
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.copyReplaceButtonContainer{
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  @include resD((
+    bottom: 22px,
+    right: 60px,
+  ));
+}
+
+.copyButton{
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  align-items: center;
+  background-color: #012f3f;
+  align-self: center;
+  cursor: pointer;
+  @include resD((
+    border: 0.827027px solid #FFFFFF,
+    border-radius: 16.5405px,
+    margin-right: 16px,
+  ));
+  p{
+    font-weight: 700;
+    color: #FFFFFF;
+    @include resD((
+      font-size: 16.5405px,
+      margin: 13px 0,
+      margin-left: 10px,
+      margin-right: 16.50px,
+    ));
+  }
+}
+
+.title {
+  width: 100%;
+  background-color: #052732;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(#FFFFFF, 0.7);
+  font-weight: bold;
+  @include resD((
+    font-size: 20px,
+    height: 63px,
+    padding-left: 38px,
+    box-sizing: border-box
+  ));
+  @include resM((
+    font-size: 18px,
+    height: 35px,
+    padding-left: 12px,
+  ));
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.clearButton {
+  width: hs(28px);
+  height: hs(28px);
+  margin-right: hs(11px);
+  margin-top: hs(2px);
+  cursor: pointer;
+}
+
+.backButton {
+  position: absolute;
+  path {
+    fill: #092732 !important;
+  }
+  @include resM((
+    width: 10px,
+    height: 17px,
+    top: 8px,
+    left: 10px,
+  ));
+}
+
+.clearButtonEditor {
+  cursor: pointer;
+  @include resD((
+    width: 28px,
+    margin-right: 11px,
+    margin-top: 2px
+  ));
+  @include resM((
+    width: 18px,
+    margin-right: 8px,
+    margin-top: 7px
+  ));
+}
+
+
+
+.titleMentor {
+  justify-content: space-around;
+}
+
+.outputTitle {
+  font-weight: bold;
+  background-color:  rgba(242, 242, 247, 0.7);
+  color: rgba(#00ADE6, 0.7);
+}
+
+.bottomToolbar {
+  width: 100%;
+  height: hs(55px);
+  background-color: rgb(1, 61, 78);
+  margin-top: 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.buttonContainer {
+  height: hs(27px * 1.5);
+  border-radius: hs(14px * 1.8);
+  margin-left: hs(20px);
+}
+
+.buttonText {
+  font-size: hs(12px * 1.6);
+  margin-left: hs(12px * 2.5);
+  margin-right: hs(12px * 2.5);
+}
+
+
+.saveButton {
+  position: absolute;
+  background-color: transparent;
+  border: 0;
+  background-image: url("../../assets/saveButton.svg");
+  background-size: 117%;
+  background-position: 47% 42%;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  z-index: 5;
+  @include resD((
+    width: 70px,
+    height: 70px,
+    bottom: 30px,
+    right: unset,
+    left: 4rem,
+  ));
+  @include resM((
+    width: 60px,
+    height: 60px,
+    bottom: 80px,
+    right: unset,
+    left: 10px
+  ));
+  &:focus{
+    border: 0;
+    outline: 0;
+    box-shadow: 0;
+  }
+  &:disabled{
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
+
+.saveModal {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 25% 95%, 20% 100%, 15% 95%, 0 95%);
+  transform: translate(-10%, -105%);
+  background-color: #052732;
+  transition: all 0.4s ease-in-out;
+  @include resD((
+    border-radius: 5px,
+    margin: 0 0 24px,
+    width: 350px,
+  ));
+  @include resM((
+    border-radius: 5px,
+    margin: 0 0 24px 30px,
+    width: 260px,
+  ));
+  p{
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffffc1;
+    @include resD((
+      font-size: 16px,
+    ));
+    @include resM((
+      font-size: 16px,
+    ));
+  }
+  input, textarea{
+    // min-width: 90%;
+    width: inherit;
+    border: none;
+    background-color: #041c24;
+    color: #ffffff;
+    font-family: "Nunito";
+    font-style: italic;
+    resize: vertical;
+    @include resD((
+      margin: 0 0 5px,
+      padding: 9px 14px 14px 16px,
+    ));
+    @include resM((
+      margin: 0 0 6px,
+      padding: 11px 14px 11px 16px,
+    ));
+    border-radius: 5px,
+  }
+  textarea{
+    @include resD((
+      margin: 0,
+      height: 150px,
+    ));
+    @include resM((
+      margin: 0,
+      height: 120px,
+    ));
+  }
+}
+
+.showSaveModal{
+  opacity: 1;
+  display: inline-table;
+  @include resD((
+    padding: 9px 14px 30px 16px,
+    min-height: 300px,
+  ));
+  @include resM((
+    padding: 9px 14px 30px 16px,
+    min-height: 280px,
+  ))
+}
+
+.hideSaveModal{
+  min-height: 0;
+  height: 0;
+  padding: 0 14px 0 16px;
+  opacity: 0;
+}
+
+.roundedButtons{
+      /* height: 3.125vw; */
+      border-radius: 20px;
+      /* min-width: 60px; */
+      /* width: max-content; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      pointer-events: auto;
+      cursor: pointer;
+      background-color: #00ade6;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+      color: #ffffff;
+      font-family: Nunito;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      @include resD((
+        padding: 8px 32px,
+        font-size: 16px,
+        margin-bottom: unset,
+      ));
+      @include resM((
+        padding: 8px 32px,
+        margin-bottom: 10px,
+        font-size: 16px,
+      ));
+  &.cancelButton{
+    background-color: transparent;
+    border: solid 2px #00ade6;
+    box-sizing: border-box;
+    color: #ffffffbf;
+  }
+  &:disabled{
+    opacity: 0.5;
+    cursor: auto;
+  }
+  &:focus{
+    border: 0;
+    outline: 0;
+    box-shadow: 0;
+  }
+}
+
+.fileNameContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  @include resD((
+    top: 3px,
+  ))
+}
+
+.fileNameWrapper {
+  width: auto;
+  background: #2DBFB3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  @include resD((
+    height: 25px,
+    border-radius: 12px 12px 0 0,
+    padding: 2px 10px,
+    margin-left: 18px,
+    font-size: 20px,
+  ));
+  @include resM((
+    height: 20px,
+    border-radius: 6px 6px 0 0,
+    padding: 1px 5px,
+    margin-left: 9px,
+    font-size: 14px,
+  ));
+}
+
+.aceEditor {
+  @include resD((
+    top: 20px,
+    height: 100%,
+    font-size: 22px,
+    line-height: 33px,
+  ));
+  @include resM((
+    top: 10px,
+    height: 100%,
+    font-size: 16px,
+    line-height: 24px,
+  ));
+}
+
+.editorLoader {
+  background-color: transparent !important;
+  background-image: none !important;
+  @include resD((
+    margin-right: 5px,
+    width: 20px,
+    height: 20px,
+    left: -10px,
+  ));
+  @include resM((
+    margin-right: 5px,
+    width: 15px,
+    height: 14px,
+    left: -5px
+  ));
+}
+
+.LoadingIcon {
+  background-color: #23d1e9 !important;
+  margin: 30px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  bottom: 10px;
+  right: 5px;
+  left: inherit;
+  position: absolute;
+}
+
+.mobileBodyContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  overflow: hidden;
+  height: 100%;
+}
+
+.mobileOutputShow {
+  transform: translateX(-100vw)
+}
+.mobileOutputHidden {
+  transform: translateX(0vw)
+}
+
+.actionContainer {
+  display: flex;
+  justify-content: space-around;
+
+  @include resD((
+    margin: 16px 0px 8px,
+  ));
+  @include resM((
+    margin: 16px 0px 0px,
+  ));
+}
+
+::-webkit-scrollbar {
+  max-width: hs(10px);
+}
+
+.postOnCommunityBtn {
+  font-family: 'Nunito';
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+
+  @include resD((
+    margin: 8px 0 0px
+  ));
+  @include resM((
+    margin: 4px 0 0px
+  ));
+
+  .checkBoxContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include resM((
+      height: 24px,
+      width: 24px,
+    ));
+    @include resD((
+      height: 18px,
+      width: 20px,
+    ));
+  }
+
+  & > span {
+    padding: 0px 6px;
+    user-select: none;
+
+    @include resD((
+      font-size: hs(16px)
+    ));
+    @include resM((
+      font-size: 16px
+    ));
+  }
+}
+
+.webEditorContainer {
+  // width: 100vw;
+  height: 100%;
+  width: 100%;
+  // background-color: red;
+  display: flex;
+  flex-direction: row;
+}
+
+.outputPane {
+  @extend .pane;
+  background: #fff;
+}
+
+.previewIframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.slideText {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  @include resD((
+    font-size: 18px,
+  ));
+  @include resM((
+    font-size: 18px
+  ));
+  margin-right: 8px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 29px;
+  height: 16px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #FFF;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 11px;
+  width: 11px;
+  background: #00ADE6;
+  left: -1px;
+  bottom: -1.5px;
+  border: 2px solid white;
+  transition: .4s;
+}
+
+input:checked + .slider:before {
+  background: #65DA7A;
+}
+
+input:focus + .slider:before {
+  // background: #65DA7A;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.toggleContainer {
+  @include resD((
+    width: 50px,
+    height: 25px,
+    border-radius: 100px,
+    padding-top: 5px,
+    margin-right: 33px,
+  ));
+  box-sizing: border-box;
+  background: #F2F2F7;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  box-shadow: inset 0px 3px 20px rgba(0, 0, 0, 0.25);
+  &.active {
+    background: #32D74B;
+    box-shadow: inset 0px 3px 20px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.toggleSwitch {
+  @include resD((
+    width: 15px,
+    height: 15px,
+  ));
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s all ease-in-out;
+  transform: translateX(hs(5px));
+  &.active {
+      transform: translateX(hs(31px))
+  }
+}
+
+@media screen and (min-width:1456px) {
+  .toggleSwitch{
+    &.active{
+      transform: translateX(hs(28px))
+    }
+  }
+}
+
+.outputSeperator {
+  height: 100%;
+  @include resD((
+    width: 10px,
+    background: #002F3E,
+  ));
+}
+
+.editButton {
+  background-image: url('../../assets/editButtonPlayground.png') !important;
+}
+
+.settingButton {
+  cursor: pointer;
+  margin-right: 25px;
+  background-image: url('./setting.svg') !important;
+  transform: rotate(0deg);
+  transition: transform 0.2s linear;
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  width: 29.25px;
+  height: 30.09px;
+}
+
+.settingButtonActive {
+  cursor: pointer;
+  margin-right: 25px;
+  background-image: url('./settingFilled.svg') !important;
+  transform: rotate(90deg);
+  transition: transform 0.2s linear;
+  background-position: center;
+  background-size: cover;
+  width: 29.25px;
+  height: 30.09px;
+}
+
+.menuButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  position: absolute;
+  margin-top: 20px;
+  right: 20px;
+  transition: all 0.4s ease-in;
+  width: 260px;
+  border-radius: 10px;
+  background: #F2F2F7;
+  border: 1px solid #D1D1D6;
+  padding: 16px;
+  z-index: 99;
+  cursor: default;
+  p {
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0em;
+    color: #005773;
+    cursor: pointer;
+  }
+  .toggleContainer {
+    margin-right: 0;
+  }
+}

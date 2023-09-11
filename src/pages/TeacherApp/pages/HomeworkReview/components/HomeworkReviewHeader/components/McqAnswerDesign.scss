@@ -1,0 +1,104 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+.pq__report__answer__review__main__container {
+  @include resD(
+    (
+      display: flex,
+      flex-direction: column,
+    )
+  );
+  @include resSm(
+    (
+      display: flex,
+      flex-direction: column,
+    )
+  );
+}
+.answer__container__pq {
+  @include resD(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      background: #e3f8f9,
+      padding: 10px 200px,
+    )
+  );
+  @include resSm(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      padding: 10px,
+      background: #e3f8f9,
+    )
+  );
+}
+.correct__answer__tag__pq {
+  @include resD(
+    (
+      background: #65da7a,
+      border-radius: 24px,
+      padding: 5px 14px,
+      color: #ffffff,
+      width: fit-content,
+      height:fit-content,
+      margin-right:15px,
+      font-family:Inter,
+      font-size:14px
+    )
+  );
+  @include resSm(
+    (
+      background: #65da7a,
+      border-radius: 24px,
+      padding: 7px 11px,
+      color: #ffffff,
+      width: fit-content,
+      height:fit-content,
+      margin-right:15px
+    )
+  );
+}
+.answer__container__pq__empty {
+  @include resD(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      background: #fffffd,
+      padding: 10px,
+    )
+  );
+  @include resSm(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      padding: 10px,
+      background: #fffffd,
+    )
+  );
+}
+.answer__container__pq__empty {
+  @include resD(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      background: #fffffd,
+      padding: 10px,
+    )
+  );
+  @include resSm(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      padding: 10px,
+      background: #fffffd,
+    )
+  );
+}

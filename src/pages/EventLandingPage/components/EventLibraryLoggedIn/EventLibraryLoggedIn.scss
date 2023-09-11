@@ -1,0 +1,118 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.container{
+display: flex;
+transition: 1s all ease;
+
+    @include resM(
+        (
+            padding-bottom: 24px,
+            margin-left:20px
+        )
+    );
+    @include resD(
+        (
+            padding-bottom: 0px,
+            margin-left:0px
+        )
+    );
+
+}
+
+.event-library-box{
+    @include resM(
+        (
+            display:block
+        )
+    );
+    @include resD(
+        (
+            margin-left:50px,
+            margin-right:50px,
+        )
+    );
+    .carousel-mainHolder{
+        @include resM(
+        (
+            display: block,
+            margin-left:15px
+        )
+    );
+    @include resD(
+        (
+            display: block,
+            margin-left:0px
+        )
+    );
+    }
+}
+    .loggedIn_state_container{
+        @include resM(
+        (
+            display: block,
+            margin-bottom: 40px,
+        )
+    );
+    @include resD(
+        (
+            display: block,
+            margin-left:15px,
+            margin-bottom: 0px,
+        )
+    );
+    }
+    .loggedOut_state{
+        @include resM(
+        (
+            display: none,
+            
+        )
+    );
+    @include resD(
+        (
+            display: block,
+            margin-left:15px
+        )
+    );
+    }
+
+
+.carousel-mainHolder{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    transition: all 0.1s ease-in-out;
+    padding: 0;
+    display: block;
+}
+.carousel-holders-loggedIn-upper, .carousel-holders-loggedIn-lower{
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    transition: all 0.1s ease-in-out;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    display: -webkit-inline-box;
+    overflow-x: scroll;
+    overflow-y: hidden;
+     @include resD((
+        padding-top: 5px,
+        padding-bottom: 10px,
+        // padding-left:5px
+        
+    ));
+    @include resM((
+        padding-top: 24px,
+        // padding-left:3px,
+        padding-bottom: 10px,
+    ));
+    &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+}

@@ -1,0 +1,821 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import 'src/scss/Inter.scss';
+
+$primary-color: #8C61CB;
+$primary-color-dark: #7b40d4;
+$primary-admin-color: #00ADE6;
+$primary-fontFamily: Inter;
+$primary-fontStyle: normal;
+$primary-fontWeight: 500;
+
+$defaultLabelSizeD: 16px;
+$defaultLabelSizeM: 11px;
+
+$borders: 1px solid #AAAAAA;
+
+.teacher-modal-popup {
+    position: relative;
+    font-family: $primary-fontFamily;
+    background: #fff;
+    box-shadow: 0px 20px 30px rgba(0, 23, 31, 0.15);
+    box-sizing: border-box;
+    overflow: hidden;
+    @include resD((
+        width: 642px,
+        padding: 0px,
+        height: 720px,
+        border-radius: 22px
+    ));
+    @include resM((
+        // height: 100%,
+        height: 420px,
+        width: 380px,
+        border-radius: 16px
+    ));
+}
+
+.teacher-modal-container {
+    @include resD((
+      padding: 0rem 0rem,
+    ));
+    @include resM((
+      padding: 0rem 0rem,
+    ));
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include resD((
+        width: 70px,
+        height: 65px,
+        margin-left: 12px,
+        border-radius: 18px
+    ));
+    @include resM((
+        width: 45px,
+        height: 40px,
+        margin-left: 12px,
+        border-radius: 10px
+    ));
+
+    svg {
+        @include resD((
+            width: 48px,
+            height: 42px,
+        ));
+        @include resM((
+            width: 30px,
+            height: 26px,
+        ));
+    }
+
+    svg > path {
+      fill: $primary-admin-color
+    }
+    
+    background: #fff;
+}
+
+.header-details {
+  @include resD((
+      padding-left: 20px,
+  ));
+  @include resM((
+      padding-left: 12px,
+  ));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: $primary-fontFamily;
+}
+
+.header-details-single {
+  @include resD((
+      padding-left: 20px,
+  ));
+  @include resM((
+      padding-left: 12px,
+  ));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: $primary-fontFamily;
+}
+
+.modal__container-backdrop {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(#e2e2e2, 0.6);
+    position: fixed;
+    z-index: 1000000;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include resD((
+      padding: unset,
+    ));
+}
+
+.modal__header {
+    background: #FAF7FF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    @include resD((
+        // height: 120px,
+        width: auto,
+        top: 0,
+        left: 0,
+        padding: 16px 0px 18.2px 12px,
+        border-radius: 22px 22px 0 0,
+        margin-bottom: 17px
+    ));
+    @include resM((
+        // height: 78px,
+        width: auto,
+        top: 0,
+        left: 0,
+        padding: 8px 0px 12px,
+        border-radius: 16px 16px 0 0,
+    ));
+    // border-radius: 16px 16px 0px 0px;
+}
+
+.modal__icon {
+    transition: 0.3s all ease-in-out;
+    @include resD((
+        width: 50px,
+        height: 45px,
+        // font-size: 26px,
+    ));
+    @include resM((
+        width: 35px,
+        height: 30px,
+        // font-size: 18px,
+    ));
+    fill: #666666;
+    // margin-right: 8px;
+}
+
+.modal__close-icon {
+    fill: #666666;
+    position: absolute;
+    @include resD((
+        margin-top: 28px,
+        margin-right: 25px,
+        top: 0,
+        right: 0,
+        padding: 0px 7px 3px 7px,
+        border-radius: 6px,
+    ));
+    @include resM((
+        margin-top: 9px,
+        margin-right: 11px,
+        top: 0,
+        right: 0,
+        padding: 0px 4px 1.5px 4px,
+        border-radius: 3px,
+    ));
+    cursor: pointer;
+
+    &:hover {
+        background: $primary-admin-color;
+        color: white;
+
+        & svg > path {
+            fill: white !important;
+        }
+    }
+
+    svg {
+        @include resD((
+            width: 12px,
+            height: 12px,
+        ));
+        @include resM((
+            width: 8px,
+            height: 8px,
+        ));
+    }
+}
+
+.modal__header-title {
+    position: relative;
+    color: #000;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    @include resD((
+        font-size: 26px,
+        bottom: 5px,
+        line-height: 2,
+    ));
+    @include resM((
+        font-size: 16px,
+        bottom: 3px,
+        line-height: 1.6,
+    ));
+    padding-bottom: -10px;
+}
+
+.modal__header-title-single {
+  @extend .modal__header-title;
+  bottom: 0px;
+}
+
+.modal__header-desc {
+    position: relative;
+    bottom: 2px;
+    display: inline-flex;
+    font-family: $primary-fontFamily;
+    font-style: $primary-fontStyle;
+    font-weight: $primary-fontWeight;
+    @include resD((
+        font-size: 17px,
+        line-height: 1.2,
+    ));
+    @include resM((
+        font-size: 12px,
+        line-height: 1.1,
+    ));
+    color: #333333;
+    opacity: 0.8;
+}
+
+.modal__header-desc-class {
+    @extend .modal__header-desc;
+    color: $primary-admin-color;
+    font-weight: 500;
+}
+
+.modal__content {
+    // min-height: auto !important;
+    // max-height: calc(100vh - 370px) !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar-thumb {
+        background: $primary-admin-color;
+    }
+    // scrollbar-color: $primary-color;
+    @include resD(( 
+        padding: 0px 20px 12px,
+        height: 520px
+    ));
+    @include resM((
+        padding: 0px 12px 12px,
+        height: 380px
+    ));
+}
+
+.modal__top-content {
+    @include resD(( 
+        // margin-top: 18px,
+        padding: 9px 0px 9px
+    ));
+    @include resM((
+        // margin-top: 12px,
+        padding: 6px 0px 6px
+    ));
+}
+
+.modal__top-content-students {
+    @include resD(( 
+        // margin-top: 18px,
+        padding: 9px 0px 9px,
+        height: 502px
+    ));
+    @include resM((
+        // margin-top: 12px,
+        padding: 6px 0px 6px,
+        height: 372px
+    ));
+}
+
+.modal__row-spacing {
+    @include resD(( 
+        padding: 6px 0px,
+        margin: 6px 0px
+    ));
+    @include resM((
+        padding: 4px 0px,
+        margin: 4px 0px
+    ));
+}
+
+.modal__row-double {
+    // @extend .modal__row-spacing;
+    @include resD(( 
+        padding: 6px 0px,
+        margin: 6px 6px 6px 0px
+    ));
+    @include resM((
+        padding: 4px 0px,
+        margin: 6px 18px 6px 0px
+    ));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__row-single {
+    @extend .modal__row-spacing
+}
+.modal__row-single-error {
+    @include resD(( 
+       padding:0px 0px,
+       margin:0px 0px,
+       position:relative,
+       bottom:8px
+    ));
+    @include resSm((
+        padding:0px 0px,
+        margin:0px 0px,
+        position:relative,
+        bottom:8px
+    )); 
+}
+
+.modal__dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include resD(( 
+        width: 272px,
+        margin-right: unset,
+        margin-bottom: 8px
+    ));
+    @include resM((
+        width: 152px,
+        margin-right: 13px,
+        margin-bottom: 6px
+    ));
+
+    label {
+        font-family: $primary-fontFamily;
+        font-style: $primary-fontStyle;
+        font-weight: 600;
+        color: #333333;
+        @include resD(( 
+            font-size: 15px,
+            margin-bottom: 11px
+        ));
+        @include resM((
+            font-size: 10px,
+            margin-bottom: 6px
+        ));
+    }
+
+    .modal__dropdown-custom-label-1 {
+        font-family: $primary-fontFamily;
+        font-style: $primary-fontStyle;
+        font-weight: 500;
+        color: #000000;
+        @include resD(( 
+            font-size: $defaultLabelSizeD,
+        ));
+        @include resM((
+            font-size: $defaultLabelSizeM,
+        ));
+    }
+}
+.modal__dropdown.widthFull{
+    width: 100%;
+}
+.modal__dropdown-input {
+    width: 90%;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 13px 10px 12px 12px;
+    // @include resD(( 
+    //     height: 52px
+    // ));
+    // @include resM((
+    //     height: 38px
+    // ));
+    border: 1px solid $primary-color;
+    border-radius: 8px;
+    cursor: grab;
+    
+    &:focus-visible {
+        outline: $primary-color;
+    }
+}
+
+.modal__dropdown-full-input {
+    @extend .modal__dropdown;
+    @include resD(( 
+        width: 588px,
+    ));
+    @include resM((
+        width: 318px,
+    ));
+}
+
+.modal__dropdown-full {
+    @extend .modal__dropdown;
+    @include resD(( 
+        width: 588px,
+    ));
+    @include resM((
+        width: 318px,
+    ));
+}
+
+.modal__full-input {
+    cursor: pointer;
+    font-family: Inter;
+    border: 1px solid #AAAAAA;
+    box-shadow: 0 0 0 0px black;
+    &:hover {
+      border: 1px solid #AAAAAA;
+      box-shadow: 0 0 0 0px black;
+    }
+    &:focus-visible {
+        outline: none;
+        background: #fff;
+    }
+    &::placeholder {
+        @include resD((
+            font-size: 18px,
+        ));
+        @include resM((
+            font-size: 14px,
+        ));
+    }
+    @include resD(( 
+        height: 49px,
+        font-size: 18px,
+        padding: 0px 0px,
+        padding-left: 16px,
+        border-radius: 10px
+    ));
+    @include resM((
+        height: 38px,
+        font-size: 14px,
+        padding: 0px 0px,
+        padding-left: 12px,
+        border-radius: 8px
+    ));
+}
+
+.modal__input-disabled {
+  background: #C7C7C7;
+}
+
+.modal__lower_content {
+    margin-top: 16px;
+}
+
+.modal__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px -1px 0px #EEEEEE;
+    border-top: #000000;
+    background: #fff;
+    @include resD((
+        width: 100%,
+        height: 78px
+    ));
+    @include resM((
+        width: 100%,
+        height: 50px
+    ));
+}
+
+.modal__footer-action-btns {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  border-width: inherit;
+  white-space: nowrap;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  @include resD((
+      font-size: 19px,
+      height: 45px,
+      padding: 8px 20px,
+      border-radius: 11px,
+  ));
+  @include resM((
+      font-size: 12px,
+      height: 32px,
+      padding: 3px 12px,
+      border-radius: 7px,
+  ));
+  letter-spacing: 0.4px;
+  font-family: $primary-fontFamily;
+  font-weight: 500;
+  transition: all 0.2s;
+  letter-spacing: 0.3px;
+  user-select: none;
+  // line-height: 1;
+
+  &:active {
+      transform: scale(0.98);
+  }
+}
+
+.modal__cancel-btn {
+  @extend .modal__footer-action-btns;
+  justify-content: center;
+  align-items: center;
+  background: rgba(220, 220, 220, 0.25);
+  color: #333333;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.35);
+  @include resD((
+      margin-left: 21px
+  ));
+  @include resM((
+      margin-left: 12px
+  ));
+  
+
+  &:hover {
+      cursor: pointer;
+      background: #c4c4c4;;
+      transition: 0.4s ease-in-out;
+  }
+  &:active, &:focus {
+      background: #F3EBFF;
+      box-shadow: 0px 2px 8px rgba(113, 62, 188, 0.24);
+      transition: 0.4s ease-in-out; 
+  }
+}
+
+.modal__contact-btn {
+  @extend .modal__footer-action-btns;
+  justify-content: center;
+  align-items: center;
+  background: rgba(220, 220, 220, 0.25);
+  color: #333333;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.35);
+  position: relative;
+  
+
+  &:hover {
+      cursor: pointer;
+      background: #c4c4c4;;
+      transition: 0.4s ease-in-out;
+  }
+  &:active, &:focus {
+      background: #F3EBFF;
+      box-shadow: 0px 2px 8px rgba(113, 62, 188, 0.24);
+      transition: 0.4s ease-in-out; 
+  }
+}
+
+.modal__save-btn {
+  @extend .modal__footer-action-btns;
+  justify-content: space-between;
+  align-items: center;
+  // min-width: 110px;
+  // padding: 5px 16px;
+  width: fit-content;
+  background: linear-gradient(280.79deg, #1178E6 2.79%, #0296C7 98.42%);
+  @include resD((
+      margin: 0px 24px 0px 16px
+  ));
+  @include resM((
+      margin: 0px 15px
+  ));
+  color: rgb(255, 255, 255);
+  
+  
+}
+
+.modal__save-btn-loading {
+  @extend .modal__save-btn;
+  align-items: center;
+  justify-content: space-between;
+  @include resD((
+      min-width: 160px
+  ));
+  @include resM((
+      min-width: 112px
+  ));
+}
+
+.modal__next-btn-loading {
+  @extend .modal__save-btn;
+  align-items: center;
+  justify-content: space-between;
+  @include resD((
+      min-width: 232px
+  ));
+  @include resM((
+      min-width: 126px
+  ));
+}
+
+.modal__disabled-btn {
+  background: #CCCCCC;
+  @extend .modal__footer-action-btns;
+  justify-content: space-between;
+  align-items: center;
+  // min-width: 110px;
+  // padding: 5px 16px;
+  width: fit-content;
+  @include resD((
+      margin: 0px 24px 0px 16px
+  ));
+  @include resM((
+      margin: 0px 15px
+  ));
+  color: rgb(255, 255, 255);
+  
+}
+
+.modal__fixed-content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        @include resD(( 
+            width: 9px,
+        ));
+        @include resM((
+            width: 8px
+        ));
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #CCCCCC;
+        @include resD(( 
+            margin-right: 12px,
+        ));
+        @include resM((
+            margin-right: 6px,
+        ));
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: $primary-admin-color
+    }
+    @include resD(( 
+        height: 512px,
+        padding: 0px 20px 12px,
+    ));
+    @include resM((
+        height: 301px,
+        padding: 0px 12px 12px,
+    ));
+}
+
+.modal__button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 285px;
+}
+
+.modal__bottom-spacer {
+    width: 100%;
+    @include resD((
+        height: 112px   
+    ));
+    @include resM((
+        height: 90px,   
+    ));
+}
+
+.modal__student-data-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: unset;
+    @include resD((
+        width: 100%,
+        height: 54px,
+        padding: 4px 0px,
+        // padding-top: 15px
+    ));
+    @include resM((
+        width: 100%,
+        height: 36px,
+        // padding-top: 10px
+    ));
+
+    label {
+        @include resD((
+            font-size: 17px,
+            margin-left: 24px,
+            margin-right: 26px
+        ));
+        @include resM((
+            font-size: 12px,
+            margin-left: 19px,
+            margin-right: 22px
+        ));
+        margin-bottom: unset;
+    }
+
+    :nth-child(2) {
+        @include resD((
+            width: 76px
+        ));
+        @include resM((
+            width: 60px
+        ));
+        text-align: right
+    }
+}
+
+.modal__error-span {
+    width: 100%;
+    color: red;
+    @include resD(( 
+        font-size: $defaultLabelSizeD,
+        margin-bottom: 12px
+    ));
+    @include resM((
+        font-size: $defaultLabelSizeM,
+        margin-bottom: 12px
+    ));
+}
+
+.modal__teacher-admin-table {
+    @include resD((
+        // margin-top: 12px,
+        margin: 0px 8px
+    ));
+    @include resM((
+        // margin-top: 12px,
+        margin-left: 0px 4px
+    ));
+}
+
+.modal__teacher-admin-row {
+    @include resD((
+        margin-top: 12px,
+        margin-bottom: 24px,
+        width: 100%
+    ));
+    @include resM((
+        margin-top: 12px,
+        margin-bottom: 17px,
+        width: 100%
+    ));
+}
+
+.modal__teacher-admin-row-label {
+    font-family: $primary-fontFamily;
+    font-style: $primary-fontStyle;
+    font-weight: 600;
+    color: #333333;
+    @include resD(( 
+        font-size: 16px,
+        margin-bottom: 0px,
+    ));
+    @include resM((
+        font-size: 13px,
+        margin-bottom: 0px,
+    ));
+}
+
+.modal__teacher-admin-row-header-label {
+    @extend .modal__teacher-admin-row-label;
+}
+
+.modal__teacher-admin-row-data {
+    @include resD((
+        margin-top: 28px,
+        width: 100%
+    ));
+    @include resM((
+        margin-top: 18px,
+        width: 100%
+    ));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__teacher-admin-row-data-label {
+    @extend .modal__teacher-admin-row-label;
+    font-weight: 500;
+    color: #333333;
+    @include resD(( 
+        font-size: 15px,
+    ));
+    @include resM((
+        font-size: 12px,
+    ));
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}

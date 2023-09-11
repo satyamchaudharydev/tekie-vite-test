@@ -1,0 +1,89 @@
+@import "src/scss/size.scss";
+
+$neutral-emperor-16: #282828;
+$neutral-emperor: #504f4f;
+$neutral-emperor-52: #858585;
+
+.paragraph {
+	font-family: "Nunito";
+	font-style: normal;
+	font-weight: 500;
+	// color: $neutral-emperor;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	@include resD(
+		(
+			font-size: 16px,
+			line-height: 22px,
+		)
+	);
+}
+
+.body1 {
+	font-weight: 500;
+	color: $neutral-emperor;
+
+	@include resD(
+		(
+			font-size: 20px,
+			line-height: 24px,
+			letter-spacing: -0.02em,
+		)
+	);
+}
+
+.body2 {
+	font-family: "Nunito";
+	font-style: normal;
+	font-weight: 400;
+
+	@include resD(
+		(
+			font-size: 15px,
+			line-height: 20px,
+		)
+	);
+}
+
+.title {
+	font-family: "Nunito";
+	font-style: normal;
+	font-weight: 700;
+	color: $neutral-emperor-16;
+
+	@include resD(
+		(
+			font-size: 18px,
+			line-height: 20px,
+		)
+	);
+}
+
+.subtitle {
+	font-family: "Nunito";
+	font-style: normal;
+	font-weight: 600;
+	color: $neutral-emperor-52;
+
+	@include resD(
+		(
+			font-size: 16px,
+			line-height: 18px,
+		)
+	);
+}
+
+// align classes
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}

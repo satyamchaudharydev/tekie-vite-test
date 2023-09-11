@@ -1,0 +1,542 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+.book-session-absolute-form {
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s all ease-in-out;
+  &.relative {
+    position: relative;
+  }
+  @include resD((
+    position: absolute,
+    padding: 29px 48px 48px 33px,
+    background: unset,
+    box-shadow: unset,
+    border-radius: unset,
+    top: 0,
+    width: 100%,
+  ));
+  @include resMs((
+    background: #FAFAFA,
+    position: relative,
+    padding: unset,
+    box-shadow: 0px 4px 10px rgba(0, 87, 115, 0.15),
+    border-radius: 24px,
+    top: -14px,
+    width: 100%,
+    margin: 0px 10px,
+    box-sizing: border-box
+  ));
+}
+
+.book-session-title {
+  font-family: Nunito;
+  font-weight: bold;
+  color: $emperor-61;
+  @include resD((
+    font-size: 26px,
+    margin-bottom: 41px
+  ));
+  @include resMs((
+    font-size: 24px,
+    margin-bottom: 0px
+  ));
+}
+
+.book-session-student-title {
+  @extend .book-session-title;
+  @include resD((
+    margin-bottom: 25px
+  ));
+  @include resMs((
+    margin-bottom: 0px
+  ));
+}
+
+
+.book-session-demo-slot-container {
+  display: flex;
+  flex-direction: column;
+  @include resMs((
+    padding: 32px 20px,
+  ));
+  @include resD((
+    padding: 32px 20px,
+  ));
+}
+
+.book-session-calender-date-container {
+  width: 100%;
+  background: #FDFEFE;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  @include resD((
+    height: 100px,
+    padding: 0 30px,
+    margin-top: 15px,
+  ));
+  @include resMs((
+    height: 100px,
+    padding: 0 23px,
+    margin-top: 32px,
+  ))
+}
+
+.book-session-calender-arrow-wrapper {
+  @include resD((
+    width: (11px * 1.2) + 15px,
+  ));
+  @include resMs((
+    width: (11px * 1.2) + 15px,
+  ));
+  cursor: pointer;
+  display: flex;
+  opacity: 1;
+  &.reverse {
+    justify-content: flex-end;
+  }
+  &.disable {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+.book-session-calender-arrow-container {
+  @include resD((
+    width: 11px * 1.2,
+    height: 16px * 1.2,
+  ));
+  @include resMs((
+    width: 11px * 1.2,
+    height: 16px * 1.2,
+  ));
+  background: url('../../pages/Signup/svg/arrow.svg');
+  background-repeat: no-repeat;
+}
+
+.book-session-calender-date-wrapper {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover .book-session-calender-date-text {
+    color: #00ADE6;
+  }
+  &:hover .book-session-calender-day-text {
+    color: #00ADE6;
+  }
+}
+
+
+.book-session-calender-date-text {
+  &.active {
+    color: #00ADE6;
+  };
+  color: #B6B6B6;
+  font-family: Lato;
+  font-weight: 900;
+  transition: 0.3s all ease-in-out;
+  text-align: center;
+  @include resD((
+    font-size: 25px,
+  ));
+  @include resMs((
+    font-size: 25px,
+  ));
+}
+
+.book-session-calender-day-text {
+  &.active {
+    color: #00ADE6;
+  };
+  color: #B6B6B6;
+  font-family: Lato;
+  font-weight: 400;
+  transition: 0.3s all ease-in-out;
+  text-align: center;
+  @include resD((
+    font-size: 17px,
+    margin-top: 10px,
+  ));
+  @include resMs((
+    font-size: 17px,
+    margin-top: 10px,
+  ));
+}
+
+.book-session-calender-date-line {
+  @include resD((
+    height: 78px,
+    width: 1px
+  ));
+  @include resMs((
+    height: 78px,
+    width: 1px
+  ));
+  background: #000000;
+  opacity: 0.2;
+}
+
+.book-session-calender-arrow-wrapper {
+  @include resD((
+    width: (11px * 1.2) + 15px,
+  ));
+  @include resMs((
+    width: (11px * 1.2) + 15px,
+  ));
+  cursor: pointer;
+  display: flex;
+  opacity: 1;
+  &.reverse {
+    justify-content: flex-end;
+  }
+  &.disable {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+.book-session-calender-arrow-container {
+  @include resD((
+    width: 11px * 1.2,
+    height: 16px * 1.2,
+  ));
+  @include resMs((
+    width: 11px * 1.2,
+    height: 16px * 1.2,
+  ));
+  background: url('../../pages/Signup/svg/arrow.svg');
+  background-repeat: no-repeat;
+}
+
+.book-session-slots-container {
+  display: flex;
+  flex-direction: row;
+  @include resD((
+    margin-top: 18px,
+  ));
+  @include resMs((
+    margin-top: 18px,
+  ));
+}
+
+.book-session-icon-container {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include resD((
+    width: 34px,
+    height: 34px,
+    margin-right: 36px,
+    margin-top: 24px,
+  ));
+  @include resMs((
+    width: 34px,
+    height: 34px,
+    margin-right: 13px,
+    margin-top: 24px,
+  ));
+  &.morning-icon {
+    background-image: url('../../pages/Signup/svg/morning.svg');
+  }
+  &.night-icon {
+    background-image: url('../../pages/Signup/svg/night.svg');
+  }
+  &.afternoon-icon {
+    background-image: url('../../pages/Signup/svg/afternoon.svg');
+  }
+}
+
+.book-session-slot-time-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include resD((
+    width: 615px,
+    margin-left: unset
+  ));
+  @include resMs((
+    width: 100%,
+    margin-left: -16px
+  ));
+}
+.book-session-slot-time-button {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  align-items: center;
+  background: #fff;
+  &.disabled {
+    background: transparent;
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+  &.active {
+    background: $deep-sky-blue;
+    @include resD((
+      border: 1px solid $deep-sky-blue,
+    ));
+  }
+  @include resD((
+    border: 1px solid #A0A0A0,
+    border-radius: 6px,
+    height: 44px,
+    width: 135px,
+    margin-top: 18px,
+    margin-right: 16px,
+    margin-left: unset
+  ));
+  @include resMs((
+    border: 1px solid #A0A0A0,
+    border-radius: 6px,
+    height: 44px,
+    width: 135px,
+    margin-top: 18px,
+    margin-left: 16px,
+    margin-right: unset
+  ));
+  transition: 0.3s all ease-in-out;;
+  &:hover {
+    border: 1px solid $deep-sky-blue,
+  }
+  &:hover .book-session-slot-hole {
+    @include resD((
+      border: 1px solid $deep-sky-blue,
+    ))
+  }
+  &:hover .book-session-slot-time-text {
+    @include resD((
+      color: $deep-sky-blue,
+    ))
+  }
+  &:hover .book-session-slot-time-text.active {
+    @include resD((
+      color: #fff,
+    ))
+  }
+}
+
+.book-session-slot-time-check {
+  @include resD((
+    width: 22px,
+    height: 16px,
+    margin-left: 6px,
+    margin-right: 8px,
+  ));
+  @include resM((
+    width: 22px,
+    height: 16px,
+    margin-left: 6px,
+    margin-right: 6px,
+  ));
+  background: url(../../pages/Signup/svg/check-mark.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.book-session-slot-time-text {
+  font-family: Lato;
+  color: #6D6D6D;
+  @include resD((
+    font-size: 20px,
+  ));
+  @include resMs((
+    font-size: 20px,
+  ));
+  &.active {
+    color: #FFFFFF;
+  }
+}
+
+.book-session-slot-hole {
+  @include resD((
+    width: 16px,
+    height: 16px,
+    margin-left: 11px,
+    margin-right: 9px,
+    border: 1px solid #504F4F,
+  ));
+  @include resMs((
+    width: 16px,
+    height: 16px,
+    margin-left: 11px,
+    margin-right: 9px,
+    border: 1px solid #504F4F,
+  ));
+  border-radius: 50%;
+}
+
+.confirm-slot-button {
+  align-self: center;
+  &.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+  @include resD((
+    margin-top: 32px,
+    margin-bottom: unset
+  ));
+  @include resMs((
+    margin-top: 24px,
+    margin-bottom: unset
+  ));
+}
+
+.book-session-body {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  opacity: 1;
+  pointer-events: auto;
+  transition: 0.3s all ease-in-out;
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  @include resD((
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25),
+    width: 925px,
+    border-radius: 24px,
+    overflow: hidden,
+    background: #FAFAFA,
+  ));
+  @include resM((
+    background: unset,
+    overflow: visible,
+    width: 100%,
+  ));
+  height: auto,
+}
+
+.book-session-loading-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: white;
+  &.show {
+    opacity: 0.6;
+    pointer-events: initial;
+  }
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.2s all ease-in-out;
+}
+
+.book-session-loading-bar-container {
+  width: 100%;
+  background: $emperor-86;
+  @include resD((
+    height: 5px,
+  ));
+  @include resMs((
+    height: 5px,
+  ));
+  div {
+    height: 100%;
+    width: 0%;
+    position: relative;
+    left: 0;
+    background: $theme;
+    animation: bar-loading 1.8s linear infinite;
+  }
+}
+
+
+@keyframes bar-loading {
+  0% {
+    left: 0%;
+    width: 0%;
+  }
+  20% {
+    left: 0%;
+    width: 30%;
+    animation-timing-function: cubic-bezier(.302435,.381352,.55,.956352);
+  }
+  60% {
+    left: 70%;
+    animation-timing-function: cubic-bezier(.302435,.381352,.55,.956352);
+    width: 30%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+.book-session-grade-select {
+  @include resD((
+    margin-top: -20px
+  ))
+}
+
+.book-session-grade-select .book-session__menu-list {
+  @include resD((
+    max-height: 400px !important,
+    // margin-top: -50px
+  ));
+  @include resMs((
+    max-height: 150px !important,
+  ));
+}
+
+.book-session__control {
+  @include resD((
+    width: 400px !important,
+    min-height: 36px !important,
+  ));
+  @include resMs((
+    width: 250px !important,
+    min-height: 56px !important,
+  ));
+}
+
+.book-session__placeholder {
+  color: rgba(17, 17, 17, 0.48) !important;
+  opacity: 0.7;
+  @include resD((
+    font-size: 17px,
+  ));
+  @include resMs((
+    font-size: 17px,
+  ));
+}
+
+.book-session__option {
+  @include resD((
+    font-size: 17px !important,
+  ));
+  @include resMs((
+    font-size: 17px !important,
+  ));
+}
+
+
+.book-session__single-value {
+  @include resD((
+    font-size: 17px !important,
+  ));
+  @include resMs((
+    font-size: 17px !important,
+  ));
+}
+
+.book-session__indicator-separator {
+  background-color: transparent !important;
+}

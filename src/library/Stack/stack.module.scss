@@ -1,0 +1,183 @@
+@import "src/scss/size.scss";
+
+.stack {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+
+	@include resD(
+		(
+			gap: 8px,
+		)
+	);
+	@include resM(
+		(
+			gap: 8px,
+		)
+	);
+}
+
+.row {
+	flex-direction: row;
+	align-items: center;
+}
+
+.s1 {
+	@include resD(
+		(
+			gap: 2px,
+		)
+	);
+}
+
+.s2 {
+	@include resD(
+		(
+			gap: 4px,
+		)
+	);
+}
+
+.s3 {
+	@include resD(
+		(
+			gap: 6px,
+		)
+	);
+}
+
+.s4 {
+	@include resD(
+		(
+			gap: 8px,
+		)
+	);
+}
+
+.s5 {
+	@include resD(
+		(
+			gap: 10px,
+		)
+	);
+}
+
+.s6 {
+	@include resD(
+		(
+			gap: 12px,
+		)
+	);
+}
+
+.s7 {
+	@include resD(
+		(
+			gap: 14px,
+		)
+	);
+}
+
+.s8 {
+	@include resD(
+		(
+			gap: 16px,
+		)
+	);
+}
+
+.s9 {
+	@include resD(
+		(
+			gap: 18px,
+		)
+	);
+}
+
+.s10 {
+	@include resD(
+		(
+			gap: 20px,
+		)
+	);
+}
+
+.s11 {
+	@include resD(
+		(
+			gap: 22px,
+		)
+	);
+}
+
+.s12 {
+	@include resD(
+		(
+			gap: 24px,
+		)
+	);
+}
+
+.s13 {
+	@include resD(
+		(
+			gap: 26px,
+		)
+	);
+}
+
+.s14 {
+	@include resD(
+		(
+			gap: 28px,
+		)
+	);
+}
+
+.s15 {
+	@include resD(
+		(
+			gap: 30px,
+		)
+	);
+}
+
+.s16 {
+	@include resD(
+		(
+			gap: 32px,
+		)
+	);
+}
+
+.s17 {
+	@include resD(
+		(
+			gap: 34px,
+		)
+	);
+}
+
+.s18 {
+	@include resD(
+		(
+			gap: 36px,
+		)
+	);
+}
+
+.s19 {
+	@include resD(
+		(
+			gap: 38px,
+		)
+	);
+}
+
+.s20 {
+	@include resD(
+		(
+			gap: 40px,
+		)
+	);
+}

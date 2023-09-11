@@ -1,0 +1,85 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import 'src/scss/Inter.scss';
+
+.reportPageHeader{
+    display: flex;
+    align-items: center;
+}
+.classroomIcon{
+    cursor: pointer;
+    fill: #A8A7A7;
+    & path{
+        fill: #A8A7A7;
+    }
+    &:hover{
+        color: #8C61CB;
+        & path{
+            fill: #8C61CB;
+        }
+    }
+@include resD1280(
+            (
+            height: 16px,
+            width: 16px,
+            )
+        );
+        @include resM(
+            (
+            height: 16px,
+            width: 16px,
+            )
+        );
+}
+
+.nextArrowIcon{
+    fill-opacity: 0.5;
+@include resD1280(
+            (
+            height: 24px,
+            width: 24px,
+            margin: 0 4px,
+            )
+        );
+        @include resM(
+            (
+            height: 24px,
+            width: 24px,
+            margin: 0 4px,
+            )
+        );
+}
+.headerText{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+color: #A8A7A7;
+@include resD1280(
+            (
+            font-size: 12px,
+            line-height: 16px,
+            )
+        );
+        @include resM(
+            (
+            font-size: 12px,
+            line-height: 16px,
+            )
+        );
+        &.active, &.topicName{
+            color: #8C61CB;
+        }
+}
+
+.paginationStyles{
+    cursor: pointer;
+    &:hover{
+      color: #8C61CB;
+    }
+}
+
+.classroomIconDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

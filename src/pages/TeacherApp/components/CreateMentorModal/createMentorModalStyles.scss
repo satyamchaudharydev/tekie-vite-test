@@ -1,0 +1,187 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import 'src/scss/Inter.scss';
+
+$primary-admin-color: #00ADE6;
+$primary-fontFamily: Inter;
+$primary-fontStyle: normal;
+$primary-fontWeight: 500;
+
+.createMentorModal-select {
+  @include resD(( 
+      min-height: 52px
+  ));
+  @include resM((
+      min-height: 38px
+  ));
+}
+
+.createMentorModal-select__fixed_hw {
+  @include resD(( 
+      min-height: 51px,
+      // max-height: 51px,
+  ));
+  @include resM((
+      min-height: 38px,
+      // max-height: 38px,
+  ));
+}
+
+.createMentorModal-select__control.createMentorModal-select__control {
+  @include resD(( 
+      min-height: 51px,
+      // max-height: 51px,
+      border-radius: 11px
+  ));
+  @include resM((
+      min-height: 38px,
+      // max-height: 38px,
+      border-radius: 8px
+  ));
+}
+
+.createMentorModal-select__indicators.createMentorModal-select__indicators {
+  @extend .createMentorModal-select__fixed_hw;
+}
+
+.createMentorModal-select__value-container.createMentorModal-select__value-container {
+  @extend .createMentorModal-select__fixed_hw;
+  @include resD(( 
+      padding-left: 16px
+  ));
+}
+
+.createMentorModal-select__placeholder.createMentorModal-select__placeholder,
+.createMentorModal-select__single-value.createMentorModal-select__single-value {
+  font-family: $primary-fontFamily;
+  font-weight: 400;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+      top: 46%,
+      margin-left: 2px,
+      font-size: 18px,
+  ));
+  @include resM((
+      top: 45%,
+      font-size: 14px,
+  ));
+}
+
+.createMentorModal-select__option.createMentorModal-select__option {
+  font-family: $primary-fontFamily;
+  font-weight: 400;
+  @include resD((
+      height: 48px,
+      font-size: 18px,
+      padding: 14px,
+      margin: 4px 0px
+  ));
+  @include resM((
+      height: 36px,
+      font-size: 14px,
+      padding: 11px,
+      margin: 0px 0px
+  ));
+}
+
+.createMentorModal-select__dropdown-indicator.createMentorModal-select__dropdown-indicator {
+  & svg {
+      @include resD(( 
+          height: 24px,
+          width: 29px
+      ));
+      @include resM((
+          height: 20px,
+          width: 25px
+      ));
+  }
+}
+
+.createMentorModal-select__menu.createMentorModal-select__menu {
+  @include resD(( 
+      margin: 9px 0px
+  ));
+  @include resM((
+      margin: 7px 0px
+  ));
+}
+
+.createMentorModal-select__menu-list.createMentorModal-select__menu-list {
+  border: 0.01px outset rgb(226, 226, 226);
+  border-bottom: #dcdde0;
+  border-right: #dcdde0;
+  @include resD((
+      min-height: 38px,
+      max-height: 216px,
+      border-radius: 8px
+  ));
+  @include resM((
+      min-height: 27px,
+      max-height: 149px,
+      border-radius: 3px
+  ));
+  &::-webkit-scrollbar {
+      @include resD(( 
+          width: 9px,
+      ));
+      @include resM((
+          width: 8px
+      ));
+  }
+  &::-webkit-scrollbar-thumb {
+      background: rgba(140, 97, 203, 0.6);
+      @include resD(( 
+          margin-right: 12px,
+      ));
+      @include resM((
+          margin-right: 6px,
+      ));
+  }
+  &::-webkit-scrollbar-thumb:hover {
+      background: #8C61CB
+  }
+}
+
+.createMentorModal-select__menu-notice.createMentorModal-select__menu-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+      height: 38px,
+      font-size: 16px
+  ));
+  @include resM((
+      height: 27px,
+      font-size: 11px
+  ));
+}
+
+.createMentorModal-select__multi-value.createMentorModal-select__multi-value {
+  display: flex;
+  align-items: center;
+  @include resD((
+    height: 28px,
+    font-size: 15px,
+    margin-right: 7px,
+    border-radius: 8px
+  ));
+  @include resM((
+    height: 20px,
+    font-size: 9px,
+    margin-right: 4px,
+    border-radius: 6px
+  ));
+  svg {
+    @include resD((
+      height: 18px,
+      width: 18px
+    ));
+    @include resM((
+      height: 13px,
+      width: 13px
+    ));
+  }
+}

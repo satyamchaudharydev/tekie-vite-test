@@ -1,0 +1,16 @@
+div[data-type="Resizer"] {
+  background: #121b1d;
+  opacity: 1;
+  z-index: 9;
+  box-sizing: border-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  width: 10px;
+  margin: 0 -5px;
+  cursor: col-resize;
+  background-image: url("../../assets/editor/splitterHandle.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 0 !important;
+}

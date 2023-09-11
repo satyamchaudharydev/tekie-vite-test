@@ -1,0 +1,164 @@
+@import "../../../../mixins/_mixins.scss";
+@import "../../../../variables/_variables.scss";
+@import "src/scss/size.scss";
+
+.cardContainer {
+  height: 100%;
+  @include resD((
+    border-radius: 5px,
+    font-size: 12px,
+    padding: 7px 5px,
+  ));
+  
+  width: calc(100%);
+  min-width: 0;
+  font-family: 'Inter';
+}
+.withBoxShadow{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+}
+.classTime {
+  font-weight: 400;
+}
+.classGrade {
+  @include resD((
+    margin-bottom: 7px,
+    border-radius: 5px,
+  ));
+  text-align: center;
+}
+.sub30ClassGrade{
+  font-weight: 700;
+ @include resD((
+   font-size:16px
+ ));
+ @media screen and (min-width:1300px) {
+  flex-grow: 0.33;
+ }
+}
+.sub30ClassTime{
+ @include resD((
+   font-size:12px
+ ))
+}
+.sub30CardIcon{
+  @include flex(center,center);
+  @include resD((
+    margin-right:3px,
+  ))
+}
+// .sub30GradAndTime{
+//   @include flex(start,center)
+// }
+.gradeAndSeparator{
+  @include flex(flex-start,center);
+  flex: 1 1 50%;
+  gap: 3px;
+  @include resD((
+    margin-left:5px
+  ))
+}
+
+.gradeAndTitle{
+  @include resD((
+    font-size: 16px,
+  ));
+  min-width: 0;
+  & p{
+  width: calc(100%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+}
+.gradeAndTime{
+  @include resD((
+    font-size: 16px,
+    // gap: 12px
+  ));
+  min-width: 0;
+  @include flex(center,center);
+  // @include flex(flex-start,center);
+
+  & p{
+  width: calc(100%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+}
+
+.gradeAndSectionContainer {
+  @include flex(flex-start, center);
+  padding-inline-start: 0;
+  margin: 0;
+  padding: 0;
+  li {
+    margin-right: 5px;
+  }
+}
+.cardBody {
+  font-weight: 800;
+  & ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+.titleContainer {
+  @include resD((
+    font-size: 18px,
+  ));
+  background-color: transparent;
+  color: $tekie-amethyst;
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+  font-family: Inter;
+  text-transform: capitalize;
+}
+
+.solidCard{
+  background-color: $primary-color;
+  color: white;
+}
+.outlinedCard{
+  background-color: white;
+  border: 1px solid $primary-color;
+  color: #504F4F
+}
+
+.cardBody{
+  @include resD((
+    gap: 7px,
+    margin-bottom: 10px,
+  ));
+  @include flex(flex-start,flex-start);
+}
+.lessMargin{
+  @include resD((
+    margin-bottom:7px,
+  ));
+}
+.cardIcon{
+  @include flex(center,center)
+}
+
+.timeDaySeparator{
+  display: inline-block;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: white;
+    color: $tekie-grey-70;
+  @include resD((
+    margin: auto 2px,
+  ))
+  }

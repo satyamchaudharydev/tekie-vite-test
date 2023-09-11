@@ -1,0 +1,212 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+.recording_description_individual_container{
+    @include resD((
+        width:100%,
+        height:85px,
+        background-color: #FFFFFF,
+        display:flex,
+        align-items:center,  
+    ));
+    @include resSm((
+        width:100%,
+        height:85px,
+        background-color: #FFFFFF,
+        display:flex,
+        align-items:center,  
+    ))
+}
+
+.serial_no_recording_desc{
+    @include resD((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 18px,
+        color: #212121,
+        width:100px,
+        text-align:center,
+        margin-left:20px,
+    
+    ));
+    @include resSm((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 18px,
+        color: #212121,
+        width:100px,
+        text-align:left,
+        padding-left:-70px,
+        
+       
+    ))
+}
+.session_name_recording_desc{
+    @include resD((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 18px,
+        color: #212121,
+        width:250px,
+        text-align:left,
+        margin-right:130px
+    ));
+    @include resSm((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 18px,
+        color: #212121,
+        width:250px,
+        text-align:left,
+        margin-right:130px
+    ))
+}
+.session_type_recording_desc{
+    @include resD((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 18px,
+        color: #212121,
+        width:150px,
+        text-align:left,
+        margin-right:100px
+    ));
+    @include resSm((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 18px,
+        color: #212121,
+        width:150px,
+        text-align:left,
+        margin-right:100px
+    ))
+}
+.session_time_recording_desc{
+    @include resD((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 18px,
+        color: #212121,
+        width:150px,
+        text-align:left,
+        margin-right:100px
+    ));
+    @include resSm((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 18px,
+        color: #212121,
+        width:150px,
+        text-align:left,
+        margin-right:100px
+    ))
+}
+.session_date_recording_desc{
+    @include resD((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 18px,
+        color: #212121,
+        width:109px,
+        text-align:left,
+        margin-right:100px
+    ));
+    @include resSm((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 18px,
+        line-height: 18px,
+        color: #212121,
+        width:109px,
+        text-align:left,
+        margin-right:100px
+    ))
+}
+.share_recording_desc{
+    @include resD((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 16px,
+        line-height: 18px,
+        color: #212121,
+        width:109px,
+        text-align:left,
+        
+    ));
+    @include resSm((
+        font-family: Inter,
+        font-style: normal,
+        font-weight: normal,
+        font-size: 16px,
+        line-height: 18px,
+        color: #212121,
+        width:109px,
+        text-align:left,
+    ))
+}
+.empty_recording_state{
+    @include resD((
+       
+        width:100%,
+        height:400px,
+        background-color: #FFFFFF,
+        display:flex,
+        align-items:center,
+        justify-content:center,
+        font-family:Inter,
+        color: #A8A7A7
+    ));
+    @include resSm((
+        width:100%,
+        height:85px,
+        background-color: #FFFFFF,
+        display:flex,
+        align-items:center,
+        justify-content:center,
+        font-family:Inter,
+        color: #A8A7A7
+    ))
+}
+.empty_search_handle{
+    @include resD((
+       
+        width:100%,
+        height:85px,
+        background-color: #FFFFFF,
+        display:flex,
+        align-items:center,
+        justify-content:center,
+        font-family:Inter,
+        color: #A8A7A7
+    ));
+    @include resSm((
+        width:100%,
+        height:85px,
+        background-color: #FFFFFF,
+        display:flex,
+        align-items:center,
+        justify-content:center,
+        font-family:Inter,
+        color: #A8A7A7
+    ))
+}

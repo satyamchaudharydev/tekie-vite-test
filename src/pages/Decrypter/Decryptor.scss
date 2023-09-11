@@ -1,0 +1,130 @@
+@import 'src/scss/size.scss';
+*{
+    box-sizing: border-box;
+}
+
+.decryptor-container {
+    @include resD((
+        height: 100vh,
+    ));
+    @include resM((
+        height: auto,
+    ));
+}
+.header{
+    background-color: #00171F;
+    color: white;
+    height: 60px;
+    padding-left: 20px;
+    span{
+        display: flex;
+        align-self: center;
+    }
+}
+.heading{
+    color : #504F4F;
+    padding: 30px 30px;
+    @include resM((
+        font-size: 25px,
+    ));
+    @include resD((
+        font-size: 35px,
+    ));
+}
+.flex{
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+.space-between{
+    justify-content: space-between;
+}
+.converter-wrapper{
+    background: #FFFFFF;
+    // box-shadow: 0px 4px 20px rgba(175, 144, 144, 0.1);
+    overflow: hidden;
+    color:#A8A7A7;
+    margin:auto;
+    position: relative;
+    @include resM((
+        width: 100%,
+        box-shadow: none,
+        display: block,
+        border-radius: 0,
+    ));
+    @include resD((
+        display: flex,
+        width: 90%,
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1),
+        border-radius: 20px,
+    ));
+    .p-l-10{
+        padding-left: 10px;
+    }
+    .converter-top{
+        justify-content: space-between;
+        padding: 12px 20px;
+        padding-left: 25px;
+        padding-bottom: 8px;
+        font-weight: bold;
+        @include resM((
+            border-bottom: 1px solid rgba(220, 220, 220, 0.4),
+            border-top: 1px solid rgba(220, 220, 220, 0.4),
+            color: #00ADE6,
+        ));
+        @include resD((
+            border-bottom: 4px solid #DCDCDC,
+            border-top:none,
+            color: #A8A7A7,
+        ));
+    }
+    .converter-body{
+        overflow:hidden;
+    }
+    .w-50{
+        @include resM((
+            width: 100%,
+        ));
+        @include resD((
+            width: 50%,
+        ));
+    }
+    .icon{
+        cursor: pointer;
+        justify-content: space-between;
+    }
+    .interchangeBtn{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        margin:0;
+        height:0;
+        @include resM((
+           top: 210px,
+        ));
+        @include resD((
+            top: 200px,
+        ));
+        span{
+            height: 80px;
+            width: 80px;
+        }
+        svg{
+            @include resM((
+                transform: rotate(90deg),
+            ));
+            @include resD((
+                transform: rotate(0deg),
+            ));
+        }
+    }
+}
+.background{
+    background-color: #4BB543;
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.toastBody{
+    font-family: inherit;
+}

@@ -1,0 +1,387 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+@import "../../variables/_variables.scss";
+
+.classroomCourseListingContainer{
+    font-family: 'Inter';
+    box-sizing: border-box;
+    min-height: 100%;
+    @include resD1280((
+        padding:20px 20px 0px 0px,
+    ));
+    * {
+        font-family: 'Inter';
+    }
+}
+.classroomCourseLists{
+background: #FFFFFF;
+@include resD1280((
+border-radius: 8px,
+box-shadow: 0px 2px 10px rgba(142, 97, 203, 0.1),
+padding: 12px,
+margin: 15px auto 20px auto,
+));
+}
+
+.courseProgressDetails{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include resD1280((
+        padding-right: 30px,
+        padding-left: 5px,
+        margin-top: 24px,
+        margin-bottom: 15px,
+    ))
+}
+.courseProgressHeader{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.viewReportCta{
+  color: $primary-color;
+  background: none;
+  border: none;
+  cursor: pointer;
+  @include resD1280((
+    padding: 0px,
+    font-size: 14px,
+    line-height: 16px,
+    border-bottom: 2.5px dashed $primary-color,
+  ));
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+// background-position:  0 0, 0 0, 100% 0, 0 100%;
+// background-size: 0, 0, 0, 100% 3px;
+// background-repeat: no-repeat;
+// background-image:
+//         repeating-linear-gradient(0deg, $primary-color, $primary-color 3px, transparent 2px, transparent 6px),
+//         repeating-linear-gradient(90deg, $primary-color, $primary-color 3px, transparent 2px, transparent 6px),
+//         repeating-linear-gradient(180deg, $primary-color, $primary-color 3px, transparent 2px, transparent 6px),
+//         repeating-linear-gradient(270deg, $primary-color, $primary-color 3px, transparent 2px, transparent 6px);
+}
+// .clearFilterCta{
+//   @include resD1280((
+//         margin: 16px 16px 0 0,
+//     ))  
+// }
+.courseProgressTitle{
+    @include resD1280((
+        margin: 0,
+        margin-right: 10px,
+    ));
+    .coursePackageTitle{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        @include resD1280((
+            font-size: 18px,
+            line-height: 22px,
+        ));
+        color: #282828;
+    }
+    .courseProgressPercent{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        color: #005773;
+        @include resD1280((
+            font-size: 22px,
+            line-height: 27px,
+        ));
+    }
+}
+
+.courseProgressOutOfValue, .classroomCourseTopicCount{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    color: #504F4F;
+    opacity: 0.7;
+    @include resD1280((
+        font-size: 12px,
+        line-height: 16px,
+        margin-bottom: 3px,
+    ));
+}
+
+.classProgressCourses{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+}
+.classProgressCourse{
+background: #FFFFFF;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: all 0.2s ease-in;
+cursor: pointer;
+position: relative;
+@include resD1280((
+    border-radius: 20px,
+    border: 1.5px solid #E1D6F0,
+    height: 36px,
+    padding: 4px 10px,
+    margin: 16px 16px 0 0,
+));
+}
+.selectedCourse{
+background: #8C61CB;
+&.classProgressCourse{
+    @include resD1280((
+        border: 1.5px solid transparent,
+    ))
+}
+& .courseTitle{
+    color: white;
+    // @include resD1280((
+    //     left: 0px,
+    // ))
+}
+// .cancelSelectedCourse{
+//     visibility: visible;
+//     @include resD1280((
+//         right: -2px,
+//     ))
+// }
+// .courseThumbnail{
+//     @include resD1280((
+//         left: -1px,
+//     ))
+// }
+@include resD1280((
+    box-shadow: 0px 2px 10px rgba(140, 97, 203, 0.25),
+))
+}
+.cancelSelectedCourse{
+    transition: all 0.2s ease-in;
+    // position: relative;
+    visibility: hidden;
+    // @include resD1280((
+    //     right: -2px,
+    // ))
+}
+.courseThumbnail{
+transition: all 0.2s ease-in;
+background: #E6F7FD;
+// position: relative;
+overflow: hidden;
+@include resD1280((
+    height: 20px,
+    width: 20px,
+    padding: 4px,
+    border-radius: 50%,
+    // left: 12px,
+));
+& img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+}
+.courseTitle{
+transition: all 0.2s ease-in;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+color: #333333;
+width: max-content;
+// position: relative;
+@include resD1280((
+    font-size: 14px,
+    line-height: 20px,
+    margin: 0 10px,
+    // left: 12px,
+));
+}
+
+.classroomCourseListingChapter{
+    overflow: hidden;
+}
+.classroomCourseChapterHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    @include resD1280((
+        padding-right: 18px,
+    ))
+}
+.classroomCourseChapterTitleArea{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.classroomCourseChapterArrow{
+    transition: all 0.3s ease-in-out;
+    @include resD1280((
+        height: 13px,
+        width: 13px,
+    ));
+    & path{
+        fill: #333333;
+    }
+    &.classroomCourseChapterArrowDown{
+        transform: rotate(90deg);
+    }
+}
+.classroomCourseChapterTitle{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+@include resD1280((
+    font-size: 13px,
+    line-height: 18px,
+    margin-left: 8px,
+));
+color: #212121;
+}
+
+// .classroomCourseTopicCount{
+// font-family: 'Inter';
+// font-style: normal;
+// font-weight: 400;
+// @include resD1280((
+//     font-size: 10px,
+//     line-height: 12px,
+// ));
+// color: #A8A7A7;
+// }
+.classroomCourseChapterDivider{
+opacity: 0.1;
+width: 99%;
+@include resD1280((
+    border-bottom: 2px solid #000000,
+    margin-bottom: 12px,
+    margin-top: 10px,
+));
+}
+
+.classroomCourseChaptersCollapsed{
+  transition: all 0.3s ease-in-out;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  & > div > div{
+    margin: 0;
+  }
+  &.classroomCourseChaptersOpened{
+    height: unset;
+    opacity: 1;
+    visibility: visible;
+    & > div > div{
+        @include resD1280(
+            (
+                margin-top: 10px,
+            )
+        );
+    }
+  }
+}
+
+.classroomCourseListingLoaderBackdrop{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    background-color: #fff;
+    & span{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        width: 100%;
+        font-family: 'Inter';
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+}
+.classroomCourseNoSession{
+    font-weight: 600;
+    @include resD1280((
+        font-size: 16px,
+    ))
+}
+
+.backToTop{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+    transform: rotate(90deg);
+    z-index: 999;
+    @include resD1280((
+        bottom: 20px,
+        right: 30px,
+    ));
+    & button{
+        @include resD1280((
+            padding: 10px,
+        ))
+    }
+    & svg, & path{
+        fill: gray;
+    }
+    &.visibleButton{
+        visibility: visible;
+        opacity: 1;
+    }
+    & span{
+        display: flex;
+    }
+}
+.sessionTab{
+    margin-left: a;
+    display: flex;
+    @include resD((
+        gap: 10px,
+    ))
+}
+.sessionTabContainer{
+    margin-left: auto;
+}
+.pillContainer{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.pill{
+    --primary-color: #8C61CB;
+    border: 1px solid var(--primary-color);
+    border-radius: 200px;
+    display: flex;
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include resD((
+        padding: 8px,
+        gap: 8px,
+    ));
+    span{
+      font-weight: 500;
+      @include resD((
+        font-size: 18px,
+        ));
+    }
+    svg{
+        width: 17px;
+    }
+    &.active{
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+    
+}
+.theoryTooltipContainer{
+    width: max-content;
+    transform: translateX(-10%);
+}

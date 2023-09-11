@@ -1,0 +1,340 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import 'src/scss/Inter.scss';
+@import '../../../../../variables/_variables.scss';
+@import '../../../../../mixins/_mixins.scss';
+
+$pri-color: $primary-color;
+$pri-color-dark: $primary-color-110;
+
+.Students_main{
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding-top: 28px;
+    @include resM((
+        padding-left: 12px,
+        padding-right: 12px
+    ));
+    @include resD((
+        padding-left: 24px,
+        padding-right: 24px
+  ));
+  padding-bottom: 30px;
+}
+
+.Students_flexbox{
+    display: flex;
+        justify-content: space-between;
+        @include resD((
+            align-items: center
+      ));
+      margin-bottom: 19px;
+}
+
+.noStudent{
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.Students_text1{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    color: #212121;
+    @include resM((
+        font-size: 12px,
+        padding-right: 12px,
+        display: none
+    ));
+    @include resD((
+        font-size: 20px,
+        padding-right: 16px,
+        display: flex,
+        align-items: center
+  ));
+}
+.Students_Container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    background: #F2F2F2;
+    border-radius: 4px;
+}
+
+.Students_Icon{
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+}
+.Students_text2{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #757575;
+    margin-right: 5px;
+}
+
+.Students_text3{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    color: black;
+}
+
+.Students_input{
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    padding-left: 5px;
+}
+.Students_input ::placeholder{
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
+
+color: #9E9E9E;
+
+}
+::-webkit-input-placeholder {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    
+    color: #9E9E9E;
+    
+  }
+.Students_inputContainer{
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 200px;
+}
+.Students_search{
+    width: 16px;
+    height: 16px;
+    padding-right: 5px;
+//     @include resM((
+//         width:
+//     ));
+//     @include resD((
+//         font-size: 12px,
+//         margin-left: 50px,
+//         margin-top: 0px
+//   ));
+}
+
+.Students_linkButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 16px 9px 12px;
+    background: $pri-color;
+    border-radius: 8px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    @include resM((
+        font-size: 12px,
+        width: max-content,
+        margin-left: 10px,
+        margin-top: 10px
+    ));
+    @include resD((
+        font-size: 12px,
+        margin-left: 50px,
+        margin-top: 0px
+  ));
+  cursor: pointer;
+}
+.Students_linkButton:hover{
+    background: $pri-color-dark;
+}
+.Students_link{
+    color: white;
+    padding-right: 12px;
+}
+
+.customers{
+        border-collapse: collapse;
+        width: 100%;
+        overflow-x: scroll;
+}
+
+.customers thead{
+    position: sticky;
+    top: 0;
+}
+.table_wrapper{
+  overflow: auto;
+  width: 100%;
+//   @include resM((
+//     width: 450px
+// ));
+// @include resD((
+//     width: 1450px
+// ));
+// height: 40vh;
+margin-bottom: 20px;
+}
+.table_wrapper table{
+    position: relative;
+    border-collapse: collapse;
+}
+.topRow{
+    background: #F5F5F5;
+    border-radius: 6px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.topHeading{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    color: #212121;
+}
+
+.heading1{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    color: #212121;
+    display: flex;
+    align-items: center;
+    @include resM((
+        font-size: 10px
+    ));
+    @include resD((
+        font-size: 14px
+  ));
+}
+
+.heading{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    color: #212121;
+    @include resM((
+        font-size: 10px
+    ));
+    @include resD((
+        font-size: 14px
+  ));
+}
+
+.email{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    color: #005773;
+    @include resM((
+        font-size: 10px
+    ));
+    @include resD((
+        font-size: 14px
+  ));
+}
+
+.customers td{
+    text-align: left;
+    border-bottom: 1px solid #EEEEEE;
+    box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3);
+    @include resM((
+        padding: 8px
+    ));
+    @include resD((
+        padding: 16px
+  ));
+}
+.customers th{
+    text-align: left;
+    position: static;
+    top: 0;
+    font-size: 14px;
+    width: 120px;
+    font-weight: 600;
+    border-bottom: 1px solid #EEEEEE;
+    @include resM((
+        padding: 8px
+    ));
+    @include resD((
+        padding: 16px
+  ));
+}
+
+.studentImage{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.feedbackImage{
+    background: #FAF7FF;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 5px;
+}
+.feedbackImage2{
+    background: #FAF7FF;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 5px;
+    @include flex(center,center)
+}
+.feedbackBorder{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px;
+width: 36px;
+height: 36px;
+left: 906px;
+top: 10px;
+
+background: #FAF7FF;
+border: 1px solid #EEEEEE;
+box-sizing: border-box;
+border-radius: 8px;
+}
+
+.Students_flexbox2{
+    display: flex;
+    @include resM((
+        flex-direction: column
+    ));
+    @include resD((
+        flex-direction: row,
+        align-items: center
+  ));
+}
+.Students_flexbox3{
+    @include resD((
+        display: flex,
+        padding-top: 0px
+  ));
+  @include resM((
+        padding-right: 10px,
+        padding-top: 5px
+  ));
+}

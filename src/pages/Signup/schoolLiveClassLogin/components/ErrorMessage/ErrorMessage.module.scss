@@ -1,0 +1,49 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/spacing.scss";
+
+@mixin font-style(
+  $font-family,
+  $font-style,
+  $font-weight,
+  $color,
+  $line-height:normal,
+) {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+.school-live-class-login-wrongCodeText {
+  @include font-style(Nunito, normal, 600, #F02A13);
+  letter-spacing: 0.03em;
+  margin-bottom: 0%;
+  height: 20px;
+  text-align: right;
+  @include resD(
+    (
+      font-size: 16px,
+      margin-top: 8px,
+    )
+  );
+  @include resMs(
+    (
+      font-size: 18px,
+      margin-top: 8px,
+    )
+  );
+}
+@media screen and (min-width: 370px) and (max-width: 400px) {
+  .school-live-class-login-wrongCodeText {
+    height: 16px;
+    margin-top: 8px;
+    font-size: 12px;
+  }
+}
+
+.school-live-class-login-warning {
+  path {
+    fill: #FAAD14;
+  }
+}

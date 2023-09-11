@@ -1,0 +1,421 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.landing-page-enroll-form-overlay {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 999;
+  min-height: 100vh;
+}
+
+
+.landing-page-enroll-form-shadowRight {
+  box-shadow: 20px 20px 10px 0 rgba(0, 0, 0, 0.4);
+}
+.landing-page-enroll-form-shadowLeft {
+  box-shadow: 20px 20px 10px 0 rgba(0, 0, 0, 0.4);
+}
+.landing-page-enroll-form-close {
+  align-self: flex-end;
+  background-image: url('../../../assets/close.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  @include resM((
+    width: 21px,
+    height: 21px,
+    margin-top: 50px,
+  ));
+  @include resD((
+    width: 21px,
+    height: 21px,
+    margin-top: 110px,
+    margin-right: 300px,
+  ));
+}
+
+.landing-page-enroll-form-head {
+  margin-top: hsm(7px);
+  display: flex;
+  flex: 1;
+  width: 100%;
+  background-color: #000c10;
+  @include resM((
+    border-radius: 10px 10px 0px 0px,
+  ));
+  @include resD((
+    border-radius: 10px 10px 0px 0px,
+    width: 1300px,
+    margin-top: 17px,
+  ));
+}
+
+.landing-page-enroll-form-headItem {
+  @extend .lato-regular;
+  flex: 1;
+  // text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.4;
+  color: rgba(#fff, 0.3);
+
+  @include resM((
+    font-size: 17px,
+    height: 55px,
+    letter-spacing: 1.33px,
+  ));
+  @include resD((
+    width: 688px,
+    height: 104px,
+    background-color: #00171F !important,
+    font-size: 30px,
+  ));
+  &.landing-page-enroll-form-active {
+    background-color: #011f29;
+    color: rgba(#2ABBC2, 0.7);
+    @include resM((
+      border-radius: 10px 10px 0px 0px,
+    ));
+    @include resD((
+      border-radius: 10px 10px 0px 0px,
+    ));
+  }
+}
+
+.landing-page-enroll-form-body {
+  width: 100%;
+  background-color: #00171F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  // overflow: scroll;
+  height: 300%;
+  @include resM((
+    padding: 0.88px 25px,
+    padding-top: 34px,
+    padding-bottom: 30px,
+  ));
+  @include resD((
+    width: 1300px,
+    height: 680px,
+    padding: 0px 64px,
+    box-sizing: border-box,
+    padding-top: 100px,
+  ));
+}
+
+.landing-page-enroll-form-column { 
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  @include resM((
+    align-items: center,
+  ));
+  @include resD((
+    align-items: flex-start,
+  ));
+}
+.landing-page-enroll-form-row {
+  display: flex;
+  width: 100%;
+  @include resM((
+    flex-direction: column,
+    align-items: center,
+  ));
+  @include resD((
+    flex-direction: row,
+    justify-content: space-between,
+  ));
+}
+
+.landing-page-enroll-form-videoContainer {
+  @extend .lato-light;
+  background-image: url('../../../assets/bookSessionBG.png');
+  background-size: cover;
+  color: #34e4ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  @include resM((
+    display: none,
+    margin-bottom: 0px,
+    height: 82px,
+    font-size: 22px,
+    letter-spacing: 1.54px,
+    line-height: 27px,
+  ));
+  @include resD((
+    width: 1300px,
+    height: 104px,
+    display: flex,
+    font-size: 30px,
+    line-height: 36px,
+    letter-spacing: 2.1px,
+  ));
+}
+
+.landing-page-enroll-form-videoContainerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(#000d11, 0.9), rgba(2, 15, 19, 0.8));
+}
+
+.landing-page-enroll-form-text {
+  @extend .lato-light;
+  opacity: 0.6;
+  line-height: 1.44;
+  color: #ffffff;
+  @include resM((
+    font-size: 18px,
+    letter-spacing: 0.88px,
+    margin-bottom: 28px,
+    display: none,
+  ));
+  @include resD((
+    font-size: 25px,
+    line-height: 45px,
+    letter-spacing: 1.53px,
+    margin-bottom: 51px,
+    margin-top: 0px,
+    display: block,
+  ));
+}
+.landing-page-enroll-form-label {
+  width: 100%;
+  @extend .lato-light;
+  color: rgba(#fff, 0.3);
+  line-height: 1.76; 
+  @include resM((
+    margin-bottom: 20.5px,
+    font-size: 15px,
+    letter-spacing: 1.79px,
+    margin-left: 10px,
+  ));
+  @include resD((
+    font-size: 25px,
+    letter-spacing: 1.53px,
+    margin-left: 20px,
+    margin-bottom: 17px,
+  ));
+}
+.landing-page-enroll-form-gradesContainer {
+  background-color: #00070a;
+  display: flex;
+  width: 100%;
+  @include resM((
+    align-items: center,
+    height: 50px,
+    border-radius: 4px,
+  ));
+  @include resD((
+    width: 468px,
+    height: 70.2px,
+    border-radius: 4px,
+    align-self: flex-start,
+  ));
+}
+
+.landing-page-enroll-form-grade {
+  @extend .lato-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: rgba(#fff, 0.8);
+  height: 100%;
+  cursor: pointer;
+  @include resM((
+    font-size: 18px,
+    letter-spacing: -0.18px,
+  ));
+  @include resD((
+    font-size: 24px,
+    letter-spacing: -0.24px,
+  ));
+
+}
+.landing-page-enroll-form-gradeSep {
+  background-color: #229296;
+  opacity: 0.4;
+  @include resM((
+    height: 25.5px,
+    width: 0.6px,
+  ));
+  @include resD((
+    height: 35.8px,
+    width: 0.5px
+  ));
+}
+.landing-page-enroll-form-gradeActive {
+  color: #24a5be;
+  border-style: inset;
+  @include resM((
+    border-radius: 4px,
+    border: solid 1px #24a5be,
+  ));
+  @include resD((
+    border-radius: 4px,
+    border: solid 1px #24a5be,
+  ));
+}
+.landing-page-enroll-form-privacytext {
+  @extend .lato-light;
+  font-weight: 100;
+  color: #ffffff;
+  opacity: 0.8;
+  text-align: center;
+  span {
+    font-weight: 300;
+    color: #24a5be;
+  }
+  @include resM((
+    margin-top: 28px,
+    width: 216px,
+    font-size: 14px,
+  ));
+  @include resD((
+    width: auto,
+    font-weight: 300,
+    margin-top: 68px,
+    font-size: 20px,
+  ));
+}
+.landing-page-enroll-form-selfLearnerPrivacyMargin {
+  @include resD((
+    margin-top: 100px,
+  ));
+}
+.landing-page-enroll-form-error {
+  @extend .lato-light;
+  position: relative;
+  width: 100%;
+  color: red;
+  @include resM((
+    height: 10px,
+    top: -18px,
+    left: 4px,
+    font-size: 15px,
+  ));
+  @include resD((
+    height: 7px,
+    top: -14px,
+    left: 6px,
+    font-size: 23px,
+  ));
+}
+.landing-page-enroll-form-phoneError {
+  @extend .landing-page-enroll-form-error;
+  @include resM((
+    top: 0px,
+  ));
+  @include resD((
+    top: 7px,
+  ));
+}
+
+.landing-page-enroll-form-inputContainer {
+  display: flex;
+  flex-direction: row;
+  @include resM((
+    width: 100%,
+  ));
+  @include resD((
+    width: 476px,
+  ));
+  input#phone {
+    width: unset;
+    flex: 1;
+  }
+}
+
+.landing-page-enroll-form-input {
+  width: 100%;
+  border: none;
+  text-decoration: none;
+  color: white;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-bottom: solid 0.3px rgba(#ffffff, 0.5);
+  @extend .lato-light;
+  color: rgba(#fff, 0.8);
+  outline: none;
+  line-height: 1.76;
+  &:focus {
+    border-bottom: solid 0.3px rgba(52, 228, 234, 1);
+  }
+  @include resM((
+    min-height: 36px,
+    padding: 0px 7.5px,
+    font-size: 15px,
+    margin-bottom: 18px,
+    letter-spacing: 1.79px,
+  ));
+  @include resD((
+    width: 476px !important,
+    min-height: 42px,
+    margin-bottom: 22px !important,
+    padding: 12px 10px,
+    font-size: 25px !important,
+    letter-spacing: 1.53px !important,
+  ));
+  
+  &::placeholder {
+    @extend .lato-light;
+    color: rgba(#fff, 0.3);
+    line-height: 1.76;
+    @include resM((
+      font-size: 15px,
+      letter-spacing: 1.79px,
+    ));
+    @include resD((
+      font-size: 25px,
+      letter-spacing: 1.53px,
+    )); 
+  }
+}
+
+.landing-page-enroll-form-phoneInput {
+  @extend .landing-page-enroll-form-input;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: solid 0.3px rgba(#ffffff, 0.5) !important;
+  @include resM((
+    width: 100% !important,
+  ));
+}
+
+.landing-page-enroll-form-dropdownButtonClass {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.landing-page-enroll-form-inputSm {
+  @extend .landing-page-enroll-form-input;
+  @include resM((
+    width: 45px,
+    margin-right: 10px,
+  ));
+  @include resD((
+    width: 68px,
+    margin-right: 20px,
+  )); 
+}
+
+.landing-page-enroll-form-inputColumn {
+  width: 100%;
+}

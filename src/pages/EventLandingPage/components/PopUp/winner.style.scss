@@ -1,0 +1,244 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+.winner-confirmation-modal-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.58);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+    opacity: 0;
+    transition: 0.3s all ease-in-out;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.winnerPopup {
+    font-family: 'Nunito';
+    font-style: normal;
+    box-sizing: border-box;
+    border-radius: 42px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    @include resD((
+        width: 650px,
+        height: fit-content,
+        margin-top: 300px,
+    ));
+    @include resM((
+        width: 360px,
+        height: 412px,
+        margin-top: 200px,
+    ));
+}
+
+.popup-header {
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    @include resD((
+        border-radius: 20px 20px 0 0,
+        background: url(./assets/signupBG.png) no-repeat,
+        height: 280px,
+        top:-300px,
+    ));
+    @include resM((
+        background: transparent,
+        height: 125px,
+        border-radius: 0,
+        top:-100px,
+    ));
+}
+
+.trophy {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    @include resD((
+        height: initial,
+    ));
+    @include resM((
+        height: 100%,
+    ));
+}
+
+.trophy-img {
+    z-index: 10;
+    @include resD((
+        width: 100%,
+        margin-top: initial,
+        height:450px,
+    ));
+    @include resM((
+        width: 100%,
+        margin-top: 0px,
+        height:fit-content,
+    ));
+}
+
+.popup-footer {
+    font-family: 'Nunito';
+    background: #FFFFFF;
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    @include resD((
+        border-radius: 40px,
+        height: 550px,
+    ));
+    @include resM((
+        height: 300px,
+        border-radius: 50px,
+    ));
+}
+
+.trophy-line {
+    @include resD((
+        width: 100%,
+        margin-top: 6vw,
+    ));
+    @include resM((
+        width: inherit,
+        margin-top: 5vw,
+    ));
+}
+
+.winner-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    @include resD((
+        height: 50%,
+        bottom: 60px,
+        top:unset,
+    ));
+    @include resM((
+        height: 100%,
+        bottom: unset,
+        top:-30px,
+    ));
+}
+
+.winner-tag {
+    font-style: normal;
+    color: #01AA93;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    @include resD((
+        font-size: 46px,
+        font-weight: 800,
+        margin: 30px auto,
+        margin-bottom: 40px,
+    ));
+    @include resM((
+        font-size: 16px,
+        font-weight: 800,
+        margin: 10px auto,
+        margin-bottom: 10px,
+    ));
+}
+
+
+.winner-desc {
+    color: #282828;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    padding: 0 10px;
+    @include resD((
+        font-size: 24px,
+        font-weight: bold,
+    ));
+    @include resM((
+        font-size: 14px,
+        font-weight: bold,
+    ));
+}
+
+.course-bold {
+    color: #01AA93;
+    font-weight: 800;
+}
+
+.winner-btn {
+    color: #FFFFFF;
+    background: conic-gradient(from -3.29deg at 100% -13%, #35E4E9 0deg, #00ADE6 360deg);
+    border-radius: 40px;
+    line-height: 140%;
+    display: flex;
+    border: none;
+    align-items: center;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    @include resD((
+        font-weight: 500,
+        font-size: 20px,
+        // width: 276px,
+        // height: 58px,
+        justify-content: space-evenly,
+        margin: 40px auto,
+        margin-bottom: 60px,
+        padding: 10px 32px,
+        padding-top: 14px,
+    ));
+    @include resM((
+        justify-content: space-between,
+        font-weight: bold,
+        font-size: 14px,
+        margin: 25px auto,
+        margin-bottom:0,
+        padding: 6px 24px,
+    ));
+}
+
+.cross {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    justify-content: flex-end;
+    position: absolute;
+    cursor: pointer;
+    @include resD((
+        display: flex,
+        top: -10px,
+        right: -10px
+    ));
+    @include resM((
+        display: flex,
+        top: -70px,
+        right: -20px
+    ));
+}
+
+.party-popper{
+    background-image: url('./assets/partyPopper.png');
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    bottom:-3px;
+    @include resD((
+        height:26px,
+        width:26px,
+    ));
+    @include resM((
+        height:20px,
+        width:20px,
+    ))
+}

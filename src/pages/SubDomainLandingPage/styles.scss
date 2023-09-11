@@ -1,0 +1,409 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme.scss';
+@import 'src/scss/Inter.scss';
+@import 'src/scss/lato.scss';
+
+.subDomain-landing-page-body {
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  // background-image: url('../../assets/landingPageOverlay.png');
+  background-image: url("../../assets/wizard-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  @include resD((
+    height: 100vh
+  ));
+  @include resM((
+    height: 100%
+  ));
+}
+
+#fc_frame, #fc_frame.fc-widget-normal {
+  bottom: 65px !important;
+}
+
+.subDomain-landing-page-header {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+    padding: 32px 0px,
+  ));
+  @include resM((
+    padding: 12px 0px,
+  ));
+}
+
+.subDomain-landing-page-school-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+    flex-direction: row,
+  ));
+  @include resM((
+    flex-direction: column,
+  ));
+}
+
+.subDomain-landing-page-school-details-text {
+  @extend .Inter-regular;
+  font-weight: 600;
+  padding-left: 12px;
+  color: $emperor;
+  text-align: center;
+  letter-spacing: .5px;
+  line-height: 32px;
+  @include resM((
+    font-size: 28px,
+  ));
+  @include resD((
+    font-size: 32px,
+  ));
+  
+  & > span {
+    text-transform: capitalize;
+    font-weight: 500;
+    display: block;
+    @include resM((
+      font-size: 18px,
+    ));
+    @include resD((
+      font-size: 20px,
+    ));
+  }
+}
+
+// .subDomain-landing-page-header-logo-container {
+//   background-image: $primary-gradient;
+//   padding: 4px;
+//   border-radius: 100%;
+// }
+.subDomain-landing-page-header-SchoolLogo {
+  @include resM((
+    width: 60px,
+    height: 60px,
+  ));
+  @include resD((
+    width: 110px,
+    height: 110px,
+  ));
+  background-color: #FFF;
+  // border-radius: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 5px solid transparent;
+}
+
+.subDomain-landing-page-footer-container {
+  bottom: 0;
+  left: 0;
+  background-color: #F0F3F4;
+  // background-color: rgba(220, 220, 220, 0.3);
+  padding: 18px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  @include resD((
+    flex-direction: row,
+    justify-content: space-between,
+    position: fixed,
+    margin-top: 0px,
+  ));
+  @include resM((
+    flex-direction: column,
+    justify-content: center,
+    position: relative,
+    margin-top: 12px,
+  ));
+  
+  & .subDomain-landing-page-footer-leftContainer,.subDomain-landing-page-footer-rightContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    @include resM((
+      font-size: 14px,
+      flex-wrap: wrap,
+    ));
+    @include resD((
+      font-size: 16px,
+    ));
+
+    .subDomain-landing-page-footer-TekieLogo {
+      @include resM((
+        width: 28px,
+        height: 28px,
+        margin: 0px 6px,
+      ));
+      @include resD((
+        width: 40px,
+        height: 40px,
+        margin: 0px 12px,
+      ));
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    & span {
+      font-family: Nunito;
+      font-weight: normal;
+      color: #504F4F;
+      opacity: 0.7;
+      @include resD((
+        padding: 0
+      ));
+      @include resM((
+        padding-top: 8px
+      ));
+    }
+  }
+  .subDomain-landing-page-footer-privacyAndTerms {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0px 12px;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:nth-child(1) {
+      border-right: 1px solid rgba(80, 79, 79, 0.5);
+    }
+  }
+}
+
+.subDomain-landing-page-SignUpLoginContainer {
+  width: 100%;
+  // flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  box-sizing: border-box;
+  @include resD((
+    padding-bottom: 180px,
+    justify-content: center,
+  ));
+  @include resM((
+    padding: 0px 18px,
+    justify-content: flex-start,
+  ));
+
+  & .subDomain-landing-page-block-container {
+    background: #FFFFFF;
+    border: 0.5px solid rgba(176, 176, 176, 0.3);
+    box-sizing: border-box;
+    border-radius: 12px;
+    display: flex;
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.3s all ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    @include resD((
+      width: 850px,
+      height: 160px,
+      flex-direction: row,
+      margin: 18px 0px,
+    ));
+    @include resM((
+      flex-direction: column,
+      margin: 12px 8px,
+      width: 100%,
+    ));
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(270deg, #35E4E9 -8.62%, #00ADE6 109.2%);
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+    }
+
+    &:hover {
+      transition: all .2s ease-in-out;
+      &::before {
+        opacity: 1;
+      }
+      .subDomain-landing-page-block-slideImageContainer > div {
+        transform: scale(1.2);
+      }
+      .subDomain-landing-page-block-detailsContainer, .subDomain-landing-page-block-enterbtn {
+        color: #FFFFFF !important;
+        & .subDomain-landing-page-block-arrow {
+          transition: all .3s ease-in-out;
+          transform: translateX(4px);
+          & > path {
+            stroke: #FFFFFF !important;
+          }
+        }
+      }
+    }
+
+    .subDomain-landing-page-block-slideImageContainer {
+      display: block;
+      overflow: hidden;
+      z-index: 0;
+      @include resD((
+        min-width: 300px,
+        height: 100%,
+        background-position: bottom,
+      ));
+      @include resMs((
+        min-width: 100%,
+        height: 120px,
+        background-position: top,
+      ));
+      
+      & > div {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: all .3s ease-in-out;
+        @include resD((
+          background-position: bottom,
+        ));
+        @include resMs((
+          background-position: top,
+        ));
+      }
+      background: #e4e4e4;
+    }
+
+    .subDomain-landing-page-block-detailsContainer {
+      width: 100%;
+      display: flex;
+      position: relative;
+      color: #504F4F;
+      box-sizing: border-box;
+      @include resD((
+        overflow: hidden,
+        padding: 20px 32px,
+        flex-direction: row,
+      ));
+      @include resM((
+        overflow: unset,
+        overflow-x: hidden,
+        padding: 16px 18px,
+        flex-direction: column,
+      ));
+
+      & > div {
+        flex: 1 1 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        &:nth-child(1) {
+          flex: 1 1 65% !important;
+        }
+      }
+
+      & span {
+        font-family: Nunito;
+        display: block;
+        color: inherit;
+      }
+      
+      & .subDomain-landing-page-block-label {
+        font-weight: bold;
+        @include resD((
+          font-size: 24px,
+          padding-bottom: 12px
+        ));
+        @include resM((
+          font-size: 20px,
+          padding-bottom: 8px
+        ));
+      }
+      & .subDomain-landing-page-block-description {
+        font-weight: normal;
+        @include resD((
+          font-size: 16px
+        ));
+        @include resM((
+          font-size: 14px
+        ));
+      }
+      
+      & .subDomain-landing-page-block-enterbtn {
+        align-items: center;
+        font-family: Nunito;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #00ADE6;
+        flex-direction: row;
+        @include resD((
+          font-size: 18px,
+          padding-top: 0px,
+          justify-content: flex-end,
+        ));
+        @include resM((
+          font-size: 16px,
+          padding-top: 8px,
+          justify-content: flex-start,
+        ));
+
+        & .subDomain-landing-page-block-arrow {
+          margin-left: 4px;
+          transition: all .3s ease-in-out;
+          & > path {
+            stroke: #00ADE6;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sp-loader-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .sp-loader-1 {
+    border-radius: 100%;
+    overflow: hidden;
+    @include resD((
+      height: 140px,
+      width: 140px
+      ));
+      @include resSm((
+      height: 20px,
+      width: 150px
+    ))
+  }
+}
+
+.subdomain_page_tekie_logo {
+  @include resD((
+    width: 200px,
+    height: 70px,
+  ))
+}

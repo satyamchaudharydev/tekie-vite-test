@@ -1,0 +1,10 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+
+.wrapper{
+    width: 100%;
+    height: $height-without-navbar;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+}

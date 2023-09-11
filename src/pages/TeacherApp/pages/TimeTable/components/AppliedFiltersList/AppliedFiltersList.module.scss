@@ -1,0 +1,79 @@
+@import "../../../../variables/variables.scss";
+@import "../../../../mixins/_mixins.scss";
+@import "src/scss/size.scss";
+@import "src/scss/theme/spacing.scss";
+
+.filterLabelsAndClassStatusContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filterLabelsContainer {
+  min-width: calc(100vw - 300px);
+  max-width: calc(100vw - 300px);
+  // display: flex;
+  // justify-content: flex-start;
+  // align-items: center;
+  @include flex(flex-start, center);
+  @include resD(
+    (
+      margin-bottom: $s-xm,
+      padding-bottom: $s-xxxs,
+    )
+  );
+}
+
+.labelListContainer {
+  @include flex(flex-start, center);
+  list-style: none;
+  padding-inline-start: 0;
+  max-width: 95%;
+  padding-bottom: 0%;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    height: 2px;
+    border-radius: 0.5vw;
+    background: transparent;
+  }
+}
+.filterLabelsContainer > * {
+  margin-right: 1rem;
+}
+.filterLabel {
+  padding: 5px 8px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  background-color: $tekie-amethyst-30;
+  color: $tekie-amethyst;
+  font-weight: 500;
+  font-size: 10px;
+  margin-right: 7px;
+  cursor: pointer;
+  @include flex(space-between, center);
+  > svg {
+    margin-left: 7px;
+    @include resD(
+      (
+        width: 10px,
+        height: 10px,
+      )
+    );
+    max-width: 10px !important;
+  }
+}
+.clearAll {
+  padding: 3px 2px;
+  color: $tekie-amethyst;
+  border-bottom: 1px dotted $tekie-amethyst;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  .filterLabelsContainer {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .filterLabelsAndClassStatusContainer {
+    max-width: 100vw;
+  }
+}

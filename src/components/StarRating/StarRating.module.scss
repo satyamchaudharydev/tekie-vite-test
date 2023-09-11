@@ -1,0 +1,37 @@
+@import "src/scss/size.scss";
+@import "src/scss/Inter.scss";
+@import "../../pages/TeacherApp/variables/_variables.scss";
+@import "../../pages/TeacherApp/mixins/_mixins.scss";
+
+.starRating{
+  display: flex;
+  align-items: flex-start;
+}
+.starBtn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    @include flex(center,center);
+    flex-direction: column;
+    @include resD((
+        margin-right:22px,
+        gap:6px
+    ))
+  }
+  .on {
+    color: $golden;
+    svg{
+        path{
+            fill:$golden ;
+        }
+    }
+  }
+  .off {
+    color: #ccc;
+  }
+
+  .ratingLabel{
+    @include textStyle($tekie-grey-60,14px,400)
+  }

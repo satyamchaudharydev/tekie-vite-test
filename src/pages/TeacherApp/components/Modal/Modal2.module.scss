@@ -1,0 +1,168 @@
+@import '../../mixins/modalBackdrop.scss';
+@import '../../mixins/_mixins.scss';
+@import '../../variables/_variables.scss';
+@import 'src/scss/Inter.scss';
+
+$primary-color: #8C61CB;
+$primary-color-dark: #7b40d4;
+
+.modalContainer{
+    @include modalBackDrop;
+    &:active, &::selection{
+        border: none,
+    }
+    font-family: 'Inter';
+
+}
+.modal{
+    width: 500px;
+    background-color: white;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.header{
+    box-sizing: border-box;
+    padding:20px 18px;
+    background-color: $tekie-amethyst-10;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    font-size: 18px;
+    height: 90px;
+}
+
+.headerIcon{
+    margin-right: 16px;
+    padding: 12px;
+    background-color: $white;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerHeadingContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headingTextContainer{
+@include flex(start,start);
+flex-direction:column;
+gap: 5px;
+}
+.subHeading{
+    font-size: 12px;
+    font-weight: 400;
+    color: $tekie-grey;
+}
+.heading{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+.body{
+    background-color: $white;
+    padding: 0px 18px;
+}
+.secondaryButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 16px 7px 12px;
+    
+    width: 68px;
+    height: 36px;
+    
+    background: #F3EFFA;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+
+    font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 18px;
+color: #8C61CB;
+outline: none;
+border: none;
+cursor: pointer;
+&:hover{
+    background: #E2CEFF;;
+}
+&:active{
+    background: #F3EBFF;;
+}
+}
+.primaryButton{
+    display: flex;
+    border: none;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 7px 16px 7px 12px;
+
+width: 124px;
+height: 36px;
+outline: none;
+cursor: pointer;
+
+/* Tekie-Amethyst */
+background: $primary-color;
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 18px;
+color: white;
+&:hover{
+    background: $primary-color-dark;
+}
+}
+.footer{
+    box-sizing: border-box;
+    padding: 16px 18px;
+    display: flex;
+    gap:10px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background-color: $white;
+    height: 66px;
+    box-shadow: 0px -1px 0px #EEEEEE;
+}
+.closeModalIcon{
+    margin-bottom: 30px;
+    padding: 0px 5px 2px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    & svg{
+        width: 13px;
+        height: 13px;
+    }
+    &:hover {
+      background: $tekie-amethyst;
+      color: $white;
+      & svg > path {
+        fill: white !important;
+      }
+    }
+}

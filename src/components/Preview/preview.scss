@@ -1,0 +1,28 @@
+.previewComponent{
+    position: relative;
+    // max-height: 250px;
+    // overflow-y: scroll;
+    width: 100%;
+    background: inherit;
+
+    & .tox-tinymce {
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+    }
+
+    & iframe {
+        background: inherit !important;
+        background-color: inherit !important;
+    }
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        background-color: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background: #00ADE6;
+    }
+}

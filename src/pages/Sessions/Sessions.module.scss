@@ -1,0 +1,59 @@
+@import 'src/scss/size.scss';
+
+@media screen and (min-width: 500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 0;
+    }
+
+    .sessionContainer {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .container {
+        display: flex;
+        z-index: 0;
+    }
+
+    .sessionContainer {
+        display: flex;
+    }
+}
+
+.flashContainer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: mymove 0.3s ease-in;
+  }
+  .flashText{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    color: #FFFFFF;
+    position: relative;
+  }
+  @keyframes mymove {
+    from  {
+        background-color: rgba(0,0,0,0.0);
+    }
+    50% {
+        background-color: rgba(0,0,0,0.9);
+    }
+    to{
+        background-color: rgba(0,0,0,0.0);
+    }
+  }

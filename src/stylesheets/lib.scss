@@ -1,0 +1,32 @@
+@function to-string($list, $glue: '', $is-nested: false) {
+  $result: null;
+
+  @for $i from 1 through length($list) {
+    $e: nth($list, $i);
+
+    @if type-of($e) == list {
+      $result: $result#{to-string($e, $glue, true)};
+    } @else {
+      $result: if(
+        $i != length($list) or $is-nested,
+        $result#{$e}#{$glue},
+        $result#{$e}
+      );
+    }
+  }
+
+  @return $result;
+}
+
+@function is-number($value) {
+  @return type-of($value) == 'number';
+}
+
+@function is-relative-length($value) {
+  @if is-number(($value)) {
+    @if unit($value) == "px" {
+      @return true;
+    }
+  }
+  @return false;
+}

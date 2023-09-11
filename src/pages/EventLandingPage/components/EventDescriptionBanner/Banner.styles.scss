@@ -1,0 +1,751 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.banner {
+  background: black;
+  position: relative;
+  overflow: hidden;
+  @include resD(
+    (
+      background-image: url("../../../../assets/bannerBg.png"),
+      background-repeat: no-repeat,
+      background-size: 100% 100%,
+      width: 100%,
+      height: 840px,
+      display: block,
+    )
+  );
+  @include resM(
+    (
+      display: none,
+    )
+  );
+}
+.mobile_banner {
+    position: relative;
+  @include resD(
+    (
+      display: none,
+    )
+  );
+  @include resSm(
+    (
+      background: black,
+      background-image: url("../../../../assets/bannerBgMobile.png"),
+      background-repeat: no-repeat,
+      background-size: cover,
+      width: 100%,
+      height: 500px,
+    )
+  );
+  .banner-btn{
+    margin-top: 15px;
+  }
+}
+
+.bannerHead {
+  font-family: Gilroy;
+  @include resD(
+    (
+      font-style: normal,
+      font-weight: 800,
+      font-size: 64px,
+      margin: auto,
+      text-align: center,
+      color: #ffffff,
+    )
+  );
+  @include resM(
+    (
+      font-style: normal,
+      font-weight: 800,
+      font-size: 24px,
+      text-align: center,
+      color: #ffffff,
+      margin: 2px auto,
+    )
+  );
+}
+
+.bannerHead-2 {
+  font-family: Gilroy;
+  @include resD(
+    (
+      font-style: normal,
+      font-weight: 800,
+      font-size: 64px,
+      margin: auto,
+      text-align: center,
+      color: #ffffff,
+    )
+  );
+  @include resM(
+    (
+      font-style: normal,
+      font-weight: 800,
+      font-size: 24px,
+      margin: 2px auto,
+      text-align: center,
+      color: white,
+      line-height: 120%,
+    )
+  );
+}
+
+.heading {
+  @include resD(
+    (
+      padding-top: 150px,
+    )
+  );
+  @include resM(
+    (
+      position: relative,
+      padding-top: 170px,
+    )
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.desc {
+  font-family: Nunito;
+  @include resD(
+    (
+      font-style: normal,
+      font-weight: normal,
+      text-align: center,
+      // letter-spacing: -0.03em,
+      margin: auto,
+      padding: 15px 0,
+      font-size: 24px,
+      line-height: 34px,
+      color: #FFFFFF,
+      opacity: 0.9,
+    )
+  );
+  @include resM(
+    (
+      font-style: normal,
+      font-weight: normal,
+      font-size: 18px,
+      text-align: center,
+      // letter-spacing: -0.03em,
+      color: #ffffff,
+      opacity: 0.8,
+      margin: 2px auto,
+      background:
+        linear-gradient(
+          180deg,
+          rgba(13, 13, 16, 0.1) 0%,
+          rgba(13, 13, 16, 0) 100%
+        ),
+    )
+  );
+}
+.recs {
+  @include resD(
+    (
+      display: flex,
+      justify-content: space-between,
+      margin-top: -370px,
+      height: 700px,
+      margin-left: 60px,
+      margin-right: 60px,
+    )
+  );
+  @include resM(
+    (
+      display: flex,
+      justify-content: space-between,
+      margin-top: -370px,
+      height: 700px,
+      margin-left: -25px,
+      margin-right: -25px,
+    )
+  );
+}
+
+// .mentorImg1 {
+//   @include resD(
+//     (
+//       position: absolute,
+//       width: 140px,
+//       height: 140px,
+//       left: 0px,
+//       // top: 450px,
+//         border-radius: 50%,
+//       border: 6px solid black,
+//       z-index: 7,
+//     )
+//   );
+//   @include resM(
+//     (
+//       position: absolute,
+//       width: 40px,
+//       height: 40px,
+//       left: 0px,
+//       // top: 480px,
+//         border-radius: 50%,
+//       border: 2px solid black,
+//       z-index: 7,
+//     )
+//   );
+// }
+
+// .mentorImg2 {
+//   @include resD(
+//     (
+//       position: absolute,
+//       width: 140px,
+//       height: 140px,
+//       left: 120px,
+//       // top: 450px,
+//         border-radius: 50%,
+//       border: 6px solid black,
+//       z-index: 6,
+//     )
+//   );
+//   @include resM(
+//     (
+//       position: absolute,
+//       width: 40px,
+//       height: 40px,
+//       left: 32px,
+//       // top: 480px,
+//         border-radius: 50%,
+//       border: 2px solid black,
+//       z-index: 6,
+//     )
+//   );
+// }
+
+// .mentorImg3 {
+//   @include resD(
+//     (
+//       position: absolute,
+//       width: 140px,
+//       height: 140px,
+//       left: 240px,
+//       // top: 450px,
+//         border-radius: 50%,
+//       border: 6px solid black,
+//       z-index: 5,
+//     )
+//   );
+//   @include resM(
+//     (
+//       position: absolute,
+//       width: 40px,
+//       height: 40px,
+//       left: 62px,
+//       // top: 480px,
+//         border-radius: 50%,
+//       border: 2px solid black,
+//       z-index: 5,
+//     )
+//   );
+// }
+
+// .mentorImg4 {
+//   @include resD(
+//     (
+//       position: absolute,
+//       width: 140px,
+//       height: 140px,
+//       left: 360px,
+//       // top: 450px,
+//         border-radius: 50%,
+//       border: 6px solid black,
+//       z-index: 4,
+//     )
+//   );
+//   @include resM(
+//     (
+//       position: absolute,
+//       width: 40px,
+//       height: 40px,
+//       left: 92px,
+//       // top: 480px,
+//         border-radius: 50%,
+//       border: 2px solid black,
+//       z-index: 4,
+//     )
+//   );
+// }
+
+// .mentorImg5 {
+//   @include resD(
+//     (
+//       position: absolute,
+//       width: 140px,
+//       height: 140px,
+//       left: 480px,
+//       // top: 450px,
+//         border-radius: 50%,
+//       border: 6px solid black,
+//       z-index: 3,
+//     )
+//   );
+//   @include resM(
+//     (
+//       position: absolute,
+//       width: 40px,
+//       height: 40px,
+//       left: 122px,
+//       // top: 480px,
+//         border-radius: 50%,
+//       border: 2px solid black,
+//       z-index: 3,
+//     )
+//   );
+// }
+
+// .mentorImg6 {
+//   @include resD(
+//     (
+//       position: absolute,
+//       width: 140px,
+//       height: 140px,
+//       left: 600px,
+//       // top: 450px,
+//         border-radius: 50%,
+//       border: 6px solid black,
+//       z-index: 2,
+//     )
+//   );
+//   @include resM(
+//     (
+//       position: absolute,
+//       width: 40px,
+//       height: 40px,
+//       left: 152px,
+//       // top: 480px,
+//         border-radius: 50%,
+//       border: 2px solid black,
+//       z-index: 2,
+//     )
+//   );
+// }
+
+// .mentorImg7 {
+//   @include resD(
+//     (
+//       position: absolute,
+//       width: 140px,
+//       height: 140px,
+//       left: 720px,
+//       // top: 450px,
+//         border-radius: 50%,
+//       border: 6px solid black,
+//       z-index: 1,
+//     )
+//   );
+//   @include resM(
+//     (
+//       position: absolute,
+//       width: 40px,
+//       height: 40px,
+//       left: 182px,
+//       // top: 480px,
+//         border-radius: 50%,
+//       border: 2px solid black,
+//       z-index: 1,
+//     )
+//   );
+// }
+
+// .amazonCard {
+//   @include resD(
+//     (
+//       position: absolute,
+//       top: 90px,
+//       left: 500px,
+//       height: 170px,
+//     )
+//   );
+//   @include resM(
+//     (
+//       position: absolute,
+//       top: 14%,
+//       left: 24%,
+//       transform: translate(-50%, -50%),
+//       width: 100px,
+//       height: 80,
+//     )
+//   );
+// }
+
+// .lead {
+//   @include resD(
+//     (
+//       position: absolute,
+//       top: 90px,
+//       left: 1250px,
+//       width: 170px,
+//       height: 160px,
+//     )
+//   );
+//   @include resM(
+//     (
+//       position: absolute,
+//       top: 40px,
+//       left: 300px,
+//       height: 80px,
+//       width: 100px,
+//     )
+//   );
+// }
+
+// .alexa {
+//   @include resD(
+//     (
+//       position: absolute,
+//       top: 300px,
+//       left: 300px,
+//       height: 164px,
+//     )
+//   );
+//   @include resM(
+//     (
+//       position: absolute,
+//       top: 350px,
+//       left: 70px,
+//       z-index: 10,
+//       width: 120px,
+//       height: 100px,
+//     )
+//   );
+// }
+
+// .fitbit {
+//   @include resD(
+//     (
+//       position: absolute,
+//       top: 380px,
+//       left: 1000px,
+//       height: 164px,
+//     )
+//   );
+//   @include resM(
+//     (
+//       position: absolute,
+//       top: 380px,
+//       left: 250px,
+//       z-index: 10,
+//       width: 120px,
+//       height: 100px,
+//     )
+//   );
+// }
+// .mentors-container-div {
+//   position: absolute;
+//   width: 100%;
+//   @include resD(
+//     (
+//       bottom: 120px,
+//     )
+//   );
+//   @include resSm(
+//     (
+//       bottom: 20px,
+//     )
+//   );
+// }
+// .mentors {
+//   width: fit-content;
+//   margin: auto;
+//   position: relative;
+//   @include resD(
+//     (
+//       width: 870px,
+//       height: 140px,
+//     )
+//   );
+//   @include resSm(
+//     (
+//       width: 190px,
+//       height: 40px,
+//     )
+//   );
+// }
+
+.backgroundImg{
+  position: absolute;
+  display: block;
+  @include resD(
+    (
+      width: 70%,
+      height: 70%,
+      left: 15%,
+    )
+  );
+  @include resSm(
+    (
+      width: 96%,
+      height: 100%,
+      left: 2%,
+    )
+  );
+}
+
+// .upperBgImage{
+//   position: absolute;
+//   @include resD(
+//     (
+//       top:10%,
+//       width:90%,
+//       height:400px,
+//     )
+//   );
+//   @include resSm(
+//     (
+//       top:5%,
+//       width:95%,
+//       height:100px,
+//     )
+//   );
+//   .amazonCardImg{
+//     background-image: url('../../../../assets/amazonCard.png');
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     display: block;
+//     position: absolute;
+//     left:8%;
+//     @include resD(
+//     (
+//       width: 250px,
+//       height: 250px,
+//       top:unset,
+//     )
+//   );
+//   @include resSm(
+//     (
+//       width: 110px,
+//       height: 110px,
+//       top:15%,
+//     )
+//   );
+//   }
+//   .earPlugImg{
+//     background-image: url('../../../../assets/earPlugs.png');
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     display: block;
+//     position: absolute;
+//     @include resD(
+//     (
+//       width: 200px,
+//       height: 150px,
+//       right:3%,
+//       top:10%,
+//     )
+//   );
+//   @include resSm(
+//     (
+//       width: 100px,
+//       height: 60px,
+//       right:5%,
+//       top:60%,
+//     )
+//   );
+//   }
+// }
+
+// .lowerBgImage{
+//   position: absolute;
+//   @include resD(
+//     (
+//       bottom:0%,
+//       width:90%,
+//       height:400px,
+//     )
+//   );
+//   @include resSm(
+//     (
+//       bottom:10%,
+//       width:90%,
+//       height:100px,
+//     )
+//   );
+//   .amazonEchoImg{
+//     background-image: url('../../../../assets/amazonEcho.png');
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     display: block;
+//     position: absolute;
+//     left:17%;
+//     bottom: 12%;
+//     @include resD(
+//     (
+//       width: 180px,
+//       height: 180px,
+//     )
+//   );
+//   @include resSm(
+//     (
+//       width: 60px,
+//       height: 60px,
+//     )
+//   );
+//   }
+//   .wristWatchImg{
+//     background-image: url('../../../../assets/wristWatch.png');
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     display: block;
+//     position: absolute;
+//     @include resD(
+//     (
+//       width: 200px,
+//       height: 200px,
+//       right:5%,
+//       bottom:0,
+//     )
+//   );
+//   @include resSm(
+//     (
+//       width: 60px,
+//       height: 60px,
+//       right:5%,
+//       bottom:20%,
+//     )
+//   );
+//   }
+// }
+
+// .leftBg{
+//   background-image: url('../../../../assets/leftBack.png');
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     display: block;
+//     position: absolute;
+//     height: 100%;
+//     width:50px;
+//     left:5%;
+// }
+// .rightBg{
+//   background-image: url('../../../../assets/rightBack.png');
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     display: block;
+//     position: absolute;
+//     height: 100%;
+//     width:50px;
+//     right: 5%;
+// }
+
+.banner-overlay{
+  background: linear-gradient(0deg, #0D0D10 0%, rgba(13, 13, 16, 0) 80%);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  z-index: 2;
+  @include resD((
+    height:45%,
+  ));
+  @include resSm((
+    height: 30%,
+  ))
+}
+
+.banner-bg-lower-image-icons{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+
+  @include resD((
+    bottom: 0px,
+  ));
+
+  .spy-squad{
+    background-image: url("../../../../assets/spySquad.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include resD((
+      display: block,
+      width :292.22px,
+      height : 81.6px,
+      position: relative,
+      bottom: -40px,
+    ));
+    @include resSm((
+      display: none,
+    ))
+  }
+
+  .story-spree{
+    background-image: url("../../../../assets/storySpree.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include resD((
+      display: block,
+      width :313.98px,
+      height :51.29px,
+      position: relative,
+      bottom: -40px,
+    ));
+    @include resSm((
+      display: none,
+    ))
+  }
+
+  .boy-image{
+    background-image: url("../../../../assets/boyImage.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    @include resD((
+      width: 550px,
+      height: 400px,
+      background-position: bottom center,
+      margin-left:0,
+    ));
+    @include resSm((
+      width: 250px,
+      height: 200px,
+      background-position: bottom center,
+      margin-left:50px,
+    ));
+  }
+
+  .anybody-can-design{
+    background-image: url("../../../../assets/anybodyCanDesign.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include resD((
+      display: block,
+      width : 272.01px,
+      height : 146.11px,
+      position: relative,
+      bottom: -40px,
+    ));
+    @include resSm((
+      display: none,
+    ))
+  }
+
+  .genz-for-env{
+    background-image: url("../../../../assets/genZForEnvironment.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include resD((
+      display: block,
+      width: 174.87px,
+      height :147.67px,
+      position: relative,
+      bottom: -40px,
+    ));
+    @include resSm((
+      display: none,
+    ))
+  }
+
+}

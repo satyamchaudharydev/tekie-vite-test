@@ -1,0 +1,25 @@
+@import 'src/scss/size.scss';
+
+.questionText{
+  font-size: hs(24px);
+  line-height: 1.33;
+  text-align: left;
+  color: #504f4f;
+  font-family: Nunito;
+  height: fit-content;
+}
+
+.bold{
+  font-weight: bolder;
+}
+
+.block{
+  font-weight: bolder;
+  background-color: rgba(26, 201, 232, 0.16);
+}
+
+.blank{
+  width: hs(70px);
+  height: 2px;
+  background: #504f4f ;
+}

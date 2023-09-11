@@ -1,0 +1,80 @@
+@import 'src/scss/size.scss';
+
+@media screen {
+  .loader {
+    border: hs(3px) solid #fff;
+    background-image: linear-gradient(to bottom, #00ade6, #34e4ea);
+    border-radius: 50%;
+    border-top: hs(3px) solid #bfbfbf;
+    width: hs(20px);
+    height: hs(20px);
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    position: relative;
+    left: hs(-10px);
+  }
+.loader.noGradient{
+  background-image: none;
+}
+  .loaderRightPositioned {
+    left: hs(8px) !important;
+  }
+
+  .visible {
+    display: block;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .loader {
+    border: hsm(2px) solid #fff;
+    border-top: hsm(2px) solid #bfbfbf;
+    width: hsm(10px);
+    height: hsm(10px);
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .loader {
+    width: hsm(8px);
+    height: hsm(8px);
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .loader {
+    border: hsm(1.5px) solid #fff;
+    border-top: hsm(1.5px) solid #bfbfbf;
+    height: hsm(7px);
+    width: hsm(7px);
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .loader {
+    width: hsm(6px);
+    height: hsm(6px);
+  }
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  .loader {
+    border: hsm(1.2px) solid #fff;
+    border-top: hsm(1.2px) solid #bfbfbf;
+  }
+}

@@ -1,0 +1,9 @@
+@import 'src/scss/size.scss';
+
+.card{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    left: hs(-35px);
+    background-color: #ffffff;
+}

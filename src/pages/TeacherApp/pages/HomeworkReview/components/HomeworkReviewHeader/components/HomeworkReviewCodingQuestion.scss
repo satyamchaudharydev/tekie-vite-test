@@ -1,0 +1,86 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+.codeEditor__homework__review {
+  // margin: 0 auto;
+  @include resD(
+    (
+      width: 1070px,
+    )
+  );
+  @include resM(
+    (
+      width: 600px,
+    )
+  );
+}
+.studentReportCodingQuestion {
+  & p {
+    margin: 0;
+  }
+  & span,
+  & div {
+    margin-top: 0;
+  }
+}
+.studentReportCodingQuestionWrapper {
+  & * {
+    font-family: unset;
+  }
+  & #__editor_title,
+  & #__editor___output {
+    font-family: "Nunito";
+  }
+  & #firstPane,
+  & #secondPane {
+    font-family: "Monaco";
+  }
+  & .ace_editor {
+    font: hs(22px) "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro", monospace !important;
+  }
+}
+
+.skyBlue {
+  @include resD(
+    (
+      background-color: #5fc5e5,
+    )
+  );
+  @include resM(
+    (
+      background-color: #00ade6,
+    )
+  );
+}
+
+.span__questions_1 {
+  @include resD(
+    (
+      width: 135px,
+    )
+  );
+  @include resSm(
+    (
+      width: 105px,
+    )
+  );
+}
+.pqReport__questionText {
+  line-height: 140% !important;
+}
+.codingAssignmentReportContainer,
+.homeworkReportCodingQuestionContainer {
+  overflow: hidden;
+}
+.codeEditor__homework__review__collapsed {
+  transition: all 0.25s ease-in-out;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  &.codeEditor__homework__review__opened {
+    height: unset;
+    opacity: 1;
+    visibility: visible;
+  }
+}

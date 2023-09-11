@@ -1,0 +1,190 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.landing-page-legal-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.landing-page-legal-title {
+  @extend .lato-light;
+  line-height: 1.23;
+  text-transform: uppercase;
+  color: #34e4ea;
+  @include resM((
+    font-size: 26px,
+    letter-spacing: 1.82px,
+    margin-top: 127px,
+  ));
+  @include resD((
+    font-size: 48px,
+    letter-spacing: 3.36px,
+    margin-top: 196.6px,
+  ));
+}
+
+.landing-page-legal-body {
+  background-color: #021d27;
+  display: flex;
+  flex-direction: column;
+  @include resM((
+    align-items: center,
+    width: 346px,
+    margin-top: 48px,
+    padding: 0 20px,
+    padding-bottom: 26.4px,
+  ));
+  @include resD((
+    width: 1248px,
+    padding: 0 50px,
+    margin-top: 85.4px,
+    padding-bottom: 55px,
+    align-items: flex-start,
+  ));
+}
+
+.landing-page-legal-text {
+  @extend .lato-light;
+  opacity: 0.8;
+  line-height: 1.58;
+  text-align: left;
+  color: #ffffff;
+
+  @include resM((
+    font-size: 19px,
+    letter-spacing: 0.93px,
+    margin-top: 28px,
+  ));
+  @include resD((
+    font-weight: 500,
+    font-size: 25.5px,
+    letter-spacing: 0.76px,
+    margin-top: 56px,
+    opacity: 0.7,
+  ));
+}
+
+.landing-page-legal-textMarginSm {
+  @extend .landing-page-legal-text;
+  @include resD((
+    margin-top: 28px,
+  ));
+}
+
+.landing-page-legal-textSm {
+  @extend .landing-page-legal-text;
+  @include resM((
+    font-size: 17px,
+  ));
+  @include resD((
+    font-size: 25.5px,
+  ));
+}
+
+
+.landing-page-legal-link {
+  color: #1f9298;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.landing-page-legal-textCenter {
+  @extend .landing-page-legal-text;
+  @include resM((
+    width: 265px,
+  ));
+  @include resD((
+    margin-left: 32px,
+    margin-bottom: 56px,
+  ));
+}
+
+.landing-page-legal-textBullet {
+  @extend .landing-page-legal-text;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    display: block;
+    background-color: #ffffff;
+    @include resM((
+      top: 15px,
+      left: -17px,
+      width: 5.6px,
+      height: 5.6px,
+    ));
+    @include resD((
+      top: 15px,
+      left: -27px,
+      width: 10px,
+      height: 10px,
+    ));
+  }
+  @include resM((
+    margin-left: 14px,
+  ));
+  @include resD((
+    margin-left: 32px,
+    margin-top: 0,
+  ));
+}
+
+.landing-page-legal-lastUpdated {
+  @extend .landing-page-legal-text;
+  @include resM((
+    width: 100%,
+  ));
+  @include resD((
+    font-weight: 300,
+    margin-left: 0,
+    opacity: 0.8,
+  ));
+}
+
+.landing-page-legal-title2 {
+  @extend .lato-regular;
+  opacity: 0.6;
+  line-height: 1.6;
+  text-align: left;
+  color: #34e4ea;
+  text-transform: uppercase;
+  @include resM((
+    font-size: 20px,
+    letter-spacing: 1.4px,
+    margin-top: 28px,
+  ));
+  @include resD((
+    margin-top: 56px,
+    letter-spacing: 1.2px,
+    font-size: 30px,
+    align-self: flex-start,
+  ));
+}
+
+.landing-page-legal-title2Underline {
+  @extend .landing-page-legal-title2;
+  text-transform: unset;
+  text-decoration: underline;
+}
+
+.landing-page-legal-displayOnlySmall {
+  @include resM((
+    display: block,
+  ));
+  @include resD((
+    display: none !important,
+  ));
+}
+
+.landing-page-legal-footer {
+  @include resM((
+    margin-top: 56px,
+  ));
+  @include resD((
+    margin-top: 56px,
+  ));
+}

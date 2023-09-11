@@ -1,0 +1,420 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/Inter.scss';
+@import 'src/scss/theme.scss';
+
+.b2b-landing-page-header-container {
+  @include resM((
+    padding-bottom: 8px,
+    padding-top: 8px,
+    box-shadow: none,
+    background: #E6F7FD,
+  ));
+  @include resD((
+    padding-bottom: 18px,
+    padding-top: 18px,
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1),
+    background: white,
+  ));
+  left: 0;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.b2b-landing-page-header-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include resM((
+    padding: 0px,
+  ));
+  @include resD((
+    padding: 0px 45px
+  ));
+
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.b2b-landing-page-header-tekieLogo {
+  @include resM((
+    width: 88px,
+    height: 44px,
+    left: 6px,
+    position: relative,
+  ));
+  @include resD((
+    width: 125px,
+    height: 44px,
+    left: 0px,
+  ));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.b2b-landing-page-header-hamburgerContainer {
+  @include resM((
+    display:flex,
+    justify-content: center,
+    align-items: center,
+    z-index: 99999999,
+    outline: none,
+    border: none,
+    -webkit-user-select: none,
+    -moz-user-select: none,
+    -ms-user-select: none,
+    cursor: pointer,
+    width: 50px,
+    height: 55px,
+    border-radius: 50%,
+    background: transparent,
+  ));
+  @include resD((
+    display: none,
+    // position: absolute,
+  ));
+}
+
+.b2b-landing-page-header-dropdown-icon-closed {
+  width: 12px;
+  height: 12px;
+  margin: 3px 4px 0px;
+  background-image: url('../../../assets/dropdownArrow.svg');
+  background-color: #403F3F;
+  -webkit-mask-image: url('../../../assets/dropdownArrow.svg');
+  mask-image: url('../../../assets/dropdownArrow.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  transition: -webkit-transform .1s;
+  transition: transform .1s;
+  transition: transform .1s,-webkit-transform .1s;
+  transform: rotate(0deg) rotate(0deg);;
+}
+.b2b-landing-page-header-dropdown-icon-open {
+  transform: rotate(180deg);
+  background: $deep-sky-blue;
+}
+
+.b2b-landing-page-header-dropdown-icon-submenu-closed {
+  background: #A8A7A7;
+}
+
+.b2b-landing-page-header-dropdown-icon-submenu-open {
+  transform: rotate(180deg);
+  background: #000;
+}
+
+
+.b2b-landing-page-header-nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content : space-between;
+  
+  @include resD((
+    flex: 1,
+  ));
+  @include resM((
+    flex: none,
+  ));
+
+  & .b2b-landing-page-header-nav-menu-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+
+    @include resD((
+      padding-left: 14px,
+    ));
+    @include resM((
+      padding-left: 0px,
+    ));
+
+    & .b2b-landing-page-header-menu-items {
+      text-decoration: none; 
+      margin-right: 0;
+    }
+
+    & .b2b-landing-page-header-sub-menu {
+      position: absolute;
+      width: max-content;
+      background-color: #fff;
+      border-radius: 6px;
+      transform-origin: 50% -30px;
+      border-radius: 6px;
+      box-shadow: 0 4px 6px -0.4px rgba(0, 0, 0, 0.15);
+
+      .b2b-landing-page-header-sub-menu-item {
+        @extend .Inter;
+        font-weight: normal;
+        margin: 0;
+        cursor: pointer;
+        padding: 14px 12px;
+  
+        @include resD((
+          font-size: 18px,
+        ));
+  
+        &:nth-child(1) {
+          border-radius: 6px 6px 0px 0px;
+        }
+  
+        &:nth-last-child(1) {
+          border-radius: 0px 0px 6px 6px;
+        }
+
+        &:hover {
+          background: #e6f7fd;
+          color: $deep-sky-blue;
+        }
+      }
+  
+    }
+
+  }
+  & .b2b-landing-page-header-nav-action-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.b2b-landing-page-header-menu-item-text {
+  transition: all .2s;
+  @extend .Inter;
+  font-weight: normal;
+  @include resM((
+    display: none,
+    padding: 10px,
+    border-radius: 2px,
+    letter-spacing: 0.0px,
+    font-size: 16px,
+  ));
+  @include resD((
+    padding: 12px 32px,
+    border-radius: 5px,
+    font-size: 18px,
+    letter-spacing: 0.5px,
+    display: flex,
+  ));
+  justify-content: center;
+  color: #403F3F;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  margin: 0;
+
+  &:hover {
+    color: $deep-sky-blue;
+  }
+}
+
+.b2b-landing-page-header-menu-active {
+  color: $deep-sky-blue;
+}
+
+.b2b-landing-page-header-getStarted-btn {
+  @extend .Inter-SemiBold;
+  display: flex;
+  background: #00ADE6;
+  color: $white;
+  border-radius: 6px;
+  justify-content: center;
+  text-transform: unset;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
+  transform: scale(1);
+  transition: all .3s;
+  @include resM((
+    display: none,
+    padding: 10px,
+    letter-spacing: 0.75px,
+    font-size: 16px,
+    margin-right: 0,
+  ));
+  @include resD((
+    display: flex,
+    padding: 14px 20px,
+    font-size: 22px,
+    letter-spacing: 0.2px,
+    margin-right: 32px,
+  ));
+  &:hover {
+    background: #06afe7;
+    box-shadow: 4px 8px 10px rgba(0, 173, 230, 0.21);
+  }
+  &:active {
+    transform: scale(.96);
+  }
+}
+
+.b2b-landing-page-header-login-btn {
+  font-family: 'Nunito';
+  font-weight: 400;
+  opacity: 0.9;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: $deep-sky-blue;
+  cursor: pointer;
+  background-color: transparent;
+  
+  @include resM((
+    padding: 10px 12px 12px 0px,
+    min-width: 40px,
+    border-radius: 2px,
+    letter-spacing: 0.0px,
+    font-size: 16px,
+    margin-right: 0px,
+  ));
+  @include resD((
+    padding: 13px 18px,
+    border-radius: 5px,
+    font-size: 20px,
+    letter-spacing: 0.5px,
+    position: relative,
+    padding-top: 15px,
+    min-width: 0px
+  ));
+
+  &:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+}
+
+/** Sidebar */
+
+.b2b-landing-page-header-overlayNavItem {
+  @extend .Inter;
+  @include resM((
+    font-size: 16px,
+    color: #A8A7A7,
+    padding: 24px 20px,
+    cursor: pointer,
+    min-width: 100%,
+    box-sizing: border-box,
+    letter-spacing: 0.75px,
+  ));
+
+  &:active {
+    background: #e6f7fd;
+    color: #403F3F;
+  }
+}
+
+.b2b-landing-page-header-overlay-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.b2b-landing-page-header-overlayNav-divider {
+  @include resM((
+    width: 90%,
+    margin: 0px auto,
+    border-bottom: solid 1px rgba(149,147,147,0.6),
+    box-sizing: border-box,
+  ))
+}
+
+.b2b-landing-page-header-overlayNavSubMenu {
+  overflow: hidden;
+}
+
+.b2b-landing-page-header-overlayNavSubItem {
+  @extend .Inter;
+  @include resM((
+    font-size: 16px,
+    line-height: 20px,
+    color: #A8A7A7,
+    padding: 16px 20px,
+    cursor: pointer,
+    min-width: 100%,
+    box-sizing: border-box,
+    letter-spacing: 0.75px,
+  ));
+
+  &:active, &:focus, &:focus-within, &:focus-visible {
+    background: #e6f7fd;
+    color: #403F3F;
+  }
+}
+
+.b2b-landing-page-header-bookFreeSessionMobile {
+  @include resM((
+    font-size: 18px,
+    margin-right: 20px,
+    margin-left: 20px,
+    font-weight: 600,
+    letter-spacing: 0.7px,
+    margin-bottom: 0,
+    margin-top: 16px
+  ));
+}
+
+.b2b-landing-page-header-contentNone {
+  @include resM((
+    padding: 10px 20px,
+    height: 30px
+  ));
+  &:before {
+    content: '' !important
+  }
+}
+.b2b-landing-page-header-overlayNavbar {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  // left: 0;
+  left: -100vw;
+  z-index: 9999;
+  display: flex;
+  flex-direction: row;
+  @include resD((
+    display: none,
+  ));
+}
+
+.b2b-landing-page-header-backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.b2b-landing-page-header-overlayNavbarHide {
+  left: -100vw;
+  background-color: transparent;
+}
+
+.b2b-landing-page-header-overlayNavbarWrapper {
+  z-index: 9999;
+  height: 100%;
+  transform: translate3d(0,0,0);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  @include resM((
+    width: 250px,
+    padding-top: 10px
+  ));
+}
+
+.b2b-landing-page-header-overlayNavbarWrapperHide {
+  transform: translate3d(-100%,0,0);
+}
+
+.b2b-landing-page-header-overlayNavbarClose {
+  height: 100%;
+  flex: 1;
+}

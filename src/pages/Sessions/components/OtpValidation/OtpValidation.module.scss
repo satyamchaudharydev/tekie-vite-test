@@ -1,0 +1,255 @@
+@import 'src/scss/size.scss';
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include resD((
+        margin-top: 200px,
+        width: 1100px,
+    ));
+    @include resM((
+        margin-top: 100px,
+        width: 360px,
+    ));
+}
+
+.topContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 2px 23px 0 #ededed;
+    background-color: #ffffff;
+    z-index: 9999;
+    @include resD((
+        border-radius: 4px,
+        height: 80px,
+    ));
+    @include resM((
+        border-radius: 4px,
+        height: 40px,
+    ));
+}
+
+.middleContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 23px 0 #ededed;
+    background-color: #ffffff;
+    @include resD((
+        height: 360px,
+        border-radius: 4px,
+    ));
+    @include resM((
+        height: 250px,
+        border-radius: 4px,
+    ));
+}
+
+.bottomContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 23px 0 #ededed;
+    background-color: #ffffff;
+    @include resD((
+        border-radius: 4px,
+        height: 80px,
+        margin-top: 20px,
+    ));
+    @include resM((
+        border-radius: 4px,
+        height: 50px,
+        margin-top: 5px,
+    ));
+}
+
+.title {
+    font-family: Nunito;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    @include resD((
+        font-size: 32px,
+        margin-left: 50px,
+    ));
+    @include resM((
+        font-size: 14px,
+        margin-left: 10px,
+    ));
+}
+
+.text {
+    font-family: Nunito;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: normal;
+    @include resD((
+        font-size: 20px,
+    ));
+    @include resM((
+        font-size: 14px,
+    ));
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    @include resD((
+        margin-top: 21px
+    ));
+    @include resM((
+        margin-top: 18px
+    ));
+}
+
+.calendar {
+    background-image: url("../../../../assets/calendar.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include resD((
+        width: 26px,
+        height: 26px,
+    ));
+    @include resM((
+        width: 20px,
+        height: 20px,
+    ));
+}
+
+.clock {
+    @include resD((
+        width: 27px,
+        height: 27px,
+    ));
+    @include resM((
+        width: 20px,
+        height: 20px,
+    ));
+    background-image: url("../../../../assets/clock.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.dateTimeText {
+    font-family: Nunito;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    @include resD((
+        font-size: 20px,
+        margin-left: 10px,
+    ));
+    @include resM((
+        font-size: 14px,
+        margin-left: 8px,
+    ));
+}
+
+.mobileNumber {
+    font-family: Nunito;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: normal;
+    font-style: italic;
+    @include resD((
+        font-size: 20px,
+        margin-left: 10px,
+    ));
+    @include resM((
+        font-size: 14px,
+        margin-left: 8px,
+    ));
+}
+
+.otpBox {
+    @include resD((
+        width: 60px,
+        height: 60px,
+        margin-left: 8px,
+        margin-right: 8px,
+        border-radius: 15px,
+        font-size: 32px,
+    ));
+    @include resM((
+        width: 40px,
+        height: 40px,
+        margin-left: 8px,
+        margin-right: 8px,
+        border-radius: 8px,
+        font-size: 14px,
+    ));
+    font-family: Nunito;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 0;
+    &:focus {
+        outline: none;
+    }
+}
+
+.emptyOtpBox {
+    background-color: #e4e4e4;
+    border: none;
+}
+
+.filledOtpBox {
+    border: solid 1px #00ade6;
+    background-color: #dbf8ff;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    @include resD((
+        height: 54px,
+        border-radius: 28px,
+        font-size: 22px,
+    ));
+    @include resM((
+        height: 32px,
+        border-radius: 20px,
+        font-size: 14px,
+    ));
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.cancelButton {
+    @include resD((
+        width: 220px,
+    ));
+    @include resM((
+        width: 120px,
+    ));
+    color: #0fbde7;
+    border: solid 1px #27d6e9;
+}
+
+.confirmButton {
+    background-image: linear-gradient(to bottom, #00ade6, #34e4ea);
+    color: #ffffff;
+    @include resD((
+        margin-left: 80px,
+        padding-left: 18px,
+        padding-right: 18px,
+    ));
+    @include resM((
+        margin-left: 20px,
+        padding-left: 15px,
+        padding-right: 15px,
+    ));
+}

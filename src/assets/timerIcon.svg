@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="43.39" viewBox="0 0 40 43.39">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:#504f4f}
+        </style>
+    </defs>
+    <g id="prefix__interface_1_" data-name="interface (1)" style="opacity:.7">
+        <g id="prefix__Group_14399" data-name="Group 14399">
+            <g id="prefix__Group_14398" data-name="Group 14398">
+                <path id="prefix__Path_21838" d="M385.257 16.506l4.6 3.838a1.695 1.695 0 1 0 2.171-2.6l-4.6-3.838a1.695 1.695 0 1 0-2.171 2.6z" class="prefix__cls-2" data-name="Path 21838" transform="translate(-353.745 -12.364)"/>
+                <path id="prefix__Path_21839" d="M34.741 20.738a1.688 1.688 0 0 0 1.085-.393l4.6-3.838a1.695 1.695 0 1 0-2.171-2.6l-4.6 3.838a1.695 1.695 0 0 0 1.086 3z" class="prefix__cls-2" data-name="Path 21839" transform="translate(-31.94 -12.365)"/>
+                <path id="prefix__Path_21840" d="M54.142 9.248a19.849 19.849 0 0 0-12.447-5.786V1.695a1.695 1.695 0 0 0-3.39 0v1.767a20 20 0 0 0-12.447 34.07 20 20 0 0 0 26 1.969 1.695 1.695 0 1 0-2.011-2.729 16.587 16.587 0 1 1 4.721-5.385 1.695 1.695 0 1 0 2.97 1.634 20.01 20.01 0 0 0-3.39-23.773z" class="prefix__cls-2" data-name="Path 21840" transform="translate(-20)"/>
+                <path id="prefix__Path_21841" d="M227.647 151.525a1.7 1.7 0 0 0-2.384.251l-5.344 6.6a3.393 3.393 0 1 0 2.634 2.133l5.345-6.6a1.7 1.7 0 0 0-.251-2.384z" class="prefix__cls-2" data-name="Path 21841" transform="translate(-199.39 -138.338)"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+@import '../../../../TeacherApp/mixins/_mixins.scss';
+
+.badgeText{
+    margin-left: 0.5rem;
+}
+.badgeBase{
+    @include flex(center,center);
+    border-radius: 8px;
+    padding: 11px 16px;
+    cursor: pointer;
+}
+.completed{
+    color:white ;
+    background-color:#01AA93 ;
+}
+.inProgress{
+    color:white ;
+    background-color:#00ADE6 ;
+}
+.disabled{
+    color: #504F4F;
+    background-color:#f0eded;
+}

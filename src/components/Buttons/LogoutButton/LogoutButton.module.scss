@@ -1,0 +1,10 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+
+.iconContainer{
+  width: hs(21.791px);
+  height: hs(21.791px);
+  position: relative;
+  left: hs(2px);
+  top: hs(-2px);
+}

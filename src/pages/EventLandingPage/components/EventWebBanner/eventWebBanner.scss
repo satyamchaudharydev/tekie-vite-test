@@ -1,0 +1,254 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.event-web-banner{
+    margin: 0 auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include resD((
+        width: 1547px,
+        height: 523px,
+        border-radius: 24px,
+    ));
+      .calendar-icon {
+  color: white;
+  @include resD((
+    width: 30px,
+    height: 30px,
+    margin-right: 5px
+  ));
+  @include resM((
+    width: 20px,
+    height: 20px,
+    margin-right: 5px
+  ));
+  g {
+    @include resD((
+      opacity: 0.4,
+    ));
+    @include resM((
+      opacity: 1,
+    ));
+  }
+}
+.event-clock {
+  color: white;
+  @include resD((
+    width: 30px,
+    height: 30px,
+    margin-right: 5px
+  ));
+  @include resM((
+    width: 20px,
+    height: 20px,
+    margin-right: 5px
+  ));
+  g {
+    @include resD((
+      opacity: 0.4,
+    ));
+    @include resM((
+      opacity: 1,
+    ));
+  }
+}
+.duration-clock {
+  color: white;
+  @include resD((
+    width: 30px,
+    height: 30px,
+    margin-right: 5px
+  ));
+  @include resM((
+    width: 20px,
+    height: 20px,
+    margin-right: 5px
+  ));
+  g {
+    @include resD((
+      opacity: 0.4,
+    ));
+    @include resM((
+      opacity: 1,
+    ));
+  }
+}
+}
+
+.eventBanner-section-carousel{
+    display: -webkit-box;
+    transition: transform 0.3s;
+    white-space: nowrap;
+}
+.eventBanner-section-carousel-main{
+  display:block;
+      position:relative;
+  // @include resD((
+  //     display:block,
+  //     position:relative
+  //   ));
+    // @include resM((
+    //   display:none
+    // ));
+    
+}
+
+.eventBanner-section-action-btns{
+  width: 100%;
+    display: flex;
+    @include resD((
+      position: absolute,
+      top: 40%,
+      justify-content: space-between,
+      margin-top: 0px,
+    ));
+    @include resM((
+      opacity: 1,
+      justify-content: center,
+      margin-top: 25px,
+    ));
+}
+
+.eventBanner-section-prev-btn, .eventBanner-section-next-btn{
+  cursor: pointer;
+      @include resM((
+          margin: 0 5px,
+          height: 24px,
+          width: 24px,
+      ));
+      & .mobileSvg rect{
+          fill: rgb(220, 220, 220);
+      }
+      & .mobileSvg path{
+          fill: rgb(255, 255, 255);
+      }
+      & .mobileSvg circle{
+          fill: rgb(220, 220, 220);
+      }
+      &.leftActive .mobileSvg rect, &.leftActive .mobileSvg circle{
+          fill: rgb(0, 173, 230);
+      }
+      &.leftActive .mobileSvg path, &.rightActive .mobileSvg path{
+          fill: rgb(255, 251, 251);
+      }
+      &.rightActive .mobileSvg rect, &.rightActive .mobileSvg circle{
+          fill: rgb(0, 173, 230);
+      }
+    @include resD((
+      width: 64px,
+      height: 64px,
+      display:flex,
+      align-items:center,
+      justify-content:center
+    ));
+    & svg{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.eventBanner-section-next-btn{
+    @include resD((
+      position: absolute,
+      right: 100px,
+      margin: 0,
+    ));
+    @include resSm((
+      margin: 0 10px,
+    ));
+}
+
+.eventBanner-section-prev-btn{
+    @include resD((
+      position: absolute,
+      left: 100px,
+      margin: 0,
+    ));
+    @include resSm((
+      margin: 0 10px,
+    ));
+}
+
+.eventBanner-dot-button{
+  @include resD((
+    border:none,
+    margin: 0 4px,
+    border-radius:50%,
+    height:16px,
+    width:16px,
+    background-color:#00ADE6,
+    opacity:0.2
+  ));
+  @include resSm((
+    border:none,
+    margin:0 5px,
+    border-radius:50%,
+    height:8px,
+    width:8px,
+    background-color:#00ADE6,
+    opacity:0.2,
+    padding: 0
+  ));
+}
+
+ .active-event{
+  @include resD((
+    border:none,
+    margin:0 4px,
+    border-radius:50%,
+    height:16px,
+    width:16px,
+    background-color: #00ADE6,
+    opacity:1
+  ));
+  @include resSm((
+    border:none,
+    margin: 0 5px,
+    border-radius:50%,
+    height:8px,
+    width:8px,
+    background-color: #00ADE6,
+    opacity:1,
+    padding: 0
+  ));
+}
+.events_register_button1{
+   
+  cursor: pointer;
+  @include resD((
+    font-size: 18px,
+    line-height: 25px,
+    display: flex,
+    flex-direction: row,
+    justify-content: center,
+    align-items: center,
+    padding: 13px 20px 13px 24px,
+    background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%),
+    border-radius: 24px,
+    width:fit-content,
+    transition: 0.3s all ease-in-out,
+
+  ));
+  @include resSm((
+    font-size: 14px,
+    line-height: 25px,
+    display: flex,
+    flex-direction: row,
+    justify-content: center,
+    align-items: center,
+    padding: 7px 20px 7px 24px,
+    background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%),
+    border-radius: 24px,
+    color:white,
+    border:none,
+    width:fit-content,
+    transition: 0.3s all ease-in-out,
+
+  ));
+  &:hover span  {
+    transition: 0.3s all ease;
+
+    transform: translateX(5px);
+  }
+}

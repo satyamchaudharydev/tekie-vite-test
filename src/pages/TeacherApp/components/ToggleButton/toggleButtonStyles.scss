@@ -1,0 +1,201 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import 'src/scss/Inter.scss';
+
+///// Toggle Button /////
+
+// Do not touch enclosed values
+// while making new class
+// kindly write your own Langrage Multiplier in ResD, resM
+
+$toggle-background-color-on: #00ADE6;
+$toggle-background-color-off: darkgray;
+$toggle-control-color: white;
+$toggle-width: 24px;
+$toggle-height: 14px;
+$toggle-gutter: 1.8px;
+$toggle-radius: 50%;
+$toggle-control-speed: .15s;
+$toggle-control-ease: ease-in;
+
+
+$toggle-radius: $toggle-height / 2;
+$toggle-control-size: $toggle-height - ($toggle-gutter * 2);
+
+/// Class for Create Teacher Container Toggle Button
+.modal__teacher-admin-toggle-container {
+  @include resD(( 
+    margin-right: 25px,
+  ));
+  @include resM((
+    margin-right: 18px,
+  ));
+
+  .toggle-control {
+    display: block;
+    position: relative;
+    @include resD(( 
+      font-size: 28px,
+      padding-left: 1.1 * $toggle-width,
+      margin-bottom: 15px
+    ));
+    @include resM((
+      font-size: 14px,
+      padding-left: 0.86 * $toggle-width,
+      margin-bottom: 7px
+    ));
+    cursor: pointer;
+    user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  input:checked ~ .control {
+    background-color: $toggle-background-color-on;
+    
+    &:after {
+      @include resD(( 
+        left: 1.2 * ($toggle-width - $toggle-control-size - $toggle-gutter)
+      ));
+      @include resM((
+        left: 0.9 * ($toggle-width - $toggle-control-size - $toggle-gutter)
+      ));
+    }
+  }
+  
+    .control {
+      position: absolute;
+      @include resD((
+        top: 0,
+        left: 0,
+        height: 1.14 * $toggle-height,
+        width: 1.2 * $toggle-width,
+        border-radius: 1.1 * $toggle-radius
+      ));
+      @include resM((
+        top: 0,
+        left: 0,
+        height: 0.88 * $toggle-height,
+        width: 0.86 * $toggle-width,
+        border-radius: 0.9 * $toggle-radius
+      ));
+      background-color: $toggle-background-color-off;
+      transition: background-color $toggle-control-speed $toggle-control-ease;
+
+      &:after {
+        content: "";
+        position: absolute;
+        @include resD((
+          left: 1.2 * $toggle-gutter,
+          top: 1.04 * $toggle-gutter,
+          width: 1.2 * $toggle-control-size,
+          height: 1.2 * $toggle-control-size,
+          border-radius: 1.1 * $toggle-radius
+        ));
+        @include resM((
+          left: 0.80 * $toggle-gutter,
+          top: 0.88 * $toggle-gutter,
+          width: 0.88 * $toggle-control-size,
+          height: 0.88 * $toggle-control-size,
+          border-radius: 0.88 * $toggle-radius
+        ));
+        background: $toggle-control-color;
+        transition: left $toggle-control-speed $toggle-control-ease;
+      }
+    }
+  }
+}
+
+
+.teacher-table-toggle-container {
+  @include resD((
+    margin-right: 25px,
+  ));
+  @include resM((
+    margin-right: 18px,
+  ));
+
+  .toggle-control {
+    display: block;
+    position: relative;
+    @include resD(( 
+      font-size: 28px,
+      padding-left: 1.1 * $toggle-width,
+      margin-bottom: 15px
+    ));
+    @include resM((
+      font-size: 14px,
+      padding-left: 0.86 * $toggle-width,
+      margin-bottom: 7px
+    ));
+    cursor: pointer;
+    user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  input:checked ~ .control {
+    background-color: $toggle-background-color-on;
+    
+    &:after {
+      @include resD(( 
+        left: 1.2 * ($toggle-width - $toggle-control-size - $toggle-gutter)
+      ));
+      @include resM((
+        left: 0.9 * ($toggle-width - $toggle-control-size - $toggle-gutter)
+      ));
+    }
+  }
+  
+    .control {
+      position: absolute;
+      @include resD((
+        top: 0,
+        left: 0,
+        height: 1.14 * $toggle-height,
+        width: 1.2 * $toggle-width,
+        border-radius: 1.1 * $toggle-radius
+      ));
+      @include resM((
+        top: 0,
+        left: 0,
+        height: 0.88 * $toggle-height,
+        width: 0.86 * $toggle-width,
+        border-radius: 0.9 * $toggle-radius
+      ));
+      background-color: $toggle-background-color-off;
+      transition: background-color $toggle-control-speed $toggle-control-ease;
+
+      &:after {
+        content: "";
+        position: absolute;
+        @include resD((
+          left: 1.2 * $toggle-gutter,
+          top: 1.04 * $toggle-gutter,
+          width: 1.2 * $toggle-control-size,
+          height: 1.2 * $toggle-control-size,
+          border-radius: 1.1 * $toggle-radius
+        ));
+        @include resM((
+          left: 0.80 * $toggle-gutter,
+          top: 0.88 * $toggle-gutter,
+          width: 0.88 * $toggle-control-size,
+          height: 0.88 * $toggle-control-size,
+          border-radius: 0.88 * $toggle-radius
+        ));
+        background: $toggle-control-color;
+        transition: left $toggle-control-speed $toggle-control-ease;
+      }
+    }
+  }
+}

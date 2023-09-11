@@ -1,0 +1,211 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+.evaluationContainer {
+  background: #ffffff;
+  border: 1px solid #d2d2d2;
+  height: fit-content;
+  @include resD1280(
+    (
+      border-radius: 8px,
+      margin-left: 20px,
+      min-width: 230px,
+    )
+  );
+}
+
+.evaluationBodyContainer {
+  @include resD1280(
+    (
+      max-height: 230px,
+    )
+  );
+  overflow: auto;
+}
+
+.evaluationContainerHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #dcdcdc;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #8c61cb;
+  @include resD1280(
+    (
+      padding: 12px 8px,
+      gap: 8px,
+      font-size: 10px,
+      line-height: 140%,
+      letter-spacing: 0.04em,
+    )
+  );
+}
+
+.evaluationStarsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 193, 34, 0.08);
+  @include resD1280(
+    (
+      padding: 16px,
+      gap: 8px,
+      border-radius: 12px,
+      margin: 16px,
+    )
+  );
+  h3 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    color: #121212;
+    @include resD1280(
+      (
+        font-size: 16px,
+        line-height: 140%,
+        margin-top: 12px,
+      )
+    );
+  }
+}
+
+.starsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD1280(
+    (
+      gap: 16px,
+    )
+  );
+}
+
+.tagContainer {
+  display: flex;
+  flex-direction: column;
+  @include resD1280(
+    (
+      padding: 0 16px 16px 16px,
+    )
+  );
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    color: #858585;
+    @include resD1280(
+      (
+        font-size: 10px,
+        line-height: 16px,
+      )
+    );
+  }
+  div {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    @include resD1280(
+      (
+        gap: 4px,
+        margin-top: 8px,
+      )
+    );
+    span {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      color: #8c61cb;
+      background: rgba(140, 97, 203, 0.2);
+      @include resD1280(
+        (
+          font-size: 10px,
+          line-height: 12px,
+          padding: 4px 8px,
+          border-radius: 24px,
+        )
+      );
+    }
+  }
+}
+
+.notYetEvaluatedContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include resD1280(
+    (
+      padding: 16px,
+      gap: 16px,
+    )
+  );
+  h5 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: #858585;
+    @include resD1280(
+      (
+        font-size: 14px,
+        line-height: 140%,
+      )
+    );
+  }
+  a {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    color: #ffffff;
+    background: #8c61cb;
+    text-decoration: none;
+    @include resD1280(
+      (
+        font-size: 12px,
+        line-height: 18px,
+        padding: 7px 16px 7px 12px,
+        border-radius: 8px,
+      )
+    );
+  }
+}
+
+.commentContainer {
+  display: flex;
+  flex-direction: column;
+  @include resD1280(
+    (
+      padding: 0 16px 16px 16px,
+    )
+  );
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    color: #858585;
+    @include resD1280(
+      (
+        font-size: 10px,
+        line-height: 16px,
+      )
+    );
+  }
+  .commentText {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    color: #504F4F;
+    margin: 0;
+    @include resD1280(
+      (
+        font-size: 12px,
+        line-height: 16px,
+        margin-top: 8px,
+      )
+    );
+  }
+}

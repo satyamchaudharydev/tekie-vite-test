@@ -1,0 +1,117 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+
+.event_Library_loggedIn_container {
+    @include resM(
+        (
+            margin-left: 0px,
+            margin-top: 15px,
+            margin-bottom: 0px,
+        )
+    );
+    @include resD(
+        (
+            margin-left: 0px,
+            margin-top: 70px,
+            margin-bottom: 0px,
+        )
+    );
+}
+
+.container__wow{
+    @include resM(
+        (   
+            display:flex,
+            margin-left: 10px,
+            margin-top: 40px,
+            transition:1s all ease
+
+        )
+    );
+    @include resD(
+        (
+            display:flex,
+            margin-left: 50px,
+            margin-top: 40px,
+            transition:1s all ease
+        )
+    );
+}
+
+.event-categories{
+    @include resM(
+        (   
+            transition:1s all ease
+        )
+    );
+    @include resD(
+        (
+           
+        )
+    );
+}
+
+
+.carousel-mainHolder{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    transition: all 0.1s ease-in-out;
+    padding: 0;
+    display: block;
+}
+.carousel-holders-upcoming{
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    transition: all 0.1s ease-in-out;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    display: -webkit-inline-box;
+    overflow-x: scroll;
+    overflow-y: hidden;
+     @include resD((
+        padding-top: 40px,
+        padding-bottom: 0px,
+    ));
+    @include resM((
+        padding-top: 10px,
+        padding-bottom: 10px,
+    ));
+    &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+}
+.carousel-holders-upcoming .event-card{
+    @include resD((
+        margin-top:0px,
+    ))
+}
+.eventsCard-loading-skeleton{
+    @include resD((
+        margin-left:60px,
+        display:flex,
+        flex-direction:row
+    ));
+    @include resSm((
+        
+        display:flex,
+        flex-direction:row
+    ))
+}
+.extra_div_container{
+    @include resD((
+        margin-left:50px,
+        
+    ));
+    @include resSm((
+        margin-left:0px,
+       
+    ))
+}

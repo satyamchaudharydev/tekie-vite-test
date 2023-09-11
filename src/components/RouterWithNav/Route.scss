@@ -1,0 +1,168 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/constants.scss';
+
+.route-container {
+  display: flex;
+  flex-direction: row;
+}
+.route_container_forTeacherApp{
+  @include resD1280((
+    height: calc(100vh - #{hs($teacherAppSessionHeight)}),
+  )); 
+}
+
+.route-bodyContainer {
+  flex: 1;
+  height: calc(100vh);
+  overflow: overlay;
+  position: relative;
+  overflow-x: hidden;
+  &.route-page-with-outside-nav {
+    overflow-x: hidden;
+    width: calc(100vw - #{hs($outSideNavWidth)});
+    height: calc(100vh - #{hs($topNavBarHeight)});
+  }
+  &.session-embed-code-playground{
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .route-bodyContainer {
+    height: 100vh;
+  }
+}
+
+.route-bodyContainerElectron {
+  height: calc(100vh - #{hs(88px)} - 36px);
+}
+
+.rotateDevice {
+  width: 100vw;
+  height: 100vh;
+  background: #FFF;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  overflow: hidden;
+  z-index: 99999999999;
+  position: fixed;
+  background-image: url(../../assets/rotate-ipad-card-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: Nunito;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  flex-direction: column;
+
+  
+  & > .rotateDeviceIcon {
+    background-image: url(../../assets/rotate-phone-icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 45px;
+    height: 45px;
+    display: block;
+    margin-bottom: 18px;
+  }
+}
+
+.__IPad__ {
+  @media screen and (orientation: portrait) and (max-device-width: 900px) {
+    .rotateDevice {
+      display: flex;
+    }
+  }
+}
+
+.route-bodyPositionUnset {
+  position: unset !important;
+}
+
+.route-bodyContainerFull {
+  flex: 1;
+  max-width: 100vw;
+  position: relative;
+  height: calc(100vh);
+  overflow: overlay;
+  overflow-x: hidden;
+}
+.session-embed-full{
+  overflow-y: auto !important;
+  @include resD1280((
+    height: calc(100vh - #{hs($teacherAppSessionHeight)}),
+  )); 
+}
+
+.route-bodyOverflowOverlay {
+  overflow: overlay;
+}
+
+.route-sideBar {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom, #c9fcfd, #34e4ea);
+  width: 120%;
+  height: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .routesideBar {
+    width: hsm(200px);
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .route-sideBar {
+    width: hsm(140px);
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  .route-sideBar {
+    width: hsm(130px);
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+  .route-sideBar {
+    width: hsm(120px);
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  .route-sideBar {
+    width: hsm(110px);
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+  .route-sideBar {
+    width: hsm(100px);
+  }
+}
+
+.route-menuItems{
+  width: 100%;
+  height: 8%;
+  font-weight: bold;
+  font-size: 2.5vh;
+  font-family: Nunito;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.route-text {
+  margin-left: 3vh;
+}
+
+.route-activeBackground {
+  background-color: #fff;
+}

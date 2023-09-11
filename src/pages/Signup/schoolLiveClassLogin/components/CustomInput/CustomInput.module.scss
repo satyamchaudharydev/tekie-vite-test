@@ -1,0 +1,128 @@
+@import "src/scss/theme/spacing.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/size.scss";
+
+$max-width: 500px;
+
+@mixin font-style(
+  $font-family,
+  $font-style,
+  $font-weight,
+  $line-height,
+  $color
+) {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+.CustomInputContainer {
+  // width: 90% !important;
+  @include resD(
+    (
+      margin-top: 12px,
+      max-width: none,
+    )
+  );
+  @include resMs(
+    (
+      margin-top: 12px,
+      max-width: $max-width,
+    )
+  );
+}
+.eyeIcon {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.customInputLabel {
+  @include font-style(Nunito, normal, bold, 120%, $emperor-66);
+  letter-spacing: -0.02em;
+  @include resD(
+    (
+      margin-bottom:5px,
+      font-size: 20px,
+      margin-top: 0,
+      font-weight: bold,
+    )
+  );
+  @include resM(
+    (
+      font-size: 16px,
+      margin-block: 0 $s-xxxs,
+      font-weight: normal,
+    )
+  );
+}
+.photonInputPass {
+  @include resD(
+    (
+      height: 48px !important,
+    )
+  );
+  @include resM(
+    (
+      height: 48px !important,
+    )
+  );
+}
+
+.photonInput {
+  @include resD(
+    (
+      height: 48px !important,      
+    )
+  );
+  @include resM(
+    (
+      height: 48px !important,
+    )
+  );
+  // max-height: 45px;
+}
+@media screen and (min-width: 395px) and (max-width: 500px) {
+  .photonInput,
+  .photonInputPass {
+    max-height: 38px !important;
+  }
+  .CustomInputContainer > p:last-child {
+    height: 16px;
+    margin-top: 4px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 835px) and (max-width: 899px) {
+  .photonInput,
+  .photonInputPass {
+    max-height: 40px !important;
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 600px) {
+  .photonInput,
+  .photonInputPass {
+    max-height: 38px !important;
+  }
+  .CustomInputContainer > p:last-child {
+    height: 16px;
+    margin-top: 4px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 800px) {
+  .photonInput,
+  .photonInputPass {
+    max-height: 38px !important;
+  }
+  .CustomInputContainer > p:last-child {
+    height: 16px;
+    margin-top: 4px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 400px) {
+  .photonInput,
+  .photonInputPass {
+    max-height: 38px !important;
+  }
+}

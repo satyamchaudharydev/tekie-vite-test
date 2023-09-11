@@ -1,0 +1,205 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+
+.JoinTrib_base {
+    @include resD((
+        width: 1545px,
+        height: 310px,
+        background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%),
+        border-radius: 20px,
+        position: relative,
+        left: 170px,
+        // background-image: url(../../../../../src/assets/eventPage/joinTribe.svg)
+    ));
+    @include resSm((
+        width: 90%,
+        height: 200px,
+        background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%),
+        border-radius: 20px,
+        position: relative,
+        left: 15px,
+        // background-image: url(../../../../../src/assets/eventPage/joinTribe.svg)
+    ));
+}
+
+.JoinTrib_head {
+    @include resD((
+        font-style: normal,
+        font-weight: bolder,
+        font-size: 48px,
+        line-height: 59px,
+        display: flex,
+        align-items: center,
+        color: #FFFFFF,
+        position: relative,
+        left: 80px,
+        top: 80px,
+        width: 60%,
+    ));
+    @include resSm((
+        font-weight: 800,
+        font-size: 16px,
+        line-height: 20px,
+        display: flex,
+        align-items: center,
+        text-align: center,
+        color: #FFFFFF,
+        position: relative,
+        left: 105px,
+        top: 20px,
+        width: 60%,
+    ));
+}
+
+.JoinTrib_desc {
+    font-family: Nunito;
+    @include resD((
+        font-style: normal,
+        font-weight: bold,
+        font-size: 24px,
+        line-height: 33px,
+        display: flex,
+        align-items: center,
+        color: #FFFFFF,
+        position: relative,
+        left: 80px,
+        top: 40px,
+        width: 60%,
+    ));
+    @include resSm((
+        font-style: normal,
+        font-weight: bold,
+        font-size: 14px,
+        line-height: 19px,
+        display: flex,
+        align-items: center,
+        text-align: center,
+        color: #FFFFFF,
+        position: relative,
+        left: 30px,
+        top: 40px,
+        width: 80%,
+    ));
+}
+
+.JoinTrib_bg {
+    @include resD((
+        height: 310px,
+        position: relative,
+        top: -165px
+    ));
+    @include resSm((
+        height: 180px,
+        position: relative,
+        top: -70px,
+        width: 100%
+    ))
+}
+
+.JoinTrib_whatsapp{
+    cursor: pointer;
+    @include resD((
+        display: flex,
+        flex-direction: row,
+        justify-content: center,
+        align-items: center,
+        padding: 8px 24px,
+        position: absolute,
+        width: 210px,
+        height: 56px,
+        left: 1194px,
+        top: 67px,
+        color: #4CCA5A,
+        border-radius: 29.6569px,
+        border: none,
+
+    ));
+    @include resSm((
+        display: flex,
+        flex-direction: row,
+        justify-content: center,
+        align-items: center,
+        padding: 0px 0px,
+        position: absolute,
+        width: 100px,
+        height: 40px,
+        left: 55px,
+        top: 130px,
+        color: #4CCA5A,
+        border-radius: 29.6569px,
+        border: none
+    ));
+}
+
+.JoinTrib_discord{
+    @include resD((
+        display: flex,
+        flex-direction: row,
+        justify-content: center,
+        align-items: center,
+        padding: 8px 24px,
+        
+        position: absolute,
+        width: 220px,
+        height: 66px,
+        left: 1194px,
+        top: 147px,
+        
+        background: #ffffff,
+        border-radius: 29.6569px,
+        border: none,
+
+        font-style: normal,
+        font-weight: bold,
+        font-size: 20px,
+        line-height: 27px,
+        color: #4267B2,
+    ));
+    @include resSm((
+        display: flex,
+        flex-direction: row,
+        justify-content: center,
+        align-items: center,
+        padding: 0px 0px,
+        
+        position: absolute,
+        width: 100px,
+        height: 40px,
+        left: 165px,
+        top: 130px,
+        
+        background: #ffffff,
+        border-radius: 29.6569px,
+        border: none,
+
+        font-style: normal,
+        font-weight: 700,
+        font-size: 11px,
+        line-height: 12px,
+        // text-align: center,
+        color: #4267B2,
+    ));
+}
+
+.JoinTrib_dis_img {
+    @include resSm((
+        width: 80px
+    ))
+}
+
+.JoinTrib_facebook__icon {
+    @include resSm((
+        width: 23px
+    ));
+    @include resD((
+        position: relative,
+        left: -20px,
+        width: 45px
+    ))
+}
+
+.JoinTrib_WA_img {
+    @include resSm((
+        width: 80px
+    ))
+}

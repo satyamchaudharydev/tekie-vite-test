@@ -1,0 +1,191 @@
+@import 'src/scss/size.scss';
+
+.tubeContainer {
+  position: relative;
+  top: hs(-35px);
+  @include resD((
+    width: hs(100px),
+    height: hs(420px),
+  ));
+  @include resSm((
+    width: hs(200px),
+    height: hs(900px),
+  ));
+}
+
+.absoluteOverlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circleShine {
+  width: hs(22px);
+  height: hs(31px);
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  border-radius: 50%;
+  transform: rotate(130deg);
+  opacity: 0.4;
+  position: absolute;
+  top: hs(50px);
+  left: hs(52px);
+}
+
+.tubeShine {
+  @include resD((
+    width: hs(14.7px),
+    height: hs(284px),
+    top: hs(85px),
+    left: hs(16px),
+  ));
+  @include resSm((
+    width: hs(100.7px),
+    height: hs(630px),
+    top: hs(180px),
+    left: hs(26px),
+  ));
+  position: absolute;
+  
+  
+  opacity: 0.4;
+  border-radius: hs(5px);
+  transform: rotate(-180deg);
+  &.right {
+    transform: rotate(0deg);
+    left: hs(69px);
+  }
+  &.tubeShine1 {
+    background: linear-gradient(
+      to right,
+      rgba(115, 232, 173, 0) 0%,
+      rgba(115, 232, 173, 0.01) 21%,
+      rgba(115, 232, 173, 0.04) 34%,
+      rgba(115, 232, 173, 0.1) 46%,
+      rgba(115, 232, 173, 0.19) 56%,
+      rgba(115, 232, 173, 0.29) 66%,
+      rgba(115, 232, 173, 0.42) 74%,
+      rgba(115, 232, 173, 0.58) 83%,
+      rgba(115, 232, 173, 0.76) 91%,
+      rgba(115, 232, 173, 0.96) 99%,
+      rgba(115, 232, 173, 1) 100%,
+    );
+  }
+  &.tubeShine2 {
+    background: linear-gradient(
+      to right,
+       rgba(236, 205, 255, 0) 0%,
+       rgba(236, 205, 255, 0.01) 21%,
+       rgba(236, 205, 255, 0.04) 34%,
+       rgba(236, 205, 255, 0.1) 46%,
+       rgba(236, 205, 255, 0.19) 56%,
+       rgba(236, 205, 255, 0.29) 66%,
+       rgba(236, 205, 255, 0.42) 74%,
+       rgba(236, 205, 255, 0.58) 83%,
+       rgba(236, 205, 255, 0.76) 91%,
+       rgba(236, 205, 255, 0.96) 99%,
+       rgba(236, 205, 255, 1) 100%,
+    );
+  }
+  &.tubeShine3 {
+    background: linear-gradient(
+      to right,
+      rgba(255, 243, 163 ,0) 0%,
+      rgba(255, 243, 163 ,0.01) 21%,
+      rgba(255, 243, 163 ,0.04) 34%,
+      rgba(255, 243, 163 ,0.1) 46%,
+      rgba(255, 243, 163 ,0.19) 56%,
+      rgba(255, 243, 163 ,0.29) 66%,
+      rgba(255, 243, 163 ,0.42) 74%,
+      rgba(255, 243, 163 ,0.58) 83%,
+      rgba(255, 243, 163 ,0.76) 91%,
+      rgba(255, 243, 163 ,0.96) 99%,
+      rgba(255, 243, 163 ,1) 100%,
+    );
+  }
+}
+
+.bottomCircle {
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  @include resD((
+    width: hs(72px),
+    height: hs(72px),
+    bottom: hs(10px),
+    left: hs(15px),
+  ));
+  @include resSm((
+    width: hs(146px),
+    height: hs(150px),
+    bottom: hs(20px),
+    left: hs(26px),
+  ));
+}
+
+.bottomCircle1 {
+  background: linear-gradient(
+    to bottom, 
+    rgba(115, 232, 173, 0) 0%,
+    rgba(115, 232, 173, 0.01) 21%,
+    rgba(115, 232, 173, 0.05) 35%,
+    rgba(115, 232, 173, 0.11) 46%,
+    rgba(115, 232, 173, 0.19) 56%,
+    rgba(115, 232, 173, 0.30) 66%,
+    rgba(115, 232, 173, 0.43) 75%,
+    rgba(115, 232, 173, 0.59) 84%,
+    rgba(115, 232, 173, 0.76) 90%,
+    rgba(115, 232, 173, 0.98) 99%,
+    rgba(115, 232, 173, 1) 100%
+  )
+}
+.bottomCircle2 {
+  background: linear-gradient(
+    to bottom, 
+    rgba(151, 107, 214, 0) 0%,
+    rgba(151, 107, 214, 0.01) 21%,
+    rgba(151, 107, 214, 0.05) 35%,
+    rgba(151, 107, 214, 0.11) 46%,
+    rgba(151, 107, 214, 0.19) 56%,
+    rgba(151, 107, 214, 0.30) 66%,
+    rgba(151, 107, 214, 0.43) 75%,
+    rgba(151, 107, 214, 0.59) 84%,
+    rgba(151, 107, 214, 0.76) 90%,
+    rgba(151, 107, 214, 0.98) 99%,
+    rgba(151, 107, 214, 1) 100%
+  )
+}
+.bottomCircle3 {
+  background: linear-gradient(
+    to bottom, 
+    rgba(249, 237, 65, 0) 0%,
+    rgba(249, 237, 65, 0.01) 21%,
+    rgba(249, 237, 65, 0.05) 35%,
+    rgba(249, 237, 65, 0.11) 46%,
+    rgba(249, 237, 65, 0.19) 56%,
+    rgba(249, 237, 65, 0.30) 66%,
+    rgba(249, 237, 65, 0.43) 75%,
+    rgba(249, 237, 65, 0.59) 84%,
+    rgba(249, 237, 65, 0.76) 90%,
+    rgba(249, 237, 65, 0.98) 99%,
+    rgba(249, 237, 65, 1) 100%
+  )
+}
+
+
+.scoreText {
+  width: 100%;
+  color: #F7941D;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  @include resD((
+    font-size: hs(64px),
+    bottom: hs(0px),
+  ));
+  @include resSm((
+    font-size: hs(120px),
+    bottom: hs(70px),
+  ));
+}

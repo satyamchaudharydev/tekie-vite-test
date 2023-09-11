@@ -1,0 +1,138 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/Inter.scss';
+@import 'src/scss/theme.scss';
+
+.current-page {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.pagination-holder {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  overflow-x: scroll;
+
+  @include resD((
+    padding: $s-s 0
+  ));
+  @include resM((
+    padding: $s-s 0
+  ));
+}
+
+ul.pagination {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+ul.pagination li {
+  list-style-type: none;
+  overflow: hidden;
+  border: 1px solid #EEEEEE;
+  &:nth-child(1) {
+    border-radius: 8px 0px 0px 8px;
+  }
+  &:nth-last-child(1) {
+    border-radius: 0px 8px 8px 0px;
+  }
+}
+
+ul.pagination li .page-item {
+  @extend .Inter-regular;
+  text-decoration: none;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  transition: all .3s;
+  display: flex;
+  align-items: center;
+  color: black;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 600;
+  
+  @include resD((
+    width: 44px,
+    min-width: 44px,
+    height: 44px,
+    font-size: 16px,
+    line-height: 32px,
+  ));
+  @include resM((
+    width: 40px,
+    min-width: 40px,
+    height: 40px,
+    font-size: 14px,
+    line-height:25px,
+  ));
+
+  &:hover {
+    color: $deep-sky-blue !important;
+    background-color: #E0F7FF !important;
+  }
+}
+
+ul.pagination li .page-item-skip-btn {
+  font-size: 22px;
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+  color: $deep-sky-blue;
+}
+
+ul.pagination li .page-item.active {
+  color: $deep-sky-blue !important;
+  text-decoration: none;
+  background: #E0F7FF !important;
+}
+
+.pagination-arrow {
+  background-repeat: no-repeat;
+  cursor: pointer;
+  object-fit: contain;
+  background-size: contain;
+  background-position: center;
+  background-image: url('../../../../assets/quizLeftArrow.svg');
+  display: block;
+
+  @include resD((
+    width: hs(10px),
+    height: hs(24.9px),
+  ));
+  @include resM((
+    width: 24px,
+    height: 20px
+  ));
+
+  &:hover {
+    color: #aaacae;
+    opacity: 0.7;
+  }
+}
+
+.pagination-leftArrow {
+  background-image: url('../../../../assets/quizLeftArrow.svg');
+  background: #403F3F;
+  -webkit-mask-image: url('../../../../assets/quizLeftArrow.svg');
+  mask-image: url('../../../../assets/quizLeftArrow.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+}
+
+.pagination-rightArrow {
+  background-image: url('../../../../assets/quizRightArrow.svg');
+  background: #403F3F;
+  -webkit-mask-image: url('../../../../assets/quizRightArrow.svg');
+  mask-image: url('../../../../assets/quizRightArrow.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+}

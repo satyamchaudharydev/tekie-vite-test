@@ -1,0 +1,272 @@
+@import "src/scss/size.scss";
+@import 'src/scss/Inter.scss';
+
+.attendanceholder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    // justify-content: space-between;
+    @include resD((
+        width:100%,
+        margin-bottom: 30px,
+      ));
+    @include resM((
+        width:100%,
+        margin-bottom: 30px,
+      ));
+ }
+ .info-card {
+    background-color: #FFFFFF;
+    @include resD((
+        padding: 16px 17px 0px 31px,
+        min-width: 440px,
+        max-width: 440px,
+        min-height: 280px,
+        border-radius: 20px,
+        margin-right: 80px,
+        padding-bottom: 0,
+      ));
+      @include resM((
+        padding: 16px 14px 0px 25px,
+        min-width: 440px,
+        max-width: 440px,
+        min-height: 280px,
+        border-radius: 20px,
+        margin-right: 80px,
+        padding-bottom: 0,
+      ));
+}
+.info-card-leaderboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    @include resD((
+        padding: 14px 22px 0px 29px,
+        min-width: 470px,
+        max-width: 470px,
+        min-height: 280px,
+        border-radius: 20px,
+        margin-top:0vw
+      ));
+      @include resM((
+        padding: 14px 22px 0px 29px,
+        min-width: 440px,
+        max-width: 440px,
+        min-height: 280px,
+        border-radius: 20px,
+        margin-top:4%
+      ));
+}
+.info-card-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include resD((
+        height: 10%,
+        margin-top:3%
+      ));
+      @include resM((
+        height: 10%,
+        margin-top:3%
+      ));
+}
+.info-card-title {
+    font-style: normal;
+    font-weight: 600;
+    font-family:Inter;
+    @include resD((
+        margin-top: 1.2%,
+        margin-bottom: auto,
+        font-size: 23px,
+      ));
+    @include resM((
+        margin-top: 1.2%,
+        margin-bottom: auto,
+        font-size: 23px,
+      ));  
+}
+.info-card-title-student {
+    font-style: normal;
+    font-weight: 600;
+    font-family:Inter;
+    @include resD((
+        margin-top: auto,
+        margin-bottom: auto,
+        font-size: 23px,
+      ));
+    @include resM((
+        margin-top: auto,
+        margin-bottom: auto,
+        font-size: 23px,
+      ));  
+}
+.info-card-detail{
+    @include resD((
+        font-style: normal,
+        font-weight: 600,
+        font-size: 27px,
+        font-family:Inter,
+        cursor: pointer,
+         background-color: white,
+         border: none,
+         border-bottom: 1px solid #8C61CB,
+         color: #8C61CB,
+      ));
+}
+.info-card-detail-button {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include resD((
+        border: none,
+        border-bottom: 1px solid #8C61CB,
+      ));
+      @include resM((
+        border: none,
+        border-bottom: 1px solid #8C61CB,
+      ));      
+}
+.info-card-detail-text {
+    cursor:pointer;
+    font-style: normal;
+    font-weight: 500;
+    font-family: Inter;
+    color: #8C61CB;
+    @include resD((
+        font-size: 17px,
+        border: none,
+      ));
+    @include resM((
+        font-size: 17px,
+        border: none,
+    ));  
+}
+.info-card-button {
+    display: 'flex';
+    flex-direction: 'column';
+    cursor:pointer;
+    z-index: 1;
+    background-color: #8C61CB;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    color:white;
+    @include resD((
+        border: none,
+        padding: 20px 5px 20px 10px,
+        border-radius: 10px,
+        width: 142.7px,
+        margin-right:5%
+     ));
+     @include resM((
+        border: none,
+        padding: 20px 5px 20px 10px,
+        border-radius: 10px,
+        width: 142.7px,
+        margin-right:5%
+     ));
+}
+.info-card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-family:Inter;
+    @include resD((
+        font-size: 15px,
+        margin-right:5%
+     ));
+     @include resM((
+        font-size: 15px,
+        margin-right:5%
+     ));
+}
+.chart-holder {
+    @include resD((
+        width:100%,
+        margin-top: auto,
+        margin-bottom: auto,
+     ));
+     @include resM((
+        width:100%,
+        margin-top: auto,
+        margin-bottom: auto,
+     ));
+}
+.circle {
+    position:absolute;
+}
+.trophy-container {
+    position: absolute;
+    @include resD((
+        bottom:-10px,
+        margin-top: 7.5%,
+        left:1%
+     ));
+     @include resM((
+        bottom:-10px,
+        margin-top: 7.5%,
+        left:1%
+     ));
+
+     svg {
+      @include resD((
+          width: 220px,
+          height: 200px,
+      ));
+      @include resM((
+          width: 203px,
+          height: 165px,
+      ));
+  } 
+}
+.apexcharts-legend-text {
+   
+    font-family: Inter !important;
+    font-size: 12px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    color: #757575 !important
+}
+.apexcharts-legend.apexcharts-align-center.apx-legend-position-right {
+    position: absolute !important;
+        left: auto !important;
+        top: 18px !important;
+        right: 29px !important;
+    }
+.info-card-circle {
+    background: #F7F4FB;
+    position: absolute;
+    @include resD((
+        right: -100px,
+        top: -47px,
+        width: 300px,
+        height: 300px,
+        border-radius: 50%,
+     ));
+     @include resM((
+        right: -100px,
+        top: -47px,
+        width: 300px,
+        height: 300px,
+        border-radius: 50%,
+     ));
+} 
+.barchart-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+      @include resD((
+          width: 20px,
+          height: 20px,
+      ));
+      @include resM((
+          width: 20px,
+          height: 20px,
+      ));
+  }
+}  

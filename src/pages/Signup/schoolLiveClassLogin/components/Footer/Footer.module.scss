@@ -1,0 +1,171 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/theme/constants.scss";
+
+@import "src/scss/theme/spacing.scss";
+
+@mixin font-style(
+  $font-family,
+  $font-style,
+  $font-weight,
+  $line-height,
+  $color
+) {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0%;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  > h1 {
+    @include font-style(Inter, normal, 400, 120%, white);
+    color: white;
+    font-weight: 400;
+    @include resM(
+      (
+        margin-block: 16px,
+        font-size: 14px,
+      )
+    );
+  }
+}
+.mobileFooterContainer {
+  z-index: 999;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  > img {
+    @include resM(
+      (
+        width: 60px,
+        height: 30px,
+        object-fit:contain,
+      )
+    );
+  }
+  @include resM(
+    (
+      padding-bottom: 32px,
+    )
+  );
+  .iitd-logo {
+    @include resM(
+      (
+        width: 40px !important,
+        height: 16px !important,
+      )
+    );
+  }
+}
+
+.subDomain-landing-page-footer-container {
+  bottom: 0;
+  left: 0;
+  background-color: rgba(240, 243, 244,1);
+  padding: 18px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  
+  @include resD(
+    (
+      padding: 18px 12px,
+
+      flex-direction: row,
+      justify-content: space-between,
+      position: fixed,
+      margin-top: 0px,
+    )
+  );
+  @include resM(
+    (
+      padding: 10px 12px,
+      flex-direction: column,
+      justify-content: center,
+      position: relative,
+      margin-top: 12px,
+    )
+  );
+
+  & .subDomain-landing-page-footer-leftContainer,
+  .subDomain-landing-page-footer-rightContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    @include resM(
+      (
+        font-size: 14px,
+        flex-wrap: wrap,
+      )
+    );
+    @include resD(
+      (
+        font-size: 16px,
+      )
+    );
+
+    .subDomain-landing-page-footer-TekieLogo {
+      @include resM(
+        (
+          width: 28px,
+          height: 28px,
+          margin: 0px 6px,
+        )
+      );
+      @include resD(
+        (
+          width: 40px,
+          height: 40px,
+          margin: 0px 12px,
+        )
+      );
+      @include hide-element($mb-breakpoint);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    & span {
+      font-family: Nunito;
+      font-weight: normal;
+      color: #504f4f;
+      opacity: 0.7;
+      @include resD(
+        (
+          padding: 0,
+        )
+      );
+      @include resM(
+        (
+          padding-top: 8px,
+        )
+      );
+    }
+  }
+  .subDomain-landing-page-footer-privacyAndTerms {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0px 12px;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:nth-child(1) {
+      border-right: 1px solid rgba(80, 79, 79, 0.5);
+    }
+  }
+}

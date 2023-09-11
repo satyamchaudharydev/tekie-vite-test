@@ -1,0 +1,163 @@
+@import "src/scss/size.scss";
+$space-inline: 30px;
+$space-block: 24px;
+
+// view-details-modal
+.classroom-details-modal-container{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  padding: 40px;    
+  box-sizing: border-box;
+  z-index: 9999999;
+  background-color: #1e1f1e3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .classroom-details-modal{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 16px;
+    height: fit-content;
+    width: 100%;
+    max-height: 100%;   
+    min-width: 70%;
+    min-height: 60vh;
+    &.modal-embed{
+      height: 90vh;
+      width: 100%;
+      @include resD((
+      // max-width: 80%,
+
+    ));
+    }
+    .classroom-details-modal__hr-line{
+        opacity: 0.1;
+        @include resD((
+        border-bottom: 2px solid #000000,
+        ))
+    }
+    .classroom-details-modal__header{
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      color: #8C61CB;
+      @include resD((
+        padding-inline: $space-inline,
+        padding-block: $space-block
+        ));
+      .classroom-details-modal__header--title{
+        @include resD((
+          font-size: 24px,
+        ));
+      }
+      .classroom-details-modal__header--close-btn{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+    .classroom-details-modal__footer{
+        display: flex;
+        justify-content: flex-end;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        background: linear-gradient(269.4deg, #F2FFFD 0%, #FFFFFF 100%);
+        @include resD((
+          padding-inline: $space-inline,
+          padding-block: $space-block,    
+          padding-block-start: 16px,
+        ));
+        &[data-disable='true']{
+          background: linear-gradient(269.4deg, #F8F8F8 0%, #FFFFFF 100%);
+        }
+        margin-top: auto;
+        
+        & button {
+            margin-left: auto;
+            background-color: #01AA93;
+            transition: all 0.3s ease;
+            &:disabled{
+            background-color: #C4C4C4;
+            color: #fff;
+           }
+            }
+        
+        .classroom-details-modal__footer--complete-btn{
+            margin-left: auto;
+            width: fit-content;
+            background-color: #01AA93;
+            color: #fff;
+            font-size: 500;
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+           font-size: 15px;
+            @include resD((
+                
+                border-radius: 8px,
+                padding: 14px,
+                
+            ));
+            align-items: center;
+
+        }
+       
+        &[data-align="center"]{
+          & button{
+            
+            margin-inline: auto; 
+          }
+        }
+    }
+    .classroom-details-modal__body{
+        overflow: auto;
+        min-height: 100px;
+        @include resD((
+          padding-inline: $space-inline,
+          padding-block: $space-block,  
+
+        ));
+        &.modal-embed{
+          height: 100%;
+          overflow: unset;
+          padding: 0;
+        }
+        &::-webkit-scrollbar{
+          background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb{
+          background-color: #ddd;
+        }
+        
+        // overflow: scroll;
+    }
+     .classroom-details-modal__body--empty{
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        line-height: 22px;
+        font-weight: 400;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        color: #6D6D6D;
+        & button {
+            background-color: #01AA93;
+            margin-top: 10px;
+          }
+        @include resD((
+          height: 200px,
+          padding-inline: $space-inline,
+          padding-block: 70px,
+          gap: 18px,
+        ))
+       }
+  }
+}

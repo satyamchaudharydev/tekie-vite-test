@@ -1,0 +1,461 @@
+@import 'src/scss/size.scss';
+
+.mainContainer{
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  display: flex;
+}
+
+.container {
+  width: 97%;
+  height: 97%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+
+.leftContainer {
+  width: hs(1097px);
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.rightContainer {
+  width: hs(409px);
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.videoContainer {
+  width: 100%;
+  height: auto;
+  min-height: hs(617px);
+  background-color: #ffffff;
+  display: flex;
+}
+
+.emptyVideoContainer{
+  width: 100%;
+  height: hs(617px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.emptyVideoContainerThumbnail{
+  width: 100%;
+  height: hs(617px);
+}
+
+.videoPlayerContainer {
+  width: 100%;
+  height: auto;
+}
+
+.videoInfoContainer{
+  width: 100%;
+  height: 30%;
+  min-height: hs(200px);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.videoTitleContainer{
+  width: 100%;
+  height: 30%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  border-bottom: hs(1.5px) solid rgba(0, 0, 0, .1) !important;
+}
+
+.videoTitleTextContainer {
+  width: 40%;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  font-family: Nunito;
+  font-size: hs(30px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.37;
+  letter-spacing: normal;
+  text-align: left;
+  color: #707070;
+}
+
+.videoActionContainer {
+  width: 20%;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+  z-index: 99999;
+}
+
+.videoBookMark {
+  margin-left: hs(20px);
+  margin-right: hs(18px);
+  width: hs(13px);
+  height: hs(26px);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.bookmarkIcon{
+  position: relative;
+}
+
+.videoLike {
+  margin-left: hs(20px);
+  margin-right: hs(18px);
+  width: hs(26.23px);
+  height: hs(22.892px);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.likeIcon{
+  position: relative;
+}
+
+.videoShare {
+  margin-left: hs(20px);
+  margin-right: hs(18px);
+  width: hs(23px);
+  height: hs(26px);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.shareIcon{
+  position: relative;
+}
+
+.videoDescContainer{
+  width: 100%;
+  height: 70%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  display: flex;
+  font-family: Nunito;
+  font-size: hs(20px);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+  margin-top: hs(18px);
+}
+
+.subtitleContainer {
+  width: 100%;
+  height: 90%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+}
+
+.subtitleHeaderContainer {
+  width: hs(410px);
+  height: 5%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: hs(15px);
+  min-height: hs(40px);
+}
+
+.subtitleHeaderText {
+  width: 50%;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-family: Nunito;
+  font-size: hs(24px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #aaacae;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.loHeaderText {
+  width: 50%;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-family: Nunito;
+  font-size: hs(24px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #aaacae;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.activeRightHeaderText{
+  color: #00ade6;
+  border-bottom: hs(2px) solid #00ade6 !important;
+}
+
+.subtitleBodyContainer {
+  width: 100%;
+  height: 95%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.scriptBox{
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: hs(410px);
+  min-height: hs(45px);
+  background-color: #e1f8fb;
+  margin-bottom: hs(2px);
+  pointer-events: auto;
+  cursor: pointer;
+  display: flex;
+  padding-bottom: hs(2px);
+  padding-top: hs(8px);
+}
+
+.singleSubtitleBox{
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.subtitleScrollContainer {
+  overflow-y: scroll !important;
+  position: relative !important;
+  -webkit-overflow-scrolling: touch !important;
+  overflow: auto;
+  list-style:none;
+}
+
+.scriptTextContainer {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: hs(20px);
+  display: flex;
+  width: 16%;
+  height: 100%;
+}
+
+.scriptText {
+  font-family: Nunito;
+  font-size: hs(20px);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+  display: flex;
+  width: 100%;
+}
+
+.scriptRightText {
+  font-family: Nunito;
+  font-size: hs(20px);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+  display: flex;
+  width: 74%;
+}
+
+.nextButtonContainer {
+  width: 100%;
+  height: 10%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50%;
+  display: flex;
+}
+
+.greyLine {
+  border-color: #aaacae;
+  border-bottom-width: hs(2px);
+  height: hs(2px);
+}
+
+.learningObjectiveBox {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: hs(53px);
+  background-color: #e1f8fb;
+  width: hs(410px);
+  display: flex;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.subtitleBoxHighlight {
+  background-color: #0b535f;
+}
+
+.subtitleDisable {
+  background-color: #aaacae;
+}
+
+.subtitleTextHighlight {
+  color: #ffffff !important;
+}
+
+.learningObjectiveThumbnailBox {
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.playIcon {
+  position: absolute;
+  z-index: 99999;
+  background-image: url("../../assets/play-icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: hs(50px);
+  height: hs(50px);
+}
+
+.learningObjectiveThumbnail {
+  background-color: #15718A;
+  width: hs(95px);
+  height: hs(53px);
+  margin-left: hs(8px);
+  margin-bottom: hs(8px);
+  margin-top: hs(8px);
+}
+
+.learningObjectiveText {
+  font-family: Nunito;
+  font-size: hs(20px);
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #504f4f;
+  padding-left: hs(10px);
+  flex: 1;
+  display: flex;
+}
+
+.learningObjectiveTime {
+  width: hs(25px);
+  height: hs(25px);
+  border-radius: hs(12.5px);
+  margin-right: hs(24.5px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #34e4ea linear-gradient(#34e4ea, #00ade6);
+  display: flex;
+}
+
+.learningObjectiveTimeText {
+  font-family: Nunito;
+  font-size: hs(8px);
+  font-style: normal;
+  line-height: hs(10px);
+  letter-spacing: 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.emptySubtitleContainer{
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: hs(410px);
+  background-color: #e1f8fb;
+  min-height: hs(45px);
+  margin-bottom: hs(2px);
+}
+
+.componentPaidText{
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-family: Nunito;
+  font-size: hs(30px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.37;
+  letter-spacing: normal;
+  text-align: center;
+  color: #707070;
+}
+
+.paidComponentRightContainer{
+  width: hs(409px);
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+}

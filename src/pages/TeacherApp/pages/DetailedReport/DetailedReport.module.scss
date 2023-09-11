@@ -1,0 +1,1002 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+@import "../../variables/_variables.scss";
+@import "../../mixins/_mixins.scss";
+
+.className__detailed__report {
+  @include resD(
+    (
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 400,
+      font-size: 15px,
+      line-height: 16px,
+      color: #a8a7a7,
+    )
+  );
+  @include resM(
+    (
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 400,
+      font-size: 12px,
+      line-height: 16px,
+      color: #a8a7a7,
+    )
+  );
+}
+.navigation__bar__detailed__report {
+  @include resD(
+    (
+      display: flex,
+      align-items: center,
+      margin-left: 15px,
+      margin-top: 20px,
+    )
+  );
+  @include resM(
+    (
+      display: flex,
+    )
+  );
+}
+.container__navigation__items {
+  @include resD(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: center,
+    )
+  );
+  @include resM(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: center,
+    )
+  );
+}
+.forward__icon__container {
+  @include resD(
+    (
+      margin-left: 10px,
+      margin-right: 10px,
+    )
+  );
+  @include resM(
+    (
+      margin-left: 15px,
+      margin-right: 15px,
+    )
+  );
+}
+.title__container__evaluation__report__container {
+  @include resD(
+    (
+      display: flex,
+      flex-direction: row,
+      align-items: flex-start,
+      padding: 16px,
+      background: #ffffff,
+      border-radius: 16px,
+    )
+  );
+  @include resM(());
+}
+.Evaluation__text {
+  @include resD(
+    (
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 500,
+      font-size: 14px,
+      line-height: 17px,
+      display: flex,
+      align-items: center,
+      color: #504f4f,
+    )
+  );
+  @include resM(
+    (
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 500,
+      font-size: 14px,
+      line-height: 17px,
+      display: flex,
+      align-items: center,
+      color: #504f4f,
+    )
+  );
+}
+.Evaluation__number {
+  @include resD(
+    (
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 500,
+      font-size: 14px,
+      line-height: 17px,
+      display: flex,
+      align-items: center,
+      color: #8c61cb,
+      margin-left: 4px,
+    )
+  );
+  @include resM(
+    (
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 500,
+      font-size: 14px,
+      line-height: 17px,
+      display: flex,
+      align-items: center,
+      color: #504f4f,
+    )
+  );
+}
+.Evaluation__button {
+  @include resD(
+    (
+      display: flex,
+      flex-direction: row,
+      justify-content: center,
+      align-items: center,
+      padding: 7px 16px 7px 12px,
+      background: #8c61cb,
+      border-radius: 8px,
+      border: none,
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 500,
+      font-size: 12px,
+      line-height: 18px,
+      color: #ffffff,
+    )
+  );
+  @include resM(
+    (
+      display: flex,
+      flex-direction: row,
+      justify-content: center,
+      align-items: center,
+      padding: 7px 16px 7px 12px,
+      background: #8c61cb,
+      border-radius: 8px,
+      border: none,
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 500,
+      font-size: 12px,
+      line-height: 18px,
+      color: #ffffff,
+    )
+  );
+}
+.tab__switch__detailed__report {
+  @include resD(
+    (
+      width: 95%,
+      height: 56px,
+      background: #ffffff,
+      border-radius: 16px 16px 0px 0px,
+      display: flex,
+      align-items: center,
+      margin-top: 30px,
+    )
+  );
+  @include resM(
+    (
+      width: 100%,
+      height: 56px,
+      background: #ffffff,
+      border-radius: 16px 16px 0px 0px,
+    )
+  );
+}
+.question__level {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 20px,
+      line-height: 24px,
+      display: flex,
+      align-items: center,
+      color: #8c61cb,
+      margin-right: 30px,
+      margin-left: 20px,
+    )
+  );
+  @include resM(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 16px,
+      line-height: 24px,
+      display: flex,
+      align-items: center,
+      color: #8c61cb,
+    )
+  );
+}
+.student__level {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 20px,
+      line-height: 24px,
+      display: flex,
+      align-items: center,
+      color: #212121,
+    )
+  );
+  @include resM(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 20px,
+      line-height: 24px,
+      display: flex,
+      align-items: center,
+      color: #212121,
+    )
+  );
+}
+.detailed__report__main__container {
+  @include resD1280(
+    (
+      height: fit-content,
+      background-color: #ffffff,
+      padding: 24px 20px,
+    )
+  );
+  @include resM(());
+}
+.homework__title{
+  position: sticky;
+  top: -1px;
+  z-index: 999;
+  transition: all 0.1 ease-in-out;
+  font-family: 'Inter';
+  @include resD1280(
+    (
+      display: flex,
+      padding: 12px 18px,
+      background: linear-gradient(90deg, #f3f7f7 42.64%, white 71.29%),
+      border-radius: 4px,
+      margin-bottom:16px
+    )
+  );
+  h3{
+    margin: 0;
+    padding: 0;
+    @include resD1280((
+      font-size:18px,
+      color:#10695D,
+      font-weight:700
+    ))
+  }
+}
+
+.topic__container {
+  @include resD(
+    (
+      box-sizing:border-box,
+      padding:10px,
+      width: 138px,
+      height: 46px,
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      background: rgba(80, 79, 79, 0.08),
+      margin: 0px 2px,
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 500,
+      font-size: 18px,
+      line-height: 24px,
+      color: black,
+    )
+  );
+  @include resM(
+    (
+      width: 138px,
+      height: 40px,
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      background: rgba(80, 79, 79, 0.08),
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 500,
+      font-size: 14px,
+      line-height: 24px,
+      color: black,
+    )
+  );
+}
+.active {
+  @include resD(
+    (
+      background: #8c61cb,
+      color: #ffffff,
+    )
+  );
+  @include resM(
+    (
+      background: #8c61cb,
+      color: #ffffff,
+    )
+  );
+}
+
+.assignment__submissions__percentage__container{
+  @include resD1280(
+    (
+      margin-bottom: 24px
+    )
+  );
+}
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+.homework__review__quiz__section {
+  @include resD(
+    (
+      background: #ffffff,
+      // border: 1px solid #eeeeee,
+      box-sizing: border-box,
+      border-radius: 16px,
+      padding: 30px 0px 30px 30px,
+      width: 98%,
+      height: fit-content,
+      margin-top: 20px,
+    )
+  );
+  @include resSm(
+    (
+      background: #ffffff,
+      border: 1px solid #eeeeee,
+      box-sizing: border-box,
+      border-radius: 16px,
+      // width: fit-content,
+      height: fit-content,
+    )
+  );
+}
+.quiz__all__icon {
+  svg {
+    @include resD(
+      (
+        width: 28px,
+        height: 28px,
+      )
+    );
+    @include resSm(());
+  }
+}
+.quiz__all__questions__main__container {
+  @include resD(
+    (
+      margin-top: 15px,
+    )
+  );
+  @include resSm(
+    (
+      margin-top: 15px,
+    )
+  );
+}
+.homework__review__title__text {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 700,
+      font-size: 20px,
+      line-height: 24px,
+      color: #504f4f,
+      margin-left: 10px,
+    )
+  );
+  @include resSm(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 700,
+      font-size: 16px,
+      line-height: 24px,
+      color: #504f4f,
+    )
+  );
+}
+.homework__review__quiz__title {
+  @include resD(
+    (
+      display: flex,
+      align-items: center,
+    )
+  );
+  @include resSm(
+    (
+      display: flex,
+      align-items: center,
+    )
+  );
+
+  svg {
+    @include resD(
+      (
+        width: 30px,
+        height: 30px,
+      )
+    );
+    @include resSm(
+      (
+        width: 30px,
+        height: 30px,
+      )
+    );
+  }
+}
+.quiz__all__questions__section {
+  @include resD(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: space-between,
+      width: 100%,
+      // margin-bottom: 15px,
+      // padding: 0px 0px 0px 0px,
+      // margin-left: 0px,
+      padding:24px,
+    )
+  );
+  @include resSm(
+    (
+        display: flex,
+      align-items: center
+    )
+  );
+  span {
+    @include resD(
+      (
+        font-family: Inter,
+        font-style: normal,
+        font-weight: 500,
+        font-size: 18px,
+        // line-height: 18px,
+        display: flex,
+        align-items: center,
+        color: #8c61cb,
+      )
+    );
+    @include resSm(
+      (
+        font-family: Inter,
+        font-style: normal,
+        font-weight: 500,
+        font-size: 18px,
+        line-height: 18px,
+        display: flex,
+        align-items: center,
+        color: #8c61cb,
+      )
+    );
+  }
+}
+.quiz__all__questions__section__coding {
+  @include resD(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: space-between,
+      width: 100%,
+      margin-bottom: 15px,
+    )
+  );
+  @include resSm(
+    (
+      // background: #ffffff,
+        // box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25),
+        // border-radius: 16px,
+        display: flex,
+      align-items: center
+    )
+  );
+
+  span {
+    @include resD(
+      (
+        font-family: Inter,
+        font-style: normal,
+        font-weight: 500,
+        font-size: 18px,
+        line-height: 18px,
+        display: flex,
+        align-items: center,
+        color: #8c61cb,
+        margin-right: 15px,
+        margin-top: 8px,
+      )
+    );
+    @include resSm(
+      (
+        font-family: Inter,
+        font-style: normal,
+        font-weight: 500,
+        font-size: 18px,
+        line-height: 18px,
+        display: flex,
+        align-items: center,
+        color: #8c61cb,
+      )
+    );
+  }
+}
+.pq__questions__container {
+  @include resD(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      width: 100%,
+      margin-bottom: 15px,
+      padding-left: 30px,
+      padding-right: 30px,
+    )
+  );
+  @include resSm(
+    (
+      justify-content: center,
+      width: 100%,
+      margin-bottom: 15px,
+      display: flex,
+      align-items: center,
+    )
+  );
+}
+.senior__container {
+  @include resD(
+    (
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25),
+      border-radius: 20px,
+      width: 95%,
+      min-height: 50px,
+      display: flex,
+      align-items: flex-start,
+      flex-direction: column,
+      justify-content: center,
+      padding: 10px 0px 10px 0px,
+      margin-bottom: 15px,
+    )
+  );
+  @include resSm(
+    (
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25),
+      border-radius: 20px,
+    )
+  );
+}
+.quiz__all__questions__tag__container {
+  @include resD(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: center,
+    )
+  );
+  @include resSm(
+    (
+      display: flex,
+      align-items: center,
+      justify-content: center,
+    )
+  );
+}
+.quiz__all__questions__text {
+  @include resD(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 18px,
+      // line-height: 24px,
+      line-height: 140%,
+      display: flex,
+      // flex-direction:column,
+      align-items: flex-start,
+      color: black,
+      width: 1000px,
+      margin-right: 70px,
+      overflow: hidden,
+      position: relative,
+    )
+  );
+  @include resSm(
+    (
+      font-family: Inter,
+      font-style: normal,
+      font-weight: 500,
+      font-size: 18px,
+      // line-height: 18px,
+      display: flex,
+      align-items: center,
+      color: black,
+    )
+  );
+}
+.span__question {
+  @include resD(
+    (
+      width: 135px,
+    )
+  );
+  @include resSm(
+    (
+      width: 105px,
+    )
+  );
+}
+
+.quiz__all__questions__tag_c {
+  @include resD(
+    (
+      width: 130px,
+      height: 30px,
+      padding: 4px 10px,
+      background: #faad14,
+      border-radius: 6px,
+      margin-right: 10px,
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      color: white,
+      font-family: Inter,
+      font-size: 15px,
+    )
+  );
+  @include resSm(
+    (
+      width: fit-content,
+      height: fit-content,
+      padding: 2px 8px,
+      background: #faad14,
+      border-radius: 6px,
+    )
+  );
+
+  span {
+    @include resD(
+      (
+        font-family: Inter,
+        font-style: normal,
+        font-weight: 500,
+        font-size: 13px,
+        line-height: 12px,
+        color: #ffffff,
+      )
+    );
+    @include resSm(
+      (
+        font-family: Inter,
+        font-style: normal,
+        font-weight: 500,
+        font-size: 10px,
+        line-height: 12px,
+        color: #ffffff,
+      )
+    );
+  }
+}
+
+.graph__line1__detailed__report {
+  @include resD(
+    (
+      width: 225px,
+      height: 26px,
+      background: #01aa93,
+      border-radius: 3px,
+    )
+  );
+  @include resSm(
+    (
+      width: 225px,
+      height: 20px,
+      background: #01aa93,
+      border-radius: 3px,
+    )
+  );
+}
+.graph__line2__detailed__report {
+  @include resD(
+    (
+      width: 175px,
+      height: 26px,
+      background: #ff5744,
+      border-radius: 3px,
+      margin-top: 15px,
+    )
+  );
+  @include resSm(
+    (
+      width: 225px,
+      height: 20px,
+      background: #ff5744,
+      border-radius: 3px,
+      margin-top: 15px,
+    )
+  );
+}
+.graph__line3__detailed__report {
+  @include resD(
+    (
+      width: 125px,
+      height: 26px,
+      background: #faad14,
+      border-radius: 3px,
+      margin-top: 15px,
+    )
+  );
+  @include resSm(
+    (
+      width: 225px,
+      height: 20px,
+      background: #faad14,
+      border-radius: 3px,
+      margin-top: 15px,
+    )
+  );
+}
+.tries__text {
+  @include resD(
+    (
+      font-family: "Inter",
+      font-style: normal,
+      font-weight: 400,
+      font-size: 13px,
+      line-height: 12px,
+      text-align: center,
+      color: #757575,
+      margin-left:25px
+    )
+  );
+  @include resSm(
+    (
+      font-family: "Inter" ,
+      font-style: normal,
+      font-weight: 400,
+      font-size: 10px,
+      line-height: 12px,
+      text-align: center,
+      color: #757575,
+    )
+  );
+}
+
+
+
+//NEW CSS RULES
+.detailedReportContainer{
+  //  *{
+  //   box-sizing: border-box;
+  // }
+  font-family: 'Inter';
+  @include resD1280((
+    padding:20px 24px 16px 0px,
+  ))
+}
+.breadCrumbContainer{
+  @include resD1280((
+    margin-bottom:43px
+  ))
+}
+.pqIconContainer{
+  @include resD((
+    margin-right: 12px
+  ));
+  @include flex(center,center)
+}
+.pqTopicLabelsContainer{
+  display: flex;
+  @include resD1280((
+    margin-bottom:16px
+  ))
+}
+.topic__container{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &:nth-child(1){
+    border-radius: 4px 0px 0px 4px
+  };
+  &:last-child{
+    border-radius: 0px 4px 4px 0px
+  };
+}
+
+.progressHorizontal{
+  @include resD((border-radius: 5px,
+            // width: 225px,
+            min-height: 66px,
+        ));
+    position: relative;
+}
+.progressDoneHorizontal{
+    @include flex(flex-end,center);
+    @include resD((max-height: 32px,padding:0 8px,min-width:40px,max-width:231px));
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: 1s ease 0.3s;
+}
+.progressPercentageHorizontal {
+  @include resD((
+      font-size:14px,
+      right:-48px
+  ));
+  color: white;
+  font-weight: 700;
+  @media screen and (min-width:1601px) {
+    right:-34px
+  }
+}
+.barRightText{
+  font-family: 'Inter';
+  @include resD1280((
+    font-size:10px,
+    right:-50px
+));
+color: $tekie-grey-70;
+font-weight: 400;
+}
+.one,.correct {
+  background-color: $completed;
+}
+
+.two,.unAttempted {
+  background-color: $inProgress;
+}
+
+.three,.incorrect {
+  background-color: $unattended;
+}
+.separatorLine{
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  @include resD1280((
+    margin-bottom:14px
+  ))
+}
+
+.loaderBackdrop{
+  position: absolute;
+	left: 0px;
+	top: 0px;
+	// background: rgba($color: #000000, $alpha: 0.1);
+  background-color: #fff;
+	height: 100%;
+	width: 100%;
+	z-index: 99;
+  & span{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 100%;
+    font-family: 'Inter';
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}
+.timetableLoadingText {
+	font-family: 'Inter';
+	font-size: 14px;
+	font-weight: 700;
+	// margin-left: 8px;
+	letter-spacing: 0.1px;
+}
+
+.backToTop{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+    transform: rotate(90deg);
+    z-index: 999;
+    @include resD1280((
+        bottom: 20px,
+        right: 30px,
+    ));
+    & button{
+        @include resD1280((
+            padding: 10px,
+        ))
+    }
+    & svg, & path{
+        fill: gray;
+    }
+    &.visibleButton{
+        visibility: visible;
+        opacity: 1;
+    }
+    & span{
+        display: flex;
+    }
+}
+.mb16{
+  @include resD((
+    margin-bottom:20px
+  ))
+}
+.mb26{
+  @include resD((
+    margin-bottom:36px
+  ))
+}
+
+.emptyStateContainer{
+  color: rgba(109, 109, 109, 0.75);
+  font-weight: 400;
+  @include flex(center,center);
+  @include resD((
+    gap:8px,
+    font-size:18px,
+    padding:40px
+  ));
+  p{
+    margin:0
+  }
+}
+.emptyStateIcon{
+  @include flex(center,center)
+}
+
+.classwork__title {
+  @include flex(flex-start,center);
+  flex-direction: row;
+  background-color: #EFF8FF;
+  @include resD1280((
+    padding: 12px 18px,
+    border-radius: 8px,
+  ));
+}
+
+.classWorkSectionHeadingTitleContainer {
+  display: flex;
+  flex-direction: column;
+  color: #005773;
+  @include resD1280((
+    margin-left: 12px,
+  ));
+  h2 {
+    margin: 0;
+    font-weight: 600;
+    @include resD1280((
+      font-size: 18px,
+      line-height: 24px,
+      margin-bottom: 4px,
+    ));
+  }
+  p {
+    margin: 0;
+    font-weight: 500;
+    @include resD1280((
+      font-size: 12px,
+      line-height: 16px,
+    ));
+  }
+}

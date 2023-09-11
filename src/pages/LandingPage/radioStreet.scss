@@ -1,0 +1,937 @@
+@import 'src/scss/size.scss';
+
+.container {
+  background-color: #00171F;
+  @include resD((
+    padding-top: 100px
+  ));
+  @include resD((
+    padding-top: 100px
+  ));
+}
+
+.header-container {
+  @include resD((
+    display: block,
+  ));
+  @include resM((
+    display: none,
+  ));
+}
+
+.header-mobile-container {
+  @include resD((
+    display: none,
+  ));
+  @include resM((
+    display: flex,
+    height: 65px,
+    padding: 0 15px,
+  ));
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #00171F;
+}
+
+.header-mobile-container-center {
+  justify-content: center;
+}
+
+.tekie-logo-mb {
+  @include resM((
+    width: 67px,
+    height: 25px
+  ));
+  background: url('../../assets/tekieLogo.png');
+  background-size: contain;
+}
+
+.radio-street-mb {
+  @include resM((
+    width: 64px,
+    height: 40px
+  ));
+  background: url('../../assets/radioStreetLogo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.posterBanner {
+  background-size: contain;
+  background-image: url('../../assets/Crackthecode.png');
+  background-position: center bottom;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  @include resD((
+    height: 580px,
+    display: flex,
+    padding-left: 94px,
+    padding-bottom: 40px,
+  ));
+  @include resM((
+    display: none
+  ));
+  
+  .row:last-child {
+    @include resD((
+      margin-top: 20px,
+    ));
+  }
+}
+
+.posterBannerB2C {
+  background-image: url('../../assets/radioStreet/poster-b2c.png');
+}
+
+.posterMb {
+  @include resM((
+    height: calc(100vh - 145px),
+    width: 100vw,
+    padding: 0 25px,
+    display: block
+    // padding-bottom: 100px
+  ));
+  @include resD((
+    display: none
+  )); 
+  box-sizing: border-box;
+  background-size: cover;
+  background-image: url('../../assets/radioStreetPoster.png');
+  background-position: left top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.last-register {
+  @include resD((
+    display: flex !important,
+  ));
+  @include resM((
+    display: none !important,
+  ));
+}
+
+.registerButton {
+  display: flex; 
+  flex-direction: row;
+  background: linear-gradient(280.79deg, #4099F7 2.79%, #00ADE6 98.42%);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  svg {
+    transition: 0.3s all ease-in-out;
+    transform: translateX(0px);
+  }
+  &:hover svg {
+    transform: translateX(5px);
+  }
+  @include resD((
+    font-size: 19px,
+    border-radius: 28.9122px,
+    width: 205px,
+    height: 60px,
+  ));
+  @include resM((
+    font-size: 16px,
+    border-radius: 21.6842px,
+    width: 200px,
+    height: 43px,
+  ));
+}
+
+.register-arrow-right {
+  svg {
+    @include resD((
+      width: 14px * 1.4,
+      height: 15px * 1.4,
+      margin-left: 9px,
+      top: 5px
+    ));
+    @include resM((
+      width: 14px,
+      height: 15px,
+      margin-left: 4px,
+      top: 5px
+    ));
+    position: relative;
+  }
+}
+
+.no-coding-text {
+  font-family: Nunito;
+  color: white;
+  // margin-left: 20px;
+  @include resD((
+    font-size: 22px,
+    font-weight: normal,
+    margin-bottom: 0px,
+    margin-top: 15px
+  ));
+  @include resM((
+    font-size: 14px,
+    font-weight: 400,
+    margin-bottom: 20px,
+    margin-top: 10px
+  ));
+}
+
+.learn-binary {
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: capitalize;
+  @include resD((
+    font-size: 18px,
+    margin-bottom: 35px,
+    width: unset,
+  ));
+  @include resM((
+    font-size: 18px,
+    margin-bottom: 43px,
+    width: 300px,
+    line-height: 140%,
+    margin-top: 25px
+  ));
+  span {
+    font-weight: bold;
+    color: white;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.body {
+  @include resD((
+    padding-top: 72px,
+    padding-left: 94px,
+    padding-right: unset
+  ));
+  @include resM((
+    padding-top: 16px,
+    padding-left: 16px,
+    padding-right: 24px
+  ));
+}
+
+.heading {
+  color: #504F4F;
+  font-weight: bold;
+  @include resD((
+    font-size: 40px,
+  ));
+  @include resM((
+    font-size: 24px,
+  ));
+  font-family: Nunito;
+}
+
+.body-text {
+  @include resD((
+    font-size: 22px,
+    max-width: 896px,
+    margin-top: 31px
+  ));
+  @include resM((
+    font-size: 14px,
+    max-width: 320px,
+    margin-top: 15px
+  ));
+  color: #504F4F;
+}
+
+.m-top {
+  @include resD((
+    margin-top: 80px,
+    margin-bottom: unset
+  ));
+  @include resM((
+    margin-top: 35px,
+    margin-bottom: 15px
+  ));
+}
+
+.m-top-b2c {
+  @include resD((
+    margin-top: 60px,
+    margin-bottom: unset
+  ));
+  @include resM((
+    margin-top: 35px,
+    margin-bottom: 15px
+  ));
+}
+
+.gift-card {
+  @include resD((
+    border-radius: 24px,
+    width: 451px,
+    height: 302px,
+    margin-top: 80px,
+    background: #fafafa,
+    margin-right: 160px,
+  ));
+  @include resM((
+    border-radius: 16px,
+    width: 100%,
+    height: 205px,
+    margin-top: 25px,
+    background: #fafafa,
+    margin-left: unset,
+  ));
+  border: 1px solid #DBDBDB;
+  position: relative;
+  &:first-child {
+    margin-left: 0px,
+  }
+  .gift-card-number {
+    font-family: Nunito;
+    font-weight: bold;
+    opacity: 0.2;
+    letter-spacing: -0.02em;
+    color: #504F4F;
+    span {
+      @include resD((
+        font-size: 74px,
+      ));
+      @include resM((
+        font-size: 35px,
+      ));
+    }
+    @include resD((
+      font-size: 98.3333px,
+      margin-left: 36px
+    ));
+    @include resM((
+      font-size: 35px,
+      margin-left: 16px
+    ));
+  }
+  .gift-card-number-extra {
+    font-family: Nunito;
+    font-weight: bold;
+    opacity: 0.2;
+    letter-spacing: -0.02em;
+    color: #504F4F;
+    span {
+      @include resD((
+        font-size: 30px,
+      ));
+      @include resM((
+        font-size: 15px,
+      ));
+    }
+    @include resD((
+      font-size: 55px,
+      margin-top: 20px,
+      margin-left: 36px
+    ));
+    @include resM((
+      font-size: 35px,
+      margin-left: 16px
+    ));
+  }
+  .gift-bottom-text {
+    color: #504F4F;
+    font-weight: bold;
+    position: absolute;
+    @include resD((
+      font-size: 24px,
+      margin-left: 24px,
+      bottom: 30px,
+      width: unset,
+      text-align: unset
+    ));
+    @include resM((
+      font-size: 14px,
+      // margin-left: 24px,
+      bottom: 20px,
+      width: 100%,
+      text-align: center
+    ));
+  }
+  &:nth-child(3) {
+    @include resD((
+      margin-right: 0px
+    ));
+  }
+}
+
+.gift-bg {
+  position: absolute;
+  @include resD((
+    width: 470px,
+    height: 334px,
+    right: unset
+  ));
+  @include resM((
+    width: 100%,
+    height: 227px,
+    right: -65px,
+  ));
+  bottom: 0;
+}
+
+.gift-bg-1 {
+  @extend .gift-bg;
+  background: url(../../assets/radioStreet/gift-1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gift-bg-1-b2c {
+  @extend .gift-bg;
+  background: url(../../assets/radioStreet/amazon-gift.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gift-bg-2 {
+  @extend .gift-bg;
+  background: url(../../assets/radioStreet/gift-2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include resM((
+    right: -45px,
+  ));
+  @include resD((
+    left: 30px,
+  ));
+}
+
+.gift-bg-2-b2c {
+  @extend .gift-bg;
+  background: url(../../assets/radioStreet/fit-band.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include resM((
+    right: -45px,
+  ));
+  @include resD((
+    left: 30px,
+  ));
+}
+
+.gift-bg-3 {
+  @extend .gift-bg;
+  background: url(../../assets/radioStreet/gift-2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include resM((
+    right: -45px,
+  ));
+  @include resD((
+    left: 30px,
+  ));
+}
+
+.gift-bg-3-b2c {
+  @extend .gift-bg;
+  background: url(../../assets/radioStreet/one-plus-buds.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include resM((
+    right: -45px,
+  ));
+  @include resD((
+    left: 30px,
+  ));
+}
+
+.gift-bg-4-b2c {
+  @extend .gift-bg;
+  background: url(../../assets/radioStreet/gift-2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include resM((
+    right: -45px,
+  ));
+  @include resD((
+    left: 30px,
+  ));
+}
+
+.gift-bg-5-b2c {
+  @extend .gift-bg;
+  background: url(../../assets/radioStreet/add-on.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include resM((
+    right: -70px,
+  ));
+  @include resD((
+    // left: 30px,
+    top: -20px,
+    width: 101px* 3,
+    height: 101px * 3,
+    right: -20px
+  ));
+}
+
+.gift-card.active {
+  background: linear-gradient(270deg, #35E4E9 -8.62%, #00ADE6 109.2%);
+  .gift-card-number {
+    opacity: 1;
+    color: white;
+  }
+  .gift-bottom-text {
+    color: #fff;
+  }
+}
+
+
+.spy-card {
+  background: linear-gradient(90deg, #005773 20.31%, #016A8B 95.73%);
+  display: flex;
+  flex-direction: row;
+  @include resD((
+    width: unset,
+    min-width: 530px,
+    min-height: 242.29px,
+    border-radius: 24px,
+    margin-top: 56px,
+    margin-right: 60px,
+  )); 
+  @include resM((
+    width: 100%,
+    min-width: 100%,
+    min-height: 155px,
+    border-radius: 16px,
+    margin-top: 16px,
+    margin-right: 60px,
+  )); 
+}
+
+.spy-heading {
+  @include resD((
+    margin-bottom: 16px,
+  ));
+  @include resD((
+    margin-bottom: unset,
+  ));
+}
+
+.spy-card-head {
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  @include resD((
+    font-size: 24px,
+    margin-left: 35px,
+    margin-top: unset
+  ));
+  @include resM((
+    font-size: 14px,
+    margin-left: 16px,
+    margin-top: 22px,
+    max-width: 109px
+  ));
+}
+
+.spy-card-text {
+  color: #FFFFFF;  
+  opacity: 0.45;
+  @include resD((
+    font-size: 24px,
+    margin-left: 35px,
+    margin-top: unset,
+    max-width: unset
+  ));
+  @include resM((
+    font-size: 14px,
+    margin-left: 16px,
+    margin-top: 24px,
+    max-width: 150px
+  ));
+}
+
+.spy-card-body {
+  display: flex;
+  flex-direction: column;
+  @include resD((
+    justify-content: space-between,
+    height: 143px,
+    margin-top: 50px,
+    margin-left: unset,
+  ));
+  @include resM((
+    justify-content: unset,
+    height: unset,
+    margin-top: unset,
+    margin-left: usnet,
+  ));
+}
+
+.spy-card-image {
+  min-width: 45%;
+  background-image: url(../../assets/radioStreet/spy.png);
+  background-size: 100%;
+  background-position-y: bottom;
+  background-position-x: left;
+  background-repeat: no-repeat;
+}
+.spy-card-image-languages {
+  min-width: 45%;
+  background-image: url(../../assets/radioStreet/spyLanguages.png);
+  background-size: 80%;
+  background-position-y: 50%;
+  background-position-x: 30%;
+  background-repeat: no-repeat;
+}
+.spy-card-image-binary {
+  min-width: 45%;
+  background-image: url(../../assets/radioStreet/spyBinary.png);
+  background-repeat: no-repeat;
+  @include resD((
+    background-size: 40%,
+    background-position-y: 50%,
+    background-position-x: 30%,
+  ));
+  @include resM((
+    background-size: 50%,
+    background-position-y: 40%,
+    background-position-x: 30%,
+  ))
+}
+.spy-card-image-activity {
+  min-width: 45%;
+  background-image: url(../../assets/radioStreet/teamActivity.png);
+  background-size: 70%;
+  background-position-y: 50%;
+  background-position-x: 30%;
+  background-repeat: no-repeat;
+}
+.why-join-container {
+  @include resD((
+    width: 1737px,
+    height: 650.62px,
+    margin-top: 80px,
+    border-radius: 24px,
+    padding-top: 60px,
+    padding-left: unset,
+    padding-right: unset,
+    display: flex,
+    flex-direction: column,
+    align-items: center
+  ));
+  @include resM((
+    width: 100%,
+    height: 670px,
+    margin-top: 37px,
+    border-radius: 16px,
+    padding-top: 27px,
+    padding-left: 16px,
+    padding-right: 16px,
+    display: flex,
+    flex-direction: column,
+    align-items: center
+  ));
+  box-sizing: border-box;
+  background-image: url(../../assets/radioStreet/why-join-bg.png);
+}
+
+.why-join-title {
+  font-family: Nunito;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  @include resD((
+    font-size: 40px,
+    width: unset,
+    margin-bottom: unset
+  ));
+  @include resM((
+    font-size: 20px,
+    width: 269px,
+    margin-bottom: 36px
+  ));
+  }
+  
+.why-join-card {
+  background-image: url(../../assets/radioStreet/why-join-card-bg.png);
+  border: 1px solid rgba(219, 219, 219, 0.4);
+  @include resD((
+    width: 486.95px,
+    height: 331.22px,
+    border-radius: 24px,
+    margin-left: 90px,
+    margin-top: 56px,
+    margin-bottom: 36px
+  ));
+  @include resM((
+    width: 100%,
+    height: 160px,
+    border-radius: 16px,
+    margin-left:unset,
+    margin-top:unset,
+    margin-bottom: 12px
+  ));
+  &:first-child {
+    margin-left: 0px
+  }
+}
+
+.gift-icon {
+  @include resD((
+    width: 60px,
+    height: 60px,
+    margin-top: 51px,
+    margin-left: 38px,
+  ));
+  @include resM((
+    width: 20px,
+    height: 20px,
+    margin-top: 33px,
+    margin-left: 23px,
+  ));
+}
+.binary-icon {
+  @include resD((
+    width: 60px,
+    height: 60px,
+    margin-top: 51px,
+    margin-left: 38px,
+  ));
+  @include resM((
+    width: 20px,
+    height: 20px,
+    margin-top: 33px,
+    margin-left: 23px,
+  ));
+}
+.certificate-icon {
+  @include resD((
+    width: 60px,
+    height: 60px,
+    margin-top: 51px,
+    margin-left: 38px,
+  ));
+  @include resM((
+    width: 20px,
+    height: 20px,
+    margin-top: 33px,
+    margin-left: 23px,
+  ));
+}
+
+.join-desc {
+  font-weight: 600;
+  @include resD((
+    font-size: 25px,
+    margin-top: 50px,
+    margin-left: 38px,
+    width: 386px
+  ));
+  @include resM((
+    font-size: 14px,
+    margin-top: 10px,
+    margin-left: 23px,
+    width: 231px
+  ));
+  color: #FFFFFF;
+}
+
+.footer-container {
+  background: rgba(#DCDCDC, 0.24);
+  @include resD((
+    height: 121px,
+    padding: 40px 32px,
+    margin-top: 50px,
+    flex-direction: row,
+  ));
+  @include resM((
+    height: 277px,
+    padding: 40px 32px,
+    margin-top: 30px,
+    flex-direction: column,
+  ));
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.footer-left-wrapper {
+  @include resD((
+    display: flex,
+    flex-direction: row,
+    align-items: center,
+  ));
+  @include resM((
+    display: flex,
+    flex-direction: column,
+    align-items: center,
+  ));
+}
+
+.tekie-logo {
+  background-image: url('../../assets/tekieLogoDrop.png');
+  background-size: contain;
+  // backgroun
+  @include resD((
+    width: 35px,
+    height: 40px,
+  ));
+  @include resM((
+    width: 35px,
+    height: 40px,
+  ));
+}
+
+.footer-text {
+  color: #504F4F; 
+  opacity: 0.7;
+  font-family: Nunito;
+  @include resD((
+    font-size: 20px, 
+    margin-left: 24px,
+    width: unset,
+    text-align: left,
+    margin-top: unset
+  ));
+  @include resM((
+    font-size: 14px, 
+    margin-left: 24px,
+    width: 215px,
+    text-align: center,
+    margin-top: 14px
+  ));
+}
+
+.sep {
+  width: 1px;
+  background:  #504F4F;
+  @include resD((
+    font-size: 24px,
+    margin-left: 32px,
+    margin-right: 32px,
+    height: 32px
+  ));
+  opacity: 0.4;
+}
+
+.link {
+  color: #504F4F;
+  opacity: 0.7;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  @include resD((
+    font-size: 20px,
+  ))
+}
+
+.duration-clock {
+  color: white;
+  @include resD((
+    width: 30px,
+    height: 30px,
+    margin-right: 5px
+  ));
+  @include resM((
+    width: 20px,
+    height: 20px,
+    margin-right: 5px
+  ));
+  g {
+    @include resD((
+      opacity: 0.4,
+    ));
+    @include resM((
+      opacity: 1,
+    ));
+  }
+}
+
+.event-clock {
+  color: white;
+  @include resD((
+    width: 30px,
+    height: 30px,
+    margin-right: 5px
+  ));
+  @include resM((
+    width: 20px,
+    height: 20px,
+    margin-right: 5px
+  ));
+  g {
+    @include resD((
+      opacity: 0.4,
+    ));
+    @include resM((
+      opacity: 1,
+    ));
+  }
+}
+
+.calendar-icon {
+  color: white;
+  @include resD((
+    width: 30px,
+    height: 30px,
+    margin-right: 5px
+  ));
+  @include resM((
+    width: 20px,
+    height: 20px,
+    margin-right: 5px
+  ));
+  g {
+    @include resD((
+      opacity: 0.4,
+    ));
+    @include resM((
+      opacity: 1,
+    ));
+  }
+}
+
+.description {
+  color: white;
+  @include resD((
+    font-size: 22px,
+    margin-bottom: 26px
+  ));
+  span {
+    font-weight: bold;
+  }
+}
+
+.event-details-text {
+  @include resM((
+    font-size: 16px,
+    font-weight: 700
+  ));
+}
+
+.hero-column-wrapper {
+  color: white;
+  .row {
+    @include resD((
+      margin-bottom: 20px
+    ));
+    @include resM((
+      margin-bottom: 18px
+    ));
+    svg {
+      @include resD((
+        margin-right: 16px
+      ));
+      @include resM((
+        margin-right: 10px
+      ));
+    }
+  }
+}

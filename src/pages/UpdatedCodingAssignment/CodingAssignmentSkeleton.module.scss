@@ -1,0 +1,32 @@
+@import 'src/scss/size.scss';
+
+.cardLayout{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: hs(50px);
+    position: relative;
+    z-index: 20;
+    margin-left: hs(60px);
+}
+
+.card{
+  width: hs(1300px);
+  border-radius: 4px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+}
+
+.topCard {
+  height: hs(80px);
+}
+
+.middleCard {
+  margin-top: hs(30px);
+  height: hs(110px);
+}
+
+.lastCard {
+  margin-top: hs(30px);
+  height: hs(400px);
+}

@@ -1,0 +1,89 @@
+@import 'src/scss/size.scss';
+
+.title {
+  font-size: hs(24px);
+  color: #504f4f;
+  font-weight: bold;
+  margin-bottom: hs(43px);
+}
+
+.container {
+  width: hs(704px);
+  display: flex;
+  flex-direction: row;
+  padding-bottom: hs(65px);
+  margin-bottom: hs(35px);
+  border-bottom: hs(0.5px) solid rgba(#BFBFBF, 1);
+}
+
+.containerNoMargin {
+  padding-bottom: hs(0px);
+  margin-bottom: hs(0px);
+  border-bottom: none;
+}
+
+.body {
+  flex: 1;
+  height: 100%;
+  // background-color: red;
+}
+
+.suggestions {
+  width: hs(204px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.needWork {
+  width: hs(166.9px);
+  height: hs(44.1px);
+  border-radius: hs(22px);
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: hs(22px);
+  font-weight: bold;
+  line-height: 1.38;
+  color: #504f4f;
+  margin-bottom: hs(13px);
+}
+
+.dropsRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.drop {
+  width: hs(49px);
+  height: hs(55.7px);
+  margin-left: hs(7px);
+  margin-bottom: hs(11px);
+}
+
+.card {
+  width: hs(204.7px);
+  cursor: pointer;
+  height: hs(91.3px);
+  margin-top: hs(24.1px);
+  box-shadow: 0 hs(3px) hs(6px) 0 rgba(0, 0, 0, 0.16);
+  border-radius: hs(3px);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatIconContainer {
+  width: hs(113.8px);
+  height: hs(74.4px);
+}
+
+.playButtonContainer {
+  width: hs(75px);
+  height: hs(75px);
+  background: url('../../../../assets/playButton.png');
+  background-size: contain;
+}

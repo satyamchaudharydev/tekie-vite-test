@@ -1,0 +1,161 @@
+@import "src/scss/size.scss";
+
+.card_Layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+   
+   
+   
+    margin-top: hs(40px);
+    width: 1900px;
+}
+
+
+.card_op_1{
+  display: block;
+    @include resSm((
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16),
+        background-color: #ffffff,
+        height: 350px,
+        width: 300px,
+        margin-left: 5px,
+        border-radius: 20px,
+      ));
+      @include resD((
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16),
+        background-color: #ffffff,
+        height: 440px,
+        width: 420px,
+        margin-left: 20px,
+        border-radius: 20px,
+        margin-top:50px,
+      ))
+  }
+.card_op_2{
+  display: block;
+    @include resSm((
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16),
+        background-color: #ffffff,
+        height: 350px,
+        width: 300px,
+        margin-left: 20px,
+        border-radius: 20px,
+      ));
+      @include resD((
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16),
+        background-color: #ffffff,
+        height: 440px,
+        width: 420px,
+        margin-left: 20px,
+        border-radius: 20px,
+        margin-top:50px,
+      ))
+  }
+.card_op_3{
+  display: block;
+    @include resSm((
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16),
+        background-color: #ffffff,
+        height: 350px,
+        width: 300px,
+        margin-left: 20px,
+        border-radius: 20px,
+      ));
+      @include resD((
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16),
+        background-color: #ffffff,
+        height: 440px,
+        width: 420px,
+        margin-left: 20px,
+        border-radius: 20px,
+        margin-top:50px,
+      ))
+  }
+.card_op_4{
+  display: block;
+    @include resSm((
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16),
+        background-color: #ffffff,
+        height: 350px,
+        width: 300px,
+        margin-left: 20px,
+        border-radius: 20px,
+      ));
+      @include resD((
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16),
+        background-color: #ffffff,
+        height: 440px,
+        width: 420px,
+        border-radius: 20px,
+        margin-top:50px,
+      ))
+  }
+
+
+.mbCard {
+    width: 95vw;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+}
+
+.top_Card {
+    height: hs(800px);
+}
+
+.middleCard {
+    margin-top: hs(30px);
+    height: hs(110px);
+}
+
+.lastCard {
+    margin-top: hs(30px);
+    height: hs(300px);
+}
+.mbTopCard {
+    height: hs(200px);
+}
+
+.mbMiddleCard {
+    margin-top: hs(60px);
+    height: hs(300px);
+}
+
+.mbLastCard {
+    margin-top: hs(60px);
+    height: hs(800px);
+}
+
+.tag_op_1{
+  @include resSm((
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16),
+      background-color: #ffffff,
+      height: 20px,
+      width: 40px,
+      margin-left: 8px,
+      border-radius: 20px,
+    ));
+    @include resD((
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16),
+      background-color: #ffffff,
+      height: 50px,
+      width: 130px,
+      margin-left: 40px,
+      border-radius: 30px,
+     
+    ))
+}
+.category_op_1{
+  @extend .tag_op_1;
+  @include resSm((
+    height: 30px,
+    width: 70px,
+  
+  ));
+  @include resD((
+  
+    height: 50px,
+    width: 200px,
+   
+  ))
+}

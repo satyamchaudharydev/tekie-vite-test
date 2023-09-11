@@ -1,0 +1,32 @@
+@import "src/scss/size.scss";
+@import "src/scss/Inter.scss";
+@import "src/scss/theme/colors.scss";
+@import "../../../variables/variables.scss";
+@import "../../../mixins/_mixins.scss";
+
+.homepageContainer{
+    box-sizing: border-box;
+    min-height: 100%;
+    @include resD1280((
+        padding-bottom: 72px,
+        padding-top: 20px,
+    ));
+}
+.timetableCalendarLoaderBackdrop{
+    position: absolute;
+	left: 0px;
+	top: 0px;
+    background-color: #fff;
+	height: 100%;
+	width: 100%;
+	z-index: 99;
+    & span{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        width: 100%;
+        font-family: 'Inter';
+        text-align: center;
+        transform: translate(-50%, -50%);
+      }
+}

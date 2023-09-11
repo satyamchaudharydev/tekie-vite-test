@@ -1,0 +1,212 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/theme/constants.scss";
+
+
+.container {
+  @include resD(
+    (
+      height: 680px,
+      width: 1022px,
+    )
+  );
+  @media (max-width: $mb-breakpoint) {
+    width: 92%;
+  }
+}
+.loginImage{
+  display: block;
+}
+.firstContent {
+  position: relative;
+  box-sizing: border-box;
+  flex-basis: 50%;
+  height: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+  @include hide-element($mb-breakpoint);
+  @include resD(
+    (
+      border-radius: 24px 0px 0px 24px,
+    )
+  );
+}
+
+.imageContainer {
+  height: 100%;
+  width: 100%;
+
+}
+
+.teacherBgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+.gilroy {
+  font-family: "Gilroy";
+  font-style: normal;
+
+  @include resD(
+    (
+      font-weight: 800,
+      font-size: 36px,
+      line-height: 140%,
+      margin-top: unset,
+
+      letter-spacing: -0.02em,
+    )
+  );
+  @include resM(
+    (
+      font-weight: 800,
+      font-size: 20px,
+      line-height: 140%,
+      margin-top: 20px,
+      letter-spacing: -0.02em,
+    )
+  );
+  @include hide-element($mb-breakpoint)
+}
+
+.welcomeText {
+  position: absolute;
+  color: #ffffff;
+
+  @include resD(
+    (
+      top: 40px,
+      left: 40px,
+    )
+  );
+}
+
+.secondContent {
+  flex-basis: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  @include resD(
+    (
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12),
+      border-radius: 0px 24px 24px 0px,
+      padding: 40px 48px,
+    )
+  );
+  @include resM(
+    (
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12),
+      border-radius: 12px,
+      padding: 20px,
+    ),
+    
+  );
+
+  @media (max-width: $mb-breakpoint) {
+    flex-basis: 100%;
+    gap: 10px;
+  }
+}
+
+.form {
+  @include resD(
+    (
+      margin-top: 56px,
+    )
+  );
+
+  @media (max-width: $mb-breakpoint) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.inputs {
+  @include resD(
+    (
+      margin-bottom: 78px,
+    )
+  );
+}
+
+.input {
+  font-weight: 700;
+  color: $emperor;
+  @include resD(
+    (
+      padding: 12px 24px !important,
+      line-height: 25px,
+    )
+  );
+  @include resM(
+    (
+      padding: 10px 20px !important,
+      line-height: 25px,
+    )
+  );
+}
+
+.label {
+  color: #858585;
+}
+
+.forgotPassword {
+  float: right;
+  padding: 0;
+
+  div span {
+    font-weight: 600;
+    color: $deep-purple;
+  }
+
+  @include resD(
+    (
+      margin-top: 12px,
+      margin-bottom: 56px,
+    )
+  );
+  @include hide-element($mb-breakpoint)
+}
+
+.resetFormContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.backToLoginButtonContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: fit-content;
+  button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    color: #858585;
+    @include resD((
+      font-size: 18px,
+      line-height: 25px,
+      letter-spacing: -0.02em,
+    ));
+  }
+}
+
+.linkSentHeading {
+  display: flex;
+  align-items: center;
+  @include resD((
+    gap: 16px,
+  ));
+}
+.heading{
+  @include hide-element($mb-breakpoint)
+}

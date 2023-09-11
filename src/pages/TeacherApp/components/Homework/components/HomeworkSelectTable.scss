@@ -1,0 +1,148 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.search_bar {
+    @include resD(
+        (
+            display: flex,
+            align-items: center,
+            justify-content: space-between,
+            width: 300px,
+            height: 45px,
+            background-color: #ffffff,
+            border: 2px solid #eeeeee,
+            box-sizing: border-box,
+            border-radius: 12px,
+            padding: 5px 10px,
+            margin-top: 10px,
+        )
+    );
+    @include resSm(());
+}
+
+.input_search_tag:focus {
+    outline: none;
+    border: none;
+}
+
+.input_search_tag {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: normal,
+            font-size: 16px,
+            line-height: 20px,
+            color: #9e9e9e,
+            border: none,
+            width: 100%,
+            padding: 4px,
+        )
+    );
+    @include resSm(());
+}
+.filter_sort_container {
+    @include resD(
+        (
+            display: flex,
+            align-items: flex-start,
+            justify-content: space-between,
+        )
+    );
+    @include resSm(());
+}
+.homework_table {
+    box-sizing: border-box;
+    @include resD(
+        (
+            width: 100%,
+            background: #ffffff,
+            border-radius: 24px,
+            margin-left: 0px,
+            padding: 40px 30px,
+        )
+    );
+    @include resSm(());
+}
+.empty_session_handle {
+    @include resD(
+        (
+            width: 100%,
+            background: #ffffff,
+            border-radius: 16px,
+            margin-left: 0,
+            padding: 40px 30px,
+            display: flex,
+            flex-direction: column,
+            justify-content: center,
+            align-items: center,
+            margin-bottom: 30px,
+        )
+    );
+    @include resSm(());
+}
+.empty_session_handle span {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 500,
+            font-size: 24px,
+            line-height: 120%,
+            align-items: center,
+            color: #6d6d6d,
+        )
+    );
+    @include resSm(());
+}
+.heading_homework__title {
+    @include resD(
+        (
+            font-family: Inter,
+            font-style: normal,
+            font-weight: 600,
+            font-size: 26px,
+            line-height: 24px,
+            color: #000000,
+        )
+    );
+    @include resSm(());
+}
+.search_icon_class {
+    @include resD(
+        (
+            width: 20px,
+            height: 20px,
+        )
+    );
+    @include resSm(
+        (
+            width: 20px,
+            height: 20px,
+        )
+    );
+}
+.search_and_sort_container {
+    @include resD(
+        (
+            display: flex,
+            align-items: flex-start,
+            justify-content: space-between,
+            margin-top: 15px,
+            height: 60px,
+            position: relative,
+            z-index: 1,
+        )
+    );
+    @include resSm(
+        (
+            display: flex,
+            align-items: flex-start,
+            justify-content: space-between,
+            margin-top: 15px,
+            height: 60px,
+            position: relative,
+            z-index: 1,
+        )
+    );
+}

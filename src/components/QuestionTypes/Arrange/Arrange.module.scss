@@ -1,0 +1,175 @@
+@import 'src/scss/size.scss';
+
+.arrangeContainer{
+  display: block;
+  @include resD((
+    width: hs(884px),
+  ));
+  @include resSm((
+    width: 100%,
+  ))
+}
+.questionStatementUpdated{
+  min-height: auto !important;
+}
+.questionStatement{
+  min-height: hs(78px);
+  width: 100%;
+  object-fit: contain;
+  font-family: Nunito;
+  font-size: hs(24px);
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+  }
+
+.inputCode{
+  height: 'auto';
+  border-radius: hs(3px);
+  background-color: #013d4e;
+  margin-bottom: 12px;
+  margin-right: 0;
+  margin-left: 0;
+  padding-top: hs(12px);
+  padding-bottom: hs(12px);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.reArrangeWrapper {
+  display: flex;
+  margin-top: 32px;
+  background: #005773;
+  mix-blend-mode: normal;
+  border-radius: 30px; 
+  background-image: url('../../../assets/quizWrapperBg.svg');
+  background-position: top;
+  background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+
+  & > ul {
+    padding: 32px 30px 20px 20px !important;
+    box-sizing: border-box;
+  }
+
+  @include resD((
+    border-radius: 35px,
+    flex-direction: row,
+  ));
+  @include resM((
+    border-radius: 0px,
+    flex-direction: column,
+  ));
+
+  & .yourAnswerContainer {
+    @include resD((
+      background-image: none,
+      background-color: unset,
+    ));
+    @include resM((
+      background-image: url('https://dsd4auyo4ifts.cloudfront.net/python/correctAnsB.svg'),
+      background-position: top,
+      background-repeat: no-repeat,
+      background-color: #013d50,
+    ));
+  }
+
+  .yourAnswerContainer {
+    flex: 1 1 50%;
+    padding: 28px 20px 20px 20px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-weight: 600;
+    color: #FFFFFF;
+    @include resD((
+      font-size: 18px,
+    ));
+    @include resM((
+      font-size: 18px,
+    ));
+    &:nth-child(2) {
+      @include resD((
+        border-left: 2px solid #DDD,
+        background-color: rgba(0, 137, 157, 0.3),
+        background-image: none,
+      ));
+      @include resM((
+        border-left: none,
+        background-color: #005772,
+        background-image: url('https://dsd4auyo4ifts.cloudfront.net/python/yourAnsB.svg')
+      ));
+    }
+  }
+
+  & > div > ul {
+    width: 100%;
+    margin: 0;
+    margin-top: 12px;
+
+    & > div {
+      padding-left: 0;
+    }
+  }
+}
+
+.noBg {
+  margin-top: 0;
+  background: none;
+  border-radius: 0px; 
+  background-image: none;
+  & > ul {
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+  & > div > ul > div {
+    padding-left: 0 !important;
+  }
+}
+
+.sortableHelper {
+  z-index: 9999 !important;
+}
+
+.minPadding {
+  & > ul {
+    padding: 12px 18px 12px 4px !important
+  }
+}
+
+
+/* mobile */
+.mbArrangeContainer{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.mbQuestionStatement {
+  min-height: 100%;
+  width: 100%;
+  object-fit: contain;
+  font-family: Nunito;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #504f4f;
+  font-size: 16px;
+  pre {
+    min-height: fit-content !important;
+  }
+}
+.noMargin{
+  margin-top: 0;
+  & pre{
+    margin-top: 0 !important;
+  }
+}

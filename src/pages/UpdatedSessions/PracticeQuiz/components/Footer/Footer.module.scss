@@ -1,0 +1,72 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/constants.scss';
+
+.footerContainer{
+  height: hs(92px);
+  // box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - #{hs($sideNavWidth)});
+  right: 0;
+  left: hs($sideNavWidth);
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+.footerContainerForTeacherApp{
+  position: absolute;
+  bottom: 0;
+  left: unset;
+  width: calc(100% - #{hs($sideNavWidth)});
+  right: 0;
+}
+.footerBtnSeparator{
+  margin: hs(18px);
+}
+
+.helpBtn{
+  width: hs(174.1px);
+  cursor: pointer;
+  height: hs(51.9px);
+  object-fit: contain;
+  border-radius: hs(32px);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #34e4ea;
+  color: #34e4ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Nunito;
+  font-size: hs(28px);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.checkBtn{
+  width: hs(174.1px);
+  height: hs(51.9px);
+  object-fit: contain;
+  border-radius: hs(32px);
+  cursor: pointer;
+  background-color: #e9e9ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Nunito;
+  font-size: hs(28px);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}

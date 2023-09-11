@@ -1,0 +1,81 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.popup-component-popUpContainer {
+  position: absolute;
+  width: calc(100vw - 5px);
+  display: flex;
+  top: 0;
+}
+
+.popup-component-popUpBackground {
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(3, 3, 3, 0.6);
+  overflow: auto;
+  position: fixed;
+}
+
+.popup-component-paymentPopUpBackground {
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  @include resM((
+    background-color: rgba(3, 3, 3, 0.6),
+    overflow-y: auto,
+    overflow-x: hidden,
+    ));
+  @include resD((
+    background-color: rgba(3, 3, 3, 0.6),
+    overflow: auto,
+    position: fixed,
+  ));
+}
+
+.popup-component-childrenContainer {
+  display: flex;
+}
+
+.popup-component-leftAlignedChildren {
+  justify-content: flex-start !important;
+}
+
+.popup-component-fadeIn {
+  animation: fadeInAnimation ease 0.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  display: flex;
+  justify-content: center;
+  visibility: visible;
+}
+
+.popup-component-fadeOut {
+  animation: fadeOutAnimation ease 0.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  visibility: hidden;
+}
+
+.popup-component-modal {
+  width: hs(100px);
+  height: hs(100px);
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

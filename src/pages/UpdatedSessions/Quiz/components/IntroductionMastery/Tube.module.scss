@@ -1,0 +1,76 @@
+@import 'src/scss/size.scss';
+
+.masteryTubeContainer {
+  margin-top: hs(7.5px) !important;
+  display: flex;
+  flex-direction: row;
+}
+
+.masteryTubeBase {
+  @include resD((
+    width: hs(131.8px) !important,
+    height: hs(45.7px) !important,
+  ));
+  @include resM((
+    width: fit-content !important,
+    height: hs(45.7px) !important,
+  ));
+}
+
+.masteryTubeLeft {
+  @extend .masteryTubeBase;
+  @include resD((
+    margin-right: hs(5.8px) !important,
+    border-radius: hs(48px) 0 0  hs(48px) !important,
+  ));
+  @include resM((
+    margin-right: 20.8px !important,
+    border-radius: 48px 0 0  48px !important,
+  ));
+}
+
+.masteryTubeRight {
+  @extend .masteryTubeBase;
+  @include resD((
+    border-radius: 0 hs(48px) hs(48px) 0 !important,
+  ));
+  @include resM((
+    border-radius: 0px 48px 48px 0px !important,
+  ));
+}
+
+.masteryTubeCenter {
+  @extend .masteryTubeBase;
+  @include resD((
+    margin-right: hs(5.8px) !important,
+  ));
+  @include resM((
+    margin-right: 20.8px !important,
+  ));
+}
+
+.absoulteShine {
+  position: absolute;
+  z-index: 1;
+  @include resD((
+    left: hs(15px) !important,
+    top: hs(7px) !important,
+    width: hs(377.9px) !important,
+    border-radius: hs(100px) !important,
+    height: hs(17.5px) !important,
+  ));
+  @include resM((
+    left: 15px !important,
+    top: 7px !important,
+    width: 40px !important,
+    border-radius: 100px !important,
+    height: 17.5px !important,
+  ));
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: hs(-196.5px) !important;
+}

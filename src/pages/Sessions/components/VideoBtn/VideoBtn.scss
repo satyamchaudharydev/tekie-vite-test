@@ -1,0 +1,48 @@
+@import 'src/scss/size.scss';
+
+
+.videoBtn {
+  box-shadow: 0px 0px 30px rgba(53, 201, 233, 0.5), inset 0px 0px 8px #34E4EA;
+  cursor: pointer;
+    @include resD((
+      width: 70px,
+      height: 70px,
+      background: #00ADE6,
+      // box-shadow: 0px 0px 30px rgba(53, 201, 233, 0.5), inset 0px 0px 8px #34E4EA,
+      border-radius: 50%,
+      position: relative,
+      right: 20px,
+      top: 0
+    ));
+    @include resSm((
+      width: 48px,
+      height: 48px,
+      background: #00ADE6,
+      // box-shadow: 0px 0px 30px rgba(53, 201, 233, 0.5), inset 0px 0px 8px #34E4EA,
+      border-radius: 50%,
+      position: relative,
+      right: 20px,
+      top: -3px
+    ));
+  }
+  
+  .videoBtn>svg {
+    @include resD((
+      width: 40px,
+      position: relative,
+      top: 3px
+    ));
+    @include resSm((
+      width: 30px,
+      position: relative,
+      top: 2px
+    ));
+  }
+  
+  .videoBtnDisabled {
+    background: #DCDCDC;
+    box-shadow: unset;
+    & >svg path{
+      stroke: #A8A7A7;
+    }
+  }

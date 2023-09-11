@@ -1,0 +1,336 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+
+.container {
+  width: 100%;
+  height: $height-without-navbar;
+  background-color: white;
+  @include flex-center;
+  box-sizing: border-box;
+  padding: hs(20px) hs(20px);
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(#edf1f0, 0.5);
+  box-shadow: -1px 3px 3px 0 rgba(0, 0, 0, 0.16);
+}
+.frameMobile{
+  width: 100%;
+  height: 100%;
+  color: #ec5959;
+  background-color: rgba(#edf1f0, 0.5);
+}
+
+.frameBG {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('../../assets/chatBG.png');
+  background-size: contain;
+  opacity: 0.1;
+}
+.frameBGMobile{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('../../assets/chatBG.png');
+  background-size: contain;
+  opacity: 0.1;
+}
+
+.tapContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.terminalPlayButton {
+  background-image: url('../../assets/playButton.png');
+  background-size: 120%;
+  background-position-x: 43%;
+  background-position-y: 44%;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    opacity: 0.5;
+  }
+  @include resD((
+    width: hs(60px),
+    height: hs(60px)
+  ));
+  @include resM((
+    width: hs(160px),
+    height: hs(160px)
+  ));
+}
+
+.buttonsContainer {
+  pointer-events: auto;
+  background: url('../../assets/cloud.png');
+  background-size: contain;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  @include resD((
+    width: hs(620.5px),
+    height: hs(147.2px),
+  ));
+  @include resM((
+    width: hs(1220.5px),
+    height: hs(847.2px),
+  ));
+}
+.leftDrop {
+  margin-bottom: hs(11.5px);
+  margin-right: hs(17.3px);
+  background-image: url('../../assets/dropLeft.png');
+  background-size: contain;
+  @include resD((
+    width: hs(127.3px),
+    height: hs(119.8px)
+  ));
+  @include resM((
+    width: hs(327.3px),
+    height: hs(319.8px)
+  ));
+}
+
+.rightDrop {
+  margin-left: hs(17px);
+  margin-bottom: hs(10.4px);
+  background-image: url('../../assets/dropRight.png');
+  background-size: contain;
+  @include resD((
+    width: hs(119px),
+    height: hs(112px)
+  ));
+  @include resM((
+    width: hs(327.3px),
+    height: hs(319.8px)
+  ));
+}
+
+.tapButton {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  @include resD((
+    width: hs(196.6px),
+    height: hs(130.6px)
+  ));
+  @include resM((
+    width: hs(427.3px),
+    height: hs(419.8px)
+  ));
+}
+
+.body {
+  padding: hs(40px);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: overlay;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    max-width: hs(15px);
+    height: 0px;
+    display: flex;
+  };
+  &::-webkit-scrollbar-thumb {
+    background-color: #34e4ea;
+    border-radius: hs(10px);
+  };
+  @include resD((
+    height: 100%,
+    padding-top: 10px
+  ));
+  @include resM((
+    height: 90%,
+    padding-top: 60px
+  ));
+}
+
+.emptyElement {
+  width: 100%;
+  height: hs(300px);
+}
+
+.text {
+  background-color: white;
+  font-weight: 500;
+  align-self: flex-start,;
+  color: #222222;
+  line-height: 1.33;
+  @include resD((
+    padding: hs(14px) hs(23px),
+    max-width: hs(500px),
+    margin-bottom: hs(10px),
+    border-radius: hs(20px) hs(20px) hs(20px) hs(0px),
+    font-size: hs(24px),
+    margin-top: 0px
+  ));
+  @include resM((
+    padding: hs(34px) hs(43px),
+    max-width: hs(1200px),
+    margin-bottom: hs(20px),
+    //border: 1px solid #DCDCDC,
+    border-radius: 2px 20px 20px 10px,
+    font-size: 16px,
+    margin-top:10px
+  ));
+}
+.textRight {
+  font-weight: 500;
+  background-color: #00ade5;
+  color: white;
+  align-self: flex-end;
+  line-height: 1.33;
+  @include resD((
+    padding: hs(14px) hs(23px),
+    max-width: hs(500px),
+    margin-bottom: hs(10px),
+    border-radius: hs(20px) hs(20px) hs(0px) hs(20px),
+    font-size: hs(24px),
+    margin-right: 0px,
+    margin-top:0px
+  ));
+  @include resM((
+  padding: hs(34px) hs(43px),
+    max-width: hs(1200px),
+    margin-bottom: hs(20px),
+    border-radius: 20px 2px 20px 10px,
+    font-size: 16px,
+    margin-right: 10px,
+    margin-top:10px
+  ));
+}
+.inlineBlock {
+  display: inline-block;
+}
+
+
+.imageContainer {
+  display: inline-block;
+  background-color: white;
+  margin-bottom: hs(10px);
+  padding: hs(12px);
+  border-radius: hs(5px) hs(5px) hs(5px) hs(0px);
+}
+.imageContainerleft {
+  @extend .imageContainer;
+  background-color: white;
+}
+.imageContainerright {
+  @extend .imageContainer;
+  background-color: #00ade5;
+  align-self: flex-end;
+  border-radius: hs(5px) hs(5px) hs(0px) hs(5px);
+}
+.image {
+  display: block;
+  width: hs(344.5px);
+  height: hs(344.5px);
+}
+
+.messageleft {
+  align-self: flex-start;
+  margin-bottom: hs(10px);
+}
+
+.messageright {
+  align-self: flex-end;
+  margin-bottom: hs(10px);
+}
+
+.terminalInputContainer {
+  padding: hs(32px) hs(40px);
+  background-color: #002f3e;
+  color: white;
+  font-family: Monaco, monospace;
+  @include resD((
+    font-size: hs(24px),
+    width: hs(705px)
+  ));
+  @include resM((
+    font-size: hs(12px),
+    width: hs(1205px)
+  ));
+}
+.terminalOutputContainer {
+  width: 100%;
+  background-color: #052732;
+  color: white;
+  padding: hs(15px) 0;
+  font-family: Monaco;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: hs(43px);
+  padding-right: hs(43px);
+  box-sizing: border-box;
+  @include resD((
+    font-size: hs(24px),
+    // height: 70px,
+    width: 100%,
+    // width: hs(705px)
+  ));
+  @include resM((
+    font-size: hs(54px),
+    height: fit-content
+  ));
+}
+.terminalOutputText {
+  width: hs(630px);
+}
+.image {
+  display: block;
+  width: hs(344.5px);
+  height: hs(344.5px);
+}
+
+.tapButtonBody {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include flex-center;
+  font-size: hs(29px);
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.block{
+  font-weight: 700;
+  background-color: rgba(26, 201, 232, 0.16);
+  display: inline-block;
+}
+
+.contentLoader {
+  width: 300px;
+  height: 40px;
+  background-color: white;
+}

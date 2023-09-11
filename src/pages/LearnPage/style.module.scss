@@ -1,0 +1,322 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/constants.scss';
+
+button{
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+.learnVideoPage{
+    position: relative;
+    h1,h2,h3,p{
+        margin: 0;
+    }
+   
+    * {
+        box-sizing: border-box;
+    }
+}
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    @include resD((
+        height: 187px,
+        padding-block: 22px,
+        padding-inline: 80px,
+    ));
+   
+}
+.banner__content{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-size: contain;
+    
+    h1{
+       @include resD((
+        font-size: 40px,
+       ));
+    }
+    img{
+        max-width: 100%;
+        display: block;
+    }
+}
+.filterDropdown{
+    @include resD((
+        width: 232px,
+        height: 52px,
+    ))
+}
+.chapterTitle{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    font-weight: 700;
+    @include resD((
+        font-size: 28px,
+        color: #504F4F,
+    ));
+    &::after{
+        width: 100%;
+        content: '';
+        position: relative;
+        background: #000;
+        opacity: 0.2;
+
+        height: 1px;
+    }
+}
+.chapterVideoContainer{
+    display: flex;
+    flex-direction: column;
+
+    @include resD((
+        gap: 48px,
+        padding-inline: 65px,
+        padding-block: 45px,
+    ))
+}
+.chapterVideo{
+    display: flex;
+    flex-direction: column;
+    @include resD((
+        gap: 24px,
+    ));
+}
+.chapterVideoCard{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    color: #fff;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    background-position: 50% 50%;
+    background-size: cover;
+    @include resD((
+        height: 213px,
+        border-radius: 8px,
+        padding: 18px,
+
+    ));
+    &.loading{
+        &::before{
+            background: unset;
+        }
+        &:hover::before{
+            background: unset;
+        }
+        
+    }
+
+    &:hover{
+        .videoCardDesc{
+            opacity: 1;
+            top: 32%;
+            transition: all 0.2s ease;
+        }
+        .videoCardTitle{
+            opacity: 1;
+            transition: opacity 0.2s ease;
+        }
+        .bottomInfoTitle{
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .videoPlayIcon{
+            transform: scale(1.2);
+        }
+    }
+}
+.videoCardSkeleton{
+    @include resD((
+        height: 213px,
+        margin-top: 80px,
+        margin-left: 60px,
+
+        // border-radius: 8px,
+        // padding: 18px,
+
+    ));
+}
+.chapterVideoCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    transition: background 0.3s;
+    z-index: 1;
+  }
+  
+.chapterVideoCard:hover::before {
+    background: linear-gradient(180deg, #002B39 0%, rgba(0, 43, 57, 0.62) 100%);
+}
+.videoCardDesc{
+    z-index: 9;
+}
+.videoCardTitle{
+    z-index: 9;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.bottomInfoTitle, .videoCardTitle{
+    @include resD((
+        font-size: 24px,
+
+    )); 
+}
+.bottomInfoTitle{
+    opacity: 1;
+    transition: opacity 0.4s ease;
+
+}
+.videoCardDesc{
+    // opacity: 0;
+    position: absolute;
+    @include resD((
+        font-size: 18px,
+    ));
+    top: 100%;
+    // transform: translateY(100%);
+    transition: all 0.2s ease-in-out;
+}
+
+.chapterVideoList{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    @include resD((
+        gap: 16px,
+    ));
+}
+.bottomInfo{
+    margin-top: auto;
+    display: flex;
+    z-index: 9;
+    justify-content: space-between;
+}
+.videoCardThumbnail{
+    position: absolute;
+    inset: 0;
+    
+    & img{
+        object-fit: cover;
+        display: block;
+        height: 100%;
+        max-width: 100%; 
+        z-index: -1;
+    }
+}
+.videoCarouselContainer{
+    // display: grid;
+    // grid-template-columns: auto 1fr auto;
+    position: fixed;
+    // width: calc(100vw - #{hs($outSideNavWidth)});
+    // height: calc(100vh - #{hs($topNavBarHeight)});
+    inset: 0;
+    // margin-top: hs($topNavBarHeight);
+    // margin-left: hs($outSideNavWidth);
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999999;
+    @include resD((
+        padding-top: 80px,
+        padding-inline: 74px,
+
+    ));
+    box-sizing: border-box;
+}
+.videoCarouselItemContainer{
+    position: relative;
+}
+.videoCarouselItem{
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    inset: 0;
+    color: #fff;
+    background-color:#00171F;
+    height: 100%;
+    width: 100%;
+}
+.videoCarousel{
+    display: grid;
+    height: 100%;
+    grid-template-columns: auto 1fr auto;
+
+}
+.video{
+    background-color: #fff;
+}
+.videoFooter{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include resD((
+        gap: 10px,
+        padding-block: 22px,
+        padding-inline: 22px,
+    ));
+}
+.videoTitle{
+    @include resD((
+        font-size: 32px,
+    ))
+}
+.videoDesc{
+    position: absolute;
+    @include resD((
+        font-size: 24px,
+    ))
+}
+.bookmark{
+    display: flex;
+    align-items: center;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    
+    font-weight: 700;
+    color: #fff;
+    @include resD((
+        font-size: 20px,
+        gap: 15px,
+        padding: 16px 20px 16px 24px,
+    ));
+    svg{
+        @include resD((
+            width: 22px,
+        ))
+    }
+    &.active{
+        svg{
+            fill: #fff;
+        }
+    }
+}
+.videoCarouselButton{
+    @include resD((
+        width: 90px,
+        height: 90px,
+    ));
+    color: #fff;
+    margin-block: auto;
+}
+.videoPlayIcon{
+    transform: scale(1);
+    transition: 0.3s ease;
+    @include resD((
+        width: 40px,
+        height: 40px,
+    ))
+}

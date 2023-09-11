@@ -1,0 +1,27 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.SwitchButtonContainer{
+    position: relative;
+    @include resD((
+        width: 40px,    
+        height: 20px,
+        border-radius: 80px
+    ));
+    background: #F2F2F7;
+    box-shadow: inset 0px 2.40855px 16.057px rgba(0, 0, 0, 0.25);
+}
+.toggleSwitch{
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 0px 3.2114px rgba(0, 0, 0, 0.35);
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    transition: all 0.35s ease-in-out;
+    @include resD((
+        width: 15px,    
+        height: 15px,
+        border-radius: 50%
+    ));
+}

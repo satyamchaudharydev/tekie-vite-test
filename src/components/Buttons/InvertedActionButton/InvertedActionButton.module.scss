@@ -1,0 +1,105 @@
+@import 'src/scss/size.scss';
+
+.buttonContainer {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  pointer-events:auto;
+  cursor: pointer;
+  background-image: linear-gradient(to top, #00ade6, #34e4ea);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  @include resD((
+    border-radius: 28px,
+    height: 54px,
+  ));
+  @include resM((
+    border-radius: 28px,
+    height: 44px,
+  ));
+}
+
+.buttonText {
+  user-select: none;
+  font-weight: bold;
+  color: #fff;
+  @include resD((
+    font-size: 23px,
+    margin-left: 12px,
+    margin-right: 24px,
+    ));
+  @include resM((
+    font-size: 15px,
+    margin-left: 10px,
+    margin-right: 12px,
+  ));
+}
+
+.smallButtonContainer {
+  height: hs(36px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border-radius: hs(28px);
+}
+
+.active {
+  background-color: #cbf7fc;
+  color: #2c505f
+}
+
+.disabled {
+  background-color: #d1d1d1 !important;
+  background-image: none !important;
+  cursor: default !important;
+  color: #fff;
+}
+
+.smallButtonText {
+  height: 100%;
+  font-size: hs(16px);
+  font-weight: bold;
+  margin: 0 hs(19px) 0 hs(19px);
+  display: flex;
+  align-items: center;
+}
+
+.centerAlignedButtonText {
+  font-size: hs(23px) !important;
+  margin-right: hs(24px) !important;
+}
+
+.iconCircle {
+  background-color: white;
+  box-shadow: 0 3px 6px 0 #34e4ea;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD((
+    width: 40px,
+    height: 40px,
+    margin-left: 7px,
+  ));
+  @include resM((
+    width: 27px,
+    height: 27px,
+    margin-left: 7px,
+  ));
+}
+
+.hoverButtonContainer {
+  &:hover {
+    cursor: default !important;
+    opacity: 0.93;
+  }
+}
+
+.defaultHover {
+  cursor: default !important;
+}
+
+.minTextWidth {
+  min-width: hs(50px);
+}

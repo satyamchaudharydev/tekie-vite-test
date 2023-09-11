@@ -1,0 +1,39 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+.questionComponentcontainer {
+  isolation: isolate;
+  background: #ffffff;
+  flex: 1;
+  @include resD1280(
+    (
+      padding: 16px,
+      border-radius: 8px,
+    )
+  );
+}
+
+.questionComponentcontainerCorrect {
+  background-image: url('../../../../DetailedReport/correctAnswerContainer.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.questionComponentcontainerStudent {
+  background-image: url('../../../../DetailedReport/studentAnswerContainer.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.questionComponentcontainerBox {
+  background: #ffffff;
+  box-shadow: 0px 2.16275px 2.16275px rgba(0, 0, 0, 0.25);
+  width: fit-content;
+  @include resD1280(
+    (
+      border-radius: 5.40687px,
+      padding: 31px 21px,
+    )
+  );
+}

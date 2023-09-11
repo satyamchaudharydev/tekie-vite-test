@@ -1,0 +1,60 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/theme/colors.scss';
+.eventCarousel-arrow{
+    display: flex;
+        position: absolute;
+        top: 33%;
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        background: white;
+        border-radius: 50%;
+        cursor: pointer;
+        align-items: center;
+        transition: transform ease-in 0.1s;
+        &:hover {
+          transform: scale(1.1);
+        }
+        img {
+          &:focus {
+            outline: 0;
+          }
+        }
+}
+
+.eventCarousel-dots{
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.eventCarousel-dotsData{
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eventCarousel-slide{
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.eventCarousel-SliderContent{
+    height: 100%;
+    display: flex;
+}
+.eventCarousel-container{
+    position: relative;
+    @include resD((
+      height: 522px
+    ));
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+}

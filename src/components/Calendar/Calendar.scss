@@ -1,0 +1,230 @@
+@import 'src/scss/size.scss';
+
+.react-calendar__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-calendar__navigation__label {
+  height: hs(36px);
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  border: none;
+  padding: 0 !important;
+  font-size: hs(25px);
+  color: #6b7897;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button, .react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
+  display: none;
+}
+
+.react-calendar__navigation__arrow.react-calendar__navigation__next-button {
+  height: hs(48px) !important;
+  width: hs(54px) !important;
+  background-color: #e7e8ec;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: hs(30px);
+  color: #8c96ab;
+  opacity: 0.5;
+  padding: 0;
+  margin-right: hs(30px);
+}
+
+.react-calendar__navigation__arrow.react-calendar__navigation__prev-button {
+  height: hs(48px) !important;
+  width: hs(54px) !important;
+  background-color: #e7e8ec;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: hs(30px);
+  color: #8c96ab;
+  opacity: 0.5;
+  padding: 0;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  color: #7c86a2;
+  outline: none !important;
+}
+
+.react-calendar__month-view__weekdays {
+  margin-top: hs(42px);
+  color: #7c86a2;
+  font-size: hs(16px);
+  position: relative;
+  left: hs(-10px)
+}
+
+.react-calendar__month-view__days {
+  margin-top: hs(36px);
+  position: relative;
+  left: hs(-26px);
+}
+
+abbr, .react-calendar__tile.react-calendar__decade-view__years__year{
+  text-decoration: none;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-calendar__tile{
+  &:hover {
+    cursor: default;
+    background: #7ed5fc;
+    border-radius: 50%;
+    color: #fff;
+    opacity: 0.6;
+  }
+  &:focus {
+    cursor: default;
+    background: #7ed5fc;
+    border-radius: 50%;
+    color: #fff;
+    opacity: 1 !important;
+  }
+}
+
+
+.react-calendar__tile--active {
+  background: #7ed5fc;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  opacity: 1 !important;
+}
+
+.react-calendar__tile:disabled {
+  color: white;
+  border: none;
+  background-color: #f8f8f8 !important;
+  border-radius: 50%;
+  color: #6b7897;
+  &:hover {
+    cursor: default !important;
+  }
+}
+
+.react-calendar__tile {
+  height: hs(60px);
+  border-radius: 50%;
+  border: 1px solid #7ed5fc;
+}
+
+@media screen {
+  .react-calendar {
+    max-width: hs(600px);
+    height: 100%;
+    margin-top: hs(60px);
+    margin-left: hs(42px);
+    padding: 0 !important;
+  }
+
+  .react-calendar__tile {
+    height: hs(45px);
+    max-width: hs(45px) !important;
+    margin-left: hs(38px);
+    margin-bottom: hs(16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: hs(16px);
+    padding: 0;
+  }
+
+  .react-calendar__tile.react-calendar__month-view__days__day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: hs(47px) !important;
+    min-height: hs(47px) !important;
+    position: relative;
+  }
+
+  .react-calendar__month-view__weekdays__weekday {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: hs(18px) !important;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+  .react-calendar__tile {
+    font-size: hs(18px);
+    margin-left: hs(44px);
+    margin-bottom: hs(22px);
+  }
+
+  .react-calendar__tile.react-calendar__month-view__days__day {
+    min-width: hs(48px) !important;
+    min-height: hs(48px) !important;
+  }
+
+  .react-calendar {
+    max-width: hs(660px);
+  }
+
+  .react-calendar__month-view__weekdays__weekday {
+    font-size: hs(24px) !important;
+  }
+}
+
+.react-calendar__tile.react-calendar__year-view__months__month {
+  font-size: hs(16px);
+  min-width: hs(120px);
+  margin-top: hs(40px);
+}
+
+.react-calendar__year-view__months {
+  margin-top: hs(24px);
+}
+
+.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--neighboringMonth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-calendar__decade-view__years {
+  margin-top: hs(42px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.react-calendar__century-view__decades {
+  margin-top: hs(24px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 hs(42px) hs(42px) 0;
+}
+
+.react-calendar__tile.react-calendar__century-view__decades__decade {
+  min-width: hs(200px) !important;
+  min-height: hs(80px) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: hs(16px);
+  margin: 0 !important;
+}

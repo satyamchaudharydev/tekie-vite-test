@@ -1,0 +1,92 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+
+.booking-confirmation-modal-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.50);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+  pointer-events: none;
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.booking-confirmation-modal-wrapper {
+  @include resD((
+    width: 653px,
+    height: 350px,
+    border-radius: 24px,
+  ));
+  @include resM((
+    width: 95%,
+    height: 280px,
+    border-radius: 24px,
+  ));
+  background-color: #FFFFFF;
+  background-image: url('../../../Signup/signupBG.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-confirmation-congrats {
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #504F4F;
+  font-weight: bold;
+  @include resD((
+    font-size: 30px,
+    margin-top: 40px
+  ));
+  @include resM((
+    font-size: 24px,
+    margin-top: 20px
+  ));
+}
+
+.booking-confirmation-spy-text {
+  color: #504F4F;
+  opacity: 0.7;
+  line-height: 140%;
+  text-align: center;
+  @include resD((
+    font-size: 20px,
+    margin-top: 12px,
+    margin-bottom: 20px,
+    padding-left: 15px,
+    padding-right: 15px,
+  ));
+  @include resM((
+    font-size: 16px,
+    margin-top: 10px,
+    margin-bottom: 20px,
+    padding-left: 15px,
+    padding-right: 15px,
+  ));
+}
+
+.booking-confirmation-radiostreet-checkmark {
+  @include resD((
+    width: 80px,
+    height: 80px,
+    margin-top: 56px
+  ));
+  @include resM((
+    width: 80px,
+    height: 80px,
+    margin-top: 28px
+  ));
+}

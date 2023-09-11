@@ -1,0 +1,588 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/lato.scss';
+@import 'src/scss/Inter.scss';
+@import 'src/scss/theme.scss';
+
+.header-container {
+  @include resM((
+    display: none,
+  ));
+  @include resD((
+    padding-bottom: 10px,
+    padding-top: 10px,
+    display: flex,
+  ));
+  left: 0;
+  width: 100vw;
+  top: 0;
+  z-index: 9999;
+  min-height: 45px;
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+}
+
+.header-noPaddingContainer {
+  @include resM((
+    padding-top: 0px,
+  ));
+  @include resD((
+    padding-top: 0px,
+  ))
+}
+
+.header-bannerSpecialContainer {
+  background-image: url('../../../../assets/usBanner.webp');
+  background-size: cover;
+  position: relative;
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+    width: 100%,
+    height: 50px !important,
+    margin-bottom: 24px,
+    background-size: cover,
+  ));
+  @include resM((
+    width: 100%,
+    height: 50px,
+    background-size: cover,
+    margin-bottom: 10px,
+  ));
+  // @media (max-width: 1200px) and (min-width: header-950px) {
+  //   background-size: hsm(1000px) !important;
+  //   height: hsm(25px) !important;
+  // }
+}
+
+.header-limitedText {
+  position: absolute;
+  font-family: Lato;
+  color: white;
+  @include resD((
+    font-size: 17px,
+    right: 37px,
+    top: 25px,
+    opacity: 1
+  ));
+  @include resM((
+    font-size: 12px,
+    right: 20px,
+    top: 30px,
+    opacity: 0.7
+  ));
+}
+
+.header-bannerText {
+  font-family: Lato;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  @include resD((
+    font-size: 29px,
+    top: unset,
+    font-weight: 300,
+  ));
+  @include resM((
+    font-size: 16px,
+    font-weight: 400,
+    top: -5px
+  ));
+}
+
+.header-gradientText {
+  background-image: linear-gradient(180deg, #C6F8FF, #03BEE7);
+  background-size: 100%;
+  font-weight: 900;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.header-lottieAbsoluteContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include resD((
+    width: 100%,
+    height: 40px,
+  ));
+  @include resM((
+    width: 100%,
+    height: 15px,
+  ));
+}
+.header-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include resM((
+    padding: 0px 20px,
+  ));
+  @include resD((
+    padding: 0px 32px
+  ));
+
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.header-schoolLogo {
+  @include resM((
+    width: 48px,
+    height: 48px,
+    position: relative,
+  ));
+  @include resD((
+    width: 60px,
+    height: 60px,
+  ));
+  background-size: contain;
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.header-school-name {
+  @extend .Inter-regular;
+  font-weight: 600;
+  font-size: 20px;
+  color: #212121;
+  margin: 0px 12px
+}
+
+.header-login {
+  @extend .lato-light;
+  display: flex;
+  @include resM((
+    display: none,
+    padding: 10px,
+    letter-spacing: 0.75px,
+    font-size: 16px,
+  ));
+  @include resD((
+    display: flex,
+    padding: 14px 28px,
+    font-size: 24px,
+    letter-spacing: 0.5px
+  ));
+  border-radius: 100px;
+  background-color: transparent;
+  justify-content: center;
+  text-transform: unset;
+  align-items: center;
+  text-align: left;
+  font-weight: 500;
+  border: 1.5px solid #00ADE5;
+  color: #00ADE5;
+  opacity: 0.8;
+  cursor: pointer;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  &:hover {
+    opacity: 1;
+    box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
+  }
+}
+
+.header-hamburgerContainer {
+  @include resM((
+    width: 26.6px,
+    height: 17.8px,
+    display: flex,
+    flex-direction: column,
+    justify-content: space-between
+  ));
+  & > div {
+    width: 100%;
+    background-color: #21d0e9;
+    @include resM((
+      min-height: 2.9px,
+    ));
+  }
+  @include resD((
+    display: none,
+    // position: absolute,
+  ));
+}
+
+.header-navLinkDesktop {
+  @extend .lato-light;
+  font-weight: 400;
+  opacity: 0.8;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+  @include resD((
+    display: block,
+    font-size: 24px,
+    letter-spacing: 0.5px,
+    margin-right: 34px,
+    padding: 13px 0px,
+  ));
+  @include resM((
+    display: none,
+  ));
+}
+
+.header-bookFreeSession {
+  display: flex;
+  align-items: center;
+  @extend .lato-light;
+  font-weight: 600;
+  opacity: 0.9;
+  @include resM((
+    padding: 14px,
+    letter-spacing: 0.3px,
+    font-size: 16px,
+    justify-content: center,
+    margin-right: 0px,
+  ));
+  @include resD((
+    padding: $s-s $s-m,
+    justify-content: space-between,
+    font-size: 24px,
+    letter-spacing: 0.5px,
+    margin-right: 28px,
+    position: relative,
+  ));
+  border-radius: 100px;
+  background: $primary-gradient;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  &:hover {
+    opacity: 1;
+    box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
+  }
+  &::before {
+    content: 'Get in Touch'
+  }
+}
+
+.header-mobile-login-btn {
+  @extend .lato-light;
+  font-weight: 600;
+  opacity: 0.9;
+  @include resM((
+    padding: 10px 12px,
+    border-radius: 2px,
+    letter-spacing: 0.0px,
+    font-size: 16px,
+    margin-right: 0px,
+  ));
+  @include resD((
+    padding: 13px 18px,
+    border-radius: 5px,
+    font-size: 24px,
+    letter-spacing: 0.5px,
+    margin-right: 68px,
+    position: relative,
+    padding-top: 15px
+  ));
+  background-color: #022f3f;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: #2abac1;
+  cursor: pointer;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  &:hover {
+    opacity: 1;
+    box-shadow: 2px 10px 15px 0 rgba(0, 0, 0, 0.16);
+  }
+}
+
+.calender-icon {
+  display: block;
+  margin-left: $s-xs;
+  background-image: url("../../../../assets/calendarOutline.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include resD((
+    width: 26px,
+    height: 26px,
+  ));
+  @include resM((
+    width: 18px,
+    height: 18px,
+  ));
+}
+
+.header-buyNowButton {
+  @include resM((
+    margin-left: 0,
+  ));
+  @include resD((
+    margin-left: 68px,
+  ));
+}
+
+.header-headerButton {
+  font-weight: 600;
+  opacity: 0.8;
+  transition: all .2s;
+  @include resM((
+    display: none,
+    padding: 10px,
+    border-radius: 2px,
+    letter-spacing: 0.0px,
+    font-size: 16px,
+    margin-right: 14px,
+  ));
+  @include resD((
+    padding: 13px 18px,
+    border-radius: 5px,
+    font-size: 25px,
+    letter-spacing: 0.5px,
+    margin-right: 68px,
+    display: flex,
+    margin-top: 5px,
+  ));
+  font-weight: bold;
+  justify-content: center;
+  color: #C4C4C4;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover, .header-active {
+    color: #00ADE5;
+  }
+}
+
+.header-active {
+  color: #00ADE5;
+}
+
+.header-text {
+    font-style: normal;
+    flex-direction: row; 
+    justify-content: flex-end; 
+    width: 100%; 
+    font-family: Nunito;
+    font-weight: bold;
+    line-height: 41px;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    color: #00ADE5;
+    align-items: center;
+    opacity: 0.8;
+    
+    @include resD((
+      font-size: hs(28px),
+      display: flex
+    ));
+    @include resM((
+      font-size: 16px,
+      display: none
+    ));
+}
+
+.header-overlayNavItem {
+  @extend .lato-light;
+  @include resM((
+    padding: 28px 20px,
+    flex: 1,
+    cursor: pointer,
+    min-width: 100%,
+    box-sizing: border-box,
+    border-bottom: solid 1px #2abac1,
+    color: #ffffff,
+    letter-spacing: 0.75px,
+    font-size: 18px,
+  ));
+}
+
+.header-bookFreeSessionMobile {
+  @include resM((
+    font-size: 18px,
+    margin-right: 20px,
+    margin-left: 20px,
+    font-weight: 600,
+    letter-spacing: 0.7px,
+    margin-top: 16px,
+    margin-bottom: 0px
+  ));
+}
+
+.header-contentNone {
+  @include resM((
+    padding: 10px 20px,
+    height: 30px
+  ));
+  &:before {
+    content: '' !important
+  }
+}
+.header-overlayNavbar {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: row;
+  @include resD((
+    display: none,
+  ));
+}
+
+.header-overlayNavbarHide {
+  left: -100vw;
+  background-color: transparent;
+}
+
+.header-overlayNavbarWrapper {
+  height: 100%;
+  transform: translate3d(0,0,0);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(179deg, #00171f 55%, #002835 100%);
+  @include resM((
+    width: 232px,
+    padding-top: 20px
+  ));
+}
+
+.header-overlayNavbarWrapperHide {
+  transform: translate3d(-100%,0,0);
+}
+
+.header-overlayNavbarClose {
+  height: 100%;
+  flex: 1;
+}
+
+.header-profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0px 0px;
+
+  & .header-profile-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: top center !important;
+    background-color: $white;
+    border: 3px solid #47A9B0;
+  }
+
+  & .header-profile-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: $white;
+    padding-top: 8px;
+  }
+}
+
+.header-loggedIn-username {
+  @extend .Inter-regular;  
+  font-weight: normal;
+  color: #212121;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: capitalize;
+  display: flex;
+  user-select: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-user-profilePic {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-image: url(../../../../assets/SchoolDashboard/drop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    margin-right: 8px;
+}
+
+.header-profile-dropDownArrow {
+  width: 12px;
+  height: 12px;
+  margin: 3px 4px 0px;
+  background-image: url('../../../../assets/dropdownArrow.svg');
+  background-color: #212121;
+  -webkit-mask-image: url('../../../../assets/dropdownArrow.svg');
+  mask-image: url('../../../../assets/dropdownArrow.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  transition: -webkit-transform .1s;
+  transition: transform .1s;
+  transition: transform .1s,-webkit-transform .1s;
+  transform: rotate(0deg) rotate(0deg);;
+}
+
+.header-profile-sub-menu {
+  position: absolute;
+  width: max-content;
+  min-width: 150px;
+  background-color: #fff;
+  border-radius: 6px;
+  transform-origin: 50% -30px;
+  border-radius: 6px;
+  z-index: 9999;
+  box-shadow: 0 4px 6px -0.4px rgba(0, 0, 0, 0.15);
+
+  .header-profile-sub-menu-item {
+    @extend .Inter-regular;
+    font-weight: normal;
+    margin: 0;
+    cursor: pointer;
+    padding: 14px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include resD((
+      font-size: 18px,
+    ));
+
+    &:nth-child(1) {
+      border-radius: 6px 6px 0px 0px;
+    }
+
+    &:nth-last-child(1) {
+      border-radius: 0px 0px 6px 6px;
+    }
+
+    &:hover {
+      background: #e6f7fd;
+      color: $deep-sky-blue;
+    }
+
+    .header-profile-sub-menu-icon {
+      width: 14px;
+      height: 14px;
+      position: relative !important;
+      margin-right: 12px;
+    }
+  }
+}

@@ -1,0 +1,168 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.only-phone {
+    @include resD(
+        (
+            display: none,
+        )
+    );
+    @include resSm(
+        (
+            display: block,
+        )
+    );
+}
+
+.videoDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    @include resD(
+        (
+            width: 1562px,
+            height: 503.94px,
+            border-radius: 24px,
+            margin-left: auto,
+            margin-right: auto,
+            margin-top: 90px,
+        )
+    );
+    @include resM(
+        (
+            width: 100%,
+            height: 216px,
+            border-radius: 0px,
+        )
+    );
+}
+
+.screenShot {
+    width: 70%;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    @include resD(
+        (
+            height: 503.94px,
+            border-radius: 24px,
+        )
+    );
+    @include resM(
+        (
+            height: 215px,
+            border-radius: 0px,
+        )
+    );
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(90deg, #252528 45.69%, rgba(40, 40, 40, 0) 71.95%, rgba(40, 40, 40, 0.6) 96.83%);
+    z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    @include resD(
+        (
+            border-radius: 24px,
+            box-shadow: unset,
+        )
+    );
+    @include resM(
+        (
+            border-radius: 0px,
+        )
+    );
+}
+.videoDiv-heading {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+
+    @include resD(
+        (
+            font-size: 40px,
+            padding-left: 77px,
+            padding-top: 72px,
+        )
+    );
+    @include resM(
+        (
+            font-size: 16px,
+            padding-top:24px,
+            padding-left:16px
+        )
+    );
+}
+
+.videoDiv-content {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 140%;
+    color: #ffffff;
+
+    @include resD(
+        (
+            font-size: 23px,
+            width: 540px,
+            padding-top: 32px,
+            padding-left: 77px,
+        )
+    );
+    @include resM(
+        (
+            font-size: 14px,
+            padding-top: 10px,
+            font-family: Nunito,
+            font-style: normal,
+            font-weight: normal,
+            line-height: 140%,
+            color: #ffffff,
+            padding-left:16px
+        )
+    );
+}
+.video-play {
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    right: 25%;
+    @include resD(
+        (
+            width: 100px,
+            height: 100px,
+        )
+    );
+    @include resM(
+        (
+            width: 50px,
+            height: 50px,
+        )
+    );
+}
+
+#mhgymw0f4D4 {
+    @include resD(
+        (
+            width: 80% !important,
+            height: 80% !important,
+            left: 10% !important,
+            top: 10% !important,
+        )
+    );
+    @include resM(
+        (
+            width: 100% !important,
+            height: 40% !important,
+            left: 0% !important,
+            top: 10% !important,
+        )
+    );
+}

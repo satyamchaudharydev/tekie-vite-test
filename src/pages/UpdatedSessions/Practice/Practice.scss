@@ -1,0 +1,1924 @@
+@import "src/scss/size.scss";
+$top-container: #f8f8f8;
+$top-container-header: #012a38;
+$dark-black: #232323;
+$top-container-desc: #504f4f;
+$neutral-clr: #504f4f;
+$neutral-clr-light: #a8a7a7;
+$deep-sky-blue: #005773;
+$link-clr: #00ade6;
+$red: #d34b57;
+.practice-mainContainer {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  @include resD(
+    (
+      padding: 20px 90px,
+    )
+  );
+  @include resM(
+    (
+      padding: 20px 0px 50px 0px,
+    )
+  );
+}
+
+.upload-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 12px;
+  isolation: isolate;
+  @include resD(
+    (
+      min-height: 298px,
+    )
+  );
+  p {
+    margin: 0;
+  }
+}
+
+.practice-top-upload-container {
+  z-index: 99;
+  box-sizing: border-box;
+  height: fit-content;
+  @include resD(
+    (
+      width: 578px,
+      // height: 298px,
+        padding: 12px,
+    )
+  );
+  @include resM(
+    (
+      width: 578px,
+      // height: 298px,
+        padding: 12px,
+    )
+  );
+}
+.practice-top-upload {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%2300577366' stroke-width='4' stroke-dasharray='6%2c 15' stroke-dashoffset='3' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 8px;
+  transition: background-image 0.2s ease;
+  @include resD(
+    (
+      padding: 24px,
+      min-height: 298px,
+    )
+  );
+  // overflow: hidden;
+
+  &:hover,
+  &.practice-drag {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%2300577366' stroke-width='4' stroke-dasharray='3567%2c 15' stroke-dashoffset='3' stroke-linecap='square'/%3e%3c/svg%3e");
+    .practice-file-icon {
+      transform: translateY(-10px);
+    }
+    .practice-top-upload-type {
+      transform: translateY(-3px);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #fff;
+    transition: all 0.2s;
+  }
+  &:hover::before,
+  &.practice-drag::before {
+    background: linear-gradient(180deg, #ffffff 0%, #e6f7fd 100%);
+  }
+  & .practice-submit-link-input-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.6em;
+    border: 2px solid #dcf6ff;
+    align-items: center;
+    background-color: #fff;
+    @include resD(
+      (
+        margin-bottom: 14px,
+        border-radius: 8px,
+        padding-inline: 11px 16px,
+        width: 423px,
+        height: 50px,
+      )
+    );
+    @include resM(
+      (
+        border-radius: 8px,
+        padding-inline: 11px 16px,
+        width: 423px,
+        height: 50px,
+      )
+    );
+    .practice-submit-text {
+      color: $link-clr;
+      font-weight: bold;
+      @include resD(
+        (
+          font-size: 14px,
+        )
+      );
+      @include resM(
+        (
+          font-size: 14px,
+        )
+      );
+    }
+    .practice-send-icon {
+      @include resD(
+        (
+          width: 17px,
+          height: 17px,
+        )
+      );
+      @include resM(
+        (
+          width: 17px,
+          height: 17px,
+        )
+      );
+
+      color: #00ade6;
+      &.disabled {
+        color: #a8a7a7;
+      }
+    }
+    input {
+      font-family: inherit;
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      font-weight: 500;
+      color: $neutral-clr;
+      opacity: 0.9;
+      border: none;
+      @include resD(
+        (
+          font-size: 18px,
+        )
+      );
+      background-color: none;
+      outline: none;
+      &::placeholder {
+        opacity: 0.4;
+        @include resD(
+          (
+            font-size: 14px,
+          )
+        );
+        @include resM(
+          (
+            font-size: 14px,
+          )
+        );
+      }
+    }
+  }
+  .practice-top-upload-type {
+    transition: transform 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  & .practice-file-icon {
+    transition: transform 0.3s ease-out;
+    @include resD(
+      (
+        margin-top: 16px,
+        width: 135px,
+        height: 107px,
+      )
+    );
+    @include resM(
+      (
+        margin-top: 16px,
+        width: 135px,
+        height: 107px,
+      )
+    );
+  }
+  & .practice-file-logo {
+    transition: transform 0.3s ease-out;
+    @include resD(
+      (
+        margin-top: 16px,
+        height: 80px,
+      )
+    );
+    @include resM(
+      (
+        margin-top: 16px,
+        height: 80px,
+      )
+    );
+  }
+  & .practice-type-header {
+    margin: 0;
+    color: $neutral-clr;
+    font-weight: 700;
+    @include resD(
+      (
+        font-size: 20px,
+        margin-bottom: 4px,
+      )
+    );
+    @include resM(
+      (
+        font-size: 20px,
+        margin-bottom: 4px,
+      )
+    );
+  }
+  & .practice-top-upload-filesize {
+    margin: 0;
+    color: $neutral-clr-light;
+    font-weight: 500;
+    @include resD(
+      (
+        font-size: 16px,
+      )
+    );
+    @include resM(
+      (
+        font-size: 16px,
+      )
+    );
+  }
+  & .upload-link {
+    color: $link-clr;
+  }
+}
+// submission loadin
+.practice-file-preview-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.practice-file-preview-height {
+  @include resD(
+    (
+      padding: 12px,
+      border-radius: 8px,
+      height: 202px,
+    )
+  );
+  @include resM(
+    (
+      border-radius: 8px,
+      height: 202px,
+    )
+  );
+}
+.practice-file-preview {
+  box-sizing: border-box;
+  background-origin: content-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-color: $dark-black;
+  height: 100%;
+  border-radius: 5px;
+  @include resD(
+    (
+      height: 202px,
+    )
+  );
+  &.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &.default-thumbnail {
+    background-origin: unset;
+    background-size: cover;
+    background-position: center;
+  }
+  .practice-file-preview--remove-preview {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: $neutral-clr;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include resD(
+      (
+        padding: 5px,
+        top: 15px,
+        right: 15px,
+        border-radius: 4px,
+        width: 36px,
+        height: 36px,
+      )
+    );
+    @include resM(
+      (
+        padding: 5px,
+        top: 15px,
+        right: 15px,
+        border-radius: 4px,
+        width: 36px,
+        height: 36px,
+      )
+    );
+  }
+}
+.loading-status-top {
+  font-weight: 700;
+  color: $neutral-clr-light;
+  span {
+    color: $deep-sky-blue;
+  }
+  @include resD(
+    (
+      font-size: 20px,
+    )
+  );
+  @include resM(
+    (
+      font-size: 20px,
+    )
+  );
+}
+.practice-sub-default-thumbnail {
+  background-origin: unset;
+  background-size: cover;
+  // background-color: unset;
+  background-position: unset;
+}
+.practice-file-preview-loading-status {
+  margin-top: auto;
+  @include resD(
+    (
+      margin-top: 18px,
+    )
+  );
+}
+.loading-status-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.practice-file-upload--close-btn {
+  color: $neutral-clr;
+  svg {
+    @include resD(
+      (
+        width: 24px,
+        height: 24px,
+      )
+    );
+    @include resM(
+      (
+        width: 24px,
+        height: 24px,
+      )
+    );
+  }
+}
+.practice-file-upload-progress {
+  --bg: #d9f3fb;
+  --border: #98def5;
+  --progress: #27b9e8;
+  transition: all 0.2s ease;
+  position: relative;
+  background-color: var(--bg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  @include resD(
+    (
+      margin-top: 12px,
+      height: 8px,
+      border-radius: 40px,
+    )
+  );
+  @include resM(
+    (
+      margin-top: 12px,
+      height: 8px,
+      border-radius: 40px,
+    )
+  );
+  .practice-file-upload-progress-done {
+    transition: all 0.2s ease;
+
+    position: absolute;
+    inset: 0;
+    background: var(--progress);
+  }
+}
+// after submission
+.practice-submission-file-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include resD(
+    (
+      padding-inline-end: 16px,
+      margin-top: 18px,
+    )
+  );
+  .practice-submission-file-details--file-info {
+    color: $neutral-clr;
+    font-weight: 700;
+    @include resD(
+      (
+        font-size: 22px,
+      )
+    );
+    @include resM(
+      (
+        font-size: 22px,
+      )
+    );
+    span {
+      display: block;
+      font-weight: 600;
+      color: $neutral-clr-light;
+      @include resD(
+        (
+          font-size: 14px,
+          line-height: 22px,
+        )
+      );
+      @include resM(
+        (
+          font-size: 14px,
+        )
+      );
+    }
+  }
+  .practice-submission-file-details--file-info-evaluation {
+    color: $neutral-clr;
+    font-weight: 700;
+    @include resD(
+      (
+        font-size: 22px,
+      )
+    );
+    @include resM(
+      (
+        font-size: 22px,
+      )
+    );
+    span {
+      display: block;
+      font-weight: 600;
+      color: $neutral-clr-light;
+      @include resD(
+        (
+          font-size: 14px,
+        )
+      );
+      @include resM(
+        (
+          font-size: 14px,
+        )
+      );
+    }
+  }
+  .practice-submission-file-details--handles {
+    display: flex;
+    font-weight: 700;
+    @include resD(
+      (
+        gap: 10px,
+      )
+    );
+    @include resM(
+      (
+        gap: 10px,
+      )
+    );
+    .practice-submission-file-details--handles-edit {
+      cursor: pointer;
+      color: $neutral-clr-light;
+      @include resD(
+        (
+          font-size: 22px,
+        )
+      );
+      @include resM(
+        (
+          font-size: 22px,
+        )
+      );
+    }
+    .practice-submission-file-details--handles-view {
+      cursor: pointer;
+      color: $link-clr;
+      @include resD(
+        (
+          font-size: 22px,
+        )
+      );
+      @include resM(
+        (
+          font-size: 22px,
+        )
+      );
+    }
+  }
+}
+
+.practice-mainContainerTopPadding {
+  @include resD(
+    (
+      padding-top: 120px,
+    )
+  );
+  @include resM(
+    (
+      padding-top: 30px,
+    )
+  );
+}
+.next-button-container {
+  bottom: 0;
+  right: 0;
+  padding: 32px;
+
+  @include resD(
+    (
+      position: absolute,
+    )
+  );
+  @include resM(
+    (
+      position: relative,
+    )
+  );
+}
+
+.practice-details-container-override {
+  overflow: visible;
+  height: auto !important;
+}
+
+.practice-details-container {
+  overflow: hidden;
+  justify-self: center;
+  font-family: Nunito;
+  box-sizing: border-box;
+  width: 100%;
+  .practice-submission-top-container {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Nunito;
+    background: $top-container;
+    @include resD(
+      (
+        padding: 32px,
+        border-radius: 24px,
+      )
+    );
+    @include resM(
+      (
+        padding: 32px,
+      )
+    );
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    & .practice-top-flex-container {
+      width: 100%;
+
+      & .practice-top-image-container {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 150px;
+        min-width: 120px;
+        height: 150px;
+        background-color: rgba(196, 196, 196, 0.2);
+
+        @include resD(
+          (
+            border-radius: 18px,
+          )
+        );
+        @include resM(
+          (
+            border-radius: 8px,
+          )
+        );
+      }
+
+      & .practice-top-details-container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        .practice-top-details-heading {
+          font-weight: bold;
+          letter-spacing: -0.02em;
+          color: $top-container-header;
+          display: flex;
+          justify-content: space-between;
+          @include resD(
+            (
+              font-size: 32px,
+              padding-bottom: 8px,
+            )
+          );
+          @include resM(
+            (
+              font-size: 18px,
+            )
+          );
+        }
+        //
+
+        .practice-btn-image {
+          box-sizing: border-box;
+          @include resD(
+            (
+              padding: 5px,
+              width: 32px,
+              height: 32px,
+            )
+          );
+          @include resM(
+            (
+              padding: 5px,
+              width: 32px,
+              height: 32px,
+            )
+          );
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #fff;
+          border-radius: 50%;
+          & img {
+            width: 70%;
+          }
+        }
+        .practice-top-file-button {
+          margin-top: 9px;
+          background: linear-gradient(287.49deg, #00ade6 38.78%, #29c8fc 98.2%);
+          box-shadow: 0px 4px 0px #007fa9;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          gap: 1em;
+          width: fit-content;
+          color: #fff;
+          font-weight: bold;
+          @include resD(
+            (
+              padding: 22px 22px,
+            )
+          );
+        }
+        .practice-top-info {
+          display: flex;
+          flex-direction: column;
+        }
+        .practice-top-info > * {
+          margin: 0 !important;
+        }
+        .practice-top-info button {
+          margin-top: auto !important;
+          width: fit-content;
+          @include resD(
+            (
+              gap: 12px,
+              height: 66px,
+            )
+          );
+        }
+
+        // popup
+        .practice-file-max-modal {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          font-weight: 700;
+          width: 100%;
+          box-sizing: border-box;
+          height: 100%;
+          background-color: #fff;
+          background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%2300577366' stroke-width='4' stroke-dasharray='6%2c 15' stroke-dashoffset='3' stroke-linecap='square'/%3e%3c/svg%3e");
+          border-radius: 8px;
+          &.border {
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%2300577366' stroke-width='4' stroke-dasharray='3567%2c 15' stroke-dashoffset='3' stroke-linecap='square'/%3e%3c/svg%3e");
+          }
+          @include resD(
+            (
+              padding: 32px,
+            )
+          );
+          @include resM(
+            (
+              padding: 32px,
+            )
+          );
+
+          .practice-file-max-header {
+            color: $red;
+            @include resD(
+              (
+                font-size: 24px,
+              )
+            );
+            @include resM(
+              (
+                font-size: 24px,
+              )
+            );
+          }
+          .practice-file-max-desc {
+            font-weight: 400;
+
+            color: #282828;
+            width: 35ch;
+            @include resD(
+              (
+                margin-top: 14px,
+                line-height: 140%,
+                font-size: 20px,
+              )
+            );
+            @include resM(
+              (
+                margin-top: 14px,
+                font-size: 20px,
+              )
+            );
+            span {
+              color: $link-clr;
+            }
+          }
+          .practice-file-max-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .practice-file-popup-btns {
+              display: flex;
+              justify-content: space-between;
+              gap: 24px;
+              align-items: center;
+              @include resD(
+                (
+                  margin-top: 32px,
+                )
+              );
+            }
+          }
+        }
+        .file-preview-modal {
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          z-index: 999999;
+          inset: 0;
+          background-color: #000000c9;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img,
+          video {
+            max-width: 80%;
+            max-height: 80%;
+          }
+        }
+        .practice-uploading-loader {
+          & svg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          & svg {
+            width: hs(120px) !important;
+            height: hs(120px) !important;
+          }
+
+          &[data-size="small"] {
+            & svg {
+              width: hs(40px) !important;
+              height: hs(40px) !important;
+            }
+          }
+        }
+        //
+        .practice-top-details-difficulty-levels {
+          padding: 8px 0px 12px;
+          display: flex;
+          .practice-top-details-difficulty-icon-filled {
+            width: 30px;
+            height: 30px;
+            background-image: url(../../../assets/difficultyFilled.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            align-self: flex-start;
+          }
+          .practice-top-details-difficulty-icon-outline {
+            width: 30px;
+            height: 30px;
+            background-image: url(../../../assets/difficultyOutline.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            align-self: flex-start;
+          }
+        }
+        .practice-top-details-description {
+          font-weight: 500;
+          width: 100%;
+          color: $top-container-desc;
+          line-height: 38.4px;
+          @include resD(
+            (
+              font-size: 24px,
+              margin-top: 20px,
+            )
+          );
+          @include resM(
+            (
+              font-size: 16px,
+              margin-top: 8px,
+            )
+          );
+        }
+      }
+    }
+
+    & .practice-top-logo-container {
+      width: 100px;
+      height: 60px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      align-self: flex-start;
+    }
+  }
+
+  .practice-create-container {
+    width: 100%;
+    height: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+
+    & .practice-create-description {
+      font-weight: bold;
+      color: #504f4f;
+      padding: 12px 0px;
+
+      @include resD(
+        (
+          width: 80%,
+          font-size: 20px,
+        )
+      );
+      @include resM(
+        (
+          width: 100%,
+          font-size: 16px,
+        )
+      );
+    }
+    & .practice-create-description-list {
+      color: #504f4f;
+      font-weight: normal;
+
+      @include resD(
+        (
+          margin-top: 12px,
+          font-size: 20px,
+        )
+      );
+      @include resM(
+        (
+          margin-top: 8px,
+          font-size: 16px,
+        )
+      );
+    }
+  }
+}
+
+.practice-heading-text {
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #005773;
+
+  @include resD(
+    (
+      font-size: 28px,
+    )
+  );
+  @include resM(
+    (
+      font-size: 20px,
+    )
+  );
+}
+
+.practice-primary-btn {
+  margin: 12px auto 0px;
+  color: #fff;
+  border: 0px;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 20px;
+  background: conic-gradient(from -3.29deg at 100% -13%, #35e4e9 0deg, #00ade6 360deg);
+}
+
+.practice-secondary-btn {
+  width: fit-content;
+  font-family: Nunito;
+  font-weight: 600;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  background: transparent;
+  letter-spacing: 0.03em;
+  text-decoration: underline;
+  color: #00ade6;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+  transition: all 0.3s;
+  transform: scale(1);
+
+  @include resD(
+    (
+      font-size: 20px,
+      padding: 12px 48px,
+    )
+  );
+  @include resM(
+    (
+      font-size: 16px,
+      padding: 8px 28px,
+    )
+  );
+
+  &:active {
+    transition: all 0.3s;
+    transform: scale(0.93);
+  }
+}
+
+.practice-divider {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 0px;
+}
+
+.practice-submit-container {
+  width: 200px;
+  height: 250px;
+  position: relative;
+  border: 9px solid #61cceb;
+  border-radius: 30px;
+  background-color: #ededed;
+  margin: auto;
+  display: block;
+  overflow: hidden;
+
+  @include resD(
+    (
+      margin: 12px auto,
+    )
+  );
+  @include resM(
+    (
+      margin: 8px auto,
+    )
+  );
+}
+
+.practice-submit-container-new {
+  text-align: center;
+  line-height: 15px;
+  position: relative;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  margin: auto;
+  display: block;
+  overflow: hidden;
+
+  @include resD(
+    (
+      width: 60%,
+      margin: 12px auto,
+    )
+  );
+  @include resM(
+    (
+      width: 100%,
+      margin: 0px auto,
+    )
+  );
+}
+
+.practice-submitted-state-frame-new {
+  margin: auto;
+  margin-bottom: 15px;
+  @include resD(
+    (
+      width: 90%,
+    )
+  );
+  @include resM(
+    (
+      width: 90%,
+    )
+  );
+}
+
+.practice-submitted-state-new {
+  margin: auto;
+  height: 20vh;
+  margin-bottom: 15px;
+  background-image: url(../../../assets/submit-image.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #f1b0ff;
+  @include resD(
+    (
+      height: 21vh,
+      width: 80%,
+    )
+  );
+  @include resM(
+    (
+      height: 12vh,
+      width: 90%,
+    )
+  );
+}
+
+.practice-submitted-state {
+  background-image: url(../../../assets/memory-sidebar-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-color: #def1f3;
+}
+
+.practice-submit-circle-skeleton {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #fff;
+  margin: 16px 12px;
+  box-sizing: border-box;
+}
+.practice-submit-line-skeleton {
+  height: 12px;
+  background-color: #fff;
+  margin: 12px 12px;
+  box-sizing: border-box;
+}
+
+.practice-submit-input-container {
+  border: 2px solid #80d6f3;
+  border-radius: 5.53132px;
+  background: #ffffff;
+  box-sizing: border-box;
+  position: relative;
+  margin: 20px auto;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  @include resD(
+    (
+      width: 70%,
+    )
+  );
+  @include resM(
+    (
+      width: 90%,
+    )
+  );
+
+  .practice-submit-input {
+    font-family: Nunito;
+    color: #005773;
+    width: 100%;
+    height: 100%;
+    padding: 12px 8px;
+    border: none;
+    background: #fafafa;
+    border-radius: 5.53132px;
+    box-sizing: border-box;
+    outline: none;
+    flex: 1 1;
+  }
+
+  .practice-submit-icon {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    padding: 8px;
+    border: none;
+    background: #00ade6;
+    border-radius: 100%;
+    box-sizing: border-box;
+    outline: none;
+    fill: transparent;
+  }
+}
+
+.practice-submit-btn-container {
+  text-align: right;
+  border-top: 1px solid #cccccc;
+  padding: 14px;
+}
+
+.practice-submit-icon-new-btn {
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  border: 0px;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 20px;
+  background: conic-gradient(from -3.29deg at 100% -13%, #35e4e9 0deg, #00ade6 360deg);
+}
+
+.practice-submit-icon-new-btn-white {
+  cursor: pointer;
+  color: #00ade6;
+  font-weight: bold;
+  border: 0px;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.projectLink-edit-btn {
+  font-family: Nunito;
+  font-weight: 500;
+  display: flex;
+  white-space: nowrap;
+  place-items: center;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.projectLink-edit-Icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+  background: url(../../../assets/editIconOutline.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.practice-embed-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  background-color: rgba(0, 23, 31, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.modal-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.practice-creation-description {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  @include resD(
+    (
+      padding: 26px 18px,
+    )
+  );
+  @include resM(
+    (
+      padding: 6px,
+    )
+  );
+}
+
+.playIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  cursor: pointer;
+  height: 110px;
+  background: url(../../../assets/play-icon.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.practice-error-text {
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #005773;
+  display: grid;
+  place-items: center;
+
+  @include resD(
+    (
+      font-size: 28px,
+    )
+  );
+  @include resM(
+    (
+      font-size: 20px,
+    )
+  );
+}
+
+.practice-questionNumberContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 4.5%;
+  overflow: hidden;
+  padding: 16px 0px;
+  background: #e4f8f9;
+  box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.11);
+  z-index: 9;
+
+  &::before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: -22.5%;
+    left: -2.59%;
+    background: #8c61cb;
+    opacity: 0.6;
+    filter: blur(50px);
+  }
+  &::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: -2.23%;
+    top: -16.67%;
+    background: #01aa93;
+    opacity: 0.6;
+    filter: blur(50px);
+  }
+}
+
+.practice-indicatorContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  width: fit-content;
+}
+
+.circle {
+  border-radius: 50%;
+  object-fit: contain;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-family: Nunito;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.93;
+  letter-spacing: normal;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+
+  @include resD(
+    (
+      background-color: #00ade6,
+      color: #fff,
+    )
+  );
+  @include resM(
+    (
+      background-color: #e6f7fd,
+      color: #000,
+    )
+  );
+
+  @include resD(
+    (
+      width: hs(52px),
+      height: hs(52px),
+      font-size: hs(20px),
+      margin-right: 38px,
+    )
+  );
+  @include resM(
+    (
+      width: 45px,
+      height: 45px,
+      font-size: 18px,
+      margin-right: 18px,
+    )
+  );
+
+  &:nth-last-child(2) {
+    margin: 0;
+  }
+}
+
+.activeCircle {
+  color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  transition: all 0.3s;
+
+  @include resD(
+    (
+      background-color: "",
+    )
+  );
+  @include resM(
+    (
+      background-color: #00ade6,
+    )
+  );
+}
+
+.practice-inActiveProgressBar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: #dcdcdc;
+  width: 100%;
+  height: 4px;
+  z-index: 0;
+}
+
+.activeProgressBar {
+  background-color: #00ade6;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.activeBorder {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 100%;
+  padding: 2px;
+  transition: all 0.5s;
+  border: 2.9px dotted #00ade6 !important;
+}
+
+.unAttemptedCircle {
+  color: #282828;
+  background-color: #a8a7a7;
+  cursor: not-allowed;
+}
+
+.progress {
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #00ade6;
+  border-radius: 5.53px;
+  position: relative;
+  margin: 15px auto;
+  height: 30px;
+  width: 90%;
+}
+
+.progress-done {
+  background: linear-gradient(270deg, #35e4e9 -8.62%, #00ade6 109.2%);
+  border-radius: 5.53px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 1;
+  transition: 2s ease 0.3s;
+}
+
+.practice-divider {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 0px;
+}
+
+.practice-submit-clipboard-label {
+  color: #00ade6;
+  opacity: 0.8;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #fafafa;
+  padding: 0px 10px 0px 0px;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  border-radius: 0px 5.53132px 5.53132px 0px;
+  @include resD(
+    (
+      font-size: 20px,
+    )
+  );
+  @include resM(
+    (
+      font-size: 16px,
+    )
+  );
+
+  &:hover {
+    opacity: 1;
+  }
+}
+.practice-see-answer-button {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  color: #a8a7a7;
+  cursor: pointer;
+  @include resD(
+    (
+      font-size: 16px,
+      padding: 8px 18px,
+      border-radius: 20px,
+      border: 2.715px solid #a8a7a7,
+      letter-spacing: 1px,
+    )
+  );
+  width: fit-content;
+}
+.practice-see-answer-button-viewIcon {
+  @include resD(
+    (
+      height: 30px,
+      width: 30px,
+      margin-left: 12px,
+    )
+  );
+}
+
+.practice-see-answer-modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.58);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999991;
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+  pointer-events: auto;
+  visibility: hidden;
+  &.modal-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.practice-see-answer-modal-body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  @include resD(
+    (
+      width: 1000px,
+      max-width: 80%,
+      height: 95vh,
+      border-radius: 20px,
+    )
+  );
+}
+.practice-see-answer-modal-body-header {
+  background: linear-gradient(260.26deg, #e3ffe8 0%, #fafafa 47.95%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & span {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    color: #005773;
+    @include resD(
+      (
+        font-size: 24px,
+      )
+    );
+  }
+
+  & svg {
+    cursor: pointer;
+    color: #403f3f;
+    & path {
+      fill: #403f3f;
+    }
+  }
+  @include resD(
+    (
+      padding: 15px 30px,
+    )
+  );
+}
+.practice-see-answer-modal-hr-line {
+  opacity: 0.1;
+  @include resD(
+    (
+      border-bottom: 2px solid #000000,
+    )
+  );
+}
+.practice-see-answer-modal-closeIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  @include resD(
+    (
+      padding: 8px,
+    )
+  );
+}
+.practice-see-answer-modal-body-main {
+  min-height: 100%;
+  overflow: scroll;
+  & p {
+    margin: 0px;
+  }
+  &.scroll {
+    overflow: scroll;
+  }
+  @include resD(
+    (
+      padding: 14px 24px,
+    )
+  );
+}
+
+.modalPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background: white;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999999;
+  box-shadow: 0px 2px 45px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(0, 0, 0, 0.25);
+  @include resD(
+    (
+      width: 578px,
+      height: 298px,
+      border-radius: 12px,
+      // padding: 16px 20px,
+    )
+  );
+  @include resMs(
+    (
+      width: 578px,
+      height: 298px,
+      border-radius: 12px,
+      // padding: 16px 20px,
+    )
+  );
+  > h2 {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    @include resD(
+      (
+        font-size: 24px,
+        margin-top: 32px,
+        margin-bottom: 14px,
+        line-height: 140%,
+      )
+    );
+    @include resMs(
+      (
+        font-size: 24px,
+        margin-top: 32px,
+        margin-bottom: 14px,
+        line-height: 140%,
+      )
+    );
+  }
+  > p {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    @include resD(
+      (
+        font-size: 20px,
+        margin-bottom: 32px,
+        line-height: 140%,
+      )
+    );
+    @include resMs(
+      (
+        font-size: 20px,
+        margin-bottom: 32px,
+        line-height: 140%,
+      )
+    );
+  }
+  > h1 {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    color: #a8a7a7;
+    @include resD(
+      (
+        border-top: 1px solid #a8a7a7,
+        border-bottom: 1px solid #a8a7a7,
+        font-size: 20px,
+        padding: 12px 0px,
+        line-height: 27px,
+      )
+    );
+    @include resMs(
+      (
+        border-top: 1px solid #a8a7a7,
+        border-bottom: 1px solid #a8a7a7,
+        font-size: 20px,
+        padding: 12px 0px,
+        line-height: 27px,
+      )
+    );
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 999999;
+}
+
+.studentPracBoxFooterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  @include resD(
+    (
+      width: 100%,
+      padding: 13px,
+      margin: 5px 0,
+      max-height: 60px,
+    )
+  );
+  @include resM(
+    (
+      width: 100%,
+      padding: 13px,
+      margin: 5px 0,
+      max-height: 60px,
+    )
+  );
+  .logoTitleContainer {
+    display: flex;
+  }
+  .titleDescriptionContainer {
+    display: flex;
+    flex-direction: column;
+    p {
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 700;
+      color: #504f4f;
+      @include resD(
+        (
+          font-size: 18px,
+          line-height: 120%,
+        )
+      );
+      @include resM(
+        (
+          font-size: 18px,
+          line-height: 120%,
+        )
+      );
+    }
+    span {
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 700;
+      color: #282828;
+      opacity: 0.3;
+      @include resD(
+        (
+          font-size: 16px,
+          line-height: 120%,
+        )
+      );
+      @include resM(
+        (
+          font-size: 16px,
+          line-height: 120%,
+        )
+      );
+    }
+  }
+}
+.practice-instruction-text {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  color: #00ade6;
+  text-decoration: underline;
+  @include resD(
+    (
+      font-size: 14px,
+    )
+  );
+  @include resD(());
+  font-weight: 600;
+  & svg {
+    @include resD(
+      (
+        width: 16px,
+        height: 16px,
+      )
+    );
+  }
+}
+.instruction-video-container {
+  @include resD(
+    (
+      width: 458px,
+      height: 254px,
+    )
+  );
+  background: #fff;
+}
+.instruction-container {
+  box-sizing: border-box;
+  font-family: "Nunito";
+  display: flex;
+  flex-direction: column;
+  @include resD(
+    (
+      gap: 10px,
+      max-width: 493px,
+      padding: 10px,
+    )
+  );
+  & video::-webkit-media-controls {
+    display: none;
+  }
+}
+.instruction-container--heading {
+  display: flex;
+
+  align-items: center;
+  font-weight: 700;
+  gap: 8px;
+  @include resD(
+    (
+      font-size: 18px,
+    )
+  );
+  & svg {
+    @include resD(
+      (
+        width: 16px,
+        height: 16px,
+      )
+    );
+  }
+}
+.instruction-container--subText {
+  white-space: normal !important;
+  color: rgba(255, 255, 255, 0.8);
+  @include resD(
+    (
+      font-size: 16px,
+      line-height: 24px,
+    )
+  );
+}
+.practice-file-max-modal,
+.practice-top-upload {
+  @include resD(
+    (
+      min-height: 268px !important,
+      padding: 24px,
+    )
+  );
+}
+.practice-saved-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  // @include resD((
+  //   padding: 48px,
+  // ))
+}
+.practice-saved-icon {
+  @include resD(
+    (
+      width: 150px,
+      height: 126px,
+    )
+  );
+}
+.practice-saved-text {
+  font-weight: 700;
+  color: #504f4f;
+  @include resD(
+    (
+      font-size: 24px,
+    )
+  );
+}

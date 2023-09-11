@@ -1,0 +1,115 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/Inter.scss";
+
+.blockly__span__tag {
+  font-weight: 500;
+  color: #8c61cb;
+  @include resD1280(
+    (
+      font-size: 16px,
+      line-height: 18px,
+      margin-right: 8px,
+    )
+  );
+}
+
+.quiz__all__questions__tag_b {
+  box-sizing: border-box;
+  @include resD(
+    (
+      // width: 130px,
+        // height: 30px,
+        // padding: 8px 13px,
+        min-width: 155px,
+      max-width: 140px,
+      height: 30px,
+      // padding: 4px 10px,
+        padding: 4px 0,
+      border-radius: 6px,
+      margin-right: 20px,
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      color: white,
+      font-family: Inter,
+      font-size: 15px
+    )
+  );
+}
+
+.review__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HomeworkReviewBlocklyQuestion {
+  transition: all 0.25s ease-in-out;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  &.HomeworkReviewBlocklyQuestion__opened {
+    height: fit-content;
+    opacity: 1;
+    visibility: visible;
+  }
+  * {
+    font-family: "Nunito";
+  }
+}
+.homeworkReviewBlocklyContainer,
+.homeworkReviewBlocklyQuestionContainer {
+  overflow: hidden;
+}
+
+.homework-practice-details-container {
+  display: flex;
+  height: 100%;
+  font-family: Nunito;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.practice-details-embed-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD(
+    (
+      height: 100%,
+    )
+  );
+  @include resM(
+    (
+      height: 100%,
+    )
+  );
+}
+
+.notSubmittedStateContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #FFFFFF;
+  img {
+    @include resD1280((
+      margin-bottom: 20px,
+    ));
+  }
+}
+
+.submissionNotFound {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  color: #282828;
+  @include resD1280(
+    (
+      font-size: 18px,
+      line-height: 140%,
+      opacity: 0.8,
+    )
+  );
+}

@@ -1,0 +1,91 @@
+@import 'src/scss/size.scss';
+@import 'src/scss/utils.scss';
+
+.fullScreenWrapper{
+  width: 100%;
+  height: calc(100vh - 4.58333vw);
+  background-color: rgba(0, 0, 0, 0.27);
+  position: absolute;
+  left: 0px;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modalContainer{
+  width: hs(549px);
+  height: vs(950px);
+  border-radius: hs(15px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.06);
+  background-image: linear-gradient(to bottom, #00ade5, #34e0ea);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.badgeModalBG{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.congratsBanner{
+  width: vs(452.9px);
+  margin-top: vs(80.4px);
+}
+
+.unlockText{
+  font-family: Nunito;
+  font-size: hs(24px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  margin-top: vs(89.6px);
+  margin-bottom: vs(53.3px);
+}
+
+.badgeContainer{
+  width:hs(196.2px);
+  height:vs(196.2px);
+}
+
+.thumbnailStyle{
+  width: vs(146.8px);
+  height: vs(146.8px);
+}
+
+.badgeTextHolder{
+  width: vs(171px);
+  height: vs(45.4px);
+  border-radius: vs(9px);
+}
+
+.badgeText{
+  font-size: hs(23px);
+  line-height: 1.35;
+}
+
+.badgeDescription{
+  margin-top:vs(111.3px);
+  font-family: Nunito;
+  font-size: hs(18px);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  flex: 1;
+}
+
+.nextButton{
+  margin-top: hs(30px);
+}

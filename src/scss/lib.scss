@@ -1,0 +1,36 @@
+@use "sass:meta";
+@use "sass:list";
+@use "sass:math";
+
+@function to-string($list, $glue: '', $is-nested: false) {
+  $result: null;
+
+  @for $i from 1 through list.length($list) {
+    $e: list.nth($list, $i);
+
+    @if meta.type-of($e) == list {
+      $result: $result#{to-string($e, $glue, true)};
+    } @else {
+      $result: if(
+        $i != list.length($list) or $is-nested,
+        $result#{$e}#{$glue},
+        $result#{$e}
+      );
+    }
+  }
+
+  @return $result;
+}
+
+@function is-number($value) {
+  @return meta.type-of($value) == 'number';
+}
+
+@function is-relative-length($value) {
+  @if is-number(($value)) {
+    @if math.unit($value) == "px" {
+      @return true;
+    }
+  }
+  @return false;
+}

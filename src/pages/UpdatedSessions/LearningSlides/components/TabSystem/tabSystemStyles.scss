@@ -1,0 +1,228 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+$primary-font-family: 'Nunito';
+$primary-default-color: #CDCDCD;
+$primary-completed-color: #A6E2F7;
+$primary-active-color: #4DC6EE;
+$primary-pq-color: #01AA93;
+
+.tabs-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  @include resD((
+    width: 100%,
+    height: 120px,
+  ));
+  @include resM((
+    width: 100%,
+    height: 90px
+  ));
+  & .arrow-disabled{
+    & svg{
+      cursor: not-allowed;
+    }
+    opacity: 0.4;
+  }
+}
+
+.tabs-back-icon {
+  svg {
+    @include resD((
+      width: 28px,
+      height: 28px
+  ));
+    @include resM((
+      width: 18px,
+      height: 18px
+    ));
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tabs-next-icon {
+  svg {
+    @include resD((
+      width: 42px,
+      height: 42px
+  ));
+    @include resM((
+      width: 18px,
+      height: 18px
+    ));
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tabs-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: fit-content;
+  max-width: 60%;
+  overflow-x: scroll;
+  @include resD((
+    bottom: 3px,
+    margin: 0px 38px 0px 50px,
+    height: 100px
+  ));
+  @include resM((
+    bottom: 2px,
+    margin: 0px 14px 0px 24px,
+    height: 70px,
+  ));
+}
+
+.tab-grid-type {
+  background: linear-gradient(180deg, $primary-default-color 0% 50%, #DDDDDC 50% 100%);
+  @include resD((
+    border-radius: 16px,
+    min-height: 14px,
+    min-width: 120px,
+    margin: 0 12px
+  ));
+  @include resM((
+    border-radius: 10px,
+    min-height: 9px,
+    min-width: 64px,
+    margin: 0 8px
+  ));
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tab-grid-type-completed {
+  @extend .tab-grid-type;
+  background: linear-gradient(180deg, #80D6F3 0% 50%, #A6E2F7 50% 100%);
+}
+
+.tab-grid-type-active {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+    border-radius: 18px,
+    min-height: 25px,
+    min-width: 120px,
+    margin: 0 12px,
+    padding: 2px,
+    border: 2px dashed #00ADE6,
+  ));
+  @include resM((
+    border-radius: 10px,
+    min-height: 12px,
+    min-width: 70px,
+    margin: 0 8px,
+    padding: 2px,
+    border: 1px dashed #00ADE6,
+  ));
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tab-grid-type-active-inner {
+  background: linear-gradient(180deg, #00ADE6 0% 50%, #4DC6EE 50% 100%);
+  @include resD((
+    border-radius: 16px,
+    min-height: 14px,
+    min-width: 108px
+  ));
+  @include resM((
+    border-radius: 10px,
+    min-height: 6px,
+    min-width: 60px
+  ));
+}
+
+.tab-pq-type {
+background-color: #A8A7A7;
+  font-family: $primary-font-family;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include resD((
+    min-height: 34px,
+    min-width: 34px,
+    margin: 0 16px,
+    font-weight: 600,
+    font-size: 21px,
+    padding: 2px,
+  ));
+  @include resM((
+    border-radius: 50%,
+    min-height: 24px,
+    min-width: 24px,
+    margin: 0 8px,
+    font-size: 16px
+  ));
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tab-pq-type-correct {
+  @extend .tab-pq-type;
+  background-color: $primary-pq-color;
+}
+
+.tab-pq-type-wrong {
+  @extend .tab-pq-type;
+  background-color: #D34B57;
+}
+
+.tab-pq-type-active {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include resD((
+    border-radius: 50%,
+    min-height: 48px,
+    min-width: 48px,
+    margin: 0 12px,
+    padding: 2px,
+    border: 2px dashed #00ADE6,
+    font-weight: 600,
+    font-size: 21px,
+  ));
+  @include resM((
+    border-radius: 50%,
+    min-height: 24px,
+    min-width: 24px,
+    margin: 0 8px,
+    padding: 2px,
+    border: 1px dashed #00ADE6,
+  ));
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tab-pq-type-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color:  #00ADE6;
+  @include resD((
+    border-radius: 50%,
+    min-height: 34px,
+    min-width: 34px,
+  ));
+  @include resM((
+    border-radius: 50%,
+    min-height: 20px,
+    min-width: 20px
+  ));
+}

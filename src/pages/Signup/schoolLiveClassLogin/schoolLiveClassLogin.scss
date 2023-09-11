@@ -1,0 +1,447 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import "src/scss/theme/spacing.scss";
+@import "src/scss/theme/constants.scss";
+
+
+@mixin font-style(
+  $font-family,
+  $font-style,
+  $font-weight,
+  $line-height,
+  $color
+) {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+.school-live-class-login-container {
+  background-image: url("../../../assets/wizard-background.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+  @include resD(
+    (
+      justify-content: flex-start,
+      gap: 20px,
+
+    )
+  );
+  @include resMs(
+    (
+      justify-content: stretch,
+      gap: 40px,
+    )
+  );
+}
+.school-live-class-login-container::before {
+  opacity: 0.8;
+}
+
+.school-live-class-login-pageHeaderContainer {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  @include resD(
+    (
+      margin-top: 15px,
+      display: flex,
+    )
+  );
+  @include resM(
+    (
+      display: none,
+    )
+  );
+  img {
+    @include resD(
+      (
+        width: 134px,
+        height: 50px,
+        display: block,
+      )
+    );
+    @include resMs(
+      (
+        display: none,
+      )
+    );
+  }
+  h1 {
+    @include font-style(Nunito, normal, 800, 120%, $emperor-61);
+    letter-spacing: -0.02em;
+    transform: translateX(50%);
+    min-width: fit-content;
+    color: $emperor-61;
+    @include resD(
+      (
+        display: block,
+        font-size: 40px !important,
+      )
+    );
+    @include resMs(
+      (
+        display: none,
+      )
+    );
+  }
+}
+
+.school-live-class-login-classSectionText {
+  @include font-style(Gilroy, normal, 800, 120%, #ffffff);
+  text-align: center;
+  letter-spacing: 0.01em;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.school-live-class-login-loginForm {
+  display: flex;
+  z-index: 10;
+  @include resD(
+    (
+      width: 1022px !important,
+      height: 680px !important,
+      flex-direction: row,
+      padding: unset,
+    )
+  );
+  // @include resD(
+  //   (
+  //     height: 680px,
+  //     width: 1022px,
+  //   )
+  // );
+  @include resMs(
+    (
+      width: 100% !important,
+      height: 90% !important,
+      flex-direction: column,
+    )
+  );
+  @include resM((
+    box-sizing: border-box,
+    border-radius: 10px,
+    padding: 0px,
+  ))
+}
+
+.school-live-class-login-ImageContainer {
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  @include resD(
+      (
+        width: 50% !important,
+        height: 100% !important,
+        border-radius: 24px 0px 0px 24px,
+      )
+    );
+    @include
+    resMs(
+      (
+        width: 100% !important,
+        height: 35vh !important,
+        border-radius: 0px 0px 0px 24px,
+      )
+    );
+
+  img {
+    width: 100%;
+    height: 100%;
+    @include resM(
+      (
+        object-fit: cover !important,
+        object-position: 0 0,
+      )
+    );
+  }
+  @include hide-element($mb-breakpoint)
+}
+.school-live-class-login-imageOverlayTextContainer {
+  position: absolute;
+  left: 50%;
+  width: 85%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  @include resD((
+    top: 40px,
+  ));
+  p {
+    &:first-child {
+      @include resD(
+        (
+          width: 100% !important,
+        )
+      );
+      @include resMs(
+        (
+          width: 85% !important,
+        )
+      );
+    }
+  }
+}
+.school-live-class-login-learningCodingText {
+  @include font-style(Gilroy, normal, 800, 120%, #ffffff);
+  letter-spacing: -0.02em;
+  @include resD(
+    (
+      font-size: 30px,
+    )
+  );
+  @include resMs(
+    (
+      font-size: 40px,
+      width: 80% !important,
+      max-width: 550px !important,
+      margin-top: 0px !important,
+    )
+  );
+}
+.school-live-class-login-oneToOneSessionText {
+  letter-spacing: -0.02em;
+  width: 100%;
+  text-align: left;
+  @include resD(
+    (
+      font-size: 18px,
+      margin-block: $s-xs !important,
+    )
+  );
+  @include resMs(
+    (
+      font-size: 18px,
+      margin-block: 4vmin !important,
+    )
+  );
+}
+
+.school-live-class-login-otpRollnoInputContainer {
+  > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.school-live-class-login-schoolLogoWrapper {
+  @include resM(
+    (
+      width: 60px,
+      height: 60px,
+    )
+  );
+  @include resD(
+    (
+      width: 110px,
+      height: 110px,
+    )
+  );
+  background-color: #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 5px solid transparent;
+  // transform: translateX(25%);
+  z-index: 10;
+}
+.school-live-class-login-modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9;
+}
+.school-live-class-login-classroomAndTopicTitle {
+  @include font-style(Gilroy, normal, 800, 120%, #ffffff);
+  letter-spacing: -0.02em;
+  @include resD(
+    (
+      margin-bottom: 22px,
+      font-size: 30px,
+    )
+  );
+  @include resMs(
+    (
+      font-size: 35px,
+    )
+  );
+}
+.school-live-class-login-classDateWrapper > p,
+.school-live-class-login-classTimeWrapper > p {
+  @include font-style(Nunito, normal, 700, 100%, #ffffff);
+  letter-spacing: -0.02em;
+  margin-bottom: 0%;
+  @include resD(
+    (
+      font-size: 20px,
+    )
+  );
+  @include resMs(
+    (
+      font-size: 20px,
+    )
+  );
+}
+.school-live-class-login-classTimeWrapper {
+  @include resD(
+    (
+      margin-left: 16px,
+    )
+  );
+  @include resMs(
+    (
+      margin-left: 16px,
+    )
+  );
+  > svg {
+    @include resD(
+      (
+        width: 21px,
+        height: 21px,
+        margin-right: 8px,
+      )
+    );
+    @include resMs(
+      (
+        width: 21px,
+        height: 21px,
+        margin-right: 8px,
+      )
+    );
+  }
+}
+.school-live-class-login-classDateWrapper {
+  > svg {
+    transform: translateY(-5%);
+    @include resD(
+      (
+        width: 21px,
+        height: 21px,
+        margin-right: 8px,
+      )
+    );
+    @include resMs(
+      (
+        width: 21px,
+        height: 21px,
+        margin-right: 8px,
+      )
+    );
+  }
+}
+.school-live-class-login-classTimingDetails {
+  display: flex;
+  align-items: center;
+  @include resD(
+    (
+      margin-top: 20px,
+      margin-bottom: 20px,
+    )
+  );
+  @include resM(
+    (
+      margin-top: 12px,
+    )
+  );
+}
+.school-live-class-login-classDateWrapper,
+.school-live-class-login-classTimeWrapper {
+  display: flex;
+  align-items: center;
+}
+.school-live-class-login-backLogoWrapper {
+  position: fixed;
+  top: 2%;
+  left: 5%;
+  z-index: 20;
+  cursor: pointer;
+  > svg {
+    @include resMs(
+      (
+        width: 19px,
+        height: 19px,
+      )
+    );
+  }
+}
+.school-live-class-login-disabled {
+  cursor: not-allowed !important;
+}
+.school-live-class-login-teamTitle {
+  @include resD(
+    (
+      font-size: 20px,
+      font-family: "Nunito",
+      font-weight: 800,
+      text-align: center,
+      margin-bottom: 24px,
+    )
+  );
+}
+.school-live-class-login-separator {
+  @include resD(
+    (
+      height: 2px,
+      background-color: white,
+      opacity: 0.2,
+      margin-bottom: 20px,
+    )
+  );
+}
+@media screen and (max-width: 450px) {
+  .ImageContainer {
+    img {
+      object-position: 0 10%;
+      object-fit: cover !important;
+    }
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 450px) {
+  .learningCodingText {
+    font-size: 6vw;
+  }
+}
+
+
+.tekie-logo {
+  object-fit: contain;
+  @include resD((
+    width: 200px,
+    height: 70px,
+    padding-top: 40px,
+    margin-bottom: 30px,
+  ));
+
+  @include resM((
+    width: 200px,
+    height: 70px,
+    
+    margin-bottom: 0px,
+    padding-top: 50px,
+  ))
+}
+.mixpanel-login-identifier{
+  display: flex;
+  
+  justify-content: center;
+  @media (max-width: $tablet-breakpoint) {
+    width: 100%;
+    max-width: 400px;
+  }
+}

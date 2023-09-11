@@ -1,0 +1,61 @@
+@import 'src/scss/size.scss';
+
+.btn{
+    @include resD(( 
+        border-radius: 55px,
+        padding: 12px 16px
+    ));
+    @include resM(( 
+        border-radius: 55px,
+        padding: 12px 16px
+    ))
+}
+
+.primary {
+    cursor: pointer;
+    background: conic-gradient(from -3.29deg at 100% -13%, #35E4E9 0deg, #00ADE6 360deg);
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito';
+    @include resD((
+        gap: 12px,
+        font-weight: 700,
+        font-size: 20px,
+        margin-top: 12px,
+     ));
+    @include resM((
+        gap: 12px,
+        font-weight: 700,
+        font-size: 20px,
+        margin-top: 12px,
+    ));
+    &.disabled{
+        background:#A8A7A7;
+        pointer-events: none;
+    }
+}
+
+.secondary {
+    cursor: pointer;
+    color: #00ADE6;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito';
+    @include resD((
+        border:2px solid #00ADE6,
+        gap: 12px,
+        font-weight: 700,
+        font-size: 20px,
+    ));
+    @include resM((
+        border:2px solid #00ADE6,
+        gap: 12px,
+        font-weight: 700,
+        font-size: 20px,
+    ))
+}

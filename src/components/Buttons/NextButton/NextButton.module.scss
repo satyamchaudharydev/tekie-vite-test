@@ -1,0 +1,36 @@
+@import 'src/scss/size.scss';
+
+.iconContainer {
+  position: relative;
+  width: 11.3px;
+  height: 11.6px;
+  top: -2px;
+  left: 2px;
+}
+
+.tickIconContainer {
+  position: relative;
+  width: hs(14.3px);
+  height: hs(15.6px);
+  top: hs(-3.5px);
+  left: hs(-5px);
+}
+
+.saveIconContainer {
+  position: relative;
+  width: 16.3px;
+  height: 16.6px;
+  // top: hs(-8.5px);
+  // left: hs(-5px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  svg {
+    fill: #1ac9e8 !important;
+    height: 20px;
+    width: 18px;
+    top: -2px;
+    position: relative;
+  }
+}

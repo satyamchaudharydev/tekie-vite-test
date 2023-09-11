@@ -1,0 +1,155 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-family: inherit;
+	background-color: $theme;
+	border: none;
+	border-radius: 8px;
+	outline: none;
+	cursor: pointer;
+
+	@include resD(
+		(
+			padding: 6px 14px,
+			gap: 8px,
+		)
+	);
+	@include resM(
+		(
+			padding: 6px 14px,
+			gap: 8px,
+		)
+	);
+
+
+	& span {
+		font-style: normal;
+		font-weight: 700;
+		color: #ffffff;
+
+		@include resD(
+			(
+				font-size: 16px,
+				line-height: 22px,
+				letter-spacing: -0.02em,
+			)
+		);
+	}
+
+	& svg {
+		display: block;
+
+		@include resD(
+			(
+				width: 20px,
+				height: 20px,
+			)
+		);
+	}
+}
+
+.secondary {
+	background-color: transparent;
+	border: 1px solid rgba(2, 51, 67, 0.2);
+
+	& span {
+		color: $deep-sky-blue-48;
+	}
+}
+
+.tertiary {
+	background-color: rgba(220, 220, 220, 0.6);
+	border: none;
+
+	& span {
+		color: $emperor-61
+	}
+}
+
+.quaternary {
+	background-color: #8C61CB;
+	border: none;
+}
+
+// INVERTED
+.inverted {
+	background-color: rgba($color: #fff, $alpha: 0.1);
+}
+
+// TEXT
+.text {
+	background-color: transparent;
+
+	& span {
+		color: $theme;
+	}
+}
+
+// ROUNDED
+.pill {
+	border-radius: 20px;
+}
+
+// DISABLED
+.disabled {
+	cursor: not-allowed;
+	mix-blend-mode: luminosity;
+	opacity: 0.4;
+
+	& svg {
+		opacity: 0.5;
+	}
+}
+
+// SIZES
+.small {
+	@include resD(
+		(
+			padding: 4px 8px,
+			gap: 4px,
+		)
+	);
+
+	& span {
+		font-size: 14px;
+		line-height: 18px;
+
+		@include resD(
+			(
+				font-size: 14px,
+				line-height: 18px,
+			)
+		);
+	}
+}
+
+.large {
+	@include resD(
+		(
+			padding: 12px 16px,
+			gap: 8px,
+		)
+	);
+
+	& span {
+		font-size: 18px;
+		line-height: 24px;
+
+		@include resD(
+			(
+				font-size: 18px,
+				line-height: 24px,
+			)
+		);
+	}
+}
+
+// BLOCK
+.block {
+	display: block;
+	width: 100%;
+}

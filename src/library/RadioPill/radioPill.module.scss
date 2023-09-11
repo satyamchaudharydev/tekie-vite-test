@@ -1,0 +1,96 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+
+.radioPillPrimary, .radioPillSecondary {
+	display: inline-block;
+
+	@include resD(
+		(
+			padding: 8px 20px,
+		)
+	);
+
+	font-weight: 500;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	background: rgba(255, 255, 255, 0.12);
+	border: 1px solid rgba(0, 0, 0, 0.16);
+	border-radius: 20px;
+
+	& * {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.text {
+	font-style: normal;
+	font-weight: 700;
+	opacity: 0.5;
+	transition: color 0.2s ease-in-out;
+	color: #000;
+
+	@include resD(
+		(
+			font-size: 18px,
+			line-height: 140%,
+		)
+	);
+}
+
+.radio {
+	display: none;
+}
+
+.radio:checked + .radioPillPrimary {
+	background-color: $deep-sky-blue;
+	border-color: $deep-sky-blue;
+
+	.text {
+		color: white;
+		opacity: 1;
+	}
+}
+
+.radio:checked + .radioPillSecondary {
+	background-color: $deep-purple;
+	border-color: $deep-purple;
+
+	.text {
+		color: white;
+		opacity: 1;
+	}
+}
+
+.badge {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	opacity: 0.6;
+	color: #000;
+
+	@include resD(
+		(
+			padding: 2px 8px,
+			gap: 10px,
+			width: 24px,
+			height: 20px,
+			font-size: 12px,
+			line-height: 16px,
+			letter-spacing: -0.02em,
+		)
+	);
+
+	background: #dcdcdc;
+	border-radius: 12px;
+}

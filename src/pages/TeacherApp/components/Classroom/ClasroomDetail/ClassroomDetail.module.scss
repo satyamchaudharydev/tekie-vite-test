@@ -1,0 +1,99 @@
+@import "src/scss/size.scss";
+@import "src/scss/theme/colors.scss";
+@import 'src/scss/Inter.scss';
+@import '../../../variables/variables';
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}  
+
+.main{
+    margin-left: 24px;
+    padding-top: 16px;
+    width: 96%;
+    @include resM((
+        margin-right: 9px,
+        margin-left: 9px
+    ));
+    @include resD((
+        margin-right: 24px,
+        margin-left: 24px
+  ));
+}
+
+.home{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #000000;
+    padding-left: 7px;
+}
+.link{
+    text-decoration: none;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #000000;
+}
+
+.divider{
+    width: 3.77px;
+    height: 44vh;
+    background: #EEEEEE;
+    border-radius: 8px;
+    margin-top: 21px;
+}
+
+.flexBox1{
+    margin-top: 43px;
+    display: flex;
+    margin-left: 10px;
+}
+.tab{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: $primary-color;
+    padding-right: 24px;
+    cursor: pointer;
+}
+.tabInactive{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;   
+    color: #212121;
+    opacity: 0.4;
+    padding-right: 24px;
+    cursor: pointer;
+}
+.underline{
+    height: 4px;
+    background: $primary-color;
+    border-radius: 24px 24px 0px 0px;
+    width: 80%;
+    margin-top: 14px;
+}
+
+.notice{
+    display: flex;
+    background: #FFFFFF;
+    border-radius: 16px;
+    margin: 31px 0px;
+    width: 50%;
+    @include resM((
+        flex-direction: column
+    ));
+    @include resD((
+        flex-direction: row
+  ));
+}

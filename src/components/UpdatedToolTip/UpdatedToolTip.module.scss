@@ -1,0 +1,61 @@
+@import "src/scss/size.scss";
+@import "src/scss/Inter.scss";
+@import "src/scss/theme/colors.scss";
+
+.tooltipWrapper {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+    z-index: 1000;
+}
+.tooltipTip {
+    position: absolute;
+    margin: 0;
+    background: #4A336C;
+    @include resD1280((
+        font-size: 18px,
+    ));
+    color: #fff;
+    font-family: sans-serif;
+    z-index: 10000;
+    white-space: nowrap;
+}
+.tooltipbottomLeft {
+    bottom: 100%;
+    left: 50%;
+    @include resD1280((
+        border-radius: 8px 8px 8px 0px,
+    ));
+}
+.tooltiptopLeft {
+    top: 0;
+    left: 100%;
+    @include resD1280((
+        border-radius: 0px 8px 8px 8px,
+    ));
+}
+.bottomLeft {
+    position: absolute;
+    left: 50%;
+    display: flex;
+}
+.topLeft {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: rotate(90deg);
+    svg {
+        margin: 0;
+        padding: 0;
+    }
+}
+.tooltipTip ::-webkit-scrollbar{
+    background: #4A336C;
+}
+.tooltipTip ::-webkit-scrollbar-thumb {
+    background:#eeeeeeb7;
+}

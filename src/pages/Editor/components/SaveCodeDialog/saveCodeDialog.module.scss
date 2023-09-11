@@ -1,0 +1,22 @@
+@import "src/scss/size.scss";
+
+.root {
+	@include resD(
+		(
+			padding: 24px,
+		)
+	);
+}
+
+.title {
+	font-style: normal;
+	font-weight: 700;
+
+	@include resD(
+		(
+			font-size: 24px,
+			line-height: 140%,
+			letter-spacing: -0.02em,
+		)
+	);
+}

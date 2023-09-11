@@ -1,0 +1,141 @@
+$secondary: #034459;
+$tertiary: #F0FBFF;
+@import "src/scss/size.scss";
+ 
+.tooltipWrapper {
+  display: inline-block;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+ 
+}
+
+.tip{
+  width: 20px;
+  color: $secondary;
+  height: var(--tooltip-height);
+  position: absolute;
+  left: 50%;
+  // transform: translateX(-50%) rotate(180deg);
+  // top: 100%;
+  bottom: 100%;
+}
+.tertiaryTip{
+  width: 20px;
+  color: $tertiary;
+  height: var(--tooltip-height);
+  position: absolute;
+  left: 86%;
+  // transform: translateX(-50%) rotate(180deg);
+  // top: 100%;
+  bottom: 100%;
+}
+.tooltipTip {
+  --tooltip-height: 12px;
+  position: absolute;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: black;
+  padding: 6px;
+  font-size: 14px;
+  font-family: sans-serif;
+  line-height: 1;
+  z-index: 100;
+  white-space: nowrap;
+  &::before {
+  content: " ";
+  left: 50%;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-width: 6px;
+  margin-left: calc(6px * -1);
+  }
+  &.secondary{
+    white-space: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: $secondary;
+    @include resD((
+      width: 200px,
+    font-size: 18px,
+    padding-inline: 16px,
+    padding-block: 12px,
+    line-height: 140%,
+
+      border-radius: 8px,
+
+    ));
+   
+   &::before{
+    display: none;
+   }
+  }
+  &.newFlow{
+    &::before{
+    display: none;
+   }
+  }
+}
+
+
+
+.tooltipTip.top {
+  bottom: calc(100% + var(--tooltip-height) + 6px);
+}
+.tooltipTip.top::before {
+  top: 100%;
+  border-top-color:black;
+}
+
+
+.tooltipTip.right {
+  left: calc(100% + 30px);
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+.tooltipTip.right::before {
+  left: calc(6px * -1);
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+  border-right-color: black;
+}
+
+
+.tooltipTip.bottom {
+  top: calc(100% + var(--tooltip-height) + 3px)
+}
+.tooltipTip.bottom::before {
+  bottom: 100%;
+  border-bottom-color: black;
+}
+
+
+.tooltipTip.left {
+  left: auto;
+  right: calc(100% + 30px);
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+.tooltipTip.left::before {
+  left: auto;
+  right: calc(6px * -2);
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+  border-left-color: black;
+}
+.newFlow{
+  .tooltipTip{
+    border-radius: 12px;
+    background-color: #034459;
+    &::before{
+      display: none;
+    }
+  }
+  
+}

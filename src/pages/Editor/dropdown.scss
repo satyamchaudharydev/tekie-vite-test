@@ -1,0 +1,106 @@
+@import 'src/scss/size.scss';
+
+$dropdown-bg: #fff;
+$primary-color: #00171F;
+.dd-select-container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.dd-select-header{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 11px;
+    font-weight: bold;
+    .dd-header-title{
+        display: flex;
+        align-items: center;
+
+        @include resD ((
+            gap: 12px,
+            font-size: 20px,
+        ));
+        svg{
+            @include resD(
+                (
+                    width: 25px,
+                    height: 25px,
+                )
+        );
+    }
+    
+    }   
+.dd-list{
+    
+    position: absolute;
+    top: calc(100% + 4px);
+    padding: 5px;
+    
+    background: $dropdown-bg;
+    color: $primary-color;
+    & > *{
+        box-sizing: border-box;
+    }
+    @include resD ((
+        border-radius: 8px,
+        margin-left: 24px,
+    ));
+    .dd-header-icon{
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+    }
+    .dd-list-item{
+        display: flex;      
+        align-items: center;
+        color: #00171F;
+        font-weight: bold;
+        white-space: nowrap;
+        transition: background-color 0.2s ease-in-out;
+        @include resD(
+            (
+                padding-inline: 10px 17px,
+                gap: 7px,
+
+                height: 42px,
+                font-size: 14px,
+            )
+        );
+        svg{
+            width: 14px;
+            height: 14px;
+        }
+        
+       &:not(:first-child){
+        border-top: 1px solid #C7F1FF;
+
+        }
+        &.selected{
+         border-radius: 4px;
+
+            background-color: #E6F7FD;
+            border: unset;
+
+        }
+        &.selected-sibling{
+            border: unset;
+
+        }
+       
+    }
+}
+}
+.dd-header-icon{
+        transition: transform 0.3s ease;
+        &.rotate{
+            transform: rotate(180deg);
+        }
+        }
+    // &.selected{
+    //     .dd-list-item{
+
+    //     }
+    // }

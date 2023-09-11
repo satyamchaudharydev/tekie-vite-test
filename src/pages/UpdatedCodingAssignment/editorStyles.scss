@@ -1,0 +1,23 @@
+@import 'src/scss/size.scss';
+
+.ace_gutter {
+  padding: 0 !important;
+  margin-left: 0!important;
+  // display: flex !important;
+  justify-content: center !important;
+  width: hs(42px) !important;
+}
+
+.ace_scroller {
+  padding-top: 0 !important;
+}
+
+.ace_content {
+  position: relative !important;
+  // left: hs(20px) !important;
+  display: flex !important;
+}
+
+.ace_hidden-cursors {
+  opacity:0
+}
